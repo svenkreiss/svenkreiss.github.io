@@ -1,3 +1,5 @@
+*.pid
+
 *.py[cod]
 
 # C extensions
@@ -34,3 +36,5 @@ nosetests.xml
 .mr.developer.cfg
 .project
 .pydevproject
+
+venv
