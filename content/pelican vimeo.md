@@ -14,7 +14,8 @@ The syntax is the same as for the `youtube` tag:
 {% vimeo id [width height] %}
 </pre></div>
 
-The code is available on github: [https://github.com/svenkreiss/pelican-plugins/tree/master/liquid_tags](https://github.com/svenkreiss/pelican-plugins/tree/master/liquid_tags)
+_Update_: The code is now merged into the main pelican-plugins repository on github:  
+[https://github.com/getpelican/pelican-plugins](https://github.com/getpelican/pelican-plugins)
 
 
 ## Tests with different sizes

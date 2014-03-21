@@ -25,8 +25,8 @@ LINKS = (
 
 # Social widget
 SOCIAL = (
-    ('twitter-square', 'https://twitter.com/svenkreiss'),
-    ('linkedin-square', 'http://www.linkedin.com/in/svenkreiss'),
+    ('twitter', 'https://twitter.com/svenkreiss'),
+    ('linkedin', 'http://www.linkedin.com/in/svenkreiss'),
     ('github', 'https://github.com/svenkreiss/'),
 )
 TWITTER_USERNAME = 'svenkreiss'
@@ -50,8 +50,9 @@ PLUGIN_PATH = '../pelican-plugins'
 PLUGINS = [
 	'sitemap', 'gravatar', 'render_math',
 	'liquid_tags.img', 'liquid_tags.video',
-	'liquid_tags.youtube', 'liquid_tags.include_code',
-	'liquid_tags.notebook',
+	'liquid_tags.youtube', 'liquid_tags.vimeo',
+	'liquid_tags.include_code', 
+	# 'liquid_tags.notebook',
 ]
 
 # pure theme specific
@@ -62,8 +63,20 @@ DISQUS_SITENAME = 'svenkreisscom'
 
 ARTICLE_URL = 'blog/{slug}/'
 ARTICLE_SAVE_AS = 'blog/{slug}/index.html'
+AUTHOR_URL = 'blog/author/{slug}/'
+AUTHOR_SAVE_AS = 'blog/author/{slug}/index.html'
+CATEGORY_URL = 'blog/category/{slug}/'
+CATEGORY_SAVE_AS = 'blog/category/{slug}/index.html'
+TAG_URL = 'blog/tag/{slug}/'
+TAG_SAVE_AS = 'blog/tag/{slug}/index.html'
 
-PAGE_URL = PAGE_SAVE_AS = '{slug}.html'
+PAGE_URL = '{slug}.html'
+PAGE_SAVE_AS = '{slug}.html'
+
+ARCHIVES_SAVE_AS = 'blog/archives.html'
+AUTHORS_SAVE_AS = 'blog/authors.html'
+CATEGORIES_SAVE_AS = 'blog/categories.html'
+TAGS_SAVE_AS = 'blog/tags.html'
 
 MENUITEMS = [
 	('Projects', 'projects.html'),

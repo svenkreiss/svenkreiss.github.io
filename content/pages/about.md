@@ -5,24 +5,26 @@ url: /
 save_as: index.html
 
 
-{% img img-thumbnail float-right http://www.gravatar.com/avatar/1838de72eb5ce4b000c41c06dedb52c4.png?s=180 %}
-I am a PhD student in [Physics at NYU](http://physics.nyu.edu/) working with [Kyle Cranmer](http://physics.as.nyu.edu/object/kylecranmer.html). At the end of 2012, I returned to New York from a year at CERN in Geneva, Switzerland. Originally, I am from Germany, then studied for my Bachelor's and Master's degree in Mathematical Physics at the University of Edinburgh (UK) and then went to New York University for my PhD in Particle Physics. Feel free to contact me at [me@svenkreiss.com](mailto:me@svenkreiss.com).
+<!-- {% img img-thumbnail float-right http://www.gravatar.com/avatar/1838de72eb5ce4b000c41c06dedb52c4.png?s=180 %} -->
+{% img img-thumbnail float-right /images/me_nyc_square.jpg 250 %}
+
+I am a PhD candidate in [Physics at New York University](http://physics.nyu.edu/) working with [Kyle Cranmer](http://physics.as.nyu.edu/object/kylecranmer.html). At the end of 2012, I returned to New York City from a year at CERN in Geneva, Switzerland. Originally, I am from Germany, then studied for my Bachelor's and Master's degree in Mathematical Physics at the University of Edinburgh (UK) and then went to New York University for my PhD in Particle Physics. Feel free to contact me at [me@svenkreiss.com](mailto:me@svenkreiss.com).
 
 I write code for the statistical analysis tool [RooStats](http://twiki.cern.ch/twiki/bin/view/RooStats/WebHome) which is part of [CERN's Root Data Analysis tool](http://root.cern.ch/). My [ATLAS](http://atlas.web.cern.ch/Atlas/Collaboration/) work is focused on the MET trigger, the H→ZZ*→4l analysis and the Higgs Combination and I was involved in the discovery (see [New York Times article](/blog/chasing-the-higgs-nyt/)), the first mass measurement, the first evidence for VBF production and property measurements related to the coupling strengths of the Higgs Boson.
 
 My [CV as pdf file](/files/cv.pdf). Selected talks and papers are at the bottom of the page.
 
 
-## Chasing the Higgs - New York Times
+
+## Chasing the Higgs - The New York Times
 
 Read the full story on the [New York Times website](http://www.nytimes.com/2013/03/05/science/chasing-the-higgs-boson-how-2-teams-of-rivals-at-CERN-searched-for-physics-most-elusive-particle.html?view=Opening_the_Box) from March 5, 2013.
 
 {% img /images/nyt_science_front_page.jpeg 200 "Science Times section front page" %}
 {% img /images/nyt_science_my_part.jpeg 350 "Chasing the Higgs, my part" %}
 
-Link: [blog post](/blog/chasing-the-higgs-nyt/)
+<div style="clear:both;"></div>
 
-<div class="clearfix"></div>
 
 
 ## A Novel Approach to Higgs Coupling Measurements ([arXiv:1401.0080](http://arxiv.org/abs/1401.0080 arXiv:1401.0080))
@@ -35,7 +37,6 @@ We share all the software that was involved. That includes that we published the
 
 
 
-
 ## MorphDemo using `d3.js`
 
 {% img img-thumbnail float-right /images/kdtreemorph_preview.png 350 %}
@@ -43,7 +44,8 @@ We share all the software that was involved. That includes that we published the
 
 Link: [morphDemo.html](/files/morphDemo.html), [blog post](/blog/morph-demo/)
 
-<div class="clearfix"></div>
+<div style="clear:both;"></div>
+
 
 
 ## Selected Publications

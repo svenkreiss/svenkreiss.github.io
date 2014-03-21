@@ -1,6 +1,6 @@
 Title: Chasing the Higgs - New York Times
-Date: 2014-03-07 02:00
-Category: Press
+Date: 2014-03-01 02:00
+Category: Media
 Tags: being awesome
 Slug: chasing-the-higgs-nyt
 Author: Sven Kreiss
