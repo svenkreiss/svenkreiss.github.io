@@ -1,7 +1,7 @@
 Title: number4 in Leipziger Volkszeitung
 Date: 2004-01-01
 Slug: number4-lvz
-Category: Tech
+Category: Media
 Tags: being awesome, number4
 Summary: Brandiser teaches robot how to walk.
 
