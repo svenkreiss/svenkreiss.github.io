@@ -16,7 +16,7 @@ CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
 
 # Make about page the front page
-INDEX_SAVE_AS = 'blog.html'
+INDEX_SAVE_AS = 'blog/index.html'
 
 # Blogroll
 LINKS = (
@@ -70,8 +70,8 @@ CATEGORY_SAVE_AS = 'blog/category/{slug}/index.html'
 TAG_URL = 'blog/tag/{slug}/'
 TAG_SAVE_AS = 'blog/tag/{slug}/index.html'
 
-PAGE_URL = '{slug}.html'
-PAGE_SAVE_AS = '{slug}.html'
+PAGE_URL = '{slug}/'
+PAGE_SAVE_AS = '{slug}/index.html'
 
 ARCHIVES_SAVE_AS = 'blog/archives.html'
 AUTHORS_SAVE_AS = 'blog/authors.html'
@@ -79,8 +79,8 @@ CATEGORIES_SAVE_AS = 'blog/categories.html'
 TAGS_SAVE_AS = 'blog/tags.html'
 
 MENUITEMS = [
-	('Projects', 'projects.html'),
-	('Blog', 'blog.html'),
+	('Projects', 'projects'),
+	('Blog', 'blog'),
 ]
 DISPLAY_PAGES_ON_MENU = True
 
