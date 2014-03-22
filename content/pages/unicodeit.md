@@ -25,8 +25,6 @@ Install this in parallel to the standard UnicodeIt and assign a different keyboa
 ![explanation](http://www.svenkreiss.com/wiki/images/b/bd/explanation.png)
 
 
-Introductory [Slides (pdf)](/files/UnicodeItSlides.pdf) and a list of [all latex expressions and their unicode replacements (pdf)](/files/UnicodeItSymbols06.pdf).<br />
-
 
 ## It's Free
 
@@ -36,7 +34,7 @@ The program is free and we hope you enjoy it as much as we do. If you feel like 
 <input type="hidden" name="cmd" value="_s-xclick">
 <input type="hidden" name="hosted_button_id" value="ZT77WA6BZUWRE">
 <input type="image" src="https://www.paypal.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-<img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+<img alt="pixel" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
 </form>
 </html>
 
@@ -47,13 +45,6 @@ The program is free and we hope you enjoy it as much as we do. If you feel like 
 * Select File > Duplicate
 * Save the duplicated workflow, e.g. as "UnicodeIt Copy"
 * Setup keyboard shortcut under System Preferences > Keyboard > Keyboard Shortcuts > Services > Text > UnicodeIt&nbsp;Copy by clicking into the empty space behind it (e.g. Command+Option+Shift&nbsp;U)
-* There is a delay first time you use the shortcut
-
-
-## Installation on Mac OS Snow Leopard
-
-* Add the workflow to: /Users/<username>/Library/Services/UnicodeIt.workflow (create the Services folder if it is not there already)
-* Setup keyboard shortcut under System Preferences > Keyboard > Keyboard Shortcuts > Services > Text > UnicodeIt by clicking into the empty space behind it (e.g. Command+Option+Shift&nbsp;U)
 * There is a delay first time you use the shortcut
 
 
@@ -73,8 +64,3 @@ The program is free and we hope you enjoy it as much as we do. If you feel like 
 * New in 0.4:
     * \rightarrow now has the alias \to
     * added mathbb and mathcal symbols including the symbols used for Hamiltonian and Lagrangian densities ℋ, ℒ and for real and complex numbers ℝ, ℂ (for all symbols see the UnicodeItSymbols.pdf file)
-
-
-## FAQ
-
-* The native Mac applications work fine, but web browsers do not necessarily support the Mac's System Services. Safari and Chrome seem to be working fine, however [Firefox does not work with UnicodeIt](https://wiki.mozilla.org/Firefox/Feature_Brainstorming:Platform_Integration#Services_Integration_in_OS_X).

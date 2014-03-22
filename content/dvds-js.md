@@ -7,7 +7,6 @@ Status: draft
 Summary: Distributed Versioned Data Structures in JavaScript. Like git in js.
 
 
-
 <style>
 /* graph styles */
       svg {
