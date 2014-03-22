@@ -8,15 +8,15 @@ Slug: projects
 * [Decouple](http://github.com/svenkreiss/decouple): Tool to factorize theory uncertainties.
 * [RooStats](https://twiki.cern.ch/twiki/bin/view/RooStats/WebHome): Statistics tools used at CERN to which I contributed core classes.
 * [MorphDemo](/blog/morph-demo): Demo of a new horizontal morphing algorithm.
-* [unicodeit](/unicodeit/): Convert latex expressions to unicode characters: \mathcal{H} → ℋ.
+* [unicodeit](/unicodeit.html): Convert latex expressions to unicode characters: \mathcal{H} → ℋ.
 * [quizsocket.com](http://www.quizsocket.com): Free and real-time quizzes.
 * [politicalMoneyTracker](http://svenkreiss.github.io/politicalMoneyTracker/): Project for the Bicoastal Datafest 2013 at Columbia and Stanford University.
 
 
 ## Tech
 
-* [OpenOsci](/openosci/): Open source and open hardware oscilloscope.
-* [number4](/number4/): My walking robot.
-* [nmea-gpsd](/nmea-gpsd/): The part of gpsd that reads the nmea stream.
+* [OpenOsci](/openosci.html): Open source and open hardware oscilloscope.
+* [number4](/number4.html): My walking robot.
+* [nmea-gpsd](/nmea-gpsd.html): The part of gpsd that reads the nmea stream.
 * [VideoSchalter.com](http://www.videoschalter.com): Commercial device for switching video signals, processing audio and to collect data (GPS, acceleration) in Rallye cars.
 

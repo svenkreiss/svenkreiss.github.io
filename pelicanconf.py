@@ -70,8 +70,10 @@ CATEGORY_SAVE_AS = 'blog/category/{slug}/index.html'
 TAG_URL = 'blog/tag/{slug}/'
 TAG_SAVE_AS = 'blog/tag/{slug}/index.html'
 
-PAGE_URL = '{slug}/'
-PAGE_SAVE_AS = '{slug}/index.html'
+# do not make pages of the type {slug}/index.html as this clashed with
+# other github repositories with the same name as {slug}
+PAGE_URL = '{slug}.html'
+PAGE_SAVE_AS = '{slug}.html'
 
 ARCHIVES_SAVE_AS = 'blog/archives.html'
 AUTHORS_SAVE_AS = 'blog/authors.html'
@@ -79,8 +81,8 @@ CATEGORIES_SAVE_AS = 'blog/categories.html'
 TAGS_SAVE_AS = 'blog/tags.html'
 
 MENUITEMS = [
-	('Projects', 'projects'),
-	('Blog', 'blog'),
+	('Projects', 'projects.html'),
+	('Blog', 'blog/'),
 ]
 DISPLAY_PAGES_ON_MENU = True
 
