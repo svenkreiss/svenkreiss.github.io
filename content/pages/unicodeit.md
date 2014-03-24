@@ -1,6 +1,6 @@
 Title: unicodeit
 Date: 2013-03-01 12:00
-Slug: unicodeit
+Slug: UnicodeIt
 
 
 
@@ -22,7 +22,7 @@ Install this in parallel to the standard UnicodeIt and assign a different keyboa
 
 
 
-![explanation](http://www.svenkreiss.com/wiki/images/b/bd/explanation.png)
+![explanation](/images/unicodeit_explanation.png)
 
 
 

@@ -8,7 +8,7 @@ Slug: projects
 * [Decouple](http://github.com/svenkreiss/decouple): Tool to factorize theory uncertainties.
 * [RooStats](https://twiki.cern.ch/twiki/bin/view/RooStats/WebHome): Statistics tools used at CERN to which I contributed core classes.
 * [MorphDemo](/blog/morph-demo): Demo of a new horizontal morphing algorithm.
-* [unicodeit](/unicodeit.html): Convert latex expressions to unicode characters: \mathcal{H} → ℋ.
+* [unicodeit](/UnicodeIt.html): Convert latex expressions to unicode characters: \mathcal{H} → ℋ.
 * [quizsocket.com](http://www.quizsocket.com): Free and real-time quizzes.
 * [politicalMoneyTracker](http://svenkreiss.github.io/politicalMoneyTracker/): Project for the Bicoastal Datafest 2013 at Columbia and Stanford University.
 
