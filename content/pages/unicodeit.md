@@ -12,11 +12,11 @@ Slug: UnicodeIt
 
 ## Online Version: [www.unicodeit.net](http://www.unicodeit.net) for any platform
 
-Download for Mac OS X: [unicodeit061.zip](http://www.unicodeit.net/automator/unicodeit061.zip)<br />
+Download for Mac OS X: [unicodeit062.zip](http://www.unicodeit.net/automator/unicodeit062.zip)<br />
 Linux wrapper: [http://code.google.com/p/unicodeitlinux/](http://code.google.com/p/unicodeitlinux/)<br />
 Source on GitHub: [https://github.com/svenkreiss/unicodeit](https://github.com/svenkreiss/unicodeit)<br /><br />
 
-For the new Keynote on Mavericks, text replacements currently do not work. Here is a special version that stores the output on the Clipboard: [unicodeit061clipboard.zip](http://www.unicodeit.net/automator/unicodeit061clipboard.zip)<br />
+For the new Keynote on Mavericks, text replacements currently do not work. Here is a special version that stores the output on the Clipboard: [unicodeit062clipboard.zip](http://www.unicodeit.net/automator/unicodeit062clipboard.zip)<br />
 Install this in parallel to the standard UnicodeIt and assign a different keyboard shortcut to it; for example cmd+ctrl+shift+i.
 <br /><br />
 
