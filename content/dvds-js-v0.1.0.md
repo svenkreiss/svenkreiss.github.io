@@ -1,8 +1,8 @@
-Title: dvds-js
+Title: dvds-js version 0.1.0
 Date: 2014-03-12
 Category: Tech
-Tags: open source, JavaScript, internet, data structures
-Slug: dvds-js
+Tags: dvds, open source, JavaScript, internet, data structures
+Slug: dvds-js-v0.1.0
 Status: draft
 Summary: Distributed Versioned Data Structures in JavaScript. Like git in js.
 
@@ -45,10 +45,12 @@ require.config({
 </script>
 
 > Distributed Versioned Data Structures in JavaScript. Like git in js.  
-> Checkout out the code on [github/svenkreiss/dvds-js](http://github.com/svenkreiss/dvds-js).
+> Checkout the code on [github.com/svenkreiss/dvds-js](http://github.com/svenkreiss/dvds-js).
 
 
 The aim of `dvds-js` is to have data structures in JavaScript that you can `fork()`, serialize and send over the wire, `commit()` to and then stream back and `merge()` with full conflict resolution.
+
+This post is about the very first dev release, version 0.1.0.
 
 
 ## Loading the Library
@@ -122,8 +124,12 @@ Edit on [http://jsfiddle.net/svenkreiss/3Ruat/10/](http://jsfiddle.net/svenkreis
 
 
 
-## 
+## Features
 
+Some features that are implemented so far:
+
+* special merge algorithms for nested arrays and objects (e.g. arrays in side of objects inside of arrays inside of an object)
+* commit hash is built over the commit's data, but also over the entire parent-tree which means that the commit id validates the parent-tree (as in git)
 
 
 
