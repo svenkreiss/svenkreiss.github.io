@@ -60,6 +60,7 @@ PLUGINS = [
 COVER_IMG_URL = '/images/winter_mountains.jpg'
 AUTHOR_EMAIL = 'sk@svenkreiss.com'
 TAGLINE = ''
+META_DESCRIPTION = 'my personal website'
 DISQUS_SITENAME = 'svenkreisscom'
 
 ARTICLE_URL = 'blog/{slug}/'

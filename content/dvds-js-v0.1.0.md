@@ -3,7 +3,6 @@ Date: 2014-04-25
 Category: Tech
 Tags: dvds-js, JavaScript, d3.js, distributed, version control
 Slug: dvds-js-v0.1.0
-Status: draft
 Summary: Distributed Versioned Data Structures in JavaScript. Like git in js.
 
 
@@ -48,7 +47,7 @@ require.config({
 > Checkout the code on [github.com/svenkreiss/dvds-js](http://github.com/svenkreiss/dvds-js).
 
 
-The aim of `dvds-js` is to have data structures in JavaScript that you can `fork()`, serialize and send over the wire, `commit()` to and then stream back and `merge()` with full conflict resolution. Here, _data structures_ means anything that can be serialized with JSON.
+The aim of `dvds-js` is to have a container (or repository) for data structures in JavaScript that you can `fork()`, serialize and send over the wire, `commit()` to and then stream back and `merge()` with full conflict resolution. Here, _data structures_ means anything that can be serialized with JSON.
 
 This post is about the first development release, version 0.1.0.
 
@@ -108,8 +107,6 @@ Repository `a` merged with `b`:
 
 
 
-
-
 ## Features
 
 * special merge algorithms for nested arrays and objects (e.g. arrays inside of objects inside of arrays inside of an object)
@@ -144,6 +141,10 @@ Repository `a` merged with `b`:
 This includes `d3.js` for visualizations and `CryptoJS` is needed for calculating unique identifiers for commits.
 In `node.js`, this setup is not necessary and you would simply use `require()`.
 
+
+## Appendix: Static image of commit graphs
+
+{% img /images/dvds-js-v010-commitgraphs.png 500 Commit graphs of dvds-js example. %}
 
 
 
