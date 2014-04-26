@@ -1,7 +1,7 @@
 Title: dvds-js version 0.1.0
-Date: 2014-03-12
+Date: 2014-04-25
 Category: Tech
-Tags: dvds, open source, JavaScript, internet, data structures
+Tags: dvds-js, JavaScript, d3.js, distributed, version control
 Slug: dvds-js-v0.1.0
 Status: draft
 Summary: Distributed Versioned Data Structures in JavaScript. Like git in js.
@@ -48,9 +48,9 @@ require.config({
 > Checkout the code on [github.com/svenkreiss/dvds-js](http://github.com/svenkreiss/dvds-js).
 
 
-The aim of `dvds-js` is to have data structures in JavaScript that you can `fork()`, serialize and send over the wire, `commit()` to and then stream back and `merge()` with full conflict resolution.
+The aim of `dvds-js` is to have data structures in JavaScript that you can `fork()`, serialize and send over the wire, `commit()` to and then stream back and `merge()` with full conflict resolution. Here, data structures means anything that can be serialized with JSON.
 
-This post is about the very first dev release, version 0.1.0.
+This post is about the first development release, version 0.1.0.
 
 
 ## Loading the Library
@@ -126,10 +126,11 @@ Edit on [http://jsfiddle.net/svenkreiss/3Ruat/10/](http://jsfiddle.net/svenkreis
 
 ## Features
 
-Some features that are implemented so far:
-
-* special merge algorithms for nested arrays and objects (e.g. arrays in side of objects inside of arrays inside of an object)
-* commit hash is built over the commit's data, but also over the entire parent-tree which means that the commit id validates the parent-tree (as in git)
+* special merge algorithms for nested arrays and objects (e.g. arrays inside of objects inside of arrays inside of an object)
+* commit hash is built over the commit's data, but also over the entire parent-tree which means that the commit id can validate the parent-tree
+* a repository exposes the `data` member that behaves like a normal js variable (e.g. can be used in `angular.js` directly)
+* visualization (currently only `CommitGraph`) is factored into its own submodule `visualize`
+* unit tests run with `Jasmine` and `Karma`, `jscs` is used to check code style, `uglify` is used to build min version and automation is done with `grunt`
 
 
 
