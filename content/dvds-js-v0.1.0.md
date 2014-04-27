@@ -88,7 +88,7 @@ A repository `a` is created holding an array with the two names `Paul` and `Adam
 
 __Live output__: <span id="test1Out">?</span>
 
-Edit on [http://jsfiddle.net/svenkreiss/3Ruat/11/](http://jsfiddle.net/svenkreiss/3Ruat/11/).
+Edit on [http://jsfiddle.net/3Ruat/11/](http://jsfiddle.net/3Ruat/11/).
 
 
 
