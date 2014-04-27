@@ -32,8 +32,8 @@ Summary: Distributed Versioned Data Structures in JavaScript. Like git in js.
 require.config({
     paths: {
         'crypto-js.SHA3': 'http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/sha3',
-        'dvds': 'http://svenkreiss.github.io/dvds-js/lib/dvds.min',
-        'dvds.visualize': 'http://svenkreiss.github.io/dvds-js/lib/dvds.min',
+        'dvds': 'http://svenkreiss.github.io/dvds-js/lib/dvds-0.1.0/dvds.min',
+        'dvds.visualize': 'http://svenkreiss.github.io/dvds-js/lib/dvds-0.1.0/dvds.min',
     },
     shim: {
         'crypto-js.SHA3': {
@@ -88,7 +88,7 @@ A repository `a` is created holding an array with the two names `Paul` and `Adam
 
 __Live output__: <span id="test1Out">?</span>
 
-Edit on [http://jsfiddle.net/svenkreiss/3Ruat/10/](http://jsfiddle.net/svenkreiss/3Ruat/10/).
+Edit on [http://jsfiddle.net/svenkreiss/3Ruat/11/](http://jsfiddle.net/svenkreiss/3Ruat/11/).
 
 
 
@@ -127,8 +127,8 @@ Repository `a` merged with `b`:
     require.config({
         paths: {
             'crypto-js.SHA3': 'http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/sha3',
-            'dvds': 'http://svenkreiss.github.io/dvds-js/lib/dvds.min',
-            'dvds.visualize': 'http://svenkreiss.github.io/dvds-js/lib/dvds.min',
+            'dvds': 'http://svenkreiss.github.io/dvds-js/lib/dvds-0.1.0/dvds.min',
+            'dvds.visualize': 'http://svenkreiss.github.io/dvds-js/lib/dvds-0.1.0/dvds.min',
         },
         shim: {
             'crypto-js.SHA3': {
