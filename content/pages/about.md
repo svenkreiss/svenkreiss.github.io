@@ -12,7 +12,8 @@ I am a PhD candidate in [Physics at New York University](http://physics.nyu.edu/
 
 I write code for the statistical analysis tool [RooStats](http://twiki.cern.ch/twiki/bin/view/RooStats/WebHome) which is part of [CERN's Root Data Analysis tool](http://root.cern.ch/). My [ATLAS](http://atlas.web.cern.ch/Atlas/Collaboration/) work is focused on the MET trigger, the H→ZZ*→4l analysis and the Higgs Combination and I was involved in the discovery (see [New York Times article](/blog/chasing-the-higgs-nyt/)), the first mass measurement, the first evidence for VBF production and property measurements related to the coupling strengths of the Higgs Boson.
 
-My [CV as pdf file](/files/cv.pdf). Selected talks and papers are at the bottom of the page.
+My [CV as pdf file](/files/cv.pdf). Selected talks and papers are at the bottom of the page.  
+My social media profiles: [<i class="fa fa-twitter-square"></i> Twitter](https://twitter.com/svenkreiss), [<i class="fa fa-linkedin-square"></i> LinkedIn](http://www.linkedin.com/in/svenkreiss), [<i class="fa fa-github-square"></i> GitHub](https://github.com/svenkreiss/).
 
 
 
