@@ -469,7 +469,7 @@ plotSimpleY = kdTreePlot(
   .parameters( [0.85] )();
 
 
-d3.select("#sliderSimple").on("change", function() {
+d3.select("#sliderSimple").on("input", function() {
   plotSimple.parameters( [this.value / 100] )();
   plotSimpleX.parameters( [this.value / 100] )();
   plotSimpleY.parameters( [this.value / 100] )();
@@ -508,7 +508,7 @@ plotGaussianICP = kdTreePlot(
   .showValue( "KDTreeArea" )
   .parameters( [0.85] )();
 
-d3.select("#sliderGaussian").on("change", function() {
+d3.select("#sliderGaussian").on("input", function() {
   plotGaussian.parameters( [this.value / 100] )();
   plotGaussianICP.parameters( [this.value / 100] )();
 });
@@ -530,10 +530,10 @@ plotTwoParameters = kdTreePlot(
   minVol = 0.001
 )
   .parameters( [0.85,0.85] )();
-d3.select("#sliderTwoParametersMH").on("change", function() {
+d3.select("#sliderTwoParametersMH").on("input", function() {
   plotTwoParameters.parameters( [this.value / 100, plotTwoParameters.parameters()[1]] )();
 });
-d3.select("#sliderTwoParametersM4lErr").on("change", function() {
+d3.select("#sliderTwoParametersM4lErr").on("input", function() {
   plotTwoParameters.parameters( [plotTwoParameters.parameters()[0], this.value / 100] )();
 });
 d3.select("#plotTwoParametersKDTreeArea").on("click", function() { plotTwoParameters.showValue("KDTreeArea")(); });
