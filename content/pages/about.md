@@ -6,7 +6,7 @@ save_as: index.html
 
 
 <!-- {% img img-thumbnail float-right http://www.gravatar.com/avatar/1838de72eb5ce4b000c41c06dedb52c4.png?s=180 %} -->
-{% img img-thumbnail float-right /images/me_nyc_square.jpg 250 %}
+{% img img-thumbnail float-right /images/me_nyc_square_500.jpg 250 %}
 
 I am a PhD candidate in [Physics at New York University](http://physics.nyu.edu/) working with [Kyle Cranmer](http://physics.as.nyu.edu/object/kylecranmer.html). At the end of 2012, I returned to New York City from a year at CERN in Geneva, Switzerland. Originally, I am from Germany, then studied for my Bachelor's and Master's degree in Mathematical Physics at the University of Edinburgh (UK) and then went to New York University for my PhD in Particle Physics. Feel free to contact me at [me@svenkreiss.com](mailto:me@svenkreiss.com).
 
