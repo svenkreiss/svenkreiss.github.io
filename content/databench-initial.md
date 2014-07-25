@@ -1,5 +1,5 @@
 Title: Databench
-Date: 2014-06-02
+Date: 2014-06-03
 Category: Tech
 Tags: Flask, Socket.IO, JavaScript, d3.js, Python, matplotlib, mpld3
 Slug: databench-initial
@@ -75,9 +75,11 @@ Create a project-folder with this structure:
 
 On the command line, all that is necessary is to run `databench` and the url (usually `http://localhost:5000`) will be shown that you can open in a web browser.
 
-This is the backend in `simplepi.py`:
+This is the backend in `simplepi.py` _(updated June 10, 2014)_:
 
 ```python
+"""Calculating \\(\\pi\\) the simple way."""
+
 import math
 from time import sleep
 from random import random
@@ -85,57 +87,55 @@ from random import random
 import databench
 
 
-signals = databench.Signals('simplepi')
+simplepi = databench.Analysis('simplepi', __name__)
+simplepi.description = __doc__
+simplepi.thumbnail = 'simplepi.png'
 
-@signals.on('connect')
+@simplepi.signals.on('connect')
 def onconnect():
+    """Run as soon as a browser connects to this."""
+
     inside = 0
     for i in range(10000):
         sleep(0.001)
-        r1, r2 = (random(), random())
+        r1 = random()
+        r2 = random()
         if r1*r1 + r2*r2 < 1.0:
             inside += 1
 
         if (i+1)%100 == 0:
             draws = i+1
-            signals.emit('log', {
-                'draws':draws,
-                'inside':inside
-            })
+            simplepi.signals.emit('log', {'draws':draws, 'inside':inside})
 
-            p = inside/draws
+            p = float(inside)/draws
             uncertainty = 4.0*math.sqrt(draws*p*(1.0 - p)) / draws
-            signals.emit('status', {
+            simplepi.signals.emit('status', {
                 'pi-estimate': 4.0*inside/draws,
                 'pi-uncertainty': uncertainty
             })
 
-    signals.emit('log', {'action': 'done'})
-
-
-simplepi = databench.Analysis('simplepi', __name__, signals)
-simplepi.description = "Calculating \(\pi\) the simple way."
+    simplepi.signals.emit('log', {'action': 'done'})
 ```
 
 The analysis waits for the `connect` signal and then starts an analysis. It provides the frontend with live updates through `signals.emit()` where some of the `emit()` messages are for the `log` window and some are `status` updates.
 
-The frontend now has to listen to the signals that are emitted by the backend and act on them. The frontend `simplepi.html` is a `jinja2` template with math rendered with [MathJax](http://www.mathjax.org/) using `\( ... \)` for inline math and `$$ ... $$` for display math:
+The frontend now has to listen to the signals that are emitted by the backend and act on them. The frontend `simplepi.html` is a `jinja2` template with math rendered with [MathJax](http://www.mathjax.org/) using `\( ... \)` for inline math and `$$ ... $$` for display math _(updated June 10, 2014)_:
 
 ```html
 {% extends "base.html" %}
+
+
 {% block title %}simplepi{% endblock %}
 
 
 {% block content %}
 <h1>
     simplepi
-    <small><i>
-        π = <span id="pi-estimate">0.0 ± 1.0</span>
-    </i></small>
+    <small><i>π = <span id="pi">0.0 ± 1.0</span></i></small>
 </h1>
 
 <p>This little demo uses two random numbers \(r_1\) and \(r_2\) and
-then does a comparison $$r_1^2 + r_2^2 ≤ 1.0$$ to figure out whether
+then does a comparison $$r_1^2 + r_2^2 &le; 1.0$$ to figure out whether
 the generated point is inside the first quadrant of the unit circle.</p>
 
 <pre id="log"></pre>
@@ -148,9 +148,9 @@ the generated point is inside the first quadrant of the unit circle.</p>
     databench.genericElements.log($('#log'));
 
     databench.signals.on('status', function(msg) {
-        $('#pi-estimate').text(
-            msg['pi-estimate'].toFixed(3) + ' ± '
-            + msg['pi-uncertainty'].toFixed(3)
+        $('#pi').text(
+            msg['pi-estimate'].toFixed(3)+' ± '+
+            msg['pi-uncertainty'].toFixed(3)
         );
     });
 </script>
