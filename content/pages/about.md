@@ -8,11 +8,11 @@ save_as: index.html
 <!-- {% img img-thumbnail float-right http://www.gravatar.com/avatar/1838de72eb5ce4b000c41c06dedb52c4.png?s=180 %} -->
 {% img img-thumbnail float-right /images/me_nyc_square_500.jpeg 250 %}
 
-I am a PhD candidate in [Physics at New York University](http://physics.nyu.edu/) working with [Kyle Cranmer](http://physics.as.nyu.edu/object/kylecranmer.html). At the end of 2012, I returned to New York City from a year at CERN in Geneva, Switzerland. Originally, I am from Germany, then studied for my Bachelor's and Master's degree in Mathematical Physics at the University of Edinburgh (UK) and then went to New York University for my PhD in Particle Physics. Feel free to contact me at [me@svenkreiss.com](mailto:me@svenkreiss.com).
+I am a data scientist in New York City. I recently earned a PhD in Particle Physics from [New York University (NYU)](http://physics.nyu.edu/) where I worked with [Kyle Cranmer](http://physics.as.nyu.edu/object/kylecranmer.html). At the end of 2012, I returned to New York from a year at [CERN](http://www.cern.ch), Switzerland. Originally, I am from Germany, then studied for my bachelor's and master's degree in Mathematical Physics at the University of Edinburgh, Scotland, and then went to New York University for my PhD. Feel free to contact me at [me@svenkreiss.com](mailto:me@svenkreiss.com).
 
-I write code for the statistical analysis tool [RooStats](http://twiki.cern.ch/twiki/bin/view/RooStats/WebHome) which is part of [CERN's Root Data Analysis tool](http://root.cern.ch/). My [ATLAS](http://atlas.web.cern.ch/Atlas/Collaboration/) work is focused on the MET trigger, the H→ZZ*→4l analysis and the Higgs Combination and I was involved in the discovery (see [New York Times article](/blog/chasing-the-higgs-nyt/)), the first mass measurement, the first evidence for VBF production and property measurements related to the coupling strengths of the Higgs Boson.
+During my PhD, I wrote code for the statistical analysis tool [RooStats](http://twiki.cern.ch/twiki/bin/view/RooStats/WebHome) which is part of [CERN's Root Data Analysis tool](http://root.cern.ch/). My [ATLAS](http://atlas.web.cern.ch/Atlas/Collaboration/) work was focused on the MET trigger, the H→ZZ*→4l analysis and the Higgs Combination and I was involved in the discovery (see [New York Times article](/blog/chasing-the-higgs-nyt/)), the first mass measurement, the first evidence for VBF production and property measurements related to the coupling strengths of the Higgs Boson.
 
-My [CV as pdf file](/files/cv.pdf). Selected talks and papers are at the bottom of the page.  
+Here is my [CV as pdf file](/files/cv.pdf), my [projects](/projects.html) and my [blog](/blog/). Selected talks and papers are at the bottom of the page.
 My social media profiles: [<i class="fa fa-twitter-square"></i> Twitter](https://twitter.com/svenkreiss), [<i class="fa fa-linkedin-square"></i> LinkedIn](http://www.linkedin.com/in/svenkreiss), [<i class="fa fa-github-square"></i> GitHub](https://github.com/svenkreiss/).
 
 
@@ -30,7 +30,7 @@ Read the full story on the [New York Times website](http://www.nytimes.com/2013/
 
 ## A Novel Approach to Higgs Coupling Measurements ([arXiv:1401.0080](http://arxiv.org/abs/1401.0080 arXiv:1401.0080))
 
-Kyle Cranmer, David Lopez-Val, Tilman Plehn and I are putting a very cool paper on [arXiv:1401.0080](http://arxiv.org/abs/1401.0080 arXiv:1401.0080) today. 
+Kyle Cranmer, David Lopez-Val, Tilman Plehn and I are putting a very cool paper on [arXiv:1401.0080](http://arxiv.org/abs/1401.0080 arXiv:1401.0080) today.
 
 > We develop a technique to present Higgs coupling measurements, which decouple the poorly defined theoretical uncertainties associated to inclusive and exclusive cross section predictions. The technique simplifies the combination of multiple measurements and can be used in a more general setting. We illustrate the approach with toy LHC Higgs coupling measurements and a collection of new physics models.
 

@@ -3,11 +3,16 @@ Date: 2014-03-07
 Slug: projects
 
 
+## Data Science
+
+* [Databench](http://www.svenkreiss.com/databench/): Interactive data analysis and visualization tool.
+* [RooStats](https://twiki.cern.ch/twiki/bin/view/RooStats/WebHome): Statistics tools used at CERN to which I contributed core classes.
+* [MorphDemo](/blog/morph-demo): Demo of a new horizontal morphing algorithm.
+
+
 ## Science
 
 * [Decouple](http://github.com/svenkreiss/decouple): Tool to factorize theory uncertainties.
-* [RooStats](https://twiki.cern.ch/twiki/bin/view/RooStats/WebHome): Statistics tools used at CERN to which I contributed core classes.
-* [MorphDemo](/blog/morph-demo): Demo of a new horizontal morphing algorithm.
 * [unicodeit](/UnicodeIt.html): Convert latex expressions to unicode characters: \mathcal{H} → ℋ.
 * [quizsocket.com](http://www.quizsocket.com): Free and real-time quizzes.
 * [politicalMoneyTracker](http://svenkreiss.github.io/politicalMoneyTracker/): Project for the Bicoastal Datafest 2013 at Columbia and Stanford University.
