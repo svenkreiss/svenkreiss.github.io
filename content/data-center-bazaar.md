@@ -7,10 +7,9 @@ Summary: Concept for distributed peer-to-peer computing.
 Status: draft
 
 
+{% img img-thumbnail float-right /images/bazaar.png 150 %}
 
-> Concept for distributed peer-to-peer computing.
-
-The goal is to use a heterogeneous set of computers to do calculations on data. The computers might be the local machine, a remote desktop, an AWS EC2 instance, an [AWS Elastic Beanstalk app](http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create_deploy_docker.html), a node on the [Google Compute Engine](https://developers.google.com/compute/docs/containers) or some other real or virtual machine. All these machines have access to data in the form of `s3://*`, `hdfs://*`, `file://*`, `ssh://*`, `http://*` or some other means which might be slow or fast and cheap or expensive.
+This is a concept for peer-to-peer computing. The goal is to use a heterogeneous set of computers to do calculations on data. The computers might be the local machine, a remote desktop, an AWS EC2 instance, an [AWS Elastic Beanstalk app](http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create_deploy_docker.html), a node on the [Google Compute Engine](https://developers.google.com/compute/docs/containers) or some other real or virtual machine. All these machines have access to data in the form of `s3://*`, `hdfs://*`, `file://*`, `ssh://*`, `http://*` or some other means which might be slow or fast and cheap or expensive.
 
 
 ## Flow
