@@ -17,16 +17,21 @@ The goal is to use a heterogeneous set of computers to do calculations on data. 
 
 Assigning priorities to jobs or setting up priority queues on clusters is tedious and usually not very effective. Simple `PBS queue` systems don't even have priorities, but all users just submit all their jobs to the same queue. Jobs are submitted to a central manager and get executed on the next available compute node. The data then has to be copied to that node.
 
-The idea behind `dockbroker` is more similar to a bazaar where there is no central manager. Every client knows at least one `dockbroker` which is a manager of a single compute node. Brokers know each other and can refer clients. To submit a job, the client asks a subset of the `dockbroker`s that it knows for an Offer based on a description of the job. The offer is made in US$ and comes with an expected completion time. The broker makes that offer based on the prices that are given by the cloud provider or (partially) free for local machines. The client picks the cheapest offer taking the estimated completion time into account.
+The idea behind this post is more similar to a bazaar where there is no central manager. Every _client_ knows at least one _broker_ which is a manager of a single compute node. Brokers know each other and can refer clients. To submit a job, the client asks a subset of the brokers that it knows for an _offer_ based on a description of the job. The offer is made in US$ and comes with an expected completion time. The broker makes that offer based on the prices that are given by the cloud provider or (partially) free for local machines. The client picks the cheapest offer taking the estimated completion time into account.
+
+Clients can build reputation in brokers when they deliver on time and still prefer more expensive brokers. Brokers can also build reputation of clients when their estimated run times and required resources match the job description the offer was based on. If that is not the case and a client repeatedly underestimates job processing times, the broker could add extra fees.
+
+At this point, the offers are only used to find the best place to run the job. No money is actually transfered and that is just fine. However, one could go one step further and have digital coins (something like Bitcoin) just for this set of machines. People in an organisation can be given a monthly amount of coins and then pay for their compute jobs. This would make users more conscious of the resources they are using and would limit a combined "cpu+memory+data" quota. At the same time, it would act as a security measure as people without this coin would not be able to use the resources.
 
 
-## Technical Suggestions
+
+## Technical Suggestions: `dockbroker`
 
 To make things a bit more concrete, here is an example interface.
 
 ### Job
 
-A job is defined by a `Dockerfile` and a `manifest`. The broker will use the Dockerfile to see which slices of the Docker image it has cached (and reduce the price). The manifest is used to quantify the price of resources.
+A job is defined by a `Dockerfile` and a `manifest` either in a local directory or inside a remote repository (for example on GitHub). The broker will use the Dockerfile to see which slices of the Docker image it has cached (and reduce the price). The manifest is used to quantify the price of resources.
 
 Example of a simple `manifest` file:
 
@@ -90,14 +95,9 @@ Parallel jobs that are communicating are created by setting `requrie-parallel-ex
 Every compute node runs a `dockbroker`. `dockbroker`s advertise their existance to other brokers. Clients can ask "Who else do you know?" to discover other brokers to get alternative offers. Brokers create offers and handle the scheduling of jobs.
 Nodes that have data locally available or already cached part of the Docker image (a `slice`) are cheaper and therefore preferred. Estimated time to completion includes the estimated run times for jobs already in the queue.
 
-Brokers can build reputation of clients when their estimated run times and required resources match the job description the offer was based on.
-
 ### Clients pick Brokers
 
 Generally, clients pick the cheapest broker. However, the estimated time for completion might be valuable. For a compute node, the value of time is linear as the price of keeping the machine running on a cloud provider is a fixed cost by the hour. The "pain" of waiting for a job to complete could increase quadratic or exponentially which will define a sweet spot for when it is appropriate to "pay more" for a faster compute node.
-
-Clients can build reputation in dockbrokers when they deliver on time.
-
 
 ## Use Cases
 
