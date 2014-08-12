@@ -25,9 +25,9 @@ At this point, the offers are only used to find the best place to run the job. N
 
 
 
-## Technical Suggestions: `dockbroker`
+## Technical Suggestion: `dockbroker`
 
-To make things a bit more concrete, here is an example interface.
+To make things a bit more concrete, here is an example interface. It uses [Docker](https://www.docker.com/) which is advertised with "Build, Ship and Run Any App, Anywhere" and "An open platform for distributed applications for developers and sysadmins". It is a little bit like a virtual machine, but uses the same kernel as the host and therefore it is fast. You can run a JVM inside it, but you can also run plain C.
 
 ### Job
 
@@ -106,4 +106,4 @@ Generally, clients pick the cheapest broker. However, the estimated time for com
 
 ## Why?
 
-I am not an expert in creating a distributed computing environment and more a user of it, but it sounds like an interesting project to implement in [Go](http://golang.org/) (Docker is written in [Go](http://golang.org/)). Contributions to [dockbroker on github](https://github.com/svenkreiss/dockbroker) are very welcome.
+Because I need it. However, I am not an expert in creating a distributed computing environment and am more a user of it, but it sounds like an interesting project to implement in [Go](http://golang.org/) (Docker is written in [Go](http://golang.org/)). Contributions to [dockbroker on github](https://github.com/svenkreiss/dockbroker) are very welcome.
