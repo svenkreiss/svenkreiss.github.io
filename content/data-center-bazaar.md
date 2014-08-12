@@ -1,0 +1,109 @@
+Title: The Data Center and the Bazaar
+Date: 2014-08-10
+Category: Tech
+Tags: Docker, Go, HPC, distributed
+Slug: data-center-bazaar
+Summary: Concept for distributed peer-to-peer computing.
+Status: draft
+
+
+
+> Concept for distributed peer-to-peer computing.
+
+The goal is to use a heterogeneous set of computers to do calculations on data. The computers might be the local machine, a remote desktop, an AWS EC2 instance, an [AWS Elastic Beanstalk app](http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create_deploy_docker.html), a node on the [Google Compute Engine](https://developers.google.com/compute/docs/containers) or some other real or virtual machine. All these machines have access to data in the form of `s3://*`, `hdfs://*`, `file://*`, `ssh://*`, `http://*` or some other means which might be slow or fast and cheap or expensive.
+
+
+## Flow
+
+Assigning priorities to jobs or setting up priority queues on clusters is tedious and usually not very effective. Simple `PBS queue` systems don't even have priorities, but all users just submit all their jobs to the same queue. Jobs are submitted to a central manager and get executed on the next available compute node. The data then has to be copied to that node.
+
+The idea behind `dockbroker` is more similar to a bazaar where there is no central manager. Every client knows at least one `dockbroker` which is a manager of a single compute node. Brokers know each other and can refer clients. To submit a job, the client asks a subset of the `dockbroker`s that it knows for an Offer based on a description of the job. The offer is made in US$ and comes with an expected completion time. The broker makes that offer based on the prices that are given by the cloud provider or (partially) free for local machines. The client picks the cheapest offer taking the estimated completion time into account.
+
+
+## Technical Suggestions
+
+To make things a bit more concrete, here is an example interface.
+
+### Job
+
+A job is defined by a `Dockerfile` and a `manifest`. The broker will use the Dockerfile to see which slices of the Docker image it has cached (and reduce the price). The manifest is used to quantify the price of resources.
+
+Example of a simple `manifest` file:
+
+    {
+        "jobname": "Test job 1",
+        "submitter": "Sven Kreiss <me@svenkreiss.com>",
+        "max-time": "24h",
+        "est-time": "12h",
+    }
+
+Example of an advanced `manifest` file:
+
+    {
+        "jobname": "Test job 1",
+        "submitter": "Sven Kreiss <me@svenkreiss.com>",
+        "max-time": "24h",
+        "est-time": "12h",
+        "RAM": "4GB",
+        "GPU": "nvidia",
+        "job-array": 64,
+        "require-parallel-execution": true,
+        "input-resources": [
+            {
+                "cache-life-time": "1h",
+                "size": "1MB",
+                "md5": "12345678901234567890",
+                "locations": [
+                    "file://home/svenkreiss/data/some_data.csv",
+                    "s3://testbucket/some_data.csv",
+                ],
+            },
+            {
+                "job-array": "0-31",
+                "cache-life-time": "forever",
+                "size": "500MB",
+                "md5": "12345678901234567891",
+                "locations": [
+                    "hdfs://some_path/some_file_0.tar.gz"
+                ],
+            },
+            {
+                "job-array": "32-63",
+                "cache-life-time": "forever",
+                "size": "500MB",
+                "md5": "12345678901234567892",
+                "locations": [
+                    "hdfs://some_path/some_file_1.tar.gz"
+                ],
+            },
+        ],
+        "output-resources": [
+            {"size": "1MB", "location": "file://home/svenkreiss/job/test_job_1.csv"},
+            {"size": "1KB", "location": "file://home/svenkreiss/job/test_job_1.log"},
+        ],
+    }
+
+Parallel jobs that are communicating are created by setting `requrie-parallel-execution: true` which will tell the broker that he can only take as many jobs as he can run in parallel and has to leave the other jobs to another broker. The estimated time for completion will have to take into account that all jobs have to run in parallel.
+
+### Nodes running `dockbroker`
+
+Every compute node runs a `dockbroker`. `dockbroker`s advertise their existance to other brokers. Clients can ask "Who else do you know?" to discover other brokers to get alternative offers. Brokers create offers and handle the scheduling of jobs.
+Nodes that have data locally available or already cached part of the Docker image (a `slice`) are cheaper and therefore preferred. Estimated time to completion includes the estimated run times for jobs already in the queue.
+
+Brokers can build reputation of clients when their estimated run times and required resources match the job description the offer was based on.
+
+### Clients pick Brokers
+
+Generally, clients pick the cheapest broker. However, the estimated time for completion might be valuable. For a compute node, the value of time is linear as the price of keeping the machine running on a cloud provider is a fixed cost by the hour. The "pain" of waiting for a job to complete could increase quadratic or exponentially which will define a sweet spot for when it is appropriate to "pay more" for a faster compute node.
+
+Clients can build reputation in dockbrokers when they deliver on time.
+
+
+## Use Cases
+
+`dockbroker` just sets up environments. The actual parallelized execution, collection of results, data management, etc. has to be handled separately. You could imagine running an [ipcluster](http://ipython.org/ipython-doc/dev/parallel/parallel_intro.html) with it (popular in the `IPython` community) or running an [Apache Spark](https://spark.apache.org/) cluster. Sometimes you just need different software versions in your cluster (like different versions of [R](http://www.r-project.org/) or [ROOT](http://root.cern.ch)) or different resources (e.g. a GPU) and `dockbroker` can find the best place for the job and create the virtual environment.
+
+
+## Why?
+
+I am not an expert in creating a distributed computing environment and more a user of it, but it sounds like an interesting project to implement in [Go](http://golang.org/) (Docker is written in [Go](http://golang.org/)). Contributions to [dockbroker on github](https://github.com/svenkreiss/dockbroker) are very welcome.
