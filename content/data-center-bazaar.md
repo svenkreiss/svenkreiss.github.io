@@ -41,6 +41,8 @@ Example of a simple `manifest` file:
         "EstTime": "12h",
     }
 
+This job has access to unspecified `InputResources` and `OutputResources` (see advanced example below) but brokers who have easy access to those resources wont be able to make better offers than any other broker. Large files should always be specified because neglecting to specify expensive resources could lead to bad reputation.
+
 Example of an advanced `manifest` file:
 
     {
@@ -87,7 +89,7 @@ Example of an advanced `manifest` file:
         ],
     }
 
-Parallel jobs that are communicating are created by setting `requrie-parallel-execution: true` which will tell the broker that he can only take as many jobs as he can run in parallel and has to leave the other jobs to another broker. The estimated time for completion will have to take into account that all jobs have to run in parallel.
+Parallel jobs that are communicating are created by setting `RequireParallelExecution: true` which will tell the broker that he can only take as many jobs as he can run in parallel and has to leave the other jobs to another broker. The estimated time for completion will have to take into account that all jobs have to run in parallel.
 
 ### Nodes running `dockbroker`
 
