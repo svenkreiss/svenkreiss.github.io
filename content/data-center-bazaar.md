@@ -3,7 +3,7 @@ Date: 2014-08-12
 Category: Tech
 Tags: Docker, Go, HPC, peer-to-peer, distributed
 Slug: data-center-bazaar
-Summary: Concept for distributed peer-to-peer computing.
+Summary: Concept for peer-to-peer computing.
 Status: draft
 
 
