@@ -35,55 +35,55 @@ A job is defined by a `Dockerfile` and a `manifest` either in a local directory 
 Example of a simple `manifest` file:
 
     {
-        "jobname": "Test job 1",
-        "submitter": "Sven Kreiss <me@svenkreiss.com>",
-        "max-time": "24h",
-        "est-time": "12h",
+        "JobName": "Test job 1",
+        "Submitter": "Sven Kreiss <me@svenkreiss.com>",
+        "MaxTime": "24h",
+        "EstTime": "12h",
     }
 
 Example of an advanced `manifest` file:
 
     {
-        "jobname": "Test job 1",
-        "submitter": "Sven Kreiss <me@svenkreiss.com>",
-        "max-time": "24h",
-        "est-time": "12h",
+        "JobName": "Test job 1",
+        "Submitter": "Sven Kreiss <me@svenkreiss.com>",
+        "MaxTime": "24h",
+        "EstTime": "12h",
         "RAM": "4GB",
         "GPU": "nvidia",
-        "job-array": 64,
-        "require-parallel-execution": true,
-        "input-resources": [
+        "JobArray": 64,
+        "RequireParallelExecution": true,
+        "InputResources": [
             {
-                "cache-life-time": "1h",
-                "size": "1MB",
-                "md5": "12345678901234567890",
-                "locations": [
+                "CacheLifeTime": "1h",
+                "Size": "1MB",
+                "Md5": "12345678901234567890",
+                "Locations": [
                     "file://home/svenkreiss/data/some_data.csv",
                     "s3://testbucket/some_data.csv",
                 ],
             },
             {
-                "job-array": "0-31",
-                "cache-life-time": "forever",
-                "size": "500MB",
-                "md5": "12345678901234567891",
-                "locations": [
+                "JobArray": "0-31",
+                "CacheLifeTime": "forever",
+                "Size": "500MB",
+                "Md5": "12345678901234567891",
+                "Locations": [
                     "hdfs://some_path/some_file_0.tar.gz"
                 ],
             },
             {
-                "job-array": "32-63",
-                "cache-life-time": "forever",
-                "size": "500MB",
-                "md5": "12345678901234567892",
-                "locations": [
+                "JobArray": "32-63",
+                "CacheLifeTime": "forever",
+                "Size": "500MB",
+                "Md5": "12345678901234567892",
+                "Locations": [
                     "hdfs://some_path/some_file_1.tar.gz"
                 ],
             },
         ],
-        "output-resources": [
-            {"size": "1MB", "location": "file://home/svenkreiss/job/test_job_1.csv"},
-            {"size": "1KB", "location": "file://home/svenkreiss/job/test_job_1.log"},
+        "OutputResources": [
+            {"Size": "1MB", "Location": "file://home/svenkreiss/job/test_job_1.csv"},
+            {"Size": "1KB", "Location": "file://home/svenkreiss/job/test_job_1.log"},
         ],
     }
 
@@ -105,4 +105,4 @@ Generally, clients pick the cheapest broker. However, the estimated time for com
 
 ## Why?
 
-Because I need it. However, I am not an expert in creating a distributed computing environment and am more a user of it, but it sounds like an interesting project to implement in [Go](http://golang.org/) (Docker is written in [Go](http://golang.org/)). Contributions to [dockbroker on github](https://github.com/svenkreiss/dockbroker) are very welcome.
+Because I need it. However, it is not like I am creating distributed computing environments every day. I am more a user of HPC, but it sounds like an interesting project to implement in [Go](http://golang.org/) (Docker is written in [Go](http://golang.org/)). Contributions to [dockbroker on github](https://github.com/svenkreiss/dockbroker) are very welcome.
