@@ -35,7 +35,7 @@ A job is defined by a `Dockerfile` and a `manifest` either in a local directory 
 Example of a simple `manifest` file:
 
     {
-        "JobName": "Test job 1",
+        "Name": "Test job 1",
         "Submitter": "Sven Kreiss <me@svenkreiss.com>",
         "MaxTime": "24h",
         "EstTime": "12h",
@@ -46,7 +46,7 @@ This job has access to unspecified `InputResources` and `OutputResources` (see a
 Example of an advanced `manifest` file:
 
     {
-        "JobName": "Test job 1",
+        "Name": "Test job 2",
         "Submitter": "Sven Kreiss <me@svenkreiss.com>",
         "MaxTime": "24h",
         "EstTime": "12h",
