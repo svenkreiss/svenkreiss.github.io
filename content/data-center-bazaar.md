@@ -26,7 +26,7 @@ At this point, the offers are only used to find the best place to run the job. N
 
 ## Technical Suggestion: `dockbroker`
 
-To make things a bit more concrete, here is an example interface. It uses [Docker](https://www.docker.com/) which is advertised with "Build, Ship and Run Any App, Anywhere" and "An open platform for distributed applications for developers and sysadmins". It is a little bit like a virtual machine, but uses the same kernel as the host and therefore it is fast. You can run a JVM inside it, but you can also run plain C.
+To make things a bit more concrete, here is an example interface. It uses [Docker](https://www.docker.com/) which is advertised with _"Build, Ship and Run Any App, Anywhere"_ and _"An open platform for distributed applications for developers and sysadmins"_. It is a little bit like a virtual machine, but uses the same kernel as the host and therefore it is fast. You can run a JVM inside it, but you can also run plain C.
 
 ### Job
 
