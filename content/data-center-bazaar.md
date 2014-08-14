@@ -4,7 +4,6 @@ Category: Tech
 Tags: Docker, Go, HPC, peer-to-peer, distributed
 Slug: data-center-bazaar
 Summary: Concept for peer-to-peer computing.
-Status: draft
 
 
 {% img img-thumbnail float-right /images/bazaar.png 150 %}
@@ -37,8 +36,8 @@ Example of a simple `manifest` file:
     {
         "Name": "Test job 1",
         "Submitter": "Sven Kreiss <me@svenkreiss.com>",
-        "MaxTime": "24h",
-        "EstTime": "12h",
+        "MaxDuration": "24h",
+        "EstDuration": "12h",
     }
 
 This job has access to unspecified `InputResources` and `OutputResources` (see advanced example below) but brokers who have easy access to those resources wont be able to make better offers than any other broker. Large files should always be specified because neglecting to specify expensive resources could lead to bad reputation.
@@ -48,8 +47,8 @@ Example of an advanced `manifest` file:
     {
         "Name": "Test job 2",
         "Submitter": "Sven Kreiss <me@svenkreiss.com>",
-        "MaxTime": "24h",
-        "EstTime": "12h",
+        "MaxDuration": "24h",
+        "EstDuration": "12h",
         "RAM": "4GB",
         "GPU": "nvidia",
         "JobArray": 64,
