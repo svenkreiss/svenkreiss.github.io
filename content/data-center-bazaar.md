@@ -89,7 +89,7 @@ Example of an advanced `manifest` file:
         ],
     }
 
-Parallel jobs that are communicating are created by setting `RequireParallelExecution: true` which will tell the broker to take only as many jobs as can be run in parallel. Other jobs have to be left to other brokers. The estimated time for completion will have to take into account that all jobs have to run in parallel.
+Parallel jobs that are communicating are created by setting `"RequireParallelExecution": true` which will tell the broker to take only as many jobs as can be run in parallel. Other jobs have to be left to other brokers. The estimated time for completion will have to take into account that all jobs have to run in parallel.
 
 ### Nodes running `dockbroker`
 
