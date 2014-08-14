@@ -20,7 +20,7 @@ The idea behind this post is more similar to a bazaar where there is no central 
 
 Clients can build reputation in brokers when they deliver on time and still prefer more expensive brokers. Brokers can also build reputation of clients when their estimated run times and required resources match the job description the offer was based on. If that is not the case and a client repeatedly underestimates job processing times, the broker could add extra fees.
 
-At this point, the offers are only used to find the best place to run the job. No money is actually transfered and that is just fine. However, one could go one step further and have digital coins (something like Bitcoin) just for this set of machines. People in an organisation can be given a monthly amount of coins and then pay for their compute jobs. This would make users more conscious of the resources they are using and would limit a combined "cpu+memory+data" quota. At the same time, it would act as a security measure as people without this coin would not be able to use the resources.
+At this point, the offers are only used to find the best place to run the job. No money is actually transfered and that is just fine. However, one could go one step further and have digital coins (something like Bitcoin) just for this set of machines. People in an organisation can be given a monthly amount of coins and then pay for their compute jobs. This would make users more conscious of the resources they are using and would limit a combined "cpu+memory+data" quota. At the same time, it would act as a security measure as people without this coin would not be able to use the resources. (For the cryptocurrency experts: one could use [smart contracts](http://en.wikipedia.org/wiki/Smart_contract) and maybe [colored coins](https://docs.google.com/document/d/1AnkP_cVZTCMLIzw4DvsW6M8Q2JC0lIzrTLuoWu2z1BE).)
 
 
 
@@ -94,11 +94,11 @@ Parallel jobs that are communicating are created by setting `RequireParallelExec
 ### Nodes running `dockbroker`
 
 Every compute node runs a `dockbroker`. `dockbroker`s advertise their existance to other brokers. Clients can ask "Who else do you know?" to discover other brokers to get alternative offers. Brokers create offers and handle the scheduling of jobs.
-Nodes that have data locally available or already cached part of the Docker image (a `slice`) are cheaper and therefore preferred. Estimated time to completion includes the estimated run times for jobs already in the queue.
+Nodes that have data locally available or already cached part of the Docker image (a `slice`) are cheaper and therefore preferred. When data has to be downloaded to and uploaded from the node, the price for the bandwidth as well as the extra time are taken into account in the offer. Bandwidth price and download times depend on the location of the source (e.g. it is cheaper to download data from [AWS S3](http://aws.amazon.com/s3/) when the job is run on [AWS EC2](http://aws.amazon.com/ec2/); see [AWS S3 pricing](http://aws.amazon.com/s3/pricing/)). This gives the system _data locality_. The estimated time to completion includes the estimated run times for jobs already in the queue.
 
 ### Clients pick Brokers
 
-Generally, clients pick the cheapest broker. However, the estimated time for completion might be valuable. For a compute node, the value of time is linear as the price of keeping the machine running on a cloud provider is a fixed cost by the hour. The "pain" of waiting for a job to complete could increase quadratic or exponentially which will define a sweet spot for when it is appropriate to "pay more" for a faster compute node.
+Generally, clients pick the cheapest broker. However, the estimated time for completion might be valuable. For a compute node, the value of time is linear as the price of keeping the machine running on a cloud provider is a fixed cost by the hour. The "pain" of waiting for a job to complete could increase quadratic or exponentially which will define a sweet spot for when it is appropriate to pay more for a faster compute node.
 
 ## Use Cases
 
