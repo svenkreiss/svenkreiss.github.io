@@ -1,5 +1,5 @@
 Title: The Data Center and the Bazaar
-Date: 2014-08-12
+Date: 2014-08-14
 Category: Tech
 Tags: Docker, Go, HPC, peer-to-peer, distributed
 Slug: data-center-bazaar
@@ -9,7 +9,7 @@ Status: draft
 
 {% img img-thumbnail float-right /images/bazaar.png 150 %}
 
-This is a concept for peer-to-peer computing. The goal is to use a heterogeneous set of computers to do calculations on data. The computers might be the local machine, a remote desktop, an AWS EC2 instance, an [AWS Elastic Beanstalk app](http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create_deploy_docker.html), a node on the [Google Compute Engine](https://developers.google.com/compute/docs/containers) or some other real or virtual machine. All these machines have access to data in the form of `s3://*`, `hdfs://*`, `file://*`, `ssh://*`, `http://*` or some other means which might be slow or fast and cheap or expensive.
+This is a concept for peer-to-peer computing. The goal is to use a heterogeneous set of computers to run analyses on data. The computers might be the local machine, a remote desktop, an AWS EC2 instance, an [AWS Elastic Beanstalk app](http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create_deploy_docker.html), a node on the [Google Compute Engine](https://developers.google.com/compute/docs/containers) or some other real or virtual machine. All these machines have access to data in the form of `s3://*`, `hdfs://*`, `file://*`, `ssh://*`, `http://*` or some other means which might be slow or fast and cheap or expensive.
 
 
 ## Flow
@@ -20,7 +20,7 @@ The idea behind this post is more similar to a bazaar where there is no central 
 
 Clients can build reputation in brokers when they deliver on time and still prefer more expensive brokers. Brokers can also build reputation of clients when their estimated run times and required resources match the job description the offer was based on. If that is not the case and a client repeatedly underestimates job processing times, the broker could add extra fees.
 
-At this point, the offers are only used to find the best place to run the job. No money is actually transfered and that is just fine. However, one could go one step further and have digital coins (something like Bitcoin) just for this set of machines. People in an organisation can be given a monthly amount of coins and then pay for their compute jobs. This would make users more conscious of the resources they are using and would limit a combined "cpu+memory+data" quota. At the same time, it would act as a security measure as people without this coin would not be able to use the resources. (For the cryptocurrency experts: one could use [smart contracts](http://en.wikipedia.org/wiki/Smart_contract) and maybe [colored coins](https://docs.google.com/document/d/1AnkP_cVZTCMLIzw4DvsW6M8Q2JC0lIzrTLuoWu2z1BE).)
+At this point, the offers are only used to find the best place to run the job. No money is actually transfered and that is just fine. However, one could go one step further and have digital coins (something like Bitcoin) just for this set of machines. People in an organization can be given a monthly amount of coins and then pay for their compute jobs. This would make users more conscious of the resources they are using and would limit a combined "cpu+memory+data" quota. At the same time, it would act as a security measure as people without this coin would not be able to use the resources. (For the cryptocurrency experts: one could use [smart contracts](http://en.wikipedia.org/wiki/Smart_contract) and maybe [colored coins](https://docs.google.com/document/d/1AnkP_cVZTCMLIzw4DvsW6M8Q2JC0lIzrTLuoWu2z1BE).)
 
 
 
@@ -89,11 +89,11 @@ Example of an advanced `manifest` file:
         ],
     }
 
-Parallel jobs that are communicating are created by setting `RequireParallelExecution: true` which will tell the broker that he can only take as many jobs as he can run in parallel and has to leave the other jobs to another broker. The estimated time for completion will have to take into account that all jobs have to run in parallel.
+Parallel jobs that are communicating are created by setting `RequireParallelExecution: true` which will tell the broker to take only as many jobs as can be run in parallel. Other jobs have to be left to other brokers. The estimated time for completion will have to take into account that all jobs have to run in parallel.
 
 ### Nodes running `dockbroker`
 
-Every compute node runs a `dockbroker`. `dockbroker`s advertise their existance to other brokers. Clients can ask "Who else do you know?" to discover other brokers to get alternative offers. Brokers create offers and handle the scheduling of jobs.
+Every compute node runs a `dockbroker`. `dockbroker`s advertise their existence to other `dockbroker`s. Clients can ask "Who else do you know?" to discover other brokers to get alternative offers. Brokers create offers and handle the scheduling of jobs.
 Nodes that have data locally available or already cached part of the Docker image (a `slice`) are cheaper and therefore preferred. When data has to be downloaded to and uploaded from the node, the price for the bandwidth as well as the extra time are taken into account in the offer. Bandwidth price and download times depend on the location of the source (e.g. it is cheaper to download data from [AWS S3](http://aws.amazon.com/s3/) when the job is run on [AWS EC2](http://aws.amazon.com/ec2/); see [AWS S3 pricing](http://aws.amazon.com/s3/pricing/)). This gives the system _data locality_. The estimated time to completion includes the estimated run times for jobs already in the queue.
 
 ### Clients pick Brokers
