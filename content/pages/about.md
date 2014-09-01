@@ -3,7 +3,7 @@ Date: 2014-03-06 22:27
 Slug: about
 url: /
 save_as: index.html
-Summary: I am a Data Scientist in New York City.
+Summary: Sven Kreiss is a Data Scientist in New York City.
 
 
 <!-- {% img img-thumbnail float-right http://www.gravatar.com/avatar/1838de72eb5ce4b000c41c06dedb52c4.png?s=180 %} -->
