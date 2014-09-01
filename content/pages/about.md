@@ -7,9 +7,8 @@ Summary: I am a data scientist in New York City.
 
 
 <!-- {% img img-thumbnail float-right http://www.gravatar.com/avatar/1838de72eb5ce4b000c41c06dedb52c4.png?s=180 %} -->
-{% img img-thumbnail float-right /images/me_nyc_square_500.jpeg 250 %}
-
-I am a data scientist in New York City. I recently earned a PhD in Particle Physics from [New York University (NYU)](http://physics.nyu.edu/) where I worked with [Kyle Cranmer](http://physics.as.nyu.edu/object/kylecranmer.html). At the end of 2012, I returned to New York from a year at [CERN](http://www.cern.ch), Switzerland. Originally, I am from Germany, then studied for my bachelor's and master's degree in Mathematical Physics at the University of Edinburgh, Scotland, and then went to New York University for my PhD. Feel free to contact me at [me@svenkreiss.com](mailto:me@svenkreiss.com).
+{% img img-thumbnail float-right /images/me_nyc_square_500.jpeg 250 Sven Kreiss in front of Freedom Tower %}
+I am a Data Scientist in New York City. I recently earned a PhD in Particle Physics from [New York University (NYU)](http://physics.nyu.edu/) where I worked with [Kyle Cranmer](http://physics.as.nyu.edu/object/kylecranmer.html). At the end of 2012, I returned to New York from a year at [CERN](http://www.cern.ch), Switzerland. Originally, I am from Germany, then studied for my bachelor's and master's degree in Mathematical Physics at the University of Edinburgh, Scotland, and then went to New York University for my PhD. Feel free to contact me at [me@svenkreiss.com](mailto:me@svenkreiss.com).
 
 During my PhD, I wrote code for the statistical analysis tool [RooStats](http://twiki.cern.ch/twiki/bin/view/RooStats/WebHome) which is part of [CERN's Root Data Analysis tool](http://root.cern.ch/). My [ATLAS](http://atlas.web.cern.ch/Atlas/Collaboration/) work was focused on the MET trigger, the H→ZZ*→4l analysis and the Higgs Combination and I was involved in the discovery (see [New York Times article](/blog/chasing-the-higgs-nyt/)), the first mass measurement, the first evidence for VBF production and property measurements related to the coupling strengths of the Higgs Boson.
 
@@ -41,7 +40,7 @@ We share all the software that was involved. That includes that we published the
 
 ## MorphDemo using `d3.js`
 
-{% img img-thumbnail float-right /images/kdtreemorph_preview.png 350 %}
+{% img img-thumbnail float-right /images/kdtreemorph_preview.png 350 Preview of kd-tree based morphing algorithm %}
 [This](/files/morphDemo.html) is an interactive demo for a new morphing algorithm with special properties that are motivated from Physics. It uses KD trees and kernel density estimates that are calculated in real time in this demo. All visualization is done using `d3.js` and custom code for KD trees and kernel densities in JavaScript.
 
 Link: [morphDemo.html](/files/morphDemo.html), [blog post](/blog/morph-demo/)
