@@ -14,16 +14,13 @@ The syntax is the same as for the `youtube` tag:
 {% vimeo id [width height] %}
 </pre></div>
 
-_Update_: The code is now merged into the main pelican-plugins repository on github:  
+_Update_: The code is now merged into the main pelican-plugins repository on github:
 [https://github.com/getpelican/pelican-plugins](https://github.com/getpelican/pelican-plugins)
 
 
 ## Tests with different sizes
 
 {% vimeo 21789576 320 180 %}
-
 {% vimeo 21789576 480 270 %}
-
 {% vimeo 21789576 640 360 %}
-
 

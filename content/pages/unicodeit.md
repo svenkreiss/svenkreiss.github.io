@@ -29,14 +29,15 @@ Install this in parallel to the standard UnicodeIt and assign a different keyboa
 ## It's Free
 
 The program is free and we hope you enjoy it as much as we do. If you feel like buying us beer or coffee, please do:
-<html>
+
+<div>
 <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
 <input type="hidden" name="cmd" value="_s-xclick">
 <input type="hidden" name="hosted_button_id" value="ZT77WA6BZUWRE">
-<input type="image" src="https://www.paypal.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<input type="image" src="https://www.paypal.com/en_US/i/btn/btn_donate_SM.gif" name="submit" alt="PayPal - The safer, easier way to pay online!">
 <img alt="pixel" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
 </form>
-</html>
+</div>
 
 
 ## Installation on Mac OS Lion
