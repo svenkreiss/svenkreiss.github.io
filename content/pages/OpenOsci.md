@@ -14,15 +14,14 @@ Slug: openosci
 * no fixed frequencies; the ADC can be run with different clock cycles and then the time for one x-division is displayed in the display; the "td" value (in the images below, 47 microseconds and 9 milliseconds)
 * the display also shows a frequency estimate of the signal. The algorithm looks at the time between to successive crossings of the x-axis and calculates a frequency from that. For sine waves, this is reasonably accurate. In the right picture below I measure background noise with a frequency of 49 Hz; the left picture shows a 43 kHz oscillation.
 
-<div style="clear:both"> </div>
-
 
 ## Fotos
+
 {% img /images/openosci/2channels_function_generator.jpg 500 OpenOsci in action %}
-<div style="clear:both"></div>
+
 {% img /images/openosci/channel_42kHz.jpg 300 one channel %}
 {% img /images/openosci/4channels_50Hz.jpg 300 four channels %}
-<div style="clear:both"> </div>
+
 
 
 ## Hardware

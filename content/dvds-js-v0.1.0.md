@@ -6,27 +6,7 @@ Slug: dvds-js-v0.1.0
 Summary: Distributed Versioned Data Structures in JavaScript. Like git in js.
 
 
-<style>
-/* graph styles */
-      svg {
-        border:1px solid #faa;
-        background-color:#fee;
-      }
-      .link {
-        stroke: #000;
-        stroke-width: 1.5px;
-      }
-      .node circle {
-        fill: #000;
-        stroke: #fff;
-        stroke-width: 1.5px;
-      }
-      .node text {
-        text-anchor: middle;
-      }
-</style>
-
-<script src="http://s3.amazonaws.com/flaskApp_static/static/d3/d3.v3.min.js" charset="utf-8"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.11/d3.min.js" charset="utf-8"></script>
 <script src="http://requirejs.org/docs/release/2.1.2/minified/require.js"></script>
 <script>
 require.config({
@@ -43,7 +23,7 @@ require.config({
 });
 </script>
 
-> Distributed Versioned Data Structures in JavaScript. Like git in js.  
+> Distributed Versioned Data Structures in JavaScript. Like git in js.
 > Checkout the code on [github.com/svenkreiss/dvds-js](http://github.com/svenkreiss/dvds-js).
 
 
@@ -120,7 +100,7 @@ Repository `a` merged with `b`:
 
 `dvds-js` is an [AMD library](http://requirejs.org/docs/whyamd.html#amd). You can load it using `require-js` in the browser as in the example above. The setup looks something like this:
 
-    :::JavaScript 
+    :::JavaScript
     <script src="http://s3.amazonaws.com/flaskApp_static/static/d3/d3.v3.min.js" charset="utf-8"></script>
     <script src="http://requirejs.org/docs/release/2.1.2/minified/require.js"></script>
     <script>
@@ -150,25 +130,25 @@ In `node.js`, this setup is not necessary and you would simply use `require()`.
 
 <script>
 require(['dvds', 'dvds.visualize'], function() {
-    
+
     var a = new dvds.Repository(['Paul', 'Adam']);
     var b = a.fork();
     var bString = JSON.stringify(b);
-    
+
     // send bString to a different machine and make it a repository again
     var bStreamed = dvds.Repository.parseJSON(JSON.parse(bString));
     bStreamed.data[0] = 'Karl';
     bStreamed.data[1] = 'Peter';
     // convert to a string again to send back
     var bStreamedString = JSON.stringify(bStreamed);
-    
+
     // meanwhile on a
     a.data[0] = 'Paula';
-    
+
     // receive the modified b repository
     var bReceived = dvds.Repository.parseJSON(JSON.parse(bStreamedString));
     a.merge(bReceived);
-    
+
     // update html output
     $("#test1Out").text(JSON.stringify(a.data));
 

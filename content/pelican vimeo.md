@@ -21,6 +21,8 @@ _Update_: The code is now merged into the main pelican-plugins repository on git
 ## Tests with different sizes
 
 {% vimeo 21789576 320 180 %}
+
 {% vimeo 21789576 480 270 %}
+
 {% vimeo 21789576 640 360 %}
 
