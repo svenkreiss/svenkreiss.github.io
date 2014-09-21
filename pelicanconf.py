@@ -60,6 +60,7 @@ PLUGINS = [
 # pure theme specific
 COVER_IMG_URL = '/images/winter_mountains_1600.jpeg'
 AUTHOR_EMAIL = 'sk@svenkreiss.com'
+AUTHOR_IMAGE = '/images/me_nyc_square_500.jpeg'
 TAGLINE = ''
 META_DESCRIPTION = 'my personal website'
 DISQUS_SITENAME = 'svenkreisscom'
