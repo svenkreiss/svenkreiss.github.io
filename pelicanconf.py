@@ -49,11 +49,12 @@ THEME = "../pelican-theme-pure"
 # plugins
 PLUGIN_PATH = '../pelican-plugins'
 PLUGINS = [
-	'sitemap', 'gravatar', 'render_math',
+	'sitemap', 'gravatar', #'render_math',
 	'liquid_tags.img', 'liquid_tags.video',
 	'liquid_tags.youtube', 'liquid_tags.vimeo',
-	'liquid_tags.include_code', 
+	'liquid_tags.include_code',
 	# 'liquid_tags.notebook',
+    'representative_image',
 ]
 
 # pure theme specific
