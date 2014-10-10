@@ -52,6 +52,12 @@ Link: [morphDemo.html](/files/morphDemo.html), [blog post](/blog/morph-demo/)
 
 ## Selected Publications
 
+I had major contributions to the discovery of the Higgs Boson at CERN,
+Switzerland, in 2012 and I am a co-author of the statistics software used
+for Higgs Boson studies, RooStats. Analyses that I worked on and plots that
+I made are part of publications in the journal Science, Physics Letters B
+and the Particle Data Group among others.
+
 * 01/2014: Cranmer, Kreiss, Lopez-Val, Plehn. _A Novel Approach to Higgs Coupling Measurements_. [arXiv:1401.0080](http://arxiv.org/abs/1401.0080).
 * 07/2013: ATLAS collaboration. _Measurements of Higgs boson production and couplings in diboson final states with the ATLAS detector at the LHC_. I was an editor. [Inspire](http://inspirehep.net/record/1241574). Phys.Lett. B726 (2013) 88-119.
 * 07/2013: ATLAS collaboration. _Evidence for the spin-0 nature of the Higgs boson using ATLAS data_. [Inspire](http://inspirehep.net/record/1241575). Phys.Lett. B726 (2013) 120-144.
@@ -70,6 +76,10 @@ On Inspire: [Paper list](http://inspirehep.net/search?ln=en&ln=en&p=find+a+%22s+
 
 
 ## Selected Talks
+
+During my PhD studies, I gave talks in Hamburg, Goettingen and Dresden (Germany),
+Split (Croatia), Geneva (Switzerland), Rome (Italy), Cambridge (UK),
+Raleigh (NC, USA) and New York (NY, USA).
 
 * 01/2014: Factorizing Theoretical Uncertainties from LHC Higgs Coupling Measurements, Seminar, University of Cambridge, UK
 * 07/2013: Modeling and Statistical Analysis for Higgs Physics at the Large Hadron Collider, Knowledge Extraction via Comparison of Complex Computational Models to Massive Data Sets, Durham, NC, USA, [Conference page](http://www.samsi.info/workshop/2013-knowledge-extraction-comparison-complex-computational-models-massive-data-sets-july-29), [PDF](http://www.samsi.info/sites/default/files/Kreiss_madai_july2013.pdf)
