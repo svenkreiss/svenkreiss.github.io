@@ -6,8 +6,8 @@ Local development with
 make devserver
 ```
 
-and to change publish to `../svenkreiss.github.io` for later `git push`:
+Publish with
 
 ```bash
-make publish
+make github
 ```
