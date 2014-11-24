@@ -20,7 +20,7 @@ INDEX_SAVE_AS = 'blog/index.html'
 
 # Blogroll
 LINKS = (
-	('unicodeit.net', 'http://www.unicodeit.net'),
+    ('unicodeit.net', 'http://www.unicodeit.net'),
 )
 
 # Social widget
@@ -34,7 +34,7 @@ TWITTER_USERNAME = 'svenkreiss'
 DEFAULT_PAGINATION = 10
 
 # Uncomment following line if you want document-relative URLs when developing
-#RELATIVE_URLS = True
+# RELATIVE_URLS = True
 
 STATIC_PATHS = (['images', 'files', 'extras'])
 
@@ -47,13 +47,13 @@ EXTRA_PATH_METADATA = {
 THEME = "../pelican-theme-pure"
 
 # plugins
-PLUGIN_PATH = '../pelican-plugins'
+PLUGIN_PATHS = ['../pelican-plugins']
 PLUGINS = [
-	'sitemap', 'gravatar', #'render_math',
-	'liquid_tags.img', 'liquid_tags.video',
-	'liquid_tags.youtube', 'liquid_tags.vimeo',
-	'liquid_tags.include_code',
-	# 'liquid_tags.notebook',
+    'sitemap', 'gravatar',  # 'render_math',
+    'liquid_tags.img', 'liquid_tags.video',
+    'liquid_tags.youtube', 'liquid_tags.vimeo',
+    'liquid_tags.include_code',
+    # 'liquid_tags.notebook',
     'representative_image',
 ]
 
@@ -85,14 +85,13 @@ CATEGORIES_SAVE_AS = 'blog/categories.html'
 TAGS_SAVE_AS = 'blog/tags.html'
 
 MENUITEMS = [
-	('Projects', 'projects.html'),
-	('Blog', 'blog/'),
+    ('Projects', 'projects.html'),
+    ('Blog', 'blog/'),
 ]
 DISPLAY_PAGES_ON_MENU = True
 
 
 # plugin render_math
-MATH = {'color':'blue', 'align':'left'}
+MATH = {'color': 'blue', 'align': 'left'}
 
 TYPOGRIFY = True
-
