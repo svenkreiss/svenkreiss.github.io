@@ -36,7 +36,11 @@ DEFAULT_PAGINATION = 10
 # Uncomment following line if you want document-relative URLs when developing
 # RELATIVE_URLS = True
 
-STATIC_PATHS = (['images', 'files', 'extras'])
+PATH = 'content'
+PAGE_EXCLUDES = ['files']
+ARTICLE_EXCLUDES = ['files', 'pages']
+
+STATIC_PATHS = ['images', 'files', 'extras']
 
 EXTRA_PATH_METADATA = {
     'extras/robots.txt': {'path': 'robots.txt'},
