@@ -28,7 +28,8 @@ My part of the Higgs discovery story in the New York Times.
 <div style="clear:both;"></div>
 
 That "joyful expletive" was "Holly shit" (not correcting the typo) sent from his phone.<br />
-Read the full story on the [New York Times website](http://www.nytimes.com/2013/03/05/science/chasing-the-higgs-boson-how-2-teams-of-rivals-at-CERN-searched-for-physics-most-elusive-particle.html?view=Opening_the_Box) from March 5, 2013.
+Read the full story on the [New York Times website](http://www.nytimes.com/2013/03/05/science/chasing-the-higgs-boson-how-2-teams-of-rivals-at-CERN-searched-for-physics-most-elusive-particle.html?view=Opening_the_Box) from March 5, 2013.<br />
+The New Yorker also had a piece about our [Nobel Prize Party](/blog/nobel-prize-party-new-yorker).
 
 
 
