@@ -89,8 +89,9 @@ CATEGORIES_SAVE_AS = 'blog/categories.html'
 TAGS_SAVE_AS = 'blog/tags.html'
 
 MENUITEMS = [
-    ('Projects', 'projects.html'),
-    ('Blog', 'blog/'),
+    ('projects', 'projects.html'),
+    ('trivial.io', 'blog/trivial-io/'),
+    ('old blog', 'blog/'),
 ]
 DISPLAY_PAGES_ON_MENU = True
 

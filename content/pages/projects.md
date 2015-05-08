@@ -20,6 +20,7 @@ Slug: projects
 
 ## Tech
 
+* [html5validator](http://github.com/svenkreiss/html5validator): Command line tool to test the validity of static HTML5 files.
 * [OpenOsci](/openosci.html): Open source and open hardware oscilloscope.
 * [number4](/number4.html): My walking robot.
 * [nmea-gpsd](/nmea-gpsd.html): The part of gpsd that reads the nmea stream.

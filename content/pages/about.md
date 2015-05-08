@@ -13,7 +13,7 @@ I am a Data Scientist at [Wildcard](http://www.trywildcard.com/) in New York Cit
 
 During my PhD, I wrote code for the statistical analysis tool [RooStats](http://twiki.cern.ch/twiki/bin/view/RooStats/WebHome) which is part of [CERN's Root Data Analysis tool](http://root.cern.ch/). My [ATLAS](http://atlas.web.cern.ch/Atlas/Collaboration/) work was focused on the the H→ZZ*→4l analysis, the Higgs Combination and I was involved in the discovery (see [New York Times article](/blog/chasing-the-higgs-nyt/)), the first mass measurement, the first evidence for VBF production and property measurements related to the coupling strengths of the Higgs Boson.
 
-Here is a list of my [<i class="fa fa-cogs"></i> side projects](/projects.html), my fairly empty [<i class="fa fa-rss"></i> blog](/blog/) and my outdated [<i class="fa fa-file-text"></i> CV](/files/cv.pdf). Selected talks and papers are at the bottom of the page.
+Here is a list of my [<i class="fa fa-cogs"></i> side projects](/projects.html), my blog [<i class="fa fa-rss"></i> trivial.io](http://trivial.io), my [old blog](/blog/) and my outdated [<i class="fa fa-file-text"></i> CV](/files/cv.pdf). Selected talks and papers are at the bottom of the page.
 My social media profiles are [<i class="fa fa-twitter"></i> Twitter](https://twitter.com/svenkreiss), [<i class="fa fa-linkedin-square"></i> LinkedIn](http://www.linkedin.com/in/svenkreiss) and [<i class="fa fa-github"></i> GitHub](https://github.com/svenkreiss/) and my email address is [<i class="fa fa-envelope"></i> me@svenkreiss.com](mailto:me@svenkreiss.com).
 
 
