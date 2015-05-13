@@ -85,6 +85,7 @@ During my PhD studies, I gave talks in Hamburg, Goettingen and Dresden (Germany)
 Split (Croatia), Geneva (Switzerland), Rome (Italy), Cambridge (UK),
 Raleigh (NC, USA) and New York (NY, USA).
 
+* 04/2014: Collaborative Statistical Modeling, Opening of the Center for Data Science at NYU, New York, [Poster](http://cds.nyu.edu/projects/collaborative-statistical-modeling/)
 * 01/2014: Factorizing Theoretical Uncertainties from LHC Higgs Coupling Measurements, Seminar, University of Cambridge, UK
 * 07/2013: Modeling and Statistical Analysis for Higgs Physics at the Large Hadron Collider, Knowledge Extraction via Comparison of Complex Computational Models to Massive Data Sets, Durham, NC, USA, [Conference page](http://www.samsi.info/workshop/2013-knowledge-extraction-comparison-complex-computational-models-massive-data-sets-july-29), [PDF](http://www.samsi.info/sites/default/files/Kreiss_madai_july2013.pdf)
 * 01/2013: H→ZZ*→4l  Likelihood in ATLAS, Likelihoods for the LHC Searches, CERN, [Conference Indico](http://indico.cern.ch/conferenceOtherViews.py?view=standard&confId=218693), [PDF](http://indico.cern.ch/getFile.py/access?contribId=13&resId=0&materialId=slides&confId=218693)
