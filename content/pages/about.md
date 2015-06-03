@@ -9,11 +9,13 @@ Summary: Sven Kreiss is a Data Scientist in New York City.
 <!-- {% img img-thumbnail float-right http://www.gravatar.com/avatar/1838de72eb5ce4b000c41c06dedb52c4.png?s=180 %} -->
 {% img img-thumbnail float-right /images/me_nyc_square_500.jpeg 250 Sven Kreiss in front of Freedom Tower. %}
 
-I am a Data Scientist at [Wildcard](http://www.trywildcard.com/) in New York City. I recently earned a PhD in Particle Physics from [New York University (NYU)](http://physics.nyu.edu/) where I worked with [Kyle Cranmer](http://physics.as.nyu.edu/object/kylecranmer.html). At the end of 2012, I returned to New York from a year at [CERN](http://www.cern.ch), Switzerland. Originally, I am from Germany, then studied for my bachelor's and master's degree in Mathematical Physics at the University of Edinburgh, Scotland, and then went to New York University for my PhD.
+I am a Data Scientist at [Wildcard](http://www.trywildcard.com/) in New York City. We are processing millions of news articles every month. I apply machine learning techniques and especially computer vision algorithms to content extraction problems to convert websites into cards.
+
+I recently earned a PhD in Particle Physics from [New York University (NYU)](http://physics.nyu.edu/) where I worked with [Kyle Cranmer](http://physics.as.nyu.edu/object/kylecranmer.html). At the end of 2012, I returned to New York from a year at [CERN](http://www.cern.ch), Switzerland. Originally, I am from Germany, then studied for my bachelor's and master's degree in Mathematical Physics at the University of Edinburgh, Scotland, and then went to New York University for my PhD.
 
 During my PhD, I wrote code for the statistical analysis tool [RooStats](http://twiki.cern.ch/twiki/bin/view/RooStats/WebHome) which is part of [CERN's Root Data Analysis tool](http://root.cern.ch/). My [ATLAS](http://atlas.web.cern.ch/Atlas/Collaboration/) work was focused on the the H→ZZ*→4l analysis, the Higgs Combination and I was involved in the discovery (see [New York Times article](/blog/chasing-the-higgs-nyt/)), the first mass measurement, the first evidence for VBF production and property measurements related to the coupling strengths of the Higgs Boson.
 
-Here is a list of my [<i class="fa fa-cogs"></i> side projects](/projects.html), my blog [<i class="fa fa-rss"></i> trivial.io](http://trivial.io), my [old blog](/blog/) and my outdated [<i class="fa fa-file-text"></i> CV](/files/cv.pdf). Selected talks and papers are at the bottom of the page.
+Here is a list of my [<i class="fa fa-cogs"></i> side projects](/projects.html), my blog [<i class="fa fa-rss"></i> trivial.io](http://trivial.io), my [old blog](/blog/) and my [<i class="fa fa-file-text"></i> CV](/files/cv.html). Selected talks and papers are at the bottom of the page.
 My social media profiles are [<i class="fa fa-twitter"></i> Twitter](https://twitter.com/svenkreiss), [<i class="fa fa-linkedin-square"></i> LinkedIn](http://www.linkedin.com/in/svenkreiss) and [<i class="fa fa-github"></i> GitHub](https://github.com/svenkreiss/) and my email address is [<i class="fa fa-envelope"></i> me@svenkreiss.com](mailto:me@svenkreiss.com).
 
 
