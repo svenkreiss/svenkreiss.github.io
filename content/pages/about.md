@@ -87,7 +87,8 @@ I gave talks at conferences, universities and companies in Hamburg, Goettingen a
 Split (Croatia), Geneva (Switzerland), Rome (Italy), Cambridge (UK),
 Raleigh (NC, USA) and New York (NY, USA).
 
-* 05/2015: Data and the Higgs Boson Discovery, Betaworks, New York, NY
+* 09/2015: Deep ML Architecture at Wildcard, MLconf, Atlanta
+* 05/2015: Data and the Higgs Boson Discovery, Betaworks, New York
 * 04/2014: Collaborative Statistical Modeling, Opening of the Center for Data Science at NYU, New York, [Poster](http://cds.nyu.edu/projects/collaborative-statistical-modeling/)
 * 01/2014: Factorizing Theoretical Uncertainties from LHC Higgs Coupling Measurements, Seminar, University of Cambridge, UK
 * 07/2013: Modeling and Statistical Analysis for Higgs Physics at the Large Hadron Collider, Knowledge Extraction via Comparison of Complex Computational Models to Massive Data Sets, Durham, NC, USA, [Conference page](http://www.samsi.info/workshop/2013-knowledge-extraction-comparison-complex-computational-models-massive-data-sets-july-29), [PDF](http://www.samsi.info/sites/default/files/Kreiss_madai_july2013.pdf)
