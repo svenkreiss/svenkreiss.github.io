@@ -28,7 +28,7 @@
 body {
   font-family: sans-serif;
   width: 800px;
-  margin: 3em auto;
+  margin: 3em auto 1em;
   padding: 0 2em;
 }
 
@@ -37,7 +37,7 @@ i {
 }
 
 .cv-group {
-  margin-bottom: 2em;
+  margin-bottom: 1.8em;
 }
 .cv-group-title {
   text-transform: uppercase;
@@ -353,11 +353,16 @@ $('#codes').html(template({
   ],
 }));
 $('#talks').html(template({
-  'group': 'Invited Talks',
+  'group': 'Talks',
   'items': [
     {
+      'time': 'Sept 2015',
+      'title': 'MLconf, Atlanta',
+      'annotation': ['Conference talk on <em>Deep ML Architecture at Wildcard</em>.'],
+    },
+    {
       'time': 'May 2015',
-      'title': 'Betaworks, New York, NY',
+      'title': 'Betaworks, New York',
       'annotation': ['Talk on <em>Data and the Higgs Boson Discovery</em>.'],
     },
     {
