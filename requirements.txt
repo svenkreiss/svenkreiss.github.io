@@ -14,5 +14,4 @@ pytz==2014.9
 six==1.8.0
 smartypants==1.8.6
 -e git+https://github.com/svenkreiss/typogrify.git@cff44c3ac9957e9a47d171d129a52b40bb4c9738#egg=typogrify-master
-virtualenv==1.11.6
 wsgiref==0.1.2
