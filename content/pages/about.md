@@ -1,5 +1,5 @@
 Title: About
-Date: 2014-03-06 22:27
+Date: 2016-04-03 08:54
 Slug: about
 url: /
 save_as: index.html
@@ -9,9 +9,9 @@ Summary: Sven Kreiss is a Data Scientist in New York City.
 <!-- {% img img-thumbnail float-right http://www.gravatar.com/avatar/1838de72eb5ce4b000c41c06dedb52c4.png?s=180 %} -->
 {% img img-thumbnail float-right /images/me_nyc_square_500.jpeg 250 Sven Kreiss in front of Freedom Tower. %}
 
-I am a Data Scientist at [Wildcard](http://www.trywildcard.com/) in New York City. We are processing millions of news articles every month. I apply machine learning techniques and especially computer vision algorithms to content extraction problems to convert websites into cards.
+I am a Data Scientist at [Sidewalk Labs](http://www.sidewalklabs.com) in New York City. Previously, I was the Data Science lead at [Wildcard](http://www.trywildcard.com/) where I worked on structured learning, topic modeling and content recommendation.
 
-I recently earned a PhD in Particle Physics from [New York University (NYU)](http://physics.nyu.edu/) where I worked with [Kyle Cranmer](http://physics.as.nyu.edu/object/kylecranmer.html). At the end of 2012, I returned to New York from a year at [CERN](http://www.cern.ch), Switzerland. Originally, I am from Germany, then studied for my bachelor's and master's degree in Mathematical Physics at the University of Edinburgh, Scotland, and then went to New York University for my PhD.
+I hold a PhD in Particle Physics from [New York University (NYU)](http://physics.nyu.edu/) where I worked with [Kyle Cranmer](http://physics.as.nyu.edu/object/kylecranmer.html). At the end of 2012, I returned to New York from a year at [CERN](http://www.cern.ch), Switzerland. Originally, I am from Germany, then studied for my bachelor's and master's degree in Mathematical Physics at the University of Edinburgh, Scotland, and then went to New York University for my PhD.
 
 During my PhD, I wrote code for the statistical analysis tool [RooStats](http://twiki.cern.ch/twiki/bin/view/RooStats/WebHome) which is part of [CERN's Root Data Analysis tool](http://root.cern.ch/). My [ATLAS](http://atlas.web.cern.ch/Atlas/Collaboration/) work was focused on the the H→ZZ*→4l analysis, the Higgs Combination and I was involved in the discovery (see [New York Times article](/blog/chasing-the-higgs-nyt/)), the first mass measurement, the first evidence for VBF production and property measurements related to the coupling strengths of the Higgs Boson.
 
@@ -85,10 +85,10 @@ On Inspire: [Paper list](http://inspirehep.net/search?ln=en&ln=en&p=find+a+%22s+
 
 I gave talks at conferences, universities and companies in Hamburg, Goettingen and Dresden (Germany),
 Split (Croatia), Geneva (Switzerland), Rome (Italy), Cambridge (UK),
-Raleigh (NC, USA) and New York (NY, USA).
+Raleigh (NC), New York (NY) and San Francisco (CA).
 
-* 09/2015: Deep ML Architecture at Wildcard, MLconf, Atlanta
-* 05/2015: Data and the Higgs Boson Discovery, Betaworks, New York
+* 09/2015: Deep ML Architecture at Wildcard, [MLconf Atlanta](http://mlconf.com/mlconf-2015-atl/), [Slides](https://speakerdeck.com/svenkreiss/deep-ml-inspired-architecture-at-wildcard)
+* 05/2015, 03/2016: Data and the Higgs Boson Discovery, Betaworks, New York and Radius Intelligence, San Francisco, [Betaworks Slides](https://speakerdeck.com/svenkreiss/data-and-higgs-discovery)
 * 04/2014: Collaborative Statistical Modeling, Opening of the Center for Data Science at NYU, New York, [Poster](http://cds.nyu.edu/projects/collaborative-statistical-modeling/)
 * 01/2014: Factorizing Theoretical Uncertainties from LHC Higgs Coupling Measurements, Seminar, University of Cambridge, UK
 * 07/2013: Modeling and Statistical Analysis for Higgs Physics at the Large Hadron Collider, Knowledge Extraction via Comparison of Complex Computational Models to Massive Data Sets, Durham, NC, USA, [Conference page](http://www.samsi.info/workshop/2013-knowledge-extraction-comparison-complex-computational-models-massive-data-sets-july-29), [PDF](http://www.samsi.info/sites/default/files/Kreiss_madai_july2013.pdf)
