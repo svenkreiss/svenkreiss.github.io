@@ -10,7 +10,7 @@
     <!-- <link rel="apple-touch-icon" href="apple-touch-icon.png"> -->
     <!-- Place favicon.ico in the root directory -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
+    <!-- <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" /> -->
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.3/handlebars.min.js"></script>
@@ -26,7 +26,7 @@
 }
 
 body {
-  font-family: sans-serif;
+  font-family: 'Times New Roman';
   width: 800px;
   margin: 3em auto 1em;
   padding: 0 2em;
@@ -37,7 +37,7 @@ i {
 }
 
 .cv-group {
-  margin-bottom: 1.8em;
+  margin-bottom: 2.9em;
 }
 .cv-group-title {
   text-transform: uppercase;
@@ -71,17 +71,14 @@ i {
 
     <!-- Add your site or application content here -->
     <h1>Sven Kreiss</h1>
-    <i class="fa fa-envelope"></i> e-mail: <a href="mailto:me@svenkreiss.com">me@svenkreiss.com</a>, <i class="fa fa-file"></i> web: <a href="http://www.svenkreiss.com">www.svenkreiss.com</a>, <i class="fa fa-twitter"></i> Twitter: <a href="http://www.twitter.com/svenkreiss">@svenkreiss</a><br />
-    An up-to-date version of this CV is available online at <a href="http://www.svenkreiss.com/files/cv.html">http://www.svenkreiss.com/files/cv.html</a>.
+    <i class="fa fa-envelope"></i> e-mail: <a href="mailto:me@svenkreiss.com">me@svenkreiss.com</a>, <i class="fa fa-file"></i> web: <a href="http://www.svenkreiss.com">www.svenkreiss.com</a>, <i class="fa fa-github"></i> GitHub: <a href="https://github.com/svenkreiss">svenkreiss</a>, <i class="fa fa-twitter"></i> Twitter: <a href="http://www.twitter.com/svenkreiss">@svenkreiss</a>
     <br /><br /><br />
 
     <div id="experience"></div>
     <div id="education"></div>
-    <div id="awards"></div>
-    <div id="teaching"></div>
-    <div id="publications"></div>
     <div id="codes"></div>
     <div id="talks"></div>
+    <div id="publications"></div>
     <div id="media"></div>
     <div id="projects"></div>
 
@@ -133,32 +130,22 @@ $('#experience').html(template({
   'group': 'Professional Positions',
   'items': [
     {
-      'time': 'Sept 2014 &mdash; present',
+      'time': 'April 2016 &mdash; present',
+      'title': 'Sidewalk Labs',
+      'location': 'New York',
+      'subtitle': 'Data Scientist',
+    },
+    {
+      'time': 'Sept 2014 &mdash; March 2016',
       'title': 'Wildcard',
       'location': 'New York',
       'subtitle': 'Lead Data Scientist',
-      'annotation': ['I organize the <em>Data Breakfast</em>, a monthly meeting of Data Scientists in New York City.'],
-    },
-    {
-      'time': 'Fall 2009 &mdash; Spring 2011',
-      'title': 'New York University',
-      'location': 'New York',
-      'subtitle': 'Teaching Assistant, Physics Department ',
-      'annotation': [],
-    },
-    {
-      'time': 'Spring 2007',
-      'title': 'University of Edinburgh',
-      'location': 'UK',
-      'subtitle': 'Teaching Assistant, School of Physics',
-      'annotation': [],
     },
     {
       'time': 'July 2007 &mdash; Aug 2009',
       'title': 'ElectronX',
       'location': 'Germany',
-      'subtitle': 'Founder, Design and Manufacturing of TV Equipment',
-      'annotation': ['Received high growth support from the Scottish Government.'],
+      'subtitle': 'Founder, Design and Manufacturing of TV Production Equipment',
     },
   ],
 }));
@@ -175,6 +162,8 @@ $('#education').html(template({
         'Advisor: Kyle Cranmer',
         'Committee: Andy Haas, David Hogg, Allen Mincer, Neal Weiner',
         'MacCracken Fellowship Program',
+        'Award: NSF LHC Student Support Award for a one-year-stay at CERN in Geneva, Switzerland',
+        'Teaching: Lecture series for physics majors about the Higgs discovery (Feb 2014), Lab Instructor for General Physics II (Fall 2011), Teaching Assistant for Thermodynamics and Statistical Physics (Spring 2010, 2011), Lab Instructor for General Physics I (Fall 2009)',
       ],
     },
     {
@@ -185,44 +174,7 @@ $('#education').html(template({
       'annotation': [
         'Thesis title: “New Physics at the LHC: Distinguishability of Supersymmetry and Little Higgs models”',
         'Advisors: Tilman Plehn and Thomas Grégoire',
-      ],
-    },
-  ],
-}));
-$('#awards').html(template({
-  'group': 'Awards',
-  'items': [
-    {
-      'time': 'Feb 2011',
-      'title': 'NSF LHC Student Support Award',
-      // 'location': '',
-      'subtitle': 'Support for a one-year-stay at CERN in Geneva, Switzerland',
-      // 'annotation': [],
-    },
-  ],
-}));
-$('#teaching').html(template({
-  'group': 'Teaching Experience',
-  'items': [
-    {
-      // 'time': '',
-      'title': 'New York University',
-      'location': 'New York',
-      // 'subtitle': '',
-      'annotation': [
-        'Lecture series for physics majors about the Higgs discovery <div class="cv-time">Feb 2014</div>',
-        'Lab Instructor, General Physics II <div class="cv-time">Fall 2011</div>',
-        'Teaching Assistant, Thermodynamics and Statistical Physics <div class="cv-time">Spring 2010, 2011</div>',
-        'Lab Instructor, General Physics I <div class="cv-time">Fall 2009</div>',
-      ],
-    },
-    {
-      // 'time': '',
-      'title': 'University of Edinburgh',
-      'location': 'UK',
-      // 'subtitle': '',
-      'annotation': [
-        'Teaching Assistant, Foundations of Mathematical Physics <div class="cv-time">Spring 2007</div>',
+        'Teaching: Teaching Assistant for Foundations of Mathematical Physics (Spring 2007)',
       ],
     },
   ],
@@ -311,7 +263,7 @@ $('#codes').html(template({
   'group': 'Software and Datasets',
   'items': [
     {
-      'subtitle': 'I am an active member of the NYC Tech community and contribute to open source software.',
+      'subtitle': 'I am an active member of the NYC Tech community, organize the monthly Data Breakfast for Data Scientists in NYC and contribute to open source software.',
       'publications': [
       {
         'time': 'May 2015',
@@ -403,7 +355,7 @@ $('#media').html(template({
     {
       'time': 'Oct 2013',
       'title': 'Momentum Campaign, New York University',
-      'annotation': ['A Scholarship Campaign for NYU.'],
+      'annotation': ['A one billion dollar fund-raising campaign for scholarships at NYU where I am featured as one of three students.'],
     },
     {
       'time': 'March 2013',
