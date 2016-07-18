@@ -65,7 +65,7 @@ PLUGINS = [
 COVER_IMG_URL = '/images/winter_mountains_1600.jpeg'
 AUTHOR_EMAIL = 'sk@svenkreiss.com'
 AUTHOR_IMAGE = '/images/me_nyc_square_500.jpeg'
-TAGLINE = ''
+TAGLINE = 'Data Scientist with a background in Particle&nbsp;Physics&nbsp;and&nbsp;Statistics.'
 META_DESCRIPTION = 'my personal website'
 DISQUS_SITENAME = 'svenkreisscom'
 
@@ -89,9 +89,9 @@ CATEGORIES_SAVE_AS = 'blog/categories.html'
 TAGS_SAVE_AS = 'blog/tags.html'
 
 MENUITEMS = [
-    ('projects', 'projects.html'),
-    ('trivial.io', 'blog/trivial-io/'),
-    ('old blog', 'blog/'),
+    ('About', ''),
+    ('Projects', 'projects.html'),
+    ('Blog: trivial.io', 'files/forward_trivialio.html'),
 ]
 DISPLAY_PAGES_ON_MENU = True
 
