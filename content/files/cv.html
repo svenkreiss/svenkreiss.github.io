@@ -1,6 +1,4 @@
-<!doctype html>
-<html class="no-js" lang="">
-  <head>
+<!DOCTYPE html><html class="no-js" lang=""><head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Sven Kreiss</title>
@@ -9,9 +7,9 @@
 
     <!-- <link rel="apple-touch-icon" href="apple-touch-icon.png"> -->
     <!-- Place favicon.ico in the root directory -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
-    <!-- <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" /> -->
-    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <script type="text/javascript" async="" src="http://stats.g.doubleclick.net/dc.js"></script><script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.3/handlebars.min.js"></script>
 
@@ -26,10 +24,17 @@
 }
 
 body {
+  font-size: 8pt;
   font-family: 'Times New Roman';
-  width: 800px;
+  max-width: 600px;
   margin: 3em auto 5em;
   padding: 0 2em;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 180%;
 }
 
 i {
@@ -37,7 +42,7 @@ i {
 }
 
 .cv-group {
-  margin-bottom: 2.9em;
+  margin-bottom: 1.0em;
 }
 .cv-group-title {
   text-transform: uppercase;
@@ -62,6 +67,9 @@ i {
 .cv-item {
   margin: 0 0 1em 0;
 }
+.cv-item ul {
+  margin-left: -2.0em;
+}
     </style>
   </head>
   <body>
@@ -71,28 +79,315 @@ i {
 
     <!-- Add your site or application content here -->
     <h1>Sven Kreiss</h1>
-    <i class="fa fa-envelope"></i> e-mail: <a href="mailto:me@svenkreiss.com">me@svenkreiss.com</a>, <i class="fa fa-file"></i> web: <a href="http://www.svenkreiss.com">www.svenkreiss.com</a>, <i class="fa fa-github"></i> GitHub: <a href="https://github.com/svenkreiss">svenkreiss</a>, <i class="fa fa-twitter"></i> Twitter: <a href="http://www.twitter.com/svenkreiss">@svenkreiss</a>
-    <br /><br /><br />
+    <i class="fa fa-envelope-o"></i> e-mail: <a href="mailto:me@svenkreiss.com">me@svenkreiss.com</a>, <i class="fa fa-file-o"></i> web: <a href="http://www.svenkreiss.com">www.svenkreiss.com</a>, <i class="fa fa-github"></i> GitHub: <a href="https://github.com/svenkreiss">svenkreiss</a>, <i class="fa fa-twitter"></i> Twitter: <a href="http://www.twitter.com/svenkreiss">@svenkreiss</a>
+    <br><br><br>
 
-    <div id="experience"></div>
-    <div id="education"></div>
-    <div id="codes"></div>
-    <div id="talks"></div>
-    <div id="publications"></div>
-    <div id="media"></div>
+      <div class="row cv-group">
+        <div class="col-xs-2 cv-group-title">Summary</div>
+        <div class="col-xs-10">
+          <div class="cv-item">
+          <ul>
+            <li>Data Scientist with a focus on Machine Learning and Computer Vision</li>
+            <li>Organizer of the <em>NYC Data Breakfast</em></li>
+            <li>Creator of pysparkling and Databench, see <a href="https://github.com/svenkreiss">GitHub: https://github.com/svenkreiss</a></li>
+            <li>Preferred programming languages: Python, C++ and JavaScript</li>
+            <li>Languages: English (fluent), German (native), French (basic)</li>
+          </ul>
+          </div>
+        </div>
+      </div>
+
+    <div id="experience">
+      <div class="row cv-group">
+        <div class="col-xs-2 cv-group-title">Experience</div>
+        <div class="col-xs-10">
+            <div class="cv-item">
+              <div class="cv-time">April 2016 — present</div>
+              <span class="cv-title">Sidewalk Labs</span>, <span class="cv-location">New York</span><br>
+              <span class="cv-subtitle">Data Scientist</span><br>
+              <div class="cv-annotation">
+              </div>
+            </div>
+            <div class="cv-item">
+              <div class="cv-time">Sept 2014 — March 2016</div>
+              <span class="cv-title">Wildcard</span>, <span class="cv-location">New York</span><br>
+              <span class="cv-subtitle">Lead Data Scientist</span><br>
+              <div class="cv-annotation">
+              </div>
+            </div>
+            <div class="cv-item">
+              <div class="cv-time">July 2007 — Aug 2009</div>
+              <span class="cv-title">ElectronX</span>, <span class="cv-location">Germany</span><br>
+              <span class="cv-subtitle">Founder, Design and Manufacturing of TV Production Equipment</span><br>
+              <div class="cv-annotation">
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div id="education">
+      <div class="row cv-group">
+        <div class="col-xs-2 cv-group-title">Education</div>
+        <div class="col-xs-10">
+            <div class="cv-item">
+              <div class="cv-time">Sept 2009 — Mai 2014</div>
+              <span class="cv-title">New York University</span>, <span class="cv-location">New York</span><br>
+              <span class="cv-subtitle">Doctor of Philosophy</span><br>
+              <div class="cv-annotation">
+                  <div>Thesis title: Higgs Boson Discovery and First Property Measurements using the ATLAS Detector</div>
+                  <div>Advisor: Kyle Cranmer</div>
+                  <div>MacCracken Fellowship Program</div>
+                  <div>Award: NSF LHC Student Support Award for a one-year-stay at CERN in Geneva, Switzerland</div>
+                  <div>Teaching: Lecture series for physics majors about the Higgs discovery (Feb 2014), Lab Instructor for General Physics II (Fall 2011), Teaching Assistant for Thermodynamics and Statistical Physics (Spring 2010, 2011), Lab Instructor for General Physics I (Fall 2009)</div>
+              </div>
+            </div>
+            <div class="cv-item">
+              <div class="cv-time">Sept 2005 — Sept 2009</div>
+              <span class="cv-title">University of Edinburgh</span>, <span class="cv-location">UK</span><br>
+              <span class="cv-subtitle">Master of Physics with Honors Mathematical Physics</span><br>
+              <div class="cv-annotation">
+                  <div>Thesis title: New Physics at the LHC: Distinguishability of Supersymmetry and Little Higgs models</div>
+                  <div>Advisors: Tilman Plehn and Thomas Grégoire</div>
+                  <div>Teaching: Teaching Assistant for Foundations of Mathematical Physics (Spring 2007)</div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div id="codes">
+      <div class="row cv-group">
+        <div class="col-xs-2 cv-group-title">Software</div>
+        <div class="col-xs-10">
+            <div class="cv-item">
+              <div class="cv-time"></div>
+              <span class="cv-title">Data</span><span class="cv-location"></span><br>
+              
+              <div class="cv-annotation">
+                  <div>
+                    S. Kreiss,
+                    May 2015,
+                    <em>pysparkling: A native Python implementation of Spark's RDD interface</em>,
+                    <br>Github: <a href="https://github.com/svenkreiss/pysparkling">https://github.com/svenkreiss/pysparkling</a>.
+                  </div>
+                  <div>
+                    S. Kreiss,
+                    Jun 2014,
+                    <em>Databench: Data analysis tool using Flask, WebSockets and d3.js</em>,
+                    <br>Github: <a href="https://github.com/svenkreiss/databench">https://github.com/svenkreiss/databench</a>.
+                  </div>
+              </div>
+            </div>
+            <div class="cv-item">
+              <div class="cv-time"></div>
+              <span class="cv-title">Physics</span><span class="cv-location"></span><br>
+              
+              <div class="cv-annotation">
+                  <div>
+                    K. Cranmer, S. Kreiss, D. Lopez-Val, T. Plehn,
+                    Jan 2014,
+                    <em>Code to reproduce results for "Decoupling theoretical uncertainties from measurements of the Higgs boson", Phys Rev D91, arXiv:1401.0080 [hep-ph]</em>,
+                    <br>Github: <a href="https://github.com/svenkreiss/decouple">https://github.com/svenkreiss/decouple</a>.
+                  </div>
+                  <div>
+                    K. Cranmer, S. Kreiss, D. Lopez-Val, T. Plehn,
+                    Dec 2013,
+                    <em>Supplementary Material for "Decoupling theoretical uncertainties from measurements of the Higgs boson", Phys Rev D91, arXiv:1401.0080 [hep-ph]</em>,
+                    <br>Figshare: <a href="http://dx.doi.org/10.6084/m9.figshare.888607">http://dx.doi.org/10.6084/m9.figshare.888607</a>.
+                  </div>
+                  <div>
+                    ATLAS Collaboration,
+                    Sept 2013,
+                    <em>Likelihoods for the H → γγ, H → ZZ* → 4l and H → WW* → 4l channel in the (μ<sub>ggF+ttH</sub> * B/B<sub>SM</sub>, μ<sub>VBF+VH</sub> * B/B<sub>SM</sub>) plane for a Higgs boson mass m<sub>H</sub>&nbsp;=&nbsp;125.5&nbsp;GeV</em>,
+                    HepData [<a href="http://doi.org/10.7484/INSPIREHEP.DATA.A78C.HK44">1</a>, <a href="http://doi.org/10.7484/INSPIREHEP.DATA.RF5P.6M3K">2</a>, <a href="http://doi.org/10.7484/INSPIREHEP.DATA.26B4.TY5F">3</a>].
+                  </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div id="talks">
+      <div class="row cv-group">
+        <div class="col-xs-2 cv-group-title">Talks</div>
+        <div class="col-xs-10">
+            <div class="cv-item">
+              <div class="cv-time">Sept 2015</div>
+              <span class="cv-title">MLconf, Atlanta</span><span class="cv-location"></span><br>
+              
+              <div class="cv-annotation">
+                  <div>Conference talk on <em>Deep ML Architecture at Wildcard</em>.</div>
+              </div>
+            </div>
+            <div class="cv-item">
+              <div class="cv-time">May 2015</div>
+              <span class="cv-title">Betaworks, New York</span><span class="cv-location"></span><br>
+              
+              <div class="cv-annotation">
+                  <div>Talk on <em>Data and the Higgs Boson Discovery</em>.</div>
+              </div>
+            </div>
+            <div class="cv-item">
+              <div class="cv-time">Jan 2014</div>
+              <span class="cv-title">University of Cambridge, UK</span><span class="cv-location"></span><br>
+              
+              <div class="cv-annotation">
+                  <div>Seminar on <em>Factorizing Theoretical Uncertainties from LHC Higgs Coupling Measurements</em>.</div>
+              </div>
+            </div>
+            <div class="cv-item">
+              <div class="cv-time">July 2013</div>
+              <span class="cv-title">Statistical and Applied Mathematical Sciences Institute (SAMSI), Durham, NC</span><span class="cv-location"></span><br>
+              
+              <div class="cv-annotation">
+                  <div>Talk on <em>Modeling and Statistical Analysis for Higgs Physics at the Large Hadron Collider</em> at the workshop on <em>Knowledge Extraction via Comparison of Complex Computational Models to Massive Data Sets</em>.</div>
+              </div>
+            </div>
+            <div class="cv-item">
+              <div class="cv-time">Jan 2013</div>
+              <span class="cv-title">CERN, Switzerland</span><span class="cv-location"></span><br>
+              
+              <div class="cv-annotation">
+                  <div>Talk on the <em>H→ZZ*→4l Likelihood in ATLAS</em> at the workshop on <em>Likelihoods for the LHC Searches</em>.</div>
+              </div>
+            </div>
+            <div class="cv-item">
+              <div class="cv-time">Oct 2012</div>
+              <span class="cv-title">LHC Days 2012, Split, Croatia</span><span class="cv-location"></span><br>
+              
+              <div class="cv-annotation">
+                  <div>Talk on <em>Standard Model Higgs Combination and Properties</em>.</div>
+              </div>
+            </div>
+            <div class="cv-item">
+              <div class="cv-time">May 2012</div>
+              <span class="cv-title">Computing in High Energy and Nuclear Physics (CHEP), New York, NY</span><span class="cv-location"></span><br>
+              
+              <div class="cv-annotation">
+                  <div>Talk on <em>RooStats: Statistical Tools for the LHC</em>.</div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div id="publications">
+      <div class="row cv-group">
+        <div class="col-xs-2 cv-group-title">Selected Publications</div>
+        <div class="col-xs-10">
+            <div class="cv-item">
+              <div class="cv-time"></div>
+              <span class="cv-title"></span><span class="cv-location"></span>
+              <span class="cv-subtitle">As a member of the ATLAS collaboration, I am a co-author of over 230 published papers which are listed on <a href="http://inspirehep.net/author/profile/S.Kreiss.1">my author page on inspirehep.net</a>. Below is a list of publications where I made a significant contribution to the paper itself.</span><br>
+              <div class="cv-annotation">
+                  <div>
+                    K. Cranmer, S. Kreiss, D. Lopez-Val, T. Plehn,
+                    Jan 2014,
+                    <em><b>Decoupling Theoretical Uncertainties from Measurements of the Higgs Boson</b></em>,
+                    <a href="http://journals.aps.org/prd/abstract/10.1103/PhysRevD.91.054032">Phys Rev D91</a>, <a href="http://arxiv.org/abs/1401.0080">arXiv:1401.0080 [hep-ph]</a>, <a href="https://github.com/svenkreiss/decouple">code on Github at svenkreiss/decouple</a>, supplemental material at <a href="http://dx.doi.org/10.6084/m9.figshare.888607">http://dx.doi.org/10.6084/m9.figshare.888607</a>.
+                  </div>
+                  <div>
+                    ATLAS Collaboration,
+                    Sept 2013,
+                    <em>Likelihoods for the H → γγ, H → ZZ* → 4l and H → WW* → 4l channel in the (µ<sub>ggF+ttH</sub> * B/B<sub>SM</sub>, µ<sub>VBF+VH</sub> * B/B<sub>SM</sub>) plane for a Higgs boson mass m<sub>H</sub>&nbsp;=&nbsp;125.5&nbsp;GeV</em>,
+                    Datasets on HepData: <a href="https://inspirehep.net/record/1241574/data">https://inspirehep.net/record/1241574/data</a>.
+                  </div>
+                  <div>
+                    ATLAS collaboration,
+                    July 2013,
+                    <em>Measurements of Higgs boson production and couplings in diboson final states with the ATLAS detector at the LHC</em>,
+                    <b>ATLAS writer</b>, Phys.Lett. B726 (2013) 88-119.
+                  </div>
+                  <div>
+                    ATLAS collaboration,
+                    July 2013,
+                    <em>Evidence for the spin-0 nature of the Higgs boson using ATLAS data</em>,
+                    Phys.Lett. B726 (2013) 120-144.
+                  </div>
+                  <div>
+                    ATLAS collaboration,
+                    March 2013,
+                    <em>Combined coupling measurements of the Higgs-like boson with the ATLAS detector using up to 25 fb<sup>−1</sup> of proton-proton collision data</em>,
+                    <b>ATLAS writer</b>, ATLAS-COM-CONF-2013-035.
+                  </div>
+                  <div>
+                    ATLAS collaboration,
+                    July 2012,
+                    <em><b>Observation of a new particle in the search for the Standard Model Higgs boson with the ATLAS detector at the LHC</b></em>,
+                    <b>Responsible for Bayesian cross checks</b>, Phys.Lett. B716 (2012) 1-29.
+                  </div>
+                  <div>
+                    ATLAS collaboration,
+                    July 2012,
+                    <em>Combined search for the Standard Model Higgs boson in pp collisions at √s = 7 TeV with the ATLAS detector</em>,
+                    Phys.Rev. D86 (2012) 032003.
+                  </div>
+                  <div>
+                    ATLAS collaboration,
+                    Feb 2012,
+                    <em>Combined search for the Standard Model Higgs boson using up to 4.9 fb⁻¹ of pp collision data at √s = 7 TeV with the ATLAS detector at the LHC</em>,
+                    Phys.Lett. B710 (2012) 49-66.
+                  </div>
+                  <div>
+                    ATLAS collaboration,
+                    December 2010,
+                    <em>Measurement of the top quark pair production cross-section with ATLAS in pp collisions at √s = 7 TeV</em>,
+                    Eur.Phys.J.C71:1577 (2011).
+                  </div>
+                  <div>
+                    L. Moneta, K. Belasco, K.S. Cranmer, S. Kreiss, A. Lazzaro, et al,
+                    Oct 2012,
+                    <em><b>The RooStats Project</b></em>,
+                    PoS (ACAT2010) 057.
+                  </div>
+                  <div>
+                    B.C. Allanach et al,
+                    Jan 2008,
+                    <em>SUSY Les Houches Accord 2</em>,
+                    CPC 180 (2009) 1.
+                  </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div id="media">
+      <div class="row cv-group">
+        <div class="col-xs-2 cv-group-title">Media / Press</div>
+        <div class="col-xs-10">
+            <div class="cv-item">
+              <div class="cv-time">Oct 2013</div>
+              <span class="cv-title">The New Yorker</span><span class="cv-location"></span><br>
+              
+              <div class="cv-annotation">
+                  <div><em>A Nobel Prize Party: Cheese, Bubbles, and a Boson</em> by Betsy Morais</div>
+              </div>
+            </div>
+            <div class="cv-item">
+              <div class="cv-time">Oct 2013</div>
+              <span class="cv-title">Momentum Campaign, New York University</span><span class="cv-location"></span><br>
+              
+              <div class="cv-annotation">
+                  <div>A one billion dollar fund-raising campaign for scholarships at NYU where I am featured as one of three students.</div>
+              </div>
+            </div>
+            <div class="cv-item">
+              <div class="cv-time">March 2013</div>
+              <span class="cv-title">The New York Times</span><span class="cv-location"></span><br>
+              
+              <div class="cv-annotation">
+                  <div><em>Chasing the Higgs</em> by Dennis Overbye.<br>“On the night of June 24, the graduate students and postdocs in Atlas were tiptoeing toward the 5‑sigma finish line. Among them was Sven Kreiss, a New York University graduate student who got a preliminary glimpse of the answer alone in his office late that night when, as part of a crosscheck, he combined the data from two signatures of the Higgs decay and found the result breached 5‑sigma. The next day he sent a plot to his adviser Kyle Cranmer, whose birthday it was, saying he had a present for him.”</div>
+              </div>
+            </div>
+            <div class="cv-item">
+              <div class="cv-time">Dec 2012</div>
+              <span class="cv-title">Science</span><span class="cv-location"></span><br>
+              
+              <div class="cv-annotation">
+                  <div><em>A Particle Consistent with the Higgs Boson Observed with the ATLAS Detector at the Large Hadron Collider</em> by The ATLAS Collaboration.<br>I contributed the analysis of signal strength and mass shown in Fig. 12.</div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
     <div id="projects"></div>
-
-    <p>I speak English and German and have a basic understanding of French. My preferred programming languages are
-      <em>Python</em>,
-      <em>C++</em> and
-      <em>JavaScript</em>
-    and I am also comfortable with
-      <em>Java</em> and
-      <em>Lua/Torch7</em>.
-    Some of my software projects are at&nbsp;<a href="https://github.com/svenkreiss">https://github.com/svenkreiss</a>.</p>
-
-
-
 
 
     <script id="entry-template" type="text/x-handlebars-template">
@@ -127,7 +422,7 @@ i {
 var template = Handlebars.compile($("#entry-template").html());
 
 $('#experience').html(template({
-  'group': 'Professional Positions',
+  'group': 'Experience',
   'items': [
     {
       'time': 'April 2016 &mdash; present',
@@ -160,7 +455,7 @@ $('#education').html(template({
       'annotation': [
         'Thesis title: Higgs Boson Discovery and First Property Measurements using the ATLAS Detector',
         'Advisor: Kyle Cranmer',
-        'Committee: Andy Haas, David Hogg, Allen Mincer, Neal Weiner',
+        // 'Committee: Andy Haas, David Hogg, Allen Mincer, Neal Weiner',
         'MacCracken Fellowship Program',
         'Award: NSF LHC Student Support Award for a one-year-stay at CERN in Geneva, Switzerland',
         'Teaching: Lecture series for physics majors about the Higgs discovery (Feb 2014), Lab Instructor for General Physics II (Fall 2011), Teaching Assistant for Thermodynamics and Statistical Physics (Spring 2010, 2011), Lab Instructor for General Physics I (Fall 2009)',
@@ -172,7 +467,7 @@ $('#education').html(template({
       'location': 'UK',
       'subtitle': 'Master of Physics with Honors Mathematical Physics',
       'annotation': [
-        'Thesis title: “New Physics at the LHC: Distinguishability of Supersymmetry and Little Higgs models”',
+        'Thesis title: New Physics at the LHC: Distinguishability of Supersymmetry and Little Higgs models',
         'Advisors: Tilman Plehn and Thomas Grégoire',
         'Teaching: Teaching Assistant for Foundations of Mathematical Physics (Spring 2007)',
       ],
@@ -260,10 +555,11 @@ $('#publications').html(template({
   ],
 }));
 $('#codes').html(template({
-  'group': 'Software and Datasets',
+  'group': 'Software',
   'items': [
     {
-      'subtitle': 'I am an active member of the NYC Tech community, organize the monthly Data Breakfast for Data Scientists in NYC and contribute to open source software.',
+      // 'subtitle': 'I am an active member of the NYC Tech community, organize the monthly Data Breakfast for Data Scientists in NYC and contribute to open source software.',
+      'title': 'Data',
       'publications': [
       {
         'time': 'May 2015',
@@ -276,7 +572,10 @@ $('#codes').html(template({
         'authors': 'S. Kreiss',
         'title': 'Databench: Data analysis tool using Flask, WebSockets and d3.js',
         'published': '<br />Github: <a href="https://github.com/svenkreiss/databench">https://github.com/svenkreiss/databench</a>',
-      },
+      }],
+    }, {
+      'title': 'Physics',
+      'publications': [
       {
         'time': 'Jan 2014',
         'authors': 'K. Cranmer, S. Kreiss, D. Lopez-Val, T. Plehn',
@@ -289,12 +588,12 @@ $('#codes').html(template({
         'title': 'Supplementary Material for "Decoupling theoretical uncertainties from measurements of the Higgs boson", Phys Rev D91, arXiv:1401.0080 [hep-ph]',
         'published': '<br />Figshare: <a href="http://dx.doi.org/10.6084/m9.figshare.888607">http://dx.doi.org/10.6084/m9.figshare.888607</a>',
       },
-      {
-        'time': 'Oct 2013',
-        'authors': 'S. Kreiss',
-        'title': 'QuizSocket: an online, real-time student response system written in Node.js using WebSockets, d3.js and Handlebars',
-        'published': '<br /><a href="http://www.quizsocket.com">http://www.quizsocket.com</a>',
-      },
+      // {
+      //   'time': 'Oct 2013',
+      //   'authors': 'S. Kreiss',
+      //   'title': 'QuizSocket: an online, real-time student response system written in Node.js using WebSockets, d3.js and Handlebars',
+      //   'published': '<br /><a href="http://www.quizsocket.com">http://www.quizsocket.com</a>',
+      // },
       {
         'time': 'Sept 2013',
         'authors': 'ATLAS Collaboration',
@@ -386,5 +685,6 @@ $('#media').html(template({
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
       })();
     </script>
-  </body>
-</html>
+  
+
+</body></html>

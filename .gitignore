@@ -1,3 +1,5 @@
+ghostdriver.log
+
 *.pid
 _build
 cache

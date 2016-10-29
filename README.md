@@ -18,3 +18,9 @@ Publish with
 ```bash
 make github
 ```
+
+Compile CV
+
+```sh
+localcrawl --start content/cv.html --out content/files --depth=0 --pdf
+```
