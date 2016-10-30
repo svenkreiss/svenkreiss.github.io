@@ -22,5 +22,5 @@ make github
 Compile CV
 
 ```sh
-localcrawl --start content/cv.html --out content/files --depth=0 --pdf
+localcrawl --start cv.html --out content/files --depth=0 --pdf
 ```
