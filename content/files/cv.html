@@ -5,8 +5,6 @@
     <meta name="description" content="CV of Sven Kreiss">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- <link rel="apple-touch-icon" href="apple-touch-icon.png"> -->
-    <!-- Place favicon.ico in the root directory -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <script type="text/javascript" async="" src="http://stats.g.doubleclick.net/dc.js"></script><script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
@@ -14,19 +12,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.3/handlebars.min.js"></script>
 
     <style>
-@media print {
-  a[href]:after {
-    content: none !important;
-  }
-  a {
-    color: #00e !important;
-  }
-}
-
 body {
-  font-size: 8pt;
+  font-size: 11pt;
   font-family: 'Times New Roman';
-  max-width: 600px;
+  max-width: 800px;
   margin: 3em auto 5em;
   padding: 0 2em;
 }
@@ -39,6 +28,7 @@ h1 {
 
 i {
   color: #337ab7;
+  -webkit-text-fill-color: #337ab7;  /* because of some phantomjs bug */
 }
 
 .cv-group {
@@ -69,6 +59,21 @@ i {
 }
 .cv-item ul {
   margin-left: -2.0em;
+}
+
+
+@media print {
+  a[href]:after {
+    content: none !important;
+  }
+  a {
+    color: #00e !important;
+  }
+
+  body {
+    font-size: 8pt;
+    margin: 0 auto;
+  }
 }
     </style>
   </head>
@@ -172,7 +177,7 @@ i {
                   <div>
                     S. Kreiss,
                     Jun 2014,
-                    <em>Databench: Data analysis tool using Flask, WebSockets and d3.js</em>,
+                    <em>Databench: An interactive realtime data analysis tool</em>,
                     <br>Github: <a href="https://github.com/svenkreiss/databench">https://github.com/svenkreiss/databench</a>.
                   </div>
               </div>
@@ -187,12 +192,6 @@ i {
                     Jan 2014,
                     <em>Code to reproduce results for "Decoupling theoretical uncertainties from measurements of the Higgs boson", Phys Rev D91, arXiv:1401.0080 [hep-ph]</em>,
                     <br>Github: <a href="https://github.com/svenkreiss/decouple">https://github.com/svenkreiss/decouple</a>.
-                  </div>
-                  <div>
-                    K. Cranmer, S. Kreiss, D. Lopez-Val, T. Plehn,
-                    Dec 2013,
-                    <em>Supplementary Material for "Decoupling theoretical uncertainties from measurements of the Higgs boson", Phys Rev D91, arXiv:1401.0080 [hep-ph]</em>,
-                    <br>Figshare: <a href="http://dx.doi.org/10.6084/m9.figshare.888607">http://dx.doi.org/10.6084/m9.figshare.888607</a>.
                   </div>
                   <div>
                     ATLAS Collaboration,
@@ -350,7 +349,7 @@ i {
     </div>
     <div id="media">
       <div class="row cv-group">
-        <div class="col-xs-2 cv-group-title">Media / Press</div>
+        <div class="col-xs-2 cv-group-title">Media</div>
         <div class="col-xs-10">
             <div class="cv-item">
               <div class="cv-time">Oct 2013</div>
@@ -570,7 +569,7 @@ $('#codes').html(template({
       {
         'time': 'Jun 2014',
         'authors': 'S. Kreiss',
-        'title': 'Databench: Data analysis tool using Flask, WebSockets and d3.js',
+        'title': 'Databench: An interactive realtime data analysis tool',
         'published': '<br />Github: <a href="https://github.com/svenkreiss/databench">https://github.com/svenkreiss/databench</a>',
       }],
     }, {
@@ -582,12 +581,12 @@ $('#codes').html(template({
         'title': 'Code to reproduce results for "Decoupling theoretical uncertainties from measurements of the Higgs boson", Phys Rev D91, arXiv:1401.0080 [hep-ph]',
         'published': '<br />Github: <a href="https://github.com/svenkreiss/decouple">https://github.com/svenkreiss/decouple</a>',
       },
-      {
-        'time': 'Dec 2013',
-        'authors': 'K. Cranmer, S. Kreiss, D. Lopez-Val, T. Plehn',
-        'title': 'Supplementary Material for "Decoupling theoretical uncertainties from measurements of the Higgs boson", Phys Rev D91, arXiv:1401.0080 [hep-ph]',
-        'published': '<br />Figshare: <a href="http://dx.doi.org/10.6084/m9.figshare.888607">http://dx.doi.org/10.6084/m9.figshare.888607</a>',
-      },
+      // {
+      //   'time': 'Dec 2013',
+      //   'authors': 'K. Cranmer, S. Kreiss, D. Lopez-Val, T. Plehn',
+      //   'title': 'Supplementary Material for "Decoupling theoretical uncertainties from measurements of the Higgs boson", Phys Rev D91, arXiv:1401.0080 [hep-ph]',
+      //   'published': '<br />Figshare: <a href="http://dx.doi.org/10.6084/m9.figshare.888607">http://dx.doi.org/10.6084/m9.figshare.888607</a>',
+      // },
       // {
       //   'time': 'Oct 2013',
       //   'authors': 'S. Kreiss',
@@ -644,7 +643,7 @@ $('#talks').html(template({
   ],
 }));
 $('#media').html(template({
-  'group': 'Media / Press',
+  'group': 'Media',
   'items': [
     {
       'time': 'Oct 2013',

@@ -18,7 +18,7 @@ During my PhD, I wrote code for the statistical analysis tool [RooStats](http://
 Here is a list of my 
 <span style="white-space: nowrap">[<i class="fa fa-cogs"></i> side projects](/projects.html)</span>, my blog 
 <span style="white-space: nowrap">[<i class="fa fa-rss"></i> trivial.io](http://trivial.io)</span> and my 
-<span style="white-space: nowrap">[<i class="fa fa-file-text"></i> CV](/files/cv.html)</span>. My social media profiles are 
+<span style="white-space: nowrap">[<i class="fa fa-file-text"></i> CV](/files/cv.html) ([pdf](/files/cv.pdf))</span>. My social media profiles are 
 <span style="white-space: nowrap">[<i class="fa fa-twitter"></i> Twitter](https://twitter.com/svenkreiss)</span>, 
 <span style="white-space: nowrap">[<i class="fa fa-linkedin-square"></i> LinkedIn](http://www.linkedin.com/in/svenkreiss)</span> and 
 <span style="white-space: nowrap">[<i class="fa fa-github"></i> GitHub](https://github.com/svenkreiss/)</span> and my email address is 
