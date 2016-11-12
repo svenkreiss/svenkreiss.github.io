@@ -31,6 +31,11 @@ i {
   -webkit-text-fill-color: #337ab7;  /* because of some phantomjs bug */
 }
 
+a {
+  color: #337ab7;
+  -webkit-text-fill-color: #337ab7;  /* because of some phantomjs bug */
+}
+
 .cv-group {
   margin-bottom: 1.0em;
 }
@@ -47,7 +52,7 @@ i {
   font-style: italic;
 }
 .cv-annotation {
-  margin-top: 0.5em;
+  margin-top: 0.1em;
   margin-left: 2em;
 }
 .cv-annotation>div {
@@ -55,10 +60,10 @@ i {
   text-indent: -2em;
 }
 .cv-item {
-  margin: 0 0 1em 0;
+  margin: 0 0 0.5em 0;
 }
 .cv-item ul {
-  margin-left: -2.0em;
+  margin-left: -1.7em;
 }
 
 
@@ -84,23 +89,30 @@ i {
 
     <!-- Add your site or application content here -->
     <h1>Sven Kreiss</h1>
-    <i class="fa fa-envelope-o"></i> e-mail: <a href="mailto:me@svenkreiss.com">me@svenkreiss.com</a>, <i class="fa fa-file-o"></i> web: <a href="http://www.svenkreiss.com">www.svenkreiss.com</a>, <i class="fa fa-github"></i> GitHub: <a href="https://github.com/svenkreiss">svenkreiss</a>, <i class="fa fa-twitter"></i> Twitter: <a href="http://www.twitter.com/svenkreiss">@svenkreiss</a>
+    <i class="fa fa-linkedin-square"></i> LinkedIn: <a href="https://www.linkedin.com/in/svenkreiss">svenkreiss</a>,
+    <!-- <i class="fa fa-file-o"></i> web: <a href="http://www.svenkreiss.com">svenkreiss.com</a>, -->
+    <i class="fa fa-github"></i> GitHub: <a href="https://github.com/svenkreiss">svenkreiss</a>,
+    <i class="fa fa-twitter"></i> Twitter: <a href="http://www.twitter.com/svenkreiss">@svenkreiss</a>,
+    <i class="fa fa-envelope-o"></i> e-mail: <a href="mailto:me@svenkreiss.com">me@svenkreiss.com</a>
     <br><br><br>
 
+    <div id="summary">
       <div class="row cv-group">
         <div class="col-xs-2 cv-group-title">Summary</div>
         <div class="col-xs-10">
           <div class="cv-item">
           <ul>
             <li>Data Scientist with a focus on Machine Learning and Computer Vision</li>
+            <li>Statistical modeling expert; was on the core team that discovered the Higgs Boson at CERN</li>
             <li>Organizer of the <em>NYC Data Breakfast</em></li>
-            <li>Creator of pysparkling and Databench, see <a href="https://github.com/svenkreiss">GitHub: https://github.com/svenkreiss</a></li>
+            <li>Creator of <em>pysparkling</em> and <em>Databench</em>, see <a href="https://github.com/svenkreiss">GitHub: https://github.com/svenkreiss</a></li>
             <li>Preferred programming languages: Python, C++ and JavaScript</li>
             <li>Languages: English (fluent), German (native), French (basic)</li>
           </ul>
           </div>
         </div>
       </div>
+    </div>
 
     <div id="experience">
       <div class="row cv-group">
@@ -111,6 +123,8 @@ i {
               <span class="cv-title">Sidewalk Labs</span>, <span class="cv-location">New York</span><br>
               <span class="cv-subtitle">Data Scientist</span><br>
               <div class="cv-annotation">
+                  <div>Predictive modeling for the transportation coordination platform <a href="http://www.flowmobility.io/">Flow</a></div>
+                  <div>Geospatial analyses for Policy team</div>
               </div>
             </div>
             <div class="cv-item">
@@ -118,12 +132,15 @@ i {
               <span class="cv-title">Wildcard</span>, <span class="cv-location">New York</span><br>
               <span class="cv-subtitle">Lead Data Scientist</span><br>
               <div class="cv-annotation">
+                  <div>Text and media extraction from HTML with an end-to-end structured learning approach</div>
+                  <div>Created content recommedation engine with Collaborative Filtering on Spark</div>
+                  <div>Supervised dataset generation by in-house analysts</div>
               </div>
             </div>
             <div class="cv-item">
               <div class="cv-time">July 2007 — Aug 2009</div>
               <span class="cv-title">ElectronX</span>, <span class="cv-location">Germany</span><br>
-              <span class="cv-subtitle">Founder, Design and Manufacturing of TV Production Equipment</span><br>
+              <span class="cv-subtitle">Founder, Design and Manufacturing of Electronic Equipment</span><br>
               <div class="cv-annotation">
               </div>
             </div>
@@ -139,7 +156,7 @@ i {
               <span class="cv-title">New York University</span>, <span class="cv-location">New York</span><br>
               <span class="cv-subtitle">Doctor of Philosophy</span><br>
               <div class="cv-annotation">
-                  <div>Thesis title: Higgs Boson Discovery and First Property Measurements using the ATLAS Detector</div>
+                  <div>Thesis: Higgs Boson Discovery and First Property Measurements using the ATLAS Detector</div>
                   <div>Advisor: Kyle Cranmer</div>
                   <div>MacCracken Fellowship Program</div>
                   <div>Award: NSF LHC Student Support Award for a one-year-stay at CERN in Geneva, Switzerland</div>
@@ -149,9 +166,9 @@ i {
             <div class="cv-item">
               <div class="cv-time">Sept 2005 — Sept 2009</div>
               <span class="cv-title">University of Edinburgh</span>, <span class="cv-location">UK</span><br>
-              <span class="cv-subtitle">Master of Physics with Honors Mathematical Physics</span><br>
+              <span class="cv-subtitle">Master of Physics with Honors in Mathematical Physics</span><br>
               <div class="cv-annotation">
-                  <div>Thesis title: New Physics at the LHC: Distinguishability of Supersymmetry and Little Higgs models</div>
+                  <div>Thesis: New Physics at the LHC: Distinguishability of Supersymmetry and Little Higgs models</div>
                   <div>Advisors: Tilman Plehn and Thomas Grégoire</div>
                   <div>Teaching: Teaching Assistant for Foundations of Mathematical Physics (Spring 2007)</div>
               </div>
@@ -428,18 +445,27 @@ $('#experience').html(template({
       'title': 'Sidewalk Labs',
       'location': 'New York',
       'subtitle': 'Data Scientist',
+      'annotation': [
+        'Predictive modeling for the transportation coordination platform <a href="http://www.flowmobility.io/">Flow</a>',
+        'Geospatial analyses for Policy team'
+      ]
     },
     {
       'time': 'Sept 2014 &mdash; March 2016',
       'title': 'Wildcard',
       'location': 'New York',
       'subtitle': 'Lead Data Scientist',
+      'annotation': [
+        'Text and media extraction from HTML with an end-to-end structured learning approach',
+        'Created content recommedation engine with Collaborative Filtering on Spark',
+        'Supervised dataset generation by in-house analysts'
+      ]
     },
     {
       'time': 'July 2007 &mdash; Aug 2009',
       'title': 'ElectronX',
       'location': 'Germany',
-      'subtitle': 'Founder, Design and Manufacturing of TV Production Equipment',
+      'subtitle': 'Founder, Design and Manufacturing of Electronic Equipment',
     },
   ],
 }));
@@ -452,7 +478,7 @@ $('#education').html(template({
       'location': 'New York',
       'subtitle': 'Doctor of Philosophy',
       'annotation': [
-        'Thesis title: Higgs Boson Discovery and First Property Measurements using the ATLAS Detector',
+        'Thesis: Higgs Boson Discovery and First Property Measurements using the ATLAS Detector',
         'Advisor: Kyle Cranmer',
         // 'Committee: Andy Haas, David Hogg, Allen Mincer, Neal Weiner',
         'MacCracken Fellowship Program',
@@ -464,9 +490,9 @@ $('#education').html(template({
       'time': 'Sept 2005 &mdash; Sept 2009',
       'title': 'University of Edinburgh',
       'location': 'UK',
-      'subtitle': 'Master of Physics with Honors Mathematical Physics',
+      'subtitle': 'Master of Physics with Honors in Mathematical Physics',
       'annotation': [
-        'Thesis title: New Physics at the LHC: Distinguishability of Supersymmetry and Little Higgs models',
+        'Thesis: New Physics at the LHC: Distinguishability of Supersymmetry and Little Higgs models',
         'Advisors: Tilman Plehn and Thomas Grégoire',
         'Teaching: Teaching Assistant for Foundations of Mathematical Physics (Spring 2007)',
       ],
