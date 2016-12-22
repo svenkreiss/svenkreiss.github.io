@@ -18,6 +18,8 @@ body {
   max-width: 800px;
   margin: 3em auto 5em;
   padding: 0 2em;
+  color: #000;
+  line-height: 1.2;
 }
 
 h1 {
@@ -41,7 +43,7 @@ ul {
 }
 
 .cv-group {
-  margin-bottom: 0.7em;
+  margin-bottom: 1.2em;
 }
 .cv-group-title {
   text-transform: uppercase;
@@ -100,7 +102,7 @@ ul {
     <i class="fa fa-github"></i> GitHub: <a href="https://github.com/svenkreiss">svenkreiss</a>,
     <i class="fa fa-twitter"></i> Twitter: <a href="http://www.twitter.com/svenkreiss">@svenkreiss</a>,
     <i class="fa fa-envelope-o"></i> e-mail: <a href="mailto:me@svenkreiss.com">me@svenkreiss.com</a>
-    <br><br>
+    <br><br><br>
 
     <div id="summary">
       <div class="row cv-group">
@@ -271,7 +273,7 @@ ul {
             <div class="cv-item">
               <div class="cv-time"></div>
               <span class="cv-title"></span><span class="cv-location"></span>
-              <span class="cv-subtitle">As a former member of the ATLAS collaboration, I am a co-author of over 340 published papers which are listed on <a href="http://inspirehep.net/author/profile/S.Kreiss.1">my author page on inspirehep.net</a>. Below is a list of publications where I made a significant contribution to the paper itself.</span><br>
+              <span class="cv-subtitle">As a former member of the ATLAS collaboration, I am a co-author of over 340 published papers which are listed on <a href="http://inspirehep.net/author/profile/S.Kreiss.1">my author page on inspirehep.net</a>. Below is a list of publications where I made a significant contribution to the paper itself.<br></span><br>
               <div class="cv-annotation">
                   <div>
                     K. Cranmer, S. Kreiss, D. Lopez-Val, T. Plehn,
@@ -487,7 +489,7 @@ $('#publications').html(template({
       // 'time': '',
       // 'title': 'New York University',
       // 'location': 'New York',
-      'subtitle': 'As a former member of the ATLAS collaboration, I am a co-author of over 340 published papers which are listed on <a href="http://inspirehep.net/author/profile/S.Kreiss.1">my author page on inspirehep.net</a>. Below is a list of publications where I made a significant contribution to the paper itself.',
+      'subtitle': 'As a former member of the ATLAS collaboration, I am a co-author of over 340 published papers which are listed on <a href="http://inspirehep.net/author/profile/S.Kreiss.1">my author page on inspirehep.net</a>. Below is a list of publications where I made a significant contribution to the paper itself.<br />',
       'publications': [
         {
           'time': 'Jan 2014',
