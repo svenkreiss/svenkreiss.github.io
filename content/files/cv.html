@@ -140,8 +140,8 @@ ul {
               <span class="cv-title">Wildcard</span>, <span class="cv-location">New York</span><br>
               <span class="cv-subtitle">Lead Data Scientist</span><br>
               <div class="cv-annotation">
-                  <div>Developed a machine learning tool for text and media extraction from HTML</div>
-                  <div>Created content recommedation engine with Collaborative Filtering on Spark</div>
+                  <div>Developed a machine learning tool for text and media extraction from HTML documents</div>
+                  <div>Created a content recommedation engine with Collaborative Filtering on Spark</div>
                   <div>Supervised dataset generation by in-house analysts</div>
               </div>
             </div>
@@ -216,8 +216,8 @@ ul {
               </div>
             </div>
             <div class="cv-item">
-              <div class="cv-time">May 2015</div>
-              <span class="cv-title">Betaworks</span>, <span class="cv-location">New York</span><br>
+              <div class="cv-time">May 2015, March 2016</div>
+              <span class="cv-title">Betaworks Studio and Radius Intelligence</span>, <span class="cv-location">New York and San Francisco</span><br>
               
               <div class="cv-annotation">
                   <div>Talk on <em>Data and the Higgs Boson Discovery</em>.</div>
@@ -420,47 +420,47 @@ ul {
 var template = Handlebars.compile($("#entry-template").html());
 
 $('#experience').html(template({
-  'group': 'Experience',
-  'items': [
+  group: 'Experience',
+  items: [
     {
-      'time': 'April 2016 &mdash; present',
-      'title': 'Sidewalk Labs',
-      'location': 'New York',
-      'subtitle': 'Data Scientist',
-      'annotation': [
+      time: 'April 2016 &mdash; present',
+      title: 'Sidewalk Labs',
+      location: 'New York',
+      subtitle: 'Data Scientist',
+      annotation: [
         'Predictive modeling for the transportation coordination platform <a href="http://www.flowmobility.io/">Flow</a>',
         'Geospatial tools and analyses for Sidewalk\'s Policy team'
       ]
     },
     {
-      'time': 'Sept 2014 &mdash; March 2016',
-      'title': 'Wildcard',
-      'location': 'New York',
-      'subtitle': 'Lead Data Scientist',
-      'annotation': [
-        'Developed a machine learning tool for text and media extraction from HTML',
-        'Created content recommedation engine with Collaborative Filtering on Spark',
+      time: 'Sept 2014 &mdash; March 2016',
+      title: 'Wildcard',
+      location: 'New York',
+      subtitle: 'Lead Data Scientist',
+      annotation: [
+        'Developed a machine learning tool for text and media extraction from HTML documents',
+        'Created a content recommedation engine with Collaborative Filtering on Spark',
         'Supervised dataset generation by in-house analysts'
       ]
     },
     {
-      'time': 'July 2007 &mdash; Aug 2009',
-      'title': 'ElectronX',
-      'location': 'Germany',
-      'subtitle': 'Founder',
-      'annotation': ['Designed circuit boards and manufactured electronic devices'],
+      time: 'July 2007 &mdash; Aug 2009',
+      title: 'ElectronX',
+      location: 'Germany',
+      subtitle: 'Founder',
+      annotation: ['Designed circuit boards and manufactured electronic devices'],
     },
   ],
 }));
 $('#education').html(template({
-  'group': 'Education',
-  'items': [
+  group: 'Education',
+  items: [
     {
-      'time': 'Sept 2009 &mdash; Mai 2014',
-      'title': 'New York University',
-      'location': 'New York',
-      'subtitle': 'Doctor of Philosophy',
-      'annotation': [
+      time: 'Sept 2009 &mdash; Mai 2014',
+      title: 'New York University',
+      location: 'New York',
+      subtitle: 'Doctor of Philosophy',
+      annotation: [
         'Thesis: Higgs Boson Discovery and First Property Measurements using the ATLAS Detector',
         // 'Advisor: Kyle Cranmer',
         // 'Committee: Andy Haas, David Hogg, Allen Mincer, Neal Weiner',
@@ -470,11 +470,11 @@ $('#education').html(template({
       ],
     },
     {
-      'time': 'Sept 2005 &mdash; Sept 2009',
-      'title': 'University of Edinburgh',
-      'location': 'UK',
-      'subtitle': 'Master of Physics with Honors in Mathematical Physics, Bachelor of Science',
-      'annotation': [
+      time: 'Sept 2005 &mdash; Sept 2009',
+      title: 'University of Edinburgh',
+      location: 'UK',
+      subtitle: 'Master of Physics with Honors in Mathematical Physics, Bachelor of Science',
+      annotation: [
         'Thesis: New Physics at the LHC: Distinguishability of Supersymmetry and Little Higgs models',
         // 'Advisors: Tilman Plehn and Thomas Grégoire',
         // 'Teaching: Teaching Assistant for Foundations of Mathematical Physics (Spring 2007)',
@@ -483,203 +483,203 @@ $('#education').html(template({
   ],
 }));
 $('#publications').html(template({
-  'group': 'Selected Publications',
-  'items': [
+  group: 'Selected Publications',
+  items: [
     {
-      // 'time': '',
-      // 'title': 'New York University',
-      // 'location': 'New York',
-      'subtitle': 'As a former member of the ATLAS collaboration, I am a co-author of over 340 published papers which are listed on <a href="http://inspirehep.net/author/profile/S.Kreiss.1">my author page on inspirehep.net</a>. Below is a list of publications where I made a significant contribution to the paper itself.<br />',
-      'publications': [
+      // time: '',
+      // title: 'New York University',
+      // location: 'New York',
+      subtitle: 'As a former member of the ATLAS collaboration, I am a co-author of over 340 published papers which are listed on <a href="http://inspirehep.net/author/profile/S.Kreiss.1">my author page on inspirehep.net</a>. Below is a list of publications where I made a significant contribution to the paper itself.<br />',
+      publications: [
         {
-          'time': 'Jan 2014',
-          'authors': 'K. Cranmer, S. Kreiss, D. Lopez-Val, T. Plehn',
-          'title': '<b>Decoupling Theoretical Uncertainties from Measurements of the Higgs Boson</b>',
-          'published': '<a href="http://journals.aps.org/prd/abstract/10.1103/PhysRevD.91.054032">Phys Rev D91</a>, <a href="http://arxiv.org/abs/1401.0080">arXiv:1401.0080 [hep-ph]</a>, <a href="https://github.com/svenkreiss/decouple">code on Github at svenkreiss/decouple</a>, supplemental material at <a href="http://dx.doi.org/10.6084/m9.figshare.888607">http://dx.doi.org/10.6084/m9.figshare.888607</a>',
+          time: 'Jan 2014',
+          authors: 'K. Cranmer, S. Kreiss, D. Lopez-Val, T. Plehn',
+          title: '<b>Decoupling Theoretical Uncertainties from Measurements of the Higgs Boson</b>',
+          published: '<a href="http://journals.aps.org/prd/abstract/10.1103/PhysRevD.91.054032">Phys Rev D91</a>, <a href="http://arxiv.org/abs/1401.0080">arXiv:1401.0080 [hep-ph]</a>, <a href="https://github.com/svenkreiss/decouple">code on Github at svenkreiss/decouple</a>, supplemental material at <a href="http://dx.doi.org/10.6084/m9.figshare.888607">http://dx.doi.org/10.6084/m9.figshare.888607</a>',
         },
         {
-          'time': 'Sept 2013',
-          'authors': 'ATLAS Collaboration',
-          'title': 'Likelihoods for the H → γγ, H → ZZ* → 4l and H → WW* → 4l channel in the (µ<sub>ggF+ttH</sub> * B/B<sub>SM</sub>, µ<sub>VBF+VH</sub> * B/B<sub>SM</sub>) plane for a Higgs boson mass m<sub>H</sub>&nbsp;=&nbsp;125.5&nbsp;GeV',
-          'published': 'Datasets on HepData: <a href="https://inspirehep.net/record/1241574/data">https://inspirehep.net/record/1241574/data</a>',
+          time: 'Sept 2013',
+          authors: 'ATLAS Collaboration',
+          title: 'Likelihoods for the H → γγ, H → ZZ* → 4l and H → WW* → 4l channel in the (µ<sub>ggF+ttH</sub> * B/B<sub>SM</sub>, µ<sub>VBF+VH</sub> * B/B<sub>SM</sub>) plane for a Higgs boson mass m<sub>H</sub>&nbsp;=&nbsp;125.5&nbsp;GeV',
+          published: 'Datasets on HepData: <a href="https://inspirehep.net/record/1241574/data">https://inspirehep.net/record/1241574/data</a>',
         },
         {
-          'time': 'July 2013',
-          'authors': 'ATLAS collaboration',
-          'title': 'Measurements of Higgs boson production and couplings in diboson final states with the ATLAS detector at the LHC',
-          'published': '<b>ATLAS writer</b>, Phys.Lett. B726 (2013) 88-119',
+          time: 'July 2013',
+          authors: 'ATLAS collaboration',
+          title: 'Measurements of Higgs boson production and couplings in diboson final states with the ATLAS detector at the LHC',
+          published: '<b>ATLAS writer</b>, Phys.Lett. B726 (2013) 88-119',
         },
         {
-          'time': 'July 2013',
-          'authors': 'ATLAS collaboration',
-          'title': 'Evidence for the spin-0 nature of the Higgs boson using ATLAS data',
-          'published': 'Phys.Lett. B726 (2013) 120-144',
+          time: 'July 2013',
+          authors: 'ATLAS collaboration',
+          title: 'Evidence for the spin-0 nature of the Higgs boson using ATLAS data',
+          published: 'Phys.Lett. B726 (2013) 120-144',
         },
         {
-          'time': 'March 2013',
-          'authors': 'ATLAS collaboration',
-          'title': 'Combined coupling measurements of the Higgs-like boson with the ATLAS detector using up to 25 fb<sup>−1</sup> of proton-proton collision data',
-          'published': '<b>ATLAS writer</b>, ATLAS-COM-CONF-2013-035',
+          time: 'March 2013',
+          authors: 'ATLAS collaboration',
+          title: 'Combined coupling measurements of the Higgs-like boson with the ATLAS detector using up to 25 fb<sup>−1</sup> of proton-proton collision data',
+          published: '<b>ATLAS writer</b>, ATLAS-COM-CONF-2013-035',
         },
         {
-          'time': 'July 2012',
-          'authors': 'ATLAS collaboration',
-          'title': '<b>Observation of a new particle in the search for the Standard Model Higgs boson with the ATLAS detector at the LHC</b>',
-          'published': '<b>Responsible for Bayesian cross checks</b>, Phys.Lett. B716 (2012) 1-29',
+          time: 'July 2012',
+          authors: 'ATLAS collaboration',
+          title: '<b>Observation of a new particle in the search for the Standard Model Higgs boson with the ATLAS detector at the LHC</b>',
+          published: '<b>Responsible for Bayesian cross checks</b>, Phys.Lett. B716 (2012) 1-29',
         },
 
         {
-          'time': 'July 2012',
-          'authors': 'ATLAS collaboration',
-          'title': 'Combined search for the Standard Model Higgs boson in pp collisions at √s = 7 TeV with the ATLAS detector',
-          'published': 'Phys.Rev. D86 (2012) 032003',
+          time: 'July 2012',
+          authors: 'ATLAS collaboration',
+          title: 'Combined search for the Standard Model Higgs boson in pp collisions at √s = 7 TeV with the ATLAS detector',
+          published: 'Phys.Rev. D86 (2012) 032003',
         },
         {
-          'time': 'Feb 2012',
-          'authors': 'ATLAS collaboration',
-          'title': 'Combined search for the Standard Model Higgs boson using up to 4.9 fb⁻¹ of pp collision data at √s = 7 TeV with the ATLAS detector at the LHC',
-          'published': 'Phys.Lett. B710 (2012) 49-66',
+          time: 'Feb 2012',
+          authors: 'ATLAS collaboration',
+          title: 'Combined search for the Standard Model Higgs boson using up to 4.9 fb⁻¹ of pp collision data at √s = 7 TeV with the ATLAS detector at the LHC',
+          published: 'Phys.Lett. B710 (2012) 49-66',
         },
         {
-          'time': 'December 2010',
-          'authors': 'ATLAS collaboration',
-          'title': 'Measurement of the top quark pair production cross-section with ATLAS in pp collisions at √s = 7 TeV',
-          'published': 'Eur.Phys.J.C71:1577 (2011)',
+          time: 'December 2010',
+          authors: 'ATLAS collaboration',
+          title: 'Measurement of the top quark pair production cross-section with ATLAS in pp collisions at √s = 7 TeV',
+          published: 'Eur.Phys.J.C71:1577 (2011)',
         },
         {
-          'time': 'Oct 2012',
-          'authors': 'L. Moneta, K. Belasco, K.S. Cranmer, S. Kreiss, A. Lazzaro, et al',
-          'title': '<b>The RooStats Project</b>',
-          'published': 'PoS (ACAT2010) 057',
+          time: 'Oct 2012',
+          authors: 'L. Moneta, K. Belasco, K.S. Cranmer, S. Kreiss, A. Lazzaro, et al',
+          title: '<b>The RooStats Project</b>',
+          published: 'PoS (ACAT2010) 057',
         },
         {
-          'time': 'Jan 2008',
-          'authors': 'B.C. Allanach et al',
-          'title': 'SUSY Les Houches Accord 2',
-          'published': 'CPC 180 (2009) 1',
+          time: 'Jan 2008',
+          authors: 'B.C. Allanach et al',
+          title: 'SUSY Les Houches Accord 2',
+          published: 'CPC 180 (2009) 1',
         },
       ],
     },
   ],
 }));
 $('#codes').html(template({
-  'group': 'Software',
-  'items': [
+  group: 'Software',
+  items: [
     {
-      'time': 'May 2015',
-      // 'authors': 'S. Kreiss',
-      'title': 'pysparkling',
-      'location': 'A native Python implementation of Spark\'s RDD interface',
-      'annotation': ['Github: <a href="https://github.com/svenkreiss/pysparkling">https://github.com/svenkreiss/pysparkling</a>'],
+      time: 'May 2015',
+      // authors: 'S. Kreiss',
+      title: 'pysparkling',
+      location: 'A native Python implementation of Spark\'s RDD interface',
+      annotation: ['Github: <a href="https://github.com/svenkreiss/pysparkling">https://github.com/svenkreiss/pysparkling</a>'],
     },
     {
-      'time': 'June 2014',
-      // 'authors': 'S. Kreiss',
-      'title': 'Databench',
-      'location': 'An interactive realtime data analysis tool',
-      'annotation': ['Github: <a href="https://github.com/svenkreiss/databench">https://github.com/svenkreiss/databench</a>'],
+      time: 'June 2014',
+      // authors: 'S. Kreiss',
+      title: 'Databench',
+      location: 'An interactive realtime data analysis tool',
+      annotation: ['Github: <a href="https://github.com/svenkreiss/databench">https://github.com/svenkreiss/databench</a>'],
     },
     // {
-    //   'title': 'Physics',
-    //   'publications': [
+    //   title: 'Physics',
+    //   publications: [
     //   {
-    //     'time': 'Jan 2014',
-    //     'authors': 'K. Cranmer, S. Kreiss, D. Lopez-Val, T. Plehn',
-    //     'title': 'Code to reproduce results for "Decoupling theoretical uncertainties from measurements of the Higgs boson", Phys Rev D91, arXiv:1401.0080 [hep-ph]',
-    //     'published': '<br />Github: <a href="https://github.com/svenkreiss/decouple">https://github.com/svenkreiss/decouple</a>',
+    //     time: 'Jan 2014',
+    //     authors: 'K. Cranmer, S. Kreiss, D. Lopez-Val, T. Plehn',
+    //     title: 'Code to reproduce results for "Decoupling theoretical uncertainties from measurements of the Higgs boson", Phys Rev D91, arXiv:1401.0080 [hep-ph]',
+    //     published: '<br />Github: <a href="https://github.com/svenkreiss/decouple">https://github.com/svenkreiss/decouple</a>',
     //   },
     //   // {
-    //   //   'time': 'Dec 2013',
-    //   //   'authors': 'K. Cranmer, S. Kreiss, D. Lopez-Val, T. Plehn',
-    //   //   'title': 'Supplementary Material for "Decoupling theoretical uncertainties from measurements of the Higgs boson", Phys Rev D91, arXiv:1401.0080 [hep-ph]',
-    //   //   'published': '<br />Figshare: <a href="http://dx.doi.org/10.6084/m9.figshare.888607">http://dx.doi.org/10.6084/m9.figshare.888607</a>',
+    //   //   time: 'Dec 2013',
+    //   //   authors: 'K. Cranmer, S. Kreiss, D. Lopez-Val, T. Plehn',
+    //   //   title: 'Supplementary Material for "Decoupling theoretical uncertainties from measurements of the Higgs boson", Phys Rev D91, arXiv:1401.0080 [hep-ph]',
+    //   //   published: '<br />Figshare: <a href="http://dx.doi.org/10.6084/m9.figshare.888607">http://dx.doi.org/10.6084/m9.figshare.888607</a>',
     //   // },
     //   // {
-    //   //   'time': 'Oct 2013',
-    //   //   'authors': 'S. Kreiss',
-    //   //   'title': 'QuizSocket: an online, real-time student response system written in Node.js using WebSockets, d3.js and Handlebars',
-    //   //   'published': '<br /><a href="http://www.quizsocket.com">http://www.quizsocket.com</a>',
+    //   //   time: 'Oct 2013',
+    //   //   authors: 'S. Kreiss',
+    //   //   title: 'QuizSocket: an online, real-time student response system written in Node.js using WebSockets, d3.js and Handlebars',
+    //   //   published: '<br /><a href="http://www.quizsocket.com">http://www.quizsocket.com</a>',
     //   // },
     //   {
-    //     'time': 'Sept 2013',
-    //     'authors': 'ATLAS Collaboration',
-    //     'title': 'Likelihoods for the H → γγ, H → ZZ* → 4l and H → WW* → 4l channel in the (μ<sub>ggF+ttH</sub> * B/B<sub>SM</sub>, μ<sub>VBF+VH</sub> * B/B<sub>SM</sub>) plane for a Higgs boson mass m<sub>H</sub>&nbsp;=&nbsp;125.5&nbsp;GeV',
-    //     'published': 'HepData [<a href="http://doi.org/10.7484/INSPIREHEP.DATA.A78C.HK44">1</a>, <a href="http://doi.org/10.7484/INSPIREHEP.DATA.RF5P.6M3K">2</a>, <a href="http://doi.org/10.7484/INSPIREHEP.DATA.26B4.TY5F">3</a>]',
+    //     time: 'Sept 2013',
+    //     authors: 'ATLAS Collaboration',
+    //     title: 'Likelihoods for the H → γγ, H → ZZ* → 4l and H → WW* → 4l channel in the (μ<sub>ggF+ttH</sub> * B/B<sub>SM</sub>, μ<sub>VBF+VH</sub> * B/B<sub>SM</sub>) plane for a Higgs boson mass m<sub>H</sub>&nbsp;=&nbsp;125.5&nbsp;GeV',
+    //     published: 'HepData [<a href="http://doi.org/10.7484/INSPIREHEP.DATA.A78C.HK44">1</a>, <a href="http://doi.org/10.7484/INSPIREHEP.DATA.RF5P.6M3K">2</a>, <a href="http://doi.org/10.7484/INSPIREHEP.DATA.26B4.TY5F">3</a>]',
     //   },
     // ]},
   ],
 }));
 $('#talks').html(template({
-  'group': 'Talks',
-  'items': [
+  group: 'Talks',
+  items: [
     {
-      'time': 'Sept 2015',
-      'title': 'MLconf',
-      'location': 'Atlanta',
-      'annotation': ['Conference talk on <em>Deep ML Architecture at Wildcard</em>.'],
+      time: 'Sept 2015',
+      title: 'MLconf',
+      location: 'Atlanta',
+      annotation: ['Conference talk on <em>Deep ML Architecture at Wildcard</em>.'],
     },
     {
-      'time': 'May 2015',
-      'title': 'Betaworks',
-      'location': 'New York',
-      'annotation': ['Talk on <em>Data and the Higgs Boson Discovery</em>.'],
+      time: 'May 2015, March 2016',
+      title: 'Betaworks Studio and Radius Intelligence',
+      location: 'New York and San Francisco',
+      annotation: ['Talk on <em>Data and the Higgs Boson Discovery</em>.'],
     },
     {
-      'time': 'Jan 2014',
-      'title': 'University of Cambridge',
-      'location': 'UK',
-      'annotation': ['Seminar on <em>Factorizing Theoretical Uncertainties from LHC Higgs Coupling Measurements</em>.'],
+      time: 'Jan 2014',
+      title: 'University of Cambridge',
+      location: 'UK',
+      annotation: ['Seminar on <em>Factorizing Theoretical Uncertainties from LHC Higgs Coupling Measurements</em>.'],
     },
     {
-      'time': 'July 2013',
-      'title': 'Statistical and Applied Mathematical Sciences Institute (SAMSI)',
-      'location': 'Durham, NC',
-      'annotation': ['Talk on <em>Modeling and Statistical Analysis for Higgs Physics at the Large Hadron Collider</em> at the workshop on <em>Knowledge Extraction via Comparison of Complex Computational Models to Massive Data Sets</em>.'],
+      time: 'July 2013',
+      title: 'Statistical and Applied Mathematical Sciences Institute (SAMSI)',
+      location: 'Durham, NC',
+      annotation: ['Talk on <em>Modeling and Statistical Analysis for Higgs Physics at the Large Hadron Collider</em> at the workshop on <em>Knowledge Extraction via Comparison of Complex Computational Models to Massive Data Sets</em>.'],
     },
     {
-      'time': 'Jan 2013',
-      'title': 'CERN',
-      'location': 'Switzerland',
-      'annotation': ['Talk on the <em>H→ZZ*→4l Likelihood in ATLAS</em> at the workshop on <em>Likelihoods for the LHC Searches</em>.'],
+      time: 'Jan 2013',
+      title: 'CERN',
+      location: 'Switzerland',
+      annotation: ['Talk on the <em>H→ZZ*→4l Likelihood in ATLAS</em> at the workshop on <em>Likelihoods for the LHC Searches</em>.'],
     },
     {
-      'time': 'Oct 2012',
-      'title': 'LHC Days 2012',
-      'location': 'Split, Croatia',
-      'annotation': ['Talk on <em>Standard Model Higgs Combination and Properties</em>.'],
+      time: 'Oct 2012',
+      title: 'LHC Days 2012',
+      location: 'Split, Croatia',
+      annotation: ['Talk on <em>Standard Model Higgs Combination and Properties</em>.'],
     },
     {
-      'time': 'May 2012',
-      'title': 'Computing in High Energy and Nuclear Physics (CHEP)',
-      'location': 'New York, NY',
-      'annotation': ['Talk on <em>RooStats: Statistical Tools for the LHC</em>.'],
+      time: 'May 2012',
+      title: 'Computing in High Energy and Nuclear Physics (CHEP)',
+      location: 'New York, NY',
+      annotation: ['Talk on <em>RooStats: Statistical Tools for the LHC</em>.'],
     },
   ],
 }));
 $('#media').html(template({
-  'group': 'Media',
-  'items': [
+  group: 'Media',
+  items: [
     {
-      'time': 'Oct 2013',
-      'title': 'The New Yorker',
-      'annotation': ['<em>A Nobel Prize Party: Cheese, Bubbles, and a Boson</em> by Betsy Morais'],
+      time: 'Oct 2013',
+      title: 'The New Yorker',
+      annotation: ['<em>A Nobel Prize Party: Cheese, Bubbles, and a Boson</em> by Betsy Morais'],
     },
     {
-      'time': 'Oct 2013',
-      'title': 'Momentum Campaign, New York University',
-      'annotation': ['A one billion dollar fund-raising campaign where I am featured as one of three students.'],
+      time: 'Oct 2013',
+      title: 'Momentum Campaign, New York University',
+      annotation: ['A one billion dollar fund-raising campaign where I am featured as one of three students.'],
     },
     {
-      'time': 'March 2013',
-      'title': 'The New York Times',
-      'annotation': [
+      time: 'March 2013',
+      title: 'The New York Times',
+      annotation: [
         '<em>Chasing the Higgs</em> by Dennis Overbye.<br />&ldquo;On the night of June 24, the graduate students and postdocs in Atlas were tiptoeing toward the 5&#8209;sigma finish line. Among them was Sven Kreiss, a New York University graduate student who got a preliminary glimpse of the answer alone in his office late that night when, as part of a crosscheck, he combined the data from two signatures of the Higgs decay and found the result breached 5&#8209;sigma. The next day he sent a plot to his adviser Kyle Cranmer, whose birthday it was, saying he had a present for him.&rdquo;',
       ],
     },
     {
-      'time': 'Dec 2012',
-      'title': 'Science',
-      'annotation': ['<em>A Particle Consistent with the Higgs Boson Observed with the ATLAS Detector at the Large Hadron Collider</em> by The ATLAS Collaboration.<br />I contributed the analysis of signal strength and mass shown in Fig. 12.'],
+      time: 'Dec 2012',
+      title: 'Science',
+      annotation: ['<em>A Particle Consistent with the Higgs Boson Observed with the ATLAS Detector at the Large Hadron Collider</em> by The ATLAS Collaboration.<br />I contributed the analysis of signal strength and mass shown in Fig. 12.'],
     },
   ],
 }));
