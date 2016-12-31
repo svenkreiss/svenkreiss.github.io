@@ -5,7 +5,7 @@ Slug: projects
 
 ## Data Science
 
-* [Databench](http://www.svenkreiss.com/databench/): Interactive data analysis and visualization tool.
+* [Databench](http://databench.trivial.io): Interactive data analysis and visualization tool.
 * [RooStats](https://twiki.cern.ch/twiki/bin/view/RooStats/WebHome): Statistics tools used at CERN to which I contributed core classes.
 * [MorphDemo](/blog/morph-demo): Demo of a new horizontal morphing algorithm.
 
