@@ -9,7 +9,7 @@ Summary: Sven Kreiss is a Data Scientist in New York City.
 <!-- {% img img-thumbnail float-right http://www.gravatar.com/avatar/1838de72eb5ce4b000c41c06dedb52c4.png?s=180 %} -->
 {% img img-thumbnail float-right /images/me_nyc_square_500.jpeg 250 Sven Kreiss in front of Freedom Tower. %}
 
-I am a Data Scientist at [Sidewalk Labs](http://www.sidewalklabs.com) in New York City with a PhD in Particle Physics from [NYU](http://physics.nyu.edu/) where I worked with [Kyle Cranmer](http://physics.as.nyu.edu/object/kylecranmer.html) on physics analyses at [ATLAS](http://atlas.web.cern.ch/Atlas/Collaboration/) and the statistical analysis tool [RooStats](http://twiki.cern.ch/twiki/bin/view/RooStats/WebHome) which is part of [CERN's Root Data Analysis tool](http://root.cern.ch/). My ATLAS work at [CERN](http://www.cern.ch) was focused on the Higgs Boson discovery, the first mass measurement, the first evidence for VBF production and property measurements related to the coupling strengths.
+I am a Data Scientist at [Sidewalk Labs](http://www.sidewalklabs.com) in New York City where I support our portfolio and incubating companies on the data science and engineering side. My background is in Particle Physics where I hold a PhD from [NYU](http://physics.nyu.edu/) and where I worked with [Kyle Cranmer](http://physics.as.nyu.edu/object/kylecranmer.html) on physics analyses at [ATLAS](http://atlas.web.cern.ch/Atlas/Collaboration/) and the statistical analysis tool [RooStats](http://twiki.cern.ch/twiki/bin/view/RooStats/WebHome) which is part of [CERN's Root Data Analysis tool](http://root.cern.ch/). My ATLAS work at [CERN](http://www.cern.ch) was focused on the [Higgs Boson discovery](#discovery).
 
 Links:
 <span style="white-space: nowrap">[<i class="fa fa-file-text"></i> CV](/files/cv.html) ([pdf](/files/cv.pdf))</span>,
@@ -33,6 +33,8 @@ Links:
 
 ### [MorphDemo](/blog/morph-demo)
 {% img /images/kdtreemorph_preview.png 320 kd-tree morph %}
+
+<a name="discovery"></a>
 
 ### [Discovery of the Higgs Boson](/blog/phd-thesis)
 {% img /images/nyt_science_front_page.jpeg 120 Science Times section front page %}
