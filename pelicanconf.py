@@ -63,7 +63,7 @@ PLUGINS = [
 
 # pure theme specific
 COVER_IMG_URL = '/images/winter_mountains_1600.jpeg'
-AUTHOR_EMAIL = 'sk@svenkreiss.com'
+AUTHOR_EMAIL = 'me@svenkreiss.com'
 AUTHOR_IMAGE = '/images/me_nyc_square_500.jpeg'
 TAGLINE = 'Data Scientist with a focus on Machine&nbsp;Learning and Computer&nbsp;Vision.'
 META_DESCRIPTION = 'my personal website'
