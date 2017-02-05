@@ -45,7 +45,7 @@ ul {
 }
 
 .cv-group {
-  margin-bottom: 1.2em;
+  margin-bottom: 1.1em;
 }
 .cv-group-title {
   text-transform: uppercase;
@@ -104,7 +104,7 @@ ul {
     <i class="fa fa-github"></i> GitHub: <a href="https://github.com/svenkreiss">svenkreiss</a>,
     <i class="fa fa-twitter"></i> Twitter: <a href="http://www.twitter.com/svenkreiss">@svenkreiss</a>,
     <i class="fa fa-envelope-o"></i> e-mail: <a href="mailto:me@svenkreiss.com">me@svenkreiss.com</a>
-    <br /><br /><br />
+    <br /><br />
 
     <div id="summary">
       <div class="row cv-group">
@@ -128,9 +128,9 @@ ul {
     <div id="education"></div>
     <div id="codes"></div>
     <div id="talks"></div>
-    <div id="publications"></div>
     <div id="media"></div>
     <div id="projects"></div>
+    <div id="publications"></div>
 
 
     <script id="entry-template" type="text/x-handlebars-template">
@@ -173,7 +173,7 @@ $('#experience').html(template({
       location: 'New York',
       subtitle: 'Data Scientist',
       annotation: [
-        'Predictive modeling for the transportation coordination platform <a href="http://www.flowmobility.io/">Flow</a>',
+        'Predictive modeling for the transportation coordination platform Flow',
         'Geospatial tools and analyses for Sidewalk\'s Policy team'
       ]
     },
@@ -311,17 +311,24 @@ $('#codes').html(template({
   group: 'Software',
   items: [
     {
+      time: 'April 2016',
+      // authors: 'S. Kreiss',
+      title: 's2sphere',
+      location: 'Python implementation of the S2 geometry library.',
+      annotation: ['Github: <a href="https://github.com/sidewalklabs/s2sphere">https://github.com/sidewalklabs/s2sphere</a>'],
+    },
+    {
       time: 'May 2015',
       // authors: 'S. Kreiss',
       title: 'pysparkling',
-      location: 'A native Python implementation of Spark\'s RDD interface',
+      location: 'a native Python implementation of Spark\'s RDD interface.',
       annotation: ['Github: <a href="https://github.com/svenkreiss/pysparkling">https://github.com/svenkreiss/pysparkling</a>'],
     },
     {
       time: 'June 2014',
       // authors: 'S. Kreiss',
       title: 'Databench',
-      location: 'An interactive realtime data analysis tool',
+      location: 'an interactive realtime data analysis tool.',
       annotation: ['Github: <a href="https://github.com/svenkreiss/databench">https://github.com/svenkreiss/databench</a>'],
     },
     // {
