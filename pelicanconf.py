@@ -68,6 +68,7 @@ AUTHOR_IMAGE = '/images/me_nyc_square_500.jpeg'
 TAGLINE = 'Software Engineer and Data Scientist with a focus on Machine&nbsp;Learning and Computer&nbsp;Vision.'
 META_DESCRIPTION = 'my personal website'
 DISQUS_SITENAME = 'svenkreisscom'
+COPYRIGHT_YEARS = '2014 &ndash; 2017'
 
 ARTICLE_URL = 'blog/{slug}/'
 ARTICLE_SAVE_AS = 'blog/{slug}/index.html'
