@@ -9,7 +9,7 @@ Summary: Sven Kreiss is a Data Scientist in New York City.
 <!-- {% img img-thumbnail float-right http://www.gravatar.com/avatar/1838de72eb5ce4b000c41c06dedb52c4.png?s=180 %} -->
 {% img img-thumbnail float-right /images/me_nyc_square_500.jpeg 250 Sven Kreiss in front of Freedom Tower. %}
 
-I am a Software Engineer and Data Scientist at [Sidewalk Labs](http://www.sidewalklabs.com) in New York City where I focus on Machine Learning for urban environments. My background is in Particle Physics where I hold a PhD from [NYU](http://physics.nyu.edu/) and where I worked with [Kyle Cranmer](http://physics.as.nyu.edu/object/kylecranmer.html) on physics and statistical analyses for [ATLAS](http://atlas.web.cern.ch/Atlas/Collaboration/) with a particular focus on the [Higgs Boson discovery](#discovery).
+I am a Data Scientist at [Sidewalk Labs](http://www.sidewalklabs.com) in New York City where I focus on Machine Learning for urban environments. My background is in Particle Physics where I hold a PhD from [NYU](http://physics.nyu.edu/) and where I worked with [Kyle Cranmer](http://physics.as.nyu.edu/object/kylecranmer.html) on physics and statistical analyses for [ATLAS](http://atlas.web.cern.ch/Atlas/Collaboration/) with a particular focus on the [Higgs Boson discovery](#discovery).
 
 Links:
 <span style="white-space: nowrap">[<i class="fa fa-file-text"></i> CV](/files/cv.html) ([pdf](/files/cv.pdf))</span>,
