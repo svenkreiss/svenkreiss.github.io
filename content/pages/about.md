@@ -30,9 +30,6 @@ Links:
 [{% img /images/pysparkling_4cores.png 250 pysparkling performance %}](http://pysparkling.trivial.io)
 [{% img /images/pysparkling_4cores_hyperthreading.png 250 pysparkling performance with hyperthreading %}](http://pysparkling.trivial.io)
 
-### [MorphDemo](/blog/morph-demo)
-[{% img /images/kdtreemorph_preview.png 400 kd-tree morph %}](/blog/morph-demo)
-
 <a name="discovery"></a>
 
 ### [Discovery of the Higgs Boson in the New York Times](http://www.nytimes.com/2013/03/05/science/chasing-the-higgs-boson-how-2-teams-of-rivals-at-CERN-searched-for-physics-most-elusive-particle.html?view=Opening_the_Box)
@@ -42,6 +39,9 @@ Links:
 That "joyful expletive" was "Holly shit" (not correcting the typo) sent from his phone.
 Read the full story on the [New York Times website](http://www.nytimes.com/2013/03/05/science/chasing-the-higgs-boson-how-2-teams-of-rivals-at-CERN-searched-for-physics-most-elusive-particle.html?view=Opening_the_Box) from March 5, 2013.
 All the scientific details are in my [PhD thesis](/blog/phd-thesis).
+
+### [MorphDemo](/files/morphDemo.html)
+[{% img /images/kdtreemorph_preview.png 400 kd-tree morph %}](/files/morphDemo.html)
 
 ### [UnicodeIt](http://www.unicodeit.net)
 [{% img /images/unicodeit.png 550 UnicodeIt.net %}](http://www.unicodeit.net)
