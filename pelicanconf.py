@@ -25,9 +25,12 @@ LINKS = (
 
 # Social widget
 SOCIAL = (
-    ('twitter', 'https://twitter.com/svenkreiss'),
-    ('linkedin', 'http://www.linkedin.com/in/svenkreiss'),
+    ('rss', 'https://trivial.io'),
     ('github', 'https://github.com/svenkreiss/'),
+    ('twitter', 'https://twitter.com/svenkreiss'),
+    ('linkedin', 'https://www.linkedin.com/in/svenkreiss/'),
+    ('envelope', 'mailto:me@svenkreiss.com'),
+    ('file-text', '/files/cv.pdf'),
 )
 TWITTER_USERNAME = 'svenkreiss'
 
