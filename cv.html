@@ -45,7 +45,7 @@ ul {
 }
 
 .cv-group {
-  margin-bottom: 1.1em;
+  margin-bottom: 1.3em;
 }
 .cv-group-title {
   text-transform: uppercase;
@@ -116,7 +116,7 @@ ul {
             <li>Statistical modeling expert; was on the core team that discovered the Higgs Boson at CERN</li>
             <li>Organizer of the <em>NYC Data Breakfast</em></li>
             <li>Creator of <em>pysparkling</em> and <em>Databench</em>, see <a href="https://github.com/svenkreiss">GitHub: https://github.com/svenkreiss</a></li>
-            <li>Preferred programming languages: Python, C++ and JavaScript</li>
+            <li>Preferred programming languages: Python, C++ and TypeScript/JavaScript</li>
             <li>Languages: English (fluent), German (native), French (basic)</li>
           </ul>
           </div>
@@ -362,8 +362,14 @@ $('#codes').html(template({
   ],
 }));
 $('#talks').html(template({
-  group: 'Talks',
+  group: 'Conferences',
   items: [
+    {
+      time: 'Sept 2017',
+      title: 'Data for Good Exchange',
+      location: 'New York City',
+      annotation: ['Program committee member.'],
+    },
     {
       time: 'Sept 2015',
       title: 'MLconf',

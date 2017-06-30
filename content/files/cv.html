@@ -43,7 +43,7 @@ ul {
 }
 
 .cv-group {
-  margin-bottom: 1.1em;
+  margin-bottom: 1.3em;
 }
 .cv-group-title {
   text-transform: uppercase;
@@ -114,7 +114,7 @@ ul {
             <li>Statistical modeling expert; was on the core team that discovered the Higgs Boson at CERN</li>
             <li>Organizer of the <em>NYC Data Breakfast</em></li>
             <li>Creator of <em>pysparkling</em> and <em>Databench</em>, see <a href="https://github.com/svenkreiss">GitHub: https://github.com/svenkreiss</a></li>
-            <li>Preferred programming languages: Python, C++ and JavaScript</li>
+            <li>Preferred programming languages: Python, C++ and TypeScript/JavaScript</li>
             <li>Languages: English (fluent), German (native), French (basic)</li>
           </ul>
           </div>
@@ -213,8 +213,16 @@ ul {
     </div>
     <div id="talks">
       <div class="row cv-group">
-        <div class="col-xs-2 cv-group-title">Talks</div>
+        <div class="col-xs-2 cv-group-title">Conferences</div>
         <div class="col-xs-10">
+            <div class="cv-item">
+              <div class="cv-time">Sept 2017</div>
+              <span class="cv-title">Data for Good Exchange</span>, <span class="cv-location">New York City</span><br>
+              
+              <div class="cv-annotation">
+                  <div>Program committee member.</div>
+              </div>
+            </div>
             <div class="cv-item">
               <div class="cv-time">Sept 2015</div>
               <span class="cv-title">MLconf</span>, <span class="cv-location">Atlanta</span><br>
@@ -625,8 +633,14 @@ $('#codes').html(template({
   ],
 }));
 $('#talks').html(template({
-  group: 'Talks',
+  group: 'Conferences',
   items: [
+    {
+      time: 'Sept 2017',
+      title: 'Data for Good Exchange',
+      location: 'New York City',
+      annotation: ['Program committee member.'],
+    },
     {
       time: 'Sept 2015',
       title: 'MLconf',
