@@ -1,14 +1,13 @@
-<!DOCTYPE html><html class="no-js" lang=""><head>
+<!DOCTYPE html>
+<html class="no-js" lang=""><head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Sven Kreiss</title>
     <meta name="description" content="CV of Sven Kreiss">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <script type="text/javascript" async="" src="http://stats.g.doubleclick.net/dc.js"></script><script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.3/handlebars.min.js"></script>
 
     <style>
@@ -26,6 +25,7 @@ h1 {
   margin: 0;
   padding: 0;
   font-size: 180%;
+  font-weight: 500;
 }
 
 i {
@@ -35,6 +35,7 @@ i {
 
 a {
   color: #337ab7;
+  text-decoration: None;
   -webkit-text-fill-color: #337ab7;  /* because of some phantomjs bug */
 }
 
@@ -43,13 +44,20 @@ ul {
 }
 
 .cv-group {
+  display: flex;
+  flex-flow: row wrap;
   margin-bottom: 1.3em;
 }
 .cv-group-title {
+  flex: 0 0 10em;
   text-transform: uppercase;
+}
+.cv-items {
+  flex: 10 1 20em;
 }
 .cv-time {
   float: right;
+  margin-left: 1em;
 }
 .cv-title {
   font-weight: bold;
@@ -66,14 +74,13 @@ ul {
   text-indent: -2em;
 }
 .cv-item {
-  width: 100%;
   margin: 0 0 0.5em 0;
-  display: inline-block;
+  page-break-inside: avoid;
 }
 .cv-item ul {
+  margin-top: 0;
   margin-left: -1.7em;
 }
-
 
 @media print {
   a[href]:after {
@@ -84,17 +91,12 @@ ul {
   }
 
   body {
-    font-size: 8pt;
-    margin: 0 auto;
+    font-size: 10pt;
   }
 }
     </style>
   </head>
   <body>
-    <!--[if lt IE 8]>
-        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
-
     <!-- Add your site or application content here -->
     <h1>Sven Kreiss, PhD</h1>
     <i class="fa fa-linkedin-square"></i> LinkedIn: <a href="https://www.linkedin.com/in/svenkreiss">svenkreiss</a>,
@@ -105,9 +107,9 @@ ul {
     <br><br>
 
     <div id="summary">
-      <div class="row cv-group">
-        <div class="col-xs-2 cv-group-title">Summary</div>
-        <div class="col-xs-10">
+      <div class="cv-group">
+        <div class="cv-group-title">Summary</div>
+        <div class="cv-items">
           <div class="cv-item">
           <ul>
             <li>Data Scientist with a focus on Machine Learning and Computer Vision</li>
@@ -124,9 +126,9 @@ ul {
     </div>
 
     <div id="experience">
-      <div class="row cv-group">
-        <div class="col-xs-2 cv-group-title">Experience</div>
-        <div class="col-xs-10">
+      <div class="cv-group">
+        <div class="cv-group-title">Experience</div>
+        <div class="cv-items">
             <div class="cv-item">
               <div class="cv-time">April 2016 – present</div>
               <span class="cv-title">Sidewalk Labs, an Alphabet company</span>, <span class="cv-location">New York</span><br>
@@ -159,9 +161,9 @@ ul {
       </div>
     </div>
     <div id="education">
-      <div class="row cv-group">
-        <div class="col-xs-2 cv-group-title">Education</div>
-        <div class="col-xs-10">
+      <div class="cv-group">
+        <div class="cv-group-title">Education</div>
+        <div class="cv-items">
             <div class="cv-item">
               <div class="cv-time">Sept 2009 – May 2014</div>
               <span class="cv-title">New York University</span>, <span class="cv-location">New York</span><br>
@@ -183,9 +185,9 @@ ul {
       </div>
     </div>
     <div id="codes">
-      <div class="row cv-group">
-        <div class="col-xs-2 cv-group-title">Software</div>
-        <div class="col-xs-10">
+      <div class="cv-group">
+        <div class="cv-group-title">Software</div>
+        <div class="cv-items">
             <div class="cv-item">
               <div class="cv-time">April 2016</div>
               <span class="cv-title">s2sphere</span>, <span class="cv-location">Python implementation of the S2 geometry library.</span><br>
@@ -214,9 +216,9 @@ ul {
       </div>
     </div>
     <div id="talks">
-      <div class="row cv-group">
-        <div class="col-xs-2 cv-group-title">Conferences</div>
-        <div class="col-xs-10">
+      <div class="cv-group">
+        <div class="cv-group-title">Conferences</div>
+        <div class="cv-items">
             <div class="cv-item">
               <div class="cv-time">Dec 2017</div>
               <span class="cv-title">Columbia University</span>, <span class="cv-location">New York City</span><br>
@@ -295,9 +297,9 @@ ul {
     <!-- <div id="media"></div> -->
     <div id="projects"></div>
     <div id="publications">
-      <div class="row cv-group">
-        <div class="col-xs-2 cv-group-title">Selected Publications</div>
-        <div class="col-xs-10">
+      <div class="cv-group">
+        <div class="cv-group-title">Selected Publications</div>
+        <div class="cv-items">
             <div class="cv-item">
               <div class="cv-time"></div>
               <span class="cv-title"></span><span class="cv-location"></span>
@@ -383,9 +385,9 @@ ul {
 
 
     <script id="entry-template" type="text/x-handlebars-template">
-      <div class="row cv-group">
-        <div class="col-xs-2 cv-group-title">{{group}}</div>
-        <div class="col-xs-10">
+      <div class="cv-group">
+        <div class="cv-group-title">{{group}}</div>
+        <div class="cv-items">
           {{#each items}}
             <div class="cv-item">
               <div class="cv-time">{{{time}}}</div>
