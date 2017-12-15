@@ -1,14 +1,12 @@
-<!DOCTYPE html><html class="no-js" lang=""><head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" class="no-js" lang=""><head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <title>Sven Kreiss</title>
-    <meta name="description" content="CV of Sven Kreiss">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="CV of Sven Kreiss" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
     <script type="text/javascript" async="" src="http://stats.g.doubleclick.net/dc.js"></script><script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.3/handlebars.min.js"></script>
 
     <style>
@@ -26,6 +24,7 @@ h1 {
   margin: 0;
   padding: 0;
   font-size: 180%;
+  font-weight: 500;
 }
 
 i {
@@ -35,6 +34,7 @@ i {
 
 a {
   color: #337ab7;
+  text-decoration: None;
   -webkit-text-fill-color: #337ab7;  /* because of some phantomjs bug */
 }
 
@@ -43,13 +43,20 @@ ul {
 }
 
 .cv-group {
+  display: flex;
+  flex-flow: row wrap;
   margin-bottom: 1.3em;
 }
 .cv-group-title {
+  flex: 0 0 10em;
   text-transform: uppercase;
+}
+.cv-items {
+  flex: 10 1 20em;
 }
 .cv-time {
   float: right;
+  margin-left: 1em;
 }
 .cv-title {
   font-weight: bold;
@@ -61,7 +68,7 @@ ul {
   margin-top: 0em;
   margin-left: 2em;
 }
-.cv-annotation>div {
+.cv-annotation&gt;div {
   padding-left: 0em;
   text-indent: -2em;
 }
@@ -71,6 +78,7 @@ ul {
   display: inline-block;
 }
 .cv-item ul {
+  margin-top: 0;
   margin-left: -1.7em;
 }
 
@@ -102,12 +110,12 @@ ul {
     <i class="fa fa-github"></i> GitHub: <a href="https://github.com/svenkreiss">svenkreiss</a>,
     <i class="fa fa-twitter"></i> Twitter: <a href="http://www.twitter.com/svenkreiss">@svenkreiss</a>,
     <i class="fa fa-envelope-o"></i> e-mail: <a href="mailto:me@svenkreiss.com">me@svenkreiss.com</a>
-    <br><br>
+    <br /><br />
 
     <div id="summary">
-      <div class="row cv-group">
-        <div class="col-xs-2 cv-group-title">Summary</div>
-        <div class="col-xs-10">
+      <div class="cv-group">
+        <div class="cv-group-title">Summary</div>
+        <div class="cv-items">
           <div class="cv-item">
           <ul>
             <li>Data Scientist with a focus on Machine Learning and Computer Vision</li>
@@ -124,13 +132,13 @@ ul {
     </div>
 
     <div id="experience">
-      <div class="row cv-group">
-        <div class="col-xs-2 cv-group-title">Experience</div>
-        <div class="col-xs-10">
+      <div class="cv-group">
+        <div class="cv-group-title">Experience</div>
+        <div class="cv-items">
             <div class="cv-item">
               <div class="cv-time">April 2016 – present</div>
-              <span class="cv-title">Sidewalk Labs, an Alphabet company</span>, <span class="cv-location">New York</span><br>
-              <span class="cv-subtitle">Senior Data Scientist April 2017 – present, Data Scientist April 2016 – April 2017</span><br>
+              <span class="cv-title">Sidewalk Labs, an Alphabet company</span>, <span class="cv-location">New York</span><br />
+              <span class="cv-subtitle">Senior Data Scientist April 2017 – present, Data Scientist April 2016 – April 2017</span><br />
               <div class="cv-annotation">
                   <div>Machine Learning and Computer Vision expert</div>
                   <div>Predictive modeling for the transportation coordination platform Flow</div>
@@ -139,8 +147,8 @@ ul {
             </div>
             <div class="cv-item">
               <div class="cv-time">Sept 2014 – March 2016</div>
-              <span class="cv-title">Wildcard</span>, <span class="cv-location">New York</span><br>
-              <span class="cv-subtitle">Lead Data Scientist</span><br>
+              <span class="cv-title">Wildcard</span>, <span class="cv-location">New York</span><br />
+              <span class="cv-subtitle">Lead Data Scientist</span><br />
               <div class="cv-annotation">
                   <div>Developed a machine learning tool for text and media extraction from HTML documents</div>
                   <div>Created a content recommendation engine with Collaborative Filtering on Spark</div>
@@ -149,8 +157,8 @@ ul {
             </div>
             <div class="cv-item">
               <div class="cv-time">July 2007 – Aug 2009</div>
-              <span class="cv-title">ElectronX</span>, <span class="cv-location">Germany</span><br>
-              <span class="cv-subtitle">Founder</span><br>
+              <span class="cv-title">ElectronX</span>, <span class="cv-location">Germany</span><br />
+              <span class="cv-subtitle">Founder</span><br />
               <div class="cv-annotation">
                   <div>Designed circuit boards and manufactured electronic devices</div>
               </div>
@@ -159,13 +167,13 @@ ul {
       </div>
     </div>
     <div id="education">
-      <div class="row cv-group">
-        <div class="col-xs-2 cv-group-title">Education</div>
-        <div class="col-xs-10">
+      <div class="cv-group">
+        <div class="cv-group-title">Education</div>
+        <div class="cv-items">
             <div class="cv-item">
               <div class="cv-time">Sept 2009 – May 2014</div>
-              <span class="cv-title">New York University</span>, <span class="cv-location">New York</span><br>
-              <span class="cv-subtitle">Doctor of Philosophy</span><br>
+              <span class="cv-title">New York University</span>, <span class="cv-location">New York</span><br />
+              <span class="cv-subtitle">Doctor of Philosophy</span><br />
               <div class="cv-annotation">
                   <div>Thesis: Higgs Boson Discovery and First Property Measurements using the ATLAS Detector</div>
                   <div>Award: NSF LHC Student Support Award for a one-year-stay at CERN in Geneva, Switzerland</div>
@@ -173,8 +181,8 @@ ul {
             </div>
             <div class="cv-item">
               <div class="cv-time">Sept 2005 – Sept 2009</div>
-              <span class="cv-title">University of Edinburgh</span>, <span class="cv-location">UK</span><br>
-              <span class="cv-subtitle">Master of Physics with Honors in Mathematical Physics, Bachelor of Science</span><br>
+              <span class="cv-title">University of Edinburgh</span>, <span class="cv-location">UK</span><br />
+              <span class="cv-subtitle">Master of Physics with Honors in Mathematical Physics, Bachelor of Science</span><br />
               <div class="cv-annotation">
                   <div>Thesis: New Physics at the LHC: Distinguishability of Supersymmetry and Little Higgs models</div>
               </div>
@@ -183,12 +191,12 @@ ul {
       </div>
     </div>
     <div id="codes">
-      <div class="row cv-group">
-        <div class="col-xs-2 cv-group-title">Software</div>
-        <div class="col-xs-10">
+      <div class="cv-group">
+        <div class="cv-group-title">Software</div>
+        <div class="cv-items">
             <div class="cv-item">
               <div class="cv-time">April 2016</div>
-              <span class="cv-title">s2sphere</span>, <span class="cv-location">Python implementation of the S2 geometry library.</span><br>
+              <span class="cv-title">s2sphere</span>, <span class="cv-location">Python implementation of the S2 geometry library.</span><br />
               
               <div class="cv-annotation">
                   <div>Github: <a href="https://github.com/sidewalklabs/s2sphere">https://github.com/sidewalklabs/s2sphere</a></div>
@@ -196,7 +204,7 @@ ul {
             </div>
             <div class="cv-item">
               <div class="cv-time">May 2015</div>
-              <span class="cv-title">pysparkling</span>, <span class="cv-location">a native Python implementation of Spark's RDD interface.</span><br>
+              <span class="cv-title">pysparkling</span>, <span class="cv-location">a native Python implementation of Spark's RDD interface.</span><br />
               
               <div class="cv-annotation">
                   <div>Github: <a href="https://github.com/svenkreiss/pysparkling">https://github.com/svenkreiss/pysparkling</a></div>
@@ -204,7 +212,7 @@ ul {
             </div>
             <div class="cv-item">
               <div class="cv-time">June 2014</div>
-              <span class="cv-title">Databench</span>, <span class="cv-location">an interactive realtime data analysis tool.</span><br>
+              <span class="cv-title">Databench</span>, <span class="cv-location">an interactive realtime data analysis tool.</span><br />
               
               <div class="cv-annotation">
                   <div>Github: <a href="https://github.com/svenkreiss/databench">https://github.com/svenkreiss/databench</a></div>
@@ -214,12 +222,12 @@ ul {
       </div>
     </div>
     <div id="talks">
-      <div class="row cv-group">
-        <div class="col-xs-2 cv-group-title">Conferences</div>
-        <div class="col-xs-10">
+      <div class="cv-group">
+        <div class="cv-group-title">Conferences</div>
+        <div class="cv-items">
             <div class="cv-item">
               <div class="cv-time">Dec 2017</div>
-              <span class="cv-title">Columbia University</span>, <span class="cv-location">New York City</span><br>
+              <span class="cv-title">Columbia University</span>, <span class="cv-location">New York City</span><br />
               
               <div class="cv-annotation">
                   <div>Guest lecture in the Master of Data Science program on <em>Geospatial Data Science</em>.</div>
@@ -227,7 +235,7 @@ ul {
             </div>
             <div class="cv-item">
               <div class="cv-time">Sept 2017</div>
-              <span class="cv-title">Data for Good Exchange</span>, <span class="cv-location">New York City</span><br>
+              <span class="cv-title">Data for Good Exchange</span>, <span class="cv-location">New York City</span><br />
               
               <div class="cv-annotation">
                   <div>Program committee member.</div>
@@ -235,7 +243,7 @@ ul {
             </div>
             <div class="cv-item">
               <div class="cv-time">Sept 2015</div>
-              <span class="cv-title">MLconf</span>, <span class="cv-location">Atlanta</span><br>
+              <span class="cv-title">MLconf</span>, <span class="cv-location">Atlanta</span><br />
               
               <div class="cv-annotation">
                   <div>Conference talk on <em>Deep ML Architecture at Wildcard</em>.</div>
@@ -243,7 +251,7 @@ ul {
             </div>
             <div class="cv-item">
               <div class="cv-time">May 2015, March 2016</div>
-              <span class="cv-title">Betaworks Studio and Radius Intelligence</span>, <span class="cv-location">New York and San Francisco</span><br>
+              <span class="cv-title">Betaworks Studio and Radius Intelligence</span>, <span class="cv-location">New York and San Francisco</span><br />
               
               <div class="cv-annotation">
                   <div>Talk on <em>Data and the Higgs Boson Discovery</em>.</div>
@@ -251,7 +259,7 @@ ul {
             </div>
             <div class="cv-item">
               <div class="cv-time">Jan 2014</div>
-              <span class="cv-title">University of Cambridge</span>, <span class="cv-location">UK</span><br>
+              <span class="cv-title">University of Cambridge</span>, <span class="cv-location">UK</span><br />
               
               <div class="cv-annotation">
                   <div>Seminar on <em>Factorizing Theoretical Uncertainties from LHC Higgs Coupling Measurements</em>.</div>
@@ -259,7 +267,7 @@ ul {
             </div>
             <div class="cv-item">
               <div class="cv-time">July 2013</div>
-              <span class="cv-title">Statistical and Applied Mathematical Sciences Institute (SAMSI)</span>, <span class="cv-location">Durham, NC</span><br>
+              <span class="cv-title">Statistical and Applied Mathematical Sciences Institute (SAMSI)</span>, <span class="cv-location">Durham, NC</span><br />
               
               <div class="cv-annotation">
                   <div>Talk on <em>Modeling and Statistical Analysis for Higgs Physics at the Large Hadron Collider</em> at the workshop on <em>Knowledge Extraction via Comparison of Complex Computational Models to Massive Data Sets</em>.</div>
@@ -267,7 +275,7 @@ ul {
             </div>
             <div class="cv-item">
               <div class="cv-time">Jan 2013</div>
-              <span class="cv-title">CERN</span>, <span class="cv-location">Switzerland</span><br>
+              <span class="cv-title">CERN</span>, <span class="cv-location">Switzerland</span><br />
               
               <div class="cv-annotation">
                   <div>Talk on the <em>H→ZZ*→4l Likelihood in ATLAS</em> at the workshop on <em>Likelihoods for the LHC Searches</em>.</div>
@@ -275,7 +283,7 @@ ul {
             </div>
             <div class="cv-item">
               <div class="cv-time">Oct 2012</div>
-              <span class="cv-title">LHC Days 2012</span>, <span class="cv-location">Split, Croatia</span><br>
+              <span class="cv-title">LHC Days 2012</span>, <span class="cv-location">Split, Croatia</span><br />
               
               <div class="cv-annotation">
                   <div>Talk on <em>Standard Model Higgs Combination and Properties</em>.</div>
@@ -283,7 +291,7 @@ ul {
             </div>
             <div class="cv-item">
               <div class="cv-time">May 2012</div>
-              <span class="cv-title">Computing in High Energy and Nuclear Physics (CHEP)</span>, <span class="cv-location">New York, NY</span><br>
+              <span class="cv-title">Computing in High Energy and Nuclear Physics (CHEP)</span>, <span class="cv-location">New York, NY</span><br />
               
               <div class="cv-annotation">
                   <div>Talk on <em>RooStats: Statistical Tools for the LHC</em>.</div>
@@ -295,13 +303,13 @@ ul {
     <!-- <div id="media"></div> -->
     <div id="projects"></div>
     <div id="publications">
-      <div class="row cv-group">
-        <div class="col-xs-2 cv-group-title">Selected Publications</div>
-        <div class="col-xs-10">
+      <div class="cv-group">
+        <div class="cv-group-title">Selected Publications</div>
+        <div class="cv-items">
             <div class="cv-item">
               <div class="cv-time"></div>
               <span class="cv-title"></span><span class="cv-location"></span>
-              <span class="cv-subtitle">As a former member of the ATLAS collaboration, I am a co-author of over 340 published papers which are listed on my author pages on <a href="http://inspirehep.net/author/profile/S.Kreiss.1">inspirehep.net</a> and <a href="https://scholar.google.com/citations?user=dQkhUXwAAAAJ">Google Scholar</a>. Below is a list of publications where I made a significant contribution to the paper itself.<br></span><br>
+              <span class="cv-subtitle">As a former member of the ATLAS collaboration, I am a co-author of over 340 published papers which are listed on my author pages on <a href="http://inspirehep.net/author/profile/S.Kreiss.1">inspirehep.net</a> and <a href="https://scholar.google.com/citations?user=dQkhUXwAAAAJ">Google Scholar</a>. Below is a list of publications where I made a significant contribution to the paper itself.<br /></span><br />
               <div class="cv-annotation">
                   <div>
                     K. Cranmer, S. Kreiss, D. Lopez-Val, T. Plehn,
@@ -312,7 +320,7 @@ ul {
                   <div>
                     ATLAS Collaboration,
                     Sept 2013,
-                    <em>Likelihoods for the H → γγ, H → ZZ* → 4l and H → WW* → 4l channel in the (µ<sub>ggF+ttH</sub> * B/B<sub>SM</sub>, µ<sub>VBF+VH</sub> * B/B<sub>SM</sub>) plane for a Higgs boson mass m<sub>H</sub>&nbsp;=&nbsp;125.5&nbsp;GeV</em>,
+                    <em>Likelihoods for the H → γγ, H → ZZ* → 4l and H → WW* → 4l channel in the (µ<sub>ggF+ttH</sub> * B/B<sub>SM</sub>, µ<sub>VBF+VH</sub> * B/B<sub>SM</sub>) plane for a Higgs boson mass m<sub>H</sub> = 125.5 GeV</em>,
                     Datasets on HepData: <a href="https://inspirehep.net/record/1241574/data">https://inspirehep.net/record/1241574/data</a>.
                   </div>
                   <div>
@@ -383,31 +391,31 @@ ul {
 
 
     <script id="entry-template" type="text/x-handlebars-template">
-      <div class="row cv-group">
-        <div class="col-xs-2 cv-group-title">{{group}}</div>
-        <div class="col-xs-10">
+      &lt;div class="cv-group"&gt;
+        &lt;div class="cv-group-title"&gt;{{group}}&lt;/div&gt;
+        &lt;div class="cv-items"&gt;
           {{#each items}}
-            <div class="cv-item">
-              <div class="cv-time">{{{time}}}</div>
-              <span class="cv-title">{{title}}</span>{{#if title}}{{#if location}}, {{/if}}{{/if}}<span class="cv-location">{{location}}</span>{{#if title}}<br />{{/if}}
-              {{#if subtitle }}<span class="cv-subtitle">{{{subtitle}}}</span><br />{{/if}}
-              <div class="cv-annotation">
+            &lt;div class="cv-item"&gt;
+              &lt;div class="cv-time"&gt;{{{time}}}&lt;/div&gt;
+              &lt;span class="cv-title"&gt;{{title}}&lt;/span&gt;{{#if title}}{{#if location}}, {{/if}}{{/if}}&lt;span class="cv-location"&gt;{{location}}&lt;/span&gt;{{#if title}}&lt;br /&gt;{{/if}}
+              {{#if subtitle }}&lt;span class="cv-subtitle"&gt;{{{subtitle}}}&lt;/span&gt;&lt;br /&gt;{{/if}}
+              &lt;div class="cv-annotation"&gt;
                 {{#each annotation}}
-                  <div>{{{this}}}</div>
+                  &lt;div&gt;{{{this}}}&lt;/div&gt;
                 {{/each}}
                 {{#each publications}}
-                  <div>
+                  &lt;div&gt;
                     {{authors}},
                     {{time}},
-                    <em>{{{title}}}</em>{{#if published}},{{/if}}
+                    &lt;em&gt;{{{title}}}&lt;/em&gt;{{#if published}},{{/if}}
                     {{{published}}}{{#if published}}.{{/if}}
-                  </div>
+                  &lt;/div&gt;
                 {{/each}}
-              </div>
-            </div>
+              &lt;/div&gt;
+            &lt;/div&gt;
           {{/each}}
-        </div>
-      </div>
+        &lt;/div&gt;
+      &lt;/div&gt;
     </script>
 
     <script>
@@ -417,10 +425,10 @@ $('#experience').html(template({
   group: 'Experience',
   items: [
     {
-      time: 'April 2016 &ndash; present',
+      time: 'April 2016 &amp;ndash; present',
       title: 'Sidewalk Labs, an Alphabet company',
       location: 'New York',
-      subtitle: 'Senior Data Scientist April 2017 &ndash; present, Data Scientist April 2016 &ndash; April 2017',
+      subtitle: 'Senior Data Scientist April 2017 &amp;ndash; present, Data Scientist April 2016 &amp;ndash; April 2017',
       annotation: [
         'Machine Learning and Computer Vision expert',
         'Predictive modeling for the transportation coordination platform Flow',
@@ -428,7 +436,7 @@ $('#experience').html(template({
       ]
     },
     {
-      time: 'Sept 2014 &ndash; March 2016',
+      time: 'Sept 2014 &amp;ndash; March 2016',
       title: 'Wildcard',
       location: 'New York',
       subtitle: 'Lead Data Scientist',
@@ -439,7 +447,7 @@ $('#experience').html(template({
       ]
     },
     {
-      time: 'July 2007 &ndash; Aug 2009',
+      time: 'July 2007 &amp;ndash; Aug 2009',
       title: 'ElectronX',
       location: 'Germany',
       subtitle: 'Founder',
@@ -451,7 +459,7 @@ $('#education').html(template({
   group: 'Education',
   items: [
     {
-      time: 'Sept 2009 &ndash; May 2014',
+      time: 'Sept 2009 &amp;ndash; May 2014',
       title: 'New York University',
       location: 'New York',
       subtitle: 'Doctor of Philosophy',
@@ -465,7 +473,7 @@ $('#education').html(template({
       ],
     },
     {
-      time: 'Sept 2005 &ndash; Sept 2009',
+      time: 'Sept 2005 &amp;ndash; Sept 2009',
       title: 'University of Edinburgh',
       location: 'UK',
       subtitle: 'Master of Physics with Honors in Mathematical Physics, Bachelor of Science',
@@ -484,25 +492,25 @@ $('#publications').html(template({
       // time: '',
       // title: 'New York University',
       // location: 'New York',
-      subtitle: 'As a former member of the ATLAS collaboration, I am a co-author of over 340 published papers which are listed on my author pages on <a href="http://inspirehep.net/author/profile/S.Kreiss.1">inspirehep.net</a> and <a href="https://scholar.google.com/citations?user=dQkhUXwAAAAJ">Google Scholar</a>. Below is a list of publications where I made a significant contribution to the paper itself.<br />',
+      subtitle: 'As a former member of the ATLAS collaboration, I am a co-author of over 340 published papers which are listed on my author pages on &lt;a href="http://inspirehep.net/author/profile/S.Kreiss.1"&gt;inspirehep.net&lt;/a&gt; and &lt;a href="https://scholar.google.com/citations?user=dQkhUXwAAAAJ"&gt;Google Scholar&lt;/a&gt;. Below is a list of publications where I made a significant contribution to the paper itself.&lt;br /&gt;',
       publications: [
         {
           time: 'Jan 2014',
           authors: 'K. Cranmer, S. Kreiss, D. Lopez-Val, T. Plehn',
-          title: '<b>Decoupling Theoretical Uncertainties from Measurements of the Higgs Boson</b>',
-          published: '<a href="http://journals.aps.org/prd/abstract/10.1103/PhysRevD.91.054032">Phys Rev D91</a>, <a href="http://arxiv.org/abs/1401.0080">arXiv:1401.0080 [hep-ph]</a>, <a href="https://github.com/svenkreiss/decouple">code on Github at svenkreiss/decouple</a>, supplemental material at <a href="http://dx.doi.org/10.6084/m9.figshare.888607">http://dx.doi.org/10.6084/m9.figshare.888607</a>',
+          title: '&lt;b&gt;Decoupling Theoretical Uncertainties from Measurements of the Higgs Boson&lt;/b&gt;',
+          published: '&lt;a href="http://journals.aps.org/prd/abstract/10.1103/PhysRevD.91.054032"&gt;Phys Rev D91&lt;/a&gt;, &lt;a href="http://arxiv.org/abs/1401.0080"&gt;arXiv:1401.0080 [hep-ph]&lt;/a&gt;, &lt;a href="https://github.com/svenkreiss/decouple"&gt;code on Github at svenkreiss/decouple&lt;/a&gt;, supplemental material at &lt;a href="http://dx.doi.org/10.6084/m9.figshare.888607"&gt;http://dx.doi.org/10.6084/m9.figshare.888607&lt;/a&gt;',
         },
         {
           time: 'Sept 2013',
           authors: 'ATLAS Collaboration',
-          title: 'Likelihoods for the H → γγ, H → ZZ* → 4l and H → WW* → 4l channel in the (µ<sub>ggF+ttH</sub> * B/B<sub>SM</sub>, µ<sub>VBF+VH</sub> * B/B<sub>SM</sub>) plane for a Higgs boson mass m<sub>H</sub>&nbsp;=&nbsp;125.5&nbsp;GeV',
-          published: 'Datasets on HepData: <a href="https://inspirehep.net/record/1241574/data">https://inspirehep.net/record/1241574/data</a>',
+          title: 'Likelihoods for the H → γγ, H → ZZ* → 4l and H → WW* → 4l channel in the (µ&lt;sub&gt;ggF+ttH&lt;/sub&gt; * B/B&lt;sub&gt;SM&lt;/sub&gt;, µ&lt;sub&gt;VBF+VH&lt;/sub&gt; * B/B&lt;sub&gt;SM&lt;/sub&gt;) plane for a Higgs boson mass m&lt;sub&gt;H&lt;/sub&gt;&amp;nbsp;=&amp;nbsp;125.5&amp;nbsp;GeV',
+          published: 'Datasets on HepData: &lt;a href="https://inspirehep.net/record/1241574/data"&gt;https://inspirehep.net/record/1241574/data&lt;/a&gt;',
         },
         {
           time: 'July 2013',
           authors: 'ATLAS collaboration',
           title: 'Measurements of Higgs boson production and couplings in diboson final states with the ATLAS detector at the LHC',
-          published: '<b>ATLAS writer</b>, Phys.Lett. B726 (2013) 88-119',
+          published: '&lt;b&gt;ATLAS writer&lt;/b&gt;, Phys.Lett. B726 (2013) 88-119',
         },
         {
           time: 'July 2013',
@@ -513,20 +521,20 @@ $('#publications').html(template({
         {
           time: 'March 2013',
           authors: 'ATLAS collaboration',
-          title: 'Combined coupling measurements of the Higgs-like boson with the ATLAS detector using up to 25 fb<sup>−1</sup> of proton-proton collision data',
-          published: '<b>ATLAS writer</b>, ATLAS-COM-CONF-2013-035',
+          title: 'Combined coupling measurements of the Higgs-like boson with the ATLAS detector using up to 25 fb&lt;sup&gt;−1&lt;/sup&gt; of proton-proton collision data',
+          published: '&lt;b&gt;ATLAS writer&lt;/b&gt;, ATLAS-COM-CONF-2013-035',
         },
         {
           time: 'Dec 2012',
           authors: 'ATLAS collaboration',
           title: 'A Particle Consistent with the Higgs Boson Observed with the ATLAS Detector at the Large Hadron Collider',
-          published: '<b>Science</b> Vol. 338, Issue 6114, pp. 1576-1582. I contributed the analysis of signal strength and mass shown in Fig. 12',
+          published: '&lt;b&gt;Science&lt;/b&gt; Vol. 338, Issue 6114, pp. 1576-1582. I contributed the analysis of signal strength and mass shown in Fig. 12',
         },
         {
           time: 'July 2012',
           authors: 'ATLAS collaboration',
-          title: '<b>Observation of a new particle in the search for the Standard Model Higgs boson with the ATLAS detector at the LHC</b>',
-          published: '<b>Responsible for Bayesian cross checks</b>, Phys.Lett. B716 (2012) 1-29',
+          title: '&lt;b&gt;Observation of a new particle in the search for the Standard Model Higgs boson with the ATLAS detector at the LHC&lt;/b&gt;',
+          published: '&lt;b&gt;Responsible for Bayesian cross checks&lt;/b&gt;, Phys.Lett. B716 (2012) 1-29',
         },
 
         {
@@ -550,7 +558,7 @@ $('#publications').html(template({
         {
           time: 'Oct 2012',
           authors: 'L. Moneta, K. Belasco, K.S. Cranmer, S. Kreiss, A. Lazzaro, et al',
-          title: '<b>The RooStats Project</b>',
+          title: '&lt;b&gt;The RooStats Project&lt;/b&gt;',
           published: 'PoS (ACAT2010) 057',
         },
         {
@@ -571,21 +579,21 @@ $('#codes').html(template({
       // authors: 'S. Kreiss',
       title: 's2sphere',
       location: 'Python implementation of the S2 geometry library.',
-      annotation: ['Github: <a href="https://github.com/sidewalklabs/s2sphere">https://github.com/sidewalklabs/s2sphere</a>'],
+      annotation: ['Github: &lt;a href="https://github.com/sidewalklabs/s2sphere"&gt;https://github.com/sidewalklabs/s2sphere&lt;/a&gt;'],
     },
     {
       time: 'May 2015',
       // authors: 'S. Kreiss',
       title: 'pysparkling',
       location: 'a native Python implementation of Spark\'s RDD interface.',
-      annotation: ['Github: <a href="https://github.com/svenkreiss/pysparkling">https://github.com/svenkreiss/pysparkling</a>'],
+      annotation: ['Github: &lt;a href="https://github.com/svenkreiss/pysparkling"&gt;https://github.com/svenkreiss/pysparkling&lt;/a&gt;'],
     },
     {
       time: 'June 2014',
       // authors: 'S. Kreiss',
       title: 'Databench',
       location: 'an interactive realtime data analysis tool.',
-      annotation: ['Github: <a href="https://github.com/svenkreiss/databench">https://github.com/svenkreiss/databench</a>'],
+      annotation: ['Github: &lt;a href="https://github.com/svenkreiss/databench"&gt;https://github.com/svenkreiss/databench&lt;/a&gt;'],
     },
     // {
     //   title: 'Physics',
@@ -594,25 +602,25 @@ $('#codes').html(template({
     //     time: 'Jan 2014',
     //     authors: 'K. Cranmer, S. Kreiss, D. Lopez-Val, T. Plehn',
     //     title: 'Code to reproduce results for "Decoupling theoretical uncertainties from measurements of the Higgs boson", Phys Rev D91, arXiv:1401.0080 [hep-ph]',
-    //     published: '<br />Github: <a href="https://github.com/svenkreiss/decouple">https://github.com/svenkreiss/decouple</a>',
+    //     published: '&lt;br /&gt;Github: &lt;a href="https://github.com/svenkreiss/decouple"&gt;https://github.com/svenkreiss/decouple&lt;/a&gt;',
     //   },
     //   // {
     //   //   time: 'Dec 2013',
     //   //   authors: 'K. Cranmer, S. Kreiss, D. Lopez-Val, T. Plehn',
     //   //   title: 'Supplementary Material for "Decoupling theoretical uncertainties from measurements of the Higgs boson", Phys Rev D91, arXiv:1401.0080 [hep-ph]',
-    //   //   published: '<br />Figshare: <a href="http://dx.doi.org/10.6084/m9.figshare.888607">http://dx.doi.org/10.6084/m9.figshare.888607</a>',
+    //   //   published: '&lt;br /&gt;Figshare: &lt;a href="http://dx.doi.org/10.6084/m9.figshare.888607"&gt;http://dx.doi.org/10.6084/m9.figshare.888607&lt;/a&gt;',
     //   // },
     //   // {
     //   //   time: 'Oct 2013',
     //   //   authors: 'S. Kreiss',
     //   //   title: 'QuizSocket: an online, real-time student response system written in Node.js using WebSockets, d3.js and Handlebars',
-    //   //   published: '<br /><a href="http://www.quizsocket.com">http://www.quizsocket.com</a>',
+    //   //   published: '&lt;br /&gt;&lt;a href="http://www.quizsocket.com"&gt;http://www.quizsocket.com&lt;/a&gt;',
     //   // },
     //   {
     //     time: 'Sept 2013',
     //     authors: 'ATLAS Collaboration',
-    //     title: 'Likelihoods for the H → γγ, H → ZZ* → 4l and H → WW* → 4l channel in the (μ<sub>ggF+ttH</sub> * B/B<sub>SM</sub>, μ<sub>VBF+VH</sub> * B/B<sub>SM</sub>) plane for a Higgs boson mass m<sub>H</sub>&nbsp;=&nbsp;125.5&nbsp;GeV',
-    //     published: 'HepData [<a href="http://doi.org/10.7484/INSPIREHEP.DATA.A78C.HK44">1</a>, <a href="http://doi.org/10.7484/INSPIREHEP.DATA.RF5P.6M3K">2</a>, <a href="http://doi.org/10.7484/INSPIREHEP.DATA.26B4.TY5F">3</a>]',
+    //     title: 'Likelihoods for the H → γγ, H → ZZ* → 4l and H → WW* → 4l channel in the (μ&lt;sub&gt;ggF+ttH&lt;/sub&gt; * B/B&lt;sub&gt;SM&lt;/sub&gt;, μ&lt;sub&gt;VBF+VH&lt;/sub&gt; * B/B&lt;sub&gt;SM&lt;/sub&gt;) plane for a Higgs boson mass m&lt;sub&gt;H&lt;/sub&gt;&amp;nbsp;=&amp;nbsp;125.5&amp;nbsp;GeV',
+    //     published: 'HepData [&lt;a href="http://doi.org/10.7484/INSPIREHEP.DATA.A78C.HK44"&gt;1&lt;/a&gt;, &lt;a href="http://doi.org/10.7484/INSPIREHEP.DATA.RF5P.6M3K"&gt;2&lt;/a&gt;, &lt;a href="http://doi.org/10.7484/INSPIREHEP.DATA.26B4.TY5F"&gt;3&lt;/a&gt;]',
     //   },
     // ]},
   ],
@@ -624,7 +632,7 @@ $('#talks').html(template({
       time: 'Dec 2017',
       title: 'Columbia University',
       location: 'New York City',
-      annotation: ['Guest lecture in the Master of Data Science program on <em>Geospatial Data Science</em>.'],
+      annotation: ['Guest lecture in the Master of Data Science program on &lt;em&gt;Geospatial Data Science&lt;/em&gt;.'],
     },
     {
       time: 'Sept 2017',
@@ -636,43 +644,43 @@ $('#talks').html(template({
       time: 'Sept 2015',
       title: 'MLconf',
       location: 'Atlanta',
-      annotation: ['Conference talk on <em>Deep ML Architecture at Wildcard</em>.'],
+      annotation: ['Conference talk on &lt;em&gt;Deep ML Architecture at Wildcard&lt;/em&gt;.'],
     },
     {
       time: 'May 2015, March 2016',
       title: 'Betaworks Studio and Radius Intelligence',
       location: 'New York and San Francisco',
-      annotation: ['Talk on <em>Data and the Higgs Boson Discovery</em>.'],
+      annotation: ['Talk on &lt;em&gt;Data and the Higgs Boson Discovery&lt;/em&gt;.'],
     },
     {
       time: 'Jan 2014',
       title: 'University of Cambridge',
       location: 'UK',
-      annotation: ['Seminar on <em>Factorizing Theoretical Uncertainties from LHC Higgs Coupling Measurements</em>.'],
+      annotation: ['Seminar on &lt;em&gt;Factorizing Theoretical Uncertainties from LHC Higgs Coupling Measurements&lt;/em&gt;.'],
     },
     {
       time: 'July 2013',
       title: 'Statistical and Applied Mathematical Sciences Institute (SAMSI)',
       location: 'Durham, NC',
-      annotation: ['Talk on <em>Modeling and Statistical Analysis for Higgs Physics at the Large Hadron Collider</em> at the workshop on <em>Knowledge Extraction via Comparison of Complex Computational Models to Massive Data Sets</em>.'],
+      annotation: ['Talk on &lt;em&gt;Modeling and Statistical Analysis for Higgs Physics at the Large Hadron Collider&lt;/em&gt; at the workshop on &lt;em&gt;Knowledge Extraction via Comparison of Complex Computational Models to Massive Data Sets&lt;/em&gt;.'],
     },
     {
       time: 'Jan 2013',
       title: 'CERN',
       location: 'Switzerland',
-      annotation: ['Talk on the <em>H→ZZ*→4l Likelihood in ATLAS</em> at the workshop on <em>Likelihoods for the LHC Searches</em>.'],
+      annotation: ['Talk on the &lt;em&gt;H→ZZ*→4l Likelihood in ATLAS&lt;/em&gt; at the workshop on &lt;em&gt;Likelihoods for the LHC Searches&lt;/em&gt;.'],
     },
     {
       time: 'Oct 2012',
       title: 'LHC Days 2012',
       location: 'Split, Croatia',
-      annotation: ['Talk on <em>Standard Model Higgs Combination and Properties</em>.'],
+      annotation: ['Talk on &lt;em&gt;Standard Model Higgs Combination and Properties&lt;/em&gt;.'],
     },
     {
       time: 'May 2012',
       title: 'Computing in High Energy and Nuclear Physics (CHEP)',
       location: 'New York, NY',
-      annotation: ['Talk on <em>RooStats: Statistical Tools for the LHC</em>.'],
+      annotation: ['Talk on &lt;em&gt;RooStats: Statistical Tools for the LHC&lt;/em&gt;.'],
     },
   ],
 }));
@@ -682,7 +690,7 @@ $('#media').html(template({
     {
       time: 'Oct 2013',
       title: 'The New Yorker',
-      annotation: ['<em>A Nobel Prize Party: Cheese, Bubbles, and a Boson</em> by Betsy Morais'],
+      annotation: ['&lt;em&gt;A Nobel Prize Party: Cheese, Bubbles, and a Boson&lt;/em&gt; by Betsy Morais'],
     },
     {
       time: 'Oct 2013',
@@ -693,13 +701,13 @@ $('#media').html(template({
       time: 'March 2013',
       title: 'The New York Times',
       annotation: [
-        '<em>Chasing the Higgs</em> by Dennis Overbye.<br />&ldquo;On the night of June 24, the graduate students and postdocs in Atlas were tiptoeing toward the 5&#8209;sigma finish line. Among them was Sven Kreiss, a New York University graduate student who got a preliminary glimpse of the answer alone in his office late that night when, as part of a crosscheck, he combined the data from two signatures of the Higgs decay and found the result breached 5&#8209;sigma. The next day he sent a plot to his adviser Kyle Cranmer, whose birthday it was, saying he had a present for him.&rdquo;',
+        '&lt;em&gt;Chasing the Higgs&lt;/em&gt; by Dennis Overbye.&lt;br /&gt;&amp;ldquo;On the night of June 24, the graduate students and postdocs in Atlas were tiptoeing toward the 5&amp;#8209;sigma finish line. Among them was Sven Kreiss, a New York University graduate student who got a preliminary glimpse of the answer alone in his office late that night when, as part of a crosscheck, he combined the data from two signatures of the Higgs decay and found the result breached 5&amp;#8209;sigma. The next day he sent a plot to his adviser Kyle Cranmer, whose birthday it was, saying he had a present for him.&amp;rdquo;',
       ],
     },
     {
       time: 'Dec 2012',
       title: 'Science',
-      annotation: ['<em>A Particle Consistent with the Higgs Boson Observed with the ATLAS Detector at the Large Hadron Collider</em> by The ATLAS Collaboration.<br />I contributed the analysis of signal strength and mass shown in Fig. 12.'],
+      annotation: ['&lt;em&gt;A Particle Consistent with the Higgs Boson Observed with the ATLAS Detector at the Large Hadron Collider&lt;/em&gt; by The ATLAS Collaboration.&lt;br /&gt;I contributed the analysis of signal strength and mass shown in Fig. 12.'],
     },
   ],
 }));
