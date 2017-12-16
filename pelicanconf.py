@@ -30,7 +30,7 @@ SOCIAL = (
     ('twitter', 'https://twitter.com/svenkreiss'),
     ('linkedin', 'https://www.linkedin.com/in/svenkreiss/'),
     ('envelope', 'mailto:me@svenkreiss.com'),
-    ('file-text', '/files/cv.pdf'),
+    ('file-text', '/files/cv.html'),
 )
 TWITTER_USERNAME = 'svenkreiss'
 
