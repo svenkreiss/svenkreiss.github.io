@@ -261,6 +261,9 @@ pre {
     font-size: 75%;
     color: #aaaaaa;
 }
+.footer a {
+    color: #aaaaaa;
+}
 .footer .pure-menu a:hover,
 .footer .pure-menu a:focus {
     background: none;

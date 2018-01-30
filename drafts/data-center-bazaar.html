@@ -8,20 +8,20 @@
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@svenkreiss" />
     <meta name="twitter:creator" content="@svenkreiss" />
-    <meta name="twitter:title" content="The Data Center and the Bazaar" />
+    <meta name="twitter:title" content="The Data Center and the Bazaar" />
     <meta name="twitter:description" content="Concept for peer-to-peer computing." />
-    <meta name="twitter:image:src" content="http://www.svenkreiss.com/images/bazaar.png" />
+    <meta name="twitter:image:src" content="http://www.svenkreiss.com/images/me_nyc_square_500.jpeg" />
     <meta name="twitter:domain" content="svenkreiss.com" />
 
-    <meta property="og:title" content="The Data Center and the Bazaar" />
+    <meta property="og:title" content="The Data Center and the Bazaar" />
     <meta property="og:type" content="article" />
     <meta property="og:description" content="Concept for peer-to-peer computing." />
-    <meta property="og:image" content="http://www.svenkreiss.com/images/bazaar.png" />
+    <meta property="og:image" content="http://www.svenkreiss.com/images/me_nyc_square_500.jpeg" />
     <meta property="og:site_name" content="svenkreiss.com" />
 
         <link rel="alternate"  href="http://www.svenkreiss.com/feeds/all.atom.xml" type="application/atom+xml" title="Sven Kreiss Full Atom Feed"/>
 
-        <title>The Data Center and the Bazaar - Sven Kreiss</title>
+        <title>The Data Center and the Bazaar - Sven Kreiss</title>
 
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.3.0/pure-min.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.min.css">
@@ -49,7 +49,7 @@
         <div class="content">
             <section class="post">
                 <header class="post-header">
-                    <h1>The&nbsp;Data Center and the&nbsp;Bazaar</h1>
+                    <h1>The Data Center and the&nbsp;Bazaar</h1>
                         <p class="post-meta">
                             // under
                                 <a class="post-category" href="http://www.svenkreiss.com/blog/tag/docker/">Docker</a>
@@ -60,26 +60,26 @@
                             in <a class="post-category" href="http://www.svenkreiss.com/blog/category/tech/">Tech</a>&nbsp;&nbsp;&nbsp;
 
                             <span style="display:inline-block;">
-                            // share on <a href="https://twitter.com/share?text=%22The%26nbsp%3BData%20Center%20and%20the%26nbsp%3BBazaar%22&amp;via=svenkreiss" target="_blank">
+                            // share on <a href="https://twitter.com/share?text=%22The%20Data%20Center%20and%20the%26nbsp%3BBazaar%22&amp;via=svenkreiss" target="_blank">
                                 <i class="fa fa-twitter fa-lg"></i> Twitter
                             </a>
                             </span>
                         </p>
                 </header>
             </section>
-            <p><img width="150" alt="dockbroker icon" title="dockbroker icon" class="img-thumbnail float-right" src="/images/bazaar.png">
+            <p><img class="img-thumbnail float-right" src="/images/bazaar.png" width="150" title="dockbroker icon" alt="dockbroker icon">
 This is a concept for peer-to-peer computing. The goal is to use a heterogeneous set of computers to run analyses on data. The computers might be the local machine, a remote desktop, an <span class="caps">AWS</span> <span class="caps">EC2</span> instance, an <a href="http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create_deploy_docker.html"><span class="caps">AWS</span> Elastic Beanstalk app</a>, a node on the <a href="https://developers.google.com/compute/docs/containers">Google Compute Engine</a> or some other real or virtual machine. All these machines have access to data in the form of <code>s3://*</code>, <code>hdfs://*</code>, <code>file://*</code>, <code>ssh://*</code>, <code>http://*</code> or some other means which might be slow or fast and cheap or&nbsp;expensive.</p>
 <h2>Flow</h2>
 <p>Assigning priorities to jobs or setting up priority queues on clusters is tedious and usually not very effective. Simple <code>PBS queue</code> systems don&#8217;t even have priorities, but all users just submit all their jobs to the same queue. Jobs are submitted to a central manager and get executed on the next available compute node. The data then has to be copied to that&nbsp;node.</p>
-<p>The&nbsp;idea behind this post is more similar to a bazaar where there is no central manager. Every <em>client</em> knows at least one <em>broker</em> which is a manager of a single compute node. Brokers know each other and can refer clients. To submit a job, the client asks a subset of the brokers that it knows for an <em>offer</em> based on a description of the job. The offer is made in <span class="caps">US</span>$ and comes with an expected completion time. The broker makes that offer based on the prices that are given by the cloud provider or (partially) free for local machines. The client picks the cheapest offer taking the estimated completion time into&nbsp;account.</p>
+<p>The idea behind this post is more similar to a bazaar where there is no central manager. Every <em>client</em> knows at least one <em>broker</em> which is a manager of a single compute node. Brokers know each other and can refer clients. To submit a job, the client asks a subset of the brokers that it knows for an <em>offer</em> based on a description of the job. The offer is made in <span class="caps">US</span>$ and comes with an expected completion time. The broker makes that offer based on the prices that are given by the cloud provider or (partially) free for local machines. The client picks the cheapest offer taking the estimated completion time into&nbsp;account.</p>
 <p>Clients can build reputation in brokers when they deliver on time and still prefer more expensive brokers. Brokers can also build reputation of clients when their estimated run times and required resources match the job description the offer was based on. If that is not the case and a client repeatedly underestimates job processing times, the broker could add extra&nbsp;fees.</p>
-<p>At&nbsp;this point, the offers are only used to find the best place to run the job. No money is actually transfered and that is just fine. However, one could go one step further and have digital coins (something like Bitcoin) just for this set of machines. People in an organization can be given a monthly amount of coins and then pay for their compute jobs. This would make users more conscious of the resources they are using and would limit a combined &#8220;cpu+memory+data&#8221; quota. At the same time, it would act as a security measure as people without this coin would not be able to use the resources. (For the cryptocurrency experts: one could use <a href="http://en.wikipedia.org/wiki/Smart_contract">smart contracts</a> and maybe <a href="https://docs.google.com/document/d/1AnkP_cVZTCMLIzw4DvsW6M8Q2JC0lIzrTLuoWu2z1BE">colored coins</a>.)</p>
+<p>At this point, the offers are only used to find the best place to run the job. No money is actually transfered and that is just fine. However, one could go one step further and have digital coins (something like Bitcoin) just for this set of machines. People in an organization can be given a monthly amount of coins and then pay for their compute jobs. This would make users more conscious of the resources they are using and would limit a combined &#8220;cpu+memory+data&#8221; quota. At the same time, it would act as a security measure as people without this coin would not be able to use the resources. (For the cryptocurrency experts: one could use <a href="http://en.wikipedia.org/wiki/Smart_contract">smart contracts</a> and maybe <a href="https://docs.google.com/document/d/1AnkP_cVZTCMLIzw4DvsW6M8Q2JC0lIzrTLuoWu2z1BE">colored coins</a>.)</p>
 <h2>Technical Suggestion: <code>dockbroker</code></h2>
-<p>To&nbsp;make things a bit more concrete, here is an example interface. It uses <a href="https://www.docker.com/">Docker</a> which is advertised with <em>&#8220;Build, Ship and Run Any App, Anywhere&#8221;</em> and <em>&#8220;An open platform for distributed applications for developers and sysadmins&#8221;</em>. It is a little bit like a virtual machine, but uses the same kernel as the host and therefore it is fast. You can run a <span class="caps">JVM</span> inside it, but you can also run plain&nbsp;C.</p>
+<p>To make things a bit more concrete, here is an example interface. It uses <a href="https://www.docker.com/">Docker</a> which is advertised with <em>&#8220;Build, Ship and Run Any App, Anywhere&#8221;</em> and <em>&#8220;An open platform for distributed applications for developers and sysadmins&#8221;</em>. It is a little bit like a virtual machine, but uses the same kernel as the host and therefore it is fast. You can run a <span class="caps">JVM</span> inside it, but you can also run plain&nbsp;C.</p>
 <h3>Job</h3>
-<p>A&nbsp;job is defined by a <code>Dockerfile</code> and a <code>manifest</code> either in a local directory or inside a remote repository (for example on GitHub). The broker will use the Dockerfile to see which slices of the Docker image it has cached (and reduce the price). The manifest is used to quantify the price of&nbsp;resources.</p>
+<p>A job is defined by a <code>Dockerfile</code> and a <code>manifest</code> either in a local directory or inside a remote repository (for example on GitHub). The broker will use the Dockerfile to see which slices of the Docker image it has cached (and reduce the price). The manifest is used to quantify the price of&nbsp;resources.</p>
 <p>Example of a simple <code>manifest</code> file:</p>
-<div class="highlight"><pre>{
+<div class="highlight"><pre><span></span>{
     &quot;Name&quot;: &quot;Test job 1&quot;,
     &quot;Submitter&quot;: &quot;Sven Kreiss &lt;me@svenkreiss.com&gt;&quot;,
     &quot;MaxDuration&quot;: &quot;24h&quot;,
@@ -90,7 +90,7 @@ This is a concept for peer-to-peer computing. The goal is to use a heterogeneous
 
 <p>This job has access to unspecified <code>InputResources</code> and <code>OutputResources</code> (see advanced example below) but brokers who have easy access to those resources wont be able to make better offers than any other broker. Large files should always be specified because neglecting to specify expensive resources could lead to bad&nbsp;reputation.</p>
 <p>Example of an advanced <code>manifest</code> file:</p>
-<div class="highlight"><pre>{
+<div class="highlight"><pre><span></span>{
     &quot;Name&quot;: &quot;Test job 2&quot;,
     &quot;Submitter&quot;: &quot;Sven Kreiss &lt;me@svenkreiss.com&gt;&quot;,
     &quot;MaxDuration&quot;: &quot;24h&quot;,
@@ -164,7 +164,8 @@ Nodes that have data locally available or already cached part of the Docker imag
     <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 </div><footer class="footer">
-    <p>&copy; Sven Kreiss 2014 &ndash; 2017</p>
+    <p>&copy; Sven Kreiss 2014 &ndash; 2018.<br />
+    This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</p>
 </footer>        </div>
     </div>
 </div>

@@ -90,11 +90,11 @@ require.config({
 <p>Distributed Versioned Data Structures in JavaScript. Like git in js.
 Checkout the code on <a href="http://github.com/svenkreiss/dvds-js">github.com/svenkreiss/dvds-js</a>.</p>
 </blockquote>
-<p>The&nbsp;aim of <code>dvds-js</code> is to have a container (or repository) for data structures in JavaScript that you can <code>fork()</code>, serialize and send over the wire, <code>commit()</code> to and then stream back and <code>merge()</code> with full conflict resolution. Here, <em>data structures</em> means anything that can be serialized with <span class="caps">JSON</span>.</p>
+<p>The aim of <code>dvds-js</code> is to have a container (or repository) for data structures in JavaScript that you can <code>fork()</code>, serialize and send over the wire, <code>commit()</code> to and then stream back and <code>merge()</code> with full conflict resolution. Here, <em>data structures</em> means anything that can be serialized with <span class="caps">JSON</span>.</p>
 <p>This post is about the first development release, version&nbsp;0.1.0.</p>
 <h2>Example</h2>
-<p>A&nbsp;repository <code>a</code> is created holding an array with the two names <code>Paul</code> and <code>Adam</code>. Then this repository is forked and the fork is called <code>b</code>. Both <code>a</code> and <code>b</code> are then modified. To demonstrate streaming capabilities, repository <code>b</code> is stringified before and after the manipulation. At the end <code>b</code> is merged into <code>a</code> and the result is shown&nbsp;below.</p>
-<div class="highlight"><pre><span class="nx">require</span><span class="p">([</span><span class="s1">&#39;dvds&#39;</span><span class="p">,</span> <span class="s1">&#39;dvds.visualize&#39;</span><span class="p">],</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+<p>A repository <code>a</code> is created holding an array with the two names <code>Paul</code> and <code>Adam</code>. Then this repository is forked and the fork is called <code>b</code>. Both <code>a</code> and <code>b</code> are then modified. To demonstrate streaming capabilities, repository <code>b</code> is stringified before and after the manipulation. At the end <code>b</code> is merged into <code>a</code> and the result is shown&nbsp;below.</p>
+<div class="highlight"><pre><span></span><span class="nx">require</span><span class="p">([</span><span class="s1">&#39;dvds&#39;</span><span class="p">,</span> <span class="s1">&#39;dvds.visualize&#39;</span><span class="p">],</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
     <span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">dvds</span><span class="p">.</span><span class="nx">Repository</span><span class="p">([</span><span class="s1">&#39;Paul&#39;</span><span class="p">,</span><span class="s1">&#39;Adam&#39;</span><span class="p">]);</span>
     <span class="kd">var</span> <span class="nx">b</span> <span class="o">=</span> <span class="nx">a</span><span class="p">.</span><span class="nx">fork</span><span class="p">();</span>
     <span class="kd">var</span> <span class="nx">bString</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">b</span><span class="p">);</span>
@@ -135,13 +135,13 @@ Checkout the code on <a href="http://github.com/svenkreiss/dvds-js">github.com/s
 <ul>
 <li>special merge algorithms for nested arrays and objects (e.g. arrays inside of objects inside of arrays inside of an&nbsp;object)</li>
 <li>commit hash is built over the commit&#8217;s data, but also over the entire parent-tree which means that the commit id can validate the entire&nbsp;parent-tree</li>
-<li>a&nbsp;repository exposes the <code>data</code> member that behaves like a normal js variable (e.g. can be used in <code>angular.js</code> directly)</li>
+<li>a repository exposes the <code>data</code> member that behaves like a normal js variable (e.g. can be used in <code>angular.js</code> directly)</li>
 <li>visualization (currently only <code>CommitGraph</code>) is factored into its own submodule <code>visualize</code></li>
 <li>unit tests run with <code>Jasmine</code> and <code>Karma</code>, <code>jscs</code> is used to check code style, <code>uglify</code> is used to build min version and automation is done with <code>grunt</code></li>
 </ul>
 <h2>Setup</h2>
 <p><code>dvds-js</code> is an <a href="http://requirejs.org/docs/whyamd.html#amd"><span class="caps">AMD</span> library</a>. You can load it using <code>require-js</code> in the browser as in the example above. The setup looks something like&nbsp;this:</p>
-<div class="highlight"><pre><span class="o">&lt;</span><span class="nx">script</span> <span class="nx">src</span><span class="o">=</span><span class="s2">&quot;http://s3.amazonaws.com/flaskApp_static/static/d3/d3.v3.min.js&quot;</span> <span class="nx">charset</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="o">&gt;&lt;</span><span class="err">/script&gt;</span>
+<div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="nx">script</span> <span class="nx">src</span><span class="o">=</span><span class="s2">&quot;http://s3.amazonaws.com/flaskApp_static/static/d3/d3.v3.min.js&quot;</span> <span class="nx">charset</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="o">&gt;&lt;</span><span class="err">/script&gt;</span>
 <span class="o">&lt;</span><span class="nx">script</span> <span class="nx">src</span><span class="o">=</span><span class="s2">&quot;http://requirejs.org/docs/release/2.1.2/minified/require.js&quot;</span><span class="o">&gt;&lt;</span><span class="err">/script&gt;</span>
 <span class="o">&lt;</span><span class="nx">script</span><span class="o">&gt;</span>
 <span class="nx">require</span><span class="p">.</span><span class="nx">config</span><span class="p">({</span>
@@ -163,7 +163,7 @@ Checkout the code on <a href="http://github.com/svenkreiss/dvds-js">github.com/s
 <p>This includes <code>d3.js</code> for visualizations and <code>CryptoJS</code> is needed for calculating unique identifiers for commits.
 In <code>node.js</code>, this setup is not necessary and you would simply use <code>require()</code>.</p>
 <h2>Appendix: Static image of commit&nbsp;graphs</h2>
-<p><img width="500" alt="Commit graphs of dvds-js example." title="Commit graphs of dvds-js example." src="/images/dvds-js-v010-commitgraphs.png"></p>
+<p><img src="/images/dvds-js-v010-commitgraphs.png" width="500" title="Commit graphs of dvds-js example." alt="Commit graphs of dvds-js example."></p>
 <script>
 require(['dvds', 'dvds.visualize'], function() {
 
@@ -211,7 +211,8 @@ require(['dvds', 'dvds.visualize'], function() {
     <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 </div><footer class="footer">
-    <p>&copy; Sven Kreiss 2014 &ndash; 2017</p>
+    <p>&copy; Sven Kreiss 2014 &ndash; 2018.<br />
+    This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</p>
 </footer>        </div>
     </div>
 </div>
