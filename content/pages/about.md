@@ -11,10 +11,10 @@ Summary: Sven Kreiss is a Data Scientist in New York City.
 
 I am a Senior Data Scientist at [Sidewalk Labs](http://www.sidewalklabs.com) in New York City
 where I focus on Machine Learning for urban environments. My background is in Particle Physics
-where I hold a PhD from [NYU](http://physics.nyu.edu/) and where I worked with
-[Kyle Cranmer](http://physics.as.nyu.edu/object/kylecranmer.html) on physics and statistical
-analyses for [ATLAS](http://atlas.web.cern.ch/Atlas/Collaboration/) with a particular focus
-on the [Higgs Boson discovery](/projects.html#discovery).
+where I hold a PhD from NYU and where I worked with
+[Kyle Cranmer](http://theoryandpractice.org/) on physics and statistical
+analyses for ATLAS with a particular focus
+on the Standard Model Higgs Combination Group and the [Higgs Boson discovery](/projects.html#discovery).
 
 Links:
 <span style="white-space: nowrap">[<i class="fa fa-rss"></i>](https://trivial.io)</span>,

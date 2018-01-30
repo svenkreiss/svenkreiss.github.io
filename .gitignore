@@ -41,7 +41,7 @@ nosetests.xml
 .project
 .pydevproject
 
-venv
+venv*
 
 .DS_Store
 output/

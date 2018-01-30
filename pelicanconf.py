@@ -56,7 +56,7 @@ THEME = "../pelican-theme-pure"
 # plugins
 PLUGIN_PATHS = ['../pelican-plugins']
 PLUGINS = [
-    'sitemap', 'gravatar',  # 'render_math',
+    'sitemap', 'gravatar', 'render_math',
     'liquid_tags.img', 'liquid_tags.video',
     'liquid_tags.youtube', 'liquid_tags.vimeo',
     'liquid_tags.include_code',
@@ -71,7 +71,7 @@ AUTHOR_IMAGE = '/images/me_nyc_square_500.jpeg'
 TAGLINE = 'Data Scientist with a focus on Machine&nbsp;Learning and Computer&nbsp;Vision.'
 META_DESCRIPTION = 'my personal website'
 DISQUS_SITENAME = 'svenkreisscom'
-COPYRIGHT_YEARS = '2014 &ndash; 2017'
+COPYRIGHT_YEARS = '2014 &ndash; 2018'
 
 ARTICLE_URL = 'blog/{slug}/'
 ARTICLE_SAVE_AS = 'blog/{slug}/index.html'
