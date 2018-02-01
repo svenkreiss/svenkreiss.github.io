@@ -63,7 +63,11 @@ PLUGINS = [
     # 'liquid_tags.notebook',
     'representative_image',
     'image_process',
+    'pelican-cite',
 ]
+
+# Pelican cite plugin
+PUBLICATIONS_SRC = 'content/publications.bib'
 
 # Image Process plugin
 IMAGE_PROCESS = {
@@ -90,7 +94,7 @@ AUTHOR_EMAIL = 'me@svenkreiss.com'
 AUTHOR_IMAGE = '/images/me_nyc_square_500.jpeg'
 TAGLINE = 'Data Scientist with a focus on Machine&nbsp;Learning and Computer&nbsp;Vision.'
 META_DESCRIPTION = 'my personal website'
-DISQUS_SITENAME = 'svenkreisscom'
+# DISQUS_SITENAME = 'svenkreisscom'
 COPYRIGHT_YEARS = '2014 &ndash; 2018'
 
 ARTICLE_URL = 'blog/{slug}/'
