@@ -9,6 +9,7 @@ SITEURL = 'http://localhost:8000'
 TIMEZONE = 'America/New_York'
 
 DEFAULT_LANG = u'en'
+DEFAULT_DATE_FORMAT = '%B %d, %Y'
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None

@@ -3,7 +3,7 @@ Date: 2014-08-17
 Category: Science
 Tags: physics
 Slug: phd-thesis
-Summary: Finished my PhD thesis: Higgs Boson Discovery and First Property Measurements using the ATLAS Detector
+Summary: Finished my PhD thesis.
 
 
 Last May, I finished my PhD in Particle Physics. I had a great time studying physics and doing research at some of the best places: the University of Edinburgh, Scotland, for my bachelor's and master's degrees and New York University for my PhD including a year at CERN in Geneva, Switzerland. I also had great advisors: [Tilman Plehn](http://www.thphys.uni-heidelberg.de/~plehn/), [Thomas Gregoire](http://www.physics.carleton.ca/people/faculty-members/thomas-gregoire) and [Kyle Cranmer](http://theoryandpractice.org/).

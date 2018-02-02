@@ -8,7 +8,7 @@ Summary: Decoupling theoretical uncertainties from measurements of the Higgs bos
 
 ## Decoupling theoretical uncertainties from measurements of the Higgs boson ([Phys Rev D91](http://journals.aps.org/prd/abstract/10.1103/PhysRevD.91.054032), [arXiv:1401.0080](http://arxiv.org/abs/1401.0080))
 
-This paper [@@Cranmer:2013hia] by Kyle Cranmer, David Lopez-Val, Tilman Plehn and me is now published in [Phys Rev D91](http://journals.aps.org/prd/abstract/10.1103/PhysRevD.91.054032) and also available at [arXiv:1401.0080](http://arxiv.org/abs/1401.0080).
+This paper [@@decouple] by Kyle Cranmer, David Lopez-Val, Tilman Plehn and me is now published in [Phys Rev D91](http://journals.aps.org/prd/abstract/10.1103/PhysRevD.91.054032) and also available at [arXiv:1401.0080](http://arxiv.org/abs/1401.0080).
 
 > We develop a technique to present Higgs coupling measurements, which decouple the poorly defined theoretical uncertainties associated to inclusive and exclusive cross section predictions. The technique simplifies the combination of multiple measurements and can be used in a more general setting. We illustrate the approach with toy LHC Higgs coupling measurements and a collection of new physics models.
 
