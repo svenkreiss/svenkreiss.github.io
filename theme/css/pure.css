@@ -32,7 +32,9 @@ a:hover,
 a:focus {
     text-decoration: underline;
 }
-
+a.cite-backref {
+    font-family: 'Open Sans', sans-serif;
+}
 
 .comments {
     padding: 50px 0 0;
