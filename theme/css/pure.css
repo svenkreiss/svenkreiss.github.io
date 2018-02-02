@@ -33,7 +33,7 @@ a:focus {
     text-decoration: underline;
 }
 a.cite-backref {
-    font-family: 'Open Sans', sans-serif;
+    display: none;
 }
 
 .comments {
@@ -50,7 +50,7 @@ a.cite-backref {
 pre {
     padding: 15px 15px 15px 15px;
     font-size: 90%;
-    box-shadow: 2px 2px 2px #888;
+    /* box-shadow: 2px 2px 2px #888; */
 }
 
 .sidebar {
