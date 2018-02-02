@@ -364,6 +364,8 @@ blockquote {
     }
 
     .avatar {
+        float: none;
+        margin-left: 0;
         width: 45px;
         height: 45px;
     }
