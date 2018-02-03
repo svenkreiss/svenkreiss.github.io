@@ -337,6 +337,14 @@ blockquote {
     font-style: italic;
 }
 
+ul.related-posts {
+    list-style-type: none;
+    padding-left: 0;
+}
+ul.related-posts li {
+    margin: 1em 0;
+}
+
 /* LAYOUT CSS */
 #layout {
     padding-left: 25%; /* "left col (nav + list)" width */
