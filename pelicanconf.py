@@ -11,6 +11,10 @@ TIMEZONE = 'America/New_York'
 DEFAULT_LANG = u'en'
 DEFAULT_DATE_FORMAT = '%B %d, %Y'
 
+# DEFAULT_METADATA = {
+#     'status': 'draft',
+# }
+
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
 CATEGORY_FEED_ATOM = None
@@ -57,7 +61,7 @@ THEME = "../pelican-theme-pure"
 # plugins
 PLUGIN_PATHS = ['../pelican-plugins']
 PLUGINS = [
-    'sitemap', 'gravatar', 'render_math',
+    'sitemap', 'gravatar', 'pelican-jsmath',  # 'render_math',
     'liquid_tags.img', 'liquid_tags.video',
     'liquid_tags.youtube', 'liquid_tags.vimeo',
     'liquid_tags.include_code',
@@ -119,9 +123,9 @@ CATEGORIES_SAVE_AS = 'blog/categories.html'
 TAGS_SAVE_AS = 'blog/tags.html'
 
 MENUITEMS = [
-    ('About', ''),
-    ('Projects', 'projects.html'),
-    ('Blog: trivial.io', 'files/forward_trivialio.html'),
+    ('About', '/'),
+    ('Projects', '/projects.html'),
+    ('Blog: trivial.io', '/files/forward_trivialio.html'),
 ]
 DISPLAY_PAGES_ON_MENU = True
 
