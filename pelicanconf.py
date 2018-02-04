@@ -34,7 +34,6 @@ SOCIAL = (
     ('github', 'https://github.com/svenkreiss/'),
     ('twitter', 'https://twitter.com/svenkreiss'),
     ('linkedin', 'https://www.linkedin.com/in/svenkreiss/'),
-    ('envelope', 'mailto:me@svenkreiss.com'),
     ('file-text', '/files/cv.html'),
 )
 TWITTER_USERNAME = 'svenkreiss'
