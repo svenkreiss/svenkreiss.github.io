@@ -339,7 +339,7 @@ h2, h3 {
     margin-left: 20px;
     margin-bottom: 20px;
 }
-img {
+.content img {
     max-width: 100%;
 }
 img.float-right {
