@@ -1,18 +1,18 @@
 /* graph styles for article on dvds-js */
-svg {
+svg.dvds-js {
     border:1px solid #faa;
     background-color:#fee;
 }
-.link {
+svg.dvds-js .link {
     stroke: #000;
     stroke-width: 1.5px;
 }
-.node circle {
+svg.dvds-js .node circle {
     fill: #000;
     stroke: #fff;
     stroke-width: 1.5px;
 }
-.node text {
+svg.dvds-js .node text {
     text-anchor: middle;
 }
 
@@ -23,6 +23,11 @@ svg {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
+body {
+    font-family: sans-serif;
+}
+h1 { font-size: 2em; }
+h2 { font-size: 1.5em; }
 
 a {
     text-decoration: none;
@@ -212,7 +217,7 @@ pre {
 
 .post {
     padding-bottom: 1em;
-    border-bottom: 1px solid #f2f2f0;
+    /* border-bottom: 1px solid #f2f2f0; */
 }
 .post-title {
     font-size: 1.5em;
@@ -308,6 +313,9 @@ pre {
     padding: 1em;
     display: none;
 }
+.go-top-visible {
+    display: inline;
+}
 
 .go-top:hover {
     background-color: rgba(0, 0, 0, 0.6);
@@ -315,6 +323,7 @@ pre {
 
 .highlight pre {
     font-size: 75%;
+    page-break-inside: avoid;
 }
 
 h2, h3 {
@@ -350,7 +359,7 @@ ul.related-posts li {
     padding-left: 25%; /* "left col (nav + list)" width */
     position: relative;
 }
-@media (max-width: 767px) {
+@media (max-width: 767px), print {
     .sidebar {
         width: 100%;
         position: relative;
@@ -415,5 +424,20 @@ ul.related-posts li {
 @media (max-width: 480px) {
     .cover-img {
         background-position: 0;
+    }
+}
+
+/* print */
+@page {
+    /* size: auto; */
+    padding: 0;
+    margin: 25mm 40mm 25mm 40mm;
+}
+@media print {
+    .go-top-visible {
+        display: none;
+    }
+    a.header-article-home {
+        display: none;
     }
 }

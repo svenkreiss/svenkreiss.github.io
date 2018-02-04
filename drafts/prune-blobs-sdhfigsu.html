@@ -19,7 +19,10 @@
 <meta content="svenkreiss.com" property="og:site_name"/>
 <link href="http://www.svenkreiss.com/feeds/all.atom.xml" rel="alternate" title="Sven Kreiss Full Atom Feed" type="application/atom+xml"/>
 <title>Prune Blobs - Sven Kreiss</title>
-<link href="//cdnjs.cloudflare.com/ajax/libs/pure/0.3.0/pure-min.css" rel="stylesheet"/>
+<!-- KaTeX -->
+<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0-beta1/katex.min.css" integrity="sha384-VEnyslhHLHiYPca9KFkBB3CMeslnM9CzwjxsEbZTeA21JBm7tdLwKoZmCt3cZTYD" rel="stylesheet"/>
+<script crossorigin="anonymous" integrity="sha384-O4hpKqcplNCe+jLuBVEXC10Rn1QEqAmX98lKAIFBEDxZI0a+6Z2w2n8AEtQbR4CD" src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0-beta1/katex.min.js"></script>
+<script crossorigin="anonymous" integrity="sha384-IiI65aU9ZYub2MY9zhtKd1H2ps7xxf+eb2YFG9lX6uRqpXCvBTOidPRCXCrQ++Uc" src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0-beta1/contrib/auto-render.min.js"></script>
 <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"/>
 <link href="http://www.svenkreiss.com/theme/css/pure.css" rel="stylesheet"/>
 <link href="http://www.svenkreiss.com/theme/css/pygments.css" rel="stylesheet"/>
@@ -35,7 +38,7 @@
 <h2 class="article-info">Sven Kreiss</h2>
 <h5>Draft</h5>
 <p>February 02, 2018</p>
-<a href="/">←Home</a>
+<a class="header-article-home" href="/">←Home</a>
 </header>
 </div>
 <div class="pure-u">
@@ -46,6 +49,7 @@
 <p class="post-meta">
                             // under
                                 <a class="post-category" href="http://www.svenkreiss.com/blog/tag/algorithms/">algorithms</a>
+<a class="post-category" href="http://www.svenkreiss.com/blog/tag/distributed-systems/">distributed systems</a>
                             in <a class="post-category" href="http://www.svenkreiss.com/blog/category/tech/">Tech</a>   
 
                             <span style="display:inline-block;">
@@ -57,8 +61,67 @@
 </header>
 </section>
 <p>Discussions of consistent data stores include the Spanner paper with
-TrueTime [@@spanner], consensus algorithms like Paxos [@@paxos] and Raft [@@raft].</p>
-<p>test</p>
+TrueTime <a href="#spanner" id="ref-spanner-1">(Brewer, 2017)</a>, consensus algorithms like Paxos <a href="#paxos" id="ref-paxos-1">(Lamport and et al., 2001)</a> and Raft <a href="#raft" id="ref-raft-1">(Ongaro and Ousterhout, 2014)</a>.</p>
+<p>In the given system, there is no eventual consistency. Updates are non-atomic
+and do not roll back on failure. A convention on the order of updates during
+blob inserts and blob deletions guarantees that the blob reference count is
+always equal or higher the true reference count.</p>
+<p>The implemented blob store pruning is based on a social assumption: if the <code>refcount</code>
+today is the same as the <code>refcount</code> yesterday and the same as last week,
+then that is the correct <code>refcount</code>. This implies that nobody can make a
+transaction that would affect the count at all three times. The implemented
+solution produces new refcounts in an efficient manner and checks
+for consistency across multiple runs.</p>
+<h2>Algorithmic approach: Min Count Sketch</h2>
+<p>First idea: Min Count Sketch <a href="#countminsketch" id="ref-countminsketch-1">(Cormode and Muthukrishnan, 2005)</a>.</p>
+<p>Scaling is bad for large <span class="math">\(\lVert\vec{a}\rVert_1\)</span> which is the number of all
+references (not even blobs, but references to blobs). A min count
+sketch guarantee is <span class="math">\(\hat{a}_i \leq a_i + \epsilon \lVert\vec{a}\rVert_1\)</span>.
+This implies that <span class="math">\(\epsilon\)</span> must be very small if <span class="math">\(a_i\)</span> should be within
+<span class="math">\(\mathcal{O}(1)\)</span> of <span class="math">\(\hat{a}_i\)</span> to distinguish between zero and single
+references to a blob. Therefore, a min count sketch with good enough
+precision would consume too much memory.</p>
+<h2>Systems approach: Materialized Views and Parallel Requests</h2>
+<p>Define a <code>run_id</code> to be able to form consensus between multiple runs.
+Per shard, create a materialized view of reference counts for blobs.
+Two strategies are implemented:</p>
+<ol>
+<li>Single query: using <code>GROUP BY</code> on a large <code>UNION</code>.</li>
+<li>Incremental: table-by-table queries that update counts using <code>INSERT INTO</code>
+   in combination with <code>ON DUPLICATE KEY UPDATE</code>.</li>
+</ol>
+<h2>Interface</h2>
+<p>The command line interface provides two executables, <code>refcount-shard</code> and
+<code>refcount-global</code>. Both support <code>--help</code>, for example:</p>
+<div class="highlight"><pre><span></span>usage: refcount-shard <span class="o">[</span>-h<span class="o">]</span> <span class="o">[</span>--db-url DB_URL<span class="o">]</span> <span class="o">[</span>--run-id RUN_ID<span class="o">]</span>
+
+optional arguments:
+  -h, --help       show this <span class="nb">help</span> message and <span class="nb">exit</span>
+  --db-url DB_URL  database url
+  --run-id RUN_ID  run identifier
+</pre></div>
+<p>Database urls are provided with the command line flag <code>--db-url</code> and are of the
+form <code>mysql+mysqldb://root@localhost/ProtonMailShard</code> which is the default for
+<code>refcount-shard</code>.</p>
+<h2>Conclusions</h2>
+<ul>
+<li>Why count at all? Drop the global refcount table and prune the datastore
+  directly? Dropping the count would simplify this check and improve the
+  performance of frontend services.</li>
+</ul><hr/>
+<h2>Bibliography</h2>
+<p id="spanner">Eric Brewer.
+<span class="bibtex-protected">Spanner, TrueTime and the CAP Theorem</span>.
+Technical Report, Google, 2017. <a class="cite-backref" href="#ref-spanner-1" title="Jump back to reference 1">↩</a></p>
+<p id="countminsketch">Graham Cormode and Shan Muthukrishnan.
+An improved data stream summary: the count-min sketch and its applications.
+<em>Journal of Algorithms</em>, 55(1):58–75, 2005. <a class="cite-backref" href="#ref-countminsketch-1" title="Jump back to reference 1">↩</a></p>
+<p id="paxos">Leslie Lamport and others.
+Paxos made simple.
+<em>ACM Sigact News</em>, 32(4):18–25, 2001. <a class="cite-backref" href="#ref-paxos-1" title="Jump back to reference 1">↩</a></p>
+<p id="raft">Diego Ongaro and John K Ousterhout.
+In search of an understandable consensus algorithm.
+In <em>USENIX Annual Technical Conference</em>, 305–319. 2014. <a class="cite-backref" href="#ref-raft-1" title="Jump back to reference 1">↩</a></p>
 <div class="hr"></div>
 <a class="go-top" href="#">Go Top</a>
 <footer class="footer">
@@ -68,14 +131,18 @@ TrueTime [@@spanner], consensus algorithms like Paxos [@@paxos] and Raft [@@raf
 </div>
 </div>
 <script>
+        renderMathInElement(document.body);
+
         var $top = $('.go-top');
 
         // Show or hide the sticky footer button
         $(window).scroll(function() {
             if ($(this).scrollTop() > 200) {
-                $top.fadeIn(200);
+                // $top.fadeIn(200);
+                $top.addClass('go-top-visible');
             } else {
-                $top.fadeOut(200);
+                // $top.fadeOut(200);
+                $top.removeClass('go-top-visible');
             }
         });
 

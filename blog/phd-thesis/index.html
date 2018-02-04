@@ -4,22 +4,25 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta content="Finished my PhD thesis." name="description"/>
+<meta content="Finished my PhD thesis: Higgs Boson Discovery and First Property Measurements using the ATLAS Detector." name="description"/>
 <meta content="summary" name="twitter:card"/>
 <meta content="@svenkreiss" name="twitter:site"/>
 <meta content="@svenkreiss" name="twitter:creator"/>
-<meta content="PhD Thesis: Higgs Boson Discovery and First Property Measurements using the ATLAS Detector" name="twitter:title"/>
-<meta content="Finished my PhD thesis." name="twitter:description"/>
+<meta content="PhD Thesis" name="twitter:title"/>
+<meta content="Finished my PhD thesis: Higgs Boson Discovery and First Property Measurements using the ATLAS Detector." name="twitter:description"/>
 <meta content="http://www.svenkreiss.com/images/phd_higgs_overview.png" name="twitter:image:src"/>
 <meta content="svenkreiss.com" name="twitter:domain"/>
-<meta content="PhD Thesis: Higgs Boson Discovery and First Property Measurements using the ATLAS Detector" property="og:title"/>
+<meta content="PhD Thesis" property="og:title"/>
 <meta content="article" property="og:type"/>
-<meta content="Finished my PhD thesis." property="og:description"/>
+<meta content="Finished my PhD thesis: Higgs Boson Discovery and First Property Measurements using the ATLAS Detector." property="og:description"/>
 <meta content="http://www.svenkreiss.com/images/phd_higgs_overview.png" property="og:image"/>
 <meta content="svenkreiss.com" property="og:site_name"/>
 <link href="http://www.svenkreiss.com/feeds/all.atom.xml" rel="alternate" title="Sven Kreiss Full Atom Feed" type="application/atom+xml"/>
-<title>PhD Thesis: Higgs Boson Discovery and First Property Measurements using the ATLAS Detector - Sven Kreiss</title>
-<link href="//cdnjs.cloudflare.com/ajax/libs/pure/0.3.0/pure-min.css" rel="stylesheet"/>
+<title>PhD Thesis - Sven Kreiss</title>
+<!-- KaTeX -->
+<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0-beta1/katex.min.css" integrity="sha384-VEnyslhHLHiYPca9KFkBB3CMeslnM9CzwjxsEbZTeA21JBm7tdLwKoZmCt3cZTYD" rel="stylesheet"/>
+<script crossorigin="anonymous" integrity="sha384-O4hpKqcplNCe+jLuBVEXC10Rn1QEqAmX98lKAIFBEDxZI0a+6Z2w2n8AEtQbR4CD" src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0-beta1/katex.min.js"></script>
+<script crossorigin="anonymous" integrity="sha384-IiI65aU9ZYub2MY9zhtKd1H2ps7xxf+eb2YFG9lX6uRqpXCvBTOidPRCXCrQ++Uc" src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0-beta1/contrib/auto-render.min.js"></script>
 <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"/>
 <link href="http://www.svenkreiss.com/theme/css/pure.css" rel="stylesheet"/>
 <link href="http://www.svenkreiss.com/theme/css/pygments.css" rel="stylesheet"/>
@@ -35,21 +38,21 @@
 <h2 class="article-info">Sven Kreiss</h2>
 <h5>Published</h5>
 <p>August 17, 2014</p>
-<a href="/">←Home</a>
+<a class="header-article-home" href="/">←Home</a>
 </header>
 </div>
 <div class="pure-u">
 <div class="content">
 <section class="post">
 <header class="post-header">
-<h1>PhD Thesis: Higgs Boson Discovery and First Property Measurements using the <span class="caps">ATLAS</span> Detector</h1>
+<h1>PhD Thesis</h1>
 <p class="post-meta">
                             // under
                                 <a class="post-category" href="http://www.svenkreiss.com/blog/tag/physics/">physics</a>
                             in <a class="post-category" href="http://www.svenkreiss.com/blog/category/science/">Science</a>   
 
                             <span style="display:inline-block;">
-                            // share on <a href="https://twitter.com/share?text=%22PhD%20Thesis%3A%20Higgs%20Boson%20Discovery%20and%20First%20Property%20Measurements%20using%20the%20%3Cspan%20class%3D%22caps%22%3EATLAS%3C/span%3E%26nbsp%3BDetector%22&amp;via=svenkreiss" target="_blank">
+                            // share on <a href="https://twitter.com/share?text=%22PhD%26nbsp%3BThesis%22&amp;via=svenkreiss" target="_blank">
 <i class="fa fa-twitter fa-lg"></i> Twitter
                             </a>
 </span>
@@ -74,14 +77,18 @@ For my PhD, I was working on the discovery of the Higgs boson. <span class="caps
 </div>
 </div>
 <script>
+        renderMathInElement(document.body);
+
         var $top = $('.go-top');
 
         // Show or hide the sticky footer button
         $(window).scroll(function() {
             if ($(this).scrollTop() > 200) {
-                $top.fadeIn(200);
+                // $top.fadeIn(200);
+                $top.addClass('go-top-visible');
             } else {
-                $top.fadeOut(200);
+                // $top.fadeOut(200);
+                $top.removeClass('go-top-visible');
             }
         });
 

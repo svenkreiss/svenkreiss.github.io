@@ -19,7 +19,10 @@
 <meta content="svenkreiss.com" property="og:site_name"/>
 <link href="http://www.svenkreiss.com/feeds/all.atom.xml" rel="alternate" title="Sven Kreiss Full Atom Feed" type="application/atom+xml"/>
 <title>Decouple - Sven Kreiss</title>
-<link href="//cdnjs.cloudflare.com/ajax/libs/pure/0.3.0/pure-min.css" rel="stylesheet"/>
+<!-- KaTeX -->
+<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0-beta1/katex.min.css" integrity="sha384-VEnyslhHLHiYPca9KFkBB3CMeslnM9CzwjxsEbZTeA21JBm7tdLwKoZmCt3cZTYD" rel="stylesheet"/>
+<script crossorigin="anonymous" integrity="sha384-O4hpKqcplNCe+jLuBVEXC10Rn1QEqAmX98lKAIFBEDxZI0a+6Z2w2n8AEtQbR4CD" src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0-beta1/katex.min.js"></script>
+<script crossorigin="anonymous" integrity="sha384-IiI65aU9ZYub2MY9zhtKd1H2ps7xxf+eb2YFG9lX6uRqpXCvBTOidPRCXCrQ++Uc" src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0-beta1/contrib/auto-render.min.js"></script>
 <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"/>
 <link href="http://www.svenkreiss.com/theme/css/pure.css" rel="stylesheet"/>
 <link href="http://www.svenkreiss.com/theme/css/pygments.css" rel="stylesheet"/>
@@ -35,7 +38,7 @@
 <h2 class="article-info">Sven Kreiss</h2>
 <h5>Published</h5>
 <p>December 31, 2016</p>
-<a href="/">←Home</a>
+<a class="header-article-home" href="/">←Home</a>
 </header>
 </div>
 <div class="pure-u">
@@ -69,7 +72,7 @@
 <div class="hr"></div>
 <h2>Related Posts</h2>
 <ul class="related-posts">
-<li><a href="http://www.svenkreiss.com/blog/phd-thesis/">PhD Thesis: Higgs Boson Discovery and First Property Measurements using the <span class="caps">ATLAS</span> Detector</a>: Finished my PhD thesis.</li>
+<li><a href="http://www.svenkreiss.com/blog/phd-thesis/">PhD Thesis</a>: Finished my PhD thesis: Higgs Boson Discovery and First Property Measurements using the ATLAS Detector.</li>
 <li><a href="http://www.svenkreiss.com/blog/morph-demo/">morphDemo</a>: Demo of a new horizontal morphing algorithm.</li>
 </ul>
 <a class="go-top" href="#">Go Top</a>
@@ -80,14 +83,18 @@
 </div>
 </div>
 <script>
+        renderMathInElement(document.body);
+
         var $top = $('.go-top');
 
         // Show or hide the sticky footer button
         $(window).scroll(function() {
             if ($(this).scrollTop() > 200) {
-                $top.fadeIn(200);
+                // $top.fadeIn(200);
+                $top.addClass('go-top-visible');
             } else {
-                $top.fadeOut(200);
+                // $top.fadeOut(200);
+                $top.removeClass('go-top-visible');
             }
         });
 
