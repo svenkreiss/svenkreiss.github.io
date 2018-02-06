@@ -72,6 +72,16 @@ PLUGINS = [
     'pelican_dynamic',
 ]
 
+# sitemap plugin
+SITEMAP = {
+    'format': 'xml',
+    'changefreqs': {
+        'articles': 'monthly',
+        'pages': 'monthly',
+        'indexes': 'monthly'
+    }
+}
+
 # Pelican cite plugin
 PUBLICATIONS_SRC = 'content/publications.bib'
 
