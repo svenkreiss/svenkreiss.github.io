@@ -1,7 +1,7 @@
 Title: Parallel Processing with pysparkling
 Date: 2015-12-04
 Category: Tech
-Tags: algorithms, distributed systems
+Tags: data, pysparkling
 Slug: parallel-processing-with-pysparkling
 Summary: Benchmarks for the latest parallel features in pysparkling.
 Status: published
