@@ -11,9 +11,9 @@ TIMEZONE = 'America/New_York'
 DEFAULT_LANG = u'en'
 DEFAULT_DATE_FORMAT = '%B %d, %Y'
 
-# DEFAULT_METADATA = {
-#     'status': 'draft',
-# }
+DEFAULT_METADATA = {
+    'Status': 'draft',
+}
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None

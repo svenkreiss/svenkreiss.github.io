@@ -1,7 +1,7 @@
 Title: number123
 Date: 2014-03-22
 Slug: number123
-
+Status: published
 
 
 Auf dieser Seite möchte ich nicht speziell über einen Prototypen, sondern über das Projekt an sich sprechen. Was ist schon geschafft? Was fehlt? Was kann verändert werden?

@@ -1,7 +1,7 @@
 Title: number4
 Date: 2014-03-22
 Slug: number4
-
+Status: published
 
 
 ## number4point1 - the current version

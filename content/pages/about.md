@@ -4,6 +4,7 @@ Slug: about
 url: /
 save_as: index.html
 Summary: Sven Kreiss is a Data Scientist in New York City.
+Status: published
 
 
 <!-- {% img img-thumbnail float-right http://www.gravatar.com/avatar/1838de72eb5ce4b000c41c06dedb52c4.png?s=180 %} -->

@@ -4,6 +4,7 @@ Category: Tech
 Tags: web, python
 Slug: pelican-vimeo
 Summary: Extend liquid tags plugin for Pelican to include a Vimeo tag.
+Status: published
 
 
 Testing my implementation of the `vimeo` tag for `liquid_tags`. This is based on the `youtube` tag which in turn is based on the [jekyll / octopress youtube tag](https://gist.github.com/jamieowen/2063748).

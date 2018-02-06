@@ -1,7 +1,7 @@
 Title: unicodeit
 Date: 2013-03-01 12:00
 Slug: UnicodeIt
-
+Status: published
 
 
 * This is a project by [Kyle Cranmer](http://physics.as.nyu.edu/object/KyleCranmer.html) and me.

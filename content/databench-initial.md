@@ -4,13 +4,14 @@ Category: Tech
 Tags: Flask, Socket.IO, JavaScript, d3.js, Python, matplotlib, mpld3
 Slug: databench-initial
 Summary: Databench is a data analysis tool using Flask, Socket.IO and d3.js with optional parallelization with Redis Queue and visualization with mpld3.
+Status: published
 
 > Databench is a data analysis tool using [Flask](http://flask.pocoo.org/), [Socket.IO](http://socket.io/) and [d3.js](http://d3js.org/) with optional parallelization with [Redis Queue](http://python-rq.org/) and visualization with [mpld3](http://mpld3.github.io/). Check out the [live demos](http://databench-examples-viewer.svenkreiss.com/).
 
 
 [![/images/mpld3pi_demo.png](/images/mpld3pi_demo.png)](http://databench-examples-viewer.svenkreiss.com/)
 
-Seriously, check out the [live demos](http://databench-examples-viewer.svenkreiss.com/). 
+Seriously, check out the [live demos](http://databench-examples-viewer.svenkreiss.com/).
 
 All source codes are available on GitHub:
 
@@ -174,6 +175,6 @@ If you like Python, but are not too familiar with `d3.js`, you can use [mpld3](h
 
 # Parallelization
 
-Examples with parallel processing cannot be included in the [live demos](http://databench-examples-viewer.svenkreiss.com/) but are included in the [databench_examples](https://github.com/svenkreiss/databench_examples) repository. 
+Examples with parallel processing cannot be included in the [live demos](http://databench-examples-viewer.svenkreiss.com/) but are included in the [databench_examples](https://github.com/svenkreiss/databench_examples) repository.
 
 The `slowpi` example contains a demo-implementation of using [Redis Queue]() for parallelization. The parallelization is fully implemented on the analysis-side without Databench knowing about it. Other parallelization techniques like [Celery](http://www.celeryproject.org/) and [RabbitMQ](http://www.rabbitmq.com/) are probably working but are not tested yet.

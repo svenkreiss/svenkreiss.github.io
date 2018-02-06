@@ -5,6 +5,7 @@ Tags: being awesome
 Slug: chasing-the-higgs-nyt
 Author: Sven Kreiss
 Summary: My part of the Higgs discovery story in the New York Times.
+Status: published
 
 
 My part of the Higgs discovery story in the New York Times.

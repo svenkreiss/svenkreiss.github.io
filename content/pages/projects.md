@@ -1,6 +1,7 @@
 Title: Projects
 Date: 2014-03-07
 Slug: projects
+Status: published
 
 
 ## Projects in Pictures

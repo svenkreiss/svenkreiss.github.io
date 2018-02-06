@@ -1,7 +1,7 @@
 Title: OpenOsci
 Date: 2014-03-09 19:36
 Slug: openosci
-
+Status: published
 
 
 > Open source and open hardware electronics project to build a low-cost digital oscilloscope with an 8-bit microcontroller and a mobile phone screen.

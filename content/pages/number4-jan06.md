@@ -1,6 +1,7 @@
 Title: number4 - January 2006 Review
 Date: 2014-03-22
 Slug: number4-jan06
+Status: published
 
 
 {% img images/number4/Foto_060130_3.jpg 250 Number4 foto %}

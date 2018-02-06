@@ -3,12 +3,12 @@ Date: 2018-02-02
 Category: Tech
 Tags: blog
 Slug: pelican-2018
-Summary: Updates to Pelican.
+Summary: Updates to Pelican and this blog.
 Status: draft
 
 
-Inspired by [Fred Wilson's post about owning content LINK!!!!!!!!](), revived
-my Pelican blog. Reasons for Pelican:
+Inspired by Fred Wilson's post about [Owning Yourself](http://avc.com/2018/01/owning-yourself/),
+I revived my Pelican blog. Reasons for Pelican:
 
 * version control in git
 * my usual editor for content creation
@@ -19,6 +19,8 @@ Cost, have to contribute some changes myself:
 
 * customized Pure theme [repository](https://github.com/svenkreiss/pure), including print mode, less author mentions, responsive resizing for mobile
 * pelican-cite: created a [PR](https://github.com/cmacmackin/pelican-cite/pull/5) so that it also works on draft pages
-* using KaTeX: had to create [pelican-jsmath](https://github.com/svenkreiss/pelican-jsmath);
-  There was a related [Pelican issue](https://github.com/getpelican/pelican-plugins/issues/625)
-  for support. The new plugin is $\alpha\omega\epsilon s \sigma m \epsilon$.
+* related_posts: newly added to this blog
+* using KaTeX: nothing existed to combine it with Pelican and so I created
+  [pelican-jsmath](https://github.com/svenkreiss/pelican-jsmath).
+  The new plugin is $\alpha\omega\epsilon s \sigma m \epsilon$ and described in a separate
+  [blog post]({filename}/pelican-jsmath.md).
