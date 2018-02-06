@@ -338,6 +338,12 @@ ul.related-posts {
 ul.related-posts li {
     margin: 1em 0;
 }
+ul.related-posts .summary {
+    display: block;
+    clear: left;
+    color: #888;
+    font-size: 85%;
+}
 
 /* LAYOUT CSS */
 #layout {

@@ -27,6 +27,7 @@
 <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"/>
 <link href="http://www.svenkreiss.com/theme/css/pure.css" rel="stylesheet"/>
 <link href="http://www.svenkreiss.com/theme/css/pygments.css" rel="stylesheet"/>
+<!-- for pelican_dynamic plugin -->
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 </head>
 <body>
@@ -71,8 +72,14 @@
 <div class="hr"></div>
 <h2>Related Posts</h2>
 <ul class="related-posts">
-<li><a href="http://www.svenkreiss.com/blog/chasing-the-higgs-nyt/">Chasing the Higgs - New York Times</a>: My part of the Higgs discovery story in the New York Times.</li>
-<li><a href="http://www.svenkreiss.com/blog/number4-lvz/">My robot Number4 in the Leipziger Volkszeitung</a>: Student from Brandis (me) teaches robot how to walk.</li>
+<li>
+<a class="title" href="http://www.svenkreiss.com/blog/chasing-the-higgs-nyt/">Chasing the Higgs - New York Times</a>
+<span class="summary">My part of the Higgs discovery story in the New York Times.</span>
+</li>
+<li>
+<a class="title" href="http://www.svenkreiss.com/blog/number4-lvz/">My robot Number4 in the Leipziger Volkszeitung</a>
+<span class="summary">Student from Brandis (me) teaches robot how to walk.</span>
+</li>
 </ul>
 <a class="go-top" href="#">Go Top</a>
 <footer class="footer">
@@ -109,6 +116,7 @@
             event.preventDefault();
         });
     </script>
+<!-- for pelican_dynamic plugin -->
 <script type="text/javascript">
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-4070485-2']);

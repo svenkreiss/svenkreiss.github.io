@@ -190,22 +190,6 @@ Checkout the code on &lt;a href="http://github.com/svenkreiss/dvds-js"&gt;github
 &lt;p&gt;This post is about the first development release, version&amp;nbsp;0.1.0.&lt;/p&gt;
 &lt;h2&gt;Example&lt;/h2&gt;
 &lt;p&gt;A repository &lt;code&gt;a&lt;/code&gt; is created holding an array with the two names &lt;code&gt;Paul&lt;/code&gt; and &lt;code&gt;Adam&lt;/code&gt;. Then this repository is forked and the fork is called &lt;code&gt;b&lt;/code&gt;. Both &lt;code&gt;a&lt;/code&gt; and &lt;code&gt;b&lt;/code&gt; are then modified. To demonstrate streaming capabilities, repository &lt;code&gt;b&lt;/code&gt; is stringified before and after the manipulation. At the end &lt;code&gt;b&lt;/code&gt; is merged into &lt;code&gt;a&lt;/code&gt; and the result is shown&amp;nbsp;below.&lt;/p&gt;
-&lt;style type="text/css" scoped&gt;
-    svg {
-        border:1px solid #faa;
-        background-color:#fee;
-    svg .link {
-        stroke: #000;
-        stroke-width: 1.5px;
-    svg .node circle {
-        fill: #000;
-        stroke: #fff;
-        stroke-width: 1.5px;
-    svg .node text {
-        text-anchor: middle;
-    }
-&lt;/style&gt;
-
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nx"&gt;require&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;dvds&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;dvds.visualize&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
     &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;a&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="nx"&gt;dvds&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;Repository&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Paul&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Adam&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]);&lt;/span&gt;
     &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;b&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;a&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;fork&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;

@@ -27,8 +27,10 @@
 <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"/>
 <link href="http://www.svenkreiss.com/theme/css/pure.css" rel="stylesheet"/>
 <link href="http://www.svenkreiss.com/theme/css/pygments.css" rel="stylesheet"/>
+<!-- for pelican_dynamic plugin -->
+<link href="http://www.svenkreiss.com/css/dvds-js.css" rel="stylesheet" type="text/css">
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-</head>
+</link></head>
 <body>
 <div class="pure-g-r" id="layout">
 <div class="sidebar sidebar-article pure-u">
@@ -89,21 +91,6 @@ Checkout the code on <a href="http://github.com/svenkreiss/dvds-js">github.com/s
 <p>This post is about the first development release, version 0.1.0.</p>
 <h2>Example</h2>
 <p>A repository <code>a</code> is created holding an array with the two names <code>Paul</code> and <code>Adam</code>. Then this repository is forked and the fork is called <code>b</code>. Both <code>a</code> and <code>b</code> are then modified. To demonstrate streaming capabilities, repository <code>b</code> is stringified before and after the manipulation. At the end <code>b</code> is merged into <code>a</code> and the result is shown below.</p>
-<style scoped="" type="text/css">
-    svg {
-        border:1px solid #faa;
-        background-color:#fee;
-    svg .link {
-        stroke: #000;
-        stroke-width: 1.5px;
-    svg .node circle {
-        fill: #000;
-        stroke: #fff;
-        stroke-width: 1.5px;
-    svg .node text {
-        text-anchor: middle;
-    }
-</style>
 <div class="highlight"><pre><span></span><span class="nx">require</span><span class="p">([</span><span class="s1">'dvds'</span><span class="p">,</span> <span class="s1">'dvds.visualize'</span><span class="p">],</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
     <span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">dvds</span><span class="p">.</span><span class="nx">Repository</span><span class="p">([</span><span class="s1">'Paul'</span><span class="p">,</span><span class="s1">'Adam'</span><span class="p">]);</span>
     <span class="kd">var</span> <span class="nx">b</span> <span class="o">=</span> <span class="nx">a</span><span class="p">.</span><span class="nx">fork</span><span class="p">();</span>
@@ -202,8 +189,14 @@ require(['dvds', 'dvds.visualize'], function() {
 <div class="hr"></div>
 <h2>Related Posts</h2>
 <ul class="related-posts">
-<li><a href="http://www.svenkreiss.com/blog/databench-initial/">Databench</a>: Databench is a data analysis tool using Flask, Socket.IO and d3.js with optional parallelization with Redis Queue and visualization with mpld3.</li>
-<li><a href="http://www.svenkreiss.com/blog/morph-demo/">morphDemo</a>: Demo of a new horizontal morphing algorithm.</li>
+<li>
+<a class="title" href="http://www.svenkreiss.com/blog/databench-initial/">Databench</a>
+<span class="summary">Databench is a data analysis tool using Flask, Socket.IO and d3.js with optional parallelization with Redis Queue and visualization with mpld3.</span>
+</li>
+<li>
+<a class="title" href="http://www.svenkreiss.com/blog/morph-demo/">morphDemo</a>
+<span class="summary">Demo of a new horizontal morphing algorithm.</span>
+</li>
 </ul>
 <a class="go-top" href="#">Go Top</a>
 <footer class="footer">
@@ -240,6 +233,7 @@ require(['dvds', 'dvds.visualize'], function() {
             event.preventDefault();
         });
     </script>
+<!-- for pelican_dynamic plugin -->
 <script type="text/javascript">
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-4070485-2']);

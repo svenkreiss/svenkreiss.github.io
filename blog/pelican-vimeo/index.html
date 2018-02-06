@@ -27,6 +27,7 @@
 <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"/>
 <link href="http://www.svenkreiss.com/theme/css/pure.css" rel="stylesheet"/>
 <link href="http://www.svenkreiss.com/theme/css/pygments.css" rel="stylesheet"/>
+<!-- for pelican_dynamic plugin -->
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 </head>
 <body>
@@ -84,7 +85,10 @@
 <div class="hr"></div>
 <h2>Related Posts</h2>
 <ul class="related-posts">
-<li><a href="http://www.svenkreiss.com/blog/databench-initial/">Databench</a>: Databench is a data analysis tool using Flask, Socket.IO and d3.js with optional parallelization with Redis Queue and visualization with mpld3.</li>
+<li>
+<a class="title" href="http://www.svenkreiss.com/blog/databench-initial/">Databench</a>
+<span class="summary">Databench is a data analysis tool using Flask, Socket.IO and d3.js with optional parallelization with Redis Queue and visualization with mpld3.</span>
+</li>
 </ul>
 <a class="go-top" href="#">Go Top</a>
 <footer class="footer">
@@ -121,6 +125,7 @@
             event.preventDefault();
         });
     </script>
+<!-- for pelican_dynamic plugin -->
 <script type="text/javascript">
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-4070485-2']);
