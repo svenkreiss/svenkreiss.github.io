@@ -5,7 +5,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://www.svenkreiss.com/</loc>
-<lastmod>2018-02-04T11:43:26-00:00</lastmod>
+<lastmod>2018-02-05T21:52:58-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -81,13 +81,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>http://www.svenkreiss.com/blog/trivial-io/</loc>
-<lastmod>2015-05-07T00:00:00-04:00</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
 <loc>http://www.svenkreiss.com/blog/phd-thesis/</loc>
 <lastmod>2014-08-17T00:00:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
@@ -151,13 +144,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>http://www.svenkreiss.com/blog/category/meta/</loc>
-<lastmod>2015-05-07T00:00:00-04:56</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
 <loc>http://www.svenkreiss.com/blog/category/science/</loc>
 <lastmod>2016-12-31T00:00:00-04:56</lastmod>
 <changefreq>daily</changefreq>
@@ -174,13 +160,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>http://www.svenkreiss.com/blog/tag/physics/</loc>
 <lastmod>2016-12-31T00:00:00-04:56</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>http://www.svenkreiss.com/blog/tag/blog/</loc>
-<lastmod>2015-05-07T00:00:00-04:56</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>

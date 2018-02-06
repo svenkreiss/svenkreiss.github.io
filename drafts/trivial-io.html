@@ -4,21 +4,21 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta content="The NMEA-Parser from the GPSD project. This code is hosted on google code now: http://code.google.com/p/gpsd-nmea/ Old instructions on how to recreate this yourself To extract the NMEA-Parser out of GPSD is easier than it looks at first. Just download the whole source and …" name="description"/>
+<meta content="For now, new blog posts will appear on trivial.io." name="description"/>
 <meta content="summary" name="twitter:card"/>
 <meta content="@svenkreiss" name="twitter:site"/>
 <meta content="@svenkreiss" name="twitter:creator"/>
-<meta content="nmea-gpsd" name="twitter:title"/>
-<meta content="The NMEA-Parser from the GPSD project. This code is hosted on google code now: http://code.google.com/p/gpsd-nmea/ Old instructions on how to recreate this yourself To extract the NMEA-Parser out of GPSD is easier than it looks at first. Just download the whole source and …" name="twitter:description"/>
+<meta content="Blog moved to trivial.io" name="twitter:title"/>
+<meta content="For now, new blog posts will appear on trivial.io." name="twitter:description"/>
 <meta content="http://www.svenkreiss.com/images/me_nyc_square_500.jpeg" name="twitter:image:src"/>
 <meta content="svenkreiss.com" name="twitter:domain"/>
-<meta content="nmea-gpsd" property="og:title"/>
+<meta content="Blog moved to trivial.io" property="og:title"/>
 <meta content="article" property="og:type"/>
-<meta content="The NMEA-Parser from the GPSD project. This code is hosted on google code now: http://code.google.com/p/gpsd-nmea/ Old instructions on how to recreate this yourself To extract the NMEA-Parser out of GPSD is easier than it looks at first. Just download the whole source and …" property="og:description"/>
+<meta content="For now, new blog posts will appear on trivial.io." property="og:description"/>
 <meta content="http://www.svenkreiss.com/images/me_nyc_square_500.jpeg" property="og:image"/>
 <meta content="svenkreiss.com" property="og:site_name"/>
 <link href="http://www.svenkreiss.com/feeds/all.atom.xml" rel="alternate" title="Sven Kreiss Full Atom Feed" type="application/atom+xml"/>
-<title>nmea-gpsd - Sven Kreiss</title>
+<title>Blog moved to trivial.io - Sven Kreiss</title>
 <!-- KaTeX -->
 <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0-beta1/katex.min.css" integrity="sha384-VEnyslhHLHiYPca9KFkBB3CMeslnM9CzwjxsEbZTeA21JBm7tdLwKoZmCt3cZTYD" rel="stylesheet"/>
 <script crossorigin="anonymous" integrity="sha384-O4hpKqcplNCe+jLuBVEXC10Rn1QEqAmX98lKAIFBEDxZI0a+6Z2w2n8AEtQbR4CD" src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0-beta1/katex.min.js"></script>
@@ -26,57 +26,44 @@
 <!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.3.0/pure-min.css"> -->
 <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"/>
 <link href="http://www.svenkreiss.com/theme/css/pure.css" rel="stylesheet"/>
+<link href="http://www.svenkreiss.com/theme/css/pygments.css" rel="stylesheet"/>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 </head>
 <body>
 <div class="pure-g-r" id="layout">
-<div class="sidebar pure-u">
-<div class="cover-img" style="background-image: url('/images/winter_mountains_1600.jpeg')">
-<div class="cover-body">
-<header class="header">
-<h1 class="brand-main"><a href="/">Sven Kreiss</a></h1>
-<p class="tagline">Data Scientist with a focus on Machine Learning and Computer Vision.</p>
-<p class="links"><a href="/">About</a></p>
-<p class="links"><a href="/projects.html">Projects</a></p>
-<p class="links"><a href="/files/forward_trivialio.html">Blog: trivial.io</a></p>
-<p class="social">
-<a href="https://trivial.io">
-<i class="fa fa-rss fa-2x"></i>
+<div class="sidebar sidebar-article pure-u">
+<header class="header-article">
+<a href="http://www.svenkreiss.com/blog/author/sven-kreiss/" title="See posts by Sven Kreiss">
+<img alt="Sven Kreiss" class="avatar" src="https://www.gravatar.com/avatar/562a52f3ffcb6c2a3556f91ddc540776"/>
 </a>
-<a href="https://github.com/svenkreiss/">
-<i class="fa fa-github fa-2x"></i>
-</a>
-<a href="https://twitter.com/svenkreiss">
-<i class="fa fa-twitter fa-2x"></i>
-</a>
-<a href="https://www.linkedin.com/in/svenkreiss/">
-<i class="fa fa-linkedin fa-2x"></i>
-</a>
-<a href="/files/cv.html">
-<i class="fa fa-file-text fa-2x"></i>
-</a>
-<p>
-</p></p></header>
+<h2 class="article-info">Sven Kreiss</h2>
+<h5>Draft</h5>
+<p>May 07, 2015</p>
+<a class="header-article-home" href="/">←Home</a>
+</header>
 </div>
-</div>
-</div> <div class="pure-u-1">
+<div class="pure-u">
 <div class="content">
-<h1 class="content-subhead">nmea-gpsd</h1>
-<blockquote>
-<p>The <span class="caps">NMEA</span>-Parser from the <span class="caps">GPSD</span> project.<br/>
-This code is hosted on google code now: http://code.google.com/p/gpsd-nmea/</p>
-</blockquote>
-<h3>Old instructions on how to recreate this yourself</h3>
-<p>To extract the <span class="caps">NMEA</span>-Parser out of <span class="caps">GPSD</span> is easier than it looks at first. Just download the whole source and copy these files into a separate directory:</p>
-<ul>
-<li>gps.h</li>
-<li>timebase.h</li>
-<li>geoid.c</li>
-<li>gpsutils.c</li>
-<li>nmea_parse.c</li>
-</ul>
-<p>The next step is to replace all references to ”gpsd.h” by ”gps.h” and remove ”#include gpsd_config.h”.
-You will also need to move some ”#define” from ”gpsd_config.h” and ”gpsd.h” to ”gps.h”. Next step is to rewrite the functions in ”nmea_parse.c” to take structs of type gps_data_t instead of gps_device_t. All what is necessary is to move the struct ”nmea” from gps_device_t.driver to gps_data_t. Last thing is the dependency on gpsd_report. I just disabled it by putting a ”#define gpsd_report(…)” at the beginning of ”gps.h”.</p>
+<section class="post">
+<header class="post-header">
+<h1>Blog moved to trivial.io</h1>
+<p class="post-meta">
+                            // under
+                                <a class="post-category" href="http://www.svenkreiss.com/blog/tag/blog/">blog</a>
+                            in <a class="post-category" href="http://www.svenkreiss.com/blog/category/meta/">meta</a>   
+
+                            <span style="display:inline-block;">
+                            // share on <a href="https://twitter.com/share?text=%22Blog%20moved%20to%26nbsp%3Btrivial.io%22&amp;via=svenkreiss" target="_blank">
+<i class="fa fa-twitter fa-lg"></i> Twitter
+                            </a>
+</span>
+</p>
+</header>
+</section>
+<p>I will continue blogging at <a href="http://trivial.io">trivial.io</a>.</p>
+<p><a href="http://trivial.io"><img alt="trivial.io" src="/images/trivial-io.png" title="trivial.io screen"/></a></p>
+<div class="hr"></div>
+<a class="go-top" href="#">Go Top</a>
 <footer class="footer">
 <p>© Sven Kreiss 2014 – 2018.<br/>
     This work is licensed under a <a href="http://creativecommons.org/licenses/by/4.0/" rel="license">Creative Commons Attribution 4.0 International License</a>.</p>

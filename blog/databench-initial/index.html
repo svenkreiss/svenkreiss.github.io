@@ -70,7 +70,7 @@
 <p>Databench is a data analysis tool using <a href="http://flask.pocoo.org/">Flask</a>, <a href="http://socket.io/">Socket.<span class="caps">IO</span></a> and <a href="http://d3js.org/">d3.js</a> with optional parallelization with <a href="http://python-rq.org/">Redis Queue</a> and visualization with <a href="http://mpld3.github.io/">mpld3</a>. Check out the <a href="http://databench-examples-viewer.svenkreiss.com/">live demos</a>.</p>
 </blockquote>
 <p><a href="http://databench-examples-viewer.svenkreiss.com/"><img alt="/images/mpld3pi_demo.png" src="/images/mpld3pi_demo.png"/></a></p>
-<p>Seriously, check out the <a href="http://databench-examples-viewer.svenkreiss.com/">live demos</a>. </p>
+<p>Seriously, check out the <a href="http://databench-examples-viewer.svenkreiss.com/">live demos</a>.</p>
 <p>All source codes are available on GitHub:</p>
 <ul>
 <li><a href="https://github.com/svenkreiss/databench">https://github.com/svenkreiss/databench</a></li>
@@ -203,7 +203,7 @@ the generated point is inside the first quadrant of the unit circle.<span class=
 <h1>Plotting with <code>matplotlib</code></h1>
 <p>If you like Python, but are not too familiar with <code>d3.js</code>, you can use <a href="http://mpld3.github.io/">mpld3</a> to embed your python plots on the web. The <code>mpld3</code> website has a nice gallery of examples that should all work in Databench. Two of them — one with a standard plugin and one with a custom plugin — are <code>mpld3PointLabel</code> and <code>mpld3Drag</code> which are both included in the <a href="http://databench-examples-viewer.svenkreiss.com/">live demos</a> and the <a href="https://github.com/svenkreiss/databench_examples">databench_examples</a> repository.</p>
 <h1>Parallelization</h1>
-<p>Examples with parallel processing cannot be included in the <a href="http://databench-examples-viewer.svenkreiss.com/">live demos</a> but are included in the <a href="https://github.com/svenkreiss/databench_examples">databench_examples</a> repository. </p>
+<p>Examples with parallel processing cannot be included in the <a href="http://databench-examples-viewer.svenkreiss.com/">live demos</a> but are included in the <a href="https://github.com/svenkreiss/databench_examples">databench_examples</a> repository.</p>
 <p>The <code>slowpi</code> example contains a demo-implementation of using <a href="">Redis Queue</a> for parallelization. The parallelization is fully implemented on the analysis-side without Databench knowing about it. Other parallelization techniques like <a href="http://www.celeryproject.org/">Celery</a> and <a href="http://www.rabbitmq.com/">RabbitMQ</a> are probably working but are not tested yet.</p>
 <div class="hr"></div>
 <h2>Related Posts</h2>

@@ -1,22 +1,3 @@
-/* graph styles for article on dvds-js */
-svg.dvds-js {
-    border:1px solid #faa;
-    background-color:#fee;
-}
-svg.dvds-js .link {
-    stroke: #000;
-    stroke-width: 1.5px;
-}
-svg.dvds-js .node circle {
-    fill: #000;
-    stroke: #fff;
-    stroke-width: 1.5px;
-}
-svg.dvds-js .node text {
-    text-anchor: middle;
-}
-
-
 /* start of general theme */
 * {
     -webkit-box-sizing: border-box;

@@ -3,7 +3,7 @@
 &lt;p&gt;Databench is a data analysis tool using &lt;a href="http://flask.pocoo.org/"&gt;Flask&lt;/a&gt;, &lt;a href="http://socket.io/"&gt;Socket.&lt;span class="caps"&gt;IO&lt;/span&gt;&lt;/a&gt; and &lt;a href="http://d3js.org/"&gt;d3.js&lt;/a&gt; with optional parallelization with &lt;a href="http://python-rq.org/"&gt;Redis Queue&lt;/a&gt; and visualization with &lt;a href="http://mpld3.github.io/"&gt;mpld3&lt;/a&gt;. Check out the &lt;a href="http://databench-examples-viewer.svenkreiss.com/"&gt;live demos&lt;/a&gt;.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;a href="http://databench-examples-viewer.svenkreiss.com/"&gt;&lt;img alt="/images/mpld3pi_demo.png" src="/images/mpld3pi_demo.png"&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Seriously, check out the &lt;a href="http://databench-examples-viewer.svenkreiss.com/"&gt;live demos&lt;/a&gt;. &lt;/p&gt;
+&lt;p&gt;Seriously, check out the &lt;a href="http://databench-examples-viewer.svenkreiss.com/"&gt;live demos&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;All source codes are available on&amp;nbsp;GitHub:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://github.com/svenkreiss/databench"&gt;https://github.com/svenkreiss/databench&lt;/a&gt;&lt;/li&gt;
@@ -148,8 +148,9 @@ the generated point is inside the first quadrant of the unit circle.&lt;span cla
 &lt;h1&gt;Plotting with &lt;code&gt;matplotlib&lt;/code&gt;&lt;/h1&gt;
 &lt;p&gt;If you like Python, but are not too familiar with &lt;code&gt;d3.js&lt;/code&gt;, you can use &lt;a href="http://mpld3.github.io/"&gt;mpld3&lt;/a&gt; to embed your python plots on the web. The &lt;code&gt;mpld3&lt;/code&gt; website has a nice gallery of examples that should all work in Databench. Two of them &amp;#8212; one with a standard plugin and one with a custom plugin &amp;#8212; are &lt;code&gt;mpld3PointLabel&lt;/code&gt; and &lt;code&gt;mpld3Drag&lt;/code&gt; which are both included in the &lt;a href="http://databench-examples-viewer.svenkreiss.com/"&gt;live demos&lt;/a&gt; and the &lt;a href="https://github.com/svenkreiss/databench_examples"&gt;databench_examples&lt;/a&gt;&amp;nbsp;repository.&lt;/p&gt;
 &lt;h1&gt;Parallelization&lt;/h1&gt;
-&lt;p&gt;Examples with parallel processing cannot be included in the &lt;a href="http://databench-examples-viewer.svenkreiss.com/"&gt;live demos&lt;/a&gt; but are included in the &lt;a href="https://github.com/svenkreiss/databench_examples"&gt;databench_examples&lt;/a&gt;&amp;nbsp;repository. &lt;/p&gt;
-&lt;p&gt;The &lt;code&gt;slowpi&lt;/code&gt; example contains a demo-implementation of using &lt;a href=""&gt;Redis Queue&lt;/a&gt; for parallelization. The parallelization is fully implemented on the analysis-side without Databench knowing about it. Other parallelization techniques like &lt;a href="http://www.celeryproject.org/"&gt;Celery&lt;/a&gt; and &lt;a href="http://www.rabbitmq.com/"&gt;RabbitMQ&lt;/a&gt; are probably working but are not tested&amp;nbsp;yet.&lt;/p&gt;</content><category term="Flask"></category><category term="Socket.IO"></category><category term="JavaScript"></category><category term="d3.js"></category><category term="Python"></category><category term="matplotlib"></category><category term="mpld3"></category></entry><entry><title>dvds-js version 0.1.0</title><link href="http://www.svenkreiss.com/blog/dvds-js-v0.1.0/" rel="alternate"></link><published>2014-04-25T00:00:00-04:00</published><updated>2014-04-25T00:00:00-04:00</updated><author><name>Sven Kreiss</name></author><id>tag:www.svenkreiss.com,2014-04-25:/blog/dvds-js-v0.1.0/</id><summary type="html">&lt;p&gt;Distributed Versioned Data Structures in JavaScript. Like git in&amp;nbsp;js.&lt;/p&gt;</summary><content type="html">&lt;script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.11/d3.min.js" charset="utf-8"&gt;&lt;/script&gt;
+&lt;p&gt;Examples with parallel processing cannot be included in the &lt;a href="http://databench-examples-viewer.svenkreiss.com/"&gt;live demos&lt;/a&gt; but are included in the &lt;a href="https://github.com/svenkreiss/databench_examples"&gt;databench_examples&lt;/a&gt;&amp;nbsp;repository.&lt;/p&gt;
+&lt;p&gt;The &lt;code&gt;slowpi&lt;/code&gt; example contains a demo-implementation of using &lt;a href=""&gt;Redis Queue&lt;/a&gt; for parallelization. The parallelization is fully implemented on the analysis-side without Databench knowing about it. Other parallelization techniques like &lt;a href="http://www.celeryproject.org/"&gt;Celery&lt;/a&gt; and &lt;a href="http://www.rabbitmq.com/"&gt;RabbitMQ&lt;/a&gt; are probably working but are not tested&amp;nbsp;yet.&lt;/p&gt;</content><category term="Flask"></category><category term="Socket.IO"></category><category term="JavaScript"></category><category term="d3.js"></category><category term="Python"></category><category term="matplotlib"></category><category term="mpld3"></category></entry><entry><title>dvds-js version 0.1.0</title><link href="http://www.svenkreiss.com/blog/dvds-js-v0.1.0/" rel="alternate"></link><published>2014-04-25T00:00:00-04:00</published><updated>2014-04-25T00:00:00-04:00</updated><author><name>Sven Kreiss</name></author><id>tag:www.svenkreiss.com,2014-04-25:/blog/dvds-js-v0.1.0/</id><summary type="html">&lt;p&gt;Distributed Versioned Data Structures in JavaScript. Like git in&amp;nbsp;js.&lt;/p&gt;</summary><content type="html">&lt;h2&gt;This article and dvds-js are outdated&amp;nbsp;:(&lt;/h2&gt;
+&lt;script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.11/d3.min.js" charset="utf-8"&gt;&lt;/script&gt;
 
 &lt;script src="http://requirejs.org/docs/release/2.1.2/minified/require.js"&gt;&lt;/script&gt;
 
@@ -176,6 +177,22 @@ Checkout the code on &lt;a href="http://github.com/svenkreiss/dvds-js"&gt;github
 &lt;p&gt;This post is about the first development release, version&amp;nbsp;0.1.0.&lt;/p&gt;
 &lt;h2&gt;Example&lt;/h2&gt;
 &lt;p&gt;A repository &lt;code&gt;a&lt;/code&gt; is created holding an array with the two names &lt;code&gt;Paul&lt;/code&gt; and &lt;code&gt;Adam&lt;/code&gt;. Then this repository is forked and the fork is called &lt;code&gt;b&lt;/code&gt;. Both &lt;code&gt;a&lt;/code&gt; and &lt;code&gt;b&lt;/code&gt; are then modified. To demonstrate streaming capabilities, repository &lt;code&gt;b&lt;/code&gt; is stringified before and after the manipulation. At the end &lt;code&gt;b&lt;/code&gt; is merged into &lt;code&gt;a&lt;/code&gt; and the result is shown&amp;nbsp;below.&lt;/p&gt;
+&lt;style type="text/css" scoped&gt;
+    svg {
+        border:1px solid #faa;
+        background-color:#fee;
+    svg .link {
+        stroke: #000;
+        stroke-width: 1.5px;
+    svg .node circle {
+        fill: #000;
+        stroke: #fff;
+        stroke-width: 1.5px;
+    svg .node text {
+        text-anchor: middle;
+    }
+&lt;/style&gt;
+
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nx"&gt;require&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;dvds&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;dvds.visualize&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
     &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;a&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="nx"&gt;dvds&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;Repository&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Paul&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Adam&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]);&lt;/span&gt;
     &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;b&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;a&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;fork&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;

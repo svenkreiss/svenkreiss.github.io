@@ -38,7 +38,7 @@
 </a>
 <h2 class="article-info">Sven Kreiss</h2>
 <h5>Draft</h5>
-<p>February 02, 2018</p>
+<p>February 04, 2018</p>
 <a class="header-article-home" href="/">←Home</a>
 </header>
 </div>
@@ -61,8 +61,6 @@
 </p>
 </header>
 </section>
-<p>Discussions of consistent data stores include the Spanner paper with
-TrueTime <a href="#spanner" id="ref-spanner-1">(Brewer, 2017)</a>, consensus algorithms like Paxos <a href="#paxos" id="ref-paxos-1">(Lamport and et al., 2001)</a> and Raft <a href="#raft" id="ref-raft-1">(Ongaro and Ousterhout, 2014)</a>.</p>
 <p>In the given system, there is no eventual consistency. Updates are non-atomic
 and do not roll back on failure. A convention on the order of updates during
 blob inserts and blob deletions guarantees that the blob reference count is
@@ -73,56 +71,109 @@ then that is the correct <code>refcount</code>. This implies that nobody can mak
 transaction that would affect the count at all three times. The implemented
 solution produces new refcounts in an efficient manner and checks
 for consistency across multiple runs.</p>
-<h2>Algorithmic approach: Min Count Sketch</h2>
-<p>First idea: Min Count Sketch <a href="#countminsketch" id="ref-countminsketch-1">(Cormode and Muthukrishnan, 2005)</a>.</p>
+<p>This solution does not address how to update the blob store once an inconsistency
+in the reference count is identified. Even an atomic update
+of a true inconsistency can make the system inconsistent if another change is
+happening from another service at that moment.</p>
+<h2>Algorithmic approach: Count-Min Sketch</h2>
+<p>First idea: Count-Min Sketch <a href="#countminsketch" id="ref-countminsketch-1">(Cormode and Muthukrishnan, 2005)</a>.</p>
 <p>Scaling is bad for large <span class="math">\(\lVert\vec{a}\rVert_1\)</span> which is the number of all
-references (not even blobs, but references to blobs). A min count
+references (not even blobs, but references to blobs) or “stream size”. A Count-Min
 sketch guarantee is <span class="math">\(\hat{a}_i \leq a_i + \epsilon \lVert\vec{a}\rVert_1\)</span>.
 This implies that <span class="math">\(\epsilon\)</span> must be very small if <span class="math">\(a_i\)</span> should be within
 <span class="math">\(\mathcal{O}(1)\)</span> of <span class="math">\(\hat{a}_i\)</span> to distinguish between zero and single
-references to a blob. Therefore, a min count sketch with good enough
-precision would consume too much memory.</p>
+references to a blob. Although it is known that the observed precision in
+practical applications is better than the theoretical bound, a Count-Min sketch
+is unlikely to be good enough with reasonable memory sizes for the sketch.</p>
 <h2>Systems approach: Materialized Views and Parallel Requests</h2>
 <p>Define a <code>run_id</code> to be able to form consensus between multiple runs.
-Per shard, create a materialized view of reference counts for blobs.
-Two strategies are implemented:</p>
+<em>Per shard</em>, create a materialized view of reference counts for blobs in the
+<code>refcount_{runid}</code> table. Two strategies are implemented:</p>
 <ol>
 <li>Single query: using <code>GROUP BY</code> on a large <code>UNION</code>.</li>
 <li>Incremental: table-by-table queries that update counts using <code>INSERT INTO</code>
    in combination with <code>ON DUPLICATE KEY UPDATE</code>.</li>
 </ol>
+<p>These queries can be run in parallel on all shards. The created table contains
+columns for <code>blob_id</code>, <code>refcount</code> and <code>verified</code> (a boolean which is set to
+<code>TRUE</code> if this record was accessed for verification).</p>
+<p><em>On the blob store</em>, run a single full scan that returns batches of blob IDs
+and their reference counts. For every batch, query all shards in parallel
+with the list of blob ids to obtain the summed reference counts from the
+shards. Produce a list of inconsistencies for this run. Monitor this list
+over time to obtain true inconsistencies.</p>
 <h2>Interface</h2>
 <p>The command line interface provides two executables, <code>refcount-shard</code> and
-<code>refcount-global</code>. Both support <code>--help</code>, for example:</p>
-<div class="highlight"><pre><span></span>usage: refcount-shard <span class="o">[</span>-h<span class="o">]</span> <span class="o">[</span>--db-url DB_URL<span class="o">]</span> <span class="o">[</span>--run-id RUN_ID<span class="o">]</span>
+<code>refcount-global</code>. Both support <code>--help</code>:</p>
+<div class="highlight"><pre><span></span>usage: refcount-shard <span class="o">[</span>-h<span class="o">]</span> <span class="o">[</span>--db-url DB_URL<span class="o">]</span> <span class="o">[</span>--global-db<span class="o">]</span> <span class="o">[</span>--run-id RUN_ID<span class="o">]</span>
 
 optional arguments:
   -h, --help       show this <span class="nb">help</span> message and <span class="nb">exit</span>
-  --db-url DB_URL  database url
-  --run-id RUN_ID  run identifier
+  --run-id RUN_ID  run identifier <span class="o">(</span>default: <span class="m">1517785312</span><span class="o">)</span>
+  --db-url DB_URL  database url <span class="o">(</span>default:
+                   mysql+mysqldb://root@localhost/ProtonMailShard<span class="o">)</span>
+  --global-db      is this the global database <span class="o">(</span>default: False<span class="o">)</span>
 </pre></div>
-<p>Database urls are provided with the command line flag <code>--db-url</code> and are of the
-form <code>mysql+mysqldb://root@localhost/ProtonMailShard</code> which is the default for
-<code>refcount-shard</code>.</p>
+<div class="highlight"><pre><span></span>usage: refcount-blobstore <span class="o">[</span>-h<span class="o">]</span> <span class="o">[</span>--blobstore-db-url BLOBSTORE_DB_URL<span class="o">]</span>
+                          <span class="o">[</span>--global-db-url GLOBAL_DB_URL<span class="o">]</span>
+                          <span class="o">[</span>--shard-db-url SHARD_DB_URL <span class="o">[</span>SHARD_DB_URL ...<span class="o">]]</span>
+                          <span class="o">[</span>--run-id RUN_ID<span class="o">]</span>
+
+optional arguments:
+  -h, --help            show this <span class="nb">help</span> message and <span class="nb">exit</span>
+  --run-id RUN_ID       run identifier <span class="o">(</span>default: <span class="m">1517785253</span><span class="o">)</span>
+  --blobstore-db-url BLOBSTORE_DB_URL
+                        blobstore database url <span class="o">(</span>default:
+                        mysql+mysqldb://root@localhost/ProtonMailGlobal<span class="o">)</span>
+  --global-db-url GLOBAL_DB_URL
+                        global database url <span class="o">(</span>can be same as blobstore<span class="o">)</span>
+                        <span class="o">(</span>default:
+                        mysql+mysqldb://root@localhost/ProtonMailGlobal<span class="o">)</span>
+  --shard-db-url SHARD_DB_URL <span class="o">[</span>SHARD_DB_URL ...<span class="o">]</span>
+                        list of shard database urls <span class="o">(</span>default:
+                        <span class="o">[</span><span class="s1">'mysql+mysqldb://root@localhost/ProtonMailShard'</span><span class="o">])</span>
+</pre></div>
+<p>The <code>global-db</code> is the database containing the <code>SentMessage</code> and
+<code>SentAttachment</code> tables and <code>blobstore-db</code> contains the <code>BlobStorage</code> table.
+In the given example they are in the same database.</p>
+<p>An example session with explicit parameters:</p>
+<div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">RUNID</span><span class="o">=</span><span class="sb">`</span>date +%s<span class="sb">`</span>
+
+<span class="c1"># preprocess shards individually (can be parallelized)</span>
+refcount-shard --run-id <span class="si">${</span><span class="nv">RUNID</span><span class="si">}</span> <span class="se">\</span>
+  --db-url mysql+mysqldb://root@localhost/ProtonMailShard
+refcount-shard --run-id <span class="si">${</span><span class="nv">RUNID</span><span class="si">}</span> <span class="se">\</span>
+  --db-url mysql+mysqldb://root@localhost/ProtonMailGlobal --global-db
+
+<span class="c1"># scan over blob store</span>
+refcount-blobstore --run-id <span class="si">${</span><span class="nv">RUNID</span><span class="si">}</span> <span class="se">\</span>
+    --blobstore-db-url mysql+mysqldb://root@localhost/ProtonMailGlobal <span class="se">\</span>
+    --global-db-url mysql+mysqldb://root@localhost/ProtonMailGlobal <span class="se">\</span>
+    --shard-db-url mysql+mysqldb://root@localhost/ProtonMailShard
+</pre></div>
+<p>The last command produces a <span class="caps">JSON</span> output of inconsistencies of the form
+<code>{blob_id: (blob ref count, shard ref count)}</code>. This should be collected
+over multiple runs spread out over time to find repeated inconsistencies.</p>
 <h2>Conclusions</h2>
-<ul>
-<li>Why count at all? Drop the global refcount table and prune the datastore
-  directly? Dropping the count would simplify this check and improve the
-  performance of frontend services.</li>
-</ul><hr/>
+<p>Tests are written for <code>pytest</code> and code is linted with <code>flake8</code> with the
+stricter <code>hacking</code> extension. Development and packaging notes are in the
+<code>README.md</code> file.</p>
+<p>Tests do not modify the given database tables. To
+test for missing blob entries or wrong reference counts in the blob store, the
+reader routine is modified to inject the modified data.</p>
+<p>There are many opportunities for performance improvements and the proposed
+structure does allow for trivial parallelizations.</p>
+<p><em>Questions</em>: Eviction with reference counts is particularly good for short-lived
+data. I would be curious how many blobs of encrypted text are short lived in
+the Protonmail system. If the majority of the blobs is long lived, would it be
+possible to drop the global refcount table and apply the above procedure to the
+<span class="caps">CEPH</span> datastore directly? Dropping the count would simplify this check and
+improve the performance of frontend services because they don’t have to update
+reference counts anymore.</p><hr/>
 <h2>Bibliography</h2>
-<p id="spanner">Eric Brewer.
-<span class="bibtex-protected">Spanner, TrueTime and the CAP Theorem</span>.
-Technical Report, Google, 2017. <a class="cite-backref" href="#ref-spanner-1" title="Jump back to reference 1">↩</a></p>
 <p id="countminsketch">Graham Cormode and Shan Muthukrishnan.
 An improved data stream summary: the count-min sketch and its applications.
 <em>Journal of Algorithms</em>, 55(1):58–75, 2005. <a class="cite-backref" href="#ref-countminsketch-1" title="Jump back to reference 1">↩</a></p>
-<p id="paxos">Leslie Lamport and others.
-Paxos made simple.
-<em>ACM Sigact News</em>, 32(4):18–25, 2001. <a class="cite-backref" href="#ref-paxos-1" title="Jump back to reference 1">↩</a></p>
-<p id="raft">Diego Ongaro and John K Ousterhout.
-In search of an understandable consensus algorithm.
-In <em>USENIX Annual Technical Conference</em>, 305–319. 2014. <a class="cite-backref" href="#ref-raft-1" title="Jump back to reference 1">↩</a></p>
 <div class="hr"></div>
 <a class="go-top" href="#">Go Top</a>
 <footer class="footer">
