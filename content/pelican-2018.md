@@ -24,4 +24,3 @@ Cost, have to contribute some changes myself:
   [pelican-jsmath](https://github.com/svenkreiss/pelican-jsmath).
   The new plugin is $\alpha\omega\epsilon s \sigma m \epsilon$ and described in a separate
   [blog post]({filename}/pelican-jsmath.md).
-* image_process: messes with closing </link> from [pelican-dynamic!!!!!!!!]()

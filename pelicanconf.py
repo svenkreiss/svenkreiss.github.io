@@ -66,7 +66,7 @@ PLUGINS = [
     'liquid_tags.include_code',
     # 'liquid_tags.notebook',
     'representative_image',
-    # 'image_process',  # <-- messes with <link> tags and removes close
+    'image_process',
     'pelican-cite',
     'related_posts',
     'pelican_dynamic',
