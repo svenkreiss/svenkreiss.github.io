@@ -69,6 +69,7 @@ PLUGINS = [
     'image_process',
     'pelican-cite',
     'related_posts',
+    'pelican_dynamic',
 ]
 
 # Pelican cite plugin

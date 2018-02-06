@@ -4,6 +4,7 @@ Category: Tech
 Tags: dvds-js, JavaScript, d3.js, distributed, version control
 Slug: dvds-js-v0.1.0
 Summary: Distributed Versioned Data Structures in JavaScript. Like git in js.
+Styles: dvds-js.css
 Status: published
 
 ## This article and dvds-js are outdated :(
@@ -38,22 +39,6 @@ This post is about the first development release, version 0.1.0.
 ## Example
 
 A repository `a` is created holding an array with the two names `Paul` and `Adam`. Then this repository is forked and the fork is called `b`. Both `a` and `b` are then modified. To demonstrate streaming capabilities, repository `b` is stringified before and after the manipulation. At the end `b` is merged into `a` and the result is shown below.
-
-<style type="text/css" scoped>
-    svg {
-        border:1px solid #faa;
-        background-color:#fee;
-    svg .link {
-        stroke: #000;
-        stroke-width: 1.5px;
-    svg .node circle {
-        fill: #000;
-        stroke: #fff;
-        stroke-width: 1.5px;
-    svg .node text {
-        text-anchor: middle;
-    }
-</style>
 
 	:::JavaScript
 	require(['dvds', 'dvds.visualize'], function() {

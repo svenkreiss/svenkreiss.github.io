@@ -1,0 +1,16 @@
+svg {
+    border:1px solid #faa;
+    background-color:#fee;
+}
+svg .link {
+    stroke: #000;
+    stroke-width: 1.5px;
+}
+svg .node circle {
+    fill: #000;
+    stroke: #fff;
+    stroke-width: 1.5px;
+}
+svg .node text {
+    text-anchor: middle;
+}
