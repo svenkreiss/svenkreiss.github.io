@@ -1,161 +1,178 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta content="Concept for peer-to-peer computing." name="description"/>
-<meta content="summary" name="twitter:card"/>
-<meta content="@svenkreiss" name="twitter:site"/>
-<meta content="@svenkreiss" name="twitter:creator"/>
-<meta content="The Data Center and the Bazaar" name="twitter:title"/>
-<meta content="Concept for peer-to-peer computing." name="twitter:description"/>
-<meta content="http://www.svenkreiss.com/images/me_nyc_square_500.jpeg" name="twitter:image:src"/>
-<meta content="svenkreiss.com" name="twitter:domain"/>
-<meta content="The Data Center and the Bazaar" property="og:title"/>
-<meta content="article" property="og:type"/>
-<meta content="Concept for peer-to-peer computing." property="og:description"/>
-<meta content="http://www.svenkreiss.com/images/me_nyc_square_500.jpeg" property="og:image"/>
-<meta content="svenkreiss.com" property="og:site_name"/>
-<link href="http://www.svenkreiss.com/feeds/all.atom.xml" rel="alternate" title="Sven Kreiss Full Atom Feed" type="application/atom+xml"/>
-<title>The Data Center and the Bazaar - Sven Kreiss</title>
-<!-- KaTeX -->
-<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0-beta1/katex.min.css" integrity="sha384-VEnyslhHLHiYPca9KFkBB3CMeslnM9CzwjxsEbZTeA21JBm7tdLwKoZmCt3cZTYD" rel="stylesheet"/>
-<script crossorigin="anonymous" integrity="sha384-O4hpKqcplNCe+jLuBVEXC10Rn1QEqAmX98lKAIFBEDxZI0a+6Z2w2n8AEtQbR4CD" src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0-beta1/katex.min.js"></script>
-<script crossorigin="anonymous" integrity="sha384-IiI65aU9ZYub2MY9zhtKd1H2ps7xxf+eb2YFG9lX6uRqpXCvBTOidPRCXCrQ++Uc" src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0-beta1/contrib/auto-render.min.js"></script>
-<!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.3.0/pure-min.css"> -->
-<link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"/>
-<link href="http://www.svenkreiss.com/theme/css/pure.css" rel="stylesheet"/>
-<link href="http://www.svenkreiss.com/theme/css/pygments.css" rel="stylesheet"/>
-<!-- for pelican_dynamic plugin -->
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Concept for peer-to-peer computing." />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@svenkreiss" />
+    <meta name="twitter:creator" content="@svenkreiss" />
+    <meta name="twitter:title" content="The Data Center and the Bazaar" />
+    <meta name="twitter:description" content="Concept for peer-to-peer computing." />
+    <meta name="twitter:image:src" content="http://www.svenkreiss.com/images/me_nyc_square_500.jpeg" />
+    <meta name="twitter:domain" content="svenkreiss.com" />
+
+    <meta property="og:title" content="The Data Center and the Bazaar" />
+    <meta property="og:type" content="article" />
+    <meta property="og:description" content="Concept for peer-to-peer computing." />
+    <meta property="og:image" content="http://www.svenkreiss.com/images/me_nyc_square_500.jpeg" />
+    <meta property="og:site_name" content="svenkreiss.com" />
+
+        <link rel="alternate"  href="http://www.svenkreiss.com/feeds/all.atom.xml" type="application/atom+xml" title="Sven Kreiss Full Atom Feed"/>
+
+        <title>The Data Center and the Bazaar - Sven Kreiss</title>
+
+
+    <!-- KaTeX -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0-beta1/katex.min.css" integrity="sha384-VEnyslhHLHiYPca9KFkBB3CMeslnM9CzwjxsEbZTeA21JBm7tdLwKoZmCt3cZTYD" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0-beta1/katex.min.js" integrity="sha384-O4hpKqcplNCe+jLuBVEXC10Rn1QEqAmX98lKAIFBEDxZI0a+6Z2w2n8AEtQbR4CD" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0-beta1/contrib/auto-render.min.js" integrity="sha384-IiI65aU9ZYub2MY9zhtKd1H2ps7xxf+eb2YFG9lX6uRqpXCvBTOidPRCXCrQ++Uc" crossorigin="anonymous"></script>
+
+    <!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.3.0/pure-min.css"> -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://www.svenkreiss.com/theme/css/pure.css">
+    <link rel="stylesheet" href="http://www.svenkreiss.com/theme/css/pygments.css">
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+    <!-- for pelican_dynamic plugin -->
+    <!-- end pelican_dynamic -->
+
 </head>
+
 <body>
 <div class="pure-g-r" id="layout">
-<div class="sidebar sidebar-article pure-u">
-<header class="header-article">
-<a href="http://www.svenkreiss.com/blog/author/sven-kreiss/" title="See posts by Sven Kreiss">
-<img alt="Sven Kreiss" class="avatar" src="https://www.gravatar.com/avatar/562a52f3ffcb6c2a3556f91ddc540776"/>
-</a>
-<h2 class="article-info">Sven Kreiss</h2>
-<h5>Draft</h5>
-<p>August 14, 2014</p>
-<a class="header-article-home" href="/">←Home</a>
-</header>
-</div>
-<div class="pure-u">
-<div class="content">
-<section class="post">
-<header class="post-header">
-<h1>The Data Center and the Bazaar</h1>
-<p class="post-meta">
+    <div class="sidebar sidebar-article pure-u">
+        <header class="header-article">
+                <a href="http://www.svenkreiss.com/blog/author/sven-kreiss/" title="See posts by Sven Kreiss">
+                        <img class="avatar" alt="Sven Kreiss" src="https://www.gravatar.com/avatar/562a52f3ffcb6c2a3556f91ddc540776">
+                </a>
+                <h2 class="article-info">Sven Kreiss</h2>
+                <h5>Draft</h5>
+                <p>August 14, 2014</p>
+                <a class="header-article-home" href="/">&larr;Home</a>
+        </header>
+    </div>
+    <div class="pure-u">
+        <div class="content">
+            <section class="post">
+                <header class="post-header">
+                    <h1>The Data Center and the&nbsp;Bazaar</h1>
+                        <p class="post-meta">
                             // under
                                 <a class="post-category" href="http://www.svenkreiss.com/blog/tag/docker/">Docker</a>
-<a class="post-category" href="http://www.svenkreiss.com/blog/tag/go/">Go</a>
-<a class="post-category" href="http://www.svenkreiss.com/blog/tag/hpc/">HPC</a>
-<a class="post-category" href="http://www.svenkreiss.com/blog/tag/peer-to-peer/">peer-to-peer</a>
-<a class="post-category" href="http://www.svenkreiss.com/blog/tag/distributed/">distributed</a>
-                            in <a class="post-category" href="http://www.svenkreiss.com/blog/category/tech/">Tech</a>   
+                                <a class="post-category" href="http://www.svenkreiss.com/blog/tag/go/">Go</a>
+                                <a class="post-category" href="http://www.svenkreiss.com/blog/tag/hpc/">HPC</a>
+                                <a class="post-category" href="http://www.svenkreiss.com/blog/tag/peer-to-peer/">peer-to-peer</a>
+                                <a class="post-category" href="http://www.svenkreiss.com/blog/tag/distributed/">distributed</a>
+                            in <a class="post-category" href="http://www.svenkreiss.com/blog/category/tech/">Tech</a>&nbsp;&nbsp;&nbsp;
 
                             <span style="display:inline-block;">
                             // share on <a href="https://twitter.com/share?text=%22The%20Data%20Center%20and%20the%26nbsp%3BBazaar%22&amp;via=svenkreiss" target="_blank">
-<i class="fa fa-twitter fa-lg"></i> Twitter
+                                <i class="fa fa-twitter fa-lg"></i> Twitter
                             </a>
-</span>
-</p>
-</header>
-</section>
-<p><img alt="dockbroker icon" class="img-thumbnail float-right" src="/images/bazaar.png" title="dockbroker icon" width="150"/>
-This is a concept for peer-to-peer computing. The goal is to use a heterogeneous set of computers to run analyses on data. The computers might be the local machine, a remote desktop, an <span class="caps">AWS</span> <span class="caps">EC2</span> instance, an <a href="http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create_deploy_docker.html"><span class="caps">AWS</span> Elastic Beanstalk app</a>, a node on the <a href="https://developers.google.com/compute/docs/containers">Google Compute Engine</a> or some other real or virtual machine. All these machines have access to data in the form of <code>s3://*</code>, <code>hdfs://*</code>, <code>file://*</code>, <code>ssh://*</code>, <code>http://*</code> or some other means which might be slow or fast and cheap or expensive.</p>
+                            </span>
+                        </p>
+                </header>
+            </section>
+            <p><img class="img-thumbnail float-right" src="/images/bazaar.png" width="150" title="dockbroker icon" alt="dockbroker icon">
+This is a concept for peer-to-peer computing. The goal is to use a heterogeneous set of computers to run analyses on data. The computers might be the local machine, a remote desktop, an <span class="caps">AWS</span> <span class="caps">EC2</span> instance, an <a href="http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create_deploy_docker.html"><span class="caps">AWS</span> Elastic Beanstalk app</a>, a node on the <a href="https://developers.google.com/compute/docs/containers">Google Compute Engine</a> or some other real or virtual machine. All these machines have access to data in the form of <code>s3://*</code>, <code>hdfs://*</code>, <code>file://*</code>, <code>ssh://*</code>, <code>http://*</code> or some other means which might be slow or fast and cheap or&nbsp;expensive.</p>
 <h2>Flow</h2>
-<p>Assigning priorities to jobs or setting up priority queues on clusters is tedious and usually not very effective. Simple <code>PBS queue</code> systems don’t even have priorities, but all users just submit all their jobs to the same queue. Jobs are submitted to a central manager and get executed on the next available compute node. The data then has to be copied to that node.</p>
-<p>The idea behind this post is more similar to a bazaar where there is no central manager. Every <em>client</em> knows at least one <em>broker</em> which is a manager of a single compute node. Brokers know each other and can refer clients. To submit a job, the client asks a subset of the brokers that it knows for an <em>offer</em> based on a description of the job. The offer is made in <span class="caps">US</span>$ and comes with an expected completion time. The broker makes that offer based on the prices that are given by the cloud provider or (partially) free for local machines. The client picks the cheapest offer taking the estimated completion time into account.</p>
-<p>Clients can build reputation in brokers when they deliver on time and still prefer more expensive brokers. Brokers can also build reputation of clients when their estimated run times and required resources match the job description the offer was based on. If that is not the case and a client repeatedly underestimates job processing times, the broker could add extra fees.</p>
-<p>At this point, the offers are only used to find the best place to run the job. No money is actually transfered and that is just fine. However, one could go one step further and have digital coins (something like Bitcoin) just for this set of machines. People in an organization can be given a monthly amount of coins and then pay for their compute jobs. This would make users more conscious of the resources they are using and would limit a combined “cpu+memory+data” quota. At the same time, it would act as a security measure as people without this coin would not be able to use the resources. (For the cryptocurrency experts: one could use <a href="http://en.wikipedia.org/wiki/Smart_contract">smart contracts</a> and maybe <a href="https://docs.google.com/document/d/1AnkP_cVZTCMLIzw4DvsW6M8Q2JC0lIzrTLuoWu2z1BE">colored coins</a>.)</p>
+<p>Assigning priorities to jobs or setting up priority queues on clusters is tedious and usually not very effective. Simple <code>PBS queue</code> systems don&#8217;t even have priorities, but all users just submit all their jobs to the same queue. Jobs are submitted to a central manager and get executed on the next available compute node. The data then has to be copied to that&nbsp;node.</p>
+<p>The idea behind this post is more similar to a bazaar where there is no central manager. Every <em>client</em> knows at least one <em>broker</em> which is a manager of a single compute node. Brokers know each other and can refer clients. To submit a job, the client asks a subset of the brokers that it knows for an <em>offer</em> based on a description of the job. The offer is made in <span class="caps">US</span>$ and comes with an expected completion time. The broker makes that offer based on the prices that are given by the cloud provider or (partially) free for local machines. The client picks the cheapest offer taking the estimated completion time into&nbsp;account.</p>
+<p>Clients can build reputation in brokers when they deliver on time and still prefer more expensive brokers. Brokers can also build reputation of clients when their estimated run times and required resources match the job description the offer was based on. If that is not the case and a client repeatedly underestimates job processing times, the broker could add extra&nbsp;fees.</p>
+<p>At this point, the offers are only used to find the best place to run the job. No money is actually transfered and that is just fine. However, one could go one step further and have digital coins (something like Bitcoin) just for this set of machines. People in an organization can be given a monthly amount of coins and then pay for their compute jobs. This would make users more conscious of the resources they are using and would limit a combined &#8220;cpu+memory+data&#8221; quota. At the same time, it would act as a security measure as people without this coin would not be able to use the resources. (For the cryptocurrency experts: one could use <a href="http://en.wikipedia.org/wiki/Smart_contract">smart contracts</a> and maybe <a href="https://docs.google.com/document/d/1AnkP_cVZTCMLIzw4DvsW6M8Q2JC0lIzrTLuoWu2z1BE">colored coins</a>.)</p>
 <h2>Technical Suggestion: <code>dockbroker</code></h2>
-<p>To make things a bit more concrete, here is an example interface. It uses <a href="https://www.docker.com/">Docker</a> which is advertised with <em>“Build, Ship and Run Any App, Anywhere”</em> and <em>“An open platform for distributed applications for developers and sysadmins”</em>. It is a little bit like a virtual machine, but uses the same kernel as the host and therefore it is fast. You can run a <span class="caps">JVM</span> inside it, but you can also run plain C.</p>
+<p>To make things a bit more concrete, here is an example interface. It uses <a href="https://www.docker.com/">Docker</a> which is advertised with <em>&#8220;Build, Ship and Run Any App, Anywhere&#8221;</em> and <em>&#8220;An open platform for distributed applications for developers and sysadmins&#8221;</em>. It is a little bit like a virtual machine, but uses the same kernel as the host and therefore it is fast. You can run a <span class="caps">JVM</span> inside it, but you can also run plain&nbsp;C.</p>
 <h3>Job</h3>
-<p>A job is defined by a <code>Dockerfile</code> and a <code>manifest</code> either in a local directory or inside a remote repository (for example on GitHub). The broker will use the Dockerfile to see which slices of the Docker image it has cached (and reduce the price). The manifest is used to quantify the price of resources.</p>
+<p>A job is defined by a <code>Dockerfile</code> and a <code>manifest</code> either in a local directory or inside a remote repository (for example on GitHub). The broker will use the Dockerfile to see which slices of the Docker image it has cached (and reduce the price). The manifest is used to quantify the price of&nbsp;resources.</p>
 <p>Example of a simple <code>manifest</code> file:</p>
 <div class="highlight"><pre><span></span>{
-    "Name": "Test job 1",
-    "Submitter": "Sven Kreiss &lt;me@svenkreiss.com&gt;",
-    "MaxDuration": "24h",
-    "EstDuration": "12h",
+    &quot;Name&quot;: &quot;Test job 1&quot;,
+    &quot;Submitter&quot;: &quot;Sven Kreiss &lt;me@svenkreiss.com&gt;&quot;,
+    &quot;MaxDuration&quot;: &quot;24h&quot;,
+    &quot;EstDuration&quot;: &quot;12h&quot;,
 }
 </pre></div>
-<p>This job has access to unspecified <code>InputResources</code> and <code>OutputResources</code> (see advanced example below) but brokers who have easy access to those resources wont be able to make better offers than any other broker. Large files should always be specified because neglecting to specify expensive resources could lead to bad reputation.</p>
+
+
+<p>This job has access to unspecified <code>InputResources</code> and <code>OutputResources</code> (see advanced example below) but brokers who have easy access to those resources wont be able to make better offers than any other broker. Large files should always be specified because neglecting to specify expensive resources could lead to bad&nbsp;reputation.</p>
 <p>Example of an advanced <code>manifest</code> file:</p>
 <div class="highlight"><pre><span></span>{
-    "Name": "Test job 2",
-    "Submitter": "Sven Kreiss &lt;me@svenkreiss.com&gt;",
-    "MaxDuration": "24h",
-    "EstDuration": "12h",
-    "RAM": "4GB",
-    "GPU": "nvidia",
-    "JobArray": 64,
-    "RequireParallelExecution": true,
-    "InputResources": [
+    &quot;Name&quot;: &quot;Test job 2&quot;,
+    &quot;Submitter&quot;: &quot;Sven Kreiss &lt;me@svenkreiss.com&gt;&quot;,
+    &quot;MaxDuration&quot;: &quot;24h&quot;,
+    &quot;EstDuration&quot;: &quot;12h&quot;,
+    &quot;RAM&quot;: &quot;4GB&quot;,
+    &quot;GPU&quot;: &quot;nvidia&quot;,
+    &quot;JobArray&quot;: 64,
+    &quot;RequireParallelExecution&quot;: true,
+    &quot;InputResources&quot;: [
         {
-            "CacheLifeTime": "1h",
-            "Size": "1MB",
-            "Md5": "12345678901234567890",
-            "Locations": [
-                "file://home/svenkreiss/data/some_data.csv",
-                "s3://testbucket/some_data.csv",
+            &quot;CacheLifeTime&quot;: &quot;1h&quot;,
+            &quot;Size&quot;: &quot;1MB&quot;,
+            &quot;Md5&quot;: &quot;12345678901234567890&quot;,
+            &quot;Locations&quot;: [
+                &quot;file://home/svenkreiss/data/some_data.csv&quot;,
+                &quot;s3://testbucket/some_data.csv&quot;,
             ],
         },
         {
-            "JobArray": "0-31",
-            "CacheLifeTime": "forever",
-            "Size": "500MB",
-            "Md5": "12345678901234567891",
-            "Locations": [
-                "hdfs://some_path/some_file_0.tar.gz"
+            &quot;JobArray&quot;: &quot;0-31&quot;,
+            &quot;CacheLifeTime&quot;: &quot;forever&quot;,
+            &quot;Size&quot;: &quot;500MB&quot;,
+            &quot;Md5&quot;: &quot;12345678901234567891&quot;,
+            &quot;Locations&quot;: [
+                &quot;hdfs://some_path/some_file_0.tar.gz&quot;
             ],
         },
         {
-            "JobArray": "32-63",
-            "CacheLifeTime": "forever",
-            "Size": "500MB",
-            "Md5": "12345678901234567892",
-            "Locations": [
-                "hdfs://some_path/some_file_1.tar.gz"
+            &quot;JobArray&quot;: &quot;32-63&quot;,
+            &quot;CacheLifeTime&quot;: &quot;forever&quot;,
+            &quot;Size&quot;: &quot;500MB&quot;,
+            &quot;Md5&quot;: &quot;12345678901234567892&quot;,
+            &quot;Locations&quot;: [
+                &quot;hdfs://some_path/some_file_1.tar.gz&quot;
             ],
         },
     ],
-    "OutputResources": [
-        {"Size": "1MB", "Location": "file://home/svenkreiss/job/test_job_1.csv"},
-        {"Size": "1KB", "Location": "file://home/svenkreiss/job/test_job_1.log"},
+    &quot;OutputResources&quot;: [
+        {&quot;Size&quot;: &quot;1MB&quot;, &quot;Location&quot;: &quot;file://home/svenkreiss/job/test_job_1.csv&quot;},
+        {&quot;Size&quot;: &quot;1KB&quot;, &quot;Location&quot;: &quot;file://home/svenkreiss/job/test_job_1.log&quot;},
     ],
 }
 </pre></div>
-<p>Parallel jobs that are communicating are created by setting <code>"RequireParallelExecution": true</code> which will tell the broker to take only as many jobs as can be run in parallel. Other jobs have to be left to other brokers. The estimated time for completion will have to take into account that all jobs have to run in parallel.</p>
+
+
+<p>Parallel jobs that are communicating are created by setting <code>"RequireParallelExecution": true</code> which will tell the broker to take only as many jobs as can be run in parallel. Other jobs have to be left to other brokers. The estimated time for completion will have to take into account that all jobs have to run in&nbsp;parallel.</p>
 <h3>Nodes running <code>dockbroker</code></h3>
-<p>Every compute node runs a <code>dockbroker</code>. <code>dockbroker</code>s advertise their existence to other <code>dockbroker</code>s. Clients can ask “Who else do you know?” to discover other brokers to get alternative offers. Brokers create offers and handle the scheduling of jobs.
-Nodes that have data locally available or already cached part of the Docker image (a <code>slice</code>) are cheaper and therefore preferred. When data has to be downloaded to and uploaded from the node, the price for the bandwidth as well as the extra time are taken into account in the offer. Bandwidth price and download times depend on the location of the source (e.g. it is cheaper to download data from <a href="http://aws.amazon.com/s3/"><span class="caps">AWS</span> S3</a> when the job is run on <a href="http://aws.amazon.com/ec2/"><span class="caps">AWS</span> <span class="caps">EC2</span></a>; see <a href="http://aws.amazon.com/s3/pricing/"><span class="caps">AWS</span> S3 pricing</a>). This gives the system <em>data locality</em>. The estimated time to completion includes the estimated run times for jobs already in the queue.</p>
-<h3>Clients pick Brokers</h3>
-<p>Generally, clients pick the cheapest broker. However, the estimated time for completion might be valuable. For a compute node, the value of time is linear as the price of keeping the machine running on a cloud provider is a fixed cost by the hour. The “pain” of waiting for a job to complete could increase quadratic or exponentially which will define a sweet spot for when it is appropriate to pay more for a faster compute node.</p>
-<h2>Use Cases</h2>
-<p><code>dockbroker</code> just sets up environments. The actual parallelized execution, collection of results, data management, etc. has to be handled separately. You could imagine running an <a href="http://ipython.org/ipython-doc/dev/parallel/parallel_intro.html">ipcluster</a> with it (popular in the <code>IPython</code> community) or running an <a href="https://spark.apache.org/">Apache Spark</a> cluster. Sometimes you just need different software versions in your cluster (like different versions of <a href="http://www.r-project.org/">R</a> or <a href="http://root.cern.ch"><span class="caps">ROOT</span></a>) or different resources (e.g. a <span class="caps">GPU</span>) and <code>dockbroker</code> can find the best place for the job and create the virtual environment.</p>
+<p>Every compute node runs a <code>dockbroker</code>. <code>dockbroker</code>s advertise their existence to other <code>dockbroker</code>s. Clients can ask &#8220;Who else do you know?&#8221; to discover other brokers to get alternative offers. Brokers create offers and handle the scheduling of jobs.
+Nodes that have data locally available or already cached part of the Docker image (a <code>slice</code>) are cheaper and therefore preferred. When data has to be downloaded to and uploaded from the node, the price for the bandwidth as well as the extra time are taken into account in the offer. Bandwidth price and download times depend on the location of the source (e.g. it is cheaper to download data from <a href="http://aws.amazon.com/s3/"><span class="caps">AWS</span> S3</a> when the job is run on <a href="http://aws.amazon.com/ec2/"><span class="caps">AWS</span> <span class="caps">EC2</span></a>; see <a href="http://aws.amazon.com/s3/pricing/"><span class="caps">AWS</span> S3 pricing</a>). This gives the system <em>data locality</em>. The estimated time to completion includes the estimated run times for jobs already in the&nbsp;queue.</p>
+<h3>Clients pick&nbsp;Brokers</h3>
+<p>Generally, clients pick the cheapest broker. However, the estimated time for completion might be valuable. For a compute node, the value of time is linear as the price of keeping the machine running on a cloud provider is a fixed cost by the hour. The &#8220;pain&#8221; of waiting for a job to complete could increase quadratic or exponentially which will define a sweet spot for when it is appropriate to pay more for a faster compute&nbsp;node.</p>
+<h2>Use&nbsp;Cases</h2>
+<p><code>dockbroker</code> just sets up environments. The actual parallelized execution, collection of results, data management, etc. has to be handled separately. You could imagine running an <a href="http://ipython.org/ipython-doc/dev/parallel/parallel_intro.html">ipcluster</a> with it (popular in the <code>IPython</code> community) or running an <a href="https://spark.apache.org/">Apache Spark</a> cluster. Sometimes you just need different software versions in your cluster (like different versions of <a href="http://www.r-project.org/">R</a> or <a href="http://root.cern.ch"><span class="caps">ROOT</span></a>) or different resources (e.g. a <span class="caps">GPU</span>) and <code>dockbroker</code> can find the best place for the job and create the virtual&nbsp;environment.</p>
 <h2>Why?</h2>
-<p>Because I need it. However, it is not like I am creating distributed computing environments every day. I am more a user of <span class="caps">HPC</span>, but it sounds like an interesting project to implement in <a href="http://golang.org/">Go</a> (Docker is written in <a href="http://golang.org/">Go</a>). Contributions to <a href="https://github.com/svenkreiss/dockbroker">dockbroker on github</a> are very welcome.</p>
-<div class="hr"></div>
-<h2>Related Posts</h2>
-<ul class="related-posts">
-<li>
-<a class="title" href="http://www.svenkreiss.com/blog/dvds-js-v0.1.0/">dvds-js version 0.1.0</a>
-<span class="summary">Distributed Versioned Data Structures in JavaScript. Like git in js.</span>
-</li>
-</ul>
-<a class="go-top" href="#">Go Top</a>
+<p>Because I need it. However, it is not like I am creating distributed computing environments every day. I am more a user of <span class="caps">HPC</span>, but it sounds like an interesting project to implement in <a href="http://golang.org/">Go</a> (Docker is written in <a href="http://golang.org/">Go</a>). Contributions to <a href="https://github.com/svenkreiss/dockbroker">dockbroker on github</a> are very&nbsp;welcome.</p>
+            <div class="hr"></div>
+
+            <h2>Related Posts</h2>
+            <ul class="related-posts">
+                <li>
+                    <a class="title" href="http://www.svenkreiss.com/blog/dvds-js-v0.1.0/">dvds-js version&nbsp;0.1.0</a>
+                    <span class="summary">Distributed Versioned Data Structures in JavaScript. Like git in js.</span>
+                </li>
+            </ul>
+
+            <a href="#" class="go-top">Go Top</a>
 <footer class="footer">
-<p>© Sven Kreiss 2014 – 2018.<br/>
-    This work is licensed under a <a href="http://creativecommons.org/licenses/by/4.0/" rel="license">Creative Commons Attribution 4.0 International License</a>.</p>
-</footer> </div>
+    <p>&copy; Sven Kreiss 2014 &ndash; 2018.<br />
+    This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</p>
+</footer>        </div>
+    </div>
 </div>
-</div>
-<script>
+    <script>
         renderMathInElement(document.body);
 
         var $top = $('.go-top');
@@ -183,7 +200,10 @@ Nodes that have data locally available or already cached part of the Docker imag
             event.preventDefault();
         });
     </script>
-<!-- for pelican_dynamic plugin -->
+
+    <!-- for pelican_dynamic plugin -->
+
+
 <script type="text/javascript">
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-4070485-2']);
@@ -195,5 +215,6 @@ Nodes that have data locally available or already cached part of the Docker imag
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
 </script>
+
 </body>
 </html>
