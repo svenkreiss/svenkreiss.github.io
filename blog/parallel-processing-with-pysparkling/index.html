@@ -1,86 +1,76 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Benchmarks for the latest parallel features in pysparkling." />
-
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:site" content="@svenkreiss" />
-    <meta name="twitter:creator" content="@svenkreiss" />
-    <meta name="twitter:title" content="Parallel Processing with pysparkling" />
-    <meta name="twitter:description" content="Benchmarks for the latest parallel features in pysparkling." />
-    <meta name="twitter:image:src" content="http://www.svenkreiss.com/images/pysparkling_4cores.png" />
-    <meta name="twitter:domain" content="svenkreiss.com" />
-
-    <meta property="og:title" content="Parallel Processing with pysparkling" />
-    <meta property="og:type" content="article" />
-    <meta property="og:description" content="Benchmarks for the latest parallel features in pysparkling." />
-    <meta property="og:image" content="http://www.svenkreiss.com/images/pysparkling_4cores.png" />
-    <meta property="og:site_name" content="svenkreiss.com" />
-
-        <link rel="alternate"  href="http://www.svenkreiss.com/feeds/all.atom.xml" type="application/atom+xml" title="Sven Kreiss Full Atom Feed"/>
-
-        <title>Parallel Processing with pysparkling - Sven Kreiss</title>
-
-
-    <!-- KaTeX -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0-beta1/katex.min.css" integrity="sha384-VEnyslhHLHiYPca9KFkBB3CMeslnM9CzwjxsEbZTeA21JBm7tdLwKoZmCt3cZTYD" crossorigin="anonymous">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0-beta1/katex.min.js" integrity="sha384-O4hpKqcplNCe+jLuBVEXC10Rn1QEqAmX98lKAIFBEDxZI0a+6Z2w2n8AEtQbR4CD" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0-beta1/contrib/auto-render.min.js" integrity="sha384-IiI65aU9ZYub2MY9zhtKd1H2ps7xxf+eb2YFG9lX6uRqpXCvBTOidPRCXCrQ++Uc" crossorigin="anonymous"></script>
-
-    <!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.3.0/pure-min.css"> -->
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="http://www.svenkreiss.com/theme/css/pure.css">
-    <link rel="stylesheet" href="http://www.svenkreiss.com/theme/css/pygments.css">
-
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
-    <!-- for pelican_dynamic plugin -->
-    <!-- end pelican_dynamic -->
-
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Benchmarks for the latest parallel features in pysparkling." name="description"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="@svenkreiss" name="twitter:site"/>
+<meta content="@svenkreiss" name="twitter:creator"/>
+<meta content="Parallel Processing with pysparkling" name="twitter:title"/>
+<meta content="Benchmarks for the latest parallel features in pysparkling." name="twitter:description"/>
+<meta content="http://www.svenkreiss.com/images/pysparkling_4cores.png" name="twitter:image:src"/>
+<meta content="svenkreiss.com" name="twitter:domain"/>
+<meta content="Parallel Processing with pysparkling" property="og:title"/>
+<meta content="article" property="og:type"/>
+<meta content="Benchmarks for the latest parallel features in pysparkling." property="og:description"/>
+<meta content="http://www.svenkreiss.com/images/pysparkling_4cores.png" property="og:image"/>
+<meta content="svenkreiss.com" property="og:site_name"/>
+<link href="http://www.svenkreiss.com/feeds/all.atom.xml" rel="alternate" title="Sven Kreiss Full Atom Feed" type="application/atom+xml"/>
+<title>Parallel Processing with pysparkling - Sven Kreiss</title>
+<!-- KaTeX -->
+<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0-beta1/katex.min.css" integrity="sha384-VEnyslhHLHiYPca9KFkBB3CMeslnM9CzwjxsEbZTeA21JBm7tdLwKoZmCt3cZTYD" rel="stylesheet"/>
+<script crossorigin="anonymous" integrity="sha384-O4hpKqcplNCe+jLuBVEXC10Rn1QEqAmX98lKAIFBEDxZI0a+6Z2w2n8AEtQbR4CD" src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0-beta1/katex.min.js"></script>
+<script crossorigin="anonymous" integrity="sha384-IiI65aU9ZYub2MY9zhtKd1H2ps7xxf+eb2YFG9lX6uRqpXCvBTOidPRCXCrQ++Uc" src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0-beta1/contrib/auto-render.min.js"></script>
+<!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.3.0/pure-min.css"> -->
+<link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="http://www.svenkreiss.com/theme/css/pure.css" rel="stylesheet"/>
+<link href="http://www.svenkreiss.com/theme/css/pygments.css" rel="stylesheet"/>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<!-- for pelican_dynamic plugin -->
+<!-- end pelican_dynamic -->
 </head>
-
 <body>
 <div class="pure-g-r" id="layout">
-    <div class="sidebar sidebar-article pure-u">
-        <header class="header-article">
-                <a href="http://www.svenkreiss.com/blog/author/sven-kreiss/" title="See posts by Sven Kreiss">
-                        <img class="avatar" alt="Sven Kreiss" src="https://www.gravatar.com/avatar/562a52f3ffcb6c2a3556f91ddc540776">
-                </a>
-                <h2 class="article-info">Sven Kreiss</h2>
-                <h5>Published</h5>
-                <p>December 04, 2015</p>
-                <a class="header-article-home" href="/">&larr;Home</a>
-        </header>
-    </div>
-    <div class="pure-u">
-        <div class="content">
-            <section class="post">
-                <header class="post-header">
-                    <h1>Parallel Processing with&nbsp;pysparkling</h1>
-                        <p class="post-meta">
+<div class="sidebar sidebar-article pure-u">
+<header class="header-article">
+<a href="http://www.svenkreiss.com/blog/author/sven-kreiss/" title="See posts by Sven Kreiss">
+<img alt="Sven Kreiss" class="avatar" src="https://www.gravatar.com/avatar/562a52f3ffcb6c2a3556f91ddc540776"/>
+</a>
+<h2 class="article-info">Sven Kreiss</h2>
+<h5>Published</h5>
+<p>December 04, 2015</p>
+<a class="header-article-home" href="/">←Home</a>
+</header>
+</div>
+<div class="pure-u">
+<div class="content">
+<section class="post">
+<header class="post-header">
+<h1>Parallel Processing with pysparkling</h1>
+<p class="post-meta">
                             // under
                                 <a class="post-category" href="http://www.svenkreiss.com/blog/tag/algorithms/">algorithms</a>
-                                <a class="post-category" href="http://www.svenkreiss.com/blog/tag/distributed-systems/">distributed systems</a>
-                            in <a class="post-category" href="http://www.svenkreiss.com/blog/category/tech/">Tech</a>&nbsp;&nbsp;&nbsp;
+<a class="post-category" href="http://www.svenkreiss.com/blog/tag/distributed-systems/">distributed systems</a>
+                            in <a class="post-category" href="http://www.svenkreiss.com/blog/category/tech/">Tech</a>   
 
                             <span style="display:inline-block;">
                             // share on <a href="https://twitter.com/share?text=%22Parallel%20Processing%20with%26nbsp%3Bpysparkling%22&amp;via=svenkreiss" target="_blank">
-                                <i class="fa fa-twitter fa-lg"></i> Twitter
+<i class="fa fa-twitter fa-lg"></i> Twitter
                             </a>
-                            </span>
-                        </p>
-                </header>
-            </section>
-            <p><code>pysparkling</code> is a pure Python implementation of Apache Spark&#8217;s <span class="caps">RDD</span> interface.
+</span>
+</p>
+</header>
+</section>
+<p><code>pysparkling</code> is a pure Python implementation of Apache Spark’s <span class="caps">RDD</span> interface.
 It means you can do <code>pip install pysparkling</code> and start running Spark code in
 Python. Its main use is in low latency applications where Spark operations
 are applied to small datasets. However, <code>pysparkling</code> also supports the
 parallelization of <code>map</code> operations through <code>multiprocessing</code>, <code>ipcluster</code> and
 <code>futures.concurrent</code>. This feature is still in development, but this post
 explores what is already possible. Bottlenecks that were found while
-writing this post are now included in version&nbsp;0.3.10.</p>
+writing this post are now included in version 0.3.10.</p>
 <h2>Benchmark</h2>
 <p>I wanted to measure a <span class="caps">CPU</span>-bound benchmark to see the overhead of object
 serialization in comparison to actual computations. The benchmark function
@@ -91,32 +81,32 @@ condition approximates <span class="math">\(\pi\)</span>/4.</p>
 <p>To understand the process better, I instrumented the job execution with timers.
 The cumulative time spent in parts like data deserialization on the worker
 nodes and a few more are aggregated in the <code>Context._stats</code> variable.</p>
-<p>A few problems became&nbsp;apparent:</p>
+<p>A few problems became apparent:</p>
 <ul>
 <li>The function that is applied in a map operation is the same for all
   partitions of the dataset. In the previous implementation, this function
-  was serialized separately for every chunk of the&nbsp;data.</li>
+  was serialized separately for every chunk of the data.</li>
 <li>Through a nested dependency, all partitions of the data were sent to all
-  the workers. Now only the partition that a given worker processes is sent to&nbsp;it.</li>
+  the workers. Now only the partition that a given worker processes is sent to it.</li>
 <li>Another slowdown was that core pysparkling functions were not pickle-able.
   That is not a problem for <code>cloudpickle</code>, but serializing and deserializing
   non-pickle-able functions takes longer. The <code>map()</code> and <code>wholeTextFiles()</code>
-  methods have pickle-able helpers&nbsp;now.</li>
+  methods have pickle-able helpers now.</li>
 </ul>
 <h2>Results</h2>
-<p>The test was run on a 4-core Intel i5 processor and this is the&nbsp;result:</p>
-<p><img src="/images/pysparkling_4cores.png" alt="Speedup with parallel processing on a 4-core Intel i5." /></p>
+<p>The test was run on a 4-core Intel i5 processor and this is the result:</p>
+<p><img alt="Speedup with parallel processing on a 4-core Intel i5." src="/images/pysparkling_4cores.png"/></p>
 <p>Achieving a 3x improvement with four cores is good in real world benchmarks.
 The new <code>Context._stats</code> variable gives more insight into where time is
 actually spent. The numbers below are normalized with respect to the time
 spent in the execution of the map function. The results for this <span class="caps">CPU</span> bound
-benchmark with four processes&nbsp;are:</p>
+benchmark with four processes are:</p>
 <ul>
-<li>map exec:&nbsp;100.0%</li>
-<li>driver deserialize data:&nbsp;0.0%</li>
-<li>map cache init:&nbsp;0.2%</li>
-<li>map deserialize data:&nbsp;0.0%</li>
-<li>map deserialize function:&nbsp;2.1%</li>
+<li>map exec: 100.0%</li>
+<li>driver deserialize data: 0.0%</li>
+<li>map cache init: 0.2%</li>
+<li>map deserialize data: 0.0%</li>
+<li>map deserialize function: 2.1%</li>
 </ul>
 <p>Most of the time is spent in the actual map where it should be. The time it
 takes to deserialize the map function is 2.1% of the time it takes to execute
@@ -125,22 +115,20 @@ it. The benchmark itself is run as a unit test in
 and the plots can be recreated with <code>ipython tests/multiprocessing_performance_plot.py</code>.</p>
 <p>The test was also run on a 4-core Intel i7 processor with Hyperthreading. You
 can see that the performance is slightly better than with the i5, but that the
-doubled threads do not double the&nbsp;performance.</p>
-<p><img src="/images/pysparkling_4cores_hyperthreading.png" alt="Speedup with parallel processing on a 4-core Intel i7." /></p>
+doubled threads do not double the performance.</p>
+<p><img alt="Speedup with parallel processing on a 4-core Intel i7." src="/images/pysparkling_4cores_hyperthreading.png"/></p>
 <p>As a first pass at multiprocessing with pysparkling, this is a good result.
 Please check out the project on <a href="https://github.com/svenkreiss/pysparkling">Github</a>,
-install it with <code>pip install pysparkling</code> and send&nbsp;feedback.</p>
-            <div class="hr"></div>
-
-
-            <a href="#" class="go-top">Go Top</a>
+install it with <code>pip install pysparkling</code> and send feedback.</p>
+<div class="hr"></div>
+<a class="go-top" href="#">Go Top</a>
 <footer class="footer">
-    <p>&copy; Sven Kreiss 2014 &ndash; 2018.<br />
-    This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</p>
-</footer>        </div>
-    </div>
+<p>© Sven Kreiss 2014 – 2018.<br/>
+    This work is licensed under a <a href="http://creativecommons.org/licenses/by/4.0/" rel="license">Creative Commons Attribution 4.0 International License</a>.</p>
+</footer> </div>
 </div>
-    <script>
+</div>
+<script>
         renderMathInElement(document.body);
 
         var $top = $('.go-top');
@@ -168,10 +156,7 @@ install it with <code>pip install pysparkling</code> and send&nbsp;feedback.</p>
             event.preventDefault();
         });
     </script>
-
-    <!-- for pelican_dynamic plugin -->
-
-
+<!-- for pelican_dynamic plugin -->
 <script type="text/javascript">
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-4070485-2']);
@@ -183,6 +168,5 @@ install it with <code>pip install pysparkling</code> and send&nbsp;feedback.</p>
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
 </script>
-
 </body>
 </html>

@@ -1,106 +1,96 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Cleaning up a blob store." />
-
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:site" content="@svenkreiss" />
-    <meta name="twitter:creator" content="@svenkreiss" />
-    <meta name="twitter:title" content="Prune Blobs" />
-    <meta name="twitter:description" content="Cleaning up a blob store." />
-    <meta name="twitter:image:src" content="http://www.svenkreiss.com/images/me_nyc_square_500.jpeg" />
-    <meta name="twitter:domain" content="svenkreiss.com" />
-
-    <meta property="og:title" content="Prune Blobs" />
-    <meta property="og:type" content="article" />
-    <meta property="og:description" content="Cleaning up a blob store." />
-    <meta property="og:image" content="http://www.svenkreiss.com/images/me_nyc_square_500.jpeg" />
-    <meta property="og:site_name" content="svenkreiss.com" />
-
-        <link rel="alternate"  href="http://www.svenkreiss.com/feeds/all.atom.xml" type="application/atom+xml" title="Sven Kreiss Full Atom Feed"/>
-
-        <title>Prune Blobs - Sven Kreiss</title>
-
-
-    <!-- KaTeX -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0-beta1/katex.min.css" integrity="sha384-VEnyslhHLHiYPca9KFkBB3CMeslnM9CzwjxsEbZTeA21JBm7tdLwKoZmCt3cZTYD" crossorigin="anonymous">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0-beta1/katex.min.js" integrity="sha384-O4hpKqcplNCe+jLuBVEXC10Rn1QEqAmX98lKAIFBEDxZI0a+6Z2w2n8AEtQbR4CD" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0-beta1/contrib/auto-render.min.js" integrity="sha384-IiI65aU9ZYub2MY9zhtKd1H2ps7xxf+eb2YFG9lX6uRqpXCvBTOidPRCXCrQ++Uc" crossorigin="anonymous"></script>
-
-    <!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.3.0/pure-min.css"> -->
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="http://www.svenkreiss.com/theme/css/pure.css">
-    <link rel="stylesheet" href="http://www.svenkreiss.com/theme/css/pygments.css">
-
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
-    <!-- for pelican_dynamic plugin -->
-    <!-- end pelican_dynamic -->
-
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Cleaning up a blob store." name="description"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="@svenkreiss" name="twitter:site"/>
+<meta content="@svenkreiss" name="twitter:creator"/>
+<meta content="Prune Blobs" name="twitter:title"/>
+<meta content="Cleaning up a blob store." name="twitter:description"/>
+<meta content="http://www.svenkreiss.com/images/me_nyc_square_500.jpeg" name="twitter:image:src"/>
+<meta content="svenkreiss.com" name="twitter:domain"/>
+<meta content="Prune Blobs" property="og:title"/>
+<meta content="article" property="og:type"/>
+<meta content="Cleaning up a blob store." property="og:description"/>
+<meta content="http://www.svenkreiss.com/images/me_nyc_square_500.jpeg" property="og:image"/>
+<meta content="svenkreiss.com" property="og:site_name"/>
+<link href="http://www.svenkreiss.com/feeds/all.atom.xml" rel="alternate" title="Sven Kreiss Full Atom Feed" type="application/atom+xml"/>
+<title>Prune Blobs - Sven Kreiss</title>
+<!-- KaTeX -->
+<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0-beta1/katex.min.css" integrity="sha384-VEnyslhHLHiYPca9KFkBB3CMeslnM9CzwjxsEbZTeA21JBm7tdLwKoZmCt3cZTYD" rel="stylesheet"/>
+<script crossorigin="anonymous" integrity="sha384-O4hpKqcplNCe+jLuBVEXC10Rn1QEqAmX98lKAIFBEDxZI0a+6Z2w2n8AEtQbR4CD" src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0-beta1/katex.min.js"></script>
+<script crossorigin="anonymous" integrity="sha384-IiI65aU9ZYub2MY9zhtKd1H2ps7xxf+eb2YFG9lX6uRqpXCvBTOidPRCXCrQ++Uc" src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0-beta1/contrib/auto-render.min.js"></script>
+<!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.3.0/pure-min.css"> -->
+<link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="http://www.svenkreiss.com/theme/css/pure.css" rel="stylesheet"/>
+<link href="http://www.svenkreiss.com/theme/css/pygments.css" rel="stylesheet"/>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<!-- for pelican_dynamic plugin -->
+<!-- end pelican_dynamic -->
 </head>
-
 <body>
 <div class="pure-g-r" id="layout">
-    <div class="sidebar sidebar-article pure-u">
-        <header class="header-article">
-                <a href="http://www.svenkreiss.com/blog/author/sven-kreiss/" title="See posts by Sven Kreiss">
-                        <img class="avatar" alt="Sven Kreiss" src="https://www.gravatar.com/avatar/562a52f3ffcb6c2a3556f91ddc540776">
-                </a>
-                <h2 class="article-info">Sven Kreiss</h2>
-                <h5>Draft</h5>
-                <p>February 04, 2018</p>
-                <a class="header-article-home" href="/">&larr;Home</a>
-        </header>
-    </div>
-    <div class="pure-u">
-        <div class="content">
-            <section class="post">
-                <header class="post-header">
-                    <h1>Prune&nbsp;Blobs</h1>
-                        <p class="post-meta">
+<div class="sidebar sidebar-article pure-u">
+<header class="header-article">
+<a href="http://www.svenkreiss.com/blog/author/sven-kreiss/" title="See posts by Sven Kreiss">
+<img alt="Sven Kreiss" class="avatar" src="https://www.gravatar.com/avatar/562a52f3ffcb6c2a3556f91ddc540776"/>
+</a>
+<h2 class="article-info">Sven Kreiss</h2>
+<h5>Draft</h5>
+<p>February 04, 2018</p>
+<a class="header-article-home" href="/">←Home</a>
+</header>
+</div>
+<div class="pure-u">
+<div class="content">
+<section class="post">
+<header class="post-header">
+<h1>Prune Blobs</h1>
+<p class="post-meta">
                             // under
                                 <a class="post-category" href="http://www.svenkreiss.com/blog/tag/algorithms/">algorithms</a>
-                                <a class="post-category" href="http://www.svenkreiss.com/blog/tag/distributed-systems/">distributed systems</a>
-                            in <a class="post-category" href="http://www.svenkreiss.com/blog/category/tech/">Tech</a>&nbsp;&nbsp;&nbsp;
+<a class="post-category" href="http://www.svenkreiss.com/blog/tag/distributed-systems/">distributed systems</a>
+                            in <a class="post-category" href="http://www.svenkreiss.com/blog/category/tech/">Tech</a>   
 
                             <span style="display:inline-block;">
                             // share on <a href="https://twitter.com/share?text=%22Prune%26nbsp%3BBlobs%22&amp;via=svenkreiss" target="_blank">
-                                <i class="fa fa-twitter fa-lg"></i> Twitter
+<i class="fa fa-twitter fa-lg"></i> Twitter
                             </a>
-                            </span>
-                        </p>
-                </header>
-            </section>
-            <p>In the given system, there is no eventual consistency. Updates are non-atomic
+</span>
+</p>
+</header>
+</section>
+<p>In the given system, there is no eventual consistency. Updates are non-atomic
 and do not roll back on failure. A convention on the order of updates during
 blob inserts and blob deletions guarantees that the blob reference count is
-always equal or higher the true reference&nbsp;count.</p>
+always equal or higher the true reference count.</p>
 <p>The implemented blob store pruning is based on a social assumption: if the <code>refcount</code>
 today is the same as the <code>refcount</code> yesterday and the same as last week,
 then that is the correct <code>refcount</code>. This implies that nobody can make a
 transaction that would affect the count at all three times. The implemented
 solution produces new refcounts in an efficient manner and checks
-for consistency across multiple&nbsp;runs.</p>
+for consistency across multiple runs.</p>
 <p>This solution does not address how to update the blob store once an inconsistency
 in the reference count is identified. Even an atomic update
 of a true inconsistency can make the system inconsistent if another change is
-happening from another service at that&nbsp;moment.</p>
-<h2>Algorithmic approach: Count-Min&nbsp;Sketch</h2>
-<p>First idea: Count-Min Sketch&nbsp;<a href='#countminsketch' id='ref-countminsketch-1'>(Cormode and Muthukrishnan, 2005)</a>.</p>
+happening from another service at that moment.</p>
+<h2>Algorithmic approach: Count-Min Sketch</h2>
+<p>First idea: Count-Min Sketch <a href="#countminsketch" id="ref-countminsketch-1">(Cormode and Muthukrishnan, 2005)</a>.</p>
 <p>Scaling is bad for large <span class="math">\(\lVert\vec{a}\rVert_1\)</span> which is the number of all
-references (not even blobs, but references to blobs) or &#8220;stream size&#8221;. A Count-Min
+references (not even blobs, but references to blobs) or “stream size”. A Count-Min
 sketch guarantee is <span class="math">\(\hat{a}_i \leq a_i + \epsilon \lVert\vec{a}\rVert_1\)</span>.
 This implies that <span class="math">\(\epsilon\)</span> must be very small if <span class="math">\(a_i\)</span> should be within
 <span class="math">\(\mathcal{O}(1)\)</span> of <span class="math">\(\hat{a}_i\)</span> to distinguish between zero and single
 references to a blob. Although it is known that the observed precision in
 practical applications is better than the theoretical bound, a Count-Min sketch
-is unlikely to be good enough with reasonable memory sizes for the&nbsp;sketch.</p>
-<h2>Systems approach: Materialized Views and Parallel&nbsp;Requests</h2>
+is unlikely to be good enough with reasonable memory sizes for the sketch.</p>
+<h2>Systems approach: Materialized Views and Parallel Requests</h2>
 <p>Define a <code>run_id</code> to be able to form consensus between multiple runs.
 <em>Per shard</em>, create a materialized view of reference counts for blobs in the
-<code>refcount_{runid}</code> table. Two strategies are&nbsp;implemented:</p>
+<code>refcount_{runid}</code> table. Two strategies are implemented:</p>
 <ol>
 <li>Single query: using <code>GROUP BY</code> on a large <code>UNION</code>.</li>
 <li>Incremental: table-by-table queries that update counts using <code>INSERT INTO</code>
@@ -108,12 +98,12 @@ is unlikely to be good enough with reasonable memory sizes for the&nbsp;sketch.<
 </ol>
 <p>These queries can be run in parallel on all shards. The created table contains
 columns for <code>blob_id</code>, <code>refcount</code> and <code>verified</code> (a boolean which is set to
-<code>TRUE</code> if this record was accessed for&nbsp;verification).</p>
+<code>TRUE</code> if this record was accessed for verification).</p>
 <p><em>On the blob store</em>, run a single full scan that returns batches of blob IDs
 and their reference counts. For every batch, query all shards in parallel
 with the list of blob ids to obtain the summed reference counts from the
 shards. Produce a list of inconsistencies for this run. Monitor this list
-over time to obtain true&nbsp;inconsistencies.</p>
+over time to obtain true inconsistencies.</p>
 <h2>Interface</h2>
 <p>The command line interface provides two executables, <code>refcount-shard</code> and
 <code>refcount-global</code>. Both support <code>--help</code>:</p>
@@ -123,11 +113,9 @@ optional arguments:
   -h, --help       show this <span class="nb">help</span> message and <span class="nb">exit</span>
   --run-id RUN_ID  run identifier <span class="o">(</span>default: <span class="m">1517785312</span><span class="o">)</span>
   --db-url DB_URL  database url <span class="o">(</span>default:
-                   mysql+mysqldb://root&#64;localhost/ProtonMailShard<span class="o">)</span>
+                   mysql+mysqldb://root@localhost/ProtonMailShard<span class="o">)</span>
   --global-db      is this the global database <span class="o">(</span>default: False<span class="o">)</span>
 </pre></div>
-
-
 <div class="highlight"><pre><span></span>usage: refcount-blobstore <span class="o">[</span>-h<span class="o">]</span> <span class="o">[</span>--blobstore-db-url BLOBSTORE_DB_URL<span class="o">]</span>
                           <span class="o">[</span>--global-db-url GLOBAL_DB_URL<span class="o">]</span>
                           <span class="o">[</span>--shard-db-url SHARD_DB_URL <span class="o">[</span>SHARD_DB_URL ...<span class="o">]]</span>
@@ -138,79 +126,72 @@ optional arguments:
   --run-id RUN_ID       run identifier <span class="o">(</span>default: <span class="m">1517785253</span><span class="o">)</span>
   --blobstore-db-url BLOBSTORE_DB_URL
                         blobstore database url <span class="o">(</span>default:
-                        mysql+mysqldb://root&#64;localhost/ProtonMailGlobal<span class="o">)</span>
+                        mysql+mysqldb://root@localhost/ProtonMailGlobal<span class="o">)</span>
   --global-db-url GLOBAL_DB_URL
                         global database url <span class="o">(</span>can be same as blobstore<span class="o">)</span>
                         <span class="o">(</span>default:
-                        mysql+mysqldb://root&#64;localhost/ProtonMailGlobal<span class="o">)</span>
+                        mysql+mysqldb://root@localhost/ProtonMailGlobal<span class="o">)</span>
   --shard-db-url SHARD_DB_URL <span class="o">[</span>SHARD_DB_URL ...<span class="o">]</span>
                         list of shard database urls <span class="o">(</span>default:
-                        <span class="o">[</span><span class="s1">&#39;mysql+mysqldb://root&#64;localhost/ProtonMailShard&#39;</span><span class="o">])</span>
+                        <span class="o">[</span><span class="s1">'mysql+mysqldb://root@localhost/ProtonMailShard'</span><span class="o">])</span>
 </pre></div>
-
-
 <p>The <code>global-db</code> is the database containing the <code>SentMessage</code> and
 <code>SentAttachment</code> tables and <code>blobstore-db</code> contains the <code>BlobStorage</code> table.
-In the given example they are in the same&nbsp;database.</p>
-<p>An example session with explicit&nbsp;parameters:</p>
+In the given example they are in the same database.</p>
+<p>An example session with explicit parameters:</p>
 <div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">RUNID</span><span class="o">=</span><span class="sb">`</span>date +%s<span class="sb">`</span>
 
 <span class="c1"># preprocess shards individually (can be parallelized)</span>
 refcount-shard --run-id <span class="si">${</span><span class="nv">RUNID</span><span class="si">}</span> <span class="se">\</span>
-  --db-url mysql+mysqldb://root&#64;localhost/ProtonMailShard
+  --db-url mysql+mysqldb://root@localhost/ProtonMailShard
 refcount-shard --run-id <span class="si">${</span><span class="nv">RUNID</span><span class="si">}</span> <span class="se">\</span>
-  --db-url mysql+mysqldb://root&#64;localhost/ProtonMailGlobal --global-db
+  --db-url mysql+mysqldb://root@localhost/ProtonMailGlobal --global-db
 
 <span class="c1"># scan over blob store</span>
 refcount-blobstore --run-id <span class="si">${</span><span class="nv">RUNID</span><span class="si">}</span> <span class="se">\</span>
-    --blobstore-db-url mysql+mysqldb://root&#64;localhost/ProtonMailGlobal <span class="se">\</span>
-    --global-db-url mysql+mysqldb://root&#64;localhost/ProtonMailGlobal <span class="se">\</span>
-    --shard-db-url mysql+mysqldb://root&#64;localhost/ProtonMailShard
+    --blobstore-db-url mysql+mysqldb://root@localhost/ProtonMailGlobal <span class="se">\</span>
+    --global-db-url mysql+mysqldb://root@localhost/ProtonMailGlobal <span class="se">\</span>
+    --shard-db-url mysql+mysqldb://root@localhost/ProtonMailShard
 </pre></div>
-
-
 <p>The last command produces a <span class="caps">JSON</span> output of inconsistencies of the form
 <code>{blob_id: (blob ref count, shard ref count)}</code>. This should be collected
-over multiple runs spread out over time to find repeated&nbsp;inconsistencies.</p>
+over multiple runs spread out over time to find repeated inconsistencies.</p>
 <h2>Conclusions</h2>
 <p>Tests are written for <code>pytest</code> and code is linted with <code>flake8</code> with the
 stricter <code>hacking</code> extension. Development and packaging notes are in the
 <code>README.md</code> file.</p>
 <p>Tests do not modify the given database tables. To
 test for missing blob entries or wrong reference counts in the blob store, the
-reader routine is modified to inject the modified&nbsp;data.</p>
+reader routine is modified to inject the modified data.</p>
 <p>There are many opportunities for performance improvements and the proposed
-structure does allow for trivial&nbsp;parallelizations.</p>
+structure does allow for trivial parallelizations.</p>
 <p><em>Questions</em>: Eviction with reference counts is particularly good for short-lived
 data. I would be curious how many blobs of encrypted text are short lived in
 the Protonmail system. If the majority of the blobs is long lived, would it be
 possible to drop the global refcount table and apply the above procedure to the
 <span class="caps">CEPH</span> datastore directly? Dropping the count would simplify this check and
-improve the performance of frontend services because they don&#8217;t have to update
-reference counts&nbsp;anymore.</p><hr>
+improve the performance of frontend services because they don’t have to update
+reference counts anymore.</p><hr/>
 <h2>Bibliography</h2>
-<p id='countminsketch'>Graham Cormode and Shan Muthukrishnan.
+<p id="countminsketch">Graham Cormode and Shan Muthukrishnan.
 An improved data stream summary: the count-min sketch and its applications.
 <em>Journal of Algorithms</em>, 55(1):58–75, 2005. <a class="cite-backref" href="#ref-countminsketch-1" title="Jump back to reference 1">↩</a></p>
-
-            <div class="hr"></div>
-
-            <h2>Related Posts</h2>
-            <ul class="related-posts">
-                <li>
-                    <a class="title" href="http://www.svenkreiss.com/blog/parallel-processing-with-pysparkling/">Parallel Processing with&nbsp;pysparkling</a>
-                    <span class="summary">Benchmarks for the latest parallel features in pysparkling.</span>
-                </li>
-            </ul>
-
-            <a href="#" class="go-top">Go Top</a>
+<div class="hr"></div>
+<h2>Related Posts</h2>
+<ul class="related-posts">
+<li>
+<a class="title" href="http://www.svenkreiss.com/blog/parallel-processing-with-pysparkling/">Parallel Processing with pysparkling</a>
+<span class="summary">Benchmarks for the latest parallel features in pysparkling.</span>
+</li>
+</ul>
+<a class="go-top" href="#">Go Top</a>
 <footer class="footer">
-    <p>&copy; Sven Kreiss 2014 &ndash; 2018.<br />
-    This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</p>
-</footer>        </div>
-    </div>
+<p>© Sven Kreiss 2014 – 2018.<br/>
+    This work is licensed under a <a href="http://creativecommons.org/licenses/by/4.0/" rel="license">Creative Commons Attribution 4.0 International License</a>.</p>
+</footer> </div>
 </div>
-    <script>
+</div>
+<script>
         renderMathInElement(document.body);
 
         var $top = $('.go-top');
@@ -238,10 +219,7 @@ An improved data stream summary: the count-min sketch and its applications.
             event.preventDefault();
         });
     </script>
-
-    <!-- for pelican_dynamic plugin -->
-
-
+<!-- for pelican_dynamic plugin -->
 <script type="text/javascript">
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-4070485-2']);
@@ -253,6 +231,5 @@ An improved data stream summary: the count-min sketch and its applications.
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
 </script>
-
 </body>
 </html>
