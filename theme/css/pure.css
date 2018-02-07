@@ -241,6 +241,13 @@ pre {
     width: 70px;
     height: 70px;
 }
+.content img.featured {
+    float: right;
+    margin-left: 16px;
+    margin-top: 1em;
+    max-width: 50%;
+    max-height: 90px;
+}
 
 .archive-meta {
     color: #999;
