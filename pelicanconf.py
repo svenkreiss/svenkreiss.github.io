@@ -59,8 +59,9 @@ THEME = "../pelican-theme-pure"
 
 # plugins
 PLUGIN_PATHS = ['../pelican-plugins']
+import pelican_jsmath
 PLUGINS = [
-    'sitemap', 'gravatar', 'pelican-jsmath',  # 'render_math',
+    'sitemap', 'gravatar', pelican_jsmath,  # 'render_math',
     'liquid_tags.img', 'liquid_tags.video',
     'liquid_tags.youtube', 'liquid_tags.vimeo',
     'liquid_tags.include_code',

@@ -24,3 +24,6 @@ Cost, have to contribute some changes myself:
   [pelican-jsmath](https://github.com/svenkreiss/pelican-jsmath).
   The new plugin is $\alpha\omega\epsilon s \sigma m \epsilon$ and described in a separate
   [blog post]({filename}/pelican-jsmath.md).
+* image_process: responsive images (smaller images on smaller devices) are
+  especially important for the [projects](/projects.html) page
+* Pelican plugins in a single repository or standalone?
