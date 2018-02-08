@@ -1,7 +1,7 @@
 Title: Parallel Processing with pysparkling
 Date: 2015-12-04
 Category: Tech
-Tags: data, pysparkling
+Tags: data, pysparkling, Python
 Slug: parallel-processing-with-pysparkling
 Summary: Benchmarks for the latest parallel features in pysparkling.
 Status: published

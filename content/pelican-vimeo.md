@@ -1,7 +1,7 @@
 Title: Vimeo liquid tag for Pelican
 Date: 2014-03-07 4:41
 Category: Tech
-Tags: web, python
+Tags: web, Python, Pelican
 Slug: pelican-vimeo
 Summary: Extend liquid tags plugin for Pelican to include a Vimeo tag.
 Status: published

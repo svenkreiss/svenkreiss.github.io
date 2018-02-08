@@ -7,8 +7,9 @@ Author: Sven Kreiss
 Summary: I got mentioned in the New Yorker article: A Nobel Prize Party: Cheese, Bubbles, and a Boson.
 Status: published
 
-
 A funny and only approximately accurate article about how we celebrated the Nobel Prize for Peter Higgs and François Englert at NYU in the New Yorker:
+
+![New Yorker article about the party at the NYU Physics Department](/images/new_yorker_nobel_prize_party.png)
 
 > Sven Kreiss, Cranmer’s graduate student, was the first to see the statistical evidence needed to claim the discovery in, June, 2012. He told me in a strong German accent that they don’t host a lot of parties in the physics lounge. “We are very serious here,” he said.
 

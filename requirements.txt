@@ -14,5 +14,8 @@ six==1.11.0
 smartypants==2.0.1
 typogrify==2.0.7
 Unidecode==1.0.22
+
+pelican-jsmath
+pelican-advance-embed-tweet
 pybtex
 pillow

@@ -27,3 +27,5 @@ Cost, have to contribute some changes myself:
 * image_process: responsive images (smaller images on smaller devices) are
   especially important for the [projects](/projects.html) page
 * Pelican plugins in a single repository or standalone?
+* featured_image in article list
+* pygments style `friendly`, a light theme, for code highlighting

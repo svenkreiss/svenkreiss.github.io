@@ -59,9 +59,8 @@ THEME = "../pelican-theme-pure"
 
 # plugins
 PLUGIN_PATHS = ['../pelican-plugins']
-import pelican_jsmath
 PLUGINS = [
-    'sitemap', 'gravatar', pelican_jsmath,  # 'render_math',
+    'sitemap', 'gravatar', 'pelican_jsmath',  # 'render_math',
     'liquid_tags.img', 'liquid_tags.video',
     'liquid_tags.youtube', 'liquid_tags.vimeo',
     'liquid_tags.include_code',
@@ -71,6 +70,7 @@ PLUGINS = [
     'pelican-cite',
     'related_posts',
     'pelican_dynamic',
+    'pelican_advance_embed_tweet',
 ]
 
 # sitemap plugin
@@ -136,7 +136,7 @@ TAGS_SAVE_AS = 'blog/tags.html'
 MENUITEMS = [
     ('About', '/'),
     ('Projects', '/projects.html'),
-    ('Blog: trivial.io', '/files/forward_trivialio.html'),
+    ('Blog', '/blog/'),
 ]
 DISPLAY_PAGES_ON_MENU = True
 
