@@ -10,6 +10,10 @@ import sys
 sys.path.append(os.curdir)
 from pelicanconf import *
 
+DEFAULT_METADATA = {
+    'Status': 'hidden',
+}
+
 SITEURL = 'http://www.svenkreiss.com'
 RELATIVE_URLS = False
 

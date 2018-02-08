@@ -5,6 +5,7 @@ PELICANOPTS=
 BASEDIR=$(CURDIR)
 INPUTDIR=$(BASEDIR)/content
 OUTPUTDIR=$(BASEDIR)/_build
+OUTPUTDIRPUBLISH=$(BASEDIR)/_build_publish
 CONFFILE=$(BASEDIR)/pelicanconf.py
 PUBLISHCONF=$(BASEDIR)/publishconf.py
 
@@ -57,6 +58,7 @@ html:
 
 clean:
 	[ ! -d $(OUTPUTDIR) ] || rm -rf $(OUTPUTDIR)
+	[ ! -d $(OUTPUTDIRPUBLISH) ] || rm -rf $(OUTPUTDIRPUBLISH)
 
 regenerate:
 	$(PELICAN) -r $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
@@ -81,29 +83,29 @@ stopserver:
 	@echo 'Stopped Pelican and SimpleHTTPServer processes running in background.'
 
 publish:
-	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(PUBLISHCONF) $(PELICANOPTS)
+	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIRPUBLISH) -s $(PUBLISHCONF) $(PELICANOPTS)
 
 ssh_upload: publish
-	scp -P $(SSH_PORT) -r $(OUTPUTDIR)/* $(SSH_USER)@$(SSH_HOST):$(SSH_TARGET_DIR)
+	scp -P $(SSH_PORT) -r $(OUTPUTDIRPUBLISH)/* $(SSH_USER)@$(SSH_HOST):$(SSH_TARGET_DIR)
 
 rsync_upload: publish
-	rsync -e "ssh -p $(SSH_PORT)" -P -rvz --delete $(OUTPUTDIR)/ $(SSH_USER)@$(SSH_HOST):$(SSH_TARGET_DIR) --cvs-exclude
+	rsync -e "ssh -p $(SSH_PORT)" -P -rvz --delete $(OUTPUTDIRPUBLISH)/ $(SSH_USER)@$(SSH_HOST):$(SSH_TARGET_DIR) --cvs-exclude
 
 dropbox_upload: publish
-	cp -r $(OUTPUTDIR)/* $(DROPBOX_DIR)
+	cp -r $(OUTPUTDIRPUBLISH)/* $(DROPBOX_DIR)
 
 ftp_upload: publish
-	lftp ftp://$(FTP_USER)@$(FTP_HOST) -e "mirror -R $(OUTPUTDIR) $(FTP_TARGET_DIR) ; quit"
+	lftp ftp://$(FTP_USER)@$(FTP_HOST) -e "mirror -R $(OUTPUTDIRPUBLISH) $(FTP_TARGET_DIR) ; quit"
 
 s3_upload: publish
-	s3cmd sync $(OUTPUTDIR)/ s3://$(S3_BUCKET) --acl-public --delete-removed
+	s3cmd sync $(OUTPUTDIRPUBLISH)/ s3://$(S3_BUCKET) --acl-public --delete-removed
 
 cf_upload: publish
-	cd $(OUTPUTDIR) && swift -v -A https://auth.api.rackspacecloud.com/v1.0 -U $(CLOUDFILES_USERNAME) -K $(CLOUDFILES_API_KEY) upload -c $(CLOUDFILES_CONTAINER) .
+	cd $(OUTPUTDIRPUBLISH) && swift -v -A https://auth.api.rackspacecloud.com/v1.0 -U $(CLOUDFILES_USERNAME) -K $(CLOUDFILES_API_KEY) upload -c $(CLOUDFILES_CONTAINER) .
 
 github: publish
-	cp .travis.yml $(OUTPUTDIR)
-	ghp-import $(OUTPUTDIR) -b master -p
+	cp .travis.yml $(OUTPUTDIRPUBLISH)
+	ghp-import $(OUTPUTDIRPUBLISH) -b master -p
 	#git push origin gh-pages
 
 .PHONY: html help clean regenerate serve devserver publish ssh_upload rsync_upload dropbox_upload ftp_upload s3_upload cf_upload github
