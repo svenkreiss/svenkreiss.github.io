@@ -2,6 +2,7 @@ ghostdriver.log
 
 *.pid
 _build
+_build_publish
 cache
 
 *.py[cod]
