@@ -67,4 +67,4 @@ of the Human Biome Project are in this
 Get an overview of the API and more details from
 [pysparkling's documentation](http://pysparkling.trivial.io).
 If you like this project, [star it on Github](https://github.com/svenkreiss/pysparkling),
-tweet about it and follow me, [@svenkreiss](https://twitter.com/svenkreiss), on Twitter.
+tweet about it and follow me, @svenkreiss, on Twitter.

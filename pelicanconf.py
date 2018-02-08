@@ -86,6 +86,7 @@ SITEMAP = {
 # advance embed tweet
 # TWITTER_CARDS = 'hidden'
 TWITTER_DNT = 'true'
+TWITTER_ALIGN = 'center'
 
 # Pelican cite plugin
 PUBLICATIONS_SRC = 'content/publications.bib'

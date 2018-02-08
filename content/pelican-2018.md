@@ -29,5 +29,5 @@ Cost, have to contribute some changes myself:
 * Pelican plugins in a single repository or standalone? @svenkreiss/status/960716731059785730
 * featured_image in article list
 * pygments `friendly` style, a light theme for code highlighting shown in the [gallery](https://help.farbox.com/pygments.html)
-* [pelican-advance-embed-tweet](https://pypi.python.org/pypi/pelican-advance-embed-tweet): already a package on pypi :)
+* [pelican-advance-embed-tweet](https://pypi.python.org/pypi/pelican-advance-embed-tweet): already a package on pypi, but submitted [PR](https://github.com/fundor333/pelican-advance-embed-tweet/pull/2) to remove align attribute from `<bockquote>` which is not HTML5, and you can instead set `TWITTER_ALIGN = 'center'` in your `pelicanconf` to center the embedded tweet.
 
