@@ -83,6 +83,10 @@ SITEMAP = {
     }
 }
 
+# advance embed tweet
+# TWITTER_CARDS = 'hidden'
+TWITTER_DNT = 'true'
+
 # Pelican cite plugin
 PUBLICATIONS_SRC = 'content/publications.bib'
 

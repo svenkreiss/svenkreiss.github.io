@@ -15,7 +15,6 @@ order of magnitudes with $\mathcal{O}(n)$ is pretty. There was a related
 [Pelican issue](https://github.com/getpelican/pelican-plugins/issues/625)
 for support.
 
-
 ## Packaging
 
 Simplest `setup.py` file:
@@ -44,3 +43,11 @@ directly from Github using
 
 With packaged plugins, you can manage your dependencies in your
 `requirements.txt` as usual.
+
+## Testing
+
+This Pelican plugin includes a plugin for Markdown that modifies the HTML
+output of Markdown. It is good to test that this plugin produces valid HTML.
+The repository includes an example Pelican site which is regenerated on every
+commit and validated with
+[html5validator](https://github.com/svenkreiss/html5validator).

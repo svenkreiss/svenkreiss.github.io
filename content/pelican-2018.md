@@ -26,6 +26,8 @@ Cost, have to contribute some changes myself:
   [blog post]({filename}/pelican-jsmath.md).
 * image_process: responsive images (smaller images on smaller devices) are
   especially important for the [projects](/projects.html) page
-* Pelican plugins in a single repository or standalone?
+* Pelican plugins in a single repository or standalone? @svenkreiss/status/960716731059785730
 * featured_image in article list
-* pygments style `friendly`, a light theme, for code highlighting
+* pygments `friendly` style, a light theme for code highlighting shown in the [gallery](https://help.farbox.com/pygments.html)
+* [pelican-advance-embed-tweet](https://pypi.python.org/pypi/pelican-advance-embed-tweet): already a package on pypi :)
+
