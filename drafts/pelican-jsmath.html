@@ -8,17 +8,17 @@
 <meta content="summary" name="twitter:card"/>
 <meta content="@svenkreiss" name="twitter:site"/>
 <meta content="@svenkreiss" name="twitter:creator"/>
-<meta content="Pelican JS Math Plugin" name="twitter:title"/>
+<meta content="pelican-jsmath Plugin" name="twitter:title"/>
 <meta content="An \(\alpha\omega\epsilon s \sigma m \epsilon\) Pelican plugin to render math in JavaScript libraries like KaTeX." name="twitter:description"/>
 <meta content="http://www.svenkreiss.com/images/me_nyc_square_500.jpeg" name="twitter:image:src"/>
 <meta content="svenkreiss.com" name="twitter:domain"/>
-<meta content="Pelican JS Math Plugin" property="og:title"/>
+<meta content="pelican-jsmath Plugin" property="og:title"/>
 <meta content="article" property="og:type"/>
 <meta content="An \(\alpha\omega\epsilon s \sigma m \epsilon\) Pelican plugin to render math in JavaScript libraries like KaTeX." property="og:description"/>
 <meta content="http://www.svenkreiss.com/images/me_nyc_square_500.jpeg" property="og:image"/>
 <meta content="svenkreiss.com" property="og:site_name"/>
 <link href="http://www.svenkreiss.com/feeds/all.atom.xml" rel="alternate" title="Sven Kreiss Full Atom Feed" type="application/atom+xml"/>
-<title>Pelican JS Math Plugin - Sven Kreiss</title>
+<title>pelican-jsmath Plugin - Sven Kreiss</title>
 <!-- KaTeX -->
 <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0-beta1/katex.min.css" integrity="sha384-VEnyslhHLHiYPca9KFkBB3CMeslnM9CzwjxsEbZTeA21JBm7tdLwKoZmCt3cZTYD" rel="stylesheet"/>
 <script crossorigin="anonymous" integrity="sha384-O4hpKqcplNCe+jLuBVEXC10Rn1QEqAmX98lKAIFBEDxZI0a+6Z2w2n8AEtQbR4CD" src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0-beta1/katex.min.js"></script>
@@ -48,16 +48,17 @@
 <div class="content">
 <section class="post">
 <header class="post-header">
-<h1>Pelican <span class="caps">JS</span> Math Plugin</h1>
+<h1>pelican-jsmath Plugin</h1>
 <p class="post-meta">
                             // under
                                 <a class="post-category" href="http://www.svenkreiss.com/blog/tag/blog/">blog</a>
-<a class="post-category" href="http://www.svenkreiss.com/blog/tag/pelican/">pelican</a>
+<a class="post-category" href="http://www.svenkreiss.com/blog/tag/pelican/">Pelican</a>
 <a class="post-category" href="http://www.svenkreiss.com/blog/tag/math/">math</a>
+<a class="post-category" href="http://www.svenkreiss.com/blog/tag/python/">Python</a>
                             in <a class="post-category" href="http://www.svenkreiss.com/blog/category/tech/">Tech</a>   
 
                             <span style="display:inline-block;">
-                            // share on <a href="https://twitter.com/share?text=%22Pelican%20%3Cspan%20class%3D%22caps%22%3EJS%3C/span%3E%20Math%26nbsp%3BPlugin%22&amp;via=svenkreiss" target="_blank">
+                            // share on <a href="https://twitter.com/share?text=%22pelican-jsmath%26nbsp%3BPlugin%22&amp;via=svenkreiss" target="_blank">
 <i class="fa fa-twitter fa-lg"></i> Twitter
                             </a>
 </span>
@@ -72,7 +73,59 @@ A vector <span class="math">\(\vec{a}\)</span> looks beautiful. Writing
 order of magnitudes with <span class="math">\(\mathcal{O}(n)\)</span> is pretty. There was a related
 <a href="https://github.com/getpelican/pelican-plugins/issues/625">Pelican issue</a>
 for support.</p>
+<h2>Packaging</h2>
+<p>Simplest <code>setup.py</code> file:</p>
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">setuptools</span> <span class="kn">import</span> <span class="n">setup</span>
+
+
+<span class="n">setup</span><span class="p">(</span>
+    <span class="n">name</span><span class="o">=</span><span class="s1">'pelican-jsmath'</span><span class="p">,</span>
+    <span class="n">version</span><span class="o">=</span><span class="s1">'0.1.0'</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s1">'Pelican Plugin that passes math to JavaScript.'</span><span class="p">,</span>
+    <span class="n">url</span><span class="o">=</span><span class="s1">'http://github.com/svenkreiss/pelican-jsmath'</span><span class="p">,</span>
+    <span class="n">author</span><span class="o">=</span><span class="s1">'Sven Kreiss'</span><span class="p">,</span>
+    <span class="n">author_email</span><span class="o">=</span><span class="s1">'me@svenkreiss.com'</span><span class="p">,</span>
+    <span class="n">license</span><span class="o">=</span><span class="s1">'AGPL-3.0'</span><span class="p">,</span>
+    <span class="n">packages</span><span class="o">=</span><span class="p">[</span><span class="s1">'pelican_jsmath'</span><span class="p">],</span>
+<span class="p">)</span>
+</pre></div>
+<p>If you are converting a plugin from pelican-plugins repository, move your files
+into a folder, here <code>pelican_jsmath</code>, and add a <code>setup.py</code> file. That’s it.
+You can submit it to pypi if you want, but you can also tell people to install
+directly from Github using
+<code>pip install https://github.com/svenkreiss/pelican-jsmath/zipball/master</code>.</p>
+<p>With packaged plugins, you can manage your dependencies in your
+<code>requirements.txt</code> as usual.</p>
+<h2>Testing</h2>
+<p>This Pelican plugin includes a plugin for Markdown that modifies the <span class="caps">HTML</span>
+output of Markdown. It is good to test that this plugin produces valid <span class="caps">HTML</span>.
+The repository includes an example Pelican site which is regenerated on every
+commit and validated with
+<a href="https://github.com/svenkreiss/html5validator">html5validator</a>.</p><script charset="utf-8" src="//platform.twitter.com/widgets.js"></script>
 <div class="hr"></div>
+<h2>Related Posts</h2>
+<ul class="related-posts">
+<li>
+<a class="title" href="http://www.svenkreiss.com/blog/pelican-vimeo/">Vimeo liquid tag for Pelican</a>
+<span class="summary">Extend liquid tags plugin for Pelican to include a Vimeo tag.</span>
+</li>
+<li>
+<a class="title" href="http://www.svenkreiss.com/blog/streamprocessing-in-pysparkling/">Stream Processing in pysparkling</a>
+<span class="summary">Support for stream processing with discrete streams.</span>
+</li>
+<li>
+<a class="title" href="http://www.svenkreiss.com/blog/parallel-processing-with-pysparkling/">Parallel Processing with pysparkling</a>
+<span class="summary">Benchmarks for the latest parallel features in pysparkling.</span>
+</li>
+<li>
+<a class="title" href="http://www.svenkreiss.com/blog/pysparkling-initial/">pysparkling</a>
+<span class="summary">A pure Python implementation of Apache Spark’s RDD interfaces.</span>
+</li>
+<li>
+<a class="title" href="http://www.svenkreiss.com/blog/databench-initial/">Databench</a>
+<span class="summary">Databench is a data analysis tool using Flask, Socket.IO and d3.js with optional parallelization with Redis Queue and visualization with mpld3.</span>
+</li>
+</ul>
 <a class="go-top" href="#">Go Top</a>
 <footer class="footer">
 <p>© Sven Kreiss 2014 – 2018.<br/>

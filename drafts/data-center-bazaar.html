@@ -140,10 +140,18 @@ Nodes that have data locally available or already cached part of the Docker imag
 <h2>Use Cases</h2>
 <p><code>dockbroker</code> just sets up environments. The actual parallelized execution, collection of results, data management, etc. has to be handled separately. You could imagine running an <a href="http://ipython.org/ipython-doc/dev/parallel/parallel_intro.html">ipcluster</a> with it (popular in the <code>IPython</code> community) or running an <a href="https://spark.apache.org/">Apache Spark</a> cluster. Sometimes you just need different software versions in your cluster (like different versions of <a href="http://www.r-project.org/">R</a> or <a href="http://root.cern.ch"><span class="caps">ROOT</span></a>) or different resources (e.g. a <span class="caps">GPU</span>) and <code>dockbroker</code> can find the best place for the job and create the virtual environment.</p>
 <h2>Why?</h2>
-<p>Because I need it. However, it is not like I am creating distributed computing environments every day. I am more a user of <span class="caps">HPC</span>, but it sounds like an interesting project to implement in <a href="http://golang.org/">Go</a> (Docker is written in <a href="http://golang.org/">Go</a>). Contributions to <a href="https://github.com/svenkreiss/dockbroker">dockbroker on github</a> are very welcome.</p>
+<p>Because I need it. However, it is not like I am creating distributed computing environments every day. I am more a user of <span class="caps">HPC</span>, but it sounds like an interesting project to implement in <a href="http://golang.org/">Go</a> (Docker is written in <a href="http://golang.org/">Go</a>). Contributions to <a href="https://github.com/svenkreiss/dockbroker">dockbroker on github</a> are very welcome.</p><script charset="utf-8" src="//platform.twitter.com/widgets.js"></script>
 <div class="hr"></div>
 <h2>Related Posts</h2>
 <ul class="related-posts">
+<li>
+<a class="title" href="http://www.svenkreiss.com/blog/streamprocessing-in-pysparkling/">Stream Processing in pysparkling</a>
+<span class="summary">Support for stream processing with discrete streams.</span>
+</li>
+<li>
+<a class="title" href="http://www.svenkreiss.com/blog/pysparkling-initial/">pysparkling</a>
+<span class="summary">A pure Python implementation of Apache Spark’s RDD interfaces.</span>
+</li>
 <li>
 <a class="title" href="http://www.svenkreiss.com/blog/dvds-js-v0.1.0/">dvds-js version 0.1.0</a>
 <span class="summary">Distributed Versioned Data Structures in JavaScript. Like git in js.</span>

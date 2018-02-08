@@ -5,7 +5,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://www.svenkreiss.com/</loc>
-<lastmod>2018-02-07T07:47:47-00:00</lastmod>
+<lastmod>2018-02-07T23:34:32-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -74,6 +74,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>http://www.svenkreiss.com/blog/streamprocessing-in-pysparkling/</loc>
+<lastmod>2017-03-11T00:00:00-05:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>http://www.svenkreiss.com/blog/decouple/</loc>
 <lastmod>2016-12-31T00:00:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
@@ -83,6 +90,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>http://www.svenkreiss.com/blog/parallel-processing-with-pysparkling/</loc>
 <lastmod>2015-12-04T00:00:00-05:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://www.svenkreiss.com/blog/pysparkling-initial/</loc>
+<lastmod>2015-05-29T00:00:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -159,7 +173,28 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://www.svenkreiss.com/blog/category/tech/</loc>
-<lastmod>2015-12-04T00:00:00-04:56</lastmod>
+<lastmod>2017-03-11T00:00:00-04:56</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://www.svenkreiss.com/blog/tag/data/</loc>
+<lastmod>2017-03-11T00:00:00-04:56</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://www.svenkreiss.com/blog/tag/python/</loc>
+<lastmod>2017-03-11T00:00:00-04:56</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://www.svenkreiss.com/blog/tag/distributed/</loc>
+<lastmod>2017-03-11T00:00:00-04:56</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -167,13 +202,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>http://www.svenkreiss.com/blog/tag/physics/</loc>
 <lastmod>2016-12-31T00:00:00-04:56</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>http://www.svenkreiss.com/blog/tag/data/</loc>
-<lastmod>2015-12-04T00:00:00-04:56</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -214,13 +242,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>http://www.svenkreiss.com/blog/tag/python/</loc>
-<lastmod>2014-06-03T00:00:00-04:56</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
 <loc>http://www.svenkreiss.com/blog/tag/matplotlib/</loc>
 <lastmod>2014-06-03T00:00:00-04:56</lastmod>
 <changefreq>monthly</changefreq>
@@ -242,13 +263,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>http://www.svenkreiss.com/blog/tag/distributed/</loc>
-<lastmod>2014-04-25T00:00:00-04:56</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
 <loc>http://www.svenkreiss.com/blog/tag/version-control/</loc>
 <lastmod>2014-04-25T00:00:00-04:56</lastmod>
 <changefreq>monthly</changefreq>
@@ -257,6 +271,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://www.svenkreiss.com/blog/tag/web/</loc>
+<lastmod>2014-03-07T04:41:00-04:56</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://www.svenkreiss.com/blog/tag/pelican/</loc>
 <lastmod>2014-03-07T04:41:00-04:56</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
@@ -285,7 +306,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://www.svenkreiss.com/blog/author/sven-kreiss/</loc>
-<lastmod>2016-12-31T00:00:00-04:56</lastmod>
+<lastmod>2017-03-11T00:00:00-04:56</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>

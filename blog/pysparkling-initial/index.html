@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="A pure Python implementation of Apache Spark’s RDD interfaces." name="description"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="@svenkreiss" name="twitter:site"/>
+<meta content="@svenkreiss" name="twitter:creator"/>
+<meta content="pysparkling" name="twitter:title"/>
+<meta content="A pure Python implementation of Apache Spark’s RDD interfaces." name="twitter:description"/>
+<meta content="http://www.svenkreiss.com/images/me_nyc_square_500.jpeg" name="twitter:image:src"/>
+<meta content="svenkreiss.com" name="twitter:domain"/>
+<meta content="pysparkling" property="og:title"/>
+<meta content="article" property="og:type"/>
+<meta content="A pure Python implementation of Apache Spark’s RDD interfaces." property="og:description"/>
+<meta content="http://www.svenkreiss.com/images/me_nyc_square_500.jpeg" property="og:image"/>
+<meta content="svenkreiss.com" property="og:site_name"/>
+<link href="http://www.svenkreiss.com/feeds/all.atom.xml" rel="alternate" title="Sven Kreiss Full Atom Feed" type="application/atom+xml"/>
+<title>pysparkling - Sven Kreiss</title>
+<!-- KaTeX -->
+<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0-beta1/katex.min.css" integrity="sha384-VEnyslhHLHiYPca9KFkBB3CMeslnM9CzwjxsEbZTeA21JBm7tdLwKoZmCt3cZTYD" rel="stylesheet"/>
+<script crossorigin="anonymous" integrity="sha384-O4hpKqcplNCe+jLuBVEXC10Rn1QEqAmX98lKAIFBEDxZI0a+6Z2w2n8AEtQbR4CD" src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0-beta1/katex.min.js"></script>
+<script crossorigin="anonymous" integrity="sha384-IiI65aU9ZYub2MY9zhtKd1H2ps7xxf+eb2YFG9lX6uRqpXCvBTOidPRCXCrQ++Uc" src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0-beta1/contrib/auto-render.min.js"></script>
+<!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.3.0/pure-min.css"> -->
+<link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="http://www.svenkreiss.com/theme/css/pure.css" rel="stylesheet"/>
+<link href="http://www.svenkreiss.com/theme/css/pygments.css" rel="stylesheet"/>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<!-- for pelican_dynamic plugin -->
+<!-- end pelican_dynamic -->
+</head>
+<body>
+<div class="pure-g-r" id="layout">
+<div class="sidebar sidebar-article pure-u">
+<header class="header-article">
+<a href="http://www.svenkreiss.com/blog/author/sven-kreiss/" title="See posts by Sven Kreiss">
+<img alt="Sven Kreiss" class="avatar" src="https://www.gravatar.com/avatar/562a52f3ffcb6c2a3556f91ddc540776"/>
+</a>
+<h2 class="article-info">Sven Kreiss</h2>
+<h5>Published</h5>
+<p>May 29, 2015</p>
+<a class="header-article-home" href="/">←Home</a>
+</header>
+</div>
+<div class="pure-u">
+<div class="content">
+<section class="post">
+<header class="post-header">
+<h1>pysparkling</h1>
+<p class="post-meta">
+                            // under
+                                <a class="post-category" href="http://www.svenkreiss.com/blog/tag/data/">data</a>
+<a class="post-category" href="http://www.svenkreiss.com/blog/tag/distributed/">distributed</a>
+<a class="post-category" href="http://www.svenkreiss.com/blog/tag/python/">Python</a>
+                            in <a class="post-category" href="http://www.svenkreiss.com/blog/category/tech/">Tech</a>   
+
+                            <span style="display:inline-block;">
+                            // share on <a href="https://twitter.com/share?text=%22pysparkling%22&amp;via=svenkreiss" target="_blank">
+<i class="fa fa-twitter fa-lg"></i> Twitter
+                            </a>
+</span>
+</p>
+</header>
+</section>
+<p><code>pysparkling</code> is a native Python implementation of the interface provided by
+Spark’s RDDs. In Spark, RDDs are Resilient Distributed Datasets. An <span class="caps">RDD</span>
+instance provides convenient access to the partitions of data that are
+distributed on a cluster. New RDDs are created by applying transformations
+like <code>map()</code> and <code>reduce()</code> to existing RDDs.</p>
+<p><code>pysparkling</code> provides the same functionality, but without the dependency on
+the Java Virtual Machine, Spark and Hadoop. The original motivation came from
+implementing a processing pipeline that is common for machine learning: process
+a large number of documents in parallel for training a classification algorithm
+(using Apache Spark) and using that trained classification algorithm in an
+<span class="caps">API</span> endpoint where it is applied to a single document at a time. That single
+document has to be preprocessed however with the same transformations that were
+also applied during training. This is the task for pysparkling.</p>
+<p>Removing the dependency on the <span class="caps">JVM</span>, Spark and Hadoop comes at a cost:</p>
+<ul>
+<li>Hadoop file io is gone, but its core functionality is reimplemented in
+  <code>pysparkling.fileio</code>. This by itself is very handy as you can read the
+  contents of files on <code>s3://</code>, <code>http://</code> and <code>file://</code> and optionally with
+  gzip and bz2 compression just by specifying a file name. The name can
+  include multiple comma separated files and the wildcards <code>?</code> and <code>*</code>.</li>
+<li>Managed resource allocation on clusters is gone (no <span class="caps">YARN</span>). Parallel
+  execution with <code>multiprocessing</code> is supported though.</li>
+</ul>
+<p>It also comes with some advanced features:</p>
+<ul>
+<li>Parallelization with any object that has a map() method. That includes
+  <code>multiprocessing.Pool</code> and <code>concurrent.futures.ProcessPoolExecutor</code>.</li>
+<li>It does provide lazy and distributed execution. For example, when creating
+  an <span class="caps">RDD</span> from 50,000 text files with
+  <code>myrdd = Context().textFile('s3://mybucket/alldata/*.gz')</code> and only accessing
+  one record with <code>myrdd.takeSample(1)</code>, <code>pysparkling</code> will only download a
+  single file from S3 and not all 50,000.</li>
+</ul>
+<h2>Quickstart</h2>
+<p>Install pysparkling with <code>pip install pysparkling</code>. As a first example,
+count the number of occurrences of every word in <code>README.rst</code>:</p>
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pysparkling</span> <span class="kn">import</span> <span class="n">Context</span>
+<span class="n">counts</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">Context</span><span class="p">()</span><span class="o">.</span><span class="n">textFile</span><span class="p">(</span><span class="s1">'README.rst'</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">flatMap</span><span class="p">(</span><span class="k">lambda</span> <span class="n">line</span><span class="p">:</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">' '</span><span class="p">))</span>
+    <span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">word</span><span class="p">:</span> <span class="p">(</span><span class="n">word</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+    <span class="o">.</span><span class="n">reduceByKey</span><span class="p">(</span><span class="k">lambda</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">)</span>
+<span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">counts</span><span class="o">.</span><span class="n">collect</span><span class="p">())</span>
+</pre></div>
+<p>More examples including how to explore the Common Crawl dataset and the dataset
+of the Human Biome Project are in this
+<a href="https://github.com/svenkreiss/pysparkling/blob/master/docs/demo.ipynb">IPython Notebook</a>.</p>
+<h2>Further Reading</h2>
+<p>Get an overview of the <span class="caps">API</span> and more details from
+<a href="http://pysparkling.trivial.io">pysparkling’s documentation</a>.
+If you like this project, <a href="https://github.com/svenkreiss/pysparkling">star it on Github</a>,
+tweet about it and follow me, <a href="https://twitter.com/svenkreiss"><a href="https://twitter.com/svenkreiss">@svenkreiss</a></a>, on Twitter.</p><script charset="utf-8" src="//platform.twitter.com/widgets.js"></script>
+<div class="hr"></div>
+<h2>Related Posts</h2>
+<ul class="related-posts">
+<li>
+<a class="title" href="http://www.svenkreiss.com/blog/streamprocessing-in-pysparkling/">Stream Processing in pysparkling</a>
+<span class="summary">Support for stream processing with discrete streams.</span>
+</li>
+<li>
+<a class="title" href="http://www.svenkreiss.com/blog/parallel-processing-with-pysparkling/">Parallel Processing with pysparkling</a>
+<span class="summary">Benchmarks for the latest parallel features in pysparkling.</span>
+</li>
+<li>
+<a class="title" href="http://www.svenkreiss.com/blog/dvds-js-v0.1.0/">dvds-js version 0.1.0</a>
+<span class="summary">Distributed Versioned Data Structures in JavaScript. Like git in js.</span>
+</li>
+<li>
+<a class="title" href="http://www.svenkreiss.com/blog/databench-initial/">Databench</a>
+<span class="summary">Databench is a data analysis tool using Flask, Socket.IO and d3.js with optional parallelization with Redis Queue and visualization with mpld3.</span>
+</li>
+<li>
+<a class="title" href="http://www.svenkreiss.com/blog/pelican-vimeo/">Vimeo liquid tag for Pelican</a>
+<span class="summary">Extend liquid tags plugin for Pelican to include a Vimeo tag.</span>
+</li>
+</ul>
+<a class="go-top" href="#">Go Top</a>
+<footer class="footer">
+<p>© Sven Kreiss 2014 – 2018.<br/>
+    This work is licensed under a <a href="http://creativecommons.org/licenses/by/4.0/" rel="license">Creative Commons Attribution 4.0 International License</a>.</p>
+</footer> </div>
+</div>
+</div>
+<script>
+        renderMathInElement(document.body);
+
+        var $top = $('.go-top');
+
+        // Show or hide the sticky footer button
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 200) {
+                // $top.fadeIn(200);
+                $top.addClass('go-top-visible');
+            } else {
+                // $top.fadeOut(200);
+                $top.removeClass('go-top-visible');
+            }
+        });
+
+        // Animate the scroll to top
+        $top.click(function(event) {
+            event.preventDefault();
+            $('html, body').animate({scrollTop: 0}, 300);
+        })
+
+        // Makes sure that the href="#" attached to the <a> elements
+        // don't scroll you back up the page.
+        $('body').on('click', 'a[href="#"]', function(event) {
+            event.preventDefault();
+        });
+    </script>
+<!-- for pelican_dynamic plugin -->
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-4070485-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</body>
+</html>
