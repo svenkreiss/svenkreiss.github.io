@@ -73,7 +73,7 @@ I revived my Pelican blog. Reasons for Pelican:</p>
 <p>Cost, have to contribute some changes myself:</p>
 <ul>
 <li>customized Pure theme <a href="https://github.com/svenkreiss/pure">repository</a>, including print mode, less author mentions, responsive resizing for mobile</li>
-<li>pelican-cite: created a <a href="https://github.com/cmacmackin/pelican-cite/pull/5"><span class="caps">PR</span></a> so that it also works on draft pages</li>
+<li>pelican-cite: created a <a href="https://github.com/cmacmackin/pelican-cite/pull/5"><span class="caps">PR</span>#5</a> so that it also works on draft pages</li>
 <li>related_posts: newly added to this blog</li>
 <li>using KaTeX: nothing existed to combine it with Pelican and so I created
   <a href="https://github.com/svenkreiss/pelican-jsmath">pelican-jsmath</a>.
@@ -84,8 +84,8 @@ I revived my Pelican blog. Reasons for Pelican:</p>
 <li>Pelican plugins in a single repository or standalone? <blockquote class="twitter-tweet" data-align="center" data-dnt="true"><a href="https://twitter.com/svenkreiss/status/960716731059785730">Tweet of svenkreiss/960716731059785730</a></blockquote></li>
 <li>featured_image in article list</li>
 <li>pygments <code>friendly</code> style, a light theme for code highlighting shown in the <a href="https://help.farbox.com/pygments.html">gallery</a></li>
-<li><a href="https://pypi.python.org/pypi/pelican-advance-embed-tweet">pelican-advance-embed-tweet</a>: already a package on pypi, but submitted <a href="https://github.com/fundor333/pelican-advance-embed-tweet/pull/2"><span class="caps">PR</span></a> to remove align attribute from <code>&lt;bockquote&gt;</code> which is not <span class="caps">HTML5</span>, and you can instead set <code>TWITTER_ALIGN = 'center'</code> in your <code>pelicanconf</code> to center the embedded tweet.</li>
-<li>hack of the day: make your default status <code>draft</code> (generally a good idea), but then make the default status in <code>publishconf.py</code> <code>hidden</code>. When trying to publish, <code>hidden</code> will create an error and the file will be skipped. So the article wont exist on the web at all until its status is set to <code>draft</code>, but you can work on it locally. Also have to split <code>OUTPUTDIR</code> in the Makefile so that two different directories are used for <code>make devserver</code> and <code>make publish</code>.
+<li><a href="https://pypi.python.org/pypi/pelican-advance-embed-tweet">pelican-advance-embed-tweet</a>: already a package on pypi, but submitted <a href="https://github.com/fundor333/pelican-advance-embed-tweet/pull/2"><span class="caps">PR</span>#2</a> to remove align attribute from <code>&lt;bockquote&gt;</code> which is not <span class="caps">HTML5</span>, and you can instead set <code>TWITTER_ALIGN = 'center'</code> in your <code>pelicanconf</code> to center the embedded tweet.</li>
+<li>hack of the day: make your default status <code>draft</code> (generally a good idea), but then make the default status in <code>publishconf.py</code> <code>hidden</code>. When trying to publish, <code>hidden</code> will create an error and the file will be skipped. So the article wont exist on the web at all until its status is set to <code>draft</code>, but you can work on it locally. Also have to split <code>OUTPUTDIR</code> in the Makefile so that two different directories are used for <code>make devserver</code> and <code>make publish</code> (filed <a href="https://github.com/getpelican/pelican/issues/2284">issue#2284</a> against Pelican).
   Link: <a href="https://github.com/svenkreiss/svenkreiss.github.io/blob/pelican/Makefile">Makefile for this site</a>.</li>
 </ul><script charset="utf-8" src="//platform.twitter.com/widgets.js"></script>
 <div class="hr"></div>
