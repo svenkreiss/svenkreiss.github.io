@@ -36,7 +36,7 @@
 <div class="sidebar sidebar-article pure-u">
 <header class="header-article">
 <a href="http://www.svenkreiss.com/blog/author/sven-kreiss/" title="See posts by Sven Kreiss">
-<img alt="Sven Kreiss" class="avatar" src="https://www.gravatar.com/avatar/562a52f3ffcb6c2a3556f91ddc540776"/>
+<img alt="Sven Kreiss" class="avatar" src="https://www.gravatar.com/avatar/562a52f3ffcb6c2a3556f91ddc540776?s=140"/>
 </a>
 <h2 class="article-info">Sven Kreiss</h2>
 <h5>Draft</h5>
@@ -87,6 +87,7 @@ I revived my Pelican blog. Reasons for Pelican:</p>
 <li><a href="https://pypi.python.org/pypi/pelican-advance-embed-tweet">pelican-advance-embed-tweet</a>: already a package on pypi, but submitted <a href="https://github.com/fundor333/pelican-advance-embed-tweet/pull/2"><span class="caps">PR</span>#2</a> to remove align attribute from <code>&lt;bockquote&gt;</code> which is not <span class="caps">HTML5</span>, and you can instead set <code>TWITTER_ALIGN = 'center'</code> in your <code>pelicanconf</code> to center the embedded tweet.</li>
 <li>hack of the day: make your default status <code>draft</code> (generally a good idea), but then make the default status in <code>publishconf.py</code> <code>hidden</code>. When trying to publish, <code>hidden</code> will create an error and the file will be skipped. So the article wont exist on the web at all until its status is set to <code>draft</code>, but you can work on it locally. Also have to split <code>OUTPUTDIR</code> in the Makefile so that two different directories are used for <code>make devserver</code> and <code>make publish</code> (filed <a href="https://github.com/getpelican/pelican/issues/2284">issue#2284</a> against Pelican).
   Link: <a href="https://github.com/svenkreiss/svenkreiss.github.io/blob/pelican/Makefile">Makefile for this site</a>.</li>
+<li>request higher resolution Gravatar images by adding <code>?s=140</code> to the image url in the theme. This requests a 140x140px image for a 70x70px view. The default setting is 80x80px and works poorly for 70x70px especially on high resolution screens.</li>
 </ul><script charset="utf-8" src="//platform.twitter.com/widgets.js"></script>
 <div class="hr"></div>
 <a class="go-top" href="#">Go Top</a>
