@@ -96,7 +96,7 @@ nodes and a few more are aggregated in the <code>Context._stats</code> variable.
 </ul>
 <h2>Results</h2>
 <p>The test was run on a 4-core Intel i5 processor and this is the result:</p>
-<p><img alt="Speedup with parallel processing on a 4-core Intel i5." src="/images/pysparkling_4cores.png"/></p>
+<p><img alt="Speedup with parallel processing on a 4-core Intel i5." class="image-process-crisp" src="/images/derivatives/crisp/1x/pysparkling_4cores.png" srcset="/images/derivatives/crisp/1x/pysparkling_4cores.png 1x, /images/derivatives/crisp/2x/pysparkling_4cores.png 2x, /images/derivatives/crisp/4x/pysparkling_4cores.png 4x"/></p>
 <p>Achieving a 3x improvement with four cores is good in real world benchmarks.
 The new <code>Context._stats</code> variable gives more insight into where time is
 actually spent. The numbers below are normalized with respect to the time
@@ -117,7 +117,7 @@ and the plots can be recreated with <code>ipython tests/multiprocessing_performa
 <p>The test was also run on a 4-core Intel i7 processor with Hyperthreading. You
 can see that the performance is slightly better than with the i5, but that the
 doubled threads do not double the performance.</p>
-<p><img alt="Speedup with parallel processing on a 4-core Intel i7." src="/images/pysparkling_4cores_hyperthreading.png"/></p>
+<p><img alt="Speedup with parallel processing on a 4-core Intel i7." class="image-process-crisp" src="/images/derivatives/crisp/1x/pysparkling_4cores_hyperthreading.png" srcset="/images/derivatives/crisp/1x/pysparkling_4cores_hyperthreading.png 1x, /images/derivatives/crisp/2x/pysparkling_4cores_hyperthreading.png 2x, /images/derivatives/crisp/4x/pysparkling_4cores_hyperthreading.png 4x"/></p>
 <p>As a first pass at multiprocessing with pysparkling, this is a good result.
 Please check out the project on <a href="https://github.com/svenkreiss/pysparkling">Github</a>,
 install it with <code>pip install pysparkling</code> and send feedback.</p><script charset="utf-8" src="//platform.twitter.com/widgets.js"></script>

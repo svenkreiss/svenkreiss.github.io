@@ -88,6 +88,7 @@ I revived my Pelican blog. Reasons for Pelican:</p>
 <li>hack of the day: make your default status <code>draft</code> (generally a good idea), but then make the default status in <code>publishconf.py</code> <code>hidden</code>. When trying to publish, <code>hidden</code> will create an error and the file will be skipped. So the article wont exist on the web at all until its status is set to <code>draft</code>, but you can work on it locally. Also have to split <code>OUTPUTDIR</code> in the Makefile so that two different directories are used for <code>make devserver</code> and <code>make publish</code> (filed <a href="https://github.com/getpelican/pelican/issues/2284">issue#2284</a> against Pelican).
   Link: <a href="https://github.com/svenkreiss/svenkreiss.github.io/blob/pelican/Makefile">Makefile for this site</a>.</li>
 <li>request higher resolution Gravatar images by adding <code>?s=140</code> to the image url in the theme. This requests a 140x140px image for a 70x70px view. The default setting is 80x80px and works poorly for 70x70px especially on high resolution screens.</li>
+<li>responsive image classes for “list of articles” and other theme pages</li>
 </ul><script charset="utf-8" src="//platform.twitter.com/widgets.js"></script>
 <div class="hr"></div>
 <a class="go-top" href="#">Go Top</a>

@@ -81,7 +81,7 @@ nodes and a few more are aggregated in the &lt;code&gt;Context._stats&lt;/code&g
 &lt;/ul&gt;
 &lt;h2&gt;Results&lt;/h2&gt;
 &lt;p&gt;The test was run on a 4-core Intel i5 processor and this is the&amp;nbsp;result:&lt;/p&gt;
-&lt;p&gt;&lt;img src="/images/pysparkling_4cores.png" alt="Speedup with parallel processing on a 4-core Intel i5." /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class="image-process-crisp" src="/images/pysparkling_4cores.png" alt="Speedup with parallel processing on a 4-core Intel i5." /&gt;&lt;/p&gt;
 &lt;p&gt;Achieving a 3x improvement with four cores is good in real world benchmarks.
 The new &lt;code&gt;Context._stats&lt;/code&gt; variable gives more insight into where time is
 actually spent. The numbers below are normalized with respect to the time
@@ -102,7 +102,7 @@ and the plots can be recreated with &lt;code&gt;ipython tests/multiprocessing_pe
 &lt;p&gt;The test was also run on a 4-core Intel i7 processor with Hyperthreading. You
 can see that the performance is slightly better than with the i5, but that the
 doubled threads do not double the&amp;nbsp;performance.&lt;/p&gt;
-&lt;p&gt;&lt;img src="/images/pysparkling_4cores_hyperthreading.png" alt="Speedup with parallel processing on a 4-core Intel i7." /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class="image-process-crisp" src="/images/pysparkling_4cores_hyperthreading.png" alt="Speedup with parallel processing on a 4-core Intel i7." /&gt;&lt;/p&gt;
 &lt;p&gt;As a first pass at multiprocessing with pysparkling, this is a good result.
 Please check out the project on &lt;a href="https://github.com/svenkreiss/pysparkling"&gt;Github&lt;/a&gt;,
 install it with &lt;code&gt;pip install pysparkling&lt;/code&gt; and send&amp;nbsp;feedback.&lt;/p&gt;&lt;script src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;</content><category term="data"></category><category term="pysparkling"></category><category term="Python"></category></entry><entry><title>pysparkling</title><link href="http://www.svenkreiss.com/blog/pysparkling-initial/" rel="alternate"></link><published>2015-05-29T00:00:00-04:00</published><updated>2015-05-29T00:00:00-04:00</updated><author><name>Sven Kreiss</name></author><id>tag:www.svenkreiss.com,2015-05-29:/blog/pysparkling-initial/</id><summary type="html">&lt;p&gt;A pure Python implementation of Apache Spark&amp;#8217;s &lt;span class="caps"&gt;RDD&lt;/span&gt;&amp;nbsp;interfaces.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;code&gt;pysparkling&lt;/code&gt; is a native Python implementation of the interface provided by
