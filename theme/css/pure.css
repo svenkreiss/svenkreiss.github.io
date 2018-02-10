@@ -84,10 +84,14 @@ pre {
 
 .article-info {
     padding-top: 15px;
+    margin-bottom: 0;
     clear: right;
     font-weight: 300;
     color: rgb(0, 0, 0);
     word-wrap: break-word;
+}
+.article-date {
+    margin-top: 0;
 }
 
 .article-avatar {
@@ -383,8 +387,6 @@ ul.related-posts .summary {
     .avatar {
         float: none;
         margin-left: 0;
-        width: 45px;
-        height: 45px;
     }
 
     .article-avatar {
