@@ -52,6 +52,7 @@
 <p class="post-meta">
                             // under
                                 <a class="post-category" href="http://www.svenkreiss.com/blog/tag/blog/">blog</a>
+<a class="post-category" href="http://www.svenkreiss.com/blog/tag/pelican/">Pelican</a>
                             in <a class="post-category" href="http://www.svenkreiss.com/blog/category/tech/">Tech</a>   
 
                             <span style="display:inline-block;">
@@ -72,25 +73,34 @@ I revived my Pelican blog. Reasons for Pelican:</p>
 </ul>
 <p>Cost, have to contribute some changes myself:</p>
 <ul>
-<li>customized Pure theme <a href="https://github.com/svenkreiss/pure">repository</a>, including print mode, less author mentions, responsive resizing for mobile</li>
-<li>pelican-cite: created a <a href="https://github.com/cmacmackin/pelican-cite/pull/5"><span class="caps">PR</span>#5</a> so that it also works on draft pages</li>
-<li>related_posts: newly added to this blog</li>
-<li>using KaTeX: nothing existed to combine it with Pelican and so I created
+<li>customized Pure theme <a href="https://github.com/svenkreiss/pure">repository</a>, including print mode, less author mentions, responsive resizing for mobile, condensed article header (particularly nice on mobile)</li>
+<li>always validate html with <a href="https://github.com/svenkreiss/html5validator">html5validator</a></li>
+<li><code>pelican-cite</code>: created a <a href="https://github.com/cmacmackin/pelican-cite/pull/5"><span class="caps">PR</span>#5</a> so that it also works on draft pages</li>
+<li><code>related_posts</code>: newly added to this blog</li>
+<li><code>pelican_jsmath</code>: using KaTeX: nothing existed to combine it with Pelican and so I created
   <a href="https://github.com/svenkreiss/pelican-jsmath">pelican-jsmath</a>.
   The new plugin is <span class="math">\(\alpha\omega\epsilon s \sigma m \epsilon\)</span> and described in a separate
   <a href="http://www.svenkreiss.com/drafts/pelican-jsmath.html">blog post</a>.</li>
-<li>image_process: responsive images (smaller images on smaller devices) are
-  especially important for the <a href="/projects.html">projects</a> page</li>
-<li>Pelican plugins in a single repository or standalone? <blockquote class="twitter-tweet" data-align="center" data-dnt="true"><a href="https://twitter.com/svenkreiss/status/960716731059785730">Tweet of svenkreiss/960716731059785730</a></blockquote></li>
-<li>featured_image in article list</li>
+<li><code>image_process</code>: responsive images (smaller images on smaller devices) are
+  especially important for the <a href="/projects.html">projects</a> page and on article list page
+  (image_process works on all generated files just before they are written, so can use in theme).</li>
+<li><code>representative_image</code>: in article list with <code>image_process</code> to thumbnail</li>
 <li>pygments <code>friendly</code> style, a light theme for code highlighting shown in the <a href="https://help.farbox.com/pygments.html">gallery</a></li>
-<li><a href="https://pypi.python.org/pypi/pelican-advance-embed-tweet">pelican-advance-embed-tweet</a>: already a package on pypi, but submitted <a href="https://github.com/fundor333/pelican-advance-embed-tweet/pull/2"><span class="caps">PR</span>#2</a> to remove align attribute from <code>&lt;bockquote&gt;</code> which is not <span class="caps">HTML5</span>, and you can instead set <code>TWITTER_ALIGN = 'center'</code> in your <code>pelicanconf</code> to center the embedded tweet.</li>
-<li>hack of the day: make your default status <code>draft</code> (generally a good idea), but then make the default status in <code>publishconf.py</code> <code>hidden</code>. When trying to publish, <code>hidden</code> will create an error and the file will be skipped. So the article wont exist on the web at all until its status is set to <code>draft</code>, but you can work on it locally. Also have to split <code>OUTPUTDIR</code> in the Makefile so that two different directories are used for <code>make devserver</code> and <code>make publish</code> (filed <a href="https://github.com/getpelican/pelican/issues/2284">issue#2284</a> against Pelican).
-  Link: <a href="https://github.com/svenkreiss/svenkreiss.github.io/blob/pelican/Makefile">Makefile for this site</a>.</li>
+<li><code>pelican-advance-embed-tweet</code>: already a package on pypi, but submitted <a href="https://github.com/fundor333/pelican-advance-embed-tweet/pull/2"><span class="caps">PR</span>#2</a> to remove align attribute from <code>&lt;bockquote&gt;</code> which is not <span class="caps">HTML5</span>, and you can instead set <code>TWITTER_ALIGN = 'center'</code> in your <code>pelicanconf</code> to center the embedded tweet.</li>
+<li>hack of the day: make your default status <code>draft</code> (generally a good idea), but then make the default status in <code>publishconf.py</code> to <code>hidden</code>. When trying to publish, <code>hidden</code> will create an error and the file will be skipped. So the article wont exist on the web at all until its status is set to <code>draft</code>. Problem: have to split <code>OUTPUTDIR</code> in the Makefile so that two different directories are used for <code>make devserver</code> and <code>make publish</code> (filed <a href="https://github.com/getpelican/pelican/issues/2284">issue#2284</a> against Pelican; see <a href="https://github.com/svenkreiss/svenkreiss.github.io/blob/pelican/Makefile">Makefile</a>).</li>
 <li>request higher resolution Gravatar images by adding <code>?s=140</code> to the image url in the theme. This requests a 140x140px image for a 70x70px view. The default setting is 80x80px and works poorly for 70x70px especially on high resolution screens.</li>
-<li>responsive image classes for “list of articles” and other theme pages</li>
-</ul><script charset="utf-8" src="//platform.twitter.com/widgets.js"></script>
+<li><code>pelican_dynamic</code>: per article, add custom <code>css</code> or <code>js</code></li>
+</ul>
+<p>Pelican plugins in a single repository or standalone? <blockquote class="twitter-tweet" data-align="center" data-dnt="true"><a href="https://twitter.com/svenkreiss/status/960716731059785730">Tweet of svenkreiss/960716731059785730</a></blockquote></p><script charset="utf-8" src="//platform.twitter.com/widgets.js"></script>
 <div class="hr"></div>
+<h2>Related Posts</h2>
+<ul class="related-posts">
+<li>
+<a class="title" href="http://www.svenkreiss.com/blog/pelican-vimeo/">Vimeo liquid tag for Pelican</a>
+<span class="date">from March 07, 2014</span>
+<span class="summary">Extend liquid tags plugin for Pelican to include a Vimeo tag.</span>
+</li>
+</ul>
 <a class="go-top" href="#">Go Top</a>
 <footer class="footer">
 <p>© Sven Kreiss 2014 – 2018.<br/>
