@@ -13,7 +13,7 @@ Inspired by Fred Wilson's post about [Owning Yourself](http://avc.com/2018/01/ow
 I revived my Pelican blog. Reasons for Pelican compared to hosted solutions:
 
 * version control in git
-* my usual editor for content creation
+* my usual text editor for content creation
 * fully owning content and its exact presentation
 * complete customizability, therefore I want Python, therefore Pelican
 
@@ -24,14 +24,14 @@ A cost is that I have to contribute some changes myself:
   [pelican-jsmath](https://github.com/svenkreiss/pelican-jsmath).
   The new plugin is $\alpha\omega\epsilon s \sigma m \epsilon$ and described in a separate
   [blog post]({filename}/pelican-jsmath.md).
-* `pelican-cite`: created a [PR#5](https://github.com/cmacmackin/pelican-cite/pull/5) so that it also works on draft pages
+* `pelican-cite`: create a nicely formatted Bibliography from a bibtex file. I created [PR#5](https://github.com/cmacmackin/pelican-cite/pull/5) so that it also works on draft pages.
 * `image_process`: Responsive images (smaller images on smaller devices) are
   especially important for the [projects](/projects.html) page and on article index page.
   The plugin works on all generated files just before they are written, so you can use it everywhere in your theme as well.
 * `pelican-advance-embed-tweet`: submitted [PR#2](https://github.com/fundor333/pelican-advance-embed-tweet/pull/2) to remove align attribute from `<bockquote>` which is not HTML5, and you can instead set `TWITTER_ALIGN = 'center'` in your `pelicanconf` to center the embedded tweet.
 * `gravatar`: request higher resolution Gravatar images by adding `?s=140` to the image url in the theme
 * `related_posts`: newly added to this blog
-* `representative_image`: in article list with `image_process` to thumbnail
+* `representative_image`: automatically extract an image from an article and use it in article list with `image_process` to thumbnail
 * `pelican_dynamic`: adds options to add per article custom `css` and `js`
 
 Open and in-progress issues:
@@ -58,3 +58,7 @@ to manage dependencies. Plugins can be written to support `pip` and Pelican
 does support importable plugins. This also allows unit tests and continuous
 integration to ensure the quality of the plugin.
 This is the method I chose for [pelican-jsmath](https://github.com/svenkreiss/pelican-jsmath).
+
+Please share and discuss on Twitter:
+
+<div>@svenkreiss/status/962402175757570048</div>
