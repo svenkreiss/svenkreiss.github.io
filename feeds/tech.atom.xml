@@ -1,5 +1,91 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Sven Kreiss - Tech</title><link href="http://www.svenkreiss.com/" rel="alternate"></link><link href="http://www.svenkreiss.com/feeds/tech.atom.xml" rel="self"></link><id>http://www.svenkreiss.com/</id><updated>2017-03-11T00:00:00-05:00</updated><entry><title>Stream Processing in pysparkling</title><link href="http://www.svenkreiss.com/blog/streamprocessing-in-pysparkling/" rel="alternate"></link><published>2017-03-11T00:00:00-05:00</published><updated>2017-03-11T00:00:00-05:00</updated><author><name>Sven Kreiss</name></author><id>tag:www.svenkreiss.com,2017-03-11:/blog/streamprocessing-in-pysparkling/</id><summary type="html">&lt;p&gt;Support for stream processing with discrete&amp;nbsp;streams.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;code&gt;pysparkling&lt;/code&gt; is a native Python implementation of PySpark. Stream processing
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Sven Kreiss - Tech</title><link href="http://www.svenkreiss.com/" rel="alternate"></link><link href="http://www.svenkreiss.com/feeds/tech.atom.xml" rel="self"></link><id>http://www.svenkreiss.com/</id><updated>2018-02-10T00:00:00-05:00</updated><entry><title>Pelican 2018</title><link href="http://www.svenkreiss.com/blog/pelican-2018/" rel="alternate"></link><published>2018-02-10T00:00:00-05:00</published><updated>2018-02-10T00:00:00-05:00</updated><author><name>Sven Kreiss</name></author><id>tag:www.svenkreiss.com,2018-02-10:/blog/pelican-2018/</id><summary type="html">&lt;p&gt;Updates to Pelican and this&amp;nbsp;blog.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img class="image-process-crisp top" alt="screenshot of this blog" src="/images/pelican_screenshot_Feb2018.png" /&gt;&lt;/p&gt;
+&lt;p&gt;Inspired by Fred Wilson&amp;#8217;s post about &lt;a href="http://avc.com/2018/01/owning-yourself/"&gt;Owning Yourself&lt;/a&gt;,
+I revived my Pelican blog. Reasons for Pelican compared to hosted&amp;nbsp;solutions:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;version control in&amp;nbsp;git&lt;/li&gt;
+&lt;li&gt;my usual editor for content&amp;nbsp;creation&lt;/li&gt;
+&lt;li&gt;fully owning content and its exact&amp;nbsp;presentation&lt;/li&gt;
+&lt;li&gt;complete customizability, therefore I want Python, therefore&amp;nbsp;Pelican&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;A cost is that I have to contribute some changes&amp;nbsp;myself:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/svenkreiss/pure"&gt;customized Pure theme&lt;/a&gt;: print mode, less author mentions, responsive resizing for mobile, using the pygments &lt;code&gt;friendly&lt;/code&gt; style for code&amp;nbsp;highlighting&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;pelican_jsmath&lt;/code&gt;: using KaTeX: nothing existed to combine it with Pelican and so I created
+  &lt;a href="https://github.com/svenkreiss/pelican-jsmath"&gt;pelican-jsmath&lt;/a&gt;.
+  The new plugin is &lt;span class="math"&gt;\(\alpha\omega\epsilon s \sigma m \epsilon\)&lt;/span&gt; and described in a separate
+  &lt;a href="http://www.svenkreiss.com/blog/pelican-jsmath/"&gt;blog post&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;pelican-cite&lt;/code&gt;: created a &lt;a href="https://github.com/cmacmackin/pelican-cite/pull/5"&gt;&lt;span class="caps"&gt;PR&lt;/span&gt;#5&lt;/a&gt; so that it also works on draft&amp;nbsp;pages&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;image_process&lt;/code&gt;: Responsive images (smaller images on smaller devices) are
+  especially important for the &lt;a href="/projects.html"&gt;projects&lt;/a&gt; page and on article index page.
+  The plugin works on all generated files just before they are written, so you can use it everywhere in your theme as&amp;nbsp;well.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;pelican-advance-embed-tweet&lt;/code&gt;: submitted &lt;a href="https://github.com/fundor333/pelican-advance-embed-tweet/pull/2"&gt;&lt;span class="caps"&gt;PR&lt;/span&gt;#2&lt;/a&gt; to remove align attribute from &lt;code&gt;&amp;lt;bockquote&amp;gt;&lt;/code&gt; which is not &lt;span class="caps"&gt;HTML5&lt;/span&gt;, and you can instead set &lt;code&gt;TWITTER_ALIGN = 'center'&lt;/code&gt; in your &lt;code&gt;pelicanconf&lt;/code&gt; to center the embedded&amp;nbsp;tweet.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;gravatar&lt;/code&gt;: request higher resolution Gravatar images by adding &lt;code&gt;?s=140&lt;/code&gt; to the image url in the&amp;nbsp;theme&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;related_posts&lt;/code&gt;: newly added to this&amp;nbsp;blog&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;representative_image&lt;/code&gt;: in article list with &lt;code&gt;image_process&lt;/code&gt; to&amp;nbsp;thumbnail&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;pelican_dynamic&lt;/code&gt;: adds options to add per article custom &lt;code&gt;css&lt;/code&gt; and &lt;code&gt;js&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Open and in-progress&amp;nbsp;issues:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;hack of the day: make your default status &lt;code&gt;draft&lt;/code&gt; (generally a good idea), but then make the default status in &lt;code&gt;publishconf.py&lt;/code&gt; to &lt;code&gt;hidden&lt;/code&gt;. When trying to publish, &lt;code&gt;hidden&lt;/code&gt; will create an error and the file will be skipped. So the article wont exist on the web at all until its status is set to &lt;code&gt;draft&lt;/code&gt;. Problem: have to split &lt;code&gt;OUTPUTDIR&lt;/code&gt; in the Makefile so that two different directories are used for &lt;code&gt;make devserver&lt;/code&gt; and &lt;code&gt;make publish&lt;/code&gt; (filed &lt;a href="https://github.com/getpelican/pelican/issues/2284"&gt;issue#2284&lt;/a&gt; against Pelican; see &lt;a href="https://github.com/svenkreiss/svenkreiss.github.io/blob/pelican/Makefile"&gt;Makefile&lt;/a&gt;).&lt;/li&gt;
+&lt;li&gt;Have to wrap Tweet embeds in &lt;code&gt;&amp;lt;div&amp;gt;&lt;/code&gt; to avoid Markdown&amp;#8217;s &lt;code&gt;&amp;lt;p&amp;gt;&lt;/code&gt; tag because the embedded tweet includes a &lt;code&gt;&amp;lt;blockquote&amp;gt;&lt;/code&gt; which cannot appear inside a &lt;code&gt;&amp;lt;p&amp;gt;&lt;/code&gt; tag.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Always validate html with &lt;a href="https://github.com/svenkreiss/html5validator"&gt;html5validator&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;Pelican&amp;nbsp;Plugins&lt;/h2&gt;
+&lt;p&gt;Most Pelican Plugins are distributed through the central
+&lt;a href="https://github.com/getpelican/pelican-plugins"&gt;pelican-plugins&lt;/a&gt; repository.
+The contributed plugins have fairly little recognition: &lt;code&gt;render_math&lt;/code&gt; has 65 stars and
+&lt;code&gt;image_process&lt;/code&gt; has 10 stars. Issues against individual plugins are filed
+in the central repository and not against the individual plugins. Updates to
+plugins have to wait for inclusion in the central repository before they become
+used by&amp;nbsp;others.&lt;/p&gt;
+&lt;div&gt;&lt;blockquote class="twitter-tweet"  data-align = 'center' data-dnt = 'true'&gt;&lt;a href="https://twitter.com/svenkreiss/status/960716731059785730"&gt;Tweet of svenkreiss/960716731059785730&lt;/a&gt;&lt;/blockquote&gt;&lt;/div&gt;
+
+&lt;p&gt;Python provides its standard mechanism with &lt;code&gt;pip&lt;/code&gt;, &lt;code&gt;setuptools&lt;/code&gt;, &lt;code&gt;requirements.txt&lt;/code&gt;, etc.
+to manage dependencies. Plugins can be written to support &lt;code&gt;pip&lt;/code&gt; and Pelican
+does support importable plugins. This also allows unit tests and continuous
+integration to ensure the quality of the plugin.
+This is the method I chose for &lt;a href="https://github.com/svenkreiss/pelican-jsmath"&gt;pelican-jsmath&lt;/a&gt;.&lt;/p&gt;&lt;script src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;</content><category term="blog"></category><category term="Pelican"></category></entry><entry><title>pelican-jsmath Plugin</title><link href="http://www.svenkreiss.com/blog/pelican-jsmath/" rel="alternate"></link><published>2018-02-10T00:00:00-05:00</published><updated>2018-02-10T00:00:00-05:00</updated><author><name>Sven Kreiss</name></author><id>tag:www.svenkreiss.com,2018-02-10:/blog/pelican-jsmath/</id><summary type="html">&lt;p&gt;An &lt;span class="math"&gt;\(\alpha\omega\epsilon s \sigma m \epsilon\)&lt;/span&gt; Pelican plugin to render math in JavaScript libraries like&amp;nbsp;KaTeX.&lt;/p&gt;</summary><content type="html">&lt;p&gt;The new plugin is &lt;span class="math"&gt;\(\alpha\omega\epsilon s \sigma m \epsilon\)&lt;/span&gt;, particularly
+in combination with KaTeX as on this blog. It has good support for big&amp;nbsp;equations: &lt;/p&gt;
+&lt;div class="math"&gt;$$E=mc^2$$&lt;/div&gt;
+&lt;p&gt;
+A vector &lt;span class="math"&gt;\(\vec{a}\)&lt;/span&gt; looks beautiful. Writing
+order of magnitudes with &lt;span class="math"&gt;\(\mathcal{O}(n)\)&lt;/span&gt; is pretty. There was a related
+&lt;a href="https://github.com/getpelican/pelican-plugins/issues/625"&gt;Pelican issue&lt;/a&gt;
+for&amp;nbsp;support.&lt;/p&gt;
+&lt;h2&gt;Packaging&lt;/h2&gt;
+&lt;p&gt;Simplest &lt;code&gt;setup.py&lt;/code&gt; file:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;setuptools&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;setup&lt;/span&gt;
+
+
+&lt;span class="n"&gt;setup&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
+    &lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;pelican-jsmath&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="n"&gt;version&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;0.1.0&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="n"&gt;description&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Pelican Plugin that passes math to JavaScript.&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="n"&gt;url&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;http://github.com/svenkreiss/pelican-jsmath&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="n"&gt;author&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Sven Kreiss&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="n"&gt;author_email&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;me@svenkreiss.com&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="n"&gt;license&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;AGPL-3.0&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="n"&gt;packages&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;pelican_jsmath&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
+&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;If you are converting a plugin from pelican-plugins repository, move your files
+into a folder, here &lt;code&gt;pelican_jsmath&lt;/code&gt;, and add a &lt;code&gt;setup.py&lt;/code&gt; file. That&amp;#8217;s it.
+You can submit it to pypi if you want, but you can also tell people to install
+directly from Github using
+&lt;code&gt;pip install https://github.com/svenkreiss/pelican-jsmath/zipball/master&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;With packaged plugins, you can manage your dependencies in your
+&lt;code&gt;requirements.txt&lt;/code&gt; as&amp;nbsp;usual.&lt;/p&gt;
+&lt;h2&gt;Testing&lt;/h2&gt;
+&lt;p&gt;This Pelican plugin includes a plugin for Markdown that modifies the &lt;span class="caps"&gt;HTML&lt;/span&gt;
+output of Markdown. It is good to test that this plugin produces valid &lt;span class="caps"&gt;HTML&lt;/span&gt;.
+The repository includes an example Pelican site which is regenerated on every
+commit and validated with
+&lt;a href="https://github.com/svenkreiss/html5validator"&gt;html5validator&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;Sample&lt;/h2&gt;
+&lt;p&gt;&lt;img class="image-process-crisp" alt="pelican-jsmath sample" src="/images/pelican_jsmath_sample.png" /&gt;&lt;/p&gt;&lt;script src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;</content><category term="blog"></category><category term="Pelican"></category><category term="math"></category><category term="Python"></category></entry><entry><title>Stream Processing in pysparkling</title><link href="http://www.svenkreiss.com/blog/streamprocessing-in-pysparkling/" rel="alternate"></link><published>2017-03-11T00:00:00-05:00</published><updated>2017-03-11T00:00:00-05:00</updated><author><name>Sven Kreiss</name></author><id>tag:www.svenkreiss.com,2017-03-11:/blog/streamprocessing-in-pysparkling/</id><summary type="html">&lt;p&gt;Support for stream processing with discrete&amp;nbsp;streams.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;code&gt;pysparkling&lt;/code&gt; is a native Python implementation of PySpark. Stream processing
 is considered to be one of the most important features of Spark. PySpark
 provides a Python interface to Spark’s
 &lt;a href="http://spark.apache.org/docs/latest/api/python/pyspark.streaming.html"&gt;StreamingContext&lt;/a&gt;

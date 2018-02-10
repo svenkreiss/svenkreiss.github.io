@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="An \(\alpha\omega\epsilon s \sigma m \epsilon\) Pelican plugin to render math in JavaScript libraries like KaTeX." name="description"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="@svenkreiss" name="twitter:site"/>
+<meta content="@svenkreiss" name="twitter:creator"/>
+<meta content="pelican-jsmath Plugin" name="twitter:title"/>
+<meta content="An \(\alpha\omega\epsilon s \sigma m \epsilon\) Pelican plugin to render math in JavaScript libraries like KaTeX." name="twitter:description"/>
+<meta content="http://www.svenkreiss.com/images/pelican_jsmath_sample.png" name="twitter:image:src"/>
+<meta content="svenkreiss.com" name="twitter:domain"/>
+<meta content="pelican-jsmath Plugin" property="og:title"/>
+<meta content="article" property="og:type"/>
+<meta content="An \(\alpha\omega\epsilon s \sigma m \epsilon\) Pelican plugin to render math in JavaScript libraries like KaTeX." property="og:description"/>
+<meta content="http://www.svenkreiss.com/images/pelican_jsmath_sample.png" property="og:image"/>
+<meta content="svenkreiss.com" property="og:site_name"/>
+<link href="http://www.svenkreiss.com/feeds/all.atom.xml" rel="alternate" title="Sven Kreiss Full Atom Feed" type="application/atom+xml"/>
+<title>pelican-jsmath Plugin - Sven Kreiss</title>
+<!-- KaTeX -->
+<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0-beta1/katex.min.css" integrity="sha384-VEnyslhHLHiYPca9KFkBB3CMeslnM9CzwjxsEbZTeA21JBm7tdLwKoZmCt3cZTYD" rel="stylesheet"/>
+<script crossorigin="anonymous" integrity="sha384-O4hpKqcplNCe+jLuBVEXC10Rn1QEqAmX98lKAIFBEDxZI0a+6Z2w2n8AEtQbR4CD" src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0-beta1/katex.min.js"></script>
+<script crossorigin="anonymous" integrity="sha384-IiI65aU9ZYub2MY9zhtKd1H2ps7xxf+eb2YFG9lX6uRqpXCvBTOidPRCXCrQ++Uc" src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0-beta1/contrib/auto-render.min.js"></script>
+<!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.3.0/pure-min.css"> -->
+<link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="http://www.svenkreiss.com/theme/css/pure.css" rel="stylesheet"/>
+<link href="http://www.svenkreiss.com/theme/css/pygments.css" rel="stylesheet"/>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<!-- for pelican_dynamic plugin -->
+<!-- end pelican_dynamic -->
+</head>
+<body>
+<div class="pure-g-r" id="layout">
+<div class="sidebar sidebar-article pure-u">
+<header class="header-article">
+<a href="http://www.svenkreiss.com/blog/author/sven-kreiss/" title="See posts by Sven Kreiss">
+<img alt="Sven Kreiss" class="avatar" src="https://www.gravatar.com/avatar/562a52f3ffcb6c2a3556f91ddc540776?s=140"/>
+</a>
+<h2 class="article-info">Sven Kreiss</h2>
+<p class="article-date">February 10, 2018</p>
+<a class="header-article-home" href="/">←Home</a>
+</header>
+</div>
+<div class="pure-u">
+<div class="content">
+<section class="post">
+<header class="post-header">
+<h1>pelican-jsmath Plugin</h1>
+<p class="post-meta">
+                            // under
+                                <a class="post-category" href="http://www.svenkreiss.com/blog/tag/blog/">blog</a>
+<a class="post-category" href="http://www.svenkreiss.com/blog/tag/pelican/">Pelican</a>
+<a class="post-category" href="http://www.svenkreiss.com/blog/tag/math/">math</a>
+<a class="post-category" href="http://www.svenkreiss.com/blog/tag/python/">Python</a>
+                            in <a class="post-category" href="http://www.svenkreiss.com/blog/category/tech/">Tech</a>   
+
+                            <span style="display:inline-block;">
+                            // share on <a href="https://twitter.com/share?text=%22pelican-jsmath%26nbsp%3BPlugin%22&amp;via=svenkreiss" target="_blank">
+<i class="fa fa-twitter fa-lg"></i> Twitter
+                            </a>
+</span>
+</p>
+</header>
+</section>
+<p>The new plugin is <span class="math">\(\alpha\omega\epsilon s \sigma m \epsilon\)</span>, particularly
+in combination with KaTeX as on this blog. It has good support for big equations: </p>
+<div class="math">$$E=mc^2$$</div>
+<p>
+A vector <span class="math">\(\vec{a}\)</span> looks beautiful. Writing
+order of magnitudes with <span class="math">\(\mathcal{O}(n)\)</span> is pretty. There was a related
+<a href="https://github.com/getpelican/pelican-plugins/issues/625">Pelican issue</a>
+for support.</p>
+<h2>Packaging</h2>
+<p>Simplest <code>setup.py</code> file:</p>
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">setuptools</span> <span class="kn">import</span> <span class="n">setup</span>
+
+
+<span class="n">setup</span><span class="p">(</span>
+    <span class="n">name</span><span class="o">=</span><span class="s1">'pelican-jsmath'</span><span class="p">,</span>
+    <span class="n">version</span><span class="o">=</span><span class="s1">'0.1.0'</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s1">'Pelican Plugin that passes math to JavaScript.'</span><span class="p">,</span>
+    <span class="n">url</span><span class="o">=</span><span class="s1">'http://github.com/svenkreiss/pelican-jsmath'</span><span class="p">,</span>
+    <span class="n">author</span><span class="o">=</span><span class="s1">'Sven Kreiss'</span><span class="p">,</span>
+    <span class="n">author_email</span><span class="o">=</span><span class="s1">'me@svenkreiss.com'</span><span class="p">,</span>
+    <span class="n">license</span><span class="o">=</span><span class="s1">'AGPL-3.0'</span><span class="p">,</span>
+    <span class="n">packages</span><span class="o">=</span><span class="p">[</span><span class="s1">'pelican_jsmath'</span><span class="p">],</span>
+<span class="p">)</span>
+</pre></div>
+<p>If you are converting a plugin from pelican-plugins repository, move your files
+into a folder, here <code>pelican_jsmath</code>, and add a <code>setup.py</code> file. That’s it.
+You can submit it to pypi if you want, but you can also tell people to install
+directly from Github using
+<code>pip install https://github.com/svenkreiss/pelican-jsmath/zipball/master</code>.</p>
+<p>With packaged plugins, you can manage your dependencies in your
+<code>requirements.txt</code> as usual.</p>
+<h2>Testing</h2>
+<p>This Pelican plugin includes a plugin for Markdown that modifies the <span class="caps">HTML</span>
+output of Markdown. It is good to test that this plugin produces valid <span class="caps">HTML</span>.
+The repository includes an example Pelican site which is regenerated on every
+commit and validated with
+<a href="https://github.com/svenkreiss/html5validator">html5validator</a>.</p>
+<h2>Sample</h2>
+<p><img alt="pelican-jsmath sample" class="image-process-crisp" src="/images/derivatives/crisp/1x/pelican_jsmath_sample.png" srcset="/images/derivatives/crisp/1x/pelican_jsmath_sample.png 1x, /images/derivatives/crisp/2x/pelican_jsmath_sample.png 2x, /images/derivatives/crisp/4x/pelican_jsmath_sample.png 4x"/></p><script charset="utf-8" src="//platform.twitter.com/widgets.js"></script>
+<div class="hr"></div>
+<h2>Related Posts</h2>
+<ul class="related-posts">
+<li>
+<a class="title" href="http://www.svenkreiss.com/blog/pelican-2018/">Pelican 2018</a>
+<span class="date">from February 10, 2018</span>
+<span class="summary">Updates to Pelican and this blog.</span>
+</li>
+<li>
+<a class="title" href="http://www.svenkreiss.com/blog/pelican-vimeo/">Vimeo liquid tag for Pelican</a>
+<span class="date">from March 07, 2014</span>
+<span class="summary">Extend liquid tags plugin for Pelican to include a Vimeo tag.</span>
+</li>
+<li>
+<a class="title" href="http://www.svenkreiss.com/blog/streamprocessing-in-pysparkling/">Stream Processing in pysparkling</a>
+<span class="date">from March 11, 2017</span>
+<span class="summary">Support for stream processing with discrete streams.</span>
+</li>
+<li>
+<a class="title" href="http://www.svenkreiss.com/blog/parallel-processing-with-pysparkling/">Parallel Processing with pysparkling</a>
+<span class="date">from December 04, 2015</span>
+<span class="summary">Benchmarks for the latest parallel features in pysparkling.</span>
+</li>
+<li>
+<a class="title" href="http://www.svenkreiss.com/blog/pysparkling-initial/">pysparkling</a>
+<span class="date">from May 29, 2015</span>
+<span class="summary">A pure Python implementation of Apache Spark’s RDD interfaces.</span>
+</li>
+</ul>
+<a class="go-top" href="#">Go Top</a>
+<footer class="footer">
+<p>© Sven Kreiss 2014 – 2018.<br/>
+    This work is licensed under a <a href="http://creativecommons.org/licenses/by/4.0/" rel="license">Creative Commons Attribution 4.0 International License</a>.</p>
+</footer> </div>
+</div>
+</div>
+<script>
+        renderMathInElement(document.body);
+
+        var $top = $('.go-top');
+
+        // Show or hide the sticky footer button
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 200) {
+                // $top.fadeIn(200);
+                $top.addClass('go-top-visible');
+            } else {
+                // $top.fadeOut(200);
+                $top.removeClass('go-top-visible');
+            }
+        });
+
+        // Animate the scroll to top
+        $top.click(function(event) {
+            event.preventDefault();
+            $('html, body').animate({scrollTop: 0}, 300);
+        })
+
+        // Makes sure that the href="#" attached to the <a> elements
+        // don't scroll you back up the page.
+        $('body').on('click', 'a[href="#"]', function(event) {
+            event.preventDefault();
+        });
+    </script>
+<!-- for pelican_dynamic plugin -->
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-4070485-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</body>
+</html>

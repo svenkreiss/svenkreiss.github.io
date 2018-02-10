@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Updates to Pelican and this blog." name="description"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="@svenkreiss" name="twitter:site"/>
+<meta content="@svenkreiss" name="twitter:creator"/>
+<meta content="Pelican 2018" name="twitter:title"/>
+<meta content="Updates to Pelican and this blog." name="twitter:description"/>
+<meta content="http://www.svenkreiss.com/images/pelican_screenshot_Feb2018.png" name="twitter:image:src"/>
+<meta content="svenkreiss.com" name="twitter:domain"/>
+<meta content="Pelican 2018" property="og:title"/>
+<meta content="article" property="og:type"/>
+<meta content="Updates to Pelican and this blog." property="og:description"/>
+<meta content="http://www.svenkreiss.com/images/pelican_screenshot_Feb2018.png" property="og:image"/>
+<meta content="svenkreiss.com" property="og:site_name"/>
+<link href="http://www.svenkreiss.com/feeds/all.atom.xml" rel="alternate" title="Sven Kreiss Full Atom Feed" type="application/atom+xml"/>
+<title>Pelican 2018 - Sven Kreiss</title>
+<!-- KaTeX -->
+<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0-beta1/katex.min.css" integrity="sha384-VEnyslhHLHiYPca9KFkBB3CMeslnM9CzwjxsEbZTeA21JBm7tdLwKoZmCt3cZTYD" rel="stylesheet"/>
+<script crossorigin="anonymous" integrity="sha384-O4hpKqcplNCe+jLuBVEXC10Rn1QEqAmX98lKAIFBEDxZI0a+6Z2w2n8AEtQbR4CD" src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0-beta1/katex.min.js"></script>
+<script crossorigin="anonymous" integrity="sha384-IiI65aU9ZYub2MY9zhtKd1H2ps7xxf+eb2YFG9lX6uRqpXCvBTOidPRCXCrQ++Uc" src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0-beta1/contrib/auto-render.min.js"></script>
+<!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.3.0/pure-min.css"> -->
+<link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="http://www.svenkreiss.com/theme/css/pure.css" rel="stylesheet"/>
+<link href="http://www.svenkreiss.com/theme/css/pygments.css" rel="stylesheet"/>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<!-- for pelican_dynamic plugin -->
+<!-- end pelican_dynamic -->
+</head>
+<body>
+<div class="pure-g-r" id="layout">
+<div class="sidebar sidebar-article pure-u">
+<header class="header-article">
+<a href="http://www.svenkreiss.com/blog/author/sven-kreiss/" title="See posts by Sven Kreiss">
+<img alt="Sven Kreiss" class="avatar" src="https://www.gravatar.com/avatar/562a52f3ffcb6c2a3556f91ddc540776?s=140"/>
+</a>
+<h2 class="article-info">Sven Kreiss</h2>
+<p class="article-date">February 10, 2018</p>
+<a class="header-article-home" href="/">←Home</a>
+</header>
+</div>
+<div class="pure-u">
+<div class="content">
+<section class="post">
+<header class="post-header">
+<h1>Pelican 2018</h1>
+<p class="post-meta">
+                            // under
+                                <a class="post-category" href="http://www.svenkreiss.com/blog/tag/blog/">blog</a>
+<a class="post-category" href="http://www.svenkreiss.com/blog/tag/pelican/">Pelican</a>
+                            in <a class="post-category" href="http://www.svenkreiss.com/blog/category/tech/">Tech</a>   
+
+                            <span style="display:inline-block;">
+                            // share on <a href="https://twitter.com/share?text=%22Pelican%26nbsp%3B2018%22&amp;via=svenkreiss" target="_blank">
+<i class="fa fa-twitter fa-lg"></i> Twitter
+                            </a>
+</span>
+</p>
+</header>
+</section>
+<p><img alt="screenshot of this blog" class="image-process-crisp top" src="/images/derivatives/crisp/1x/pelican_screenshot_Feb2018.png" srcset="/images/derivatives/crisp/1x/pelican_screenshot_Feb2018.png 1x, /images/derivatives/crisp/2x/pelican_screenshot_Feb2018.png 2x, /images/derivatives/crisp/4x/pelican_screenshot_Feb2018.png 4x"/></p>
+<p>Inspired by Fred Wilson’s post about <a href="http://avc.com/2018/01/owning-yourself/">Owning Yourself</a>,
+I revived my Pelican blog. Reasons for Pelican compared to hosted solutions:</p>
+<ul>
+<li>version control in git</li>
+<li>my usual editor for content creation</li>
+<li>fully owning content and its exact presentation</li>
+<li>complete customizability, therefore I want Python, therefore Pelican</li>
+</ul>
+<p>A cost is that I have to contribute some changes myself:</p>
+<ul>
+<li><a href="https://github.com/svenkreiss/pure">customized Pure theme</a>: print mode, less author mentions, responsive resizing for mobile, using the pygments <code>friendly</code> style for code highlighting</li>
+<li><code>pelican_jsmath</code>: using KaTeX: nothing existed to combine it with Pelican and so I created
+  <a href="https://github.com/svenkreiss/pelican-jsmath">pelican-jsmath</a>.
+  The new plugin is <span class="math">\(\alpha\omega\epsilon s \sigma m \epsilon\)</span> and described in a separate
+  <a href="http://www.svenkreiss.com/blog/pelican-jsmath/">blog post</a>.</li>
+<li><code>pelican-cite</code>: created a <a href="https://github.com/cmacmackin/pelican-cite/pull/5"><span class="caps">PR</span>#5</a> so that it also works on draft pages</li>
+<li><code>image_process</code>: Responsive images (smaller images on smaller devices) are
+  especially important for the <a href="/projects.html">projects</a> page and on article index page.
+  The plugin works on all generated files just before they are written, so you can use it everywhere in your theme as well.</li>
+<li><code>pelican-advance-embed-tweet</code>: submitted <a href="https://github.com/fundor333/pelican-advance-embed-tweet/pull/2"><span class="caps">PR</span>#2</a> to remove align attribute from <code>&lt;bockquote&gt;</code> which is not <span class="caps">HTML5</span>, and you can instead set <code>TWITTER_ALIGN = 'center'</code> in your <code>pelicanconf</code> to center the embedded tweet.</li>
+<li><code>gravatar</code>: request higher resolution Gravatar images by adding <code>?s=140</code> to the image url in the theme</li>
+<li><code>related_posts</code>: newly added to this blog</li>
+<li><code>representative_image</code>: in article list with <code>image_process</code> to thumbnail</li>
+<li><code>pelican_dynamic</code>: adds options to add per article custom <code>css</code> and <code>js</code></li>
+</ul>
+<p>Open and in-progress issues:</p>
+<ul>
+<li>hack of the day: make your default status <code>draft</code> (generally a good idea), but then make the default status in <code>publishconf.py</code> to <code>hidden</code>. When trying to publish, <code>hidden</code> will create an error and the file will be skipped. So the article wont exist on the web at all until its status is set to <code>draft</code>. Problem: have to split <code>OUTPUTDIR</code> in the Makefile so that two different directories are used for <code>make devserver</code> and <code>make publish</code> (filed <a href="https://github.com/getpelican/pelican/issues/2284">issue#2284</a> against Pelican; see <a href="https://github.com/svenkreiss/svenkreiss.github.io/blob/pelican/Makefile">Makefile</a>).</li>
+<li>Have to wrap Tweet embeds in <code>&lt;div&gt;</code> to avoid Markdown’s <code>&lt;p&gt;</code> tag because the embedded tweet includes a <code>&lt;blockquote&gt;</code> which cannot appear inside a <code>&lt;p&gt;</code> tag.</li>
+</ul>
+<p>Always validate html with <a href="https://github.com/svenkreiss/html5validator">html5validator</a>.</p>
+<h2>Pelican Plugins</h2>
+<p>Most Pelican Plugins are distributed through the central
+<a href="https://github.com/getpelican/pelican-plugins">pelican-plugins</a> repository.
+The contributed plugins have fairly little recognition: <code>render_math</code> has 65 stars and
+<code>image_process</code> has 10 stars. Issues against individual plugins are filed
+in the central repository and not against the individual plugins. Updates to
+plugins have to wait for inclusion in the central repository before they become
+used by others.</p>
+<div><blockquote class="twitter-tweet" data-align="center" data-dnt="true"><a href="https://twitter.com/svenkreiss/status/960716731059785730">Tweet of svenkreiss/960716731059785730</a></blockquote></div>
+<p>Python provides its standard mechanism with <code>pip</code>, <code>setuptools</code>, <code>requirements.txt</code>, etc.
+to manage dependencies. Plugins can be written to support <code>pip</code> and Pelican
+does support importable plugins. This also allows unit tests and continuous
+integration to ensure the quality of the plugin.
+This is the method I chose for <a href="https://github.com/svenkreiss/pelican-jsmath">pelican-jsmath</a>.</p><script charset="utf-8" src="//platform.twitter.com/widgets.js"></script>
+<div class="hr"></div>
+<h2>Related Posts</h2>
+<ul class="related-posts">
+<li>
+<a class="title" href="http://www.svenkreiss.com/blog/pelican-jsmath/">pelican-jsmath Plugin</a>
+<span class="date">from February 10, 2018</span>
+<span class="summary">An \(\alpha\omega\epsilon s \sigma m \epsilon\) Pelican plugin to render math in JavaScript libraries like KaTeX.</span>
+</li>
+<li>
+<a class="title" href="http://www.svenkreiss.com/blog/pelican-vimeo/">Vimeo liquid tag for Pelican</a>
+<span class="date">from March 07, 2014</span>
+<span class="summary">Extend liquid tags plugin for Pelican to include a Vimeo tag.</span>
+</li>
+</ul>
+<a class="go-top" href="#">Go Top</a>
+<footer class="footer">
+<p>© Sven Kreiss 2014 – 2018.<br/>
+    This work is licensed under a <a href="http://creativecommons.org/licenses/by/4.0/" rel="license">Creative Commons Attribution 4.0 International License</a>.</p>
+</footer> </div>
+</div>
+</div>
+<script>
+        renderMathInElement(document.body);
+
+        var $top = $('.go-top');
+
+        // Show or hide the sticky footer button
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 200) {
+                // $top.fadeIn(200);
+                $top.addClass('go-top-visible');
+            } else {
+                // $top.fadeOut(200);
+                $top.removeClass('go-top-visible');
+            }
+        });
+
+        // Animate the scroll to top
+        $top.click(function(event) {
+            event.preventDefault();
+            $('html, body').animate({scrollTop: 0}, 300);
+        })
+
+        // Makes sure that the href="#" attached to the <a> elements
+        // don't scroll you back up the page.
+        $('body').on('click', 'a[href="#"]', function(event) {
+            event.preventDefault();
+        });
+    </script>
+<!-- for pelican_dynamic plugin -->
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-4070485-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</body>
+</html>
