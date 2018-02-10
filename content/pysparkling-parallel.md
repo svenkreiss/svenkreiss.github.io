@@ -47,7 +47,7 @@ A few problems became apparent:
 
 The test was run on a 4-core Intel i5 processor and this is the result:
 
-<img src="/images/pysparkling_4cores.png" alt="Speedup with parallel processing on a 4-core Intel i5." />
+<img class="image-process-crisp" src="/images/pysparkling_4cores.png" alt="Speedup with parallel processing on a 4-core Intel i5." />
 
 Achieving a 3x improvement with four cores is good in real world benchmarks.
 The new `Context._stats` variable gives more insight into where time is
@@ -71,7 +71,7 @@ The test was also run on a 4-core Intel i7 processor with Hyperthreading. You
 can see that the performance is slightly better than with the i5, but that the
 doubled threads do not double the performance.
 
-<img src="/images/pysparkling_4cores_hyperthreading.png" alt="Speedup with parallel processing on a 4-core Intel i7." />
+<img class="image-process-crisp" src="/images/pysparkling_4cores_hyperthreading.png" alt="Speedup with parallel processing on a 4-core Intel i7." />
 
 As a first pass at multiprocessing with pysparkling, this is a good result.
 Please check out the project on [Github](https://github.com/svenkreiss/pysparkling),

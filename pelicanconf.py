@@ -93,6 +93,9 @@ PUBLICATIONS_SRC = 'content/publications.bib'
 
 # Image Process plugin
 IMAGE_PROCESS = {
+    'thumb': {'type': 'image',
+              'ops': ["scale_in 300 300 True"],
+              },
     'crisp': {'type': 'responsive-image',
               'srcset': [('1x', ["scale_in 800 600 True"]),
                          ('2x', ["scale_in 1600 1200 True"]),
