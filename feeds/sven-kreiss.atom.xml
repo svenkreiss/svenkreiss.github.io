@@ -15,14 +15,14 @@ I revived my Pelican blog. Reasons for Pelican compared to hosted&amp;nbsp;solut
   &lt;a href="https://github.com/svenkreiss/pelican-jsmath"&gt;pelican-jsmath&lt;/a&gt;.
   The new plugin is &lt;span class="math"&gt;\(\alpha\omega\epsilon s \sigma m \epsilon\)&lt;/span&gt; and described in a separate
   &lt;a href="http://www.svenkreiss.com/blog/pelican-jsmath/"&gt;blog post&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;pelican-cite&lt;/code&gt;: created a &lt;a href="https://github.com/cmacmackin/pelican-cite/pull/5"&gt;&lt;span class="caps"&gt;PR&lt;/span&gt;#5&lt;/a&gt; so that it also works on draft&amp;nbsp;pages&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;pelican-cite&lt;/code&gt;: create a nicely formatted Bibliography from a bibtex file. I created &lt;a href="https://github.com/cmacmackin/pelican-cite/pull/5"&gt;&lt;span class="caps"&gt;PR&lt;/span&gt;#5&lt;/a&gt; so that it also works on draft&amp;nbsp;pages.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;image_process&lt;/code&gt;: Responsive images (smaller images on smaller devices) are
   especially important for the &lt;a href="/projects.html"&gt;projects&lt;/a&gt; page and on article index page.
   The plugin works on all generated files just before they are written, so you can use it everywhere in your theme as&amp;nbsp;well.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;pelican-advance-embed-tweet&lt;/code&gt;: submitted &lt;a href="https://github.com/fundor333/pelican-advance-embed-tweet/pull/2"&gt;&lt;span class="caps"&gt;PR&lt;/span&gt;#2&lt;/a&gt; to remove align attribute from &lt;code&gt;&amp;lt;bockquote&amp;gt;&lt;/code&gt; which is not &lt;span class="caps"&gt;HTML5&lt;/span&gt;, and you can instead set &lt;code&gt;TWITTER_ALIGN = 'center'&lt;/code&gt; in your &lt;code&gt;pelicanconf&lt;/code&gt; to center the embedded&amp;nbsp;tweet.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;gravatar&lt;/code&gt;: request higher resolution Gravatar images by adding &lt;code&gt;?s=140&lt;/code&gt; to the image url in the&amp;nbsp;theme&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;related_posts&lt;/code&gt;: newly added to this&amp;nbsp;blog&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;representative_image&lt;/code&gt;: in article list with &lt;code&gt;image_process&lt;/code&gt; to&amp;nbsp;thumbnail&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;representative_image&lt;/code&gt;: automatically extract an image from an article and use it in article list with &lt;code&gt;image_process&lt;/code&gt; to&amp;nbsp;thumbnail&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;pelican_dynamic&lt;/code&gt;: adds options to add per article custom &lt;code&gt;css&lt;/code&gt; and &lt;code&gt;js&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Open and in-progress&amp;nbsp;issues:&lt;/p&gt;
