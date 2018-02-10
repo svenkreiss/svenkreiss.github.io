@@ -1,10 +1,10 @@
 Title: pelican-jsmath Plugin
-Date: 2018-02-05
+Date: 2018-02-10
 Category: Tech
 Tags: blog, Pelican, math, Python
 Slug: pelican-jsmath
 Summary: An $\alpha\omega\epsilon s \sigma m \epsilon$ Pelican plugin to render math in JavaScript libraries like KaTeX.
-Status: draft
+Status: published
 
 
 The new plugin is $\alpha\omega\epsilon s \sigma m \epsilon$, particularly
@@ -51,3 +51,7 @@ output of Markdown. It is good to test that this plugin produces valid HTML.
 The repository includes an example Pelican site which is regenerated on every
 commit and validated with
 [html5validator](https://github.com/svenkreiss/html5validator).
+
+## Sample
+
+<img class="image-process-crisp" alt="pelican-jsmath sample" src="/images/pelican_jsmath_sample.png" />
