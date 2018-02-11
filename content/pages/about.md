@@ -10,7 +10,7 @@ Status: published
 <!-- {% img img-thumbnail float-right http://www.gravatar.com/avatar/1838de72eb5ce4b000c41c06dedb52c4.png?s=180 %} -->
 {% img img-thumbnail float-right /images/me_nyc_square_500.jpeg 250 Sven Kreiss in front of Freedom Tower. %}
 
-I am a Senior Data Scientist at [Sidewalk Labs](http://www.sidewalklabs.com) in New York City
+I am a Senior Data Scientist at [Sidewalk Labs](https://www.sidewalklabs.com) in New York City
 where I focus on Machine Learning for urban environments. My background is in Particle Physics
 where I hold a PhD from NYU and where I worked with
 [Kyle Cranmer](http://theoryandpractice.org/) on physics and statistical

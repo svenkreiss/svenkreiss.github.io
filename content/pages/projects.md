@@ -30,7 +30,7 @@ Status: published
 
 That "joyful expletive" was "Holly shit" (not correcting the typo) sent from his phone.
 Read the full story on the [New York Times website](http://www.nytimes.com/2013/03/05/science/chasing-the-higgs-boson-how-2-teams-of-rivals-at-CERN-searched-for-physics-most-elusive-particle.html?view=Opening_the_Box) from March 5, 2013.
-All the scientific details are in my [PhD thesis](/blog/phd-thesis).
+All the scientific details are in my [PhD thesis]({filename}/phd-thesis.md).
 
 ### [MorphDemo: an interactive demo of a morphing algorithm](/files/morphDemo.html)
 
@@ -44,7 +44,7 @@ All the scientific details are in my [PhD thesis](/blog/phd-thesis).
     <img class="image-process-crisp" src="/images/unicodeit.png" width="550" alt="UnicodeIt.net" />
 </a>
 
-### [Walking Robots: I made them](/number4.html)
+### [Walking Robots: I made them]({filename}/pages/number4.md)
 
 <a href="/number4.html">
     <img class="image-process-crisp" src="/images/number4/number3_and_number4.jpg" width="250" alt="Number 3 and Number 4 robots" />
@@ -52,7 +52,7 @@ All the scientific details are in my [PhD thesis](/blog/phd-thesis).
     <img class="image-process-crisp" src="/images/number4/Foto_060130_3.jpg" width="140" alt="Number 4 robot" />
 </a>
 
-### [OpenOsci: my open source oscilloscope](/openosci.html)
+### [OpenOsci: my open source oscilloscope]({filename}/pages/openosci.md)
 
 <a href="/openosci.html">
     <img class="image-process-crisp" src="/images/openosci/2channels_function_generator_narrow.jpeg" width="150" alt="Two channels on oscilloscope" />
@@ -73,22 +73,21 @@ All the scientific details are in my [PhD thesis](/blog/phd-thesis).
 
 * [Databench](http://databench.trivial.io): Interactive data analysis and visualization tool.
 * [RooStats](https://twiki.cern.ch/twiki/bin/view/RooStats/WebHome): Statistics tools used at CERN to which I contributed core classes.
-* [MorphDemo](/blog/morph-demo): Demo of a new horizontal morphing algorithm.
+* [MorphDemo]({filename}/morphDemo.md): Demo of a new horizontal morphing algorithm.
 
 
 ## Science
 
-* [Decouple](http://github.com/svenkreiss/decouple): Tool to factorize theory uncertainties.
-* [unicodeit](/UnicodeIt.html): Convert latex expressions to unicode characters: \mathcal{H} → ℋ.
-* [quizsocket.com](http://www.quizsocket.com): Free and real-time quizzes.
-* [politicalMoneyTracker](http://svenkreiss.github.io/politicalMoneyTracker/): Project for the Bicoastal Datafest 2013 at Columbia and Stanford University.
+* [Decouple](https://github.com/svenkreiss/decouple): Tool to factorize theory uncertainties.
+* [unicodeit]({filename}/pages/unicodeit.md): Convert latex expressions to unicode characters: \mathcal{H} → ℋ.
+* [politicalMoneyTracker](http://www.svenkreiss.com/politicalMoneyTracker/): Project for the Bicoastal Datafest 2013 at Columbia and Stanford University.
 
 
 ## Tech
 
-* [html5validator](http://github.com/svenkreiss/html5validator): Command line tool to test the validity of static HTML5 files.
-* [OpenOsci](/openosci.html): Open source and open hardware oscilloscope.
-* [number4](/number4.html): My walking robot.
-* [nmea-gpsd](/nmea-gpsd.html): The part of gpsd that reads the nmea stream.
-* [VideoSchalter.com](http://www.videoschalter.com): Commercial device for switching video signals, processing audio and to collect data (GPS, acceleration) in Rallye cars.
+* [html5validator](https://github.com/svenkreiss/html5validator): Command line tool to test the validity of static HTML5 files.
+* [OpenOsci]({filename}/pages/openosci.md): Open source and open hardware oscilloscope.
+* [number4]({filename}/pages/number4.md): My walking robot.
+* [nmea-gpsd]({filename}/pages/nmea-gpsd.md): The part of gpsd that reads the nmea stream.
+* [VideoSchalter](http://www.videoschalter.com): Commercial device for switching video signals, processing audio and to collect data (GPS, acceleration) in Rallye cars.
 

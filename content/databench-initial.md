@@ -6,12 +6,12 @@ Slug: databench-initial
 Summary: Databench is a data analysis tool using Flask, Socket.IO and d3.js with optional parallelization with Redis Queue and visualization with mpld3.
 Status: published
 
-> Databench is a data analysis tool using [Flask](http://flask.pocoo.org/), [Socket.IO](http://socket.io/) and [d3.js](http://d3js.org/) with optional parallelization with [Redis Queue](http://python-rq.org/) and visualization with [mpld3](http://mpld3.github.io/). Check out the [live demos](http://databench-examples-viewer.svenkreiss.com/).
+> Databench is a data analysis tool using [Flask](http://flask.pocoo.org/), [Socket.IO](http://socket.io/) and [d3.js](http://d3js.org/) with optional parallelization with [Redis Queue](http://python-rq.org/) and visualization with [mpld3](http://mpld3.github.io/). Check out the [live demos](http://databench-examples.trivial.io).
 
 
-[<img class="image-process-crisp top" alt="matplotlib d3 demo" src="/images/mpld3pi_demo_noframe.png" />](http://databench-examples-viewer.svenkreiss.com/)
+[<img class="image-process-crisp top" alt="matplotlib d3 demo" src="/images/mpld3pi_demo_noframe.png" />](http://databench-examples.trivial.io)
 
-Seriously, check out the [live demos](http://databench-examples-viewer.svenkreiss.com/).
+Seriously, check out the [live demos](http://databench-examples.trivial.io).
 
 All source codes are available on GitHub:
 
@@ -162,23 +162,23 @@ the generated point is inside the first quadrant of the unit circle.</p>
 {% endblock %}
 ```
 
-You may want to extend the databench `base` template giving you the header and footer and some standard libraries, but you can also write your own. The `block content` is the HTML part of the frontend with fields for the results and an explanation about the algorithm. The `block footerscripts` provides the frontend logic. It wires the `log` signals to the `#log` field with `databench.genericElements.log($('#log'))`. It also starts listening for `status` signals. When a `status` signal is received, it executes the callback function where `msg` contains a JSON representation of the dictionary that the backend sent when emitting `status`.
+You may want to extend the Databench `base` template giving you the header and footer and some standard libraries, but you can also write your own. The `block content` is the HTML part of the frontend with fields for the results and an explanation about the algorithm. The `block footerscripts` provides the frontend logic. It wires the `log` signals to the `#log` field with `databench.genericElements.log($('#log'))`. It also starts listening for `status` signals. When a `status` signal is received, it executes the callback function where `msg` contains a JSON representation of the dictionary that the backend sent when emitting `status`.
 
 And last, to make Databench aware of this analysis, add it to the `__init__.py`:
 ```python
 import simplepi
 ```
 
-This is all that is necessary to create an analysis in Databench. Now you can run `databench` in the project-folder and visit [http://localhost:5000](http://localhost:5000) to run and see the output of the analysis.
+This is all that is necessary to create an analysis in Databench. Now you can run `databench` in the project-folder and visit `http://localhost:5000` to run and see the output of the analysis.
 
 
 ## Plotting with `matplotlib`
 
-If you like Python, but are not too familiar with `d3.js`, you can use [mpld3](http://mpld3.github.io/) to embed your python plots on the web. The `mpld3` website has a nice gallery of examples that should all work in Databench. Two of them -- one with a standard plugin and one with a custom plugin -- are `mpld3PointLabel` and `mpld3Drag` which are both included in the [live demos](http://databench-examples-viewer.svenkreiss.com/) and the [databench_examples](https://github.com/svenkreiss/databench_examples) repository.
+If you like Python, but are not too familiar with `d3.js`, you can use [mpld3](http://mpld3.github.io/) to embed your python plots on the web. The `mpld3` website has a nice gallery of examples that should all work in Databench. Two of them -- one with a standard plugin and one with a custom plugin -- are `mpld3PointLabel` and `mpld3Drag` which are both included in the [live demos](http://databench-examples.trivial.io) and the [databench_examples](https://github.com/svenkreiss/databench_examples) repository.
 
 
 ## Parallelization
 
-Examples with parallel processing cannot be included in the [live demos](http://databench-examples-viewer.svenkreiss.com/) but are included in the [databench_examples](https://github.com/svenkreiss/databench_examples) repository.
+Examples with parallel processing cannot be included in the [live demos](http://databench-examples.trivial.io) but are included in the [databench_examples](https://github.com/svenkreiss/databench_examples) repository.
 
 The `slowpi` example contains a demo-implementation of using [Redis Queue]() for parallelization. The parallelization is fully implemented on the analysis-side without Databench knowing about it. Other parallelization techniques like [Celery](http://www.celeryproject.org/) and [RabbitMQ](http://www.rabbitmq.com/) are probably working but are not tested yet.
