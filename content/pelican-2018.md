@@ -3,7 +3,7 @@ Date: 2018-02-10
 Category: Tech
 Tags: blog, Pelican
 Slug: pelican-2018
-Summary: Updates to Pelican and this blog.
+Summary: Updates to Pelican and this blog. This is a summary of theme changes, a list of my favorite plugins, and a summary of plugins that I updated to improve this website.
 Status: published
 
 
@@ -36,7 +36,7 @@ A cost is that I have to contribute some changes myself:
 
 Open and in-progress issues:
 
-* hack of the day: make your default status `draft` (generally a good idea), but then make the default status in `publishconf.py` to `hidden`. When trying to publish, `hidden` will create an error and the file will be skipped. So the article wont exist on the web at all until its status is set to `draft`. Problem: have to split `OUTPUTDIR` in the Makefile so that two different directories are used for `make devserver` and `make publish` (filed [issue#2284](https://github.com/getpelican/pelican/issues/2284) against Pelican; see [Makefile](https://github.com/svenkreiss/svenkreiss.github.io/blob/pelican/Makefile)).
+* hack of the day: make your default status `draft` (generally a good idea), but then set the default status in `publishconf.py` to `hidden`. When trying to publish, `hidden` will create an error and the file will be skipped. So the article wont exist on the web at all until its status is set to `draft`. Problem: have to split `OUTPUTDIR` in the Makefile so that two different directories are used for `make devserver` and `make publish` (filed [issue#2284](https://github.com/getpelican/pelican/issues/2284) against Pelican; see [Makefile](https://github.com/svenkreiss/svenkreiss.github.io/blob/pelican/Makefile)).
 * Have to wrap Tweet embeds in `<div>` to avoid Markdown's `<p>` tag because the embedded tweet includes a `<blockquote>` which cannot appear inside a `<p>` tag.
 
 Always validate html with [html5validator](https://github.com/svenkreiss/html5validator).

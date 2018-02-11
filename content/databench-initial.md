@@ -9,29 +9,31 @@ Status: published
 > Databench is a data analysis tool using [Flask](http://flask.pocoo.org/), [Socket.IO](http://socket.io/) and [d3.js](http://d3js.org/) with optional parallelization with [Redis Queue](http://python-rq.org/) and visualization with [mpld3](http://mpld3.github.io/). Check out the [live demos](http://databench-examples-viewer.svenkreiss.com/).
 
 
-[![/images/mpld3pi_demo.png](/images/mpld3pi_demo.png)](http://databench-examples-viewer.svenkreiss.com/)
+[<img class="image-process-crisp top" alt="matplotlib d3 demo" src="/images/mpld3pi_demo_noframe.png" />](http://databench-examples-viewer.svenkreiss.com/)
 
 Seriously, check out the [live demos](http://databench-examples-viewer.svenkreiss.com/).
 
 All source codes are available on GitHub:
 
-* [https://github.com/svenkreiss/databench](https://github.com/svenkreiss/databench)
-* [https://github.com/svenkreiss/databench_examples](https://github.com/svenkreiss/databench_examples)
-* [https://github.com/svenkreiss/databench_examples_viewer](https://github.com/svenkreiss/databench_examples_viewer)
+* [github.com/svenkreiss/databench](https://github.com/svenkreiss/databench)
+* [github.com/svenkreiss/databench_examples](https://github.com/svenkreiss/databench_examples)
+* [github.com/svenkreiss/databench_examples_viewer](https://github.com/svenkreiss/databench_examples_viewer)
 
 
-
-# Motivation
+## Motivation
 
 I like Python for data analysis. However, the frontends for visualization are poor. `d3.js` is a great library for JavaScript and the web-browser is a powerful user interface. `Databench` makes Python communicate with the web frontend with minimal effort.
 
 The frontend can be interactive (real-time communication goes both ways between `Python` and `JavaScript`/`d3.js`) and can contain explanatory text and documentation.
 
 To run Databench, you need to install it with `pip`:
+
 ```bash
-(venv)analysisfolder$ pip install git+https://github.com/svenkreiss/databench.git
+pip install git+https://github.com/svenkreiss/databench.git
 ```
+
 (preferably inside a `virtualenv`). Then you create an `analyses` folder, run `databench` on the command line
+
 ```bash
 (venv)analysisfolder$ databench
 Registering analysis simplepi as blueprint in flask.
@@ -59,13 +61,15 @@ Connecting socket.io to mpld3PointLabel.
 Connecting socket.io to mpld3Drag.
 --- databench ---
 ```
+
 and point your web-browser to `http://localhost:5000/`.
 
 
-# Example Analysis: `simplepi`
+## Example Analysis: `simplepi`
 
 Create a project-folder with this structure:
-```
+
+```yaml
 - analyses
     - templates
         - simplepi.html
@@ -168,12 +172,12 @@ import simplepi
 This is all that is necessary to create an analysis in Databench. Now you can run `databench` in the project-folder and visit [http://localhost:5000](http://localhost:5000) to run and see the output of the analysis.
 
 
-# Plotting with `matplotlib`
+## Plotting with `matplotlib`
 
 If you like Python, but are not too familiar with `d3.js`, you can use [mpld3](http://mpld3.github.io/) to embed your python plots on the web. The `mpld3` website has a nice gallery of examples that should all work in Databench. Two of them -- one with a standard plugin and one with a custom plugin -- are `mpld3PointLabel` and `mpld3Drag` which are both included in the [live demos](http://databench-examples-viewer.svenkreiss.com/) and the [databench_examples](https://github.com/svenkreiss/databench_examples) repository.
 
 
-# Parallelization
+## Parallelization
 
 Examples with parallel processing cannot be included in the [live demos](http://databench-examples-viewer.svenkreiss.com/) but are included in the [databench_examples](https://github.com/svenkreiss/databench_examples) repository.
 
