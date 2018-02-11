@@ -58,7 +58,3 @@ to manage dependencies. Plugins can be written to support `pip` and Pelican
 does support importable plugins. This also allows unit tests and continuous
 integration to ensure the quality of the plugin.
 This is the method I chose for [pelican-jsmath](https://github.com/svenkreiss/pelican-jsmath).
-
-Please share and discuss on Twitter:
-
-<div>@svenkreiss/status/962402175757570048</div>
