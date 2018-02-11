@@ -42,7 +42,7 @@
 <p class="links"><a href="/projects.html">Projects</a></p>
 <p class="links"><a href="/blog/">Blog</a></p>
 <p class="social">
-<a href="https://trivial.io">
+<a href="/feeds/all.atom.xml">
 <i class="fa fa-rss fa-2x"></i>
 </a>
 <a href="https://github.com/svenkreiss/">
@@ -81,7 +81,7 @@ This code is hosted on google code now: http://code.google.com/p/gpsd-nmea/</p>
 You will also need to move some ”#define” from ”gpsd_config.h” and ”gpsd.h” to ”gps.h”. Next step is to rewrite the functions in ”nmea_parse.c” to take structs of type gps_data_t instead of gps_device_t. All what is necessary is to move the struct ”nmea” from gps_device_t.driver to gps_data_t. Last thing is the dependency on gpsd_report. I just disabled it by putting a ”#define gpsd_report(…)” at the beginning of ”gps.h”.</p><script charset="utf-8" src="//platform.twitter.com/widgets.js"></script>
 <footer class="footer">
 <p>© Sven Kreiss 2014 – 2018.<br/>
-    This work is licensed under a <a href="http://creativecommons.org/licenses/by/4.0/" rel="license">Creative Commons Attribution 4.0 International License</a>.</p>
+    This work is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" rel="license">Creative Commons Attribution 4.0 International License</a>.</p>
 </footer> </div>
 </div>
 </div>

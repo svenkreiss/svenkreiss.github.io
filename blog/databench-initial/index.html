@@ -68,10 +68,10 @@
 </header>
 </section>
 <blockquote>
-<p>Databench is a data analysis tool using <a href="http://flask.pocoo.org/">Flask</a>, <a href="http://socket.io/">Socket.<span class="caps">IO</span></a> and <a href="http://d3js.org/">d3.js</a> with optional parallelization with <a href="http://python-rq.org/">Redis Queue</a> and visualization with <a href="http://mpld3.github.io/">mpld3</a>. Check out the <a href="http://databench-examples-viewer.svenkreiss.com/">live demos</a>.</p>
+<p>Databench is a data analysis tool using <a href="http://flask.pocoo.org/">Flask</a>, <a href="http://socket.io/">Socket.<span class="caps">IO</span></a> and <a href="http://d3js.org/">d3.js</a> with optional parallelization with <a href="http://python-rq.org/">Redis Queue</a> and visualization with <a href="http://mpld3.github.io/">mpld3</a>. Check out the <a href="http://databench-examples.trivial.io">live demos</a>.</p>
 </blockquote>
-<p><a href="http://databench-examples-viewer.svenkreiss.com/"><img alt="matplotlib d3 demo" class="image-process-crisp top" src="/images/derivatives/crisp/1x/mpld3pi_demo_noframe.png" srcset="/images/derivatives/crisp/1x/mpld3pi_demo_noframe.png 1x, /images/derivatives/crisp/2x/mpld3pi_demo_noframe.png 2x, /images/derivatives/crisp/4x/mpld3pi_demo_noframe.png 4x"/></a></p>
-<p>Seriously, check out the <a href="http://databench-examples-viewer.svenkreiss.com/">live demos</a>.</p>
+<p><a href="http://databench-examples.trivial.io"><img alt="matplotlib d3 demo" class="image-process-crisp top" src="/images/derivatives/crisp/1x/mpld3pi_demo_noframe.png" srcset="/images/derivatives/crisp/1x/mpld3pi_demo_noframe.png 1x, /images/derivatives/crisp/2x/mpld3pi_demo_noframe.png 2x, /images/derivatives/crisp/4x/mpld3pi_demo_noframe.png 4x"/></a></p>
+<p>Seriously, check out the <a href="http://databench-examples.trivial.io">live demos</a>.</p>
 <p>All source codes are available on GitHub:</p>
 <ul>
 <li><a href="https://github.com/svenkreiss/databench">github.com/svenkreiss/databench</a></li>
@@ -196,15 +196,15 @@ the generated point is inside the first quadrant of the unit circle.<span class=
 <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 {% endblock %}
 </pre></div>
-<p>You may want to extend the databench <code>base</code> template giving you the header and footer and some standard libraries, but you can also write your own. The <code>block content</code> is the <span class="caps">HTML</span> part of the frontend with fields for the results and an explanation about the algorithm. The <code>block footerscripts</code> provides the frontend logic. It wires the <code>log</code> signals to the <code>#log</code> field with <code>databench.genericElements.log($('#log'))</code>. It also starts listening for <code>status</code> signals. When a <code>status</code> signal is received, it executes the callback function where <code>msg</code> contains a <span class="caps">JSON</span> representation of the dictionary that the backend sent when emitting <code>status</code>.</p>
+<p>You may want to extend the Databench <code>base</code> template giving you the header and footer and some standard libraries, but you can also write your own. The <code>block content</code> is the <span class="caps">HTML</span> part of the frontend with fields for the results and an explanation about the algorithm. The <code>block footerscripts</code> provides the frontend logic. It wires the <code>log</code> signals to the <code>#log</code> field with <code>databench.genericElements.log($('#log'))</code>. It also starts listening for <code>status</code> signals. When a <code>status</code> signal is received, it executes the callback function where <code>msg</code> contains a <span class="caps">JSON</span> representation of the dictionary that the backend sent when emitting <code>status</code>.</p>
 <p>And last, to make Databench aware of this analysis, add it to the <code>__init__.py</code>:</p>
 <div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">simplepi</span>
 </pre></div>
-<p>This is all that is necessary to create an analysis in Databench. Now you can run <code>databench</code> in the project-folder and visit <a href="http://localhost:5000">http://localhost:5000</a> to run and see the output of the analysis.</p>
+<p>This is all that is necessary to create an analysis in Databench. Now you can run <code>databench</code> in the project-folder and visit <code>http://localhost:5000</code> to run and see the output of the analysis.</p>
 <h2>Plotting with <code>matplotlib</code></h2>
-<p>If you like Python, but are not too familiar with <code>d3.js</code>, you can use <a href="http://mpld3.github.io/">mpld3</a> to embed your python plots on the web. The <code>mpld3</code> website has a nice gallery of examples that should all work in Databench. Two of them — one with a standard plugin and one with a custom plugin — are <code>mpld3PointLabel</code> and <code>mpld3Drag</code> which are both included in the <a href="http://databench-examples-viewer.svenkreiss.com/">live demos</a> and the <a href="https://github.com/svenkreiss/databench_examples">databench_examples</a> repository.</p>
+<p>If you like Python, but are not too familiar with <code>d3.js</code>, you can use <a href="http://mpld3.github.io/">mpld3</a> to embed your python plots on the web. The <code>mpld3</code> website has a nice gallery of examples that should all work in Databench. Two of them — one with a standard plugin and one with a custom plugin — are <code>mpld3PointLabel</code> and <code>mpld3Drag</code> which are both included in the <a href="http://databench-examples.trivial.io">live demos</a> and the <a href="https://github.com/svenkreiss/databench_examples">databench_examples</a> repository.</p>
 <h2>Parallelization</h2>
-<p>Examples with parallel processing cannot be included in the <a href="http://databench-examples-viewer.svenkreiss.com/">live demos</a> but are included in the <a href="https://github.com/svenkreiss/databench_examples">databench_examples</a> repository.</p>
+<p>Examples with parallel processing cannot be included in the <a href="http://databench-examples.trivial.io">live demos</a> but are included in the <a href="https://github.com/svenkreiss/databench_examples">databench_examples</a> repository.</p>
 <p>The <code>slowpi</code> example contains a demo-implementation of using <a href="">Redis Queue</a> for parallelization. The parallelization is fully implemented on the analysis-side without Databench knowing about it. Other parallelization techniques like <a href="http://www.celeryproject.org/">Celery</a> and <a href="http://www.rabbitmq.com/">RabbitMQ</a> are probably working but are not tested yet.</p><script charset="utf-8" src="//platform.twitter.com/widgets.js"></script>
 <div class="hr"></div>
 <h2>Related Posts</h2>
@@ -238,7 +238,7 @@ the generated point is inside the first quadrant of the unit circle.<span class=
 <a class="go-top" href="#">Go Top</a>
 <footer class="footer">
 <p>© Sven Kreiss 2014 – 2018.<br/>
-    This work is licensed under a <a href="http://creativecommons.org/licenses/by/4.0/" rel="license">Creative Commons Attribution 4.0 International License</a>.</p>
+    This work is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" rel="license">Creative Commons Attribution 4.0 International License</a>.</p>
 </footer> </div>
 </div>
 </div>
