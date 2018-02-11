@@ -283,7 +283,7 @@ img.top {
 }
 
 .pagination-wrapper {
-    padding-top: 6px;
+    padding-top: 4em;
 }
 .pagination-left, .pagination-right {
     position: absolute;

@@ -158,7 +158,101 @@ Install the new version&amp;nbsp;with&lt;/p&gt;
 &lt;/ul&gt;
 &lt;p&gt;If you want to jump right in, start with the
 &lt;a href="http://databench.trivial.io/"&gt;documentation&lt;/a&gt; and have a look at some
-&lt;a href="https://github.com/svenkreiss/databench_examples"&gt;examples&lt;/a&gt;.&lt;/p&gt;&lt;script src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;</content><category term="JavaScript"></category><category term="Python"></category><category term="data visualization"></category><category term="data analysis"></category></entry><entry><title>Parallel Processing with pysparkling</title><link href="http://www.svenkreiss.com/blog/parallel-processing-with-pysparkling/" rel="alternate"></link><published>2015-12-04T00:00:00-05:00</published><updated>2015-12-04T00:00:00-05:00</updated><author><name>Sven Kreiss</name></author><id>tag:www.svenkreiss.com,2015-12-04:/blog/parallel-processing-with-pysparkling/</id><summary type="html">&lt;p&gt;Benchmarks for the latest parallel features in&amp;nbsp;pysparkling.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;code&gt;pysparkling&lt;/code&gt; is a pure Python implementation of Apache Spark&amp;#8217;s &lt;span class="caps"&gt;RDD&lt;/span&gt; interface.
+&lt;a href="https://github.com/svenkreiss/databench_examples"&gt;examples&lt;/a&gt;.&lt;/p&gt;&lt;script src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;</content><category term="JavaScript"></category><category term="Python"></category><category term="data visualization"></category><category term="data analysis"></category></entry><entry><title>word2vec on Databricks</title><link href="http://www.svenkreiss.com/blog/word2vec-on-databricks/" rel="alternate"></link><published>2015-12-22T00:00:00-05:00</published><updated>2015-12-22T00:00:00-05:00</updated><author><name>Sven Kreiss</name></author><id>tag:www.svenkreiss.com,2015-12-22:/blog/word2vec-on-databricks/</id><summary type="html">&lt;p&gt;Running word2vec on Databricks. A full example of using gensim and distributed maps with Spark to run this Python analysis on&amp;nbsp;Databricks.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Word2vec is an interesting approach to convert a word into a feature vector
+(&lt;a href="https://code.google.com/p/word2vec/"&gt;original C code&lt;/a&gt; by Mikolov et al).
+One of the observations in the original paper was that words with similar
+meaning have a smaller cosine distance than dissimilar words. Here is a
+histogram of the pairwise cosine distances of about 500 media topics
+(derived from &lt;a href="http://cv.iptc.org/newscodes/mediatopic/"&gt;&lt;span class="caps"&gt;IPTC&lt;/span&gt; news codes&lt;/a&gt;):&lt;/p&gt;
+&lt;p&gt;&lt;img class="image-proces-crisp" src="/images/word2vec_angle.png" alt="distribution of Cosine distances of word vectors" /&gt;&lt;/p&gt;
+&lt;p&gt;Cosine distance is defined as &lt;code&gt;1 - cos(vector1, vector2)&lt;/code&gt;. Most of the vector
+pairs only have slightly smaller angles than 90° which makes sense as more
+topics are unrelated to each other than related. The closest 5% of vector
+pairs are still separated by angles up to 73°. The smallest angular separation
+is 18° between breaststroke and backstroke and the second smallest
+is 27° between &lt;em&gt;triple_jump&lt;/em&gt; and &lt;em&gt;pole_vault&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;To visualize these topics below, the 300-dimensional word vectors are embedded
+in two dimensions using t-&lt;span class="caps"&gt;SNE&lt;/span&gt;. Edges between the topics with the smallest 5% in
+cosine distance in the original space are drawn in&amp;nbsp;orange.&lt;/p&gt;
+&lt;p&gt;&lt;img class="image-proces-crisp" src="/images/word2vec_tsne.png" alt="tsne of word vectors" /&gt;&lt;/p&gt;
+&lt;p&gt;Similar topics are indeed close together. However, one could argue that imports
+is the opposite of exports and therefore should not be close together; but they
+are (at the bottom). Similarly, &lt;em&gt;employment&lt;/em&gt; is close to &lt;em&gt;unemployment&lt;/em&gt;. This is
+not how a person would think about “similarity” in this context, but it makes
+sense given the skip-gram training of the word vectors: a neural network tries
+to predict a word (here a topic) given a window of surrounding words. These
+topics would indeed appear in news articles with similar words surrounding
+them. It is important to keep this subtlety in mind when building tools on
+top of&amp;nbsp;word2vec.&lt;/p&gt;
+&lt;h2&gt;Using word2vec on&amp;nbsp;Databricks&lt;/h2&gt;
+&lt;p&gt;Spark and MLlib come with a built-in implementation of word2vec. However, we
+also want to apply word2vec in stand-alone Python and therefore chose the
+&lt;code&gt;gensim&lt;/code&gt; implementation.&lt;/p&gt;
+&lt;p&gt;We use Databricks to process a large number of documents (not for training
+word2vec, but to apply word2vec). We create a “Mapper Tool” that can convert
+text to word vectors that is distributed in a Python &lt;code&gt;egg&lt;/code&gt;. This tool reads
+in previously created word vectors from a compressed binary file that is larger
+than &lt;span class="caps"&gt;1GB&lt;/span&gt; which takes about a&amp;nbsp;minute.&lt;/p&gt;
+&lt;p&gt;There are two ingredients that we need: a large binary input file available at
+all worker nodes and a way to cache the word vectors in memory across map&amp;nbsp;operations.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;dbutils&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fs&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;mount&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;s3n://your_bucket/some_folder&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;/mnt/some_folder&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;The default scheme is &lt;code&gt;dbfs:/&lt;/code&gt;, not &lt;code&gt;file:/&lt;/code&gt;, which means that this S3 folder
+is now available in &lt;code&gt;dbfs&lt;/code&gt;. &lt;code&gt;dbutils&lt;/code&gt; can copy data from &lt;code&gt;dbfs&lt;/code&gt; to the local
+file system, but only on the driver. On worker instances, &lt;code&gt;dbutils&lt;/code&gt; is not
+available. However, &lt;code&gt;dbfs&lt;/code&gt; is mounted using &lt;span class="caps"&gt;FUSE&lt;/span&gt; at &lt;code&gt;file:/dbfs&lt;/code&gt;
+(&lt;a href="https://forums.databricks.com/answers/2966/view.html"&gt;Databricks Forum post&lt;/a&gt;)
+and we can use the local file path &lt;code&gt;/dbfs/mnt/some_folder/word2vec_file.bin.gz&lt;/code&gt;
+on the driver and the&amp;nbsp;workers.&lt;/p&gt;
+&lt;h2&gt;Mapper&amp;nbsp;Tool&lt;/h2&gt;
+&lt;p&gt;The tool is a wrapper around the word2vec implementation in the Python package
+&lt;a href="https://radimrehurek.com/gensim/models/word2vec.html"&gt;gensim&lt;/a&gt;,
+&lt;code&gt;gensim.models.Word2Vec&lt;/code&gt;. We want an in-memory cache that is persistent across
+map operations. Python class variables are not serialized when serializing an
+instance of a class and therefore we can use it as a process-wide&amp;nbsp;cache.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;gensim.models.word2vec&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;Word2Vec&lt;/span&gt;
+
+&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Tool&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;object&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="n"&gt;cache&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{}&lt;/span&gt;
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="fm"&gt;__init__&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;filename&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fn&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;filename&lt;/span&gt;
+
+    &lt;span class="nd"&gt;&lt;a href="https://twitter.com/property"&gt;@property&lt;/a&gt;&lt;/span&gt;
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;word2vec&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fn&lt;/span&gt; &lt;span class="ow"&gt;not&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;Tool&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;cache&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="n"&gt;Tool&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;cache&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fn&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; \
+                &lt;span class="n"&gt;Word2Vec&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;load_word2vec_format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fn&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;binary&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;Tool&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;cache&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fn&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;map&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;word&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;word&lt;/span&gt; &lt;span class="ow"&gt;not&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;word2vec&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="bp"&gt;None&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;word2vec&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;word&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;You can use this tool on the driver or in a map function that gets shipped to
+the workers. The call to &lt;code&gt;load_word2vec_format()&lt;/code&gt; is expensive, but in this
+design only executed once in each&amp;nbsp;process.&lt;/p&gt;
+&lt;p&gt;Example&amp;nbsp;application:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;filename&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;/dbfs/mnt/some_folder/word2vec_file.bin.gz&amp;#39;&lt;/span&gt;
+&lt;span class="n"&gt;sentence&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Some&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;sentence&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;as&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;a&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;test&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="n"&gt;sc&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;parallelize&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;sentence&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;map&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Tool&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;filename&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;map&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;collect&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;There are of course other ways to accomplish this, but I wanted to share the
+method that works well for&amp;nbsp;us.&lt;/p&gt;
+&lt;h2&gt;Summary&lt;/h2&gt;
+&lt;p&gt;This post gave an introduction to word2vec and showed how to distribute a large
+input file to worker nodes on Databricks. It also showed how to create a Mapper
+Tool that can cache input data across map jobs in&amp;nbsp;memory.&lt;/p&gt;
+&lt;p&gt;During this work, I submitted two pull requests to &lt;code&gt;gensim&lt;/code&gt;
+&lt;a href="https://github.com/piskvorky/gensim/pull/545"&gt;#545&lt;/a&gt; and
+&lt;a href="https://github.com/piskvorky/gensim/pull/555"&gt;#555&lt;/a&gt; which are merged into the
+master branch. With the next release, &lt;code&gt;load_word2vec_format()&lt;/code&gt; will be&amp;nbsp;faster.&lt;/p&gt;&lt;script src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;</content><category term="machine learning"></category><category term="data science"></category></entry><entry><title>Parallel Processing with pysparkling</title><link href="http://www.svenkreiss.com/blog/parallel-processing-with-pysparkling/" rel="alternate"></link><published>2015-12-04T00:00:00-05:00</published><updated>2015-12-04T00:00:00-05:00</updated><author><name>Sven Kreiss</name></author><id>tag:www.svenkreiss.com,2015-12-04:/blog/parallel-processing-with-pysparkling/</id><summary type="html">&lt;p&gt;Benchmarks for the latest parallel features in&amp;nbsp;pysparkling.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;code&gt;pysparkling&lt;/code&gt; is a pure Python implementation of Apache Spark&amp;#8217;s &lt;span class="caps"&gt;RDD&lt;/span&gt; interface.
 It means you can do &lt;code&gt;pip install pysparkling&lt;/code&gt; and start running Spark code in
 Python. Its main use is in low latency applications where Spark operations
 are applied to small datasets. However, &lt;code&gt;pysparkling&lt;/code&gt; also supports the
