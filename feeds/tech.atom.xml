@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Sven Kreiss - Tech</title><link href="http://www.svenkreiss.com/" rel="alternate"></link><link href="http://www.svenkreiss.com/feeds/tech.atom.xml" rel="self"></link><id>http://www.svenkreiss.com/</id><updated>2018-02-10T00:00:00-05:00</updated><entry><title>Pelican 2018</title><link href="http://www.svenkreiss.com/blog/pelican-2018/" rel="alternate"></link><published>2018-02-10T00:00:00-05:00</published><updated>2018-02-10T00:00:00-05:00</updated><author><name>Sven Kreiss</name></author><id>tag:www.svenkreiss.com,2018-02-10:/blog/pelican-2018/</id><summary type="html">&lt;p&gt;Updates to Pelican and this&amp;nbsp;blog.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img class="image-process-crisp top" alt="screenshot of this blog" src="/images/pelican_screenshot_Feb2018.png" /&gt;&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Sven Kreiss - Tech</title><link href="http://www.svenkreiss.com/" rel="alternate"></link><link href="http://www.svenkreiss.com/feeds/tech.atom.xml" rel="self"></link><id>http://www.svenkreiss.com/</id><updated>2018-02-10T00:00:00-05:00</updated><entry><title>Pelican 2018</title><link href="http://www.svenkreiss.com/blog/pelican-2018/" rel="alternate"></link><published>2018-02-10T00:00:00-05:00</published><updated>2018-02-10T00:00:00-05:00</updated><author><name>Sven Kreiss</name></author><id>tag:www.svenkreiss.com,2018-02-10:/blog/pelican-2018/</id><summary type="html">&lt;p&gt;Updates to Pelican and this blog. This is a summary of theme changes, a list of my favorite plugins, and a summary of plugins that I updated to improve this&amp;nbsp;website.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img class="image-process-crisp top" alt="screenshot of this blog" src="/images/pelican_screenshot_Feb2018.png" /&gt;&lt;/p&gt;
 &lt;p&gt;Inspired by Fred Wilson&amp;#8217;s post about &lt;a href="http://avc.com/2018/01/owning-yourself/"&gt;Owning Yourself&lt;/a&gt;,
 I revived my Pelican blog. Reasons for Pelican compared to hosted&amp;nbsp;solutions:&lt;/p&gt;
 &lt;ul&gt;
@@ -137,7 +137,28 @@ and more inline examples in the&amp;nbsp;documentation.&lt;/p&gt;
 &lt;p&gt;Head over to the &lt;a href="http://pysparkling.trivial.io/en/latest/api_rdd.html"&gt;&lt;span class="caps"&gt;RDD&lt;/span&gt; (batch datasets)&lt;/a&gt; and
 &lt;a href="http://pysparkling.trivial.io/en/latest/api_streaming.html#dstream"&gt;DStream (discrete stream)&lt;/a&gt;
 documentations to learn&amp;nbsp;more!&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://pysparkling.trivial.io"&gt;&lt;img alt="API documentation at pysparkling.trivial.io" src="/images/pysparkling_streaming_doc.png"&gt;&lt;/a&gt;&lt;/p&gt;&lt;script src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;</content><category term="data"></category><category term="Python"></category><category term="distributed"></category></entry><entry><title>Parallel Processing with pysparkling</title><link href="http://www.svenkreiss.com/blog/parallel-processing-with-pysparkling/" rel="alternate"></link><published>2015-12-04T00:00:00-05:00</published><updated>2015-12-04T00:00:00-05:00</updated><author><name>Sven Kreiss</name></author><id>tag:www.svenkreiss.com,2015-12-04:/blog/parallel-processing-with-pysparkling/</id><summary type="html">&lt;p&gt;Benchmarks for the latest parallel features in&amp;nbsp;pysparkling.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;code&gt;pysparkling&lt;/code&gt; is a pure Python implementation of Apache Spark&amp;#8217;s &lt;span class="caps"&gt;RDD&lt;/span&gt; interface.
+&lt;p&gt;&lt;a href="http://pysparkling.trivial.io"&gt;&lt;img alt="API documentation at pysparkling.trivial.io" src="/images/pysparkling_streaming_doc.png"&gt;&lt;/a&gt;&lt;/p&gt;&lt;script src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;</content><category term="data"></category><category term="Python"></category><category term="distributed"></category></entry><entry><title>Databench v0.4</title><link href="http://www.svenkreiss.com/blog/databench-v04/" rel="alternate"></link><published>2016-09-22T00:00:00-04:00</published><updated>2016-09-22T00:00:00-04:00</updated><author><name>Sven Kreiss</name></author><id>tag:www.svenkreiss.com,2016-09-22:/blog/databench-v04/</id><summary type="html">&lt;p&gt;New release of Databench that switches the backend from Flask to Tornado, fully supports Python 2 and 3, transpiles &lt;span class="caps"&gt;ES6&lt;/span&gt; to legacy JavaScript and runs unit tests and coverage on every&amp;nbsp;commit.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img class="image-process-crisp" src="/images/databench_examples.png" alt="screenshot of index page for examples" /&gt;&lt;/p&gt;
+&lt;p&gt;Databench v0.4 is &lt;a href="https://github.com/svenkreiss/databench/releases/tag/v0.4.0"&gt;released&lt;/a&gt;.
+It is a major change from the v0.3 branch. All &lt;a href="http://databench.trivial.io/"&gt;documentation&lt;/a&gt;,
+&lt;a href="https://github.com/svenkreiss/databench_examples"&gt;examples&lt;/a&gt; and
+&lt;a href="http://databench-examples.trivial.io/"&gt;demos&lt;/a&gt; are updated.
+Install the new version&amp;nbsp;with&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;pip install --upgrade databench
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Here are the&amp;nbsp;highlights:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Migrated from &lt;strong&gt;Flask to Tornado&lt;/strong&gt; and with that a switch from Jinja2 templates to Tornado&amp;nbsp;templates.&lt;/li&gt;
+&lt;li&gt;With that new backend, &lt;strong&gt;Python 2.7, 3.4 and 3.5&lt;/strong&gt; are&amp;nbsp;supported.&lt;/li&gt;
+&lt;li&gt;The previous version had many dependencies and a major goal of the refactor was to reduce the number of dependencies. This version only depends on &lt;strong&gt;tornado, pyyaml and pyzmq&lt;/strong&gt;. Markdown and docutils to support &lt;em&gt;md&lt;/em&gt; and &lt;em&gt;rst&lt;/em&gt; readme files are&amp;nbsp;optional.&lt;/li&gt;
+&lt;li&gt;A &lt;strong&gt;Datastore&lt;/strong&gt; was added. This concept encourages a consistent pattern for state that works with multiple threads and languages (see the new part of the documentation on &lt;a href="http://databench.trivial.io/en/latest/quickstart.html#data-flow"&gt;data flow&lt;/a&gt;).&lt;/li&gt;
+&lt;li&gt;Front-end code in &lt;strong&gt;&lt;span class="caps"&gt;ES6&lt;/span&gt;&lt;/strong&gt; that is transpiled to legacy JavaScript. Also for analysis code, there is built in support for &lt;a href="http://databench.trivial.io/en/latest/frontend.html#node-modules"&gt;node_modules&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Unit tests run automatically&lt;/strong&gt; on every commit. Also the &lt;strong&gt;documentation is built and updated&lt;/strong&gt; on every commit. The test coverage of the code is also updated continuously and is currently at 95%. Unit tests always run for Python 2.7, 3.4 and&amp;nbsp;3.5.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If you want to jump right in, start with the
+&lt;a href="http://databench.trivial.io/"&gt;documentation&lt;/a&gt; and have a look at some
+&lt;a href="https://github.com/svenkreiss/databench_examples"&gt;examples&lt;/a&gt;.&lt;/p&gt;&lt;script src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;</content><category term="JavaScript"></category><category term="Python"></category><category term="data visualization"></category><category term="data analysis"></category></entry><entry><title>Parallel Processing with pysparkling</title><link href="http://www.svenkreiss.com/blog/parallel-processing-with-pysparkling/" rel="alternate"></link><published>2015-12-04T00:00:00-05:00</published><updated>2015-12-04T00:00:00-05:00</updated><author><name>Sven Kreiss</name></author><id>tag:www.svenkreiss.com,2015-12-04:/blog/parallel-processing-with-pysparkling/</id><summary type="html">&lt;p&gt;Benchmarks for the latest parallel features in&amp;nbsp;pysparkling.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;code&gt;pysparkling&lt;/code&gt; is a pure Python implementation of Apache Spark&amp;#8217;s &lt;span class="caps"&gt;RDD&lt;/span&gt; interface.
 It means you can do &lt;code&gt;pip install pysparkling&lt;/code&gt; and start running Spark code in
 Python. Its main use is in low latency applications where Spark operations
 are applied to small datasets. However, &lt;code&gt;pysparkling&lt;/code&gt; also supports the
@@ -250,19 +271,19 @@ If you like this project, &lt;a href="https://github.com/svenkreiss/pysparkling"
 tweet about it and follow me, &lt;a href="https://twitter.com/svenkreiss"&gt;@svenkreiss&lt;/a&gt;, on&amp;nbsp;Twitter.&lt;/p&gt;&lt;script src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;</content><category term="data"></category><category term="distributed"></category><category term="Python"></category></entry><entry><title>Databench</title><link href="http://www.svenkreiss.com/blog/databench-initial/" rel="alternate"></link><published>2014-06-03T00:00:00-04:00</published><updated>2014-06-03T00:00:00-04:00</updated><author><name>Sven Kreiss</name></author><id>tag:www.svenkreiss.com,2014-06-03:/blog/databench-initial/</id><summary type="html">&lt;p&gt;Databench is a data analysis tool using Flask, Socket.&lt;span class="caps"&gt;IO&lt;/span&gt; and d3.js with optional parallelization with Redis Queue and visualization with&amp;nbsp;mpld3.&lt;/p&gt;</summary><content type="html">&lt;blockquote&gt;
 &lt;p&gt;Databench is a data analysis tool using &lt;a href="http://flask.pocoo.org/"&gt;Flask&lt;/a&gt;, &lt;a href="http://socket.io/"&gt;Socket.&lt;span class="caps"&gt;IO&lt;/span&gt;&lt;/a&gt; and &lt;a href="http://d3js.org/"&gt;d3.js&lt;/a&gt; with optional parallelization with &lt;a href="http://python-rq.org/"&gt;Redis Queue&lt;/a&gt; and visualization with &lt;a href="http://mpld3.github.io/"&gt;mpld3&lt;/a&gt;. Check out the &lt;a href="http://databench-examples-viewer.svenkreiss.com/"&gt;live demos&lt;/a&gt;.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;&lt;a href="http://databench-examples-viewer.svenkreiss.com/"&gt;&lt;img alt="/images/mpld3pi_demo.png" src="/images/mpld3pi_demo.png"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://databench-examples-viewer.svenkreiss.com/"&gt;&lt;img class="image-process-crisp top" alt="matplotlib d3 demo" src="/images/mpld3pi_demo_noframe.png" /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Seriously, check out the &lt;a href="http://databench-examples-viewer.svenkreiss.com/"&gt;live demos&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;All source codes are available on&amp;nbsp;GitHub:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://github.com/svenkreiss/databench"&gt;https://github.com/svenkreiss/databench&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/svenkreiss/databench_examples"&gt;https://github.com/svenkreiss/databench_examples&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/svenkreiss/databench_examples_viewer"&gt;https://github.com/svenkreiss/databench_examples_viewer&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/svenkreiss/databench"&gt;github.com/svenkreiss/databench&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/svenkreiss/databench_examples"&gt;github.com/svenkreiss/databench_examples&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/svenkreiss/databench_examples_viewer"&gt;github.com/svenkreiss/databench_examples_viewer&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h1&gt;Motivation&lt;/h1&gt;
+&lt;h2&gt;Motivation&lt;/h2&gt;
 &lt;p&gt;I like Python for data analysis. However, the frontends for visualization are poor. &lt;code&gt;d3.js&lt;/code&gt; is a great library for JavaScript and the web-browser is a powerful user interface. &lt;code&gt;Databench&lt;/code&gt; makes Python communicate with the web frontend with minimal&amp;nbsp;effort.&lt;/p&gt;
 &lt;p&gt;The frontend can be interactive (real-time communication goes both ways between &lt;code&gt;Python&lt;/code&gt; and &lt;code&gt;JavaScript&lt;/code&gt;/&lt;code&gt;d3.js&lt;/code&gt;) and can contain explanatory text and&amp;nbsp;documentation.&lt;/p&gt;
 &lt;p&gt;To run Databench, you need to install it with &lt;code&gt;pip&lt;/code&gt;:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;venv&lt;span class="o"&gt;)&lt;/span&gt;analysisfolder$ pip install git+https://github.com/svenkreiss/databench.git
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;pip install git+https://github.com/svenkreiss/databench.git
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -296,13 +317,13 @@ Connecting socket.io to mpld3Drag.
 
 
 &lt;p&gt;and point your web-browser to &lt;code&gt;http://localhost:5000/&lt;/code&gt;.&lt;/p&gt;
-&lt;h1&gt;Example Analysis: &lt;code&gt;simplepi&lt;/code&gt;&lt;/h1&gt;
+&lt;h2&gt;Example Analysis: &lt;code&gt;simplepi&lt;/code&gt;&lt;/h2&gt;
 &lt;p&gt;Create a project-folder with this&amp;nbsp;structure:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;- analyses
-    - templates
-        - simplepi.html
-    - __init__.py
-    - simplepi.py
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;analyses&lt;/span&gt;
+    &lt;span class="l l-Scalar l-Scalar-Plain"&gt;- templates&lt;/span&gt;
+        &lt;span class="l l-Scalar l-Scalar-Plain"&gt;- simplepi.html&lt;/span&gt;
+    &lt;span class="l l-Scalar l-Scalar-Plain"&gt;- __init__.py&lt;/span&gt;
+    &lt;span class="l l-Scalar l-Scalar-Plain"&gt;- simplepi.py&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -393,9 +414,9 @@ the generated point is inside the first quadrant of the unit circle.&lt;span cla
 
 
 &lt;p&gt;This is all that is necessary to create an analysis in Databench. Now you can run &lt;code&gt;databench&lt;/code&gt; in the project-folder and visit &lt;a href="http://localhost:5000"&gt;http://localhost:5000&lt;/a&gt; to run and see the output of the&amp;nbsp;analysis.&lt;/p&gt;
-&lt;h1&gt;Plotting with &lt;code&gt;matplotlib&lt;/code&gt;&lt;/h1&gt;
+&lt;h2&gt;Plotting with &lt;code&gt;matplotlib&lt;/code&gt;&lt;/h2&gt;
 &lt;p&gt;If you like Python, but are not too familiar with &lt;code&gt;d3.js&lt;/code&gt;, you can use &lt;a href="http://mpld3.github.io/"&gt;mpld3&lt;/a&gt; to embed your python plots on the web. The &lt;code&gt;mpld3&lt;/code&gt; website has a nice gallery of examples that should all work in Databench. Two of them &amp;#8212; one with a standard plugin and one with a custom plugin &amp;#8212; are &lt;code&gt;mpld3PointLabel&lt;/code&gt; and &lt;code&gt;mpld3Drag&lt;/code&gt; which are both included in the &lt;a href="http://databench-examples-viewer.svenkreiss.com/"&gt;live demos&lt;/a&gt; and the &lt;a href="https://github.com/svenkreiss/databench_examples"&gt;databench_examples&lt;/a&gt;&amp;nbsp;repository.&lt;/p&gt;
-&lt;h1&gt;Parallelization&lt;/h1&gt;
+&lt;h2&gt;Parallelization&lt;/h2&gt;
 &lt;p&gt;Examples with parallel processing cannot be included in the &lt;a href="http://databench-examples-viewer.svenkreiss.com/"&gt;live demos&lt;/a&gt; but are included in the &lt;a href="https://github.com/svenkreiss/databench_examples"&gt;databench_examples&lt;/a&gt;&amp;nbsp;repository.&lt;/p&gt;
 &lt;p&gt;The &lt;code&gt;slowpi&lt;/code&gt; example contains a demo-implementation of using &lt;a href=""&gt;Redis Queue&lt;/a&gt; for parallelization. The parallelization is fully implemented on the analysis-side without Databench knowing about it. Other parallelization techniques like &lt;a href="http://www.celeryproject.org/"&gt;Celery&lt;/a&gt; and &lt;a href="http://www.rabbitmq.com/"&gt;RabbitMQ&lt;/a&gt; are probably working but are not tested&amp;nbsp;yet.&lt;/p&gt;&lt;script src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;</content><category term="Flask"></category><category term="Socket.IO"></category><category term="JavaScript"></category><category term="d3.js"></category><category term="Python"></category><category term="matplotlib"></category><category term="mpld3"></category></entry><entry><title>dvds-js version 0.1.0</title><link href="http://www.svenkreiss.com/blog/dvds-js-v0.1.0/" rel="alternate"></link><published>2014-04-25T00:00:00-04:00</published><updated>2014-04-25T00:00:00-04:00</updated><author><name>Sven Kreiss</name></author><id>tag:www.svenkreiss.com,2014-04-25:/blog/dvds-js-v0.1.0/</id><summary type="html">&lt;p&gt;Distributed Versioned Data Structures in JavaScript. Like git in&amp;nbsp;js.&lt;/p&gt;</summary><content type="html">&lt;h2&gt;This article and dvds-js are outdated&amp;nbsp;:(&lt;/h2&gt;
 &lt;script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.11/d3.min.js" charset="utf-8"&gt;&lt;/script&gt;
