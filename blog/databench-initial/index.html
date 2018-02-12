@@ -68,7 +68,7 @@
 </header>
 </section>
 <blockquote>
-<p>Databench is a data analysis tool using <a href="http://flask.pocoo.org/">Flask</a>, <a href="http://socket.io/">Socket.<span class="caps">IO</span></a> and <a href="http://d3js.org/">d3.js</a> with optional parallelization with <a href="http://python-rq.org/">Redis Queue</a> and visualization with <a href="http://mpld3.github.io/">mpld3</a>. Check out the <a href="http://databench-examples.trivial.io">live demos</a>.</p>
+<p>Databench is a data analysis tool using <a href="http://flask.pocoo.org/">Flask</a>, <a href="https://socket.io/">Socket.<span class="caps">IO</span></a> and <a href="https://d3js.org/">d3.js</a> with optional parallelization with <a href="http://python-rq.org/">Redis Queue</a> and visualization with <a href="http://mpld3.github.io/">mpld3</a>. Check out the <a href="http://databench-examples.trivial.io">live demos</a>.</p>
 </blockquote>
 <p><a href="http://databench-examples.trivial.io"><img alt="matplotlib d3 demo" class="image-process-crisp top" src="/images/derivatives/crisp/1x/mpld3pi_demo_noframe.png" srcset="/images/derivatives/crisp/1x/mpld3pi_demo_noframe.png 1x, /images/derivatives/crisp/2x/mpld3pi_demo_noframe.png 2x, /images/derivatives/crisp/4x/mpld3pi_demo_noframe.png 4x"/></a></p>
 <p>Seriously, check out the <a href="http://databench-examples.trivial.io">live demos</a>.</p>
@@ -161,7 +161,7 @@ Connecting socket.io to mpld3Drag.
     <span class="n">simplepi</span><span class="o">.</span><span class="n">signals</span><span class="o">.</span><span class="n">emit</span><span class="p">(</span><span class="s1">'log'</span><span class="p">,</span> <span class="p">{</span><span class="s1">'action'</span><span class="p">:</span> <span class="s1">'done'</span><span class="p">})</span>
 </pre></div>
 <p>The analysis waits for the <code>connect</code> signal and then starts an analysis. It provides the frontend with live updates through <code>signals.emit()</code> where some of the <code>emit()</code> messages are for the <code>log</code> window and some are <code>status</code> updates.</p>
-<p>The frontend now has to listen to the signals that are emitted by the backend and act on them. The frontend <code>simplepi.html</code> is a <code>jinja2</code> template with math rendered with <a href="http://www.mathjax.org/">MathJax</a> using <code>\( ... \)</code> for inline math and <code>$$ ... $$</code> for display math <em>(updated June 10, 2014)</em>:</p>
+<p>The frontend now has to listen to the signals that are emitted by the backend and act on them. The frontend <code>simplepi.html</code> is a <code>jinja2</code> template with math rendered with <a href="https://www.mathjax.org/">MathJax</a> using <code>\( ... \)</code> for inline math and <code>$$ ... $$</code> for display math <em>(updated June 10, 2014)</em>:</p>
 <div class="highlight"><pre><span></span>{% extends "base.html" %}
 
 
