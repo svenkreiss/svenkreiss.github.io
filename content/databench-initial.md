@@ -6,7 +6,7 @@ Slug: databench-initial
 Summary: Databench is a data analysis tool using Flask, Socket.IO and d3.js with optional parallelization with Redis Queue and visualization with mpld3.
 Status: published
 
-> Databench is a data analysis tool using [Flask](http://flask.pocoo.org/), [Socket.IO](http://socket.io/) and [d3.js](http://d3js.org/) with optional parallelization with [Redis Queue](http://python-rq.org/) and visualization with [mpld3](http://mpld3.github.io/). Check out the [live demos](http://databench-examples.trivial.io).
+> Databench is a data analysis tool using [Flask](http://flask.pocoo.org/), [Socket.IO](https://socket.io/) and [d3.js](https://d3js.org/) with optional parallelization with [Redis Queue](http://python-rq.org/) and visualization with [mpld3](http://mpld3.github.io/). Check out the [live demos](http://databench-examples.trivial.io).
 
 
 [<img class="image-process-crisp top" alt="matplotlib d3 demo" src="/images/mpld3pi_demo_noframe.png" />](http://databench-examples.trivial.io)
@@ -124,7 +124,7 @@ def onconnect():
 
 The analysis waits for the `connect` signal and then starts an analysis. It provides the frontend with live updates through `signals.emit()` where some of the `emit()` messages are for the `log` window and some are `status` updates.
 
-The frontend now has to listen to the signals that are emitted by the backend and act on them. The frontend `simplepi.html` is a `jinja2` template with math rendered with [MathJax](http://www.mathjax.org/) using `\( ... \)` for inline math and `$$ ... $$` for display math _(updated June 10, 2014)_:
+The frontend now has to listen to the signals that are emitted by the backend and act on them. The frontend `simplepi.html` is a `jinja2` template with math rendered with [MathJax](https://www.mathjax.org/) using `\( ... \)` for inline math and `$$ ... $$` for display math _(updated June 10, 2014)_:
 
 ```html
 {% extends "base.html" %}
