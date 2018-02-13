@@ -47,7 +47,7 @@ While playing around with this prototype, I was already making improvements to l
 ## Links
 * _apetech.de (broken)_: Graphical Display routines for the Nokia 6100.
 * _superkranz.de (broken)_: Port of the above routines to Siemens S65 screens.
-* [mikrocontroller.net](http://www.mikrocontroller.net): thread about the screen
+* [mikrocontroller.net](https://www.mikrocontroller.net): thread about the screen
 
 ## Disclaimer
 This is an old project of mine. It was done in 2006 and some parts might be out of date. I cannot guaranty proper functionality or fitness for any particular use.

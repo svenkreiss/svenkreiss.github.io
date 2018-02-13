@@ -4,7 +4,7 @@ Slug: UnicodeIt
 Status: published
 
 
-* This is a project by [Kyle Cranmer](http://physics.as.nyu.edu/object/KyleCranmer.html) and me.
+* This is a project by [Kyle Cranmer](http://theoryandpractice.org/) and me.
 * To use it: highlight some text and use the shortcut to replace latex with unicode characters
 * Examples: <span style="font-family:sans-serif">p̅, x̲, ẋ, ∂̸</span>, H → γγ, ℋ, ℒ, x ∈ ℝ, y ∈ ℂ, β, γ, ∑, →, ←, μ⁺, e⁻
 * Tested with Mac OS X Lion and Snow Leopard 10.6.4 in Keynote, Safari, Mail, Pages, TextEdit, Sublime Text; also tested on facebook.com, gmail.com, MediaWiki, TWiki using Safari
