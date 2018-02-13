@@ -14,7 +14,7 @@ Status: published
 
 * Source on GitHub: [https://github.com/svenkreiss/unicodeit](https://github.com/svenkreiss/unicodeit)
 * Download for Mac OS X: [unicodeit062.zip](http://bit.ly/PURul8)
-* Linux wrapper: [http://code.google.com/p/unicodeitlinux/](http://code.google.com/p/unicodeitlinux/) -- not maintained anymore?
+* Linux wrapper: `http://code.google.com/p/unicodeitlinux/` -- not maintained anymore?
 
 For the new Keynote on Mavericks, text replacements currently do not work. Here is a special version that stores the output on the Clipboard: [unicodeit062clipboard.zip](http://bit.ly/1hltYID)<br />
 Install this in parallel to the standard UnicodeIt and assign a different keyboard shortcut to it; for example cmd+ctrl+shift+i.
