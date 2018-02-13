@@ -3,7 +3,7 @@ Date: 2015-12-04
 Category: Tech
 Tags: data, pysparkling, Python
 Slug: parallel-processing-with-pysparkling
-Summary: Benchmarks for the latest parallel features in pysparkling.
+Summary: Benchmarks for the latest parallel features in pysparkling. It shows good scaling for processing with multiple CPU cores. The example contains only a simple computation which shows that hyperthreading is not very effective in this case.
 Status: published
 
 

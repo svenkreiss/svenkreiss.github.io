@@ -3,7 +3,7 @@ Date: 2017-03-11
 Category: Tech
 Tags: data, Python, distributed
 Slug: streamprocessing-in-pysparkling
-Summary: Support for stream processing with discrete streams.
+Summary: pysparkling now supports stream processing with discrete streams, called DStream. This post shows a simple example that uses this new API.
 Status: published
 
 `pysparkling` is a native Python implementation of PySpark. Stream processing

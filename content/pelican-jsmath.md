@@ -3,7 +3,7 @@ Date: 2018-02-10
 Category: Tech
 Tags: blog, Pelican, math, Python
 Slug: pelican-jsmath
-Summary: An $\alpha\omega\epsilon s \sigma m \epsilon$ Pelican plugin to render math in JavaScript libraries like KaTeX.
+Summary: An $\alpha\omega\epsilon s \sigma m \epsilon$ Pelican plugin to render math in JavaScript libraries like KaTeX. This plugin makes sure that equations are preserved in the Markdown and Restructured Text parsers and get reproduced properly in HTML for a JavaScript renderer to process.
 Status: published
 
 

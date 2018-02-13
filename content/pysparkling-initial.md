@@ -3,7 +3,7 @@ Date: 2015-05-29
 Category: Tech
 Tags: data, distributed, Python
 Slug: pysparkling-initial
-Summary: A pure Python implementation of Apache Spark's RDD interfaces.
+Summary: A pure Python implementation of Apache Spark's RDD interfaces. pysparkling does not depend on Java and has a small execution overhead. It can be a fast test runner for Spark applications.
 Status: published
 
 

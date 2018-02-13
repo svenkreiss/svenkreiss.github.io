@@ -3,7 +3,7 @@ Date: 2018-02-10
 Category: Tech
 Tags: blog, Pelican
 Slug: pelican-2018
-Summary: Updates to Pelican and this blog. This is a summary of theme changes, a list of my favorite plugins, and a summary of plugins that I updated to improve this website.
+Summary: Updates to Pelican and this blog. This is a summary of theme changes, a list of my favorite plugins, and a summary of plugins that I updated to improve this website. It also contains a short discussion of the pelican-plugins repository and its potential consequences for the lacking popularity of individual plugins.
 Status: published
 
 
