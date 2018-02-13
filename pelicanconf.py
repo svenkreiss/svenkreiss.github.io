@@ -30,11 +30,11 @@ LINKS = (
 
 # Social widget
 SOCIAL = (
-    ('rss', '/feeds/all.atom.xml'),
     ('github', 'https://github.com/svenkreiss/'),
     ('twitter', 'https://twitter.com/svenkreiss'),
     ('linkedin', 'https://www.linkedin.com/in/svenkreiss/'),
     ('file-text', '/files/cv.html'),
+    ('rss', '/feeds/all.atom.xml'),
 )
 TWITTER_USERNAME = 'svenkreiss'
 

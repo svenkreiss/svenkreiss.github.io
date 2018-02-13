@@ -18,9 +18,9 @@ analyses for ATLAS with a particular focus
 on the Standard Model Higgs Combination Group and the [Higgs Boson discovery](/projects.html#discovery).
 
 Links:
-<span style="white-space: nowrap">[<i class="fa fa-rss"></i>](/feeds/all.atom.xml)</span>,
 <span style="white-space: nowrap">[<i class="fa fa-github"></i>](https://github.com/svenkreiss/)</span>,
 <span style="white-space: nowrap">[<i class="fa fa-twitter"></i>](https://twitter.com/svenkreiss)</span>,
 <span style="white-space: nowrap">[<i class="fa fa-linkedin-square"></i>](https://www.linkedin.com/in/svenkreiss/)</span>,
 <span style="white-space: nowrap">[<i class="fa fa-file-text"></i> CV](/files/cv.html) ([pdf](/files/cv.pdf))</span>,
-<span style="white-space: nowrap">[<i class="fa fa-envelope"></i> me@svenkreiss.com](mailto:me@svenkreiss.com)</span>.
+<span style="white-space: nowrap">[<i class="fa fa-envelope"></i> me@svenkreiss.com](mailto:me@svenkreiss.com)</span>,
+<span style="white-space: nowrap">[<i class="fa fa-rss"></i>](/feeds/all.atom.xml)</span>.
