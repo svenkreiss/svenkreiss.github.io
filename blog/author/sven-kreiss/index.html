@@ -24,9 +24,8 @@
 <script crossorigin="anonymous" integrity="sha384-O4hpKqcplNCe+jLuBVEXC10Rn1QEqAmX98lKAIFBEDxZI0a+6Z2w2n8AEtQbR4CD" src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0-beta1/katex.min.js"></script>
 <script crossorigin="anonymous" integrity="sha384-IiI65aU9ZYub2MY9zhtKd1H2ps7xxf+eb2YFG9lX6uRqpXCvBTOidPRCXCrQ++Uc" src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0-beta1/contrib/auto-render.min.js"></script>
 <!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.3.0/pure-min.css"> -->
-<link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"/>
 <link href="http://www.svenkreiss.com/theme/css/pure.css" rel="stylesheet"/>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 <!-- for pelican_dynamic plugin -->
 <!-- end pelican_dynamic -->
 </head>
@@ -40,7 +39,7 @@
 <p class="tagline">Data Scientist with a focus on Machine Learning and Computer Vision.</p>
 <p class="links"><a href="/">About</a></p>
 <p class="links"><a href="/projects.html">Projects</a></p>
-<p class="links"><a href="/blog/">Blog</a></p>
+<p class="links"><a href="/blog/">Articles</a></p>
 <p class="social">
 <a href="https://github.com/svenkreiss/">
 <i class="fa fa-github fa-2x"></i>
@@ -194,31 +193,6 @@ Posts by 'Sven Kreiss'                </h1>
 </div>
 <script>
         renderMathInElement(document.body);
-
-        var $top = $('.go-top');
-
-        // Show or hide the sticky footer button
-        $(window).scroll(function() {
-            if ($(this).scrollTop() > 200) {
-                // $top.fadeIn(200);
-                $top.addClass('go-top-visible');
-            } else {
-                // $top.fadeOut(200);
-                $top.removeClass('go-top-visible');
-            }
-        });
-
-        // Animate the scroll to top
-        $top.click(function(event) {
-            event.preventDefault();
-            $('html, body').animate({scrollTop: 0}, 300);
-        })
-
-        // Makes sure that the href="#" attached to the <a> elements
-        // don't scroll you back up the page.
-        $('body').on('click', 'a[href="#"]', function(event) {
-            event.preventDefault();
-        });
     </script>
 <!-- for pelican_dynamic plugin -->
 <script type="text/javascript">
