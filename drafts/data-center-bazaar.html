@@ -48,21 +48,6 @@
 <section class="post">
 <header class="post-header">
 <h1>The Data Center and the Bazaar</h1>
-<p class="post-meta">
-                            // under
-                                <a class="post-category" href="http://www.svenkreiss.com/blog/tag/docker/">Docker</a>
-<a class="post-category" href="http://www.svenkreiss.com/blog/tag/go/">Go</a>
-<a class="post-category" href="http://www.svenkreiss.com/blog/tag/hpc/">HPC</a>
-<a class="post-category" href="http://www.svenkreiss.com/blog/tag/peer-to-peer/">peer-to-peer</a>
-<a class="post-category" href="http://www.svenkreiss.com/blog/tag/distributed/">distributed</a>
-                            in <a class="post-category" href="http://www.svenkreiss.com/blog/category/tech/">Tech</a>   
-
-                            <span style="display:inline-block;">
-                            // share on <a href="https://twitter.com/share?text=%22The%20Data%20Center%20and%20the%26nbsp%3BBazaar%22&amp;via=svenkreiss" target="_blank">
-<i class="fa fa-twitter fa-lg"></i> Twitter
-                            </a>
-</span>
-</p>
 </header>
 </section>
 <p><img alt="dockbroker icon" class="img-thumbnail float-right" src="/images/bazaar.png" title="dockbroker icon" width="150"/>
@@ -140,6 +125,21 @@ Nodes that have data locally available or already cached part of the Docker imag
 <p><code>dockbroker</code> just sets up environments. The actual parallelized execution, collection of results, data management, etc. has to be handled separately. You could imagine running an <a href="http://ipython.org/ipython-doc/dev/parallel/parallel_intro.html">ipcluster</a> with it (popular in the <code>IPython</code> community) or running an <a href="https://spark.apache.org/">Apache Spark</a> cluster. Sometimes you just need different software versions in your cluster (like different versions of <a href="http://www.r-project.org/">R</a> or <a href="http://root.cern.ch"><span class="caps">ROOT</span></a>) or different resources (e.g. a <span class="caps">GPU</span>) and <code>dockbroker</code> can find the best place for the job and create the virtual environment.</p>
 <h2>Why?</h2>
 <p>Because I need it. However, it is not like I am creating distributed computing environments every day. I am more a user of <span class="caps">HPC</span>, but it sounds like an interesting project to implement in <a href="http://golang.org/">Go</a> (Docker is written in <a href="http://golang.org/">Go</a>). Contributions to <a href="https://github.com/svenkreiss/dockbroker">dockbroker on github</a> are very welcome.</p><script charset="utf-8" src="//platform.twitter.com/widgets.js"></script>
+<p class="post-footer">
+                // under
+                    <a class="post-category" href="http://www.svenkreiss.com/blog/tag/docker/">Docker</a>
+<a class="post-category" href="http://www.svenkreiss.com/blog/tag/go/">Go</a>
+<a class="post-category" href="http://www.svenkreiss.com/blog/tag/hpc/">HPC</a>
+<a class="post-category" href="http://www.svenkreiss.com/blog/tag/peer-to-peer/">peer-to-peer</a>
+<a class="post-category" href="http://www.svenkreiss.com/blog/tag/distributed/">distributed</a>
+                in <a class="post-category" href="http://www.svenkreiss.com/blog/category/tech/">Tech</a>   
+
+                <span style="display:inline-block;">
+                // share on <a href="https://twitter.com/share?text=%22The%20Data%20Center%20and%20the%26nbsp%3BBazaar%22&amp;via=svenkreiss" target="_blank">
+<i class="fa fa-twitter fa-lg"></i> Twitter
+                </a>
+</span>
+</p>
 <div class="hr"></div>
 <h2>Related Posts</h2>
 <ul class="related-posts">
@@ -161,8 +161,10 @@ Nodes that have data locally available or already cached part of the Docker imag
 </ul>
 <a class="go-top" href="#">Go Top</a>
 <footer class="footer">
-<p>© Sven Kreiss 2014 – 2018.<br/>
-    This work is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" rel="license">Creative Commons Attribution 4.0 International License</a>.</p>
+<p>
+        © Sven Kreiss 2014 – 2018. Published with <a href="https://github.com/getpelican/pelican">Pelican</a>.<br/>
+        This work is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" rel="license">Creative Commons Attribution 4.0 International License</a>.
+    </p>
 </footer> </div>
 </div>
 </div>

@@ -204,7 +204,7 @@ pre {
 }
 
 .post {
-    padding-bottom: 1em;
+    padding-bottom: 0em;
     /* border-bottom: 1px solid #f2f2f0; */
 }
 .post-title {
@@ -216,6 +216,11 @@ pre {
     color: #999;
     font-size: 90%;
     margin-top: -10px;
+}
+.post-footer {
+    color: #999;
+    font-size: 90%;
+    margin-top: 3em;
 }
 
 .post-category {
