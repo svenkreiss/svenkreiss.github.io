@@ -46,4 +46,8 @@ venv*
 
 .DS_Store
 output/
+content/extras/katex/
+content/extras/font-awesome/
 .vscode
+
+node_modules

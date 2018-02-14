@@ -1,0 +1,23 @@
+{
+  "name": "svenkreiss.github.io",
+  "version": "1.0.0",
+  "description": "Dependencies to support my website offline.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/svenkreiss/svenkreiss.github.io.git"
+  },
+  "author": "Sven Kreiss",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/svenkreiss/svenkreiss.github.io/issues"
+  },
+  "homepage": "https://github.com/svenkreiss/svenkreiss.github.io#readme",
+  "dependencies": {
+    "font-awesome": "^4.7.0",
+    "katex": "^0.9.0-beta1"
+  }
+}

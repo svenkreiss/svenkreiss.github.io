@@ -14,6 +14,8 @@ DEFAULT_METADATA = {
     'Status': 'hidden',
 }
 
+USE_CDN = True
+
 SITEURL = 'http://www.svenkreiss.com'
 RELATIVE_URLS = False
 

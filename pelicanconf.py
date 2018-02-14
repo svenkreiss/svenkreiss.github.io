@@ -15,6 +15,9 @@ DEFAULT_METADATA = {
     'Status': 'draft',
 }
 
+USE_CDN = False
+SLUGIFY_SOURCE = 'basename'  # use the file name for slug
+
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
 CATEGORY_FEED_ATOM = None
@@ -44,8 +47,8 @@ DEFAULT_PAGINATION = 10
 # RELATIVE_URLS = True
 
 PATH = 'content'
-PAGE_EXCLUDES = ['files']
-ARTICLE_EXCLUDES = ['files', 'pages']
+PAGE_EXCLUDES = ['files', 'extras']
+ARTICLE_EXCLUDES = ['files', 'pages', 'extras']
 
 STATIC_PATHS = ['images', 'files', 'extras']
 
@@ -82,6 +85,9 @@ SITEMAP = {
         'indexes': 'monthly'
     }
 }
+
+# related posts
+RELATED_POSTS_MAX = 3
 
 # advance embed tweet
 # TWITTER_CARDS = 'hidden'
@@ -144,7 +150,7 @@ TAGS_SAVE_AS = 'blog/tags.html'
 MENUITEMS = [
     ('About', '/'),
     ('Projects', '/projects.html'),
-    ('Blog', '/blog/'),
+    ('Articles', '/blog/'),
 ]
 DISPLAY_PAGES_ON_MENU = True
 

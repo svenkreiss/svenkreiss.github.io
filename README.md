@@ -7,6 +7,16 @@ git clone https://github.com/svenkreiss/pelican-plugins
 git clone https://github.com/svenkreiss/pure pelican-theme-pure
 ```
 
+Static assets:
+
+```bash
+npm i
+cp -r node_modules/katex/dist content/extras/katex
+mkdir content/extras/font-awesome
+cp -r node_modules/font-awesome/css content/extras/font-awesome/
+cp -r node_modules/font-awesome/fonts content/extras/font-awesome/
+```
+
 Local development with
 
 ```bash
