@@ -316,7 +316,21 @@ doubled threads do not double the&amp;nbsp;performance.&lt;/p&gt;
 &lt;p&gt;&lt;img class="image-process-crisp" src="/images/pysparkling_4cores_hyperthreading.png" alt="Speedup with parallel processing on a 4-core Intel i7." /&gt;&lt;/p&gt;
 &lt;p&gt;As a first pass at multiprocessing with pysparkling, this is a good result.
 Please check out the project on &lt;a href="https://github.com/svenkreiss/pysparkling"&gt;Github&lt;/a&gt;,
-install it with &lt;code&gt;pip install pysparkling&lt;/code&gt; and send&amp;nbsp;feedback.&lt;/p&gt;&lt;script src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;</content><category term="data"></category><category term="pysparkling"></category><category term="Python"></category></entry><entry><title>pysparkling</title><link href="http://www.svenkreiss.com/blog/pysparkling-initial/" rel="alternate"></link><published>2015-05-29T00:00:00-04:00</published><updated>2015-05-29T00:00:00-04:00</updated><author><name>Sven Kreiss</name></author><id>tag:www.svenkreiss.com,2015-05-29:/blog/pysparkling-initial/</id><summary type="html">&lt;p&gt;A pure Python implementation of Apache Spark&amp;#8217;s &lt;span class="caps"&gt;RDD&lt;/span&gt; interfaces. pysparkling does not depend on Java and has a small execution overhead. It can be a fast test runner for Spark&amp;nbsp;applications.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;code&gt;pysparkling&lt;/code&gt; is a native Python implementation of the interface provided by
+install it with &lt;code&gt;pip install pysparkling&lt;/code&gt; and send&amp;nbsp;feedback.&lt;/p&gt;&lt;script src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;</content><category term="data"></category><category term="pysparkling"></category><category term="Python"></category></entry><entry><title>pysparkling Talks</title><link href="http://www.svenkreiss.com/blog/pysparkling-talks/" rel="alternate"></link><published>2015-08-16T00:00:00-04:00</published><updated>2015-08-16T00:00:00-04:00</updated><author><name>Sven Kreiss</name></author><id>tag:www.svenkreiss.com,2015-08-16:/blog/pysparkling-talks/</id><summary type="html">&lt;p&gt;A collection of talks and links on pysparkling at PyGothan and&amp;nbsp;Hack-and-Tell.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img class="image-process-crisp" src="/images/pysparkling_slide.png" alt="A slide on the basics of pysparkling from the PyGotham talk." /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;PyGotham (25min):
+  &lt;a href="http://www.svenkreiss.com/files/pysparkling_at_pygotham_2015.pdf"&gt;slides&lt;/a&gt;,
+  &lt;a href="https://www.youtube.com/watch?v=KWxu5xuRtwo"&gt;video&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Hack-and-Tell (5min):
+  &lt;a href="http://www.svenkreiss.com/files/pysparkling_hack_and_tell.pdf"&gt;slides&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Links&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Documentation:
+  &lt;a href="http://pysparkling.trivial.io/"&gt;pysparkling.trivial.io&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Github:
+  &lt;a href="https://github.com/svenkreiss/pysparkling"&gt;svenkreiss/pysparkling&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;script src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;</content><category term="pysparkling"></category></entry><entry><title>pysparkling</title><link href="http://www.svenkreiss.com/blog/pysparkling-initial/" rel="alternate"></link><published>2015-05-29T00:00:00-04:00</published><updated>2015-05-29T00:00:00-04:00</updated><author><name>Sven Kreiss</name></author><id>tag:www.svenkreiss.com,2015-05-29:/blog/pysparkling-initial/</id><summary type="html">&lt;p&gt;A pure Python implementation of Apache Spark&amp;#8217;s &lt;span class="caps"&gt;RDD&lt;/span&gt; interfaces. pysparkling does not depend on Java and has a small execution overhead. It can be a fast test runner for Spark&amp;nbsp;applications.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;code&gt;pysparkling&lt;/code&gt; is a native Python implementation of the interface provided by
 Spark’s RDDs. In Spark, RDDs are Resilient Distributed Datasets. An &lt;span class="caps"&gt;RDD&lt;/span&gt;
 instance provides convenient access to the partitions of data that are
 distributed on a cluster. New RDDs are created by applying transformations
