@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="A short project to visualize the social Twitter graph of people at Wildcard. The backend is particularly efficient in the number of API calls. The visualization is interactive in d3.js." name="description"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="@svenkreiss" name="twitter:site"/>
+<meta content="@svenkreiss" name="twitter:creator"/>
+<meta content="Wildcardians on Twitter" name="twitter:title"/>
+<meta content="A short project to visualize the social Twitter graph of people at Wildcard. The backend is particularly efficient in the number of API calls. The visualization is interactive in d3.js." name="twitter:description"/>
+<meta content="http://www.svenkreiss.com/images/wildcardians_on_twitter.png" name="twitter:image:src"/>
+<meta content="svenkreiss.com" name="twitter:domain"/>
+<meta content="Wildcardians on Twitter" property="og:title"/>
+<meta content="article" property="og:type"/>
+<meta content="A short project to visualize the social Twitter graph of people at Wildcard. The backend is particularly efficient in the number of API calls. The visualization is interactive in d3.js." property="og:description"/>
+<meta content="http://www.svenkreiss.com/images/wildcardians_on_twitter.png" property="og:image"/>
+<meta content="svenkreiss.com" property="og:site_name"/>
+<link href="http://www.svenkreiss.com/feeds/all.atom.xml" rel="alternate" title="Sven Kreiss Full Atom Feed" type="application/atom+xml"/>
+<title>Wildcardians on Twitter - Sven Kreiss</title>
+<!-- KaTeX -->
+<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0-beta1/katex.min.css" integrity="sha384-VEnyslhHLHiYPca9KFkBB3CMeslnM9CzwjxsEbZTeA21JBm7tdLwKoZmCt3cZTYD" rel="stylesheet"/>
+<script crossorigin="anonymous" integrity="sha384-O4hpKqcplNCe+jLuBVEXC10Rn1QEqAmX98lKAIFBEDxZI0a+6Z2w2n8AEtQbR4CD" src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0-beta1/katex.min.js"></script>
+<script crossorigin="anonymous" integrity="sha384-IiI65aU9ZYub2MY9zhtKd1H2ps7xxf+eb2YFG9lX6uRqpXCvBTOidPRCXCrQ++Uc" src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0-beta1/contrib/auto-render.min.js"></script>
+<!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.3.0/pure-min.css"> -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="http://www.svenkreiss.com/theme/css/pure.css" rel="stylesheet"/>
+<link href="http://www.svenkreiss.com/theme/css/pygments.css" rel="stylesheet"/>
+<!-- for pelican_dynamic plugin -->
+<!-- end pelican_dynamic -->
+</head>
+<body>
+<div class="pure-g-r" id="layout">
+<div class="sidebar sidebar-article pure-u">
+<header class="header-article">
+<a href="http://www.svenkreiss.com/blog/author/sven-kreiss/" title="See posts by Sven Kreiss">
+<img alt="Sven Kreiss" class="avatar" src="https://www.gravatar.com/avatar/562a52f3ffcb6c2a3556f91ddc540776?s=140"/>
+</a>
+<h2 class="article-info">Sven Kreiss</h2>
+<p class="article-date">April 27, 2015</p>
+<a class="header-article-home" href="/blog/">←Articles</a>
+</header>
+</div>
+<div class="pure-u">
+<div class="content">
+<section class="post">
+<header class="post-header">
+<h1>Wildcardians on Twitter</h1>
+</header>
+</section>
+<p>Last Wednesday was Hack Day at Wildcard. This is a small extension of what we had done there:</p>
+<p><img alt="social graph of people at Wildcard" class="image-process-crisp" src="/images/derivatives/crisp/1x/wildcardians_on_twitter.png" srcset="/images/derivatives/crisp/1x/wildcardians_on_twitter.png 1x, /images/derivatives/crisp/2x/wildcardians_on_twitter.png 2x, /images/derivatives/crisp/4x/wildcardians_on_twitter.png 4x"/></p>
+<p>This graph was built from one <span class="caps">API</span> call to Twitter per person at Wildcard.
+So only 23 <span class="caps">API</span> calls. People at Wildcard are represented by blue dots and their
+Twitter handle next to it. The size is related to the number of followers.
+Orange dots are tweets. Black dots are other Twitter handles that were mentioned.</p>
+<p>The real visualization is interactive. You can hover over every tweet and read
+its content and hover over every mentioned twitter handle to reveal it.
+That way, I discovered a few interesting Twitter accounts that are mentioned
+in the tweets.</p>
+<p>The backend is a Python script. The front-end is a Databench analysis with a
+d3.js visualization.</p><script charset="utf-8" src="//platform.twitter.com/widgets.js"></script>
+<p class="post-footer">
+                // filed under
+                    <a class="post-category" href="http://www.svenkreiss.com/blog/tag/twitter/">Twitter</a>
+<a class="post-category" href="http://www.svenkreiss.com/blog/tag/social-network-analysis/">social network analysis</a>
+<a class="post-category" href="http://www.svenkreiss.com/blog/tag/d3js/">d3.js</a>
+<a class="post-category" href="http://www.svenkreiss.com/blog/tag/python/">Python</a>
+<a class="post-category" href="http://www.svenkreiss.com/blog/tag/databench/">Databench</a>
+                in <a class="post-category" href="http://www.svenkreiss.com/blog/category/tech/">Tech</a>   
+
+                <span style="display:inline-block;">
+                // share on <a href="https://twitter.com/share?text=%22Wildcardians%20on%26nbsp%3BTwitter%22&amp;via=svenkreiss" target="_blank">
+<i class="fa fa-twitter fa-lg"></i> Twitter
+                </a>
+</span>
+</p>
+<div class="hr"></div>
+<h2>Related Posts</h2>
+<ul class="related-posts">
+<li>
+<a class="title" href="http://www.svenkreiss.com/blog/databench-initial/">Databench</a>
+<span class="date">from June 03, 2014</span>
+<span class="summary">Databench is a data analysis tool using Flask, Socket.IO and d3.js with optional parallelization with Redis Queue and visualization with mpld3.</span>
+</li>
+<li>
+<a class="title" href="http://www.svenkreiss.com/blog/dvds-js-v0.1.0/">dvds-js version 0.1.0</a>
+<span class="date">from April 25, 2014</span>
+<span class="summary">Distributed Versioned Data Structures in JavaScript. Like git in js.</span>
+</li>
+<li>
+<a class="title" href="http://www.svenkreiss.com/blog/morph-demo/">morphDemo</a>
+<span class="date">from March 06, 2014</span>
+<span class="summary">Demo of a new horizontal morphing algorithm.</span>
+</li>
+</ul>
+<a class="go-top" href="#">Go Top</a>
+<footer class="footer">
+<p>
+        © Sven Kreiss 2014 – 2018. Published with <a href="https://github.com/getpelican/pelican">Pelican</a>.<br/>
+        This work is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" rel="license">Creative Commons Attribution 4.0 International License</a>.
+    </p>
+</footer> </div>
+</div>
+</div>
+<script>
+        renderMathInElement(document.body);
+    </script>
+<!-- for pelican_dynamic plugin -->
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-4070485-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</body>
+</html>
