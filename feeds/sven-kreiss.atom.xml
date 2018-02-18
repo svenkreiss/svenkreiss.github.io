@@ -1,5 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Sven Kreiss - Sven Kreiss</title><link href="http://www.svenkreiss.com/" rel="alternate"></link><link href="http://www.svenkreiss.com/feeds/sven-kreiss.atom.xml" rel="self"></link><id>http://www.svenkreiss.com/</id><updated>2018-02-10T00:00:00-05:00</updated><entry><title>Pelican 2018</title><link href="http://www.svenkreiss.com/blog/pelican-2018/" rel="alternate"></link><published>2018-02-10T00:00:00-05:00</published><updated>2018-02-10T00:00:00-05:00</updated><author><name>Sven Kreiss</name></author><id>tag:www.svenkreiss.com,2018-02-10:/blog/pelican-2018/</id><summary type="html">&lt;p&gt;Updates to Pelican and this blog. This is a summary of theme changes, a list of my favorite plugins, and a summary of plugins that I updated to improve this website. It also contains a short discussion of the pelican-plugins repository and its potential consequences for the lacking popularity of individual&amp;nbsp;plugins.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img class="image-process-crisp top" alt="screenshot of this blog" src="/images/pelican_screenshot_Feb2018.png" /&gt;&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Sven Kreiss - Sven Kreiss</title><link href="http://www.svenkreiss.com/" rel="alternate"></link><link href="http://www.svenkreiss.com/feeds/sven-kreiss.atom.xml" rel="self"></link><id>http://www.svenkreiss.com/</id><updated>2018-02-18T00:00:00-05:00</updated><entry><title>pelican-jsmath Plugin</title><link href="http://www.svenkreiss.com/blog/pelican-jsmath/" rel="alternate"></link><published>2018-02-18T00:00:00-05:00</published><updated>2018-02-18T00:00:00-05:00</updated><author><name>Sven Kreiss</name></author><id>tag:www.svenkreiss.com,2018-02-18:/blog/pelican-jsmath/</id><summary type="html">&lt;p&gt;An &lt;span class="math"&gt;\(\alpha\omega\epsilon s \sigma m \epsilon\)&lt;/span&gt; Pelican plugin to render math in JavaScript libraries like KaTeX. This plugin makes sure that equations are preserved in the Markdown and Restructured Text parsers and get reproduced properly in &lt;span class="caps"&gt;HTML&lt;/span&gt; for a JavaScript renderer to&amp;nbsp;process.&lt;/p&gt;</summary><content type="html">&lt;p&gt;The new plugin is &lt;span class="math"&gt;\(\alpha\omega\epsilon s \sigma m \epsilon\)&lt;/span&gt;, particularly
+in combination with KaTeX which is used here. It has good support for big&amp;nbsp;equations: &lt;/p&gt;
+&lt;div class="math"&gt;$$E=mc^2$$&lt;/div&gt;
+&lt;p&gt;
+A vector &lt;span class="math"&gt;\(\vec{a}\)&lt;/span&gt; looks beautiful. Writing
+order of magnitudes with &lt;span class="math"&gt;\(\mathcal{O}(n)\)&lt;/span&gt; is pretty. There was a related
+&lt;a href="https://github.com/getpelican/pelican-plugins/issues/625"&gt;Pelican issue&lt;/a&gt;
+for support for&amp;nbsp;KaTeX.&lt;/p&gt;
+&lt;p&gt;The plugin is packaged and can be installed with &lt;code&gt;pip install pelican-jsmath&lt;/code&gt;
+(with a dash) and then added to Pelican in &lt;code&gt;pelicanconf.py&lt;/code&gt; by adding
+&lt;code&gt;'pelican_jsmath'&lt;/code&gt; (with an underscore) to your &lt;code&gt;PLUGINS&lt;/code&gt; list. See the
+&lt;a href="https://github.com/svenkreiss/pelican-jsmath"&gt;Readme&lt;/a&gt; for more&amp;nbsp;details.&lt;/p&gt;
+&lt;h2&gt;Packaging Pelican&amp;nbsp;Plugins&lt;/h2&gt;
+&lt;p&gt;It is great that Pelican supports plugins installed via &lt;code&gt;pip&lt;/code&gt; and outside the
+plugins directory. It gives the plugin author and user more control over the
+plugin version. This is why I wanted to document the steps I took to make
+&lt;code&gt;pelican-jsmath&lt;/code&gt; a Python&amp;nbsp;package.&lt;/p&gt;
+&lt;p&gt;Simplest &lt;code&gt;setup.py&lt;/code&gt; file:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;setuptools&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;setup&lt;/span&gt;
+
+
+&lt;span class="n"&gt;setup&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
+    &lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;pelican-jsmath&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="n"&gt;version&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;0.1.0&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="n"&gt;description&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Pelican Plugin that passes math to JavaScript.&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="n"&gt;url&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;http://github.com/svenkreiss/pelican-jsmath&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="n"&gt;author&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Sven Kreiss&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="n"&gt;author_email&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;me@svenkreiss.com&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="n"&gt;license&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;AGPL-3.0&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="n"&gt;packages&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;pelican_jsmath&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
+&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;If you are converting a plugin from the pelican-plugins repository, move your files
+into a folder, here &lt;code&gt;pelican_jsmath&lt;/code&gt;, and add a &lt;code&gt;setup.py&lt;/code&gt; file. That&amp;#8217;s it.
+You can submit it to pypi if you want, but you can also tell people to install
+directly from Github using
+&lt;code&gt;pip install https://github.com/svenkreiss/pelican-jsmath/zipball/master&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;With packaged plugins, you can manage your dependencies in your
+&lt;code&gt;requirements.txt&lt;/code&gt; as&amp;nbsp;usual.&lt;/p&gt;
+&lt;h2&gt;Testing Packaged&amp;nbsp;Plugins&lt;/h2&gt;
+&lt;p&gt;This Pelican plugin includes a plugin for the Python Markdown parser that
+modifies the &lt;span class="caps"&gt;HTML&lt;/span&gt; output. It is good to test that this plugin produces valid &lt;span class="caps"&gt;HTML&lt;/span&gt;.
+The repository includes an example Pelican site which is regenerated on every
+commit and validated with
+&lt;a href="https://github.com/svenkreiss/html5validator"&gt;html5validator&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;Sample&lt;/h2&gt;
+&lt;p&gt;&lt;img class="image-process-crisp top" alt="pelican-jsmath sample" src="/images/pelican_jsmath_sample.png" /&gt;&lt;/p&gt;&lt;script src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;</content><category term="blog"></category><category term="Pelican"></category><category term="math"></category><category term="Python"></category></entry><entry><title>Pelican 2018</title><link href="http://www.svenkreiss.com/blog/pelican-2018/" rel="alternate"></link><published>2018-02-10T00:00:00-05:00</published><updated>2018-02-10T00:00:00-05:00</updated><author><name>Sven Kreiss</name></author><id>tag:www.svenkreiss.com,2018-02-10:/blog/pelican-2018/</id><summary type="html">&lt;p&gt;Updates to Pelican and this blog. This is a summary of theme changes, a list of my favorite plugins, and a summary of plugins that I updated to improve this website. It also contains a short discussion of the pelican-plugins repository and its potential consequences for the lacking popularity of individual&amp;nbsp;plugins.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img class="image-process-crisp top" alt="screenshot of this blog" src="/images/pelican_screenshot_Feb2018.png" /&gt;&lt;/p&gt;
 &lt;p&gt;Inspired by Fred Wilson&amp;#8217;s post about &lt;a href="http://avc.com/2018/01/owning-yourself/"&gt;Owning Yourself&lt;/a&gt;,
 I revived my Pelican blog. Reasons for Pelican compared to hosted&amp;nbsp;solutions:&lt;/p&gt;
 &lt;ul&gt;
@@ -45,47 +93,7 @@ used by&amp;nbsp;others.&lt;/p&gt;
 to manage dependencies. Plugins can be written to support &lt;code&gt;pip&lt;/code&gt; and Pelican
 does support importable plugins. This also allows unit tests and continuous
 integration to ensure the quality of the plugin.
-This is the method I chose for &lt;a href="https://github.com/svenkreiss/pelican-jsmath"&gt;pelican-jsmath&lt;/a&gt;.&lt;/p&gt;&lt;script src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;</content><category term="blog"></category><category term="Pelican"></category></entry><entry><title>pelican-jsmath Plugin</title><link href="http://www.svenkreiss.com/blog/pelican-jsmath/" rel="alternate"></link><published>2018-02-10T00:00:00-05:00</published><updated>2018-02-10T00:00:00-05:00</updated><author><name>Sven Kreiss</name></author><id>tag:www.svenkreiss.com,2018-02-10:/blog/pelican-jsmath/</id><summary type="html">&lt;p&gt;An &lt;span class="math"&gt;\(\alpha\omega\epsilon s \sigma m \epsilon\)&lt;/span&gt; Pelican plugin to render math in JavaScript libraries like KaTeX. This plugin makes sure that equations are preserved in the Markdown and Restructured Text parsers and get reproduced properly in &lt;span class="caps"&gt;HTML&lt;/span&gt; for a JavaScript renderer to&amp;nbsp;process.&lt;/p&gt;</summary><content type="html">&lt;p&gt;The new plugin is &lt;span class="math"&gt;\(\alpha\omega\epsilon s \sigma m \epsilon\)&lt;/span&gt;, particularly
-in combination with KaTeX as on this blog. It has good support for big&amp;nbsp;equations: &lt;/p&gt;
-&lt;div class="math"&gt;$$E=mc^2$$&lt;/div&gt;
-&lt;p&gt;
-A vector &lt;span class="math"&gt;\(\vec{a}\)&lt;/span&gt; looks beautiful. Writing
-order of magnitudes with &lt;span class="math"&gt;\(\mathcal{O}(n)\)&lt;/span&gt; is pretty. There was a related
-&lt;a href="https://github.com/getpelican/pelican-plugins/issues/625"&gt;Pelican issue&lt;/a&gt;
-for&amp;nbsp;support.&lt;/p&gt;
-&lt;h2&gt;Packaging&lt;/h2&gt;
-&lt;p&gt;Simplest &lt;code&gt;setup.py&lt;/code&gt; file:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;setuptools&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;setup&lt;/span&gt;
-
-
-&lt;span class="n"&gt;setup&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
-    &lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;pelican-jsmath&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-    &lt;span class="n"&gt;version&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;0.1.0&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-    &lt;span class="n"&gt;description&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Pelican Plugin that passes math to JavaScript.&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-    &lt;span class="n"&gt;url&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;http://github.com/svenkreiss/pelican-jsmath&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-    &lt;span class="n"&gt;author&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Sven Kreiss&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-    &lt;span class="n"&gt;author_email&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;me@svenkreiss.com&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-    &lt;span class="n"&gt;license&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;AGPL-3.0&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-    &lt;span class="n"&gt;packages&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;pelican_jsmath&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
-&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;If you are converting a plugin from pelican-plugins repository, move your files
-into a folder, here &lt;code&gt;pelican_jsmath&lt;/code&gt;, and add a &lt;code&gt;setup.py&lt;/code&gt; file. That&amp;#8217;s it.
-You can submit it to pypi if you want, but you can also tell people to install
-directly from Github using
-&lt;code&gt;pip install https://github.com/svenkreiss/pelican-jsmath/zipball/master&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;With packaged plugins, you can manage your dependencies in your
-&lt;code&gt;requirements.txt&lt;/code&gt; as&amp;nbsp;usual.&lt;/p&gt;
-&lt;h2&gt;Testing&lt;/h2&gt;
-&lt;p&gt;This Pelican plugin includes a plugin for Markdown that modifies the &lt;span class="caps"&gt;HTML&lt;/span&gt;
-output of Markdown. It is good to test that this plugin produces valid &lt;span class="caps"&gt;HTML&lt;/span&gt;.
-The repository includes an example Pelican site which is regenerated on every
-commit and validated with
-&lt;a href="https://github.com/svenkreiss/html5validator"&gt;html5validator&lt;/a&gt;.&lt;/p&gt;
-&lt;h2&gt;Sample&lt;/h2&gt;
-&lt;p&gt;&lt;img class="image-process-crisp" alt="pelican-jsmath sample" src="/images/pelican_jsmath_sample.png" /&gt;&lt;/p&gt;&lt;script src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;</content><category term="blog"></category><category term="Pelican"></category><category term="math"></category><category term="Python"></category></entry><entry><title>Stream Processing in pysparkling</title><link href="http://www.svenkreiss.com/blog/streamprocessing-in-pysparkling/" rel="alternate"></link><published>2017-03-11T00:00:00-05:00</published><updated>2017-03-11T00:00:00-05:00</updated><author><name>Sven Kreiss</name></author><id>tag:www.svenkreiss.com,2017-03-11:/blog/streamprocessing-in-pysparkling/</id><summary type="html">&lt;p&gt;pysparkling now supports stream processing with discrete streams, called DStream. This post shows a simple example that uses this new &lt;span class="caps"&gt;API&lt;/span&gt;.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;code&gt;pysparkling&lt;/code&gt; is a native Python implementation of PySpark. Stream processing
+This is the method I chose for &lt;a href="https://github.com/svenkreiss/pelican-jsmath"&gt;pelican-jsmath&lt;/a&gt;.&lt;/p&gt;&lt;script src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;</content><category term="blog"></category><category term="Pelican"></category></entry><entry><title>Stream Processing in pysparkling</title><link href="http://www.svenkreiss.com/blog/streamprocessing-in-pysparkling/" rel="alternate"></link><published>2017-03-11T00:00:00-05:00</published><updated>2017-03-11T00:00:00-05:00</updated><author><name>Sven Kreiss</name></author><id>tag:www.svenkreiss.com,2017-03-11:/blog/streamprocessing-in-pysparkling/</id><summary type="html">&lt;p&gt;pysparkling now supports stream processing with discrete streams, called DStream. This post shows a simple example that uses this new &lt;span class="caps"&gt;API&lt;/span&gt;.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;code&gt;pysparkling&lt;/code&gt; is a native Python implementation of PySpark. Stream processing
 is considered to be one of the most important features of Spark. PySpark
 provides a Python interface to Spark’s
 &lt;a href="http://spark.apache.org/docs/latest/api/python/pyspark.streaming.html"&gt;StreamingContext&lt;/a&gt;

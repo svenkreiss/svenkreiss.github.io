@@ -5,7 +5,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://www.svenkreiss.com/</loc>
-<lastmod>2018-02-16T18:02:06-00:00</lastmod>
+<lastmod>2018-02-18T18:29:08-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -74,14 +74,14 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>http://www.svenkreiss.com/blog/pelican-2018/</loc>
-<lastmod>2018-02-10T00:00:00-05:00</lastmod>
+<loc>http://www.svenkreiss.com/blog/pelican-jsmath/</loc>
+<lastmod>2018-02-18T00:00:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://www.svenkreiss.com/blog/pelican-jsmath/</loc>
+<loc>http://www.svenkreiss.com/blog/pelican-2018/</loc>
 <lastmod>2018-02-10T00:00:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
@@ -222,35 +222,35 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://www.svenkreiss.com/blog/category/tech/</loc>
-<lastmod>2018-02-10T00:00:00-04:56</lastmod>
+<lastmod>2018-02-18T00:00:00-04:56</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://www.svenkreiss.com/blog/tag/blog/</loc>
-<lastmod>2018-02-10T00:00:00-04:56</lastmod>
+<lastmod>2018-02-18T00:00:00-04:56</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://www.svenkreiss.com/blog/tag/pelican/</loc>
-<lastmod>2018-02-10T00:00:00-04:56</lastmod>
+<lastmod>2018-02-18T00:00:00-04:56</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://www.svenkreiss.com/blog/tag/math/</loc>
-<lastmod>2018-02-10T00:00:00-04:56</lastmod>
+<lastmod>2018-02-18T00:00:00-04:56</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://www.svenkreiss.com/blog/tag/python/</loc>
-<lastmod>2018-02-10T00:00:00-04:56</lastmod>
+<lastmod>2018-02-18T00:00:00-04:56</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -418,7 +418,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://www.svenkreiss.com/blog/author/sven-kreiss/</loc>
-<lastmod>2018-02-10T00:00:00-04:56</lastmod>
+<lastmod>2018-02-18T00:00:00-04:56</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>

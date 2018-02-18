@@ -38,7 +38,7 @@
 <img alt="Sven Kreiss" class="avatar" src="https://www.gravatar.com/avatar/562a52f3ffcb6c2a3556f91ddc540776?s=140"/>
 </a>
 <h2 class="article-info">Sven Kreiss</h2>
-<p class="article-date">February 10, 2018</p>
+<p class="article-date">February 18, 2018</p>
 <a class="header-article-home" href="/blog/">←Articles</a>
 </header>
 </div>
@@ -50,14 +50,22 @@
 </header>
 </section>
 <p>The new plugin is <span class="math">\(\alpha\omega\epsilon s \sigma m \epsilon\)</span>, particularly
-in combination with KaTeX as on this blog. It has good support for big equations: </p>
+in combination with KaTeX which is used here. It has good support for big equations: </p>
 <div class="math">$$E=mc^2$$</div>
 <p>
 A vector <span class="math">\(\vec{a}\)</span> looks beautiful. Writing
 order of magnitudes with <span class="math">\(\mathcal{O}(n)\)</span> is pretty. There was a related
 <a href="https://github.com/getpelican/pelican-plugins/issues/625">Pelican issue</a>
-for support.</p>
-<h2>Packaging</h2>
+for support for KaTeX.</p>
+<p>The plugin is packaged and can be installed with <code>pip install pelican-jsmath</code>
+(with a dash) and then added to Pelican in <code>pelicanconf.py</code> by adding
+<code>'pelican_jsmath'</code> (with an underscore) to your <code>PLUGINS</code> list. See the
+<a href="https://github.com/svenkreiss/pelican-jsmath">Readme</a> for more details.</p>
+<h2>Packaging Pelican Plugins</h2>
+<p>It is great that Pelican supports plugins installed via <code>pip</code> and outside the
+plugins directory. It gives the plugin author and user more control over the
+plugin version. This is why I wanted to document the steps I took to make
+<code>pelican-jsmath</code> a Python package.</p>
 <p>Simplest <code>setup.py</code> file:</p>
 <div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">setuptools</span> <span class="kn">import</span> <span class="n">setup</span>
 
@@ -73,21 +81,21 @@ for support.</p>
     <span class="n">packages</span><span class="o">=</span><span class="p">[</span><span class="s1">'pelican_jsmath'</span><span class="p">],</span>
 <span class="p">)</span>
 </pre></div>
-<p>If you are converting a plugin from pelican-plugins repository, move your files
+<p>If you are converting a plugin from the pelican-plugins repository, move your files
 into a folder, here <code>pelican_jsmath</code>, and add a <code>setup.py</code> file. That’s it.
 You can submit it to pypi if you want, but you can also tell people to install
 directly from Github using
 <code>pip install https://github.com/svenkreiss/pelican-jsmath/zipball/master</code>.</p>
 <p>With packaged plugins, you can manage your dependencies in your
 <code>requirements.txt</code> as usual.</p>
-<h2>Testing</h2>
-<p>This Pelican plugin includes a plugin for Markdown that modifies the <span class="caps">HTML</span>
-output of Markdown. It is good to test that this plugin produces valid <span class="caps">HTML</span>.
+<h2>Testing Packaged Plugins</h2>
+<p>This Pelican plugin includes a plugin for the Python Markdown parser that
+modifies the <span class="caps">HTML</span> output. It is good to test that this plugin produces valid <span class="caps">HTML</span>.
 The repository includes an example Pelican site which is regenerated on every
 commit and validated with
 <a href="https://github.com/svenkreiss/html5validator">html5validator</a>.</p>
 <h2>Sample</h2>
-<p><img alt="pelican-jsmath sample" class="image-process-crisp" src="/images/derivatives/crisp/1x/pelican_jsmath_sample.png" srcset="/images/derivatives/crisp/1x/pelican_jsmath_sample.png 1x, /images/derivatives/crisp/2x/pelican_jsmath_sample.png 2x, /images/derivatives/crisp/4x/pelican_jsmath_sample.png 4x"/></p><script charset="utf-8" src="//platform.twitter.com/widgets.js"></script>
+<p><img alt="pelican-jsmath sample" class="image-process-crisp top" src="/images/derivatives/crisp/1x/pelican_jsmath_sample.png" srcset="/images/derivatives/crisp/1x/pelican_jsmath_sample.png 1x, /images/derivatives/crisp/2x/pelican_jsmath_sample.png 2x, /images/derivatives/crisp/4x/pelican_jsmath_sample.png 4x"/></p><script charset="utf-8" src="//platform.twitter.com/widgets.js"></script>
 <p class="post-footer">
                 // filed under
                     <a class="post-category" href="http://www.svenkreiss.com/blog/tag/blog/">blog</a>
