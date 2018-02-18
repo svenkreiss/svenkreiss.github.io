@@ -1,5 +1,5 @@
 Title: pelican-jsmath Plugin
-Date: 2018-02-10
+Date: 2018-02-18
 Category: Tech
 Tags: blog, Pelican, math, Python
 Slug: pelican-jsmath
@@ -8,14 +8,24 @@ Status: published
 
 
 The new plugin is $\alpha\omega\epsilon s \sigma m \epsilon$, particularly
-in combination with KaTeX as on this blog. It has good support for big
+in combination with KaTeX which is used here. It has good support for big
 equations: $$E=mc^2$$
 A vector $\vec{a}$ looks beautiful. Writing
 order of magnitudes with $\mathcal{O}(n)$ is pretty. There was a related
 [Pelican issue](https://github.com/getpelican/pelican-plugins/issues/625)
-for support.
+for support for KaTeX.
 
-## Packaging
+The plugin is packaged and can be installed with `pip install pelican-jsmath`
+(with a dash) and then added to Pelican in `pelicanconf.py` by adding
+`'pelican_jsmath'` (with an underscore) to your `PLUGINS` list. See the
+[Readme](https://github.com/svenkreiss/pelican-jsmath) for more details.
+
+## Packaging Pelican Plugins
+
+It is great that Pelican supports plugins installed via `pip` and outside the
+plugins directory. It gives the plugin author and user more control over the
+plugin version. This is why I wanted to document the steps I took to make
+`pelican-jsmath` a Python package.
 
 Simplest `setup.py` file:
 
@@ -35,7 +45,7 @@ setup(
 )
 ```
 
-If you are converting a plugin from pelican-plugins repository, move your files
+If you are converting a plugin from the pelican-plugins repository, move your files
 into a folder, here `pelican_jsmath`, and add a `setup.py` file. That's it.
 You can submit it to pypi if you want, but you can also tell people to install
 directly from Github using
@@ -44,14 +54,14 @@ directly from Github using
 With packaged plugins, you can manage your dependencies in your
 `requirements.txt` as usual.
 
-## Testing
+## Testing Packaged Plugins
 
-This Pelican plugin includes a plugin for Markdown that modifies the HTML
-output of Markdown. It is good to test that this plugin produces valid HTML.
+This Pelican plugin includes a plugin for the Python Markdown parser that
+modifies the HTML output. It is good to test that this plugin produces valid HTML.
 The repository includes an example Pelican site which is regenerated on every
 commit and validated with
 [html5validator](https://github.com/svenkreiss/html5validator).
 
 ## Sample
 
-<img class="image-process-crisp" alt="pelican-jsmath sample" src="/images/pelican_jsmath_sample.png" />
+<img class="image-process-crisp top" alt="pelican-jsmath sample" src="/images/pelican_jsmath_sample.png" />
