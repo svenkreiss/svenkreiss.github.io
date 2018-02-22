@@ -2,7 +2,6 @@ Title: Ancient ML
 Date: 2018-03-01
 Category: ML
 Tags: ancient ML
-Slug: ancient-ml-mar-2018
 Summary: Ancient Machine Learning is a serious of paper reading notes. These are the notes for February 2018.
 Status: draft
 
