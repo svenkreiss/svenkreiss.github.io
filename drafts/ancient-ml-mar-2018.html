@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Ancient Machine Learning is a serious of paper reading notes. These are the notes for February 2018." name="description"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="@svenkreiss" name="twitter:site"/>
+<meta content="@svenkreiss" name="twitter:creator"/>
+<meta content="Ancient ML" name="twitter:title"/>
+<meta content="Ancient Machine Learning is a serious of paper reading notes. These are the notes for February 2018." name="twitter:description"/>
+<meta content="http://www.svenkreiss.com/images/me_nyc_square_500.jpeg" name="twitter:image:src"/>
+<meta content="svenkreiss.com" name="twitter:domain"/>
+<meta content="Ancient ML" property="og:title"/>
+<meta content="article" property="og:type"/>
+<meta content="Ancient Machine Learning is a serious of paper reading notes. These are the notes for February 2018." property="og:description"/>
+<meta content="http://www.svenkreiss.com/images/me_nyc_square_500.jpeg" property="og:image"/>
+<meta content="svenkreiss.com" property="og:site_name"/>
+<link href="http://www.svenkreiss.com/feeds/all.atom.xml" rel="alternate" title="Sven Kreiss Full Atom Feed" type="application/atom+xml"/>
+<title>Ancient ML - Sven Kreiss</title>
+<!-- KaTeX -->
+<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0-beta1/katex.min.css" integrity="sha384-VEnyslhHLHiYPca9KFkBB3CMeslnM9CzwjxsEbZTeA21JBm7tdLwKoZmCt3cZTYD" rel="stylesheet"/>
+<script crossorigin="anonymous" integrity="sha384-O4hpKqcplNCe+jLuBVEXC10Rn1QEqAmX98lKAIFBEDxZI0a+6Z2w2n8AEtQbR4CD" src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0-beta1/katex.min.js"></script>
+<script crossorigin="anonymous" integrity="sha384-IiI65aU9ZYub2MY9zhtKd1H2ps7xxf+eb2YFG9lX6uRqpXCvBTOidPRCXCrQ++Uc" src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0-beta1/contrib/auto-render.min.js"></script>
+<!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.3.0/pure-min.css"> -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="http://www.svenkreiss.com/theme/css/pure.css" rel="stylesheet"/>
+<link href="http://www.svenkreiss.com/theme/css/pygments.css" rel="stylesheet"/>
+<!-- for pelican_dynamic plugin -->
+<!-- end pelican_dynamic -->
+</head>
+<body>
+<div class="pure-g-r" id="layout">
+<div class="sidebar sidebar-article pure-u">
+<header class="header-article">
+<a href="http://www.svenkreiss.com/blog/author/sven-kreiss/" title="See posts by Sven Kreiss">
+<img alt="Sven Kreiss" class="avatar" src="https://www.gravatar.com/avatar/562a52f3ffcb6c2a3556f91ddc540776?s=140"/>
+</a>
+<h2 class="article-info">Sven Kreiss</h2>
+<h5>Draft</h5>
+<p class="article-date">March 01, 2018</p>
+<a class="header-article-home" href="/blog/">←Articles</a>
+</header>
+</div>
+<div class="pure-u">
+<div class="content">
+<section class="post">
+<header class="post-header">
+<h1>Ancient <span class="caps">ML</span></h1>
+</header>
+</section>
+<h2>A Proposal for the Dartmouth Summer Research Project on Artificial Intelligence, August 31, 1955 <a href="#mccarthy2006proposal" id="ref-mccarthy2006proposal-1">(McCarthy et al., 2006)</a>, <a href="https://www.aaai.org/ojs/index.php/aimagazine/article/download/1904/1802"><span class="caps">PDF</span></a></h2>
+<ul>
+<li>The paper/event that gets credited with the foundation of the field of Artificial Intelligence research.</li>
+<li>The paper is three pages long and the authors include Claude Shannon.</li>
+<li>scale of the proposed project: 2 months, 10 men</li>
+<li>focused on language, abstraction and concepts</li>
+<li>Seven sections for improvement: Automatic Computers, How Can a Computer be
+  Programmed to Use a Language, Neuron Nets, Theory of the Size of a Calculation,
+  Self-Improvement, Abstractions, Randomness and Creativity</li>
+<li>Remarkable assumption in the proposal:</li>
+</ul>
+<blockquote>
+<p>the major obstacle is not lack of machine capacity, but our inability to write programs</p>
+</blockquote>
+<ul>
+<li>From the Wikipedia article on the <a href="">Dartmouth workshop</a>, it had the following attendees:
+Dr. Marvin Minsky,
+Dr. Julian Bigelow,
+Professor <span class="caps">D.M.</span> Mackay,
+Mr. Ray Solomonoff,
+Mr. John Holland,
+Mr. John McCarthy,
+Dr. Claude Shannon,
+Mr. Nathanial Rochester,
+Mr. Oliver Selfridge,
+Mr. Allen Newell,
+Professor Herbert Simon.</li>
+<li>Full 102 pages of Ray Solomonoff’s hand written notes are availble in
+  <a href="http://raysolomonoff.com/dartmouth/notebook/notebook.html"><span class="caps">PDF</span> format</a> including
+  some doodles on page 3.</li>
+</ul>
+<h2>The Mathematical Theory of Communication <a href="#shannon1951mathematical" id="ref-shannon1951mathematical-1">(Shannon et al., 1951)</a>, <a href="http://pubman.mpdl.mpg.de/pubman/item/escidoc:2383164/component/escidoc:2383163/Shannon_Weaver_1949_Mathematical.pdf"><span class="caps">PDF</span></a></h2>
+<ul>
+<li>Central paper for many fields. 131 pages.</li>
+<li>Related: <em>The Idea Factory</em> is a book about Bell Labs around that time and makes it easier to visualize the people involved. Recommended read.</li>
+</ul>
+<p>Starting with the paper by Weaver:</p>
+<ul>
+<li>Boltzmann observed in 1894 that entropy is related to “missing information” about the unobserved microstates</li>
+<li>components of a transmission: information source, transmitter, noise source, receiver, destination</li>
+<li>transmitter changes a <em>message</em> into a <em>signal</em>, receiver does the reverse</li>
+<li>questions:<ul>
+<li>amount of information</li>
+<li>capacity of a channel</li>
+<li>efficient coding process</li>
+<li>how does noise affect the <em>message</em></li>
+<li>effect of continuous signal rather than discrete symbols</li>
+</ul>
+</li>
+<li>information is not attached to a particular message but to the amount of freedom of choice</li>
+<li>John Tukey suggested the word “bit” for “binary digit”</li>
+<li>example to visualize logarithmic nature of information: information contained in the state of a single relay is 1 and we want that the information contained in three relays to be 3, which is the case using the “logarithmic measure” because <span class="math">\(log_2\)</span> of <span class="math">\(2^3\)</span> is 3.</li>
+<li>think of a message as being generated by an ergodic Markoff process</li>
+<li>connection between information and entropy</li>
+<li>interesting simple example:<ul>
+<li>only two possible messages with <span class="math">\(p_1\)</span> and <span class="math">\(p_2=1-p_1\)</span></li>
+<li>what is the amount of information as a function of <span class="math">\(p_1\)</span>?</li>
+<li>information is maximum for <span class="math">\(p_1 = 0.5\)</span>, “when one is completely free to choose”</li>
+<li>information goes to zero when one of the messages is very probable: “no freedom of choice — no information”</li>
+</ul>
+</li>
+<li>capacity of a communication channel<ul>
+<li>simple case: each symbol is made of <span class="math">\(s\)</span> bits and channel can transmit <span class="math">\(n\)</span> symbols per second, then the capacity is <span class="math">\(ns\)</span> bits per second</li>
+<li>more interesting: varying lengths of symbols, only says it’s measured in bits per second and does not reference the number of symbols</li>
+</ul>
+</li>
+<li>fundamental theorem for a “noiseless channel transmitting discrete symbols”:<ul>
+<li>channel with capacity <span class="math">\(C\)</span> bits per second</li>
+<li>source of entropy/information with <span class="math">\(H\)</span> bits per second</li>
+<li>statement: with proper coding it is possible to transmit symbols at a rate of up to <span class="math">\(C/H\)</span></li>
+</ul>
+</li>
+<li>with noise, “the received signal exhibits greater information”: signal is selected out of a larger set of possibilities; information is introduced from noise</li>
+<li>received <em>tentative message entropy</em>: with noise, one message symbol has high probability (and not <span class="math">\(p=1\)</span> anymore) and all other symbols acquire a small probability; ideally entropy is small</li>
+<li><em>equivocation</em>: entropy of the message relative to the signal; weighted average of tentative message entropies over all possible signal symbols; “average uncertainty in the message when the signal is known”</li>
+<li>joint entropy (looking ahead to the definition given by Shannon): <div class="math">$$H(x,y) = H(x) + H(y|x) = H(y) + H(x|y)$$</div>
+<ul>
+<li><span class="math">\(H(x)\)</span> information of source signal</li>
+<li><span class="math">\(H(y)\)</span> information in received signal</li>
+<li><span class="math">\(H(x|y)\)</span> uncertainty in the sent signal if the received signal is known</li>
+<li><span class="math">\(H(y|x)\)</span> uncertainty in the received signal if the sent signal is known; “or the spurious part of the received signal information which is due to noise”</li>
+</ul>
+</li>
+<li>useful transmitted information: <span class="math">\(H(y)-H(y|x)\)</span></li>
+<li>skipping continuous messages</li>
+</ul>
+<h2>Backlog</h2>
+<ul>
+<li>Online Convex Programming and Generalized Infinitesimal Gradient Ascent <a href="#zinkevich2003online" id="ref-zinkevich2003online-1">(Zinkevich, 2003)</a>, <a href="http://www.aaai.org/Papers/ICML/2003/ICML03-120.pdf"><span class="caps">PDF</span></a></li>
+<li>Supervised Sequence Labelling with Recurrent Neural Networks <a href="#graves2012supervised" id="ref-graves2012supervised-1">(Graves, 2012)</a>, <a href="https://www.cs.toronto.edu/~graves/preprint.pdf"><span class="caps">PDF</span></a></li>
+</ul>
+<p>Discuss on Twitter and tweet at <a href="https://twitter.com/svenkreiss">@svenkreiss</a> with <code>#ancientml</code>.</p><script charset="utf-8" src="//platform.twitter.com/widgets.js"></script><hr/>
+<h2>Bibliography</h2>
+<p id="graves2012supervised">Alex Graves.
+Supervised sequence labelling.
+In <em>Supervised sequence labelling with recurrent neural networks</em>, pages 5–13.
+Springer, 2012. <a class="cite-backref" href="#ref-graves2012supervised-1" title="Jump back to reference 1">↩</a></p>
+<p id="mccarthy2006proposal">John McCarthy, Marvin L Minsky, Nathaniel Rochester, and Claude E Shannon.
+A proposal for the dartmouth summer research project on artificial intelligence, august 31, 1955.
+<em>AI magazine</em>, 27(4):12, 2006. <a class="cite-backref" href="#ref-mccarthy2006proposal-1" title="Jump back to reference 1">↩</a></p>
+<p id="shannon1951mathematical">Claude E Shannon, Warren Weaver, and Arthur W Burks.
+<span class="bibtex-protected">The Mathematical Theory of Communication</span>.
+<em>The University if Illinois Press</em>, 1951. <a class="cite-backref" href="#ref-shannon1951mathematical-1" title="Jump back to reference 1">↩</a></p>
+<p id="zinkevich2003online">Martin Zinkevich.
+Online convex programming and generalized infinitesimal gradient ascent.
+In <em>Proceedings of the 20th International Conference on Machine Learning (ICML-03)</em>, 928–936. 2003. <a class="cite-backref" href="#ref-zinkevich2003online-1" title="Jump back to reference 1">↩</a></p>
+<p class="post-footer">
+                // filed under
+                    <a class="post-category" href="http://www.svenkreiss.com/blog/tag/ancient-ml/">ancient ML</a>
+                in <a class="post-category" href="http://www.svenkreiss.com/blog/category/ml/">ML</a>   
+
+                <span style="display:inline-block;">
+                // share on <a href="https://twitter.com/share?text=%22Ancient%20%3Cspan%20class%3D%22caps%22%3EML%3C/span%3E%22&amp;via=svenkreiss" target="_blank">
+<i class="fa fa-twitter fa-lg"></i> Twitter
+                </a>
+</span>
+</p>
+<div class="hr"></div>
+<a class="go-top" href="#">Go Top</a>
+<footer class="footer">
+<p>
+        © Sven Kreiss 2014 – 2018. Published with <a href="https://github.com/getpelican/pelican">Pelican</a>.<br/>
+        This work is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" rel="license">Creative Commons Attribution 4.0 International License</a>.
+    </p>
+</footer> </div>
+</div>
+</div>
+<script>
+        renderMathInElement(document.body);
+    </script>
+<!-- for pelican_dynamic plugin -->
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-4070485-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</body>
+</html>
