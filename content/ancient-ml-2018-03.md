@@ -1,9 +1,29 @@
-Title: Ancient ML
+Title: Ancient ML 1
 Date: 2018-03-01
 Category: ML
 Tags: ancient ML
-Summary: Ancient Machine Learning is a serious of paper reading notes. These are the notes for February 2018.
+Summary: Ancient ML is a serious of paper reading notes. This first edition covers the first mention of AI and the Mathematical Theory of Communication.
 Status: draft
+
+
+## What is Ancient ML?
+
+Ancient ML is a serious of paper reading notes. The purpose is to review
+outstanding contributions to machine learning that are valuable to the
+formation as an academic field. It will distill a few outstanding statements
+per paper.
+
+Some rules about the papers:
+
+* have at least 500 citations
+* be sufficiently old so that interest in them cannot be considered
+  a conflict for industry ML researchers and engineers
+* have had impact on academia so that they would be considered valuable to teach
+
+It's not supposed to be a summary but rather inspire reading of
+the papers itself and discussions in person.
+This first edition covers the first mention of Artificial Intelligence and
+the Mathematical Theory of Communication.
 
 
 ## A Proposal for the Dartmouth Summer Research Project on Artificial Intelligence, August 31, 1955 [@@mccarthy2006proposal], [PDF](https://www.aaai.org/ojs/index.php/aimagazine/article/download/1904/1802)
@@ -12,34 +32,36 @@ Status: draft
 * The paper is three pages long and the authors include Claude Shannon.
 * scale of the proposed project: 2 months, 10 men
 * focused on language, abstraction and concepts
-* Seven sections for improvement: Automatic Computers, How Can a Computer be
+* identifies seven areas to improve: Automatic Computers, How Can a Computer be
   Programmed to Use a Language, Neuron Nets, Theory of the Size of a Calculation,
   Self-Improvement, Abstractions, Randomness and Creativity
 * Remarkable assumption in the proposal:
 
 > the major obstacle is not lack of machine capacity, but our inability to write programs
 
-* From the Wikipedia article on the [Dartmouth workshop](), it had the following attendees:
-Dr. Marvin Minsky,
-Dr. Julian Bigelow,
-Professor D.M. Mackay,
-Mr. Ray Solomonoff,
-Mr. John Holland,
-Mr. John McCarthy,
-Dr. Claude Shannon,
-Mr. Nathanial Rochester,
-Mr. Oliver Selfridge,
-Mr. Allen Newell,
-Professor Herbert Simon.
-* Full 102 pages of Ray Solomonoff's hand written notes are availble in
+* From the Wikipedia article on the [Dartmouth workshop](https://en.wikipedia.org/wiki/Dartmouth_workshop),
+  it had the following attendees:
+  Dr. Marvin Minsky,
+  Dr. Julian Bigelow,
+  Professor D.M. Mackay,
+  Mr. Ray Solomonoff,
+  Mr. John Holland,
+  Mr. John McCarthy,
+  Dr. Claude Shannon,
+  Mr. Nathanial Rochester,
+  Mr. Oliver Selfridge,
+  Mr. Allen Newell,
+  Professor Herbert Simon.
+* Full 102 pages of Ray Solomonoff's hand written notes are available in
   [PDF format](http://raysolomonoff.com/dartmouth/notebook/notebook.html) including
   some doodles on page 3.
 
 
 ## The Mathematical Theory of Communication [@@shannon1951mathematical], [PDF](http://pubman.mpdl.mpg.de/pubman/item/escidoc:2383164/component/escidoc:2383163/Shannon_Weaver_1949_Mathematical.pdf)
 
-* Central paper for many fields. 131 pages.
-* Related: *The Idea Factory* is a book about Bell Labs around that time and makes it easier to visualize the people involved. Recommended read.
+* Central paper for many fields. 90 pages (skip the part by Weaver).
+* Related: [@ideafactory2012gertner] is a book about Bell Labs around that time.
+* Related: [@khinchin1957mathematical] is a book that discusses this paper.
 
 Starting with the paper by Weaver:
 
@@ -80,9 +102,15 @@ Starting with the paper by Weaver:
 * useful transmitted information: $H(y)-H(y|x)$
 * skipping continuous messages
 
+Shannon's part:
+
+1) Discrete Noiseless Systems
+
 ## Backlog
 
-* Online Convex Programming and Generalized Infinitesimal Gradient Ascent [@@zinkevich2003online], [PDF](http://www.aaai.org/Papers/ICML/2003/ICML03-120.pdf)
-* Supervised Sequence Labelling with Recurrent Neural Networks [@@graves2012supervised], [PDF](https://www.cs.toronto.edu/~graves/preprint.pdf)
+* Online Convex Programming and Generalized Infinitesimal Gradient Ascent
+  [@@zinkevich2003online], [PDF](http://www.aaai.org/Papers/ICML/2003/ICML03-120.pdf)
+* Supervised Sequence Labelling with Recurrent Neural Networks
+  [@@graves2012supervised], [PDF](https://www.cs.toronto.edu/~graves/preprint.pdf)
 
-Discuss on Twitter and tweet at @svenkreiss with `#ancientml`.
+Discuss on Twitter and tweet at @svenkreiss with `#ancientML`.

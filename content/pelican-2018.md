@@ -10,9 +10,14 @@ Status: published
 <img class="image-process-crisp top" alt="screenshot of this blog" src="/images/pelican_screenshot_Feb2018.png" />
 
 Inspired by Fred Wilson's post about [Owning Yourself](http://avc.com/2018/01/owning-yourself/),
-I revived my Pelican blog. Reasons for Pelican compared to hosted solutions:
+I revived my Pelican blog.
+All my website's
+[configuration and source files](https://github.com/svenkreiss/svenkreiss.github.io/tree/pelican)
+are public as well as
+[my modifications to the pure theme](https://github.com/svenkreiss/pure).
+Reasons for Pelican compared to hosted solutions:
 
-* version control in git
+* content under version control in git
 * my usual text editor for content creation
 * fully owning content and its exact presentation
 * complete customizability, therefore I want Python, therefore Pelican
@@ -39,7 +44,8 @@ Open and in-progress issues:
 * hack of the day: make your default status `draft` (generally a good idea), but then set the default status in `publishconf.py` to `hidden`. When trying to publish, `hidden` will create an error and the file will be skipped. So the article wont exist on the web at all until its status is set to `draft`. Problem: have to split `OUTPUTDIR` in the Makefile so that two different directories are used for `make devserver` and `make publish` (filed [issue#2284](https://github.com/getpelican/pelican/issues/2284) against Pelican; see [Makefile](https://github.com/svenkreiss/svenkreiss.github.io/blob/pelican/Makefile)).
 * Have to wrap Tweet embeds in `<div>` to avoid Markdown's `<p>` tag because the embedded tweet includes a `<blockquote>` which cannot appear inside a `<p>` tag.
 
-Always validate html with [html5validator](https://github.com/svenkreiss/html5validator).
+Always validate html with [html5validator](https://github.com/svenkreiss/html5validator)
+and check links with the [W3C Link Checker](https://validator.w3.org/checklink).
 
 ## Pelican Plugins
 
