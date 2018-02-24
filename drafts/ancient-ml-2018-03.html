@@ -50,13 +50,29 @@
 <h1>Ancient <span class="caps">ML</span> 1</h1>
 </header>
 </section>
+<h2>What is Ancient <span class="caps">ML</span>?</h2>
+<p>Ancient <span class="caps">ML</span> is a serious of paper reading notes. The purpose is to review
+outstanding contributions to machine learning that are valuable to the
+formation as an academic field. It will distill a few outstanding statements
+per paper.</p>
+<p>Some rules about the papers:</p>
+<ul>
+<li>have at least 500 citations</li>
+<li>be sufficiently old so that interest in them cannot be considered
+  a conflict for industry <span class="caps">ML</span> researchers and engineers</li>
+<li>have had impact on academia so that they would be considered valuable to teach</li>
+</ul>
+<p>It’s not supposed to be a summary but rather inspire reading of
+the papers itself and discussions in person.
+This first edition covers the first mention of Artificial Intelligence and
+the Mathematical Theory of Communication.</p>
 <h2>A Proposal for the Dartmouth Summer Research Project on Artificial Intelligence, August 31, 1955 <a href="#mccarthy2006proposal" id="ref-mccarthy2006proposal-1">(McCarthy et al., 2006)</a>, <a href="https://www.aaai.org/ojs/index.php/aimagazine/article/download/1904/1802"><span class="caps">PDF</span></a></h2>
 <ul>
 <li>The paper/event that gets credited with the foundation of the field of Artificial Intelligence research.</li>
 <li>The paper is three pages long and the authors include Claude Shannon.</li>
 <li>scale of the proposed project: 2 months, 10 men</li>
 <li>focused on language, abstraction and concepts</li>
-<li>Seven sections for improvement: Automatic Computers, How Can a Computer be
+<li>identifies seven areas to improve: Automatic Computers, How Can a Computer be
   Programmed to Use a Language, Neuron Nets, Theory of the Size of a Calculation,
   Self-Improvement, Abstractions, Randomness and Creativity</li>
 <li>Remarkable assumption in the proposal:</li>
@@ -65,27 +81,28 @@
 <p>the major obstacle is not lack of machine capacity, but our inability to write programs</p>
 </blockquote>
 <ul>
-<li>From the Wikipedia article on the <a href="">Dartmouth workshop</a>, it had the following attendees:
-Dr. Marvin Minsky,
-Dr. Julian Bigelow,
-Professor <span class="caps">D.M.</span> Mackay,
-Mr. Ray Solomonoff,
-Mr. John Holland,
-Mr. John McCarthy,
-Dr. Claude Shannon,
-Mr. Nathanial Rochester,
-Mr. Oliver Selfridge,
-Mr. Allen Newell,
-Professor Herbert Simon.</li>
-<li>Full 102 pages of Ray Solomonoff’s hand written notes are availble in
+<li>From the Wikipedia article on the <a href="https://en.wikipedia.org/wiki/Dartmouth_workshop">Dartmouth workshop</a>,
+  it had the following attendees:
+  Dr. Marvin Minsky,
+  Dr. Julian Bigelow,
+  Professor <span class="caps">D.M.</span> Mackay,
+  Mr. Ray Solomonoff,
+  Mr. John Holland,
+  Mr. John McCarthy,
+  Dr. Claude Shannon,
+  Mr. Nathanial Rochester,
+  Mr. Oliver Selfridge,
+  Mr. Allen Newell,
+  Professor Herbert Simon.</li>
+<li>Full 102 pages of Ray Solomonoff’s hand written notes are available in
   <a href="http://raysolomonoff.com/dartmouth/notebook/notebook.html"><span class="caps">PDF</span> format</a> including
   some doodles on page 3.</li>
 </ul>
 <h2>The Mathematical Theory of Communication <a href="#shannon1951mathematical" id="ref-shannon1951mathematical-1">(Shannon et al., 1951)</a>, <a href="http://pubman.mpdl.mpg.de/pubman/item/escidoc:2383164/component/escidoc:2383163/Shannon_Weaver_1949_Mathematical.pdf"><span class="caps">PDF</span></a></h2>
 <ul>
-<li>Central paper for many fields. 131 pages.</li>
-<li>Related: <em>The Idea Factory</em> is a book about Bell Labs around that time and makes it easier to visualize the people involved.</li>
-<li>Related: <a href="#khinchin1957mathematical" id="ref-khinchin1957mathematical-1">Khinchin (1957)</a></li>
+<li>Central paper for many fields. 90 pages (skip the part by Weaver).</li>
+<li>Related: <a href="#ideafactory2012gertner" id="ref-ideafactory2012gertner-1">Gertner (2012)</a> is a book about Bell Labs around that time.</li>
+<li>Related: <a href="#khinchin1957mathematical" id="ref-khinchin1957mathematical-1">Khinchin (1957)</a> is a book that discusses this paper.</li>
 </ul>
 <p>Starting with the paper by Weaver:</p>
 <ul>
@@ -137,13 +154,21 @@ Professor Herbert Simon.</li>
 <li>useful transmitted information: <span class="math">\(H(y)-H(y|x)\)</span></li>
 <li>skipping continuous messages</li>
 </ul>
+<p>Shannon’s part:</p>
+<p>1) Discrete Noiseless Systems</p>
 <h2>Backlog</h2>
 <ul>
-<li>Online Convex Programming and Generalized Infinitesimal Gradient Ascent <a href="#zinkevich2003online" id="ref-zinkevich2003online-1">(Zinkevich, 2003)</a>, <a href="http://www.aaai.org/Papers/ICML/2003/ICML03-120.pdf"><span class="caps">PDF</span></a></li>
-<li>Supervised Sequence Labelling with Recurrent Neural Networks <a href="#graves2012supervised" id="ref-graves2012supervised-1">(Graves, 2012)</a>, <a href="https://www.cs.toronto.edu/~graves/preprint.pdf"><span class="caps">PDF</span></a></li>
+<li>Online Convex Programming and Generalized Infinitesimal Gradient Ascent
+  <a href="#zinkevich2003online" id="ref-zinkevich2003online-1">(Zinkevich, 2003)</a>, <a href="http://www.aaai.org/Papers/ICML/2003/ICML03-120.pdf"><span class="caps">PDF</span></a></li>
+<li>Supervised Sequence Labelling with Recurrent Neural Networks
+  <a href="#graves2012supervised" id="ref-graves2012supervised-1">(Graves, 2012)</a>, <a href="https://www.cs.toronto.edu/~graves/preprint.pdf"><span class="caps">PDF</span></a></li>
 </ul>
 <p>Discuss on Twitter and tweet at <a href="https://twitter.com/svenkreiss">@svenkreiss</a> with <code>#ancientML</code>.</p><script charset="utf-8" src="//platform.twitter.com/widgets.js"></script><hr/>
 <h2>Bibliography</h2>
+<p id="ideafactory2012gertner">Jon Gertner.
+<em><span class="bibtex-protected">The Idea Factory: Bell Labs and the great age of American innovation</span></em>.
+Penguin Press, New York, 2012.
+ISBN 978-0143122791. <a class="cite-backref" href="#ref-ideafactory2012gertner-1" title="Jump back to reference 1">↩</a></p>
 <p id="graves2012supervised">Alex Graves.
 Supervised sequence labelling.
 In <em>Supervised sequence labelling with recurrent neural networks</em>, pages 5–13.

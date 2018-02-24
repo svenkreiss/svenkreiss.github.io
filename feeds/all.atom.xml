@@ -49,9 +49,14 @@ commit and validated with
 &lt;h2&gt;Sample&lt;/h2&gt;
 &lt;p&gt;&lt;img class="image-process-crisp top" alt="pelican-jsmath sample" src="/images/pelican_jsmath_sample.png" /&gt;&lt;/p&gt;&lt;script src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;</content><category term="blog"></category><category term="Pelican"></category><category term="math"></category><category term="Python"></category></entry><entry><title>Pelican 2018</title><link href="http://www.svenkreiss.com/blog/pelican-2018/" rel="alternate"></link><published>2018-02-10T00:00:00-05:00</published><updated>2018-02-10T00:00:00-05:00</updated><author><name>Sven Kreiss</name></author><id>tag:www.svenkreiss.com,2018-02-10:/blog/pelican-2018/</id><summary type="html">&lt;p&gt;Updates to Pelican and this blog. This is a summary of theme changes, a list of my favorite plugins, and a summary of plugins that I updated to improve this website. It also contains a short discussion of the pelican-plugins repository and its potential consequences for the lacking popularity of individual&amp;nbsp;plugins.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img class="image-process-crisp top" alt="screenshot of this blog" src="/images/pelican_screenshot_Feb2018.png" /&gt;&lt;/p&gt;
 &lt;p&gt;Inspired by Fred Wilson&amp;#8217;s post about &lt;a href="http://avc.com/2018/01/owning-yourself/"&gt;Owning Yourself&lt;/a&gt;,
-I revived my Pelican blog. Reasons for Pelican compared to hosted&amp;nbsp;solutions:&lt;/p&gt;
+I revived my Pelican blog.
+All my website&amp;#8217;s
+&lt;a href="https://github.com/svenkreiss/svenkreiss.github.io/tree/pelican"&gt;configuration and source files&lt;/a&gt;
+are public as well as
+&lt;a href="https://github.com/svenkreiss/pure"&gt;my modifications to the pure theme&lt;/a&gt;.
+Reasons for Pelican compared to hosted&amp;nbsp;solutions:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;version control in&amp;nbsp;git&lt;/li&gt;
+&lt;li&gt;content under version control in&amp;nbsp;git&lt;/li&gt;
 &lt;li&gt;my usual text editor for content&amp;nbsp;creation&lt;/li&gt;
 &lt;li&gt;fully owning content and its exact&amp;nbsp;presentation&lt;/li&gt;
 &lt;li&gt;complete customizability, therefore I want Python, therefore&amp;nbsp;Pelican&lt;/li&gt;
@@ -78,7 +83,8 @@ I revived my Pelican blog. Reasons for Pelican compared to hosted&amp;nbsp;solut
 &lt;li&gt;hack of the day: make your default status &lt;code&gt;draft&lt;/code&gt; (generally a good idea), but then set the default status in &lt;code&gt;publishconf.py&lt;/code&gt; to &lt;code&gt;hidden&lt;/code&gt;. When trying to publish, &lt;code&gt;hidden&lt;/code&gt; will create an error and the file will be skipped. So the article wont exist on the web at all until its status is set to &lt;code&gt;draft&lt;/code&gt;. Problem: have to split &lt;code&gt;OUTPUTDIR&lt;/code&gt; in the Makefile so that two different directories are used for &lt;code&gt;make devserver&lt;/code&gt; and &lt;code&gt;make publish&lt;/code&gt; (filed &lt;a href="https://github.com/getpelican/pelican/issues/2284"&gt;issue#2284&lt;/a&gt; against Pelican; see &lt;a href="https://github.com/svenkreiss/svenkreiss.github.io/blob/pelican/Makefile"&gt;Makefile&lt;/a&gt;).&lt;/li&gt;
 &lt;li&gt;Have to wrap Tweet embeds in &lt;code&gt;&amp;lt;div&amp;gt;&lt;/code&gt; to avoid Markdown&amp;#8217;s &lt;code&gt;&amp;lt;p&amp;gt;&lt;/code&gt; tag because the embedded tweet includes a &lt;code&gt;&amp;lt;blockquote&amp;gt;&lt;/code&gt; which cannot appear inside a &lt;code&gt;&amp;lt;p&amp;gt;&lt;/code&gt; tag.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Always validate html with &lt;a href="https://github.com/svenkreiss/html5validator"&gt;html5validator&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Always validate html with &lt;a href="https://github.com/svenkreiss/html5validator"&gt;html5validator&lt;/a&gt;
+and check links with the &lt;a href="https://validator.w3.org/checklink"&gt;&lt;span class="caps"&gt;W3C&lt;/span&gt; Link Checker&lt;/a&gt;.&lt;/p&gt;
 &lt;h2&gt;Pelican&amp;nbsp;Plugins&lt;/h2&gt;
 &lt;p&gt;Most Pelican Plugins are distributed through the central
 &lt;a href="https://github.com/getpelican/pelican-plugins"&gt;pelican-plugins&lt;/a&gt; repository.
