@@ -184,6 +184,10 @@ pre {
     color: #fff;
 }
 
+p:target {
+    background-color: #ffa;
+}
+
 .content-subhead {
     text-transform: uppercase;
     color: #aaa;
