@@ -2,11 +2,11 @@ Title: AncientML 1
 Date: 2018-03-05
 Category: ML
 Tags: ancientml
-Summary: AncientML is a serious of paper reading notes. This first edition covers the first mention of AI and the Mathematical Theory of Communication.
+Summary: AncientML is a series of paper reading notes. This first edition covers the first mention of AI and the Mathematical Theory of Communication.
 Status: published
 
 
-AncientML is a serious of paper reading notes. The purpose is to review
+AncientML is a series of paper reading notes. The purpose is to review
 outstanding contributions to machine learning that are valuable to the
 formation as an academic field.
 
@@ -19,8 +19,6 @@ Some rules about the papers:
 
 It's not supposed to be a summary but rather inspire reading of
 the papers itself and discussions in person.
-
-Similar resources: @shakir_za tweets a series called "Sunday Classic Paper".
 
 
 ## A Proposal for the Dartmouth Summer Research Project on Artificial Intelligence, August 31, 1955 [@@mccarthy2006proposal], [PDF](https://www.aaai.org/ojs/index.php/aimagazine/article/download/1904/1802)
@@ -73,3 +71,5 @@ Similar resources: @shakir_za tweets a series called "Sunday Classic Paper".
   [@@graves2012supervised], [PDF](https://www.cs.toronto.edu/~graves/preprint.pdf)
 * High-speed tracking with kernelized correlation filters,
   [@@kcftracker2015high], [PDF](https://arxiv.org/pdf/1404.7584)
+
+Similar resources: @shakir_za tweets a series called "Sunday Classic Paper".
