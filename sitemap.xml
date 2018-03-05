@@ -5,7 +5,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://www.svenkreiss.com/</loc>
-<lastmod>2018-03-05T08:53:37-00:00</lastmod>
+<lastmod>2018-03-05T09:36:45-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -69,6 +69,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>http://www.svenkreiss.com/UnicodeIt.html</loc>
 <lastmod>2013-03-01T12:00:00-05:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://www.svenkreiss.com/blog/ancientml-2018-03/</loc>
+<lastmod>2018-03-05T00:00:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -214,6 +221,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>http://www.svenkreiss.com/blog/category/ml/</loc>
+<lastmod>2018-03-05T00:00:00-04:56</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>http://www.svenkreiss.com/blog/category/science/</loc>
 <lastmod>2016-12-31T00:00:00-04:56</lastmod>
 <changefreq>monthly</changefreq>
@@ -223,6 +237,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>http://www.svenkreiss.com/blog/category/tech/</loc>
 <lastmod>2018-02-18T00:00:00-04:56</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://www.svenkreiss.com/blog/tag/ancientml/</loc>
+<lastmod>2018-03-05T00:00:00-04:56</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -418,7 +439,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://www.svenkreiss.com/blog/author/sven-kreiss/</loc>
-<lastmod>2018-02-18T00:00:00-04:56</lastmod>
+<lastmod>2018-03-05T00:00:00-04:56</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>

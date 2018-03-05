@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Sven Kreiss - ML</title><link href="http://www.svenkreiss.com/" rel="alternate"></link><link href="http://www.svenkreiss.com/feeds/ml.atom.xml" rel="self"></link><id>http://www.svenkreiss.com/</id><updated>2018-03-05T00:00:00-05:00</updated><entry><title>AncientML 1</title><link href="http://www.svenkreiss.com/blog/ancientml-2018-03/" rel="alternate"></link><published>2018-03-05T00:00:00-05:00</published><updated>2018-03-05T00:00:00-05:00</updated><author><name>Sven Kreiss</name></author><id>tag:www.svenkreiss.com,2018-03-05:/blog/ancientml-2018-03/</id><summary type="html">&lt;p&gt;AncientML is a serious of paper reading notes. This first edition covers the first mention of &lt;span class="caps"&gt;AI&lt;/span&gt; and the Mathematical Theory of&amp;nbsp;Communication.&lt;/p&gt;</summary><content type="html">&lt;p&gt;AncientML is a serious of paper reading notes. The purpose is to review
+outstanding contributions to machine learning that are valuable to the
+formation as an academic&amp;nbsp;field.&lt;/p&gt;
+&lt;p&gt;Some rules about the&amp;nbsp;papers:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;have at least 500&amp;nbsp;citations&lt;/li&gt;
+&lt;li&gt;be sufficiently old so that interest in them cannot be considered
+  a conflict for industry &lt;span class="caps"&gt;ML&lt;/span&gt; researchers and&amp;nbsp;engineers&lt;/li&gt;
+&lt;li&gt;have had impact on academia so that they would be considered valuable to&amp;nbsp;teach&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;It&amp;#8217;s not supposed to be a summary but rather inspire reading of
+the papers itself and discussions in&amp;nbsp;person.&lt;/p&gt;
+&lt;p&gt;Similar resources: &lt;a href="https://twitter.com/shakir_za"&gt;&amp;#64;shakir_za&lt;/a&gt; tweets a series called &amp;#8220;Sunday Classic&amp;nbsp;Paper&amp;#8221;.&lt;/p&gt;
+&lt;h2&gt;A Proposal for the Dartmouth Summer Research Project on Artificial Intelligence, August 31, 1955 &lt;a href='#mccarthy2006proposal' id='ref-mccarthy2006proposal-1'&gt;(McCarthy et al., 2006)&lt;/a&gt;, &lt;a href="https://www.aaai.org/ojs/index.php/aimagazine/article/download/1904/1802"&gt;&lt;span class="caps"&gt;PDF&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;The paper/event that gets credited with the foundation of the field of Artificial Intelligence&amp;nbsp;research.&lt;/li&gt;
+&lt;li&gt;The paper is three pages long and the authors include Claude&amp;nbsp;Shannon.&lt;/li&gt;
+&lt;li&gt;scale of the proposed project: 2 months, 10&amp;nbsp;men&lt;/li&gt;
+&lt;li&gt;focused on language, abstraction and&amp;nbsp;concepts&lt;/li&gt;
+&lt;li&gt;identifies seven areas to improve: Automatic Computers, How Can a Computer be
+  Programmed to Use a Language, Neuron Nets, Theory of the Size of a Calculation,
+  Self-Improvement, Abstractions, Randomness and&amp;nbsp;Creativity&lt;/li&gt;
+&lt;li&gt;&lt;span class="dquo"&gt;&amp;#8220;&lt;/span&gt;the major obstacle is not lack of machine capacity, but our inability to write&amp;nbsp;programs&amp;#8221;&lt;/li&gt;
+&lt;li&gt;There is Wikipedia article on the &lt;a href="https://en.wikipedia.org/wiki/Dartmouth_workshop"&gt;Dartmouth workshop&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;102 pages of Ray Solomonoff&amp;#8217;s
+  &lt;a href="http://raysolomonoff.com/dartmouth/notebook/notebook.html"&gt;hand written notes&lt;/a&gt;
+  including some doodles on page&amp;nbsp;3.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;The Mathematical Theory of Communication &lt;a href='#shannon1951mathematical' id='ref-shannon1951mathematical-1'&gt;(Shannon et al., 1951)&lt;/a&gt;, &lt;a href="http://pubman.mpdl.mpg.de/pubman/item/escidoc:2383164/component/escidoc:2383163/Shannon_Weaver_1949_Mathematical.pdf"&gt;&lt;span class="caps"&gt;PDF&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Central paper for many fields. 90 pages (skip the part by&amp;nbsp;Weaver).&lt;/li&gt;
+&lt;li&gt;Related: &lt;em&gt;The Idea Factory&lt;/em&gt; &lt;a href='#ideafactory2012gertner' id='ref-ideafactory2012gertner-1'&gt;(Gertner, 2012)&lt;/a&gt; is a book about Bell Labs around that&amp;nbsp;time.&lt;/li&gt;
+&lt;li&gt;Related: &lt;a href='#khinchin1957mathematical' id='ref-khinchin1957mathematical-1'&gt;Khinchin (1957)&lt;/a&gt; is a book that discusses this&amp;nbsp;paper.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;information&lt;/em&gt; &lt;span class="math"&gt;\(H\)&lt;/span&gt; is not attached to a particular message but to the amount of
+  freedom of&amp;nbsp;choice&lt;/li&gt;
+&lt;li&gt;John Tukey suggested the word &amp;#8220;bit&amp;#8221; for &amp;#8220;binary&amp;nbsp;digit&amp;#8221;&lt;/li&gt;
+&lt;li&gt;example to visualize the connection between probability of a message and information:&lt;ul&gt;
+&lt;li&gt;only two possible messages with &lt;span class="math"&gt;\(p_1\)&lt;/span&gt; and &lt;span class="math"&gt;\(p_2=1-p_1\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;what is the amount of information as a function of &lt;span class="math"&gt;\(p_1\)&lt;/span&gt;?&lt;/li&gt;
+&lt;li&gt;information is maximum for &lt;span class="math"&gt;\(p_1 = 0.5\)&lt;/span&gt;, &amp;#8220;when one is completely free to&amp;nbsp;choose&amp;#8221;&lt;/li&gt;
+&lt;li&gt;information goes to zero when one of the messages is very probable: &amp;#8220;no freedom of choice &amp;#8212; no&amp;nbsp;information&amp;#8221;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;p.49: &amp;#8220;decomposition of choice&amp;#8221; is a beautiful requirement for &lt;span class="math"&gt;\(H\)&lt;/span&gt;, and leads with
+  the other two requirements to a unique form for &lt;span class="math"&gt;\(H\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;p.53: origin for terms of the form &lt;span class="math"&gt;\(p_i\log{}p_i\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;p.56: relative entropy, maximum possible compression,&amp;nbsp;redundancy&lt;/li&gt;
+&lt;li&gt;&amp;#8230;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Backlog&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Multidimensional binary search trees used for associative searching,
+  &lt;a href='#bentley1975multidimensional' id='ref-bentley1975multidimensional-1'&gt;(Bentley, 1975)&lt;/a&gt;,
+  &lt;a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.160.335&amp;amp;rep=rep1&amp;amp;type=pdf"&gt;&lt;span class="caps"&gt;PDF&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class="caps"&gt;RBM&lt;/span&gt; predecessor Harmonium: Information processing in dynamical systems: Foundations of harmony theory,
+  &lt;a href='#smolensky1986information' id='ref-smolensky1986information-1'&gt;(Smolensky, 1986)&lt;/a&gt;, &lt;a href="http://stanford.edu/~jlmcc/papers/PDP/Volume%201/Chap6_PDP86.pdf"&gt;&lt;span class="caps"&gt;PDF&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Reducing the Dimensionality of Data,
+  &lt;a href='#hinton2006reducing' id='ref-hinton2006reducing-1'&gt;(Hinton and Salakhutdinov, 2006)&lt;/a&gt;, &lt;a href="http://www.cs.toronto.edu/~hinton/science.pdf"&gt;&lt;span class="caps"&gt;PDF&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Online Convex Programming and Generalized Infinitesimal Gradient Ascent
+  &lt;a href='#zinkevich2003online' id='ref-zinkevich2003online-1'&gt;(Zinkevich, 2003)&lt;/a&gt;, &lt;a href="http://www.aaai.org/Papers/ICML/2003/ICML03-120.pdf"&gt;&lt;span class="caps"&gt;PDF&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Supervised Sequence Labelling with Recurrent Neural Networks
+  &lt;a href='#graves2012supervised' id='ref-graves2012supervised-1'&gt;(Graves, 2012)&lt;/a&gt;, &lt;a href="https://www.cs.toronto.edu/~graves/preprint.pdf"&gt;&lt;span class="caps"&gt;PDF&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;High-speed tracking with kernelized correlation filters,
+  &lt;a href='#kcftracker2015high' id='ref-kcftracker2015high-1'&gt;(Henriques et al., 2015)&lt;/a&gt;, &lt;a href="https://arxiv.org/pdf/1404.7584"&gt;&lt;span class="caps"&gt;PDF&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;script src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;&lt;hr&gt;
+&lt;h2&gt;Bibliography&lt;/h2&gt;
+&lt;p id='bentley1975multidimensional'&gt;Jon&amp;nbsp;Louis Bentley.
+Multidimensional binary search trees used for associative searching.
+&lt;em&gt;Communications of the ACM&lt;/em&gt;, 18(9):509–517, 1975. &lt;a class="cite-backref" href="#ref-bentley1975multidimensional-1" title="Jump back to reference 1"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;p id='ideafactory2012gertner'&gt;Jon Gertner.
+&lt;em&gt;&lt;span class="bibtex-protected"&gt;The Idea Factory: Bell Labs and the great age of American innovation&lt;/span&gt;&lt;/em&gt;.
+Penguin Press, New York, 2012.
+ISBN 978-0143122791. &lt;a class="cite-backref" href="#ref-ideafactory2012gertner-1" title="Jump back to reference 1"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;p id='graves2012supervised'&gt;Alex Graves.
+Supervised sequence labelling.
+In &lt;em&gt;Supervised sequence labelling with recurrent neural networks&lt;/em&gt;, pages 5–13.
+Springer, 2012. &lt;a class="cite-backref" href="#ref-graves2012supervised-1" title="Jump back to reference 1"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;p id='kcftracker2015high'&gt;Jo&lt;span class="bibtex-protected"&gt;ã&lt;/span&gt;o&amp;nbsp;F Henriques, Rui Caseiro, Pedro Martins, and Jorge Batista.
+High-speed tracking with kernelized correlation filters.
+&lt;em&gt;IEEE Transactions on Pattern Analysis and Machine Intelligence&lt;/em&gt;, 37(3):583–596, 2015. &lt;a class="cite-backref" href="#ref-kcftracker2015high-1" title="Jump back to reference 1"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;p id='hinton2006reducing'&gt;Geoffrey&amp;nbsp;E Hinton and Ruslan&amp;nbsp;R Salakhutdinov.
+Reducing the dimensionality of data with neural networks.
+&lt;em&gt;Science&lt;/em&gt;, 313(5786):504–507, 2006. &lt;a class="cite-backref" href="#ref-hinton2006reducing-1" title="Jump back to reference 1"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;p id='khinchin1957mathematical'&gt;A&amp;nbsp;Khinchin.
+&lt;em&gt;Mathematical foundations of information theory&lt;/em&gt;.
+Dover Publications, New York, 1957.
+ISBN 978-0486604343. &lt;a class="cite-backref" href="#ref-khinchin1957mathematical-1" title="Jump back to reference 1"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;p id='mccarthy2006proposal'&gt;John McCarthy, Marvin&amp;nbsp;L Minsky, Nathaniel Rochester, and Claude&amp;nbsp;E Shannon.
+&lt;span class="bibtex-protected"&gt;A Proposal for the Dartmouth Summer Research Project on Artificial Intelligence, August 31, 1955&lt;/span&gt;.
+&lt;em&gt;AI magazine&lt;/em&gt;, 27(4):12, 2006. &lt;a class="cite-backref" href="#ref-mccarthy2006proposal-1" title="Jump back to reference 1"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;p id='shannon1951mathematical'&gt;Claude&amp;nbsp;E Shannon, Warren Weaver, and Arthur&amp;nbsp;W Burks.
+&lt;span class="bibtex-protected"&gt;The Mathematical Theory of Communication&lt;/span&gt;.
+&lt;em&gt;The University of Illinois Press&lt;/em&gt;, 1951. &lt;a class="cite-backref" href="#ref-shannon1951mathematical-1" title="Jump back to reference 1"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;p id='smolensky1986information'&gt;Paul Smolensky.
+Information processing in dynamical systems: foundations of harmony theory.
+Technical Report, Colorado University at Boulder Dept of Computer Science, 1986. &lt;a class="cite-backref" href="#ref-smolensky1986information-1" title="Jump back to reference 1"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;p id='zinkevich2003online'&gt;Martin Zinkevich.
+Online convex programming and generalized infinitesimal gradient ascent.
+In &lt;em&gt;Proceedings of the 20th International Conference on Machine Learning (ICML-03)&lt;/em&gt;, 928–936. 2003. &lt;a class="cite-backref" href="#ref-zinkevich2003online-1" title="Jump back to reference 1"&gt;↩&lt;/a&gt;&lt;/p&gt;
+</content><category term="ancientml"></category></entry></feed>
