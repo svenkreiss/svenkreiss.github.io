@@ -462,4 +462,8 @@ ul.related-posts .summary {
     a.header-article-home {
         display: none;
     }
+
+    p:target {
+        background-color: unset;
+    }
 }
