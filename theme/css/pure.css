@@ -210,11 +210,13 @@ p:target {
 .post {
     padding-bottom: 0em;
     /* border-bottom: 1px solid #f2f2f0; */
+    clear: both;
 }
 .post-title {
     font-size: 1.5em;
     color: #333332;
     letter-spacing: -1px;
+    line-height: 100%;
 }
 .post-meta {
     color: #999;
