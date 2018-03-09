@@ -8,7 +8,7 @@ SITEURL = 'http://localhost:8000'
 
 TIMEZONE = 'America/New_York'
 
-DEFAULT_LANG = u'en'
+DEFAULT_LANG = 'en'
 DEFAULT_DATE_FORMAT = '%B %d, %Y'
 
 DEFAULT_METADATA = {
@@ -153,9 +153,5 @@ MENUITEMS = [
     ('Articles', '/blog/'),
 ]
 DISPLAY_PAGES_ON_MENU = True
-
-
-# plugin render_math
-MATH = {'color': 'blue', 'align': 'left'}
 
 TYPOGRIFY = True
