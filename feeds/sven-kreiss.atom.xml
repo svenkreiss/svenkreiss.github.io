@@ -29,22 +29,16 @@ the papers itself and discussions in&amp;nbsp;person.&lt;/p&gt;
 &lt;h2&gt;The Mathematical Theory of Communication &lt;a href='#shannon1951mathematical' id='ref-shannon1951mathematical-1'&gt;(Shannon et al., 1951)&lt;/a&gt;, &lt;a href="http://pubman.mpdl.mpg.de/pubman/item/escidoc:2383164/component/escidoc:2383163/Shannon_Weaver_1949_Mathematical.pdf"&gt;&lt;span class="caps"&gt;PDF&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Central paper for many fields. 90 pages (skip the part by&amp;nbsp;Weaver).&lt;/li&gt;
-&lt;li&gt;Related: &lt;em&gt;The Idea Factory&lt;/em&gt; &lt;a href='#ideafactory2012gertner' id='ref-ideafactory2012gertner-1'&gt;(Gertner, 2012)&lt;/a&gt; is a book about Bell Labs around that&amp;nbsp;time.&lt;/li&gt;
-&lt;li&gt;Related: &lt;a href='#khinchin1957mathematical' id='ref-khinchin1957mathematical-1'&gt;Khinchin (1957)&lt;/a&gt; is a book that discusses this&amp;nbsp;paper.&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;information&lt;/em&gt; &lt;span class="math"&gt;\(H\)&lt;/span&gt; is not attached to a particular message but to the amount of
+&lt;li&gt;&lt;em&gt;The Idea Factory&lt;/em&gt; &lt;a href='#ideafactory2012gertner' id='ref-ideafactory2012gertner-1'&gt;(Gertner, 2012)&lt;/a&gt; is a book about Bell Labs around that&amp;nbsp;time.&lt;/li&gt;
+&lt;li&gt;&lt;a href='#khinchin1957mathematical' id='ref-khinchin1957mathematical-1'&gt;Khinchin (1957)&lt;/a&gt; is a book that discusses this&amp;nbsp;paper.&lt;/li&gt;
+&lt;li&gt;p.49: &lt;em&gt;information&lt;/em&gt; is not attached to a particular message but to the amount of
   freedom of&amp;nbsp;choice&lt;/li&gt;
-&lt;li&gt;John Tukey suggested the word &amp;#8220;bit&amp;#8221; for &amp;#8220;binary&amp;nbsp;digit&amp;#8221;&lt;/li&gt;
-&lt;li&gt;example to visualize the connection between probability of a message and information:&lt;ul&gt;
-&lt;li&gt;only two possible messages with &lt;span class="math"&gt;\(p_1\)&lt;/span&gt; and &lt;span class="math"&gt;\(p_2=1-p_1\)&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;what is the amount of information as a function of &lt;span class="math"&gt;\(p_1\)&lt;/span&gt;?&lt;/li&gt;
-&lt;li&gt;information is maximum for &lt;span class="math"&gt;\(p_1 = 0.5\)&lt;/span&gt;, &amp;#8220;when one is completely free to&amp;nbsp;choose&amp;#8221;&lt;/li&gt;
-&lt;li&gt;information goes to zero when one of the messages is very probable: &amp;#8220;no freedom of choice &amp;#8212; no&amp;nbsp;information&amp;#8221;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
 &lt;li&gt;p.49: &amp;#8220;decomposition of choice&amp;#8221; is a beautiful requirement for &lt;span class="math"&gt;\(H\)&lt;/span&gt;, and leads with
   the other two requirements to a unique form for &lt;span class="math"&gt;\(H\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;p.50: simple example to visualize the connection between probability of a message and information is shown in the figure&amp;nbsp;below&lt;/li&gt;
 &lt;li&gt;p.53: origin for terms of the form &lt;span class="math"&gt;\(p_i\log{}p_i\)&lt;/span&gt;&lt;/li&gt;
 &lt;li&gt;p.56: relative entropy, maximum possible compression,&amp;nbsp;redundancy&lt;/li&gt;
+&lt;li&gt;p.70: capacity of a noisy channel; includes a &lt;code&gt;max()&lt;/code&gt; over all possible information&amp;nbsp;sources&lt;/li&gt;
 &lt;li&gt;&amp;#8230;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;Backlog&lt;/h2&gt;
