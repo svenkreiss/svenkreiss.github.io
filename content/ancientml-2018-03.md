@@ -5,7 +5,6 @@ Tags: ancientml
 Summary: AncientML is a series of paper reading notes. This first edition covers the first mention of AI and the Mathematical Theory of Communication.
 Status: published
 
-
 AncientML is a series of paper reading notes. The purpose is to review
 outstanding contributions to machine learning that are valuable to the
 formation as an academic field.
@@ -40,21 +39,18 @@ the papers itself and discussions in person.
 ## The Mathematical Theory of Communication [@@shannon1951mathematical], [PDF](http://pubman.mpdl.mpg.de/pubman/item/escidoc:2383164/component/escidoc:2383163/Shannon_Weaver_1949_Mathematical.pdf)
 
 * Central paper for many fields. 90 pages (skip the part by Weaver).
-* Related: _The Idea Factory_ [@@ideafactory2012gertner] is a book about Bell Labs around that time.
-* Related: [@khinchin1957mathematical] is a book that discusses this paper.
-* _information_ $H$ is not attached to a particular message but to the amount of
+* _The Idea Factory_ [@@ideafactory2012gertner] is a book about Bell Labs around that time.
+* [@khinchin1957mathematical] is a book that discusses this paper.
+* p.49: _information_ is not attached to a particular message but to the amount of
   freedom of choice
-* John Tukey suggested the word "bit" for "binary digit"
-* example to visualize the connection between probability of a message and information:
-    * only two possible messages with $p_1$ and $p_2=1-p_1$
-    * what is the amount of information as a function of $p_1$?
-    * information is maximum for $p_1 = 0.5$, "when one is completely free to choose"
-    * information goes to zero when one of the messages is very probable: "no freedom of choice -- no information"
 * p.49: "decomposition of choice" is a beautiful requirement for $H$, and leads with
   the other two requirements to a unique form for $H$
+* p.50: simple example to visualize the connection between probability of a message and information is shown in the figure below
 * p.53: origin for terms of the form $p_i\log{}p_i$
 * p.56: relative entropy, maximum possible compression, redundancy
+* p.70: capacity of a noisy channel; includes a `max()` over all possible information sources
 * ...
+
 
 ## Backlog
 
