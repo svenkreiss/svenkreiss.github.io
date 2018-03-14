@@ -38,5 +38,5 @@ localcrawl --start cv.html --out content/files --depth=0 --pdf
 ```sh
 alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
 chrome --headless --disable-gpu --dump-dom cv.html > content/files/cv.html
-chrome --headless --disable-gpu --print-to-pdf=content/files/cv.pdf cv.html
+chrome --headless --disable-gpu --print-to-pdf=content/files/cv.pdf cv.html  # includes print header and footer
 ```
