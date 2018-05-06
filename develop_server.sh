@@ -67,7 +67,8 @@ function start_up(){
   pelican_pid=$!
   echo $pelican_pid > $PELICAN_PID
   cd $OUTPUTDIR
-  $PY -m pelican.server $port &
+  # $PY -m pelican.server $port &
+  browser-sync start -s -f . --port $port --host 127.0.0.1 --no-notify --no-open &
   srv_pid=$!
   echo $srv_pid > $SRV_PID
   cd $BASEDIR
@@ -96,7 +97,7 @@ elif [[ $1 == "restart" ]]; then
   start_up $port
 elif [[ $1 == "start" ]]; then
   if ! start_up $port; then
-    shut_down 
+    shut_down
   fi
 else
   usage

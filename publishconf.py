@@ -16,7 +16,7 @@ DEFAULT_METADATA = {
 
 USE_CDN = True
 
-SITEURL = 'http://www.svenkreiss.com'
+SITEURL = 'https://www.svenkreiss.com'
 RELATIVE_URLS = False
 
 FEED_ALL_ATOM = 'feeds/all.atom.xml'

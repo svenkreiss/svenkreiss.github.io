@@ -1,22 +1,10 @@
-beautifulsoup4==4.6.0
-blinker==1.4
-docutils==0.14
-feedgenerator==1.9
-ghp-import==0.5.5
-Jinja2==2.10
-#Markdown==2.6.11
-MarkupSafe==1.0
-pelican==3.7.1
-Pygments==2.2.0
-python-dateutil==2.6.1
-pytz==2017.3
-six==1.11.0
-smartypants==2.0.1
-typogrify==2.0.7
-Unidecode==1.0.22
+pelican
+beautifulsoup4
+markdown
+ghp-import
 
-https://github.com/waylan/markdown/archive/block.zip
 pelican-jsmath
 pelican-advance-embed-tweet
 pybtex
 pillow
+typogrify
