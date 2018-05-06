@@ -5,7 +5,6 @@ from __future__ import unicode_literals
 AUTHOR = u'Sven Kreiss'
 SITENAME = u'Sven Kreiss'
 SITEURL = ''
-INTERNAL = False
 
 TIMEZONE = 'America/New_York'
 
@@ -16,16 +15,12 @@ DEFAULT_METADATA = {
     'Status': 'draft',
 }
 
-USE_CDN = False
 SLUGIFY_SOURCE = 'basename'  # use the file name for slug
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
 CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
-
-# Make about page the front page
-INDEX_SAVE_AS = 'blog/index.html'
 
 # Blogroll
 LINKS = (
@@ -111,7 +106,9 @@ IMAGE_PROCESS = {
               'default': '1x',
               },
     'large-photo': {'type': 'responsive-image',
-                    'sizes': '(min-width: 1200px) 800px, (min-width: 992px) 650px, (min-width: 768px) 718px, 100vw',
+                    'sizes': ('(min-width: 1200px) 800px, '
+                              '(min-width: 992px) 650px, '
+                              '(min-width: 768px) 718px, 100vw'),
                     'srcset': [('600w', ["scale_in 600 450 True"]),
                                ('800w', ["scale_in 800 600 True"]),
                                ('1600w', ["scale_in 1600 1200 True"]),
@@ -120,7 +117,9 @@ IMAGE_PROCESS = {
                     },
 }
 
-# pure theme specific
+# my pure theme specific
+INTERNAL = False
+USE_LOCAL_ASSETS = True
 COVER_IMG_URL = '/images/winter_mountains_1600.jpeg'
 AUTHOR_EMAIL = 'me@svenkreiss.com'
 AUTHOR_IMAGE = '/images/me_nyc_square_500.jpeg'
@@ -128,6 +127,12 @@ TAGLINE = 'Data Scientist with a focus on Machine&nbsp;Learning and Computer&nbs
 META_DESCRIPTION = 'my personal website'
 # DISQUS_SITENAME = 'svenkreisscom'
 COPYRIGHT_YEARS = '2014 &ndash; 2018'
+COPYRIGHT_FOOTER = (
+    '<p>'
+    '&copy; ' + SITENAME + '  ' + COPYRIGHT_YEARS + '. Published with <a href="https://github.com/getpelican/pelican">Pelican</a>.<br />'
+    'This work is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.'
+    '</p>'
+)
 
 ARTICLE_URL = 'blog/{slug}/'
 ARTICLE_SAVE_AS = 'blog/{slug}/index.html'
@@ -137,6 +142,9 @@ CATEGORY_URL = 'blog/category/{slug}/'
 CATEGORY_SAVE_AS = 'blog/category/{slug}/index.html'
 TAG_URL = 'blog/tag/{slug}/'
 TAG_SAVE_AS = 'blog/tag/{slug}/index.html'
+# Make about page the front page
+INDEX_SAVE_AS = 'blog/index.html'
+ARTICLE_HOME_LINK = '/blog/'
 
 # do not make pages of the type {slug}/index.html as this clashed with
 # other github repositories with the same name as {slug}
