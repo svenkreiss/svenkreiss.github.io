@@ -401,7 +401,7 @@ ul.related-posts .summary {
     padding-left: 25%; /* "left col (nav + list)" width */
     position: relative;
 }
-@media (max-width: 767px), print {
+@media (max-width: 768px), print {
     .sidebar {
         width: 100%;
         position: relative;
@@ -417,6 +417,7 @@ ul.related-posts .summary {
     .content {
         padding: 1em 1.5em 0;
         font-size: 85%;
+        margin: 0 auto;
     }
 
     .cover-img {
