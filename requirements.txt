@@ -4,7 +4,8 @@ markdown
 ghp-import
 
 pelican-jsmath
-pelican-advance-embed-tweet
+#pelican-advance-embed-tweet
+git+https://github.com/fundor333/pelican-advance-embed-tweet.git  # install master to get html5 valid fix
 pybtex
 pillow
 typogrify
