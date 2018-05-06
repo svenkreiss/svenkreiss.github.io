@@ -361,6 +361,22 @@ img.float-right {
 blockquote {
     font-style: italic;
 }
+figure {
+    vertical-align: top;
+    margin: 0 auto 3em;
+    page-break-inside: avoid;
+
+	counter-increment: figures;
+}
+figcaption {
+    text-align: center;
+    font-size: 80%;
+    color: #888;
+    font-style: italic;
+}
+figcaption:before {
+	content: 'Fig. ' counter(figures) ': ';
+}
 
 ul.related-posts {
     list-style-type: none;
