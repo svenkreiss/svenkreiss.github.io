@@ -52,6 +52,7 @@ EXTRA_PATH_METADATA = {
     'extras/robots.txt': {'path': 'robots.txt'},
     'extras/favicon.ico': {'path': 'favicon.ico'},
     'extras/CNAME': {'path': 'CNAME'},
+    'extras/nojekyll': {'path': '.nojekyll'},
 }
 
 THEME = "../pelican-theme-pure"
