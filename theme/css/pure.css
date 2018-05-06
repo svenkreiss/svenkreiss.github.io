@@ -421,7 +421,7 @@ ul.related-posts .summary {
     }
 
     .cover-img {
-        background-position: 0;
+        background-position: 0 0;
         background-size: cover;
     }
 
