@@ -14,11 +14,11 @@ I am a postdoc at the [Visual Intelligence for Transportation (VITA)](https://vi
 lab at EPFL in Lausanne.
 Before moving to Switzerland, I was the Senior Data Scientist at
 [Sidewalk Labs](https://www.sidewalklabs.com) in New York City
-where I focused on Machine Learning for urban environments. My background is in Particle Physics
+where I focused on machine learning for urban environments. My background is in particle physics
 where I hold a PhD from NYU and where I worked with
 [Kyle Cranmer](http://theoryandpractice.org/) on physics and statistical
 analyses for ATLAS at CERN with a particular focus
-on the [Higgs Boson discovery](/projects.html#discovery).
+on the [Higgs boson discovery](/projects.html#discovery).
 
 Links:
 <span style="white-space: nowrap">[<i class="fa fa-github"></i>](https://github.com/svenkreiss/)</span>,
