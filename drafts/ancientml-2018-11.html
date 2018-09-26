@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Reading notes on ancient machine learning papers." name="description"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="@svenkreiss" name="twitter:site"/>
+<meta content="@svenkreiss" name="twitter:creator"/>
+<meta content="AncientML 2: Steps Toward Artificial Intelligence (Minsky, 1961)" name="twitter:title"/>
+<meta content="Reading notes on ancient machine learning papers." name="twitter:description"/>
+<meta content="https://www.svenkreiss.com/images/winter_mountains_1600.jpeg" name="twitter:image:src"/>
+<meta content="svenkreiss.com" name="twitter:domain"/>
+<meta content="AncientML 2: Steps Toward Artificial Intelligence (Minsky, 1961)" property="og:title"/>
+<meta content="article" property="og:type"/>
+<meta content="Reading notes on ancient machine learning papers." property="og:description"/>
+<meta content="https://www.svenkreiss.com/images/winter_mountains_1600.jpeg" property="og:image"/>
+<meta content="svenkreiss.com" property="og:site_name"/>
+<meta content="https://www.svenkreiss.com/drafts/ancientml-2018-11.html" property="og:url"/>
+<link href="https://www.svenkreiss.com/feeds/all.atom.xml" rel="alternate" title="Sven Kreiss Full Atom Feed" type="application/atom+xml"/>
+<title>AncientML 2: Steps Toward Artificial Intelligence (Minsky, 1961) - Sven Kreiss</title>
+<!-- KaTeX -->
+<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0-beta1/katex.min.css" integrity="sha384-VEnyslhHLHiYPca9KFkBB3CMeslnM9CzwjxsEbZTeA21JBm7tdLwKoZmCt3cZTYD" rel="stylesheet"/>
+<script crossorigin="anonymous" integrity="sha384-O4hpKqcplNCe+jLuBVEXC10Rn1QEqAmX98lKAIFBEDxZI0a+6Z2w2n8AEtQbR4CD" src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0-beta1/katex.min.js"></script>
+<script crossorigin="anonymous" integrity="sha384-IiI65aU9ZYub2MY9zhtKd1H2ps7xxf+eb2YFG9lX6uRqpXCvBTOidPRCXCrQ++Uc" src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0-beta1/contrib/auto-render.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="https://www.svenkreiss.com/theme/css/pure.css?v=0.1.0" rel="stylesheet"/>
+<link href="https://www.svenkreiss.com/theme/css/pygments.css" rel="stylesheet"/>
+<!-- for pelican_dynamic plugin -->
+<!-- end pelican_dynamic -->
+</head>
+<body>
+<div class="pure-g-r" id="layout">
+<div class="sidebar sidebar-article pure-u">
+<header class="header-article">
+<a href="https://www.svenkreiss.com/blog/author/sven-kreiss/" title="See posts by Sven Kreiss">
+<img alt="Sven Kreiss" class="avatar" src="https://www.gravatar.com/avatar/562a52f3ffcb6c2a3556f91ddc540776?s=140"/>
+</a>
+<h2 class="article-info">Sven Kreiss</h2>
+<h5>Draft</h5>
+<p class="article-date">November 01, 2018</p>
+<a class="header-article-home" href="/blog/">←Articles</a>
+</header>
+</div>
+<div class="pure-u">
+<div class="content">
+<section class="post">
+<header class="post-header">
+<h1>AncientML 2: Steps Toward Artificial Intelligence (Minsky, 1961)</h1>
+</header>
+</section>
+<p>Previously: <a href="ancientml-2018-03.md">The Mathematical Theory of Communication (Shannon, 1951)</a></p>
+<h2>Steps Toward Artificial Intelligence (Minsky, 1961), <a href=""><span class="caps">PDF</span>!!!</a></h2>
+<h2>Backlog</h2>
+<ul>
+<li>Multidimensional binary search trees used for associative searching,
+  <a href="#bentley1975multidimensional" id="ref-bentley1975multidimensional-1">(Bentley, 1975)</a>,
+  <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.160.335&amp;rep=rep1&amp;type=pdf"><span class="caps">PDF</span></a></li>
+<li><span class="caps">RBM</span> predecessor Harmonium: Information processing in dynamical systems: Foundations of harmony theory,
+  <a href="#smolensky1986information" id="ref-smolensky1986information-1">(Smolensky, 1986)</a>, <a href="http://stanford.edu/~jlmcc/papers/PDP/Volume%201/Chap6_PDP86.pdf"><span class="caps">PDF</span></a></li>
+<li>Reducing the Dimensionality of Data,
+  <a href="#hinton2006reducing" id="ref-hinton2006reducing-1">(Hinton and Salakhutdinov, 2006)</a>, <a href="http://www.cs.toronto.edu/~hinton/science.pdf"><span class="caps">PDF</span></a></li>
+<li>Online Convex Programming and Generalized Infinitesimal Gradient Ascent
+  <a href="#zinkevich2003online" id="ref-zinkevich2003online-1">(Zinkevich, 2003)</a>, <a href="http://www.aaai.org/Papers/ICML/2003/ICML03-120.pdf"><span class="caps">PDF</span></a></li>
+<li>Supervised Sequence Labelling with Recurrent Neural Networks
+  <a href="#graves2012supervised" id="ref-graves2012supervised-1">(Graves, 2012)</a>, <a href="https://www.cs.toronto.edu/~graves/preprint.pdf"><span class="caps">PDF</span></a></li>
+</ul>
+<p>Similar resources: <a href="https://twitter.com/shakir_za">@shakir_za</a> tweets a series called “Sunday Classic Paper”.</p><script charset="utf-8" src="//platform.twitter.com/widgets.js"></script><hr/>
+<h2>Bibliography</h2>
+<p id="bentley1975multidimensional">Jon Louis Bentley.
+Multidimensional binary search trees used for associative searching.
+<em>Communications of the ACM</em>, 18(9):509–517, 1975. <a class="cite-backref" href="#ref-bentley1975multidimensional-1" title="Jump back to reference 1">↩</a></p>
+<p id="graves2012supervised">Alex Graves.
+Supervised sequence labelling.
+In <em>Supervised sequence labelling with recurrent neural networks</em>, pages 5–13.
+Springer, 2012. <a class="cite-backref" href="#ref-graves2012supervised-1" title="Jump back to reference 1">↩</a></p>
+<p id="hinton2006reducing">Geoffrey E Hinton and Ruslan R Salakhutdinov.
+Reducing the dimensionality of data with neural networks.
+<em>Science</em>, 313(5786):504–507, 2006. <a class="cite-backref" href="#ref-hinton2006reducing-1" title="Jump back to reference 1">↩</a></p>
+<p id="smolensky1986information">Paul Smolensky.
+Information processing in dynamical systems: foundations of harmony theory.
+Technical Report, Colorado University at Boulder Dept of Computer Science, 1986. <a class="cite-backref" href="#ref-smolensky1986information-1" title="Jump back to reference 1">↩</a></p>
+<p id="zinkevich2003online">Martin Zinkevich.
+Online convex programming and generalized infinitesimal gradient ascent.
+In <em>Proceedings of the 20th International Conference on Machine Learning (ICML-03)</em>, 928–936. 2003. <a class="cite-backref" href="#ref-zinkevich2003online-1" title="Jump back to reference 1">↩</a></p>
+<p class="post-footer">
+                // filed
+under                    <a class="post-category" href="https://www.svenkreiss.com/blog/tag/ancientml/">ancientml</a>
+                in <a class="post-category" href="https://www.svenkreiss.com/blog/category/ml/">ML</a>   
+
+                <span style="display:inline-block;">
+                // share on <a href="https://twitter.com/share?text=%22AncientML%202%3A%20Steps%20Toward%20Artificial%20Intelligence%20%28Minsky%2C%C2%A01961%29%3A%20Reading%20notes%20on%20ancient%20machine%20learning%C2%A0papers.%22&amp;hashtags=ancientml" target="_blank">
+<i class="fa fa-twitter fa-lg"></i> Twitter
+                </a>
+</span>
+</p>
+<div class="hr"></div>
+<h2>Related Posts</h2>
+<ul class="related-posts">
+<li>
+<a class="title" href="https://www.svenkreiss.com/blog/ancientml-2018-03/">AncientML 1</a>
+<span class="date">from March 05, 2018</span>
+<span class="summary">AncientML is a series of paper reading notes. This first edition covers the first mention of AI and the Mathematical Theory of Communication.</span>
+</li>
+</ul>
+<a class="go-top" href="#">Go Top</a>
+<footer class="footer">
+<p>© Sven Kreiss  2014 – 2018. Published with <a href="https://github.com/getpelican/pelican">Pelican</a>.<br/>This work is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" rel="license">Creative Commons Attribution 4.0 International License</a>.</p>
+</footer> </div>
+</div>
+</div>
+<script>
+        renderMathInElement(document.body);
+    </script>
+<!-- for pelican_dynamic plugin -->
+</body>
+</html>
