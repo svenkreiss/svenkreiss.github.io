@@ -54,7 +54,8 @@
 member of a Machine Learning lab — are not necessarily expected to be a computer scientist
 or software engineer, but the tools must be familiar.
 Expert-level familiar. You will use these tools most of the day.
-You should not be clumsy with or afraid of these tools.</p>
+You should not be clumsy with or afraid of these tools.
+Below is an ambitious list, so don’t worry if you are not familiar with most of it yet.</p>
 <p><strong>Core:</strong>
 The best way to get started and a great resource for advanced
 users is
@@ -64,18 +65,19 @@ Here are my notes more specific to <span class="caps">ML</span>.</p>
 <li>always use Python3 now, not Python2</li>
 <li>read Python code of great projects outside of <span class="caps">ML</span> (almost no <span class="caps">ML</span> projects are written well, see closing remarks):
   start with <a href="https://github.com/requests/requests"><code>requests</code></a></li>
-<li><a href="http://www.numpy.org/"><code>numpy</code></a>,
+<li>study
+  <a href="http://www.numpy.org/"><code>numpy</code></a>,
   <a href="https://scipy.org/getting-started.html"><code>scipy</code></a>,
   <a href="https://scikit-learn.org/stable/"><code>scikit-learn</code></a>
   and depending on your focus <a href="https://cython.org/"><code>cython</code></a></li>
-<li>Python core and standard library (always available without dependencies, so use them):<ul>
+<li>Python core and standard libraries (always available, so use them):<ul>
 <li><a href="https://docs.python.org/3/tutorial/classes.html">classes</a>, when your function becomes too long it might want to be a class</li>
 <li><a href="https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions">list comprehensions</a></li>
 <li><a href="https://docs.python.org/3/tutorial/datastructures.html#sets">sets</a>
   (avoid testing whether an element is in a list, test whether it is in a set)</li>
 <li><a href="https://docs.python.org/3/library/logging.html#module-logging">logging</a></li>
 <li><a href="https://docs.python.org/3/library/collections.html#collections.defaultdict"><code>defaultdict</code></a>
-  (for sparse accumulators)</li>
+  for sparse accumulators</li>
 <li>generators and <code>yield</code>, see <a href="https://docs.python.org/3/howto/functional.html">functional programming howto</a></li>
 <li>all <a href="https://docs.python.org/3/library/itertools.html"><code>itertools</code></a>
   (e.g. <a href="https://docs.python.org/3/library/itertools.html#itertools.chain.from_iterable"><code>itertools.chain.from_iterable</code></a>)</li>
@@ -94,20 +96,20 @@ but much progress has been made over recent years.
 When you  search for help related
 to packaging, filter for results within the last year.</p>
 <ul>
-<li><code>pip</code> (I have never used <code>conda</code>)</li>
+<li><code>pip</code>, I have never used <code>conda</code></li>
 <li>relative imports, see <a href="https://docs.python.org/3/tutorial/modules.html">tutorial section on Modules</a></li>
 <li><code>setup.py</code>, see <a href="https://setuptools.readthedocs.io/en/latest/setuptools.html#basic-use"><code>setuptools</code> basic use</a></li>
-<li><a href="https://docs.python.org/3/tutorial/venv.html">venv</a>, I never do anything outside a venv</li>
-<li>notebooks: <a href="https://github.com/jupyter/notebook">Jupyter</a>
-  (I only use them for demos and log books. <em>Never</em> to code.)</li>
+<li><a href="https://docs.python.org/3/tutorial/venv.html"><code>venv</code></a>, I never do anything outside a virtual environment</li>
+<li>notebooks: <a href="https://github.com/jupyter/notebook">Jupyter</a>,
+  I only use them for demos and log books. <em>Never</em> to code.</li>
 </ul>
-<p><strong>Style / Unit Test / Continuous Testing:</strong>
+<p><strong>Style / Unit Tests / Continuous Testing:</strong>
 Standard practices for software engineers are useful for <span class="caps">ML</span> projects, too. They help.
 Beyond testing code, unit tests in combination with continuous integration give
 a robust and reproducible starting point for anyone picking up your project
 (including yourself in one year).</p>
 <ul>
-<li><a href="https://www.python.org/dev/peps/pep-0008/"><span class="caps">PEP8</span></a> is the <em>Style Guide for Python</em> and explains itself. Don’t skip <a href="https://www.python.org/dev/peps/pep-0008/#a-foolish-consistency-is-the-hobgoblin-of-little-minds"><em>A Foolish Consistency is the Hobgoblin of Little Minds</em></a>. Still, I follow almost all of <span class="caps">PEP8</span> to the letter.</li>
+<li><a href="https://www.python.org/dev/peps/pep-0008/"><span class="caps">PEP8</span></a> is the <em>Style Guide for Python</em> and contains explanations. Don’t skip <a href="https://www.python.org/dev/peps/pep-0008/#a-foolish-consistency-is-the-hobgoblin-of-little-minds"><em>A Foolish Consistency is the Hobgoblin of Little Minds</em></a>. Still, I follow almost all of <span class="caps">PEP8</span> to the letter.</li>
 <li><a href="https://www.pylint.org/"><code>pylint</code></a> generally provides good advice beyond checking for <span class="caps">PEP8</span></li>
 <li><a href="https://docs.pytest.org/en/latest/"><code>pytest</code></a></li>
 <li><a href="https://circleci.com/">CircleCI</a></li>
@@ -126,7 +128,8 @@ your laptop: containers, distributed storage, build systems, custom <span class=
 mono repositories. A small piece in the middle of the stack is open source and
 has been duct-taped to make it work without the rest of the infrastructure.
 Don’t follow blindly what seems like a standard practice of the best software
-engineers in the world.</p>
+engineers in the world. It might be an artifact of porting it to the
+open source world.</p>
 <p>Feedback is welcome on Twitter <a href="https://twitter.com/svenkreiss">@svenkreiss</a>.</p><script charset="utf-8" src="//platform.twitter.com/widgets.js"></script>
 <p class="post-footer">
                 // filed
