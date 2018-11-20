@@ -4,22 +4,22 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta content="Extend liquid tags plugin for Pelican to include a Vimeo tag." name="description"/>
+<meta content="List of useful Python resources for starting in a machine learning lab." name="description"/>
 <meta content="summary" name="twitter:card"/>
 <meta content="@svenkreiss" name="twitter:site"/>
 <meta content="@svenkreiss" name="twitter:creator"/>
-<meta content="Vimeo liquid tag for Pelican" name="twitter:title"/>
-<meta content="Extend liquid tags plugin for Pelican to include a Vimeo tag." name="twitter:description"/>
+<meta content="Python at a Machine Learning Lab" name="twitter:title"/>
+<meta content="List of useful Python resources for starting in a machine learning lab." name="twitter:description"/>
 <meta content="https://www.svenkreiss.com/images/winter_mountains_1600.jpeg" name="twitter:image:src"/>
 <meta content="svenkreiss.com" name="twitter:domain"/>
-<meta content="Vimeo liquid tag for Pelican" property="og:title"/>
+<meta content="Python at a Machine Learning Lab" property="og:title"/>
 <meta content="article" property="og:type"/>
-<meta content="Extend liquid tags plugin for Pelican to include a Vimeo tag." property="og:description"/>
+<meta content="List of useful Python resources for starting in a machine learning lab." property="og:description"/>
 <meta content="https://www.svenkreiss.com/images/winter_mountains_1600.jpeg" property="og:image"/>
 <meta content="svenkreiss.com" property="og:site_name"/>
-<meta content="https://www.svenkreiss.com/blog/pelican-vimeo/" property="og:url"/>
+<meta content="https://www.svenkreiss.com/drafts/lab-python.html" property="og:url"/>
 <link href="https://www.svenkreiss.com/feeds/all.atom.xml" rel="alternate" title="Sven Kreiss Full Atom Feed" type="application/atom+xml"/>
-<title>Vimeo liquid tag for Pelican - Sven Kreiss</title>
+<title>Python at a Machine Learning Lab - Sven Kreiss</title>
 <!-- KaTeX -->
 <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0-beta1/katex.min.css" integrity="sha384-VEnyslhHLHiYPca9KFkBB3CMeslnM9CzwjxsEbZTeA21JBm7tdLwKoZmCt3cZTYD" rel="stylesheet"/>
 <script crossorigin="anonymous" integrity="sha384-O4hpKqcplNCe+jLuBVEXC10Rn1QEqAmX98lKAIFBEDxZI0a+6Z2w2n8AEtQbR4CD" src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0-beta1/katex.min.js"></script>
@@ -38,7 +38,8 @@
 <img alt="Sven Kreiss" class="avatar" src="https://www.gravatar.com/avatar/562a52f3ffcb6c2a3556f91ddc540776?s=140"/>
 </a>
 <h2 class="article-info">Sven Kreiss</h2>
-<p class="article-date">March 07, 2014</p>
+<h5>Draft</h5>
+<p class="article-date">November 24, 2018</p>
 <a class="header-article-home" href="/blog/">←Articles</a>
 </header>
 </div>
@@ -46,38 +47,61 @@
 <div class="content">
 <section class="post">
 <header class="post-header">
-<h1>Vimeo liquid tag for Pelican</h1>
+<h1>Python at a Machine Learning Lab</h1>
 </header>
 </section>
-<p>Testing my implementation of the <code>vimeo</code> tag for <code>liquid_tags</code>. This is based on the <code>youtube</code> tag which in turn is based on the <a href="https://gist.github.com/jamieowen/2063748">jekyll / octopress youtube tag</a>.</p>
-<p>The syntax is the same as for the <code>youtube</code> tag:</p>
-<div class="highlight"><pre>
-{% vimeo id [width height] %}
-</pre></div>
-<p><em>Update</em>: The code is now merged into the main pelican-plugins repository on github:
-<a href="https://github.com/getpelican/pelican-plugins">https://github.com/getpelican/pelican-plugins</a></p>
-<h2>Tests with different sizes</h2>
-<p><span class="videobox">
-<iframe allowfullscreen="" frameborder="0" height="180" mozallowfullscreen="" src="//player.vimeo.com/video/21789576?title=0&amp;byline=0&amp;portrait=0" webkitallowfullscreen="" width="320">
-</iframe>
-</span></p>
-<p><span class="videobox">
-<iframe allowfullscreen="" frameborder="0" height="270" mozallowfullscreen="" src="//player.vimeo.com/video/21789576?title=0&amp;byline=0&amp;portrait=0" webkitallowfullscreen="" width="480">
-</iframe>
-</span></p>
-<p><span class="videobox">
-<iframe allowfullscreen="" frameborder="0" height="360" mozallowfullscreen="" src="//player.vimeo.com/video/21789576?title=0&amp;byline=0&amp;portrait=0" webkitallowfullscreen="" width="640">
-</iframe>
-</span></p><script charset="utf-8" src="//platform.twitter.com/widgets.js"></script>
+<p>Good software engineering practices are important to me. You — a current or future
+member of a Machine Learning lab — are not necessarily expected to be a computer scientist
+or software engineer, but the tools must be familiar.
+Expert-level familiar. You will use these tools most of the day.
+You should not be clumsy with or afraid of these tools.</p>
+<h2>Resources</h2>
+<ul>
+<li>always use Python3 now</li>
+<li>read Python code of great projects outside of <span class="caps">ML</span> (almost no <span class="caps">ML</span> projects are written well):
+  start with <a href="https://github.com/requests/requests"><code>requests</code></a></li>
+<li><code>numpy</code>, <code>scipy</code>, <code>cython</code>, <code>scikit-learn</code></li>
+<li>core Python tools:
+  sets,
+  list comprehensions,
+  context managers,
+  <code>yield</code>,
+  <code>defaultdict</code>,
+  <a href="https://docs.python.org/3/library/itertools.html"><code>itertools</code></a>
+  (e.g. <a href="https://docs.python.org/3/library/itertools.html#itertools.chain.from_iterable"><code>itertools.chain.from_iterable</code></a>),
+  <a href="https://docs.python.org/3/library/functools.html#functools.lru_cache"><code>functools.lru_cache</code></a></li>
+</ul>
+<h2>Packaging</h2>
+<ul>
+<li><code>setup.py</code> vs <code>requirements.txt</code></li>
+<li>relative imports</li>
+<li>venv</li>
+<li>notebooks: Jupyter</li>
+</ul>
+<h2>Style / Unit Test / Continuous Testing</h2>
+<ul>
+<li><code>pylint</code>, <span class="caps">PEP8</span></li>
+<li><code>pytest</code></li>
+<li>CircleCI</li>
+<li>TravisCI</li>
+</ul>
+<h2>Red Flags</h2>
+<ul>
+<li>never change the <code>PATH</code> or <code>PYTHONPATH</code> variable</li>
+</ul>
+<p>Infrastructures at large companies are different: Blaze/Bazel, distributed builds,
+mono repositories. A small piece in the middle of the stack is open source and
+has been duct-taped to make it work without the rest of the infrastructure.
+Don’t follow blindly what seems like a standard practice from the outside.</p>
+<p>Feedback is welcome on Twitter <a href="https://twitter.com/svenkreiss">@svenkreiss</a>.</p><script charset="utf-8" src="//platform.twitter.com/widgets.js"></script>
 <p class="post-footer">
                 // filed
-under                    <a class="post-category" href="https://www.svenkreiss.com/blog/tag/web/">web</a>
-<a class="post-category" href="https://www.svenkreiss.com/blog/tag/python/">Python</a>
-<a class="post-category" href="https://www.svenkreiss.com/blog/tag/pelican/">Pelican</a>
-                in <a class="post-category" href="https://www.svenkreiss.com/blog/category/tech/">Tech</a>   
+under                    <a class="post-category" href="https://www.svenkreiss.com/blog/tag/python/">Python</a>
+<a class="post-category" href="https://www.svenkreiss.com/blog/tag/machine-learning/">Machine Learning</a>
+                in <a class="post-category" href="https://www.svenkreiss.com/blog/category/science/">Science</a>   
 
                 <span style="display:inline-block;">
-                // share on <a href="https://twitter.com/share?text=%22Vimeo%20liquid%20tag%20for%C2%A0Pelican%3A%20Extend%20liquid%20tags%20plugin%20for%20Pelican%20to%20include%20a%20Vimeo%C2%A0tag.%22&amp;hashtags=web%2CPython%2CPelican" target="_blank">
+                // share on <a href="https://twitter.com/share?text=%22Python%20at%20a%20Machine%20Learning%C2%A0Lab%3A%20List%20of%20useful%20Python%20resources%20for%20starting%20in%20a%20machine%20learning%C2%A0lab.%22&amp;hashtags=Python%2CMachineLearning" target="_blank">
 <i class="fa fa-twitter fa-lg"></i> Twitter
                 </a>
 </span>
