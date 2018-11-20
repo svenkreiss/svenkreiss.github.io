@@ -8,18 +8,18 @@
 <meta content="summary" name="twitter:card"/>
 <meta content="@svenkreiss" name="twitter:site"/>
 <meta content="@svenkreiss" name="twitter:creator"/>
-<meta content="Python at a Machine Learning Lab" name="twitter:title"/>
+<meta content="Python at a University Lab" name="twitter:title"/>
 <meta content="List of useful Python resources for starting in a machine learning lab." name="twitter:description"/>
 <meta content="https://www.svenkreiss.com/images/winter_mountains_1600.jpeg" name="twitter:image:src"/>
 <meta content="svenkreiss.com" name="twitter:domain"/>
-<meta content="Python at a Machine Learning Lab" property="og:title"/>
+<meta content="Python at a University Lab" property="og:title"/>
 <meta content="article" property="og:type"/>
 <meta content="List of useful Python resources for starting in a machine learning lab." property="og:description"/>
 <meta content="https://www.svenkreiss.com/images/winter_mountains_1600.jpeg" property="og:image"/>
 <meta content="svenkreiss.com" property="og:site_name"/>
 <meta content="https://www.svenkreiss.com/drafts/lab-python.html" property="og:url"/>
 <link href="https://www.svenkreiss.com/feeds/all.atom.xml" rel="alternate" title="Sven Kreiss Full Atom Feed" type="application/atom+xml"/>
-<title>Python at a Machine Learning Lab - Sven Kreiss</title>
+<title>Python at a University Lab - Sven Kreiss</title>
 <!-- KaTeX -->
 <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0-beta1/katex.min.css" integrity="sha384-VEnyslhHLHiYPca9KFkBB3CMeslnM9CzwjxsEbZTeA21JBm7tdLwKoZmCt3cZTYD" rel="stylesheet"/>
 <script crossorigin="anonymous" integrity="sha384-O4hpKqcplNCe+jLuBVEXC10Rn1QEqAmX98lKAIFBEDxZI0a+6Z2w2n8AEtQbR4CD" src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0-beta1/katex.min.js"></script>
@@ -47,7 +47,7 @@
 <div class="content">
 <section class="post">
 <header class="post-header">
-<h1>Python at a Machine Learning Lab</h1>
+<h1>Python at a University Lab</h1>
 </header>
 </section>
 <p>Good software engineering practices are important to me. You — a current or future
@@ -55,44 +55,63 @@ member of a Machine Learning lab — are not necessarily expected to be a comput
 or software engineer, but the tools must be familiar.
 Expert-level familiar. You will use these tools most of the day.
 You should not be clumsy with or afraid of these tools.</p>
-<h2>Resources</h2>
+<p><strong>Resources:</strong>
+The best way to get started and a great resource for more advanced
+users is
+the <a href="https://docs.python.org/3/tutorial/index.html">tutorial on the official Python webpage</a>.
+Here are my notes more specific to <span class="caps">ML</span>.</p>
 <ul>
-<li>always use Python3 now</li>
+<li>always use Python3 now, not Python2</li>
 <li>read Python code of great projects outside of <span class="caps">ML</span> (almost no <span class="caps">ML</span> projects are written well):
   start with <a href="https://github.com/requests/requests"><code>requests</code></a></li>
-<li><code>numpy</code>, <code>scipy</code>, <code>cython</code>, <code>scikit-learn</code></li>
-<li>core Python tools:
-  sets,
-  list comprehensions,
-  context managers,
-  <code>yield</code>,
-  <code>defaultdict</code>,
-  <a href="https://docs.python.org/3/library/itertools.html"><code>itertools</code></a>
-  (e.g. <a href="https://docs.python.org/3/library/itertools.html#itertools.chain.from_iterable"><code>itertools.chain.from_iterable</code></a>),
-  <a href="https://docs.python.org/3/library/functools.html#functools.lru_cache"><code>functools.lru_cache</code></a></li>
+<li><code>numpy</code>, <code>scipy</code>, <code>scikit-learn</code> and depending on your focus <code>cython</code></li>
+<li>Python core and standard library (always available without dependencies):<ul>
+<li>classes</li>
+<li>list comprehensions</li>
+<li>sets (avoid testing whether an element is in a list, test whether it is in a set)</li>
+<li><code>yield</code></li>
+<li><code>defaultdict</code> (for sparse accumulators)</li>
+<li><a href="https://docs.python.org/3/library/itertools.html"><code>itertools</code></a>
+  (e.g. <a href="https://docs.python.org/3/library/itertools.html#itertools.chain.from_iterable"><code>itertools.chain.from_iterable</code></a>)</li>
+<li><a href="https://docs.python.org/3/library/functools.html#functools.lru_cache"><code>functools.lru_cache</code></a></li>
+<li>more advanced but useful: decorators, context managers</li>
 </ul>
-<h2>Packaging</h2>
+</li>
+</ul>
+<p><strong>Packaging:</strong>
+As soon as you need to re-use code in a second file, you will want to import
+one of your own files. You should use relative imports and to use those
+properly you need to package your code.</p>
 <ul>
-<li><code>setup.py</code> vs <code>requirements.txt</code></li>
-<li>relative imports</li>
+<li><code>setup.py</code>, <code>pip</code> (I have never used <code>conda</code>)</li>
+<li>relative imports, see <a href="https://docs.python.org/3/tutorial/modules.html">tutorial section on Modules</a></li>
 <li>venv</li>
-<li>notebooks: Jupyter</li>
+<li>notebooks: Jupyter (I only use them for demos / log books. Never to code.)</li>
 </ul>
-<h2>Style / Unit Test / Continuous Testing</h2>
+<p><strong>Style / Unit Test / Continuous Testing:</strong>
+Standard practices for software engineers are useful for <span class="caps">ML</span> projects, too. They help.
+Beyond testing code, unit tests in combination with continuous integration give
+a robust and reproducible starting point for anyone picking up your project
+(including yourself in one year).</p>
 <ul>
 <li><code>pylint</code>, <span class="caps">PEP8</span></li>
 <li><code>pytest</code></li>
 <li>CircleCI</li>
 <li>TravisCI</li>
 </ul>
-<h2>Red Flags</h2>
+<p><strong>Red Flags:</strong>
+When browsing open source code, this is when I get worried.</p>
 <ul>
-<li>never change the <code>PATH</code> or <code>PYTHONPATH</code> variable</li>
+<li>no eval metrics/scripts for that implementation</li>
+<li>have to change the <code>PATH</code> or <code>PYTHONPATH</code> variables</li>
+<li>have to copy/symlink folders</li>
 </ul>
-<p>Infrastructures at large companies are different: Blaze/Bazel, distributed builds,
+<p>Infrastructures at large companies are different from a university lab and
+your laptop: containers, distributed storage, build systems, custom <span class="caps">DNS</span>,
 mono repositories. A small piece in the middle of the stack is open source and
 has been duct-taped to make it work without the rest of the infrastructure.
-Don’t follow blindly what seems like a standard practice from the outside.</p>
+Don’t follow blindly what seems like a standard practice of the best software
+engineers in the world.</p>
 <p>Feedback is welcome on Twitter <a href="https://twitter.com/svenkreiss">@svenkreiss</a>.</p><script charset="utf-8" src="//platform.twitter.com/widgets.js"></script>
 <p class="post-footer">
                 // filed
@@ -101,7 +120,7 @@ under                    <a class="post-category" href="https://www.svenkreiss.c
                 in <a class="post-category" href="https://www.svenkreiss.com/blog/category/science/">Science</a>   
 
                 <span style="display:inline-block;">
-                // share on <a href="https://twitter.com/share?text=%22Python%20at%20a%20Machine%20Learning%C2%A0Lab%3A%20List%20of%20useful%20Python%20resources%20for%20starting%20in%20a%20machine%20learning%C2%A0lab.%22&amp;hashtags=Python%2CMachineLearning" target="_blank">
+                // share on <a href="https://twitter.com/share?text=%22Python%20at%20a%20University%C2%A0Lab%3A%20List%20of%20useful%20Python%20resources%20for%20starting%20in%20a%20machine%20learning%C2%A0lab.%22&amp;hashtags=Python%2CMachineLearning" target="_blank">
 <i class="fa fa-twitter fa-lg"></i> Twitter
                 </a>
 </span>
