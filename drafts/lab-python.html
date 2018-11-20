@@ -56,13 +56,13 @@ or software engineer, but the tools must be familiar.
 Expert-level familiar. You will use these tools most of the day.
 You should not be clumsy with or afraid of these tools.</p>
 <p><strong>Core:</strong>
-The best way to get started and a great resource for more advanced
+The best way to get started and a great resource for advanced
 users is
 the <a href="https://docs.python.org/3/tutorial/index.html">tutorial on the official Python webpage</a>.
 Here are my notes more specific to <span class="caps">ML</span>.</p>
 <ul>
 <li>always use Python3 now, not Python2</li>
-<li>read Python code of great projects outside of <span class="caps">ML</span> (almost no <span class="caps">ML</span> projects are written well):
+<li>read Python code of great projects outside of <span class="caps">ML</span> (almost no <span class="caps">ML</span> projects are written well, see closing remarks):
   start with <a href="https://github.com/requests/requests"><code>requests</code></a></li>
 <li><a href="http://www.numpy.org/"><code>numpy</code></a>,
   <a href="https://scipy.org/getting-started.html"><code>scipy</code></a>,
@@ -99,7 +99,7 @@ to packaging, filter for results within the last year.</p>
 <li><code>setup.py</code>, see <a href="https://setuptools.readthedocs.io/en/latest/setuptools.html#basic-use"><code>setuptools</code> basic use</a></li>
 <li><a href="https://docs.python.org/3/tutorial/venv.html">venv</a>, I never do anything outside a venv</li>
 <li>notebooks: <a href="https://github.com/jupyter/notebook">Jupyter</a>
-  (I only use them for demos and log books. Never to code.)</li>
+  (I only use them for demos and log books. <em>Never</em> to code.)</li>
 </ul>
 <p><strong>Style / Unit Test / Continuous Testing:</strong>
 Standard practices for software engineers are useful for <span class="caps">ML</span> projects, too. They help.
@@ -120,7 +120,8 @@ When browsing open source code, this is when I get worried.</p>
 <li>have to change the <code>PATH</code> or <code>PYTHONPATH</code> variables</li>
 <li>have to copy or symlink folders</li>
 </ul>
-<p>Infrastructures at large companies are different from a university lab and
+<p><strong>Closing:</strong>
+Infrastructures at large companies are different from a university lab and
 your laptop: containers, distributed storage, build systems, custom <span class="caps">DNS</span>,
 mono repositories. A small piece in the middle of the stack is open source and
 has been duct-taped to make it work without the rest of the infrastructure.
