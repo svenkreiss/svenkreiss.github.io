@@ -27,7 +27,7 @@ DELETE_OUTPUT_DIRECTORY = True
 # Following items are often useful when publishing
 
 #DISQUS_SITENAME = ""
-#GOOGLE_ANALYTICS = "UA-4070485-2"
-#GOOGLE_ANALYTICS_URL = "www.svenkreiss.com"
+GOOGLE_ANALYTICS = "UA-4070485-2"
+GOOGLE_ANALYTICS_URL = "www.svenkreiss.com"
 
 #GAUGES_ANALYTICS = "54735740eddd5b086f007b96"

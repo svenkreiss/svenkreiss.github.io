@@ -3,12 +3,13 @@ Date: 2016-04-03 08:54
 Slug: about
 url: /
 save_as: index.html
+hide_copyright: true
 Summary: Sven Kreiss is a Data Scientist in New York City.
 Status: published
 
 
 <!-- {% img img-thumbnail float-right http://www.gravatar.com/avatar/1838de72eb5ce4b000c41c06dedb52c4.png?s=180 %} -->
-{% img img-thumbnail float-right /images/me_nyc_square_500.jpeg 250 Sven Kreiss in front of Freedom Tower. %}
+{% img img-thumbnail float-right /images/me_nyc_square_500.jpeg 250 me %}
 
 I am a postdoc at the [Visual Intelligence for Transportation (VITA)](https://vita.epfl.ch/)
 lab at EPFL in Lausanne.
