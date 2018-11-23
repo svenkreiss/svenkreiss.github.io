@@ -26,10 +26,11 @@ Here are my notes more specific to ML.
 * read Python code of great projects outside of ML (almost no ML projects are written well, see closing remarks):
   start with [`requests`](https://github.com/requests/requests)
 * Python core and standard libraries (always available, so use them):
-    * [classes](https://docs.python.org/3/tutorial/classes.html), when your function becomes too long it might want to be a class
     * [list comprehensions](https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions)
-    * [sets](https://docs.python.org/3/tutorial/datastructures.html#sets)
-      (avoid testing whether an element is in a list, test whether it is in a set)
+    * [classes](https://docs.python.org/3/tutorial/classes.html):
+      when your function becomes too long it might want to be a class
+    * [sets](https://docs.python.org/3/tutorial/datastructures.html#sets):
+      avoid testing whether an element is in a list, test whether it is in a set
     * [argparse](https://docs.python.org/3/library/argparse.html), use a standard library to parse command line arguments
     * [logging](https://docs.python.org/3/library/logging.html#module-logging)
     * [`defaultdict`](https://docs.python.org/3/library/collections.html#collections.defaultdict)
@@ -61,6 +62,7 @@ to packaging, filter for results within the last year.
 * [`venv`](https://docs.python.org/3/tutorial/venv.html): I never do anything outside a virtual environment
 * [Jupyter notebooks](https://github.com/jupyter/notebook):
   Great for demos and log books. _Never_ to code.
+* [mybinder.org](https://mybinder.org/) to make your Jupyter demos interactive
 
 __Style / Unit Tests / Continuous Testing:__
 Standard practices for software engineers are useful for ML projects, too. They help.
