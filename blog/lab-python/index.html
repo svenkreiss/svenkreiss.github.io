@@ -4,20 +4,20 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta content="List of useful Python resources for starting in a machine learning lab." name="description"/>
+<meta content="List of useful Python resources for starting in a university machine learning lab." name="description"/>
 <meta content="summary" name="twitter:card"/>
 <meta content="@svenkreiss" name="twitter:site"/>
 <meta content="@svenkreiss" name="twitter:creator"/>
 <meta content="Python at a University Lab" name="twitter:title"/>
-<meta content="List of useful Python resources for starting in a machine learning lab." name="twitter:description"/>
+<meta content="List of useful Python resources for starting in a university machine learning lab." name="twitter:description"/>
 <meta content="https://www.svenkreiss.com/images/winter_mountains_1600.jpeg" name="twitter:image:src"/>
 <meta content="svenkreiss.com" name="twitter:domain"/>
 <meta content="Python at a University Lab" property="og:title"/>
 <meta content="article" property="og:type"/>
-<meta content="List of useful Python resources for starting in a machine learning lab." property="og:description"/>
+<meta content="List of useful Python resources for starting in a university machine learning lab." property="og:description"/>
 <meta content="https://www.svenkreiss.com/images/winter_mountains_1600.jpeg" property="og:image"/>
 <meta content="svenkreiss.com" property="og:site_name"/>
-<meta content="https://www.svenkreiss.com/drafts/lab-python.html" property="og:url"/>
+<meta content="https://www.svenkreiss.com/blog/lab-python/" property="og:url"/>
 <link href="https://www.svenkreiss.com/feeds/all.atom.xml" rel="alternate" title="Sven Kreiss Full Atom Feed" type="application/atom+xml"/>
 <title>Python at a University Lab - Sven Kreiss</title>
 <!-- KaTeX -->
@@ -38,8 +38,7 @@
 <img alt="Sven Kreiss" class="avatar" src="https://www.gravatar.com/avatar/562a52f3ffcb6c2a3556f91ddc540776?s=140"/>
 </a>
 <h2 class="article-info">Sven Kreiss</h2>
-<h5>Draft</h5>
-<p class="article-date">November 24, 2018</p>
+<p class="article-date">November 23, 2018</p>
 <a class="header-article-home" href="/blog/">←Articles</a>
 </header>
 </div>
@@ -50,26 +49,22 @@
 <h1>Python at a University Lab</h1>
 </header>
 </section>
-<p>Good software engineering practices are important to me. You — a current or future
+<p><em>I am a post-doc at <a href="https://vita.epfl.ch/"><span class="caps">VITA</span> lab at <span class="caps">EPFL</span> university</a>.</em></p>
+<p>Good software engineering practices are important to me. They are foundational
+for open and reproducible science. You — a current or future
 member of a Machine Learning lab — are not necessarily expected to be a computer scientist
 or software engineer, but the tools must be familiar.
 Expert-level familiar. You will use these tools most of the day.
 You should not be clumsy with or afraid of these tools.
 Below is an ambitious list, so don’t worry if you are not familiar with most of it yet.</p>
-<p><strong>Core:</strong>
-The best way to get started and a great resource for advanced
-users is
+<p><strong>Python Core:</strong>
+The best way to get started and a great resource for advanced users is
 the <a href="https://docs.python.org/3/tutorial/index.html">tutorial on the official Python webpage</a>.
 Here are my notes more specific to <span class="caps">ML</span>.</p>
 <ul>
 <li>always use Python3 now, not Python2</li>
 <li>read Python code of great projects outside of <span class="caps">ML</span> (almost no <span class="caps">ML</span> projects are written well, see closing remarks):
   start with <a href="https://github.com/requests/requests"><code>requests</code></a></li>
-<li>study
-  <a href="http://www.numpy.org/"><code>numpy</code></a>,
-  <a href="https://scipy.org/getting-started.html"><code>scipy</code></a>,
-  <a href="https://scikit-learn.org/stable/"><code>scikit-learn</code></a>
-  and depending on your focus <a href="https://cython.org/"><code>cython</code></a></li>
 <li>Python core and standard libraries (always available, so use them):<ul>
 <li><a href="https://docs.python.org/3/tutorial/classes.html">classes</a>, when your function becomes too long it might want to be a class</li>
 <li><a href="https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions">list comprehensions</a></li>
@@ -88,6 +83,11 @@ Here are my notes more specific to <span class="caps">ML</span>.</p>
 </ul>
 </li>
 <li>understand stack traces (the basics: the line above is where the line below originated), <a href="https://en.wikipedia.org/wiki/Stack_trace">Wikipedia</a></li>
+<li>scientific foundational packages:
+  <a href="http://www.numpy.org/"><code>numpy</code></a>,
+  <a href="https://scipy.org/getting-started.html"><code>scipy</code></a>,
+  <a href="https://scikit-learn.org/stable/"><code>scikit-learn</code></a>
+  and depending on your focus <a href="https://cython.org/"><code>cython</code></a></li>
 </ul>
 <p><strong>Packaging:</strong>
 As soon as you need to re-use code in a second file, you will want to import
@@ -98,11 +98,11 @@ When you  search for help related
 to packaging, filter for results within the last year.</p>
 <ul>
 <li><code>pip</code>, I have never used <code>conda</code></li>
-<li>relative imports, see <a href="https://docs.python.org/3/tutorial/modules.html">tutorial section on Modules</a></li>
-<li><code>setup.py</code>, see <a href="https://setuptools.readthedocs.io/en/latest/setuptools.html#basic-use"><code>setuptools</code> basic use</a></li>
-<li><a href="https://docs.python.org/3/tutorial/venv.html"><code>venv</code></a>, I never do anything outside a virtual environment</li>
-<li>notebooks: <a href="https://github.com/jupyter/notebook">Jupyter</a>,
-  I only use them for demos and log books. <em>Never</em> to code.</li>
+<li>relative imports: see <a href="https://docs.python.org/3/tutorial/modules.html">tutorial section on Modules</a></li>
+<li><code>setup.py</code>: see <a href="https://setuptools.readthedocs.io/en/latest/setuptools.html#basic-use"><code>setuptools</code> basic use</a></li>
+<li><a href="https://docs.python.org/3/tutorial/venv.html"><code>venv</code></a>: I never do anything outside a virtual environment</li>
+<li><a href="https://github.com/jupyter/notebook">Jupyter notebooks</a>:
+  Great for demos and log books. <em>Never</em> to code.</li>
 </ul>
 <p><strong>Style / Unit Tests / Continuous Testing:</strong>
 Standard practices for software engineers are useful for <span class="caps">ML</span> projects, too. They help.
@@ -110,18 +110,21 @@ Beyond testing code, unit tests in combination with continuous integration give
 a robust and reproducible starting point for anyone picking up your project
 (including yourself in one year).</p>
 <ul>
-<li><a href="https://www.python.org/dev/peps/pep-0008/"><span class="caps">PEP8</span></a> is the <em>Style Guide for Python</em> and contains explanations. Don’t skip <a href="https://www.python.org/dev/peps/pep-0008/#a-foolish-consistency-is-the-hobgoblin-of-little-minds"><em>A Foolish Consistency is the Hobgoblin of Little Minds</em></a>. Still, I follow almost all of <span class="caps">PEP8</span> to the letter.</li>
+<li><a href="https://www.python.org/dev/peps/pep-0008/"><span class="caps">PEP8</span></a> is the <em>Style Guide for Python</em> and contains explanations. Don’t skip <a href="https://www.python.org/dev/peps/pep-0008/#a-foolish-consistency-is-the-hobgoblin-of-little-minds"><em>A Foolish Consistency is the Hobgoblin of Little Minds</em></a>. Still, I follow almost all of <span class="caps">PEP8</span> to the letter. Additional:<ul>
+<li>no abbreviations for variables, classes, functions, etc.</li>
+<li>do not iterate over indices in Python: don’t do <code>for i in range(len(mylist))</code></li>
+</ul>
+</li>
 <li><a href="https://www.pylint.org/"><code>pylint</code></a> generally provides good advice beyond checking for <span class="caps">PEP8</span></li>
-<li><a href="https://docs.pytest.org/en/latest/"><code>pytest</code></a></li>
-<li><a href="https://circleci.com/">CircleCI</a></li>
-<li><a href="https://travis-ci.org/">TravisCI</a></li>
+<li><a href="https://docs.pytest.org/en/latest/"><code>pytest</code></a> to run all your tests</li>
+<li><a href="https://circleci.com/">CircleCI</a> and <a href="https://travis-ci.org/">TravisCI</a> can automatically run your tests on every commit to git</li>
 </ul>
 <p><strong>Red Flags:</strong>
 When browsing open source code, this is when I get worried.</p>
 <ul>
 <li>no eval metrics/scripts for that implementation</li>
 <li>have to change the <code>PATH</code> or <code>PYTHONPATH</code> variables</li>
-<li>have to copy or symlink folders</li>
+<li>have to copy or symlink folders with code</li>
 </ul>
 <p><strong>Closing:</strong>
 Infrastructures at large companies are different from a university lab and
@@ -139,7 +142,7 @@ under                    <a class="post-category" href="https://www.svenkreiss.c
                 in <a class="post-category" href="https://www.svenkreiss.com/blog/category/science/">Science</a>   
 
                 <span style="display:inline-block;">
-                // share on <a href="https://twitter.com/share?text=%22Python%20at%20a%20University%C2%A0Lab%3A%20List%20of%20useful%20Python%20resources%20for%20starting%20in%20a%20machine%20learning%C2%A0lab.%22&amp;hashtags=Python%2CMachineLearning" target="_blank">
+                // share on <a href="https://twitter.com/share?text=%22Python%20at%20a%20University%C2%A0Lab%3A%20List%20of%20useful%20Python%20resources%20for%20starting%20in%20a%20university%20machine%20learning%C2%A0lab.%22&amp;hashtags=Python%2CMachineLearning" target="_blank">
 <i class="fa fa-twitter fa-lg"></i> Twitter
                 </a>
 </span>

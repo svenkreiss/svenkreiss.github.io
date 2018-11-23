@@ -1,5 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Sven Kreiss</title><link href="https://www.svenkreiss.com/" rel="alternate"></link><link href="https://www.svenkreiss.com/feeds/all.atom.xml" rel="self"></link><id>https://www.svenkreiss.com/</id><updated>2018-03-05T00:00:00-05:00</updated><entry><title>AncientML 1</title><link href="https://www.svenkreiss.com/blog/ancientml-2018-03/" rel="alternate"></link><published>2018-03-05T00:00:00-05:00</published><updated>2018-03-05T00:00:00-05:00</updated><author><name>Sven Kreiss</name></author><id>tag:www.svenkreiss.com,2018-03-05:/blog/ancientml-2018-03/</id><summary type="html">&lt;p&gt;AncientML is a series of paper reading notes. This first edition covers the first mention of &lt;span class="caps"&gt;AI&lt;/span&gt; and the Mathematical Theory of&amp;nbsp;Communication.&lt;/p&gt;</summary><content type="html">&lt;p&gt;AncientML is a series of paper reading notes. The purpose is to review
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Sven Kreiss</title><link href="https://www.svenkreiss.com/" rel="alternate"></link><link href="https://www.svenkreiss.com/feeds/all.atom.xml" rel="self"></link><id>https://www.svenkreiss.com/</id><updated>2018-11-23T00:00:00-05:00</updated><entry><title>Python at a University Lab</title><link href="https://www.svenkreiss.com/blog/lab-python/" rel="alternate"></link><published>2018-11-23T00:00:00-05:00</published><updated>2018-11-23T00:00:00-05:00</updated><author><name>Sven Kreiss</name></author><id>tag:www.svenkreiss.com,2018-11-23:/blog/lab-python/</id><summary type="html">&lt;p&gt;List of useful Python resources for starting in a university machine learning&amp;nbsp;lab.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;em&gt;I am a post-doc at &lt;a href="https://vita.epfl.ch/"&gt;&lt;span class="caps"&gt;VITA&lt;/span&gt; lab at &lt;span class="caps"&gt;EPFL&lt;/span&gt; university&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Good software engineering practices are important to me. They are foundational
+for open and reproducible science. You &amp;#8212; a current or future
+member of a Machine Learning lab &amp;#8212; are not necessarily expected to be a computer scientist
+or software engineer, but the tools must be familiar.
+Expert-level familiar. You will use these tools most of the day.
+You should not be clumsy with or afraid of these tools.
+Below is an ambitious list, so don&amp;#8217;t worry if you are not familiar with most of it&amp;nbsp;yet.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Python Core:&lt;/strong&gt;
+The best way to get started and a great resource for advanced users is
+the &lt;a href="https://docs.python.org/3/tutorial/index.html"&gt;tutorial on the official Python webpage&lt;/a&gt;.
+Here are my notes more specific to &lt;span class="caps"&gt;ML&lt;/span&gt;.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;always use Python3 now, not&amp;nbsp;Python2&lt;/li&gt;
+&lt;li&gt;read Python code of great projects outside of &lt;span class="caps"&gt;ML&lt;/span&gt; (almost no &lt;span class="caps"&gt;ML&lt;/span&gt; projects are written well, see closing remarks):
+  start with &lt;a href="https://github.com/requests/requests"&gt;&lt;code&gt;requests&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Python core and standard libraries (always available, so use them):&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://docs.python.org/3/tutorial/classes.html"&gt;classes&lt;/a&gt;, when your function becomes too long it might want to be a&amp;nbsp;class&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions"&gt;list&amp;nbsp;comprehensions&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://docs.python.org/3/tutorial/datastructures.html#sets"&gt;sets&lt;/a&gt;
+  (avoid testing whether an element is in a list, test whether it is in a&amp;nbsp;set)&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://docs.python.org/3/library/argparse.html"&gt;argparse&lt;/a&gt;, use a standard library to parse command line&amp;nbsp;arguments&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://docs.python.org/3/library/logging.html#module-logging"&gt;logging&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://docs.python.org/3/library/collections.html#collections.defaultdict"&gt;&lt;code&gt;defaultdict&lt;/code&gt;&lt;/a&gt;
+  for sparse&amp;nbsp;accumulators&lt;/li&gt;
+&lt;li&gt;generators and &lt;code&gt;yield&lt;/code&gt;, see &lt;a href="https://docs.python.org/3/howto/functional.html"&gt;functional programming&amp;nbsp;howto&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;all &lt;a href="https://docs.python.org/3/library/itertools.html"&gt;&lt;code&gt;itertools&lt;/code&gt;&lt;/a&gt;
+  (e.g.&amp;nbsp;&lt;a href="https://docs.python.org/3/library/itertools.html#itertools.chain.from_iterable"&gt;&lt;code&gt;itertools.chain.from_iterable&lt;/code&gt;&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://docs.python.org/3/library/functools.html#functools.lru_cache"&gt;&lt;code&gt;functools.lru_cache&lt;/code&gt;&lt;/a&gt; is a powerful&amp;nbsp;tool&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://docs.python.org/3/library/functions.html#property"&gt;&lt;code&gt;property&lt;/code&gt; decorator&lt;/a&gt; is great for adding&amp;nbsp;caches&lt;/li&gt;
+&lt;li&gt;more advanced but useful: context managers,&amp;nbsp;decorators&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;understand stack traces (the basics: the line above is where the line below originated), &lt;a href="https://en.wikipedia.org/wiki/Stack_trace"&gt;Wikipedia&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;scientific foundational packages:
+  &lt;a href="http://www.numpy.org/"&gt;&lt;code&gt;numpy&lt;/code&gt;&lt;/a&gt;,
+  &lt;a href="https://scipy.org/getting-started.html"&gt;&lt;code&gt;scipy&lt;/code&gt;&lt;/a&gt;,
+  &lt;a href="https://scikit-learn.org/stable/"&gt;&lt;code&gt;scikit-learn&lt;/code&gt;&lt;/a&gt;
+  and depending on your focus &lt;a href="https://cython.org/"&gt;&lt;code&gt;cython&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Packaging:&lt;/strong&gt;
+As soon as you need to re-use code in a second file, you will want to import
+one of your own files. You should use relative imports and to use those
+properly you need to package your code. Packaging in Python used to be a mess,
+but much progress has been made over recent years.
+When you  search for help related
+to packaging, filter for results within the last&amp;nbsp;year.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;pip&lt;/code&gt;, I have never used &lt;code&gt;conda&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;relative imports: see &lt;a href="https://docs.python.org/3/tutorial/modules.html"&gt;tutorial section on&amp;nbsp;Modules&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;setup.py&lt;/code&gt;: see &lt;a href="https://setuptools.readthedocs.io/en/latest/setuptools.html#basic-use"&gt;&lt;code&gt;setuptools&lt;/code&gt; basic&amp;nbsp;use&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://docs.python.org/3/tutorial/venv.html"&gt;&lt;code&gt;venv&lt;/code&gt;&lt;/a&gt;: I never do anything outside a virtual&amp;nbsp;environment&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/jupyter/notebook"&gt;Jupyter notebooks&lt;/a&gt;:
+  Great for demos and log books. &lt;em&gt;Never&lt;/em&gt; to&amp;nbsp;code.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Style / Unit Tests / Continuous Testing:&lt;/strong&gt;
+Standard practices for software engineers are useful for &lt;span class="caps"&gt;ML&lt;/span&gt; projects, too. They help.
+Beyond testing code, unit tests in combination with continuous integration give
+a robust and reproducible starting point for anyone picking up your project
+(including yourself in one&amp;nbsp;year).&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://www.python.org/dev/peps/pep-0008/"&gt;&lt;span class="caps"&gt;PEP8&lt;/span&gt;&lt;/a&gt; is the &lt;em&gt;Style Guide for Python&lt;/em&gt; and contains explanations. Don&amp;#8217;t skip &lt;a href="https://www.python.org/dev/peps/pep-0008/#a-foolish-consistency-is-the-hobgoblin-of-little-minds"&gt;&lt;em&gt;A Foolish Consistency is the Hobgoblin of Little Minds&lt;/em&gt;&lt;/a&gt;. Still, I follow almost all of &lt;span class="caps"&gt;PEP8&lt;/span&gt; to the letter. Additional:&lt;ul&gt;
+&lt;li&gt;no abbreviations for variables, classes, functions,&amp;nbsp;etc.&lt;/li&gt;
+&lt;li&gt;do not iterate over indices in Python: don&amp;#8217;t do &lt;code&gt;for i in range(len(mylist))&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.pylint.org/"&gt;&lt;code&gt;pylint&lt;/code&gt;&lt;/a&gt; generally provides good advice beyond checking for &lt;span class="caps"&gt;PEP8&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://docs.pytest.org/en/latest/"&gt;&lt;code&gt;pytest&lt;/code&gt;&lt;/a&gt; to run all your&amp;nbsp;tests&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://circleci.com/"&gt;CircleCI&lt;/a&gt; and &lt;a href="https://travis-ci.org/"&gt;TravisCI&lt;/a&gt; can automatically run your tests on every commit to&amp;nbsp;git&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Red Flags:&lt;/strong&gt;
+When browsing open source code, this is when I get&amp;nbsp;worried.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;no eval metrics/scripts for that&amp;nbsp;implementation&lt;/li&gt;
+&lt;li&gt;have to change the &lt;code&gt;PATH&lt;/code&gt; or &lt;code&gt;PYTHONPATH&lt;/code&gt; variables&lt;/li&gt;
+&lt;li&gt;have to copy or symlink folders with&amp;nbsp;code&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Closing:&lt;/strong&gt;
+Infrastructures at large companies are different from a university lab and
+your laptop: containers, distributed storage, build systems, custom &lt;span class="caps"&gt;DNS&lt;/span&gt;,
+mono repositories. A small piece in the middle of the stack is open source and
+has been duct-taped to make it work without the rest of the infrastructure.
+Don&amp;#8217;t follow blindly what seems like a standard practice of the best software
+engineers in the world. It might be an artifact of porting it to the
+open source&amp;nbsp;world.&lt;/p&gt;
+&lt;p&gt;Feedback is welcome on Twitter&amp;nbsp;&lt;a href="https://twitter.com/svenkreiss"&gt;@svenkreiss&lt;/a&gt;.&lt;/p&gt;&lt;script src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;</content><category term="Python"></category><category term="Machine Learning"></category></entry><entry><title>AncientML 1</title><link href="https://www.svenkreiss.com/blog/ancientml-2018-03/" rel="alternate"></link><published>2018-03-05T00:00:00-05:00</published><updated>2018-03-05T00:00:00-05:00</updated><author><name>Sven Kreiss</name></author><id>tag:www.svenkreiss.com,2018-03-05:/blog/ancientml-2018-03/</id><summary type="html">&lt;p&gt;AncientML is a series of paper reading notes. This first edition covers the first mention of &lt;span class="caps"&gt;AI&lt;/span&gt; and the Mathematical Theory of&amp;nbsp;Communication.&lt;/p&gt;</summary><content type="html">&lt;p&gt;AncientML is a series of paper reading notes. The purpose is to review
 outstanding contributions to machine learning that are valuable to the
 formation as an academic&amp;nbsp;field.&lt;/p&gt;
 &lt;p&gt;Some rules about the&amp;nbsp;papers:&lt;/p&gt;

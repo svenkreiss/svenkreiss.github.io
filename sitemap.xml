@@ -5,7 +5,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://www.svenkreiss.com/</loc>
-<lastmod>2018-11-21T11:54:50-00:00</lastmod>
+<lastmod>2018-11-23T22:56:31-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -69,6 +69,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://www.svenkreiss.com/UnicodeIt.html</loc>
 <lastmod>2013-03-01T12:00:00-05:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://www.svenkreiss.com/blog/lab-python/</loc>
+<lastmod>2018-11-23T00:00:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -229,7 +236,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://www.svenkreiss.com/blog/category/science/</loc>
-<lastmod>2016-12-31T00:00:00-04:56</lastmod>
+<lastmod>2018-11-23T00:00:00-04:56</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -237,6 +244,20 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://www.svenkreiss.com/blog/category/tech/</loc>
 <lastmod>2018-02-18T00:00:00-04:56</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://www.svenkreiss.com/blog/tag/python/</loc>
+<lastmod>2018-11-23T00:00:00-04:56</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://www.svenkreiss.com/blog/tag/machine-learning/</loc>
+<lastmod>2018-11-23T00:00:00-04:56</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -264,13 +285,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://www.svenkreiss.com/blog/tag/math/</loc>
-<lastmod>2018-02-18T00:00:00-04:56</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://www.svenkreiss.com/blog/tag/python/</loc>
 <lastmod>2018-02-18T00:00:00-04:56</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
@@ -314,13 +328,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://www.svenkreiss.com/blog/tag/data-analysis/</loc>
 <lastmod>2016-09-22T00:00:00-04:56</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://www.svenkreiss.com/blog/tag/machine-learning/</loc>
-<lastmod>2015-12-22T00:00:00-04:56</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -439,7 +446,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://www.svenkreiss.com/blog/author/sven-kreiss/</loc>
-<lastmod>2018-03-05T00:00:00-04:56</lastmod>
+<lastmod>2018-11-23T00:00:00-04:56</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
