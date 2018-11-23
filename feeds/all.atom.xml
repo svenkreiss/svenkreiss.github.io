@@ -16,10 +16,11 @@ Here are my notes more specific to &lt;span class="caps"&gt;ML&lt;/span&gt;.&lt;
 &lt;li&gt;read Python code of great projects outside of &lt;span class="caps"&gt;ML&lt;/span&gt; (almost no &lt;span class="caps"&gt;ML&lt;/span&gt; projects are written well, see closing remarks):
   start with &lt;a href="https://github.com/requests/requests"&gt;&lt;code&gt;requests&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Python core and standard libraries (always available, so use them):&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://docs.python.org/3/tutorial/classes.html"&gt;classes&lt;/a&gt;, when your function becomes too long it might want to be a&amp;nbsp;class&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions"&gt;list&amp;nbsp;comprehensions&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://docs.python.org/3/tutorial/datastructures.html#sets"&gt;sets&lt;/a&gt;
-  (avoid testing whether an element is in a list, test whether it is in a&amp;nbsp;set)&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://docs.python.org/3/tutorial/classes.html"&gt;classes&lt;/a&gt;:
+  when your function becomes too long it might want to be a&amp;nbsp;class&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://docs.python.org/3/tutorial/datastructures.html#sets"&gt;sets&lt;/a&gt;:
+  avoid testing whether an element is in a list, test whether it is in a&amp;nbsp;set&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://docs.python.org/3/library/argparse.html"&gt;argparse&lt;/a&gt;, use a standard library to parse command line&amp;nbsp;arguments&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://docs.python.org/3/library/logging.html#module-logging"&gt;logging&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://docs.python.org/3/library/collections.html#collections.defaultdict"&gt;&lt;code&gt;defaultdict&lt;/code&gt;&lt;/a&gt;
@@ -53,6 +54,7 @@ to packaging, filter for results within the last&amp;nbsp;year.&lt;/p&gt;
 &lt;li&gt;&lt;a href="https://docs.python.org/3/tutorial/venv.html"&gt;&lt;code&gt;venv&lt;/code&gt;&lt;/a&gt;: I never do anything outside a virtual&amp;nbsp;environment&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://github.com/jupyter/notebook"&gt;Jupyter notebooks&lt;/a&gt;:
   Great for demos and log books. &lt;em&gt;Never&lt;/em&gt; to&amp;nbsp;code.&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://mybinder.org/"&gt;mybinder.org&lt;/a&gt; to make your Jupyter demos&amp;nbsp;interactive&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;Style / Unit Tests / Continuous Testing:&lt;/strong&gt;
 Standard practices for software engineers are useful for &lt;span class="caps"&gt;ML&lt;/span&gt; projects, too. They help.
