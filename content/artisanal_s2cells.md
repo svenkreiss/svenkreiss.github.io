@@ -18,8 +18,8 @@ Here is my answer for the simplest ids.
 Get a feel for the cells and faces of the cube by using the web tools
 at [s2.sidewalklabs.com](https://s2.sidewalklabs.com):
 
-<img style="width:58.5%" src="/images/s2cell_regioncoverer.png" alt="S2Cell region coverer with example cell tokens" />
-<img style="width:39.7%" src="/images/s2cell_globe.png" alt="S2Cell globe" />
+<img style="width:58.5%" src="/images/s2cell_regioncoverer.png" alt="S2Cell region coverer with example cell tokens"></img>
+<img style="width:39.7%" src="/images/s2cell_globe.png" alt="S2Cell globe"></img>
 
 The above images show the location of face 0 on earth. Below is the unfolded
 curve how it spans and connects to the other faces of the cube:
