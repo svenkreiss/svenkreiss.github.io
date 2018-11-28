@@ -21,6 +21,11 @@ at [s2.sidewalklabs.com](https://s2.sidewalklabs.com):
 <img style="width:58.5%" src="/images/s2cell_regioncoverer.png" />
 <img style="width:39.7%" src="/images/s2cell_globe.png" />
 
+The above images show the location of face 0 on earth. Below is the unfolded
+curve how it spans and connects to the other faces of the cube:
+
+<img style="max-height: 15em; display:block; margin:1em auto 2em;" src="/images/s2cell_faces.png" />
+
 Tokens are hex format with right zeros stripped. To recover an integer, use
 [`from_token()`](https://s2sphere.readthedocs.io/en/latest/api.html#s2sphere.CellId.from_token)
 and print as binary. The example tokens converted to binary cell ids are:
