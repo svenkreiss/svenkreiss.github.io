@@ -8,8 +8,8 @@ how to verify manually that an S2 cell id is correct. By hand. From scratch.
 Here is my answer for the simplest&amp;nbsp;ids.&lt;/p&gt;
 &lt;p&gt;Get a feel for the cells and faces of the cube by using the web tools
 at &lt;a href="https://s2.sidewalklabs.com"&gt;s2.sidewalklabs.com&lt;/a&gt;:&lt;/p&gt;
-&lt;p&gt;&lt;img style="width:58.5%" src="/images/s2cell_regioncoverer.png" alt="S2Cell region coverer with example cell tokens" /&gt;
-&lt;img style="width:39.7%" src="/images/s2cell_globe.png" alt="S2Cell globe" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img style="width:58.5%" src="/images/s2cell_regioncoverer.png" alt="S2Cell region coverer with example cell tokens"&gt;&lt;/img&gt;
+&lt;img style="width:39.7%" src="/images/s2cell_globe.png" alt="S2Cell globe"&gt;&lt;/img&gt;&lt;/p&gt;
 &lt;p&gt;The above images show the location of face 0 on earth. Below is the unfolded
 curve how it spans and connects to the other faces of the&amp;nbsp;cube:&lt;/p&gt;
 &lt;p&gt;&lt;img style="max-height: 15em; display:block; margin:1em auto 2em;" src="/images/s2cell_faces.png" alt="S2Cell cube faces" /&gt;&lt;/p&gt;
