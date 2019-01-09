@@ -12,19 +12,24 @@ Status: published
 {% img img-thumbnail float-right /images/me_nyc_square_500.jpeg 250 me %}
 
 I am a postdoc at the [Visual Intelligence for Transportation (VITA)](https://vita.epfl.ch/)
-lab at EPFL in Lausanne.
-Before moving to Switzerland, I was the Senior Data Scientist at
-[Sidewalk Labs](https://www.sidewalklabs.com) in New York City
+lab at EPFL in Switzerland where I conduct research in machine learning for
+self-driving cars and robots that share a common space with people. Current projects
+are in perception, prediction and planning and include a project that uses [reinforcement learning to navigate a crowded space (CrowdNav)](https://github.com/vita-epfl/CrowdNav),
+human path prediction, body pose estimation
+and new ideas for the Social Force model.
+
+Before returning to academia, I was the Senior Data Scientist at
+[Sidewalk Labs (Alphabet)](https://www.sidewalklabs.com) in New York City
 where I focused on machine learning for urban environments. My background is in particle physics
 where I hold a PhD from NYU and where I worked with
 [Kyle Cranmer](http://theoryandpractice.org/) on physics and statistical
 analyses for ATLAS at CERN with a particular focus
 on the [Higgs boson discovery](/projects.html#discovery).
 
-Links:
-<span style="white-space: nowrap">[<i class="fa fa-github"></i>](https://github.com/svenkreiss/)</span>,
-<span style="white-space: nowrap">[<i class="fa fa-twitter"></i>](https://twitter.com/svenkreiss)</span>,
-<span style="white-space: nowrap">[<i class="fa fa-linkedin-square"></i>](https://www.linkedin.com/in/svenkreiss/)</span>,
-<span style="white-space: nowrap">[<i class="fa fa-file-text"></i> CV](/files/cv.pdf)</span>,
-<span style="white-space: nowrap">[<i class="fa fa-rss"></i>](/feeds/all.atom.xml)</span>.<br />
-Email: <span style="white-space: nowrap">[<i class="fa fa-envelope"></i> me@svenkreiss.com](mailto:me@svenkreiss.com)</span>.
+Me elsewhere:
+<span style="white-space: nowrap">[<i class="fa fa-github"></i>](https://github.com/svenkreiss/)</span>&nbsp;&nbsp;
+<span style="white-space: nowrap">[<i class="fa fa-twitter"></i>](https://twitter.com/svenkreiss)</span>&nbsp;&nbsp;
+<span style="white-space: nowrap">[<i class="fa fa-linkedin-square"></i>](https://www.linkedin.com/in/svenkreiss/)</span>
+<br />
+More: [projects](/projects.html), [blog](/blog/), [CV](/files/cv.pdf)<br />
+Email: [me@svenkreiss.com](mailto:me@svenkreiss.com)
