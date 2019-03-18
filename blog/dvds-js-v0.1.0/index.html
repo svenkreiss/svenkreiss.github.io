@@ -120,9 +120,9 @@ Checkout the code on <a href="http://github.com/svenkreiss/dvds-js">github.com/s
 </ul>
 <h2>Setup</h2>
 <p><code>dvds-js</code> is an <a href="http://requirejs.org/docs/whyamd.html#amd"><span class="caps">AMD</span> library</a>. You can load it using <code>require-js</code> in the browser as in the example above. The setup looks something like this:</p>
-<div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="nx">script</span> <span class="nx">src</span><span class="o">=</span><span class="s2">"http://s3.amazonaws.com/flaskApp_static/static/d3/d3.v3.min.js"</span> <span class="nx">charset</span><span class="o">=</span><span class="s2">"utf-8"</span><span class="o">&gt;&lt;</span><span class="err">/script&gt;</span>
-<span class="o">&lt;</span><span class="nx">script</span> <span class="nx">src</span><span class="o">=</span><span class="s2">"http://requirejs.org/docs/release/2.1.2/minified/require.js"</span><span class="o">&gt;&lt;</span><span class="err">/script&gt;</span>
-<span class="o">&lt;</span><span class="nx">script</span><span class="o">&gt;</span>
+<div class="highlight"><pre><span></span><span class="o">&amp;</span><span class="nx">lt</span><span class="p">;</span><span class="nx">script</span> <span class="nx">src</span><span class="o">=</span><span class="s2">"http://s3.amazonaws.com/flaskApp_static/static/d3/d3.v3.min.js"</span> <span class="nx">charset</span><span class="o">=</span><span class="s2">"utf-8"</span><span class="o">&amp;</span><span class="nx">gt</span><span class="p">;</span><span class="o">&amp;</span><span class="nx">lt</span><span class="p">;</span><span class="err">/script&amp;gt;</span>
+<span class="o">&amp;</span><span class="nx">lt</span><span class="p">;</span><span class="nx">script</span> <span class="nx">src</span><span class="o">=</span><span class="s2">"http://requirejs.org/docs/release/2.1.2/minified/require.js"</span><span class="o">&amp;</span><span class="nx">gt</span><span class="p">;</span><span class="o">&amp;</span><span class="nx">lt</span><span class="p">;</span><span class="err">/script&amp;gt;</span>
+<span class="o">&amp;</span><span class="nx">lt</span><span class="p">;</span><span class="nx">script</span><span class="o">&amp;</span><span class="nx">gt</span><span class="p">;</span>
 <span class="nx">require</span><span class="p">.</span><span class="nx">config</span><span class="p">({</span>
     <span class="nx">paths</span><span class="o">:</span> <span class="p">{</span>
         <span class="s1">'crypto-js.SHA3'</span><span class="o">:</span> <span class="s1">'http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/sha3'</span><span class="p">,</span>
@@ -135,7 +135,7 @@ Checkout the code on <a href="http://github.com/svenkreiss/dvds-js">github.com/s
         <span class="p">}</span>
     <span class="p">}</span>
 <span class="p">});</span>
-<span class="o">&lt;</span><span class="err">/script&gt;</span>
+<span class="o">&amp;</span><span class="nx">lt</span><span class="p">;</span><span class="err">/script&amp;gt;</span>
 </pre></div>
 <p>This includes <code>d3.js</code> for visualizations and <code>CryptoJS</code> is needed for calculating unique identifiers for commits.
 In <code>node.js</code>, this setup is not necessary and you would simply use <code>require()</code>.</p>
