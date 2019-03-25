@@ -14,8 +14,10 @@ Status: published
 I am a postdoc at the [Visual Intelligence for Transportation (VITA)](https://vita.epfl.ch/)
 lab at EPFL in Switzerland where I conduct research in machine learning for
 self-driving cars and robots that share a common space with people. Current projects
-are in perception, prediction and planning and include a project that uses [reinforcement learning to navigate a crowded space (CrowdNav)](https://github.com/vita-epfl/CrowdNav),
-human path prediction, body pose estimation
+are in perception, prediction and planning and include a project that uses
+[reinforcement learning to navigate a crowded space (CrowdNav, ICRA2019)](https://github.com/vita-epfl/CrowdNav),
+[human pose estimation (PifPaf, CVPR2019)](https://github.com/vita-epfl/openpifpaf),
+human path prediction
 and new ideas for the Social Force model.
 
 Before returning to academia, I was the Senior Data Scientist at
