@@ -22,7 +22,7 @@ human path prediction in the context of self-driving cars.
 <div style="display:flex; flex-flow: row wrap;">
 <div style="min-width:250px; width:50%; padding: 10px 20px 10px 0; flex-grow: 1;">
     <a href="https://github.com/vita-epfl/openpifpaf">
-        <img class="image-process-crisp" src="/images/pifpaf.jpg" alt="OpenPifPaf example" />
+        <img class="image-process-crisp" src="/images/pifpaf.jpg" alt="OpenPifPaf example"></img><br />
         PifPaf: Composite Fields for Human Pose Estimation.</a>
     <br />
     To be presented at CVPR2019.
@@ -30,7 +30,7 @@ human path prediction in the context of self-driving cars.
 
 <div style="min-width:250px; width:50%; padding: 10px 20px 10px 0; flex-grow: 1;">
     <a href="https://github.com/vita-epfl/crowdnav">
-        <img class="image-process-crisp" src="/images/crowdnav.png" alt="CrowdNav illustration" /><br />
+        <img class="image-process-crisp" src="/images/crowdnav.png" alt="CrowdNav illustration"></img><br />
         Crowd-Robot Interaction: Crowd-aware Robot Navigation with Attention-based Deep Reinforcement Learning.</a>
     <br />
     To be presented at ICRA2019.
