@@ -4,34 +4,52 @@ Slug: about
 url: /
 save_as: index.html
 hide_copyright: true
-Summary: Sven Kreiss is a Data Scientist in New York City.
+Summary: Sven Kreiss is a Machine Learning Researcher in Switzerland.
 Status: published
 
 
-<!-- {% img img-thumbnail float-right http://www.gravatar.com/avatar/1838de72eb5ce4b000c41c06dedb52c4.png?s=180 %} -->
-{% img img-thumbnail float-right /images/me_nyc_square_500.jpeg 250 me %}
+{% img img-thumbnail float-right /images/me_nyc_square_500.jpeg 200 me %}
 
 I am a postdoc at the [Visual Intelligence for Transportation (VITA)](https://vita.epfl.ch/)
 lab at EPFL in Switzerland where I conduct research in machine learning for
 self-driving cars and robots that share a common space with people. Current projects
 are in perception, prediction and planning and include a project that uses
-[reinforcement learning to navigate a crowded space (CrowdNav, ICRA2019)](https://github.com/vita-epfl/CrowdNav),
+[reinforcement learning to navigate a crowded space (Crowd-Robot Interaction, ICRA2019)](https://github.com/vita-epfl/CrowdNav),
 [human pose estimation (PifPaf, CVPR2019)](https://github.com/vita-epfl/openpifpaf),
-human path prediction
-and new ideas for the Social Force model.
+new ideas for the Social Force model (STRC2019, hEART2019) and
+human path prediction in the context of self-driving cars.
+
+<div style="display:flex; flex-flow: row wrap;">
+<div style="min-width:250px; width:50%; padding: 10px 20px 10px 0; flex-grow: 1;">
+    <a href="https://github.com/vita-epfl/openpifpaf">
+        <img class="image-process-crisp" src="/images/pifpaf.jpg" alt="OpenPifPaf example" />
+        PifPaf: Composite Fields for Human Pose Estimation.</a>
+    <br />
+    To be presented at CVPR2019.
+</div>
+
+<div style="min-width:250px; width:50%; padding: 10px 20px 10px 0; flex-grow: 1;">
+    <a href="https://github.com/vita-epfl/crowdnav">
+        <img class="image-process-crisp" src="/images/crowdnav.png" alt="CrowdNav illustration" /><br />
+        Crowd-Robot Interaction: Crowd-aware Robot Navigation with Attention-based Deep Reinforcement Learning.</a>
+    <br />
+    To be presented at ICRA2019.
+</div>
+</div>
 
 Before returning to academia, I was the Senior Data Scientist at
 [Sidewalk Labs (Alphabet)](https://www.sidewalklabs.com) in New York City
 where I focused on machine learning for urban environments. My background is in particle physics
 where I hold a PhD from NYU and where I worked with
 [Kyle Cranmer](http://theoryandpractice.org/) on physics and statistical
-analyses for ATLAS at CERN with a particular focus
-on the [Higgs boson discovery](/projects.html#discovery).
+analyses for ATLAS at CERN. I was on the core team that
+[discovered the Higgs boson](/projects.html#discovery) and the first person to
+see the 5σ threshold crossed.
 
 Me elsewhere:
 <span style="white-space: nowrap">[<i class="fa fa-github"></i>](https://github.com/svenkreiss/)</span>&nbsp;&nbsp;
 <span style="white-space: nowrap">[<i class="fa fa-twitter"></i>](https://twitter.com/svenkreiss)</span>&nbsp;&nbsp;
 <span style="white-space: nowrap">[<i class="fa fa-linkedin-square"></i>](https://www.linkedin.com/in/svenkreiss/)</span>
 <br />
-More: [projects](/projects.html), [blog](/blog/), [CV](/files/cv.pdf)<br />
+More: [projects](/projects.html), <!-- [blog](/blog/), --> [curriculum vitae](/files/cv.pdf)<br />
 Email: [me@svenkreiss.com](mailto:me@svenkreiss.com)

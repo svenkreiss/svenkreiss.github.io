@@ -6,11 +6,27 @@ Status: published
 
 ## Projects in Pictures
 
+
+### [PifPaf: Composite Fields for Human Pose Estimation (CVPR2019)](https://github.com/vita-epfl/openpifpaf)
+
+<a href="https://github.com/vita-epfl/openpifpaf">
+    <img class="image-process-crisp" src="/images/pifpaf.jpg" width=400 alt="OpenPifPaf example" />
+</a>
+
+
+### [Crowd-Robot Interaction: Crowd-aware Robot Navigation with Attention-based Deep Reinforcement Learning (ICRA2019)](https://github.com/vita-epfl/crowdnav)
+
+<a href="https://github.com/vita-epfl/crowdnav">
+    <img class="image-process-crisp" src="/images/crowdnav.png" width=400 alt="OpenPifPaf example" />
+</a>
+
+
 ### [Databench: an interactive real-time data analysis tool](http://databench.trivial.io)
 
 <a href="http://databench.trivial.io">
     <img class="image-process-crisp" src="/images/Databench_docs.png" width="400" alt="Databench" />
 </a>
+
 
 ### [pysparkling: a pure Python implementation of Apache Spark interfaces](http://pysparkling.trivial.io)
 
@@ -18,6 +34,7 @@ Status: published
     <img class="image-process-crisp" src="/images/pysparkling_4cores.png" width="250" alt="pysparkling performance" />
     <img class="image-process-crisp" src="/images/pysparkling_4cores_hyperthreading.png" width="250" alt="pysparkling performance with hyperthreading" />
 </a>
+
 
 <a name="discovery"></a>
 
