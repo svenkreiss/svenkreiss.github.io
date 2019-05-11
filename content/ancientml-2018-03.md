@@ -5,6 +5,8 @@ Tags: ancientml
 Summary: AncientML is a series of paper reading notes. This first edition covers the first mention of AI and the Mathematical Theory of Communication.
 Status: published
 
+<img class="img-thumbnail float-right" src="/images/ancientml-logo.png" width="300" alt="AncientML Logo" />
+
 AncientML is a series of paper reading notes. The purpose is to review
 outstanding contributions to machine learning that are valuable to the
 formation as an academic field.
@@ -49,7 +51,6 @@ the papers itself and discussions in person.
 * p.53: origin for terms of the form $p_i\log{}p_i$
 * p.56: relative entropy, maximum possible compression, redundancy
 * p.70: capacity of a noisy channel; includes a `max()` over all possible information sources
-* ...
 
 
 ## Backlog
@@ -67,5 +68,3 @@ the papers itself and discussions in person.
   [@@graves2012supervised], [PDF](https://www.cs.toronto.edu/~graves/preprint.pdf)
 * High-speed tracking with kernelized correlation filters,
   [@@kcftracker2015high], [PDF](https://arxiv.org/pdf/1404.7584)
-
-Similar resources: @shakir_za tweets a series called "Sunday Classic Paper".

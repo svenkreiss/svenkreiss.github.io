@@ -3,7 +3,7 @@ Date: 2018-11-28
 Category: Tech
 Tags: Python, geo, data
 Slug: artisanal-s2
-Summary: Creating S2-cell ids by hand.
+Summary: S2 cells are a powerful tool to index and compute over geospatial data. This short post shows how to create S2 cell ids by hand.
 Status: published
 
 

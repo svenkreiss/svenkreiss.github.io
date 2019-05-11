@@ -3,9 +3,10 @@ Date: 2018-11-23
 Category: Science
 Tags: Python, Machine Learning
 Slug: lab-python
-Summary: List of useful Python resources for starting in a university machine learning lab.
+Summary: University research labs have a different structure than corporate research labs and their compute setups. In this post, I list useful Python resources for starting in a university machine learning lab.
 Status: published
 
+<img class="img-thumbnail float-right" width=200 src="/images/python-powered-university.png" alt="Python powered University" />
 
 _I am a post-doc at [VITA lab at EPFL university](https://vita.epfl.ch/)._
 
