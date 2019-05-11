@@ -11,16 +11,7 @@ AncientML is a series of paper reading notes. The purpose is to review
 outstanding contributions to machine learning that are valuable to the
 formation as an academic field.
 
-Some rules about the papers:
-
-* have at least 500 citations
-* be sufficiently old so that interest in them cannot be considered
-  a conflict for industry ML researchers and engineers
-* have had impact on academia so that they would be considered valuable to teach
-
-It's not supposed to be a summary but rather inspire reading of
-the papers itself and discussions in person.
-
+<div style="clear:both"></div>
 
 ## A Proposal for the Dartmouth Summer Research Project on Artificial Intelligence, August 31, 1955 [@@mccarthy2006proposal], [PDF](https://www.aaai.org/ojs/index.php/aimagazine/article/download/1904/1802)
 
@@ -51,20 +42,3 @@ the papers itself and discussions in person.
 * p.53: origin for terms of the form $p_i\log{}p_i$
 * p.56: relative entropy, maximum possible compression, redundancy
 * p.70: capacity of a noisy channel; includes a `max()` over all possible information sources
-
-
-## Backlog
-
-* Multidimensional binary search trees used for associative searching,
-  [@@bentley1975multidimensional],
-  [PDF](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.160.335&rep=rep1&type=pdf)
-* RBM predecessor Harmonium: Information processing in dynamical systems: Foundations of harmony theory,
-  [@@smolensky1986information], [PDF](http://stanford.edu/~jlmcc/papers/PDP/Volume%201/Chap6_PDP86.pdf)
-* Reducing the Dimensionality of Data,
-  [@@hinton2006reducing], [PDF](http://www.cs.toronto.edu/~hinton/science.pdf)
-* Online Convex Programming and Generalized Infinitesimal Gradient Ascent
-  [@@zinkevich2003online], [PDF](http://www.aaai.org/Papers/ICML/2003/ICML03-120.pdf)
-* Supervised Sequence Labelling with Recurrent Neural Networks
-  [@@graves2012supervised], [PDF](https://www.cs.toronto.edu/~graves/preprint.pdf)
-* High-speed tracking with kernelized correlation filters,
-  [@@kcftracker2015high], [PDF](https://arxiv.org/pdf/1404.7584)
