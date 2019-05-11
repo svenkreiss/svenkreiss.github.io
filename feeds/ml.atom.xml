@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Sven Kreiss - ML</title><link href="https://www.svenkreiss.com/" rel="alternate"></link><link href="https://www.svenkreiss.com/feeds/ml.atom.xml" rel="self"></link><id>https://www.svenkreiss.com/</id><updated>2018-03-05T00:00:00-05:00</updated><entry><title>AncientML 1</title><link href="https://www.svenkreiss.com/blog/ancientml-2018-03/" rel="alternate"></link><published>2018-03-05T00:00:00-05:00</published><updated>2018-03-05T00:00:00-05:00</updated><author><name>Sven Kreiss</name></author><id>tag:www.svenkreiss.com,2018-03-05:/blog/ancientml-2018-03/</id><summary type="html">&lt;p&gt;AncientML is a series of paper reading notes. This first edition covers the first mention of &lt;span class="caps"&gt;AI&lt;/span&gt; and the Mathematical Theory of&amp;nbsp;Communication.&lt;/p&gt;</summary><content type="html">&lt;p&gt;AncientML is a series of paper reading notes. The purpose is to review
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Sven Kreiss - ML</title><link href="https://www.svenkreiss.com/" rel="alternate"></link><link href="https://www.svenkreiss.com/feeds/ml.atom.xml" rel="self"></link><id>https://www.svenkreiss.com/</id><updated>2018-03-05T00:00:00-05:00</updated><entry><title>AncientML 1</title><link href="https://www.svenkreiss.com/blog/ancientml-2018-03/" rel="alternate"></link><published>2018-03-05T00:00:00-05:00</published><updated>2018-03-05T00:00:00-05:00</updated><author><name>Sven Kreiss</name></author><id>tag:www.svenkreiss.com,2018-03-05:/blog/ancientml-2018-03/</id><summary type="html">&lt;p&gt;AncientML is a series of paper reading notes. This first edition covers the first mention of &lt;span class="caps"&gt;AI&lt;/span&gt; and the Mathematical Theory of&amp;nbsp;Communication.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img class="img-thumbnail float-right" src="/images/ancientml-logo.png" width="300" alt="AncientML Logo" /&gt;&lt;/p&gt;
+&lt;p&gt;AncientML is a series of paper reading notes. The purpose is to review
 outstanding contributions to machine learning that are valuable to the
 formation as an academic&amp;nbsp;field.&lt;/p&gt;
 &lt;p&gt;Some rules about the&amp;nbsp;papers:&lt;/p&gt;
@@ -39,7 +40,6 @@ the papers itself and discussions in&amp;nbsp;person.&lt;/p&gt;
 &lt;li&gt;p.53: origin for terms of the form &lt;span class="math"&gt;\(p_i\log{}p_i\)&lt;/span&gt;&lt;/li&gt;
 &lt;li&gt;p.56: relative entropy, maximum possible compression,&amp;nbsp;redundancy&lt;/li&gt;
 &lt;li&gt;p.70: capacity of a noisy channel; includes a &lt;code&gt;max()&lt;/code&gt; over all possible information&amp;nbsp;sources&lt;/li&gt;
-&lt;li&gt;&amp;#8230;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;Backlog&lt;/h2&gt;
 &lt;ul&gt;
@@ -56,8 +56,7 @@ the papers itself and discussions in&amp;nbsp;person.&lt;/p&gt;
   &lt;a href='#graves2012supervised' id='ref-graves2012supervised-1'&gt;(Graves, 2012)&lt;/a&gt;, &lt;a href="https://www.cs.toronto.edu/~graves/preprint.pdf"&gt;&lt;span class="caps"&gt;PDF&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;High-speed tracking with kernelized correlation filters,
   &lt;a href='#kcftracker2015high' id='ref-kcftracker2015high-1'&gt;(Henriques et al., 2015)&lt;/a&gt;, &lt;a href="https://arxiv.org/pdf/1404.7584"&gt;&lt;span class="caps"&gt;PDF&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Similar resources: &lt;a href="https://twitter.com/shakir_za"&gt;&amp;#64;shakir_za&lt;/a&gt; tweets a series called &amp;#8220;Sunday Classic&amp;nbsp;Paper&amp;#8221;.&lt;/p&gt;&lt;script src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;&lt;hr&gt;
+&lt;/ul&gt;&lt;script src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;&lt;hr&gt;
 &lt;h2&gt;Bibliography&lt;/h2&gt;
 &lt;p id='bentley1975multidimensional'&gt;Jon&amp;nbsp;Louis Bentley.
 Multidimensional binary search trees used for associative searching.
