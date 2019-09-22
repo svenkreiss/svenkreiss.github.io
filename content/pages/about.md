@@ -20,20 +20,28 @@ new ideas for the Social Force model (STRC2019, hEART2019) and
 human path prediction in the context of self-driving cars.
 
 <div style="display:flex; flex-flow: row wrap;">
-<div style="width:250px; margin: 20px; flex-grow: 1;">
+<div style="width:150px; margin: 20px; flex-grow: 1;">
+    <a href="https://github.com/vita-epfl/monoloco">
+        <img class="image-process-crisp" src="/images/monoloco.jpg" alt="Monoloco example"></img><br />
+        MonoLoco: Monocular 3D Pedestrian Localization and Uncertainty Estimation.</a>
+    <br />
+    To be presented at ICCV2019.
+</div>
+
+<div style="width:150px; margin: 20px; flex-grow: 1;">
     <a href="https://github.com/vita-epfl/openpifpaf">
         <img class="image-process-crisp" src="/images/pifpaf.jpg" alt="OpenPifPaf example"></img><br />
         PifPaf: Composite Fields for Human Pose Estimation.</a>
     <br />
-    To be presented at CVPR2019.
+    Presented at CVPR2019.
 </div>
 
-<div style="width:250px; margin: 20px; flex-grow: 1;">
+<div style="width:150px; margin: 20px; flex-grow: 1;">
     <a href="https://github.com/vita-epfl/crowdnav">
         <img class="image-process-crisp" src="/images/crowdnav.png" alt="CrowdNav illustration"></img><br />
         Crowd-Robot Interaction: Crowd-aware Robot Navigation with Attention-based Deep Reinforcement Learning.</a>
     <br />
-    To be presented at ICRA2019.
+    Presented at ICRA2019.
 </div>
 </div>
 
