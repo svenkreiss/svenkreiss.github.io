@@ -4,18 +4,19 @@ Slug: about
 url: /
 save_as: index.html
 hide_copyright: true
-Summary: Sven Kreiss is a Machine Learning Researcher in Switzerland.
+Summary: Sven Kreiss is a Computer Vision Researcher in Switzerland.
 Status: published
 
 
 {% img img-thumbnail float-right /images/me_nyc_square_500.jpeg 200 me %}
 
 I am a postdoc at the [Visual Intelligence for Transportation (VITA)](https://vita.epfl.ch/)
-lab at EPFL in Switzerland where I conduct research in machine learning for
+lab at EPFL in Switzerland where I conduct research in computer vision for
 self-driving cars and robots that share a common space with people. Current projects
-are in perception, prediction and planning and include a project that uses
-[reinforcement learning to navigate a crowded space (Crowd-Robot Interaction, ICRA2019)](https://github.com/vita-epfl/CrowdNav),
+are in perception, prediction and planning and include projects that use
+[monocular depth (MonoLoco, ICCV2019)](https://github.com/vita-epfl/monoloco),
 [human pose estimation (PifPaf, CVPR2019)](https://github.com/vita-epfl/openpifpaf),
+[reinforcement learning to navigate a crowded space (Crowd-Robot Interaction, ICRA2019)](https://github.com/vita-epfl/CrowdNav),
 new ideas for the Social Force model (STRC2019, hEART2019) and
 human path prediction in the context of self-driving cars.
 
@@ -25,7 +26,7 @@ human path prediction in the context of self-driving cars.
         <img class="image-process-crisp" src="/images/monoloco.jpg" alt="Monoloco example"></img><br />
         MonoLoco: Monocular 3D Pedestrian Localization and Uncertainty Estimation.</a>
     <br />
-    To be presented at ICCV2019.
+    Presented at ICCV2019 in Seoul.
 </div>
 
 <div style="border:0.5px dotted #ccc; width:200px; padding: 20px; margin: 2px; flex-grow: 1;">
@@ -33,7 +34,7 @@ human path prediction in the context of self-driving cars.
         <img class="image-process-crisp" src="/images/pifpaf.jpg" alt="OpenPifPaf example"></img><br />
         PifPaf: Composite Fields for Human Pose Estimation.</a>
     <br />
-    Presented at CVPR2019.
+    Presented at CVPR2019 in Los Angeles.
 </div>
 
 <div style="border:0.5px dotted #ccc; width:200px; padding: 20px; margin: 2px; flex-grow: 1;">
@@ -41,7 +42,7 @@ human path prediction in the context of self-driving cars.
         <img class="image-process-crisp" src="/images/crowdnav.png" alt="CrowdNav illustration"></img><br />
         Crowd-Robot Interaction: Crowd-aware Robot Navigation with Attention-based Deep Reinforcement Learning.</a>
     <br />
-    Presented at ICRA2019.
+    Presented at ICRA2019 in Montreal.
 </div>
 </div>
 
