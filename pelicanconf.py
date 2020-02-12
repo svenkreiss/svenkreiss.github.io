@@ -29,11 +29,12 @@ LINKS = (
 
 # Social widget
 SOCIAL = (
+    ('graduation-cap', 'https://scholar.google.ch/citations?hl=en&user=SnjnSVEAAAAJ&view_op=list_works&sortby=pubdate'),
     ('github', 'https://github.com/svenkreiss/'),
     ('twitter', 'https://twitter.com/svenkreiss'),
     ('linkedin', 'https://www.linkedin.com/in/svenkreiss/'),
-    ('file-text', '/files/cv.html'),
-    ('rss', '/feeds/all.atom.xml'),
+    # ('file-text', '/files/cv.html'),
+    # ('rss', '/feeds/all.atom.xml'),
 )
 TWITTER_USERNAME = 'svenkreiss'
 

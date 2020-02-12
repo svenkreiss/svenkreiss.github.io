@@ -56,9 +56,10 @@ analyses for ATLAS at CERN. I was on the core team that
 see the 5σ threshold crossed.
 
 Me elsewhere:
-<span style="white-space: nowrap">[<i class="fa fa-github"></i>](https://github.com/svenkreiss/)</span>&nbsp;&nbsp;
-<span style="white-space: nowrap">[<i class="fa fa-twitter"></i>](https://twitter.com/svenkreiss)</span>&nbsp;&nbsp;
-<span style="white-space: nowrap">[<i class="fa fa-linkedin-square"></i>](https://www.linkedin.com/in/svenkreiss/)</span>
+<span style="white-space: nowrap">[<i class="fa fa-graduation-cap"></i> Google Scholar](https://scholar.google.ch/citations?hl=en&user=SnjnSVEAAAAJ&view_op=list_works&sortby=pubdate)</span>&nbsp;&nbsp;
+<span style="white-space: nowrap">[<i class="fa fa-github"></i> GitHub](https://github.com/svenkreiss/)</span>&nbsp;&nbsp;
+<span style="white-space: nowrap">[<i class="fa fa-twitter"></i> Twitter](https://twitter.com/svenkreiss)</span>&nbsp;&nbsp;
+<span style="white-space: nowrap">[<i class="fa fa-linkedin-square"></i> LinkedIn](https://www.linkedin.com/in/svenkreiss/)</span>
 <br />
-More: [projects](/projects.html), <!-- [blog](/blog/), --> [curriculum vitae](/files/cv.pdf)<br />
+<!-- More: [projects](/projects.html)[blog](/blog/), [curriculum vitae](/files/cv.pdf) <br /> -->
 Email: [me@svenkreiss.com](mailto:me@svenkreiss.com)
