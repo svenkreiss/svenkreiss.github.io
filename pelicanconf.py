@@ -128,7 +128,7 @@ AUTHOR_IMAGE = '/images/me_nyc_square_500.jpeg'
 TAGLINE = 'Deep learning for intelligent robots and smart infrastructure.'
 META_DESCRIPTION = 'my personal website'
 # DISQUS_SITENAME = 'svenkreisscom'
-COPYRIGHT_YEARS = '2014 &ndash; 2018'
+COPYRIGHT_YEARS = '2014 &ndash; 2020'
 COPYRIGHT_FOOTER = (
     '<p>'
     '&copy; ' + SITENAME + '  ' + COPYRIGHT_YEARS + '. Published with <a href="https://github.com/getpelican/pelican">Pelican</a>.<br />'

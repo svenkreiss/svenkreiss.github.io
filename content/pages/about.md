@@ -23,7 +23,7 @@ I am a postdoc at the [Visual Intelligence for Transportation (VITA)](https://vi
 lab at EPFL in Switzerland. Selected publications:
 
 * __MonoLoco__: Monocular 3D Pedestrian Localization and Uncertainty Estimation.<br />
-  Presented at ICCV2019 in Seoul.<br />
+  Presented at ICCV2019 in Seoul. Lead by Lorenzo Bertoni.<br />
   <span style="white-space: nowrap">[<i class="fa fa-file"></i> paper](http://openaccess.thecvf.com/content_ICCV_2019/html/Bertoni_MonoLoco_Monocular_3D_Pedestrian_Localization_and_Uncertainty_Estimation_ICCV_2019_paper.html)</span>&nbsp;&nbsp;
   <span style="white-space: nowrap">[<i class="fa fa-github"></i> code](https://github.com/vita-epfl/monoloco)</span>
 * __PifPaf__: Composite Fields for Human Pose Estimation.<br />
@@ -31,7 +31,7 @@ lab at EPFL in Switzerland. Selected publications:
   <span style="white-space: nowrap">[<i class="fa fa-file"></i> paper](http://openaccess.thecvf.com/content_CVPR_2019/html/Kreiss_PifPaf_Composite_Fields_for_Human_Pose_Estimation_CVPR_2019_paper.html)</span>&nbsp;&nbsp;
   <span style="white-space: nowrap">[<i class="fa fa-github"></i> code](https://github.com/vita-epfl/openpifpaf)</span>
 * __Crowd-Robot Interaction__: Crowd-aware Robot Navigation with Attention-based Deep Reinforcement Learning.<br />
-  Presented at ICRA2019 in Montreal.<br />
+  Presented at ICRA2019 in Montreal. Lead by Changan Chan and Yuejiang Liu.<br />
   <span style="white-space: nowrap">[<i class="fa fa-file"></i> paper](https://doi.org/10.1109/ICRA.2019.8794134)</span>&nbsp;&nbsp;
   <span style="white-space: nowrap">[<i class="fa fa-github"></i> code](https://github.com/vita-epfl/crowdnav)</span>
 
