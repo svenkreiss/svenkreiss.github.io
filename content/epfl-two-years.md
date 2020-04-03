@@ -51,8 +51,13 @@ industry. Setting up a commercialization
 pipeline with EPFL's Technology Transfer Office was another exciting first.
 
 At EPFL, it is also possible to gain professor-style teaching experience
-as a postdoc through co-teaching. We are currently co-teaching for the second time
-_Deep Learning for Autonomous Vehicles_ to master students. Last semester, we
+as a postdoc through co-teaching. Alex and I are currently co-teaching for the second time
+_Deep Learning for Autonomous Vehicles_ to master students.
+The course project ends with a race of human-robot pairs. The student is in front
+and the robot has to track and follow as fast as possible.
+At was [quite an event last year](https://www.epfl.ch/labs/vita/teaching/)
+([video](https://www.youtube.com/watch?v=3AnXPqoIfvU)).
+Last semester, we
 gave an introductory course in machine learning tailored for engineering students
 in the bachelor program.
 
