@@ -59,6 +59,11 @@ project to use
 &lt;em&gt;Artificial Intelligence for understanding and overcoming motor deficits&lt;/em&gt;
 in collaboration with two labs at the hospital in Lausanne
 that work on Parkinson and Spinal Cord&amp;nbsp;Injury.&lt;/p&gt;
+&lt;p&gt;I am also looking forward to &lt;span class="caps"&gt;ICML&lt;/span&gt; this year. It is the first time I am the
+co-organizer of a workshop, the workshop on &lt;em&gt;&lt;span class="caps"&gt;AI&lt;/span&gt; for Autonomous Driving&lt;/em&gt;, which
+had 400 attendees last year. Luckily, I am surrounded by an experienced team
+and I am looking forward to learn. Holding this workshop entirely online will
+be a first for everyone&amp;nbsp;though.&lt;/p&gt;
 &lt;p&gt;After two years back in academia, I am still not bored. Not at all.
 &lt;strong&gt;Thanks &lt;span class="caps"&gt;VITA&lt;/span&gt; team!&lt;/strong&gt;&amp;nbsp;Onwards.&lt;/p&gt;&lt;script src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;</content><category term="review"></category></entry><entry><title>Artisanal S2 Cells</title><link href="https://www.svenkreiss.com/blog/artisanal-s2/" rel="alternate"></link><published>2018-11-28T00:00:00-05:00</published><updated>2018-11-28T00:00:00-05:00</updated><author><name>Sven Kreiss</name></author><id>tag:www.svenkreiss.com,2018-11-28:/blog/artisanal-s2/</id><summary type="html">&lt;p&gt;S2 cells are a powerful tool to index and compute over geospatial data. This short post shows how to create S2 cell ids by&amp;nbsp;hand.&lt;/p&gt;</summary><content type="html">&lt;p&gt;S2 cells are a great representation for locations on earth and are the storage
 format for many popular web services, including Google Maps, Foursquare and Pokemon Go.
