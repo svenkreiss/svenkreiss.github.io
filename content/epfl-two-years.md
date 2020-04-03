@@ -78,5 +78,11 @@ _Artificial Intelligence for understanding and overcoming motor deficits_
 in collaboration with two labs at the hospital in Lausanne
 that work on Parkinson and Spinal Cord Injury.
 
+I am also looking forward to ICML this year. It is the first time I am the
+co-organizer of a workshop, the workshop on _AI for Autonomous Driving_, which
+had 400 attendees last year. Luckily, I am surrounded by an experienced team
+and I am looking forward to learn. Holding this workshop entirely online will
+be a first for everyone though.
+
 After two years back in academia, I am still not bored. Not at all.
 __Thanks VITA team!__ Onwards.
