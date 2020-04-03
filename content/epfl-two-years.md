@@ -1,12 +1,13 @@
-Title: Two Years at EPFL
-Date: 2020-04-02
+Title: Achievements in Two Years at EPFL
+Date: 2020-04-03
 Category: ML
 Tags: review
+Slug: epfl-two-years
 Summary: Self-review of my first two years back in academia at EPFL.
-Status: draft
+Status: published
 
 
-<img class="image-process-crisp" src="/images/twoyearsepfl_crowd_pifpaf.png" alt="PifPaf crowd" />
+<img class="image-process-crisp" src="/images/twoyearsepfl_crowd_pifpaf.png" alt="PifPaf crowd"></img>
 
 Two years ago, I returned from New York City to Geneva. I had left my
 industry job and returned to academia as a postdoc in Computer Vision at
@@ -24,7 +25,8 @@ This led me to focus on _Composite Fields_ for human pose estimation.
 In an extremely short time, we have created three
 exciting projects with interesting scientific contributions and state-of-the-art
 results on challenging tasks like Human Pose Estimation. These papers were
-presented at ICRA, CVPR and ICCV.
+presented at ICRA, CVPR and ICCV which are the top-tier conferences
+in robotics and computer vision.
 
 * __Crowd-Robot Interaction__: Crowd-aware Robot Navigation with Attention-based Deep Reinforcement Learning.<br />
   Presented at ICRA2019 in Montreal. Lead by Changan Chan and Yuejiang Liu.<br />
@@ -40,7 +42,7 @@ presented at ICRA, CVPR and ICCV.
   <span style="white-space: nowrap">[<i class="fa fa-github"></i> code](https://github.com/vita-epfl/monoloco)</span>
 
 I also presented an overview of our
-work in the Autonomous Driving workshop at ICML2019 in Los Angeles, at KAIST
+work at the Autonomous Driving workshop at ICML2019 in Los Angeles, at KAIST
 in South Korea as well as at the European and Swiss transportation
 conferences hEART (Budapest) and STRC (Ascona).
 
@@ -62,12 +64,14 @@ previous work in human pose estimation and joint work on pedestrian localization
 
 Another new process for me was applying for grants. I successfully obtained
 a _Spark Grant_ from the Swiss National Science Foundation for the
-development of _Deep Social Force_ that pays my salary for one year -- my
+development of _Deep Social Force_ that pays for the project for one year -- my
 first time being a PI on a grant.
 I also drafted our lab's contribution to the
-[EPFL Interdisciplinary Seed Fund](https://www.epfl.ch/research/services/fund-research/funding-opportunities/research-funding/interdisciplinary-seed-fund/isf-granted-projects/) project to use
+[EPFL Interdisciplinary Seed Fund](https://www.epfl.ch/research/services/fund-research/funding-opportunities/research-funding/interdisciplinary-seed-fund/isf-granted-projects/)
+project to use
 _Artificial Intelligence for understanding and overcoming motor deficits_
-in collaboration with two medical labs that work on Parkinson and Spinal Cord Injury.
+in collaboration with two labs at the hospital in Lausanne
+that work on Parkinson and Spinal Cord Injury.
 
 After two years back in academia, I am still not bored. Not at all.
 __Thanks VITA team!__ Onwards.
