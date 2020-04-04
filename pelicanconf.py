@@ -75,7 +75,7 @@ PLUGINS = [
     'pelican-cite',
     'related_posts',
     'pelican_dynamic',
-    'pelican_advance_embed_tweet',
+    # 'pelican_advance_embed_tweet',
 ]
 
 # sitemap plugin
@@ -91,10 +91,10 @@ SITEMAP = {
 # related posts
 RELATED_POSTS_MAX = 3
 
-# advance embed tweet
-# TWITTER_CARDS = 'hidden'
-TWITTER_DNT = 'true'
-TWITTER_ALIGN = 'center'
+# # advance embed tweet
+# # TWITTER_CARDS = 'hidden'
+# TWITTER_DNT = 'true'
+# TWITTER_ALIGN = 'center'
 
 # Pelican cite plugin
 PUBLICATIONS_SRC = 'content/publications.bib'

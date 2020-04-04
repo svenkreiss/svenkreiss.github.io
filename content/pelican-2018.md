@@ -57,7 +57,7 @@ in the central repository and not against the individual plugins. Updates to
 plugins have to wait for inclusion in the central repository before they become
 used by others.
 
-<div>@svenkreiss/status/960716731059785730</div>
+<!-- <div>@svenkreiss/status/960716731059785730</div> -->
 
 Python provides its standard mechanism with `pip`, `setuptools`, `requirements.txt`, etc.
 to manage dependencies. Plugins can be written to support `pip` and Pelican

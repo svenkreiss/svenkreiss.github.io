@@ -18,13 +18,13 @@ Here is my answer for the simplest ids.
 Get a feel for the cells and faces of the cube by using the web tools
 at [s2.sidewalklabs.com](https://s2.sidewalklabs.com):
 
-<img style="width:58.5%" src="/images/s2cell_regioncoverer.png" alt="S2Cell region coverer with example cell tokens"></img>
-<img style="width:39.7%" src="/images/s2cell_globe.png" alt="S2Cell globe"></img>
+<img style="width:58.5%" src="/images/s2cell_regioncoverer.png" alt="S2Cell region coverer with example cell tokens" />
+<img style="width:39.7%" src="/images/s2cell_globe.png" alt="S2Cell globe" />
 
 The above images show the location of face 0 on earth. Below is the unfolded
 curve how it spans and connects to the other faces of the cube:
 
-<img style="max-height: 15em; display:block; margin:1em auto 2em;" src="/images/s2cell_faces.png" alt="S2Cell cube faces"></img>
+<img style="max-height: 15em; display:block; margin:1em auto 2em;" src="/images/s2cell_faces.png" alt="S2Cell cube faces" />
 
 Tokens are hex format with right zeros stripped. To recover an integer, use
 [`from_token()`](https://s2sphere.readthedocs.io/en/latest/api.html#s2sphere.CellId.from_token)

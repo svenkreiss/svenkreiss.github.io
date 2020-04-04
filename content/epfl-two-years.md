@@ -7,7 +7,7 @@ Summary: Summary of achievements in my first two years back in academia at EPFL.
 Status: published
 
 
-<img class="image-process-crisp" src="/images/twoyearsepfl_crowd_pifpaf.png" alt="PifPaf crowd"></img>
+<img class="image-process-crisp" src="/images/twoyearsepfl_crowd_pifpaf.png" alt="PifPaf crowd" />
 
 Two years ago, I returned from New York City to Geneva. I had left my
 industry job and returned to academia as a postdoc in Computer Vision at
