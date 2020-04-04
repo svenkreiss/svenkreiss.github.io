@@ -1,4 +1,4 @@
-Title: Achievements in Two Years at Epfl
+Title: Achievements in Two Years at EPFL
 Date: 2020-04-03
 Category: ML
 Tags: review

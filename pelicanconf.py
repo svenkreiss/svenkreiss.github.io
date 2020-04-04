@@ -2,11 +2,13 @@
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
 
-AUTHOR = u'Sven Kreiss'
-SITENAME = u'Sven Kreiss'
+AUTHOR = 'Sven Kreiss'
+SITENAME = 'Sven Kreiss'
 SITEURL = ''
 
-TIMEZONE = 'America/New_York'
+PATH = 'content'
+
+TIMEZONE = 'Europe/Berlin'
 
 DEFAULT_LANG = 'en'
 DEFAULT_DATE_FORMAT = '%B %d, %Y'
@@ -21,6 +23,8 @@ SLUGIFY_SOURCE = 'basename'  # use the file name for slug
 FEED_ALL_ATOM = None
 CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
+AUTHOR_FEED_ATOM = None
+AUTHOR_FEED_RSS = None
 
 # Blogroll
 LINKS = (
@@ -38,7 +42,7 @@ SOCIAL = (
 )
 TWITTER_USERNAME = 'svenkreiss'
 
-DEFAULT_PAGINATION = 10
+DEFAULT_PAGINATION = False
 
 # Uncomment following line if you want document-relative URLs when developing
 # RELATIVE_URLS = True
@@ -61,17 +65,17 @@ THEME = "../pelican-theme-pure"
 # plugins
 PLUGIN_PATHS = ['../pelican-plugins']
 PLUGINS = [
-    'sitemap', 'gravatar', #'pelican_jsmath',  # 'render_math',
+    'sitemap', 'gravatar', 'pelican_jsmath',  # 'render_math',
     'liquid_tags.img', 'liquid_tags.video',
     'liquid_tags.youtube', 'liquid_tags.vimeo',
     'liquid_tags.include_code',
     # 'liquid_tags.notebook',
     'representative_image',
-    'image_process',
-    # 'pelican-cite',
+    # 'image_process',
+    'pelican-cite',
     'related_posts',
     'pelican_dynamic',
-    # 'pelican_advance_embed_tweet',
+    'pelican_advance_embed_tweet',
 ]
 
 # sitemap plugin
@@ -95,29 +99,29 @@ TWITTER_ALIGN = 'center'
 # Pelican cite plugin
 PUBLICATIONS_SRC = 'content/publications.bib'
 
-# Image Process plugin
-IMAGE_PROCESS = {
-    'thumb': {'type': 'image',
-              'ops': ["scale_in 300 300 True"],
-              },
-    'crisp': {'type': 'responsive-image',
-              'srcset': [('1x', ["scale_in 800 600 True"]),
-                         ('2x', ["scale_in 1600 1200 True"]),
-                         ('4x', ["scale_in 3200 2400 True"]),
-                         ],
-              'default': '1x',
-              },
-    'large-photo': {'type': 'responsive-image',
-                    'sizes': ('(min-width: 1200px) 800px, '
-                              '(min-width: 992px) 650px, '
-                              '(min-width: 768px) 718px, 100vw'),
-                    'srcset': [('600w', ["scale_in 600 450 True"]),
-                               ('800w', ["scale_in 800 600 True"]),
-                               ('1600w', ["scale_in 1600 1200 True"]),
-                               ],
-                    'default': '800w',
-                    },
-}
+# # Image Process plugin
+# IMAGE_PROCESS = {
+#     'thumb': {'type': 'image',
+#               'ops': ["scale_in 300 300 True"],
+#               },
+#     'crisp': {'type': 'responsive-image',
+#               'srcset': [('1x', ["scale_in 800 600 True"]),
+#                          ('2x', ["scale_in 1600 1200 True"]),
+#                          ('4x', ["scale_in 3200 2400 True"]),
+#                          ],
+#               'default': '1x',
+#               },
+#     'large-photo': {'type': 'responsive-image',
+#                     'sizes': ('(min-width: 1200px) 800px, '
+#                               '(min-width: 992px) 650px, '
+#                               '(min-width: 768px) 718px, 100vw'),
+#                     'srcset': [('600w', ["scale_in 600 450 True"]),
+#                                ('800w', ["scale_in 800 600 True"]),
+#                                ('1600w', ["scale_in 1600 1200 True"]),
+#                                ],
+#                     'default': '800w',
+#                     },
+# }
 
 # my pure theme specific
 INTERNAL = False
@@ -165,4 +169,4 @@ MENUITEMS = [
 ]
 DISPLAY_PAGES_ON_MENU = True
 
-TYPOGRIFY = True
+TYPOGRIFY = False
