@@ -24,7 +24,7 @@ at [s2.sidewalklabs.com](https://s2.sidewalklabs.com):
 The above images show the location of face 0 on earth. Below is the unfolded
 curve how it spans and connects to the other faces of the cube:
 
-<img style="max-height: 15em; display:block; margin:1em auto 2em;" src="/images/s2cell_faces.png" alt="S2Cell cube faces" />
+<img style="max-height: 15em; display:block; margin:1em auto 2em;" src="/images/s2cell_faces.png" alt="S2Cell cube faces"></img>
 
 Tokens are hex format with right zeros stripped. To recover an integer, use
 [`from_token()`](https://s2sphere.readthedocs.io/en/latest/api.html#s2sphere.CellId.from_token)

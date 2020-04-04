@@ -2,6 +2,7 @@ Title: Projects
 Date: 2014-03-07
 Slug: projects
 Status: published
+Summary: An overview of my personal projects.
 
 
 ## Projects in Pictures
