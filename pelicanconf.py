@@ -61,17 +61,17 @@ THEME = "../pelican-theme-pure"
 # plugins
 PLUGIN_PATHS = ['../pelican-plugins']
 PLUGINS = [
-    'sitemap', 'gravatar', 'pelican_jsmath',  # 'render_math',
+    'sitemap', 'gravatar', #'pelican_jsmath',  # 'render_math',
     'liquid_tags.img', 'liquid_tags.video',
     'liquid_tags.youtube', 'liquid_tags.vimeo',
     'liquid_tags.include_code',
     # 'liquid_tags.notebook',
     'representative_image',
     'image_process',
-    'pelican-cite',
+    # 'pelican-cite',
     'related_posts',
     'pelican_dynamic',
-    'pelican_advance_embed_tweet',
+    # 'pelican_advance_embed_tweet',
 ]
 
 # sitemap plugin
