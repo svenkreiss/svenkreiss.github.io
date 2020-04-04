@@ -125,7 +125,7 @@ instance of a class and therefore we can use it as a process-wide cache.</p>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filename</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">fn</span> <span class="o">=</span> <span class="n">filename</span>
 
-    <span class="nd"><a href="https://twitter.com/property">@property</a></span>
+    <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">word2vec</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">fn</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">Tool</span><span class="o">.</span><span class="n">cache</span><span class="p">:</span>
             <span class="n">Tool</span><span class="o">.</span><span class="n">cache</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">fn</span><span class="p">]</span> <span class="o">=</span> \
@@ -158,7 +158,7 @@ Tool that can cache input data across map jobs in memory.</p>
 <p>During this work, I submitted two pull requests to <code>gensim</code>
 <a href="https://github.com/piskvorky/gensim/pull/545">#545</a> and
 <a href="https://github.com/piskvorky/gensim/pull/555">#555</a> which are merged into the
-master branch. With the next release, <code>load_word2vec_format()</code> will be faster.</p><script src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+master branch. With the next release, <code>load_word2vec_format()</code> will be faster.</p>
 
             <p class="post-footer">
                 // filed
