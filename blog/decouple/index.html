@@ -1,102 +1,128 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta content="Decoupling theoretical uncertainties from measurements of the Higgs boson." name="description"/>
-<meta content="summary" name="twitter:card"/>
-<meta content="@svenkreiss" name="twitter:site"/>
-<meta content="@svenkreiss" name="twitter:creator"/>
-<meta content="Decouple" name="twitter:title"/>
-<meta content="Decoupling theoretical uncertainties from measurements of the Higgs boson." name="twitter:description"/>
-<meta content="https://www.svenkreiss.com/images/decouple.png" name="twitter:image:src"/>
-<meta content="svenkreiss.com" name="twitter:domain"/>
-<meta content="Decouple" property="og:title"/>
-<meta content="article" property="og:type"/>
-<meta content="Decoupling theoretical uncertainties from measurements of the Higgs boson." property="og:description"/>
-<meta content="https://www.svenkreiss.com/images/decouple.png" property="og:image"/>
-<meta content="svenkreiss.com" property="og:site_name"/>
-<meta content="https://www.svenkreiss.com/blog/decouple/" property="og:url"/>
-<link href="https://www.svenkreiss.com/feeds/all.atom.xml" rel="alternate" title="Sven Kreiss Full Atom Feed" type="application/atom+xml"/>
-<title>Decouple - Sven Kreiss</title>
-<!-- KaTeX -->
-<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0-beta1/katex.min.css" integrity="sha384-VEnyslhHLHiYPca9KFkBB3CMeslnM9CzwjxsEbZTeA21JBm7tdLwKoZmCt3cZTYD" rel="stylesheet"/>
-<script crossorigin="anonymous" integrity="sha384-O4hpKqcplNCe+jLuBVEXC10Rn1QEqAmX98lKAIFBEDxZI0a+6Z2w2n8AEtQbR4CD" src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0-beta1/katex.min.js"></script>
-<script crossorigin="anonymous" integrity="sha384-IiI65aU9ZYub2MY9zhtKd1H2ps7xxf+eb2YFG9lX6uRqpXCvBTOidPRCXCrQ++Uc" src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0-beta1/contrib/auto-render.min.js"></script>
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"/>
-<link href="https://www.svenkreiss.com/theme/css/pure.css?v=0.1.0" rel="stylesheet"/>
-<link href="https://www.svenkreiss.com/theme/css/pygments.css" rel="stylesheet"/>
-<!-- for pelican_dynamic plugin -->
-<!-- end pelican_dynamic -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Decoupling theoretical uncertainties from measurements of the Higgs boson." />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@svenkreiss" />
+    <meta name="twitter:creator" content="@svenkreiss" />
+    <meta name="twitter:title" content="Decouple" />
+    <meta name="twitter:description" content="Decoupling theoretical uncertainties from measurements of the Higgs boson." />
+    <meta name="twitter:image:src" content="https://www.svenkreiss.com/images/decouple.png" />
+    <meta name="twitter:domain" content="svenkreiss.com" />
+
+    <meta property="og:title" content="Decouple" />
+    <meta property="og:type" content="article" />
+    <meta property="og:description" content="Decoupling theoretical uncertainties from measurements of the Higgs boson." />
+    <meta property="og:image" content="https://www.svenkreiss.com/images/decouple.png" />
+    <meta property="og:site_name" content="svenkreiss.com" />
+    <meta property="og:url" content="https://www.svenkreiss.com/blog/decouple/" />
+
+        <link rel="alternate"  href="https://www.svenkreiss.com/feeds/all.atom.xml" type="application/atom+xml" title="Sven Kreiss Full Atom Feed"/>
+
+        <title>Decouple - Sven Kreiss</title>
+
+
+    <!-- KaTeX -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0-beta1/katex.min.css" integrity="sha384-VEnyslhHLHiYPca9KFkBB3CMeslnM9CzwjxsEbZTeA21JBm7tdLwKoZmCt3cZTYD" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0-beta1/katex.min.js" integrity="sha384-O4hpKqcplNCe+jLuBVEXC10Rn1QEqAmX98lKAIFBEDxZI0a+6Z2w2n8AEtQbR4CD" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0-beta1/contrib/auto-render.min.js" integrity="sha384-IiI65aU9ZYub2MY9zhtKd1H2ps7xxf+eb2YFG9lX6uRqpXCvBTOidPRCXCrQ++Uc" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://www.svenkreiss.com/theme/css/pure.css?v=0.1.0" />
+    <link rel="stylesheet" href="https://www.svenkreiss.com/theme/css/pygments.css" />
+
+    <!-- for pelican_dynamic plugin -->
+    <!-- end pelican_dynamic -->
+
 </head>
+
 <body>
 <div class="pure-g-r" id="layout">
-<div class="sidebar sidebar-article pure-u">
-<header class="header-article">
-<a href="https://www.svenkreiss.com/blog/author/sven-kreiss/" title="See posts by Sven Kreiss">
-<img alt="Sven Kreiss" class="avatar" src="https://www.gravatar.com/avatar/562a52f3ffcb6c2a3556f91ddc540776?s=140"/>
-</a>
-<h2 class="article-info">Sven Kreiss</h2>
-<p class="article-date">December 31, 2016</p>
-<a class="header-article-home" href="/blog/">←Articles</a>
-</header>
-</div>
-<div class="pure-u">
-<div class="content">
-<section class="post">
-<header class="post-header">
-<h1>Decouple</h1>
-</header>
-</section>
-<p>The paper <em>Decoupling theoretical uncertainties from measurements of the Higgs boson</em> <a href="#decouple" id="ref-decouple-1">(Cranmer et al., 2015)</a> by Kyle Cranmer, David Lopez-Val, Tilman Plehn and me is now published in <a href="http://journals.aps.org/prd/abstract/10.1103/PhysRevD.91.054032">Phys Rev D91</a> and also available at <a href="https://arxiv.org/abs/1401.0080">arXiv:1401.0080</a>.</p>
+    <div class="sidebar sidebar-article pure-u">
+        <header class="header-article">
+                    <a href="https://www.svenkreiss.com/blog/author/sven-kreiss/" title="See posts by Sven Kreiss">
+                        <img class="avatar" alt="Sven Kreiss" src="https://www.gravatar.com/avatar/562a52f3ffcb6c2a3556f91ddc540776?s=140">
+                    </a>
+                <h2 class="article-info">Sven Kreiss</h2>
+
+
+
+                <p class="article-date">December 31, 2016</p>
+
+                <a class="header-article-home" href="/blog/">&larr;Articles</a>
+        </header>
+    </div>
+    <div class="pure-u">
+        <div class="content">
+            <section class="post">
+                <header class="post-header">
+                    <h1>Decouple</h1>
+                </header>
+            </section>
+
+            <p>The paper <em>Decoupling theoretical uncertainties from measurements of the Higgs boson</em> <a href='#decouple' id='ref-decouple-1'>(Cranmer et al., 2015)</a> by Kyle Cranmer, David Lopez-Val, Tilman Plehn and me is now published in <a href="http://journals.aps.org/prd/abstract/10.1103/PhysRevD.91.054032">Phys Rev D91</a> and also available at <a href="https://arxiv.org/abs/1401.0080">arXiv:1401.0080</a>.</p>
 <blockquote>
-<p>We develop a technique to present Higgs coupling measurements, which decouple the poorly defined theoretical uncertainties associated to inclusive and exclusive cross section predictions. The technique simplifies the combination of multiple measurements and can be used in a more general setting. We illustrate the approach with toy <span class="caps">LHC</span> Higgs coupling measurements and a collection of new physics models.</p>
+<p>We develop a technique to present Higgs coupling measurements, which decouple the poorly defined theoretical uncertainties associated to inclusive and exclusive cross section predictions. The technique simplifies the combination of multiple measurements and can be used in a more general setting. We illustrate the approach with toy LHC Higgs coupling measurements and a collection of new physics models.</p>
 </blockquote>
-<p>We share all the software that was involved. That includes that we published the model files and a Mathematica notebook on <a href="http://figshare.com/articles/Supplementary_Material_for_A_Novel_Approach_to_Higgs_Coupling_Measurements_/888607">figshare</a>. We put all the code on <a href="http://github.com/svenkreiss/decouple">github</a> which can be used for new models or to reproduce all plots in the paper simply by typing <code>make</code>. We even have a little <a href="http://github.com/svenkreiss/decoupledDemo">demo project</a> that pulls three pre-made decoupled models from a webpage and recouples them and produces two plots of combined benchmark coupling models.</p>
-<p><img alt="Decouple part of figure 4" src="/images/decouple.png"/></p><script charset="utf-8" src="//platform.twitter.com/widgets.js"></script><hr/>
+<p>We share all the software that was involved. That includes that we published the model files and a Mathematica notebook on <a href="http://figshare.com/articles/Supplementary_Material_for_A_Novel_Approach_to_Higgs_Coupling_Measurements_/888607">figshare</a>. We put all the code on <a href="http://github.com/svenkreiss/decouple">github</a> which can be used for new models or to reproduce all plots in the paper simply by typing <code>make</code>. We even have a little <a href="http://github.com/svenkreiss/decoupledDemo">demo project</a> that pulls three pre-made decoupled models from a webpage and recouples them and produces two plots of combined benchmark coupling models.</p>
+<p><img src="/images/decouple.png" alt="Decouple part of figure 4" /></p><script src="//platform.twitter.com/widgets.js" charset="utf-8"></script><hr>
 <h2>Bibliography</h2>
-<p id="decouple">Kyle Cranmer, Sven Kreiss, David Lopez-Val, and Tilman Plehn.
+<p id='decouple'>Kyle Cranmer, Sven Kreiss, David Lopez-Val, and Tilman Plehn.
 <span class="bibtex-protected">Decoupling Theoretical Uncertainties from Measurements of the Higgs Boson</span>.
 <em>Phys. Rev.</em>, D91(5):054032, 2015.
 <a href="https://arxiv.org/abs/1401.0080">arXiv:1401.0080</a>, <a href="https://doi.org/10.1103/PhysRevD.91.054032">doi:10.1103/PhysRevD.91.054032</a>. <a class="cite-backref" href="#ref-decouple-1" title="Jump back to reference 1">↩</a></p>
-<p class="post-footer">
+
+
+            <p class="post-footer">
                 // filed
 under                    <a class="post-category" href="https://www.svenkreiss.com/blog/tag/physics/">physics</a>
-                in <a class="post-category" href="https://www.svenkreiss.com/blog/category/science/">Science</a>   
+                    <a class="post-category" href="https://www.svenkreiss.com/blog/tag/science/">science</a>
+                in <a class="post-category" href="https://www.svenkreiss.com/blog/category/science/">Science</a>&nbsp;&nbsp;&nbsp;
 
                 <span style="display:inline-block;">
-                // share on <a href="https://twitter.com/share?text=%22Decouple%3A%20Decoupling%20theoretical%20uncertainties%20from%20measurements%20of%20the%20Higgs%C2%A0boson.%22&amp;hashtags=physics" target="_blank">
-<i class="fa fa-twitter fa-lg"></i> Twitter
+                // share on <a href="https://twitter.com/share?text=%22Decouple%3A%20Decoupling%20theoretical%20uncertainties%20from%20measurements%20of%20the%20Higgs%20boson.%22&amp;hashtags=physics%2Cscience" target="_blank">
+                    <i class="fa fa-twitter fa-lg"></i> Twitter
                 </a>
-</span>
-</p>
-<div class="hr"></div>
-<h2>Related Posts</h2>
-<ul class="related-posts">
-<li>
-<a class="title" href="https://www.svenkreiss.com/blog/phd-thesis/">PhD Thesis</a>
-<span class="date">from August 17, 2014</span>
-<span class="summary">Finished my PhD thesis: Higgs Boson Discovery and First Property Measurements using the ATLAS Detector. It summarizes my work over a few years on Higgs Physics with ATLAS and on collaborative statistical modeling.</span>
-</li>
-<li>
-<a class="title" href="https://www.svenkreiss.com/blog/morph-demo/">morphDemo</a>
-<span class="date">from March 06, 2014</span>
-<span class="summary">Demo of a new horizontal morphing algorithm.</span>
-</li>
-</ul>
-<a class="go-top" href="#">Go Top</a>
+                </span>
+            </p>
+            <div class="hr"></div>
+
+            <h2>Related Posts</h2>
+            <ul class="related-posts">
+                <li>
+                    <a class="title" href="https://www.svenkreiss.com/blog/phd-thesis/">PhD Thesis</a>
+                    <span class="date">from August 17, 2014</span>
+                    <span class="summary">Finished my PhD thesis: Higgs Boson Discovery and First Property Measurements using the ATLAS Detector. It summarizes my work over a few years on Higgs Physics with ATLAS and on collaborative statistical modeling.</span>
+                </li>
+                <li>
+                    <a class="title" href="https://www.svenkreiss.com/blog/morph-demo/">morphDemo</a>
+                    <span class="date">from March 06, 2014</span>
+                    <span class="summary">Demo of a new horizontal morphing algorithm.</span>
+                </li>
+                <li>
+                    <a class="title" href="https://www.svenkreiss.com/blog/epfl-two-years/">Achievements in Two Years at EPFL</a>
+                    <span class="date">from April 03, 2020</span>
+                    <span class="summary">Summary of achievements in my first two years back in academia at EPFL.</span>
+                </li>
+            </ul>
+
+            <a href="#" class="go-top">Go Top</a>
 <footer class="footer">
-<p>© Sven Kreiss  2014 – 2020. Published with <a href="https://github.com/getpelican/pelican">Pelican</a>.<br/>This work is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" rel="license">Creative Commons Attribution 4.0 International License</a>.</p>
-</footer> </div>
+    <p>&copy; Sven Kreiss  2014 &ndash; 2020. Published with <a href="https://github.com/getpelican/pelican">Pelican</a>.<br />This work is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</p>
+</footer>        </div>
+    </div>
 </div>
-</div>
-<script>
+    <script>
         renderMathInElement(document.body);
     </script>
-<!-- for pelican_dynamic plugin -->
+
+    <!-- for pelican_dynamic plugin -->
+
 <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-4070485-2"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-4070485-2"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -104,5 +130,7 @@ under                    <a class="post-category" href="https://www.svenkreiss.c
 
   gtag('config', 'UA-4070485-2', { 'anonymize_ip': true });
 </script>
+
+
 </body>
 </html>

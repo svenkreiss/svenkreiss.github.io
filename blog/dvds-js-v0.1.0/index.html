@@ -1,58 +1,74 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta content="Distributed Versioned Data Structures in JavaScript. Like git in js." name="description"/>
-<meta content="summary" name="twitter:card"/>
-<meta content="@svenkreiss" name="twitter:site"/>
-<meta content="@svenkreiss" name="twitter:creator"/>
-<meta content="dvds-js version 0.1.0" name="twitter:title"/>
-<meta content="Distributed Versioned Data Structures in JavaScript. Like git in js." name="twitter:description"/>
-<meta content="https://www.svenkreiss.com/images/dvds-js-v010-commitgraphs.png" name="twitter:image:src"/>
-<meta content="svenkreiss.com" name="twitter:domain"/>
-<meta content="dvds-js version 0.1.0" property="og:title"/>
-<meta content="article" property="og:type"/>
-<meta content="Distributed Versioned Data Structures in JavaScript. Like git in js." property="og:description"/>
-<meta content="https://www.svenkreiss.com/images/dvds-js-v010-commitgraphs.png" property="og:image"/>
-<meta content="svenkreiss.com" property="og:site_name"/>
-<meta content="https://www.svenkreiss.com/blog/dvds-js-v0.1.0/" property="og:url"/>
-<link href="https://www.svenkreiss.com/feeds/all.atom.xml" rel="alternate" title="Sven Kreiss Full Atom Feed" type="application/atom+xml"/>
-<title>dvds-js version 0.1.0 - Sven Kreiss</title>
-<!-- KaTeX -->
-<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0-beta1/katex.min.css" integrity="sha384-VEnyslhHLHiYPca9KFkBB3CMeslnM9CzwjxsEbZTeA21JBm7tdLwKoZmCt3cZTYD" rel="stylesheet"/>
-<script crossorigin="anonymous" integrity="sha384-O4hpKqcplNCe+jLuBVEXC10Rn1QEqAmX98lKAIFBEDxZI0a+6Z2w2n8AEtQbR4CD" src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0-beta1/katex.min.js"></script>
-<script crossorigin="anonymous" integrity="sha384-IiI65aU9ZYub2MY9zhtKd1H2ps7xxf+eb2YFG9lX6uRqpXCvBTOidPRCXCrQ++Uc" src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0-beta1/contrib/auto-render.min.js"></script>
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"/>
-<link href="https://www.svenkreiss.com/theme/css/pure.css?v=0.1.0" rel="stylesheet"/>
-<link href="https://www.svenkreiss.com/theme/css/pygments.css" rel="stylesheet"/>
-<!-- for pelican_dynamic plugin -->
-<link href="https://www.svenkreiss.com/css/dvds-js.css" rel="stylesheet" type="text/css"/>
-<!-- end pelican_dynamic -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Distributed Versioned Data Structures in JavaScript. Like git in js." />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@svenkreiss" />
+    <meta name="twitter:creator" content="@svenkreiss" />
+    <meta name="twitter:title" content="dvds-js version 0.1.0" />
+    <meta name="twitter:description" content="Distributed Versioned Data Structures in JavaScript. Like git in js." />
+    <meta name="twitter:image:src" content="https://www.svenkreiss.com/images/dvds-js-v010-commitgraphs.png" />
+    <meta name="twitter:domain" content="svenkreiss.com" />
+
+    <meta property="og:title" content="dvds-js version 0.1.0" />
+    <meta property="og:type" content="article" />
+    <meta property="og:description" content="Distributed Versioned Data Structures in JavaScript. Like git in js." />
+    <meta property="og:image" content="https://www.svenkreiss.com/images/dvds-js-v010-commitgraphs.png" />
+    <meta property="og:site_name" content="svenkreiss.com" />
+    <meta property="og:url" content="https://www.svenkreiss.com/blog/dvds-js-v0.1.0/" />
+
+        <link rel="alternate"  href="https://www.svenkreiss.com/feeds/all.atom.xml" type="application/atom+xml" title="Sven Kreiss Full Atom Feed"/>
+
+        <title>dvds-js version 0.1.0 - Sven Kreiss</title>
+
+
+    <!-- KaTeX -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0-beta1/katex.min.css" integrity="sha384-VEnyslhHLHiYPca9KFkBB3CMeslnM9CzwjxsEbZTeA21JBm7tdLwKoZmCt3cZTYD" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0-beta1/katex.min.js" integrity="sha384-O4hpKqcplNCe+jLuBVEXC10Rn1QEqAmX98lKAIFBEDxZI0a+6Z2w2n8AEtQbR4CD" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0-beta1/contrib/auto-render.min.js" integrity="sha384-IiI65aU9ZYub2MY9zhtKd1H2ps7xxf+eb2YFG9lX6uRqpXCvBTOidPRCXCrQ++Uc" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://www.svenkreiss.com/theme/css/pure.css?v=0.1.0" />
+    <link rel="stylesheet" href="https://www.svenkreiss.com/theme/css/pygments.css" />
+
+    <!-- for pelican_dynamic plugin -->
+    <link rel="stylesheet" href="https://www.svenkreiss.com/css/dvds-js.css" type="text/css" />
+    <!-- end pelican_dynamic -->
+
 </head>
+
 <body>
 <div class="pure-g-r" id="layout">
-<div class="sidebar sidebar-article pure-u">
-<header class="header-article">
-<a href="https://www.svenkreiss.com/blog/author/sven-kreiss/" title="See posts by Sven Kreiss">
-<img alt="Sven Kreiss" class="avatar" src="https://www.gravatar.com/avatar/562a52f3ffcb6c2a3556f91ddc540776?s=140"/>
-</a>
-<h2 class="article-info">Sven Kreiss</h2>
-<p class="article-date">April 25, 2014</p>
-<a class="header-article-home" href="/blog/">←Articles</a>
-</header>
-</div>
-<div class="pure-u">
-<div class="content">
-<section class="post">
-<header class="post-header">
-<h1>dvds-js version 0.1.0</h1>
-</header>
-</section>
-<h2>This article and dvds-js are outdated :(</h2>
-<script charset="utf-8" src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.11/d3.min.js"></script>
+    <div class="sidebar sidebar-article pure-u">
+        <header class="header-article">
+                    <a href="https://www.svenkreiss.com/blog/author/sven-kreiss/" title="See posts by Sven Kreiss">
+                        <img class="avatar" alt="Sven Kreiss" src="https://www.gravatar.com/avatar/562a52f3ffcb6c2a3556f91ddc540776?s=140">
+                    </a>
+                <h2 class="article-info">Sven Kreiss</h2>
+
+
+
+                <p class="article-date">April 25, 2014</p>
+
+                <a class="header-article-home" href="/blog/">&larr;Articles</a>
+        </header>
+    </div>
+    <div class="pure-u">
+        <div class="content">
+            <section class="post">
+                <header class="post-header">
+                    <h1>dvds-js version 0.1.0</h1>
+                </header>
+            </section>
+
+            <h2>This article and dvds-js are outdated :(</h2>
+<script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.11/d3.min.js" charset="utf-8"></script>
+
 <script src="http://requirejs.org/docs/release/2.1.2/minified/require.js"></script>
+
 <script>
 require.config({
     paths: {
@@ -67,80 +83,85 @@ require.config({
     }
 });
 </script>
+
 <blockquote>
 <p>Distributed Versioned Data Structures in JavaScript. Like git in js.
 Checkout the code on <a href="http://github.com/svenkreiss/dvds-js">github.com/svenkreiss/dvds-js</a>.</p>
 </blockquote>
-<p>The aim of <code>dvds-js</code> is to have a container (or repository) for data structures in JavaScript that you can <code>fork()</code>, serialize and send over the wire, <code>commit()</code> to and then stream back and <code>merge()</code> with full conflict resolution. Here, <em>data structures</em> means anything that can be serialized with <span class="caps">JSON</span>.</p>
-<p>This post is about the first development release, version 0.1.0.</p>
+<p>The aim of <code>dvds-js</code> is to have a container (or repository) for data structures in JavaScript that you can <code>fork()</code>, serialize and send over the wire, <code>commit()</code> to and then stream back and <code>merge()</code> with full conflict resolution. Here, <em>data structures</em> means anything that can be serialized with JSON.</p>
+<p>This post is about the first development release, version 0.1.0.</p>
 <h2>Example</h2>
-<p>A repository <code>a</code> is created holding an array with the two names <code>Paul</code> and <code>Adam</code>. Then this repository is forked and the fork is called <code>b</code>. Both <code>a</code> and <code>b</code> are then modified. To demonstrate streaming capabilities, repository <code>b</code> is stringified before and after the manipulation. At the end <code>b</code> is merged into <code>a</code> and the result is shown below.</p>
-<div class="highlight"><pre><span></span><span class="nx">require</span><span class="p">([</span><span class="s1">'dvds'</span><span class="p">,</span> <span class="s1">'dvds.visualize'</span><span class="p">],</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-    <span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">dvds</span><span class="p">.</span><span class="nx">Repository</span><span class="p">([</span><span class="s1">'Paul'</span><span class="p">,</span><span class="s1">'Adam'</span><span class="p">]);</span>
+<p>A repository <code>a</code> is created holding an array with the two names <code>Paul</code> and <code>Adam</code>. Then this repository is forked and the fork is called <code>b</code>. Both <code>a</code> and <code>b</code> are then modified. To demonstrate streaming capabilities, repository <code>b</code> is stringified before and after the manipulation. At the end <code>b</code> is merged into <code>a</code> and the result is shown below.</p>
+<div class="highlight"><pre><span></span><span class="nx">require</span><span class="p">([</span><span class="s1">&#39;dvds&#39;</span><span class="p">,</span> <span class="s1">&#39;dvds.visualize&#39;</span><span class="p">],</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">dvds</span><span class="p">.</span><span class="nx">Repository</span><span class="p">([</span><span class="s1">&#39;Paul&#39;</span><span class="p">,</span><span class="s1">&#39;Adam&#39;</span><span class="p">]);</span>
     <span class="kd">var</span> <span class="nx">b</span> <span class="o">=</span> <span class="nx">a</span><span class="p">.</span><span class="nx">fork</span><span class="p">();</span>
     <span class="kd">var</span> <span class="nx">bString</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">b</span><span class="p">);</span>
 
     <span class="c1">// send bString to a different machine and make it a repository again</span>
     <span class="kd">var</span> <span class="nx">bStreamed</span> <span class="o">=</span> <span class="nx">dvds</span><span class="p">.</span><span class="nx">Repository</span><span class="p">.</span><span class="nx">parseJSON</span><span class="p">(</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">bString</span><span class="p">)</span> <span class="p">);</span>
-    <span class="nx">bStreamed</span><span class="p">.</span><span class="nx">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="s1">'Karl'</span><span class="p">;</span>
-    <span class="nx">bStreamed</span><span class="p">.</span><span class="nx">data</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s1">'Peter'</span><span class="p">;</span>
+    <span class="nx">bStreamed</span><span class="p">.</span><span class="nx">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Karl&#39;</span><span class="p">;</span>
+    <span class="nx">bStreamed</span><span class="p">.</span><span class="nx">data</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Peter&#39;</span><span class="p">;</span>
     <span class="c1">// convert to a string again to send back</span>
     <span class="kd">var</span> <span class="nx">bStreamedString</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">bStreamed</span><span class="p">);</span>
 
     <span class="c1">// meanwhile on a</span>
-    <span class="nx">a</span><span class="p">.</span><span class="nx">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="s1">'Paula'</span><span class="p">;</span>
+    <span class="nx">a</span><span class="p">.</span><span class="nx">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Paula&#39;</span><span class="p">;</span>
 
     <span class="c1">// receive the modified b repository</span>
     <span class="kd">var</span> <span class="nx">bReceived</span> <span class="o">=</span> <span class="nx">dvds</span><span class="p">.</span><span class="nx">Repository</span><span class="p">.</span><span class="nx">parseJSON</span><span class="p">(</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">bStreamedString</span><span class="p">)</span> <span class="p">);</span>
     <span class="nx">a</span><span class="p">.</span><span class="nx">merge</span><span class="p">(</span><span class="nx">bReceived</span><span class="p">);</span>
 
     <span class="c1">// update html output</span>
-    <span class="nx">$</span><span class="p">(</span><span class="s2">"#test1Out"</span><span class="p">).</span><span class="nx">text</span><span class="p">(</span><span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">a</span><span class="p">.</span><span class="nx">data</span><span class="p">));</span>
+    <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#test1Out&quot;</span><span class="p">).</span><span class="nx">text</span><span class="p">(</span><span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">a</span><span class="p">.</span><span class="nx">data</span><span class="p">));</span>
 
     <span class="c1">// visualize</span>
-    <span class="nx">dvds</span><span class="p">.</span><span class="nx">visualize</span><span class="p">.</span><span class="nx">CommitGraph</span><span class="p">(</span><span class="nx">d3</span><span class="p">.</span><span class="nx">select</span><span class="p">(</span><span class="s1">'#test1Graph'</span><span class="p">))(</span><span class="nx">a</span><span class="p">);</span>
-    <span class="nx">dvds</span><span class="p">.</span><span class="nx">visualize</span><span class="p">.</span><span class="nx">CommitGraph</span><span class="p">(</span><span class="nx">d3</span><span class="p">.</span><span class="nx">select</span><span class="p">(</span><span class="s1">'#test2Graph'</span><span class="p">))(</span><span class="nx">bReceived</span><span class="p">);</span>
+    <span class="nx">dvds</span><span class="p">.</span><span class="nx">visualize</span><span class="p">.</span><span class="nx">CommitGraph</span><span class="p">(</span><span class="nx">d3</span><span class="p">.</span><span class="nx">select</span><span class="p">(</span><span class="s1">&#39;#test1Graph&#39;</span><span class="p">))(</span><span class="nx">a</span><span class="p">);</span>
+    <span class="nx">dvds</span><span class="p">.</span><span class="nx">visualize</span><span class="p">.</span><span class="nx">CommitGraph</span><span class="p">(</span><span class="nx">d3</span><span class="p">.</span><span class="nx">select</span><span class="p">(</span><span class="s1">&#39;#test2Graph&#39;</span><span class="p">))(</span><span class="nx">bReceived</span><span class="p">);</span>
 <span class="p">});</span>
 </pre></div>
+
+
 <p><strong>Live output</strong>: <span id="test1Out">?</span></p>
 <p>Edit on <a href="http://jsfiddle.net/3Ruat/11/">http://jsfiddle.net/3Ruat/11/</a>.</p>
-<h3>Graph of Commits</h3>
-<p>Repositories are created with commit 0 shown on the left and then develop towards the right with the last commit on the far right. The second graph shows a merge of <code>a</code> and <code>b</code> as the last commit. This is a live visualization of the two repositories in the example.</p>
+<h3>Graph of Commits</h3>
+<p>Repositories are created with commit 0 shown on the left and then develop towards the right with the last commit on the far right. The second graph shows a merge of <code>a</code> and <code>b</code> as the last commit. This is a live visualization of the two repositories in the example.</p>
 <p>Repository <code>b</code>:</p>
-<p><svg height="150" id="test2Graph" width="600"></svg></p>
+<p><svg height="150" width="600" id="test2Graph"></svg></p>
 <p>Repository <code>a</code> merged with <code>b</code>:</p>
-<p><svg height="150" id="test1Graph" width="600"></svg></p>
+<p><svg height="150" width="600" id="test1Graph"></svg></p>
 <h2>Features</h2>
 <ul>
-<li>special merge algorithms for nested arrays and objects (e.g. arrays inside of objects inside of arrays inside of an object)</li>
-<li>commit hash is built over the commit’s data, but also over the entire parent-tree which means that the commit id can validate the entire parent-tree</li>
+<li>special merge algorithms for nested arrays and objects (e.g. arrays inside of objects inside of arrays inside of an object)</li>
+<li>commit hash is built over the commit's data, but also over the entire parent-tree which means that the commit id can validate the entire parent-tree</li>
 <li>a repository exposes the <code>data</code> member that behaves like a normal js variable (e.g. can be used in <code>angular.js</code> directly)</li>
 <li>visualization (currently only <code>CommitGraph</code>) is factored into its own submodule <code>visualize</code></li>
 <li>unit tests run with <code>Jasmine</code> and <code>Karma</code>, <code>jscs</code> is used to check code style, <code>uglify</code> is used to build min version and automation is done with <code>grunt</code></li>
 </ul>
 <h2>Setup</h2>
-<p><code>dvds-js</code> is an <a href="http://requirejs.org/docs/whyamd.html#amd"><span class="caps">AMD</span> library</a>. You can load it using <code>require-js</code> in the browser as in the example above. The setup looks something like this:</p>
-<div class="highlight"><pre><span></span><span class="o">&amp;</span><span class="nx">lt</span><span class="p">;</span><span class="nx">script</span> <span class="nx">src</span><span class="o">=</span><span class="s2">"http://s3.amazonaws.com/flaskApp_static/static/d3/d3.v3.min.js"</span> <span class="nx">charset</span><span class="o">=</span><span class="s2">"utf-8"</span><span class="o">&amp;</span><span class="nx">gt</span><span class="p">;</span><span class="o">&amp;</span><span class="nx">lt</span><span class="p">;</span><span class="err">/script&amp;gt;</span>
-<span class="o">&amp;</span><span class="nx">lt</span><span class="p">;</span><span class="nx">script</span> <span class="nx">src</span><span class="o">=</span><span class="s2">"http://requirejs.org/docs/release/2.1.2/minified/require.js"</span><span class="o">&amp;</span><span class="nx">gt</span><span class="p">;</span><span class="o">&amp;</span><span class="nx">lt</span><span class="p">;</span><span class="err">/script&amp;gt;</span>
-<span class="o">&amp;</span><span class="nx">lt</span><span class="p">;</span><span class="nx">script</span><span class="o">&amp;</span><span class="nx">gt</span><span class="p">;</span>
+<p><code>dvds-js</code> is an <a href="http://requirejs.org/docs/whyamd.html#amd">AMD library</a>. You can load it using <code>require-js</code> in the browser as in the example above. The setup looks something like this:</p>
+<div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="nx">script</span> <span class="nx">src</span><span class="o">=</span><span class="s2">&quot;http://s3.amazonaws.com/flaskApp_static/static/d3/d3.v3.min.js&quot;</span> <span class="nx">charset</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="o">&gt;&lt;</span><span class="err">/script&gt;</span>
+<span class="o">&lt;</span><span class="nx">script</span> <span class="nx">src</span><span class="o">=</span><span class="s2">&quot;http://requirejs.org/docs/release/2.1.2/minified/require.js&quot;</span><span class="o">&gt;&lt;</span><span class="err">/script&gt;</span>
+<span class="o">&lt;</span><span class="nx">script</span><span class="o">&gt;</span>
 <span class="nx">require</span><span class="p">.</span><span class="nx">config</span><span class="p">({</span>
     <span class="nx">paths</span><span class="o">:</span> <span class="p">{</span>
-        <span class="s1">'crypto-js.SHA3'</span><span class="o">:</span> <span class="s1">'http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/sha3'</span><span class="p">,</span>
-        <span class="s1">'dvds'</span><span class="o">:</span> <span class="s1">'http://svenkreiss.github.io/dvds-js/lib/dvds-0.1.0/dvds.min'</span><span class="p">,</span>
-        <span class="s1">'dvds.visualize'</span><span class="o">:</span> <span class="s1">'http://svenkreiss.github.io/dvds-js/lib/dvds-0.1.0/dvds.min'</span><span class="p">,</span>
+        <span class="s1">&#39;crypto-js.SHA3&#39;</span><span class="o">:</span> <span class="s1">&#39;http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/sha3&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;dvds&#39;</span><span class="o">:</span> <span class="s1">&#39;http://svenkreiss.github.io/dvds-js/lib/dvds-0.1.0/dvds.min&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;dvds.visualize&#39;</span><span class="o">:</span> <span class="s1">&#39;http://svenkreiss.github.io/dvds-js/lib/dvds-0.1.0/dvds.min&#39;</span><span class="p">,</span>
     <span class="p">},</span>
     <span class="nx">shim</span><span class="o">:</span> <span class="p">{</span>
-        <span class="s1">'crypto-js.SHA3'</span><span class="o">:</span> <span class="p">{</span>
-            <span class="nx">exports</span><span class="o">:</span> <span class="s1">'CryptoJS'</span>
+        <span class="s1">&#39;crypto-js.SHA3&#39;</span><span class="o">:</span> <span class="p">{</span>
+            <span class="nx">exports</span><span class="o">:</span> <span class="s1">&#39;CryptoJS&#39;</span>
         <span class="p">}</span>
     <span class="p">}</span>
 <span class="p">});</span>
-<span class="o">&amp;</span><span class="nx">lt</span><span class="p">;</span><span class="err">/script&amp;gt;</span>
+<span class="o">&lt;</span><span class="err">/script&gt;</span>
 </pre></div>
+
+
 <p>This includes <code>d3.js</code> for visualizations and <code>CryptoJS</code> is needed for calculating unique identifiers for commits.
 In <code>node.js</code>, this setup is not necessary and you would simply use <code>require()</code>.</p>
-<h2>Appendix: Static image of commit graphs</h2>
-<p><img alt="Commit graphs of dvds-js example." src="/images/dvds-js-v010-commitgraphs.png" title="Commit graphs of dvds-js example." width="500"/></p>
+<h2>Appendix: Static image of commit graphs</h2>
+<p><img src="/images/dvds-js-v010-commitgraphs.png" width="500" title="Commit graphs of dvds-js example." alt="Commit graphs of dvds-js example."></p>
 <script>
 require(['dvds', 'dvds.visualize'], function() {
 
@@ -169,53 +190,58 @@ require(['dvds', 'dvds.visualize'], function() {
     dvds.visualize.CommitGraph(d3.select('#test1Graph'))(a);
     dvds.visualize.CommitGraph(d3.select('#test2Graph'))(bReceived);
 });
-</script><script charset="utf-8" src="//platform.twitter.com/widgets.js"></script>
-<p class="post-footer">
+</script><script src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+            <p class="post-footer">
                 // filed
 under                    <a class="post-category" href="https://www.svenkreiss.com/blog/tag/dvds-js/">dvds-js</a>
-<a class="post-category" href="https://www.svenkreiss.com/blog/tag/javascript/">JavaScript</a>
-<a class="post-category" href="https://www.svenkreiss.com/blog/tag/d3js/">d3.js</a>
-<a class="post-category" href="https://www.svenkreiss.com/blog/tag/distributed/">distributed</a>
-<a class="post-category" href="https://www.svenkreiss.com/blog/tag/version-control/">version control</a>
-                in <a class="post-category" href="https://www.svenkreiss.com/blog/category/tech/">Tech</a>   
+                    <a class="post-category" href="https://www.svenkreiss.com/blog/tag/javascript/">JavaScript</a>
+                    <a class="post-category" href="https://www.svenkreiss.com/blog/tag/d3js/">d3.js</a>
+                    <a class="post-category" href="https://www.svenkreiss.com/blog/tag/distributed/">distributed</a>
+                    <a class="post-category" href="https://www.svenkreiss.com/blog/tag/version-control/">version control</a>
+                in <a class="post-category" href="https://www.svenkreiss.com/blog/category/tech/">Tech</a>&nbsp;&nbsp;&nbsp;
 
                 <span style="display:inline-block;">
-                // share on <a href="https://twitter.com/share?text=%22dvds-js%20version%C2%A00.1.0%3A%20Distributed%20Versioned%20Data%20Structures%20in%20JavaScript.%20Like%20git%20in%C2%A0js.%22&amp;hashtags=dvds-js%2CJavaScript%2Cd3.js%2Cdistributed%2Cversioncontrol" target="_blank">
-<i class="fa fa-twitter fa-lg"></i> Twitter
+                // share on <a href="https://twitter.com/share?text=%22dvds-js%20version%200.1.0%3A%20Distributed%20Versioned%20Data%20Structures%20in%20JavaScript.%20Like%20git%20in%20js.%22&amp;hashtags=dvds-js%2CJavaScript%2Cd3.js%2Cdistributed%2Cversioncontrol" target="_blank">
+                    <i class="fa fa-twitter fa-lg"></i> Twitter
                 </a>
-</span>
-</p>
-<div class="hr"></div>
-<h2>Related Posts</h2>
-<ul class="related-posts">
-<li>
-<a class="title" href="https://www.svenkreiss.com/blog/databench-initial/">Databench</a>
-<span class="date">from June 03, 2014</span>
-<span class="summary">Databench is a data analysis tool using Flask, Socket.IO and d3.js with optional parallelization with Redis Queue and visualization with mpld3.</span>
-</li>
-<li>
-<a class="title" href="https://www.svenkreiss.com/blog/databench-v04/">Databench v0.4</a>
-<span class="date">from September 22, 2016</span>
-<span class="summary">New release of Databench that switches the backend from Flask to Tornado, fully supports Python 2 and 3, transpiles ES6 to legacy JavaScript and runs unit tests and coverage on every commit.</span>
-</li>
-<li>
-<a class="title" href="https://www.svenkreiss.com/blog/wildcardians-on-twitter/">Wildcardians on Twitter</a>
-<span class="date">from April 27, 2015</span>
-<span class="summary">A short project to visualize the social Twitter graph of people at Wildcard. The backend is particularly efficient in the number of API calls. The visualization is interactive in d3.js.</span>
-</li>
-</ul>
-<a class="go-top" href="#">Go Top</a>
+                </span>
+            </p>
+            <div class="hr"></div>
+
+            <h2>Related Posts</h2>
+            <ul class="related-posts">
+                <li>
+                    <a class="title" href="https://www.svenkreiss.com/blog/databench-initial/">Databench</a>
+                    <span class="date">from June 03, 2014</span>
+                    <span class="summary">Databench is a data analysis tool using Flask, Socket.IO and d3.js with optional parallelization with Redis Queue and visualization with mpld3.</span>
+                </li>
+                <li>
+                    <a class="title" href="https://www.svenkreiss.com/blog/databench-v04/">Databench v0.4</a>
+                    <span class="date">from September 22, 2016</span>
+                    <span class="summary">New release of Databench that switches the backend from Flask to Tornado, fully supports Python 2 and 3, transpiles ES6 to legacy JavaScript and runs unit tests and coverage on every commit.</span>
+                </li>
+                <li>
+                    <a class="title" href="https://www.svenkreiss.com/blog/wildcardians-on-twitter/">Wildcardians on Twitter</a>
+                    <span class="date">from April 27, 2015</span>
+                    <span class="summary">A short project to visualize the social Twitter graph of people at Wildcard. The backend is particularly efficient in the number of API calls. The visualization is interactive in d3.js.</span>
+                </li>
+            </ul>
+
+            <a href="#" class="go-top">Go Top</a>
 <footer class="footer">
-<p>© Sven Kreiss  2014 – 2020. Published with <a href="https://github.com/getpelican/pelican">Pelican</a>.<br/>This work is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" rel="license">Creative Commons Attribution 4.0 International License</a>.</p>
-</footer> </div>
+    <p>&copy; Sven Kreiss  2014 &ndash; 2020. Published with <a href="https://github.com/getpelican/pelican">Pelican</a>.<br />This work is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</p>
+</footer>        </div>
+    </div>
 </div>
-</div>
-<script>
+    <script>
         renderMathInElement(document.body);
     </script>
-<!-- for pelican_dynamic plugin -->
+
+    <!-- for pelican_dynamic plugin -->
+
 <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-4070485-2"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-4070485-2"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -223,5 +249,7 @@ under                    <a class="post-category" href="https://www.svenkreiss.c
 
   gtag('config', 'UA-4070485-2', { 'anonymize_ip': true });
 </script>
+
+
 </body>
 </html>

@@ -1,96 +1,105 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta content="This is a project by Kyle Cranmer and me. To use it: highlight some text and use the shortcut to replace latex with unicode characters Examples: p̅, x̲, ẋ, ∂̸, H → γγ, ℋ, ℒ, x ∈ ℝ, y ∈ ℂ, β, γ, ∑, →, ←, μ⁺, e⁻ Tested with Mac OS X Lion and Snow Leopard …" name="description"/>
-<link href="https://www.svenkreiss.com/feeds/all.atom.xml" rel="alternate" title="Sven Kreiss Full Atom Feed" type="application/atom+xml"/>
-<title>unicodeit - Sven Kreiss</title>
-<!-- KaTeX -->
-<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0-beta1/katex.min.css" integrity="sha384-VEnyslhHLHiYPca9KFkBB3CMeslnM9CzwjxsEbZTeA21JBm7tdLwKoZmCt3cZTYD" rel="stylesheet"/>
-<script crossorigin="anonymous" integrity="sha384-O4hpKqcplNCe+jLuBVEXC10Rn1QEqAmX98lKAIFBEDxZI0a+6Z2w2n8AEtQbR4CD" src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0-beta1/katex.min.js"></script>
-<script crossorigin="anonymous" integrity="sha384-IiI65aU9ZYub2MY9zhtKd1H2ps7xxf+eb2YFG9lX6uRqpXCvBTOidPRCXCrQ++Uc" src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0-beta1/contrib/auto-render.min.js"></script>
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"/>
-<link href="https://www.svenkreiss.com/theme/css/pure.css?v=0.1.0" rel="stylesheet"/>
-<!-- for pelican_dynamic plugin -->
-<!-- end pelican_dynamic -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="This is a project by Kyle Cranmer and me. To use it: highlight some text and use the shortcut to replace latex with unicode characters Examples: p̅, x̲, ẋ, ∂̸, H → γγ, ℋ, ℒ, x ∈ ℝ, y ∈ ℂ, β, γ, ∑, →, ←, μ⁺, e⁻ Tested with Mac OS X Lion and Snow Leopard …" />
+
+
+        <link rel="alternate"  href="https://www.svenkreiss.com/feeds/all.atom.xml" type="application/atom+xml" title="Sven Kreiss Full Atom Feed"/>
+
+        <title>unicodeit - Sven Kreiss</title>
+
+
+    <!-- KaTeX -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0-beta1/katex.min.css" integrity="sha384-VEnyslhHLHiYPca9KFkBB3CMeslnM9CzwjxsEbZTeA21JBm7tdLwKoZmCt3cZTYD" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0-beta1/katex.min.js" integrity="sha384-O4hpKqcplNCe+jLuBVEXC10Rn1QEqAmX98lKAIFBEDxZI0a+6Z2w2n8AEtQbR4CD" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0-beta1/contrib/auto-render.min.js" integrity="sha384-IiI65aU9ZYub2MY9zhtKd1H2ps7xxf+eb2YFG9lX6uRqpXCvBTOidPRCXCrQ++Uc" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://www.svenkreiss.com/theme/css/pure.css?v=0.1.0" />
+
+    <!-- for pelican_dynamic plugin -->
+    <!-- end pelican_dynamic -->
+
 </head>
+
 <body>
 <div class="pure-g-r" id="layout">
 <div class="sidebar pure-u">
-<div class="cover-img" style="background-image: url('/images/winter_mountains_1600.jpeg');">
-<div class="cover-body">
-<header class="header">
-<h1 class="brand-main"><a href="/">Sven Kreiss</a></h1>
-<p class="tagline">Deep learning for intelligent robots and smart infrastructure.</p>
-<p class="links"><a href="/">About</a></p>
-<p class="links"><a href="/projects.html">Projects</a></p>
-<p class="links"><a href="/blog/">Articles</a></p>
-<p class="social">
-<a href="https://scholar.google.ch/citations?hl=en&amp;user=SnjnSVEAAAAJ&amp;view_op=list_works&amp;sortby=pubdate">
-<i class="fa fa-graduation-cap fa-2x"></i>
-</a>
-<a href="https://github.com/svenkreiss/">
-<i class="fa fa-github fa-2x"></i>
-</a>
-<a href="https://twitter.com/svenkreiss">
-<i class="fa fa-twitter fa-2x"></i>
-</a>
-<a href="https://www.linkedin.com/in/svenkreiss/">
-<i class="fa fa-linkedin fa-2x"></i>
-</a>
-</p>
-</header>
-</div>
-</div>
-</div> <div class="pure-u-1">
-<div class="content">
-<h1 class="content-subhead">unicodeit</h1>
-<ul>
-<li>This is a project by <a href="http://theoryandpractice.org/">Kyle Cranmer</a> and me.</li>
-<li>To use it: highlight some text and use the shortcut to replace latex with unicode characters</li>
-<li>Examples: <span style="font-family:sans-serif">p̅, x̲, ẋ, ∂̸</span>, H → γγ, ℋ, ℒ, x ∈ ℝ, y ∈ ℂ, β, γ, ∑, →, ←, μ⁺, e⁻</li>
-<li>Tested with Mac <span class="caps">OS</span> X Lion and Snow Leopard 10.6.4 in Keynote, Safari, Mail, Pages, TextEdit, Sublime Text; also tested on facebook.com, gmail.com, MediaWiki, TWiki using Safari</li>
+    <div class="cover-img" style="background-image: url('/images/winter_mountains_1600.jpeg');">
+        <div class="cover-body">
+            <header class="header">
+                    <h1 class="brand-main"><a href="/">Sven Kreiss</a></h1>
+                    <p class="tagline">Deep learning for intelligent robots and smart infrastructure.</p>
+                    <p class="links"><a href="/">About</a></p>
+                    <p class="links"><a href="/projects.html">Projects</a></p>
+                    <p class="links"><a href="/blog/">Articles</a></p>
+                    <p class="social">
+                        <a href="https://scholar.google.ch/citations?hl=en&user=SnjnSVEAAAAJ&view_op=list_works&sortby=pubdate">
+                            <i class="fa fa-graduation-cap fa-2x"></i>
+                        </a>
+                        <a href="https://github.com/svenkreiss/">
+                            <i class="fa fa-github fa-2x"></i>
+                        </a>
+                        <a href="https://twitter.com/svenkreiss">
+                            <i class="fa fa-twitter fa-2x"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/svenkreiss/">
+                            <i class="fa fa-linkedin fa-2x"></i>
+                        </a>
+                    </p>
+            </header>
+        </div>
+    </div>
+</div>    <div class="pure-u-1">
+        <div class="content">
+            <h1 class="content-subhead">unicodeit</h1>
+            <ul>
+<li>This is a project by <a href="http://theoryandpractice.org/">Kyle Cranmer</a> and me.</li>
+<li>To use it: highlight some text and use the shortcut to replace latex with unicode characters</li>
+<li>Examples: <span style="font-family:sans-serif">p̅, x̲, ẋ, ∂̸</span>, H → γγ, ℋ, ℒ, x ∈ ℝ, y ∈ ℂ, β, γ, ∑, →, ←, μ⁺, e⁻</li>
+<li>Tested with Mac OS X Lion and Snow Leopard 10.6.4 in Keynote, Safari, Mail, Pages, TextEdit, Sublime Text; also tested on facebook.com, gmail.com, MediaWiki, TWiki using Safari</li>
 </ul>
-<h2>Online Version: <a href="http://www.unicodeit.net">www.unicodeit.net</a> for any platform</h2>
+<h2>Online Version: <a href="http://www.unicodeit.net">www.unicodeit.net</a> for any platform</h2>
 <ul>
 <li>Source on GitHub: <a href="https://github.com/svenkreiss/unicodeit">https://github.com/svenkreiss/unicodeit</a></li>
-<li>Download for Mac <span class="caps">OS</span> X: <a href="http://bit.ly/PURul8">unicodeit062.zip</a></li>
-<li>Linux wrapper: <code>http://code.google.com/p/unicodeitlinux/</code> — not maintained anymore?</li>
+<li>Download for Mac OS X: <a href="http://bit.ly/PURul8">unicodeit062.zip</a></li>
+<li>Linux wrapper: <code>http://code.google.com/p/unicodeitlinux/</code> -- not maintained anymore?</li>
 </ul>
-<p>For the new Keynote on Mavericks, text replacements currently do not work. Here is a special version that stores the output on the Clipboard: <a href="http://bit.ly/1hltYID">unicodeit062clipboard.zip</a><br/>
+<p>For the new Keynote on Mavericks, text replacements currently do not work. Here is a special version that stores the output on the Clipboard: <a href="http://bit.ly/1hltYID">unicodeit062clipboard.zip</a><br />
 Install this in parallel to the standard UnicodeIt and assign a different keyboard shortcut to it; for example cmd+ctrl+shift+i.
-<br/><br/></p>
-<p><img alt="explanation" src="/images/unicodeit_explanation.png"/></p>
-<h2>It’s Free</h2>
-<p>The program is free and we hope you enjoy it as much as we do. If you feel like buying us beer or coffee, please do:</p>
+<br /><br /></p>
+<p><img alt="explanation" src="/images/unicodeit_explanation.png"></p>
+<h2>It's Free</h2>
+<p>The program is free and we hope you enjoy it as much as we do. If you feel like buying us beer or coffee, please do:</p>
 <div>
 <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
-<input name="cmd" type="hidden" value="_s-xclick"/>
-<input name="hosted_button_id" type="hidden" value="ZT77WA6BZUWRE"/>
-<input alt="PayPal - The safer, easier way to pay online!" name="submit" src="https://www.paypal.com/en_US/i/btn/btn_donate_SM.gif" type="image"/>
-<img alt="pixel" border="0" height="1" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1"/>
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="ZT77WA6BZUWRE">
+<input type="image" src="https://www.paypal.com/en_US/i/btn/btn_donate_SM.gif" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="pixel" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
 </form>
 </div>
-<h2>Installation on Mac <span class="caps">OS</span> Lion</h2>
+
+<h2>Installation on Mac OS Lion</h2>
 <ul>
-<li>Download the workflow and open it</li>
-<li>Select File &gt; Duplicate</li>
-<li>Save the duplicated workflow, e.g. as “UnicodeIt Copy”</li>
-<li>Setup keyboard shortcut under System Preferences &gt; Keyboard &gt; Keyboard Shortcuts &gt; Services &gt; Text &gt; UnicodeIt Copy by clicking into the empty space behind it (e.g. Command+Option+Shift U)</li>
-<li>There is a delay first time you use the shortcut</li>
+<li>Download the workflow and open it</li>
+<li>Select File &gt; Duplicate</li>
+<li>Save the duplicated workflow, e.g. as "UnicodeIt Copy"</li>
+<li>Setup keyboard shortcut under System Preferences &gt; Keyboard &gt; Keyboard Shortcuts &gt; Services &gt; Text &gt; UnicodeIt&nbsp;Copy by clicking into the empty space behind it (e.g. Command+Option+Shift&nbsp;U)</li>
+<li>There is a delay first time you use the shortcut</li>
 </ul>
 <h2>Links</h2>
 <ul>
-<li>For a more thorough discussion of LaTeX, <span class="caps">HTML</span> and Unicode tools and ideas: <a href="http://www.nongnu.org/elyxer/">http://www.nongnu.org/elyxer/</a> and <a href="http://pages.uoregon.edu/noeckel/Keynote.html#caveats">http://pages.uoregon.edu/noeckel/Keynote.html#caveats</a></li>
+<li>For a more thorough discussion of LaTeX, HTML and Unicode tools and ideas: <a href="http://www.nongnu.org/elyxer/">http://www.nongnu.org/elyxer/</a> and <a href="http://pages.uoregon.edu/noeckel/Keynote.html#caveats">http://pages.uoregon.edu/noeckel/Keynote.html#caveats</a></li>
 <li>Linux wrapper for UnicodeIt: <a href="http://code.google.com/p/unicodeitlinux/">http://code.google.com/p/unicodeitlinux/</a></li>
 </ul>
 <h2>Changelog</h2>
 <ul>
 <li>New in 0.6:<ul>
-<li>improved sub- and superscripts</li>
-<li>some new symbols including: square root √, cube root ∛, fourth root ∜</li>
+<li>improved sub- and superscripts</li>
+<li>some new symbols including: square root √, cube root ∛, fourth root ∜</li>
 </ul>
 </li>
 <li>New in 0.5:<ul>
@@ -98,22 +107,24 @@ Install this in parallel to the standard UnicodeIt and assign a different keyboa
 </ul>
 </li>
 <li>New in 0.4:<ul>
-<li>\rightarrow now has the alias \to</li>
-<li>added mathbb and mathcal symbols including the symbols used for Hamiltonian and Lagrangian densities ℋ, ℒ and for real and complex numbers ℝ, ℂ (for all symbols see the UnicodeItSymbols.pdf file)</li>
+<li>\rightarrow now has the alias \to</li>
+<li>added mathbb and mathcal symbols including the symbols used for Hamiltonian and Lagrangian densities ℋ, ℒ and for real and complex numbers ℝ, ℂ (for all symbols see the UnicodeItSymbols.pdf file)</li>
 </ul>
 </li>
-</ul><script charset="utf-8" src="//platform.twitter.com/widgets.js"></script>
+</ul><script src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 <footer class="footer">
-<p>© Sven Kreiss  2014 – 2020. Published with <a href="https://github.com/getpelican/pelican">Pelican</a>.<br/>This work is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" rel="license">Creative Commons Attribution 4.0 International License</a>.</p>
-</footer> </div>
+    <p>&copy; Sven Kreiss  2014 &ndash; 2020. Published with <a href="https://github.com/getpelican/pelican">Pelican</a>.<br />This work is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</p>
+</footer>        </div>
+    </div>
 </div>
-</div>
-<script>
+    <script>
         renderMathInElement(document.body);
     </script>
-<!-- for pelican_dynamic plugin -->
+
+    <!-- for pelican_dynamic plugin -->
+
 <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-4070485-2"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-4070485-2"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -121,5 +132,7 @@ Install this in parallel to the standard UnicodeIt and assign a different keyboa
 
   gtag('config', 'UA-4070485-2', { 'anonymize_ip': true });
 </script>
+
+
 </body>
 </html>

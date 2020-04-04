@@ -1,103 +1,123 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta content="Ancient machine learning papers." name="description"/>
-<meta content="summary" name="twitter:card"/>
-<meta content="@svenkreiss" name="twitter:site"/>
-<meta content="@svenkreiss" name="twitter:creator"/>
-<meta content="AncientML 2: Steps Toward Artificial Intelligence (Minsky, 1961)" name="twitter:title"/>
-<meta content="Ancient machine learning papers." name="twitter:description"/>
-<meta content="https://www.svenkreiss.com/images/winter_mountains_1600.jpeg" name="twitter:image:src"/>
-<meta content="svenkreiss.com" name="twitter:domain"/>
-<meta content="AncientML 2: Steps Toward Artificial Intelligence (Minsky, 1961)" property="og:title"/>
-<meta content="article" property="og:type"/>
-<meta content="Ancient machine learning papers." property="og:description"/>
-<meta content="https://www.svenkreiss.com/images/winter_mountains_1600.jpeg" property="og:image"/>
-<meta content="svenkreiss.com" property="og:site_name"/>
-<meta content="https://www.svenkreiss.com/drafts/ancientml-2019-05.html" property="og:url"/>
-<link href="https://www.svenkreiss.com/feeds/all.atom.xml" rel="alternate" title="Sven Kreiss Full Atom Feed" type="application/atom+xml"/>
-<title>AncientML 2: Steps Toward Artificial Intelligence (Minsky, 1961) - Sven Kreiss</title>
-<!-- KaTeX -->
-<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0-beta1/katex.min.css" integrity="sha384-VEnyslhHLHiYPca9KFkBB3CMeslnM9CzwjxsEbZTeA21JBm7tdLwKoZmCt3cZTYD" rel="stylesheet"/>
-<script crossorigin="anonymous" integrity="sha384-O4hpKqcplNCe+jLuBVEXC10Rn1QEqAmX98lKAIFBEDxZI0a+6Z2w2n8AEtQbR4CD" src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0-beta1/katex.min.js"></script>
-<script crossorigin="anonymous" integrity="sha384-IiI65aU9ZYub2MY9zhtKd1H2ps7xxf+eb2YFG9lX6uRqpXCvBTOidPRCXCrQ++Uc" src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0-beta1/contrib/auto-render.min.js"></script>
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"/>
-<link href="https://www.svenkreiss.com/theme/css/pure.css?v=0.1.0" rel="stylesheet"/>
-<link href="https://www.svenkreiss.com/theme/css/pygments.css" rel="stylesheet"/>
-<!-- for pelican_dynamic plugin -->
-<!-- end pelican_dynamic -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Ancient machine learning papers." />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@svenkreiss" />
+    <meta name="twitter:creator" content="@svenkreiss" />
+    <meta name="twitter:title" content="AncientML 2: Steps Toward Artificial Intelligence (Minsky, 1961)" />
+    <meta name="twitter:description" content="Ancient machine learning papers." />
+    <meta name="twitter:image:src" content="https://www.svenkreiss.com/images/winter_mountains_1600.jpeg" />
+    <meta name="twitter:domain" content="svenkreiss.com" />
+
+    <meta property="og:title" content="AncientML 2: Steps Toward Artificial Intelligence (Minsky, 1961)" />
+    <meta property="og:type" content="article" />
+    <meta property="og:description" content="Ancient machine learning papers." />
+    <meta property="og:image" content="https://www.svenkreiss.com/images/winter_mountains_1600.jpeg" />
+    <meta property="og:site_name" content="svenkreiss.com" />
+    <meta property="og:url" content="https://www.svenkreiss.com/drafts/ancientml-2019-05.html" />
+
+        <link rel="alternate"  href="https://www.svenkreiss.com/feeds/all.atom.xml" type="application/atom+xml" title="Sven Kreiss Full Atom Feed"/>
+
+        <title>AncientML 2: Steps Toward Artificial Intelligence (Minsky, 1961) - Sven Kreiss</title>
+
+
+    <!-- KaTeX -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0-beta1/katex.min.css" integrity="sha384-VEnyslhHLHiYPca9KFkBB3CMeslnM9CzwjxsEbZTeA21JBm7tdLwKoZmCt3cZTYD" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0-beta1/katex.min.js" integrity="sha384-O4hpKqcplNCe+jLuBVEXC10Rn1QEqAmX98lKAIFBEDxZI0a+6Z2w2n8AEtQbR4CD" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0-beta1/contrib/auto-render.min.js" integrity="sha384-IiI65aU9ZYub2MY9zhtKd1H2ps7xxf+eb2YFG9lX6uRqpXCvBTOidPRCXCrQ++Uc" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://www.svenkreiss.com/theme/css/pure.css?v=0.1.0" />
+    <link rel="stylesheet" href="https://www.svenkreiss.com/theme/css/pygments.css" />
+
+    <!-- for pelican_dynamic plugin -->
+    <!-- end pelican_dynamic -->
+
 </head>
+
 <body>
 <div class="pure-g-r" id="layout">
-<div class="sidebar sidebar-article pure-u">
-<header class="header-article">
-<a href="https://www.svenkreiss.com/blog/author/sven-kreiss/" title="See posts by Sven Kreiss">
-<img alt="Sven Kreiss" class="avatar" src="https://www.gravatar.com/avatar/562a52f3ffcb6c2a3556f91ddc540776?s=140"/>
-</a>
-<h2 class="article-info">Sven Kreiss</h2>
-<h5>Draft</h5>
-<p class="article-date">May 11, 2019</p>
-<a class="header-article-home" href="/blog/">←Articles</a>
-</header>
-</div>
-<div class="pure-u">
-<div class="content">
-<section class="post">
-<header class="post-header">
-<h1>AncientML 2: Steps Toward Artificial Intelligence (Minsky, 1961)</h1>
-</header>
-</section>
-<p><img alt="AncientML Logo" class="img-thumbnail float-right" src="/images/ancientml-logo.png" width="300"/></p>
+    <div class="sidebar sidebar-article pure-u">
+        <header class="header-article">
+                    <a href="https://www.svenkreiss.com/blog/author/sven-kreiss/" title="See posts by Sven Kreiss">
+                        <img class="avatar" alt="Sven Kreiss" src="https://www.gravatar.com/avatar/562a52f3ffcb6c2a3556f91ddc540776?s=140">
+                    </a>
+                <h2 class="article-info">Sven Kreiss</h2>
+
+
+                    <h5>Draft</h5>
+
+                <p class="article-date">May 11, 2019</p>
+
+                <a class="header-article-home" href="/blog/">&larr;Articles</a>
+        </header>
+    </div>
+    <div class="pure-u">
+        <div class="content">
+            <section class="post">
+                <header class="post-header">
+                    <h1>AncientML 2: Steps Toward Artificial Intelligence (Minsky, 1961)</h1>
+                </header>
+            </section>
+
+            <p><img class="img-thumbnail float-right" src="/images/ancientml-logo.png" width="300" alt="AncientML Logo" /></p>
 <p>AncientML is a series of paper reading notes. The purpose is to review
 outstanding contributions to machine learning that are valuable to the
-formation as an academic field.</p>
+formation as an academic field.</p>
 <div style="clear:both"></div>
-<h2>Steps Toward Artificial Intelligence (Minsky, 1961), <a href="https://courses.csail.mit.edu/6.803/pdf/steps.pdf"><span class="caps">PDF</span></a></h2>
-<p>Background: <a href="https://en.wikipedia.org/wiki/Marvin_Minsky">Marvin Minsky’s Wikipedia page</a>.</p>
+
+<h2>Steps Toward Artificial Intelligence (Minsky, 1961), <a href="https://courses.csail.mit.edu/6.803/pdf/steps.pdf">PDF</a></h2>
+<p>Background: <a href="https://en.wikipedia.org/wiki/Marvin_Minsky">Marvin Minsky's Wikipedia page</a>.</p>
 <ul>
-<li><span class="dquo">“</span>heuristic programming”: Search, Pattern Recognition, Learning, Planning, Induction</li>
-<li>1961: “… we are on the threshold of an era that will be strongly influenced, and quite possibly dominated, by intelligent problem-solving machines.”</li>
+<li>"heuristic programming": Search, Pattern Recognition, Learning, Planning, Induction</li>
+<li>1961: "... we are on the threshold of an era that will be strongly influenced, and quite possibly dominated, by intelligent problem-solving machines."</li>
 </ul>
 <h2>Previously</h2>
 <ul>
-<li><a href="ancientml-2018-03.md">The Mathematical Theory of Communication (Shannon, 1951)</a></li>
-<li><a href="ancientml-2018-03.md">A Proposal for the Dartmouth Summer Research Project on Artificial Intelligence, August 31, 1955</a></li>
-</ul><script charset="utf-8" src="//platform.twitter.com/widgets.js"></script>
-<p class="post-footer">
+<li><a href="ancientml-2018-03.md">The Mathematical Theory of Communication (Shannon, 1951)</a></li>
+<li><a href="ancientml-2018-03.md">A Proposal for the Dartmouth Summer Research Project on Artificial Intelligence, August 31, 1955</a></li>
+</ul><script src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+            <p class="post-footer">
                 // filed
 under                    <a class="post-category" href="https://www.svenkreiss.com/blog/tag/ancientml/">ancientml</a>
-                in <a class="post-category" href="https://www.svenkreiss.com/blog/category/ml/">ML</a>   
+                in <a class="post-category" href="https://www.svenkreiss.com/blog/category/ml/">ML</a>&nbsp;&nbsp;&nbsp;
 
                 <span style="display:inline-block;">
-                // share on <a href="https://twitter.com/share?text=%22AncientML%202%3A%20Steps%20Toward%20Artificial%20Intelligence%20%28Minsky%2C%C2%A01961%29%3A%20Ancient%20machine%20learning%C2%A0papers.%22&amp;hashtags=ancientml" target="_blank">
-<i class="fa fa-twitter fa-lg"></i> Twitter
+                // share on <a href="https://twitter.com/share?text=%22AncientML%202%3A%20Steps%20Toward%20Artificial%20Intelligence%20%28Minsky%2C%201961%29%3A%20Ancient%20machine%20learning%20papers.%22&amp;hashtags=ancientml" target="_blank">
+                    <i class="fa fa-twitter fa-lg"></i> Twitter
                 </a>
-</span>
-</p>
-<div class="hr"></div>
-<h2>Related Posts</h2>
-<ul class="related-posts">
-<li>
-<a class="title" href="https://www.svenkreiss.com/blog/ancientml-2018-03/">AncientML 1</a>
-<span class="date">from March 05, 2018</span>
-<span class="summary">AncientML is a series of paper reading notes. This first edition covers the first mention of AI and the Mathematical Theory of Communication.</span>
-</li>
-</ul>
-<a class="go-top" href="#">Go Top</a>
+                </span>
+            </p>
+            <div class="hr"></div>
+
+            <h2>Related Posts</h2>
+            <ul class="related-posts">
+                <li>
+                    <a class="title" href="https://www.svenkreiss.com/blog/ancientml-2018-03/">AncientML 1</a>
+                    <span class="date">from March 05, 2018</span>
+                    <span class="summary">AncientML is a series of paper reading notes. This first edition covers the first mention of AI and the Mathematical Theory of Communication.</span>
+                </li>
+            </ul>
+
+            <a href="#" class="go-top">Go Top</a>
 <footer class="footer">
-<p>© Sven Kreiss  2014 – 2020. Published with <a href="https://github.com/getpelican/pelican">Pelican</a>.<br/>This work is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" rel="license">Creative Commons Attribution 4.0 International License</a>.</p>
-</footer> </div>
+    <p>&copy; Sven Kreiss  2014 &ndash; 2020. Published with <a href="https://github.com/getpelican/pelican">Pelican</a>.<br />This work is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</p>
+</footer>        </div>
+    </div>
 </div>
-</div>
-<script>
+    <script>
         renderMathInElement(document.body);
     </script>
-<!-- for pelican_dynamic plugin -->
+
+    <!-- for pelican_dynamic plugin -->
+
 <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-4070485-2"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-4070485-2"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -105,5 +125,7 @@ under                    <a class="post-category" href="https://www.svenkreiss.c
 
   gtag('config', 'UA-4070485-2', { 'anonymize_ip': true });
 </script>
+
+
 </body>
 </html>
