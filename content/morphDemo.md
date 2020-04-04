@@ -1,7 +1,7 @@
 Title: morphDemo
 Date: 2014-03-06 10:10
 Category: Science
-Tags: physics, d3.js, statistics
+Tags: physics, d3.js, statistics, science
 Slug: morph-demo
 Summary: Demo of a new horizontal morphing algorithm.
 Status: published

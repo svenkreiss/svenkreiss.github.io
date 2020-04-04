@@ -20,7 +20,8 @@ cp -r node_modules/font-awesome/fonts content/extras/font-awesome/
 Local development with
 
 ```bash
-make devserver
+pelican content
+pelican --autoreload --listen
 ```
 
 Publish with

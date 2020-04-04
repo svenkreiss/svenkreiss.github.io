@@ -1,7 +1,7 @@
 Title: Achievements in Two Years at EPFL
 Date: 2020-04-03
 Category: ML
-Tags: review
+Tags: review, science
 Slug: epfl-two-years
 Summary: Summary of achievements in my first two years back in academia at EPFL.
 Status: published

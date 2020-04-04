@@ -1,7 +1,7 @@
 Title: Collaborative Statistical Modeling
 Date: 2015-04-11
 Category: Science
-Tags: statistics
+Tags: statistics, science
 Summary: A poster about the collaborative statistical modeling work that Kyle Cranmer and I did and that was used to discover the Higgs boson. We presented this at the opening of the Center for Data Science at NYU.
 Status: published
 

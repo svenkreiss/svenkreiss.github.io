@@ -1,7 +1,7 @@
 Title: Decouple
 Date: 2016-12-31
 Category: Science
-Tags: physics
+Tags: physics, science
 Slug: decouple
 Summary: Decoupling theoretical uncertainties from measurements of the Higgs boson.
 Status: published

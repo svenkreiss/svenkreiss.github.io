@@ -1,7 +1,7 @@
 Title: PhD Thesis
 Date: 2014-08-17
 Category: Science
-Tags: physics
+Tags: physics, science
 Slug: phd-thesis
 Summary: Finished my PhD thesis: Higgs Boson Discovery and First Property Measurements using the ATLAS Detector. It summarizes my work over a few years on Higgs Physics with ATLAS and on collaborative statistical modeling.
 Status: published
