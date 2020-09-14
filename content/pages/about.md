@@ -8,7 +8,7 @@ Summary: Sven Kreiss is a Computer Vision Researcher in Switzerland.
 Status: published
 
 
-{% img img-thumbnail float-right /images/me_nyc_square_500.jpeg 200 me %}
+{% img img-thumbnail float-right /images/me2020_head.jpeg 200 me %}
 
 The majority of self-driving accidents are caused by unnatural behavior of the
 autonomous car. My research focuses on the human component of self-driving

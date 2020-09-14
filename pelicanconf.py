@@ -66,6 +66,7 @@ THEME = "../pelican-theme-pure"
 PLUGIN_PATHS = ['../pelican-plugins']
 PLUGINS = [
     'sitemap', 'gravatar', 'pelican_jsmath',  # 'render_math',
+    'liquid_tags',
     'liquid_tags.img', 'liquid_tags.video',
     'liquid_tags.youtube', 'liquid_tags.vimeo',
     'liquid_tags.include_code',
@@ -128,7 +129,7 @@ INTERNAL = False
 USE_LOCAL_ASSETS = True
 COVER_IMG_URL = '/images/winter_mountains_1600.jpeg'
 AUTHOR_EMAIL = 'me@svenkreiss.com'
-AUTHOR_IMAGE = '/images/me_nyc_square_500.jpeg'
+AUTHOR_IMAGE = '/images/me2020_head.jpeg'
 TAGLINE = 'Deep learning for intelligent robots and smart infrastructure.'
 META_DESCRIPTION = 'my personal website'
 # DISQUS_SITENAME = 'svenkreisscom'

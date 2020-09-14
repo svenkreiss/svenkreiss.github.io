@@ -21,7 +21,7 @@ Local development with
 
 ```bash
 pelican content
-pelican --autoreload --listen
+pelican --autoreload --listen content
 ```
 
 Publish with
