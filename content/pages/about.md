@@ -62,9 +62,9 @@ lab at EPFL in Switzerland. Selected publications:
 </div>
 </div> -->
 
-I am also investigating new ideas for the Social Force model
+As the PI for an SNSF Spark Grant, I am investigating new ideas for the Social Force model
 (presented at STRC2019 and hEART2019) and
-human path prediction in the context of self-driving cars.
+human path prediction in the context of autonomous vehicles.
 
 
 Before returning to academia, I was the Senior Data Scientist at
