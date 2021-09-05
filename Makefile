@@ -77,8 +77,8 @@ publish:
 
 github: publish
 	cp .travis.yml $(OUTPUTDIRPUBLISH)
-	ghp-import -m "Generate Pelican site" -b $(GITHUB_PAGES_BRANCH) $(OUTPUTDIRPUBLISH)
-	git push origin $(GITHUB_PAGES_BRANCH)
+	ghp-import -m "Generate Pelican site" -o -b $(GITHUB_PAGES_BRANCH) $(OUTPUTDIRPUBLISH)
+	git push origin -f $(GITHUB_PAGES_BRANCH)
 
 
 .PHONY: html help clean regenerate serve serve-global devserver publish github

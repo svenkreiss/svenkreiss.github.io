@@ -10,17 +10,17 @@ Status: published
 
 {% img img-thumbnail float-right /images/me2020_head.jpeg 200 me %}
 
-The majority of self-driving accidents are caused by unnatural behavior of the
-autonomous car. My research focuses on the human component of self-driving
+I am a computer vision engineer with a background in
+particle physics.
+
+During my postdoc at EPFL, my research focused on the human component of self-driving
 to make autonomous cars behave more like human drivers.
 My projects in perception determine the social cues of pedestrians,
 cyclists and other drivers providing a richer representation of the world that
 is relevant for social behavior. My control projects investigate end-to-end
 trainable policies that obey social norms, _e.g._, a robot should not
 try to pass between two people that are talking to each other and instead go around.
-
-I am a postdoc at the [Visual Intelligence for Transportation (VITA)](https://vita.epfl.ch/)
-lab at EPFL in Switzerland. Selected publications:
+Selected publications:
 
 * __MonoLoco__: _Monocular 3D Pedestrian Localization and Uncertainty Estimation_.<br />
   Bertoni, Kreiss, Alahi. Presented at ICCV2019 in Seoul.<br />
@@ -62,12 +62,12 @@ lab at EPFL in Switzerland. Selected publications:
 </div>
 </div> -->
 
-As the PI for an SNSF Spark Grant, I am investigating new ideas for the Social Force model
+As the PI for an SNSF Spark Grant, I was investigating new ideas for the Social Force model
 (presented at STRC2019 and hEART2019) and
 human path prediction in the context of autonomous vehicles.
 
 
-Before returning to academia, I was the Senior Data Scientist at
+Before my postdoc, I was the Senior Data Scientist at
 [Sidewalk Labs (Alphabet)](https://www.sidewalklabs.com) in New York City
 where I focused on machine learning for urban environments. My background is in particle physics
 where I hold a PhD from NYU and where I worked with
