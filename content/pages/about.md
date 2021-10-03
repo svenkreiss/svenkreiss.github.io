@@ -10,7 +10,7 @@ Status: published
 
 {% img img-thumbnail float-right /images/me2020_head.jpeg 200 me %}
 
-I am a computer vision engineer with a background in
+I am a computer vision engineer at Facebook Reality Labs with a background in
 particle physics.
 
 During my postdoc at EPFL, my research focused on the human component of self-driving
