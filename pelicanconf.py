@@ -133,7 +133,7 @@ AUTHOR_IMAGE = '/images/me2020_head.jpeg'
 TAGLINE = 'Computer vision engineer with physics background.'
 META_DESCRIPTION = 'my personal website'
 # DISQUS_SITENAME = 'svenkreisscom'
-COPYRIGHT_YEARS = '2014 &ndash; 2020'
+COPYRIGHT_YEARS = '2014 &ndash; 2021'
 COPYRIGHT_FOOTER = (
     '<p>'
     '&copy; ' + SITENAME + '  ' + COPYRIGHT_YEARS + '. Published with <a href="https://github.com/getpelican/pelican">Pelican</a>.<br />'

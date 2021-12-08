@@ -53,9 +53,9 @@ see the 5σ threshold crossed. Selected publications:
   The ATLAS collaboration. Physics Letters B 716 (1), 1-29.<br />
   <span style="white-space: nowrap">[<i class="fa fa-file"></i> paper](https://doi.org/10.1016/j.physletb.2012.08.020)</span>&nbsp;&nbsp;
   <span style="white-space: nowrap">[<i class="fa fa-file"></i> _Science_ Breakthrough of the Year](https://science.sciencemag.org/content/338/6114/1524)</span>&nbsp;&nbsp;
-  <span style="white-space: nowrap">[<i class="fa fa-file"></i> my PhD thesis](/blog/phd-thesis/)</span><br />
-  Press: <span style="white-space: nowrap">[<i class="fa fa-file"></i> _New York Times_](/blog/chasing-the-higgs-nyt/)</span>&nbsp;&nbsp;
-  <span style="white-space: nowrap">[<i class="fa fa-file"></i> _New Yorker_](/blog/nobel-prize-party-new-yorker/)</span>
+  <span style="white-space: nowrap">[<i class="fa fa-book"></i> my PhD thesis](/blog/phd-thesis/)</span><br />
+  <span style="white-space: nowrap">[<i class="fa fa-newspaper-o"></i> _New York Times_](/blog/chasing-the-higgs-nyt/)</span>&nbsp;&nbsp;
+  <span style="white-space: nowrap">[<i class="fa fa-newspaper-o"></i> _New Yorker_](/blog/nobel-prize-party-new-yorker/)</span>
 * __The RooStats Project__: The standard High Energy Physics statistics package.<br />
   Moneta, Belasco, Cranmer, Kreiss, Lazzaro, Piparo, Schott, Verkerke, Wolf.<br />
   PoS ACAT2010 (2010) 057.<br />
