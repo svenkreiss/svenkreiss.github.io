@@ -14,7 +14,8 @@ DEFAULT_METADATA = {
     'Status': 'hidden',
 }
 
-USE_LOCAL_ASSETS = False
+# Set to false to use CDN
+USE_LOCAL_ASSETS = True
 
 SITEURL = 'https://www.svenkreiss.com'
 RELATIVE_URLS = False
