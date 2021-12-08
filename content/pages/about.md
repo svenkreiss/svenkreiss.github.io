@@ -10,16 +10,12 @@ Status: published
 
 {% img img-thumbnail float-right /images/me2020_head.jpeg 200 me %}
 
-I am a computer vision engineer at Facebook Reality Labs with a background in
+I am a computer vision engineer at Meta (formerly Facebook) Reality Labs with a background in
 particle physics.
 
-During my postdoc at EPFL, my research focused on the human component of self-driving
+During my postdoc at EPFL, my research focused on the perception and prediction
+of pedestrians for self-driving
 to make autonomous cars behave more like human drivers.
-My projects in perception determine the social cues of pedestrians,
-cyclists and other drivers providing a richer representation of the world that
-is relevant for social behavior. My control projects investigate end-to-end
-trainable policies that obey social norms, _e.g._, a robot should not
-try to pass between two people that are talking to each other and instead go around.
 Selected publications:
 
 * __MonoLoco__: _Monocular 3D Pedestrian Localization and Uncertainty Estimation_.<br />
@@ -29,42 +25,19 @@ Selected publications:
 * __PifPaf__: _Composite Fields for Human Pose Estimation_.<br />
   Kreiss, Bertoni, Alahi. Presented at CVPR2019 in Los Angeles.<br />
   <span style="white-space: nowrap">[<i class="fa fa-file"></i> paper](http://openaccess.thecvf.com/content_CVPR_2019/html/Kreiss_PifPaf_Composite_Fields_for_Human_Pose_Estimation_CVPR_2019_paper.html)</span>&nbsp;&nbsp;
-  <span style="white-space: nowrap">[<i class="fa fa-github"></i> code](https://github.com/vita-epfl/openpifpaf)</span>
+  <span style="white-space: nowrap">[<i class="fa fa-github"></i> code](https://github.com/openpifpaf/openpifpaf)</span>
+* __Deep Social Force__.<br />
+  Kreiss. Funded by the SNSF with a Spark project grant.<br />
+  <span style="white-space: nowrap">[<i class="fa fa-file"></i> paper](https://arxiv.org/abs/2109.12081)</span>&nbsp;&nbsp;
+  <span style="white-space: nowrap">[<i class="fa fa-github"></i> code](https://github.com/svenkreiss/socialforce)</span>
 * __Crowd-Robot Interaction__: _Crowd-aware Robot Navigation with Attention-based Deep Reinforcement Learning_.<br />
   Chen, Liu, Kreiss, Alahi. Presented at ICRA2019 in Montreal.<br />
   <span style="white-space: nowrap">[<i class="fa fa-file"></i> paper](https://doi.org/10.1109/ICRA.2019.8794134)</span>&nbsp;&nbsp;
   <span style="white-space: nowrap">[<i class="fa fa-github"></i> code](https://github.com/vita-epfl/crowdnav)</span>
 
-<!--
-<div style="display:flex; flex-flow: row wrap;">
-<div style="border:0.5px dotted #ccc; width:200px; padding: 20px; margin: 2px; flex-grow: 1;">
-    <a href="https://github.com/vita-epfl/monoloco">
-        <img class="image-process-crisp" src="/images/monoloco.jpg" alt="Monoloco example"></img><br />
-        MonoLoco: Monocular 3D Pedestrian Localization and Uncertainty Estimation.</a>
-    <br />
-    Presented at ICCV2019 in Seoul.
-</div>
-
-<div style="border:0.5px dotted #ccc; width:200px; padding: 20px; margin: 2px; flex-grow: 1;">
-    <a href="https://github.com/vita-epfl/openpifpaf">
-        <img class="image-process-crisp" src="/images/pifpaf.jpg" alt="OpenPifPaf example"></img><br />
-        PifPaf: Composite Fields for Human Pose Estimation.</a>
-    <br />
-    Presented at CVPR2019 in Los Angeles.
-</div>
-
-<div style="border:0.5px dotted #ccc; width:200px; padding: 20px; margin: 2px; flex-grow: 1;">
-    <a href="https://github.com/vita-epfl/crowdnav">
-        <img class="image-process-crisp" src="/images/crowdnav.png" alt="CrowdNav illustration"></img><br />
-        Crowd-Robot Interaction: Crowd-aware Robot Navigation with Attention-based Deep Reinforcement Learning.</a>
-    <br />
-    Presented at ICRA2019 in Montreal.
-</div>
-</div> -->
-
-As the PI for an SNSF Spark Grant, I was investigating new ideas for the Social Force model
+<!-- As the PI for an SNSF Spark Grant, I was investigating new ideas for the Social Force model
 (presented at STRC2019 and hEART2019) and
-human path prediction in the context of autonomous vehicles.
+human path prediction in the context of autonomous vehicles. -->
 
 
 Before my postdoc, I was the Senior Data Scientist at
@@ -73,13 +46,16 @@ where I focused on machine learning for urban environments. My background is in 
 where I hold a PhD from NYU and where I worked with
 [Kyle Cranmer](http://theoryandpractice.org/) on physics and statistical
 analyses for ATLAS at CERN. I was on the core team that
-[discovered the Higgs boson](/projects.html#discovery) and the first person to
+[discovered the Higgs boson](/blog/chasing-the-higgs-nyt/) and the first person to
 see the 5σ threshold crossed. Selected publications:
 
 * __Higgs Discovery__: _Observation of a new particle in the search for the Standard Model Higgs boson with the ATLAS detector at the LHC_.<br />
   The ATLAS collaboration. Physics Letters B 716 (1), 1-29.<br />
   <span style="white-space: nowrap">[<i class="fa fa-file"></i> paper](https://doi.org/10.1016/j.physletb.2012.08.020)</span>&nbsp;&nbsp;
-  <span style="white-space: nowrap">[<i class="fa fa-file"></i> _Science_ Breakthrough of the Year](https://science.sciencemag.org/content/338/6114/1524)</span>
+  <span style="white-space: nowrap">[<i class="fa fa-file"></i> _Science_ Breakthrough of the Year](https://science.sciencemag.org/content/338/6114/1524)</span>&nbsp;&nbsp;
+  <span style="white-space: nowrap">[<i class="fa fa-file"></i> my PhD thesis](/blog/phd-thesis/)</span><br />
+  Press: <span style="white-space: nowrap">[<i class="fa fa-file"></i> _New York Times_](/blog/chasing-the-higgs-nyt/)</span>&nbsp;&nbsp;
+  <span style="white-space: nowrap">[<i class="fa fa-file"></i> _New Yorker_](/blog/nobel-prize-party-new-yorker/)</span>
 * __The RooStats Project__: The standard High Energy Physics statistics package.<br />
   Moneta, Belasco, Cranmer, Kreiss, Lazzaro, Piparo, Schott, Verkerke, Wolf.<br />
   PoS ACAT2010 (2010) 057.<br />
