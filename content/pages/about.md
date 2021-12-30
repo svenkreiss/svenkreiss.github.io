@@ -22,12 +22,20 @@ Selected publications:
   Bertoni, Kreiss, Alahi. Presented at ICCV2019 in Seoul.<br />
   <span style="white-space: nowrap">[<i class="fa fa-file"></i> paper](http://openaccess.thecvf.com/content_ICCV_2019/html/Bertoni_MonoLoco_Monocular_3D_Pedestrian_Localization_and_Uncertainty_Estimation_ICCV_2019_paper.html)</span>&nbsp;&nbsp;
   <span style="white-space: nowrap">[<i class="fa fa-github"></i> code](https://github.com/vita-epfl/monoloco)</span>
+  &nbsp;&nbsp;
+  <span style="white-space: nowrap">Follow ups [<i class="fa fa-file"></i> ICRA2021](https://arxiv.org/abs/2008.10913)</span>
+  &nbsp;&nbsp;
+  <span style="white-space: nowrap">[<i class="fa fa-file"></i> ITS 2021](https://ieeexplore.ieee.org/iel7/6979/4358928/09406903.pdf) ([arXiv](https://arxiv.org/abs/2009.00984))</span>.
 * __PifPaf__: _Composite Fields for Human Pose Estimation_.<br />
   Kreiss, Bertoni, Alahi. Presented at CVPR2019 in Los Angeles.<br />
   <span style="white-space: nowrap">[<i class="fa fa-file"></i> paper](http://openaccess.thecvf.com/content_CVPR_2019/html/Kreiss_PifPaf_Composite_Fields_for_Human_Pose_Estimation_CVPR_2019_paper.html)</span>&nbsp;&nbsp;
   <span style="white-space: nowrap">[<i class="fa fa-github"></i> code](https://github.com/openpifpaf/openpifpaf)</span>
+  &nbsp;&nbsp;
+  <span style="white-space: nowrap">Follow ups [<i class="fa fa-file"></i> ITS 2021](https://ieeexplore.ieee.org/document/9617128) ([arXiv](https://arxiv.org/abs/2103.02440))</span>
+  &nbsp;&nbsp;
+  <span style="white-space: nowrap">[<i class="fa fa-file"></i> CVPR2021](http://openaccess.thecvf.com/content/ICCV2021/papers/Zauss_Keypoint_Communities_ICCV_2021_paper.pdf)</span>.
 * __Deep Social Force__.<br />
-  Kreiss. Funded by the SNSF with a Spark project grant.<br />
+  Kreiss. Funded by the SNSF with a Spark project grant. 2021.<br />
   <span style="white-space: nowrap">[<i class="fa fa-file"></i> paper](https://arxiv.org/abs/2109.12081)</span>&nbsp;&nbsp;
   <span style="white-space: nowrap">[<i class="fa fa-github"></i> code](https://github.com/svenkreiss/socialforce)</span>
 * __Crowd-Robot Interaction__: _Crowd-aware Robot Navigation with Attention-based Deep Reinforcement Learning_.<br />
@@ -46,11 +54,11 @@ where I focused on machine learning for urban environments. My background is in 
 where I hold a PhD from NYU and where I worked with
 [Kyle Cranmer](http://theoryandpractice.org/) on physics and statistical
 analyses for ATLAS at CERN. I was on the core team that
-[discovered the Higgs boson](/blog/chasing-the-higgs-nyt/) and the first person to
-see the 5σ threshold crossed. Selected publications:
+discovered the Higgs boson and the
+[first person to see the 5σ threshold crossed](/blog/chasing-the-higgs-nyt/). Selected publications:
 
 * __Higgs Discovery__: _Observation of a new particle in the search for the Standard Model Higgs boson with the ATLAS detector at the LHC_.<br />
-  The ATLAS collaboration. Physics Letters B 716 (1), 1-29.<br />
+  The ATLAS collaboration. Physics Letters B 716 (1), 2012, 1-29.<br />
   <span style="white-space: nowrap">[<i class="fa fa-file"></i> paper](https://doi.org/10.1016/j.physletb.2012.08.020)</span>&nbsp;&nbsp;
   <span style="white-space: nowrap">[<i class="fa fa-file"></i> _Science_ Breakthrough of the Year](https://science.sciencemag.org/content/338/6114/1524)</span>&nbsp;&nbsp;
   <span style="white-space: nowrap">[<i class="fa fa-book"></i> my PhD thesis](/blog/phd-thesis/)</span><br />
@@ -58,7 +66,7 @@ see the 5σ threshold crossed. Selected publications:
   <span style="white-space: nowrap">[<i class="fa fa-newspaper-o"></i> _New Yorker_](/blog/nobel-prize-party-new-yorker/)</span>
 * __The RooStats Project__: The standard High Energy Physics statistics package.<br />
   Moneta, Belasco, Cranmer, Kreiss, Lazzaro, Piparo, Schott, Verkerke, Wolf.<br />
-  PoS ACAT2010 (2010) 057.<br />
+  PoS ACAT2010 057, 2010.<br />
   <span style="white-space: nowrap">[<i class="fa fa-file"></i> paper](https://arxiv.org/abs/1009.1003)</span>&nbsp;&nbsp;
   <span style="white-space: nowrap">[<i class="fa fa-github"></i> web](https://twiki.cern.ch/twiki/bin/view/RooStats/WebHome)</span>
 
