@@ -33,7 +33,7 @@ Selected publications:
   &nbsp;&nbsp;
   <span style="white-space: nowrap">Follow ups [<i class="fa fa-file"></i> ITS 2021](https://ieeexplore.ieee.org/document/9617128) ([arXiv](https://arxiv.org/abs/2103.02440))</span>
   &nbsp;&nbsp;
-  <span style="white-space: nowrap">[<i class="fa fa-file"></i> CVPR2021](http://openaccess.thecvf.com/content/ICCV2021/papers/Zauss_Keypoint_Communities_ICCV_2021_paper.pdf)</span>.
+  <span style="white-space: nowrap">[<i class="fa fa-file"></i> ICCV2021](http://openaccess.thecvf.com/content/ICCV2021/papers/Zauss_Keypoint_Communities_ICCV_2021_paper.pdf)</span>.
 * __Deep Social Force__.<br />
   Kreiss. Funded by the SNSF with a Spark project grant. 2021.<br />
   <span style="white-space: nowrap">[<i class="fa fa-file"></i> paper](https://arxiv.org/abs/2109.12081)</span>&nbsp;&nbsp;
