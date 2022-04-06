@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A short project to visualize the social Twitter graph of people at Wildcard. The backend is particularly efficient in the number of API calls. The visualization is interactive in d3.js." />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@svenkreiss" />
+    <meta name="twitter:creator" content="@svenkreiss" />
+    <meta name="twitter:title" content="Wildcardians on Twitter" />
+    <meta name="twitter:description" content="A short project to visualize the social Twitter graph of people at Wildcard. The backend is particularly efficient in the number of API calls. The visualization is interactive in d3.js." />
+    <meta name="twitter:image:src" content="https://www.svenkreiss.com/images/wildcardians_on_twitter.png" />
+    <meta name="twitter:domain" content="svenkreiss.com" />
+
+    <meta property="og:title" content="Wildcardians on Twitter" />
+    <meta property="og:type" content="article" />
+    <meta property="og:description" content="A short project to visualize the social Twitter graph of people at Wildcard. The backend is particularly efficient in the number of API calls. The visualization is interactive in d3.js." />
+    <meta property="og:image" content="https://www.svenkreiss.com/images/wildcardians_on_twitter.png" />
+    <meta property="og:site_name" content="svenkreiss.com" />
+    <meta property="og:url" content="https://www.svenkreiss.com/blog/wildcardians-on-twitter/" />
+
+        <link rel="alternate"  href="https://www.svenkreiss.com/feeds/all.atom.xml" type="application/atom+xml" title="Sven Kreiss Full Atom Feed"/>
+
+        <title>Wildcardians on Twitter - Sven Kreiss</title>
+
+
+    <!-- KaTeX -->
+    <link rel="stylesheet" href="https://www.svenkreiss.com/extras/katex/katex.min.css" />
+    <script src="https://www.svenkreiss.com/extras/katex/katex.min.js"></script>
+    <script src="https://www.svenkreiss.com/extras/katex/contrib/auto-render.min.js"></script>
+
+    <link rel="stylesheet" href="https://www.svenkreiss.com/extras/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://www.svenkreiss.com/theme/css/pure.css?v=0.1.0" />
+    <link rel="stylesheet" href="https://www.svenkreiss.com/theme/css/pygments.css" />
+
+    <!-- for pelican_dynamic plugin -->
+    <!-- end pelican_dynamic -->
+
+</head>
+
+<body>
+<div class="pure-g-r" id="layout">
+    <div class="sidebar sidebar-article pure-u">
+        <header class="header-article">
+                    <a href="https://www.svenkreiss.com/blog/author/sven-kreiss/" title="See posts by Sven Kreiss">
+                        <img class="avatar" alt="Sven Kreiss" src="https://www.gravatar.com/avatar/562a52f3ffcb6c2a3556f91ddc540776?s=140">
+                    </a>
+                <h2 class="article-info">Sven Kreiss</h2>
+
+
+
+                <p class="article-date">April 27, 2015</p>
+
+                <a class="header-article-home" href="/">&larr;Home</a>
+        </header>
+    </div>
+    <div class="pure-u">
+        <div class="content">
+            <section class="post">
+                <header class="post-header">
+                    <h1>Wildcardians on Twitter</h1>
+                </header>
+            </section>
+
+            <p>Last Wednesday was Hack Day at Wildcard. This is a small extension of what we had done there:</p>
+<p><img class="image-process-crisp" src="/images/wildcardians_on_twitter.png" alt="social graph of people at Wildcard" /></p>
+<p>This graph was built from one API call to Twitter per person at Wildcard.
+So only 23 API calls. People at Wildcard are represented by blue dots and their
+Twitter handle next to it. The size is related to the number of followers.
+Orange dots are tweets. Black dots are other Twitter handles that were mentioned.</p>
+<p>The real visualization is interactive. You can hover over every tweet and read
+its content and hover over every mentioned twitter handle to reveal it.
+That way, I discovered a few interesting Twitter accounts that are mentioned
+in the tweets.</p>
+<p>The backend is a Python script. The front-end is a Databench analysis with a
+d3.js visualization.</p>
+
+            <p class="post-footer">
+                // filed
+under                    <a class="post-category" href="https://www.svenkreiss.com/blog/tag/twitter/">Twitter</a>
+                    <a class="post-category" href="https://www.svenkreiss.com/blog/tag/social-network-analysis/">social network analysis</a>
+                    <a class="post-category" href="https://www.svenkreiss.com/blog/tag/d3js/">d3.js</a>
+                    <a class="post-category" href="https://www.svenkreiss.com/blog/tag/python/">Python</a>
+                    <a class="post-category" href="https://www.svenkreiss.com/blog/tag/databench/">Databench</a>
+                in <a class="post-category" href="https://www.svenkreiss.com/blog/category/tech/">Tech</a>&nbsp;&nbsp;&nbsp;
+
+                <span style="display:inline-block;">
+                // share on <a href="https://twitter.com/share?text=%22Wildcardians%20on%20Twitter%3A%20A%20short%20project%20to%20visualize%20the%20social%20Twitter%20graph%20of%20people%20at%20Wildcard.%20The%20backend%20is%20particularly%20efficient%20in%20the%20number%20of%20API%20calls.%20The%20visualization%20is...%22&amp;hashtags=Twitter%2Csocialnetworkanalysis%2Cd3.js%2CPython%2CDatabench" target="_blank">
+                    <i class="fa fa-twitter fa-lg"></i> Twitter
+                </a>
+                </span>
+            </p>
+            <div class="hr"></div>
+
+            <h2>Related Posts</h2>
+            <ul class="related-posts">
+                <li>
+                    <a class="title" href="https://www.svenkreiss.com/blog/databench-initial/">Databench</a>
+                    <span class="date">from June 03, 2014</span>
+                    <span class="summary">Databench is a data analysis tool using Flask, Socket.IO and d3.js with optional parallelization with Redis Queue and visualization with mpld3.</span>
+                </li>
+                <li>
+                    <a class="title" href="https://www.svenkreiss.com/blog/dvds-js-v0.1.0/">dvds-js version 0.1.0</a>
+                    <span class="date">from April 25, 2014</span>
+                    <span class="summary">Distributed Versioned Data Structures in JavaScript. Like git in js.</span>
+                </li>
+                <li>
+                    <a class="title" href="https://www.svenkreiss.com/blog/morph-demo/">morphDemo</a>
+                    <span class="date">from March 06, 2014</span>
+                    <span class="summary">Demo of a new horizontal morphing algorithm.</span>
+                </li>
+            </ul>
+
+            <a href="#" class="go-top">Go Top</a>
+<footer class="footer">
+    <p>&copy; Sven Kreiss  2014 &ndash; 2022. Published with <a href="https://github.com/getpelican/pelican">Pelican</a>.<br />This work is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</p>
+</footer>        </div>
+    </div>
+</div>
+    <script>
+        renderMathInElement(document.body);
+    </script>
+
+    <!-- for pelican_dynamic plugin -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-4070485-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-4070485-2', { 'anonymize_ip': true });
+</script>
+
+
+</body>
+</html>

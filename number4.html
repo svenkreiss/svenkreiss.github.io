@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="number4point1 - the current version Main goals are a body, a new electronic and more sensors. The new electronic boards for the legs are already working. The sensors at the foots are added and calibrated. Documents number4 - January 2006 Review number4 Newspaper article BeLL.pdf Ergaenzungen_zur_BeLL.pdf Some older articles for …" />
+
+
+        <link rel="alternate"  href="https://www.svenkreiss.com/feeds/all.atom.xml" type="application/atom+xml" title="Sven Kreiss Full Atom Feed"/>
+
+        <title>number4 - Sven Kreiss</title>
+
+
+    <!-- KaTeX -->
+    <link rel="stylesheet" href="https://www.svenkreiss.com/extras/katex/katex.min.css" />
+    <script src="https://www.svenkreiss.com/extras/katex/katex.min.js"></script>
+    <script src="https://www.svenkreiss.com/extras/katex/contrib/auto-render.min.js"></script>
+
+    <link rel="stylesheet" href="https://www.svenkreiss.com/extras/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://www.svenkreiss.com/theme/css/pure.css?v=0.1.0" />
+
+    <!-- for pelican_dynamic plugin -->
+    <!-- end pelican_dynamic -->
+
+</head>
+
+<body>
+<div class="pure-g-r" id="layout">
+<div class="sidebar pure-u">
+    <div class="cover-img" style="background-image: url('/images/winter_mountains_1600.jpeg');">
+        <div class="cover-body">
+            <header class="header">
+                    <h1 class="brand-main"><a href="/">Sven Kreiss</a></h1>
+                    <p class="tagline">Computer vision engineer with physics background.</p>
+                    <p class="links"><a href="/">About</a></p>
+                    <p class="links"><a href="/projects.html">Projects</a></p>
+                    <p class="links"><a href="/blog/">Blog</a></p>
+                    <p class="social">
+                        <a href="https://scholar.google.ch/citations?hl=en&user=SnjnSVEAAAAJ&view_op=list_works&sortby=pubdate">
+                            <i class="fa fa-graduation-cap fa-2x"></i>
+                        </a>
+                        <a href="https://github.com/svenkreiss/">
+                            <i class="fa fa-github fa-2x"></i>
+                        </a>
+                        <a href="https://twitter.com/svenkreiss">
+                            <i class="fa fa-twitter fa-2x"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/svenkreiss/">
+                            <i class="fa fa-linkedin fa-2x"></i>
+                        </a>
+                    </p>
+            </header>
+        </div>
+    </div>
+</div>    <div class="pure-u-1">
+        <div class="content">
+            <h1 class="content-subhead">number4</h1>
+            <h2>number4point1 - the current version</h2>
+<p><img src="/images/number4/Screenshot_060130.jpg" title="Screenshot of OpenGL interface" alt="Screenshot of OpenGL interface"></p>
+<p>Main goals are a body, a new electronic and more sensors. The new electronic boards for the legs are already working. The sensors at the foots are added and calibrated.</p>
+<div style="clear:both;"></div>
+
+<h2>Documents</h2>
+<p><img src="/images/number4/Foto_060130_3.jpg" width="450" title="number 4" alt="number 4"></p>
+<ul>
+<li><a href="/number4-jan06.html">number4 - January 2006 Review</a></li>
+<li><a href="/blog/number4-lvz/">number4 Newspaper article</a></li>
+<li><a href="/files/number4/BeLL.pdf">BeLL.pdf</a></li>
+<li><a href="/files/number4/Ergaenzungen_zur_BeLL.pdf">Ergaenzungen_zur_BeLL.pdf</a></li>
+</ul>
+<p>Some older articles for reference:</p>
+<ul>
+<li><a href="/number4-first-version.html">number4 First Version</a></li>
+<li><a href="/number123.html">number1 2 3</a></li>
+</ul>
+<div style="clear:both;"></div>
+
+<h2>Graphics</h2>
+<p>Just want to put up some screen shots from one of the OpenGL program that was used as a backend.</p>
+<p><img src="/images/number4/Openglrobot1.jpg" width="350" title="The latest version." alt="The latest version.">
+<img src="/images/number4/Openglrobot2.jpg" width="350" title="In motion." alt="In motion."></p>
+<h2>Electronic</h2>
+<p>Emphasize on autonomy, distributed calculations, Hardware-PWM-Generation, current-measurement, Master-Multislave-Bus and a sensor network.</p>
+<ul>
+<li>distributed calculations: Master is a ATMega128, calculates the coordinates of the foots, Slaves (also ATMega128) calculate the angle at the joints from the coordinates</li>
+<li>Hardware-PWM-Generation: at ATMega128, 2x 16Bit-Timer with 3 Capture-Compare-Registers each</li>
+<li>current-measurement: with 6 of the 8 ADC-channels of the ATMega128 the "potential-drop" at a 1 Ohm power-resistor is measured.</li>
+<li>Master-Multislave-Bus: with USART; TX from Master is connected to many Slaves (RX) via RS-485 network (bi-directional); clock signal is transmitted over separate RS-485 bus (single direction)</li>
+<li>Slave-Board: ATMega128 do not have enough spare ADC-Ports, therefore there is an additional ATMega16. This one is connected to the serial bus too. The ATMega16 reads the force sensors, distance sensors and the acceleration sensors.</li>
+</ul>
+<h2>Force Sensors</h2>
+<p>The robot has eight force sensors now. Four on each foot. The force is measured with a force-sensitive resistor. It is an element consisting of several sheets of foil with two pins. The resistance between the two pins changes with force on the foil. Without the force there is a resistance of more then 2MOhm. With two fingers one can reduce this resistance down to approximately 2kOhm. One end of the force-sensitive resistor is connected to 5V. The other one to one of the eight ADC-Inputs of the ATMega16 and to a 100kOhm resistor which is connected to ground.</p>
+<footer class="footer">
+    <p>&copy; Sven Kreiss  2014 &ndash; 2022. Published with <a href="https://github.com/getpelican/pelican">Pelican</a>.<br />This work is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</p>
+</footer>        </div>
+    </div>
+</div>
+    <script>
+        renderMathInElement(document.body);
+    </script>
+
+    <!-- for pelican_dynamic plugin -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-4070485-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-4070485-2', { 'anonymize_ip': true });
+</script>
+
+
+</body>
+</html>

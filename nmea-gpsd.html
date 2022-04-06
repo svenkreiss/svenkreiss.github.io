@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="The NMEA-Parser from the GPSD project. This code is hosted on google code now: http://code.google.com/p/gpsd-nmea/ Old instructions on how to recreate this yourself To extract the NMEA-Parser out of GPSD is easier than it looks at first. Just download the whole source and copy these …" />
+
+
+        <link rel="alternate"  href="https://www.svenkreiss.com/feeds/all.atom.xml" type="application/atom+xml" title="Sven Kreiss Full Atom Feed"/>
+
+        <title>nmea-gpsd - Sven Kreiss</title>
+
+
+    <!-- KaTeX -->
+    <link rel="stylesheet" href="https://www.svenkreiss.com/extras/katex/katex.min.css" />
+    <script src="https://www.svenkreiss.com/extras/katex/katex.min.js"></script>
+    <script src="https://www.svenkreiss.com/extras/katex/contrib/auto-render.min.js"></script>
+
+    <link rel="stylesheet" href="https://www.svenkreiss.com/extras/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://www.svenkreiss.com/theme/css/pure.css?v=0.1.0" />
+
+    <!-- for pelican_dynamic plugin -->
+    <!-- end pelican_dynamic -->
+
+</head>
+
+<body>
+<div class="pure-g-r" id="layout">
+<div class="sidebar pure-u">
+    <div class="cover-img" style="background-image: url('/images/winter_mountains_1600.jpeg');">
+        <div class="cover-body">
+            <header class="header">
+                    <h1 class="brand-main"><a href="/">Sven Kreiss</a></h1>
+                    <p class="tagline">Computer vision engineer with physics background.</p>
+                    <p class="links"><a href="/">About</a></p>
+                    <p class="links"><a href="/projects.html">Projects</a></p>
+                    <p class="links"><a href="/blog/">Blog</a></p>
+                    <p class="social">
+                        <a href="https://scholar.google.ch/citations?hl=en&user=SnjnSVEAAAAJ&view_op=list_works&sortby=pubdate">
+                            <i class="fa fa-graduation-cap fa-2x"></i>
+                        </a>
+                        <a href="https://github.com/svenkreiss/">
+                            <i class="fa fa-github fa-2x"></i>
+                        </a>
+                        <a href="https://twitter.com/svenkreiss">
+                            <i class="fa fa-twitter fa-2x"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/svenkreiss/">
+                            <i class="fa fa-linkedin fa-2x"></i>
+                        </a>
+                    </p>
+            </header>
+        </div>
+    </div>
+</div>    <div class="pure-u-1">
+        <div class="content">
+            <h1 class="content-subhead">nmea-gpsd</h1>
+            <blockquote>
+<p>The NMEA-Parser from the GPSD project.<br />
+This code is hosted on google code now: http://code.google.com/p/gpsd-nmea/</p>
+</blockquote>
+<h3>Old instructions on how to recreate this yourself</h3>
+<p>To extract the NMEA-Parser out of GPSD is easier than it looks at first. Just download the whole source and copy these files into a separate directory:</p>
+<ul>
+<li>gps.h</li>
+<li>timebase.h</li>
+<li>geoid.c</li>
+<li>gpsutils.c</li>
+<li>nmea_parse.c</li>
+</ul>
+<p>The next step is to replace all references to ''gpsd.h'' by ''gps.h'' and remove ''#include gpsd_config.h''.
+You will also need to move some ''#define'' from ''gpsd_config.h'' and ''gpsd.h'' to ''gps.h''. Next step is to rewrite the functions in ''nmea_parse.c'' to take structs of type gps_data_t instead of gps_device_t. All what is necessary is to move the struct ''nmea'' from gps_device_t.driver to gps_data_t. Last thing is the dependency on gpsd_report. I just disabled it by putting a ''#define gpsd_report(...)'' at the beginning of ''gps.h''.</p>
+<footer class="footer">
+    <p>&copy; Sven Kreiss  2014 &ndash; 2022. Published with <a href="https://github.com/getpelican/pelican">Pelican</a>.<br />This work is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</p>
+</footer>        </div>
+    </div>
+</div>
+    <script>
+        renderMathInElement(document.body);
+    </script>
+
+    <!-- for pelican_dynamic plugin -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-4070485-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-4070485-2', { 'anonymize_ip': true });
+</script>
+
+
+</body>
+</html>

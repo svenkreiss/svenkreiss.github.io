@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Technische Daten Höhe: 51 cm Masse: 1.2 kg Freiheitsgrade: 11 Abstandssensoren: 2 Drucksensoren: 8 Lagesensoren: noch keine Bilder Aufbau von Nummer4 Mechanik Basismaterial sind speziell zugefräste Plastestückchen. Diese stammen aus alten Fleischerbrettchen. Sie bilden die Halterung sowie die Verbindung zwischen den Servomotoren. Jedes Gelenk besteht aus zwei Lagern. Das …" />
+
+
+        <link rel="alternate"  href="https://www.svenkreiss.com/feeds/all.atom.xml" type="application/atom+xml" title="Sven Kreiss Full Atom Feed"/>
+
+        <title>number4 - First Version - Sven Kreiss</title>
+
+
+    <!-- KaTeX -->
+    <link rel="stylesheet" href="https://www.svenkreiss.com/extras/katex/katex.min.css" />
+    <script src="https://www.svenkreiss.com/extras/katex/katex.min.js"></script>
+    <script src="https://www.svenkreiss.com/extras/katex/contrib/auto-render.min.js"></script>
+
+    <link rel="stylesheet" href="https://www.svenkreiss.com/extras/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://www.svenkreiss.com/theme/css/pure.css?v=0.1.0" />
+
+    <!-- for pelican_dynamic plugin -->
+    <!-- end pelican_dynamic -->
+
+</head>
+
+<body>
+<div class="pure-g-r" id="layout">
+<div class="sidebar pure-u">
+    <div class="cover-img" style="background-image: url('/images/winter_mountains_1600.jpeg');">
+        <div class="cover-body">
+            <header class="header">
+                    <h1 class="brand-main"><a href="/">Sven Kreiss</a></h1>
+                    <p class="tagline">Computer vision engineer with physics background.</p>
+                    <p class="links"><a href="/">About</a></p>
+                    <p class="links"><a href="/projects.html">Projects</a></p>
+                    <p class="links"><a href="/blog/">Blog</a></p>
+                    <p class="social">
+                        <a href="https://scholar.google.ch/citations?hl=en&user=SnjnSVEAAAAJ&view_op=list_works&sortby=pubdate">
+                            <i class="fa fa-graduation-cap fa-2x"></i>
+                        </a>
+                        <a href="https://github.com/svenkreiss/">
+                            <i class="fa fa-github fa-2x"></i>
+                        </a>
+                        <a href="https://twitter.com/svenkreiss">
+                            <i class="fa fa-twitter fa-2x"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/svenkreiss/">
+                            <i class="fa fa-linkedin fa-2x"></i>
+                        </a>
+                    </p>
+            </header>
+        </div>
+    </div>
+</div>    <div class="pure-u-1">
+        <div class="content">
+            <h1 class="content-subhead">number4 - First Version</h1>
+            <h2>Technische Daten</h2>
+<ul>
+<li>Höhe: 51 cm</li>
+<li>Masse: 1.2 kg</li>
+<li>Freiheitsgrade: 11</li>
+<li>Abstandssensoren: 2</li>
+<li>Drucksensoren: 8</li>
+<li>Lagesensoren: noch keine</li>
+</ul>
+<h2>Bilder</h2>
+<p><img src="/images/number4/first-version/Foto_fuesse.jpg" width="350" title="number4" alt="number4">
+<img src="/images/number4/first-version/Foto_huefte.jpg" width="350" title="number4" alt="number4">
+<img src="/images/number4/first-version/Foto_totale.jpg" width="350" title="number4" alt="number4">
+<img src="/images/number4/first-version/Foto_unterkoerper.jpg" width="350" title="number4" alt="number4">
+<img src="/images/number4/first-version/Nummer4_050502_1.jpg" width="350" title="number4" alt="number4">
+<img src="/images/number4/first-version/Nummer4_050502_2.jpg" width="350" title="number4" alt="number4">
+<img src="/images/number4/first-version/Nummer4_050502_3.jpg" width="350" title="number4" alt="number4">
+<img src="/images/number4/first-version/Nummer4_050502_4.jpg" width="350" title="number4" alt="number4"></p>
+<h2>Aufbau von Nummer4</h2>
+<h3>Mechanik</h3>
+<p>Basismaterial sind speziell zugefräste Plastestückchen. Diese stammen aus alten Fleischerbrettchen. Sie bilden die Halterung sowie die Verbindung zwischen den Servomotoren. Jedes Gelenk besteht aus zwei Lagern. Das eine Lager ist das Kugellager im Motor selbst und das andere Lager ist ein Reiblager bestehend aus einem Messingbolzen und zwei Löchern in den Plastikstückchen.</p>
+<h3>Aktuatoren</h3>
+<p>Digitale Servomotoren von der Firma Robbe treiben den Roboter an. Sie sind besonders durch ihr hohes Haltemoment und ihre hohe Präzision geeignet. Derzeit verwende ich den Typ FS-250T. Das Verhalten der Servomotoren lässt sich mit der Software CAMI 2000 programmieren. Ein neuer Digitalservo, der FS-280T, ist sicherlich eine noch bessere Alternative, für die mir derzeit das Geld fehlt. In diesem Zusammenhang möchte ich mich bei der Firma robbe - Modellsport GmbH für ihre bisherige Unterstützung bedanken.</p>
+<h3>PC-Software</h3>
+<p>Die Software in einem PC berechnet derzeit die Bewegung. Es ist eine C Applikation, die ich bisher auf einem SuSE-Linux- und auf einem Debian-Linux-System laufen hatte. Eingaben erfolgen über die Tastatur. Dadurch werden Routinen für bestimmte Bewegungsabläufe aufgerufen oder Variablen wie die Schrittweite modifiziert. Die Bewegung wird zum einen als Echtzeitanimation mit OpenGL auf dem Bildschirm ausgegeben und zum anderen mit der seriellen Schnittstelle übertragen. Die Ausgangsdaten an der seriellen Schnittstelle sind schon die Pulsweiten für die Generierung des PWM-Signals im Controller. Über die serielle Schnittstelle werden auch Sensorinformationen zurückgesendet. Derzeit nur die beiden Werte der Abstandssensoren. Eine Übertragung von mehr Sensorinformationen ist ohne Probleme möglich (Nummer3 hatte schon an jedem Fuß vier Taster, deren Zustände übertragen wurden).</p>
+<h3>Sensorik</h3>
+<p>Nummer4 verfügt derzeit nur über zwei Abstandssensoren. Diese sind nach vorn gerichtet. Er kann somit auf größere Gegenstände reagieren und seine Schrittweite auf Null verringern.
+Sensoren, welche die Belastungen der Füße messen und Unebenheiten im Boden erkennen fehlen noch. Nummer 1,2 und 3 besaßen bereits pro Fuß vier Taster mit denen zumindest eine Erkennung von Hindernissen möglich war.
+Die neue Elektronik (Fertigstellung geplant für 03-06/2005), die bereits als Schaltungslayout existiert, wird auch in der Lage sein, die Ströme an jedem einzelnen Servo zu messen. Dadurch wird zum ersten Mal in diesem Projekt eine Bewertung des Energieverbrauchs mit experimentell bestimmten Zahlen möglich.</p>
+<h3>Elektronik</h3>
+<p>Die Elektronik erhält über die serielle Schnittstelle die Pulsweiten für jedes einzelne Servosignal. Der Controller hat dann die Aufgabe simultan 11 PWM-Signale zu erzeugen. Kern der Elektronik ist ein mit 16 MHz betriebener ATMega128 von Atmel. Dieser 8-Bit-Controller ist besonders gut durch seine zahlreichen Ports und die Kommunikationsschnittstellen (2x USART, TWI, SPI, ...) geeignet.</p>
+<p>Noch vor kurzem programmierte ich diesen Controller mit BASCOM (Basic). Nun bin ich auch hier auf Linux und gleichzeitig auf C umgestiegen. Es wird noch etwas dauern bis ich mit C dieselben Sachen anstellen kann wie mit BASCOM.</p>
+<p>Die neue Elektronik (geplant für 03-06/2005) soll dann den Roboter autonom vom PC werden lassen. Ein verteiltes System aus mehreren ATMega128 wird die Bewegung berechnen und in die PWM-Signale umwandeln. Zusätzlich soll der Strom an jedem Motor einzeln gemessen werden können und jeder Motor soll einzeln abschaltbar sein. Vorstellbar sind dann auch weitere Module für Sensorauswertungen usw.</p>
+<p>Die Kommunikation zwischen den Controllern sollen die implementierten UARTs übernehmen. Master erzeugt einen Datenblock, der dann von allen gelesen wird. Durch eine externe Beschaltung kann auch ein Slave zum Master senden, jedoch nur nach Aufforderung durch den Master.</p>
+<p>Die PWM-Signale sollen in der neuen Elektronik nicht mehr durch Softwarealgorithmen erzeugt werden, sondern durch die beiden 16-Bit-Timer. Jeder dieser beiden Timer kann drei PWM-Signale erzeugen.</p>
+<p>Soweit die Theorie, ich habe das noch nie probiert.</p>
+<footer class="footer">
+    <p>&copy; Sven Kreiss  2014 &ndash; 2022. Published with <a href="https://github.com/getpelican/pelican">Pelican</a>.<br />This work is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</p>
+</footer>        </div>
+    </div>
+</div>
+    <script>
+        renderMathInElement(document.body);
+    </script>
+
+    <!-- for pelican_dynamic plugin -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-4070485-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-4070485-2', { 'anonymize_ip': true });
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Reading notes on ancient machine learning papers." />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@svenkreiss" />
+    <meta name="twitter:creator" content="@svenkreiss" />
+    <meta name="twitter:title" content="AncientML 3: ..." />
+    <meta name="twitter:description" content="Reading notes on ancient machine learning papers." />
+    <meta name="twitter:image:src" content="https://www.svenkreiss.com/images/winter_mountains_1600.jpeg" />
+    <meta name="twitter:domain" content="svenkreiss.com" />
+
+    <meta property="og:title" content="AncientML 3: ..." />
+    <meta property="og:type" content="article" />
+    <meta property="og:description" content="Reading notes on ancient machine learning papers." />
+    <meta property="og:image" content="https://www.svenkreiss.com/images/winter_mountains_1600.jpeg" />
+    <meta property="og:site_name" content="svenkreiss.com" />
+    <meta property="og:url" content="https://www.svenkreiss.com/drafts/ancientml-2019-08.html" />
+
+        <link rel="alternate"  href="https://www.svenkreiss.com/feeds/all.atom.xml" type="application/atom+xml" title="Sven Kreiss Full Atom Feed"/>
+
+        <title>AncientML 3: ... - Sven Kreiss</title>
+
+
+    <!-- KaTeX -->
+    <link rel="stylesheet" href="https://www.svenkreiss.com/extras/katex/katex.min.css" />
+    <script src="https://www.svenkreiss.com/extras/katex/katex.min.js"></script>
+    <script src="https://www.svenkreiss.com/extras/katex/contrib/auto-render.min.js"></script>
+
+    <link rel="stylesheet" href="https://www.svenkreiss.com/extras/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://www.svenkreiss.com/theme/css/pure.css?v=0.1.0" />
+    <link rel="stylesheet" href="https://www.svenkreiss.com/theme/css/pygments.css" />
+
+    <!-- for pelican_dynamic plugin -->
+    <!-- end pelican_dynamic -->
+
+</head>
+
+<body>
+<div class="pure-g-r" id="layout">
+    <div class="sidebar sidebar-article pure-u">
+        <header class="header-article">
+                    <a href="https://www.svenkreiss.com/blog/author/sven-kreiss/" title="See posts by Sven Kreiss">
+                        <img class="avatar" alt="Sven Kreiss" src="https://www.gravatar.com/avatar/562a52f3ffcb6c2a3556f91ddc540776?s=140">
+                    </a>
+                <h2 class="article-info">Sven Kreiss</h2>
+
+
+                    <h5>Draft</h5>
+
+                <p class="article-date">August 01, 2019</p>
+
+                <a class="header-article-home" href="/">&larr;Home</a>
+        </header>
+    </div>
+    <div class="pure-u">
+        <div class="content">
+            <section class="post">
+                <header class="post-header">
+                    <h1>AncientML 3: ...</h1>
+                </header>
+            </section>
+
+            <p><img class="img-thumbnail float-right" src="/images/ancientml-logo.png" width="300" alt="AncientML Logo" /></p>
+<p>AncientML is a series of paper reading notes. The purpose is to review
+outstanding contributions to machine learning that are valuable to the
+formation as an academic field.</p>
+<div style="clear:both"></div>
+
+<h2>Steps Toward Artificial Intelligence (Minsky, 1961), <a href="">PDF!!!</a></h2>
+<h2>Previously</h2>
+<ul>
+<li><a href="ancientml-2018-03.md">The Mathematical Theory of Communication (Shannon, 1951)</a></li>
+<li><a href="ancientml-2018-03.md">A Proposal for the Dartmouth Summer Research Project on Artificial Intelligence, August 31, 1955</a></li>
+</ul>
+<h2>Backlog</h2>
+<ul>
+<li>Multidimensional binary search trees used for associative searching,
+  <a href='#bentley1975multidimensional' id='ref-bentley1975multidimensional-1'>(Bentley, 1975)</a>,
+  <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.160.335&amp;rep=rep1&amp;type=pdf">PDF</a></li>
+<li>RBM predecessor Harmonium: Information processing in dynamical systems: Foundations of harmony theory,
+  <a href='#smolensky1986information' id='ref-smolensky1986information-1'>(Smolensky, 1986)</a>, <a href="http://stanford.edu/~jlmcc/papers/PDP/Volume%201/Chap6_PDP86.pdf">PDF</a></li>
+<li>Reducing the Dimensionality of Data,
+  <a href='#hinton2006reducing' id='ref-hinton2006reducing-1'>(Hinton and Salakhutdinov, 2006)</a>, <a href="http://www.cs.toronto.edu/~hinton/science.pdf">PDF</a></li>
+<li>Online Convex Programming and Generalized Infinitesimal Gradient Ascent
+  <a href='#zinkevich2003online' id='ref-zinkevich2003online-1'>(Zinkevich, 2003)</a>, <a href="http://www.aaai.org/Papers/ICML/2003/ICML03-120.pdf">PDF</a></li>
+<li>Supervised Sequence Labelling with Recurrent Neural Networks
+  <a href='#graves2012supervised' id='ref-graves2012supervised-1'>(Graves, 2012)</a>, <a href="https://www.cs.toronto.edu/~graves/preprint.pdf">PDF</a></li>
+<li>High-speed tracking with kernelized correlation filters,
+  <a href='#kcftracker2015high' id='ref-kcftracker2015high-1'>(Henriques et al., 2015)</a>, <a href="https://arxiv.org/pdf/1404.7584">PDF</a></li>
+</ul><hr>
+<h2>Bibliography</h2>
+<p id='bentley1975multidimensional'>Jon&nbsp;Louis Bentley.
+Multidimensional binary search trees used for associative searching.
+<em>Communications of the ACM</em>, 18(9):509–517, 1975. <a class="cite-backref" href="#ref-bentley1975multidimensional-1" title="Jump back to reference 1">↩</a></p>
+<p id='graves2012supervised'>Alex Graves.
+Supervised sequence labelling.
+In <em>Supervised sequence labelling with recurrent neural networks</em>, pages 5–13.
+Springer, 2012. <a class="cite-backref" href="#ref-graves2012supervised-1" title="Jump back to reference 1">↩</a></p>
+<p id='kcftracker2015high'>Jo<span class="bibtex-protected">ã</span>o&nbsp;F Henriques, Rui Caseiro, Pedro Martins, and Jorge Batista.
+High-speed tracking with kernelized correlation filters.
+<em>IEEE Transactions on Pattern Analysis and Machine Intelligence</em>, 37(3):583–596, 2015. <a class="cite-backref" href="#ref-kcftracker2015high-1" title="Jump back to reference 1">↩</a></p>
+<p id='hinton2006reducing'>Geoffrey&nbsp;E Hinton and Ruslan&nbsp;R Salakhutdinov.
+Reducing the dimensionality of data with neural networks.
+<em>Science</em>, 313(5786):504–507, 2006. <a class="cite-backref" href="#ref-hinton2006reducing-1" title="Jump back to reference 1">↩</a></p>
+<p id='smolensky1986information'>Paul Smolensky.
+Information processing in dynamical systems: foundations of harmony theory.
+Technical Report, Colorado University at Boulder Dept of Computer Science, 1986. <a class="cite-backref" href="#ref-smolensky1986information-1" title="Jump back to reference 1">↩</a></p>
+<p id='zinkevich2003online'>Martin Zinkevich.
+Online convex programming and generalized infinitesimal gradient ascent.
+In <em>Proceedings of the 20th International Conference on Machine Learning (ICML-03)</em>, 928–936. 2003. <a class="cite-backref" href="#ref-zinkevich2003online-1" title="Jump back to reference 1">↩</a></p>
+
+
+            <p class="post-footer">
+                // filed
+under                    <a class="post-category" href="https://www.svenkreiss.com/blog/tag/ancientml/">ancientml</a>
+                in <a class="post-category" href="https://www.svenkreiss.com/blog/category/ml/">ML</a>&nbsp;&nbsp;&nbsp;
+
+                <span style="display:inline-block;">
+                // share on <a href="https://twitter.com/share?text=%22AncientML%203%3A%20...%3A%20Reading%20notes%20on%20ancient%20machine%20learning%20papers.%22&amp;hashtags=ancientml" target="_blank">
+                    <i class="fa fa-twitter fa-lg"></i> Twitter
+                </a>
+                </span>
+            </p>
+            <div class="hr"></div>
+
+            <h2>Related Posts</h2>
+            <ul class="related-posts">
+                <li>
+                    <a class="title" href="https://www.svenkreiss.com/blog/ancientml-2018-03/">AncientML 1</a>
+                    <span class="date">from March 05, 2018</span>
+                    <span class="summary">AncientML is a series of paper reading notes. This first edition covers the first mention of AI and the Mathematical Theory of Communication.</span>
+                </li>
+            </ul>
+
+            <a href="#" class="go-top">Go Top</a>
+<footer class="footer">
+    <p>&copy; Sven Kreiss  2014 &ndash; 2022. Published with <a href="https://github.com/getpelican/pelican">Pelican</a>.<br />This work is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</p>
+</footer>        </div>
+    </div>
+</div>
+    <script>
+        renderMathInElement(document.body);
+    </script>
+
+    <!-- for pelican_dynamic plugin -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-4070485-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-4070485-2', { 'anonymize_ip': true });
+</script>
+
+
+</body>
+</html>

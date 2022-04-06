@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="New release of Databench that switches the backend from Flask to Tornado, fully supports Python 2 and 3, transpiles ES6 to legacy JavaScript and runs unit tests and coverage on every commit." />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@svenkreiss" />
+    <meta name="twitter:creator" content="@svenkreiss" />
+    <meta name="twitter:title" content="Databench v0.4" />
+    <meta name="twitter:description" content="New release of Databench that switches the backend from Flask to Tornado, fully supports Python 2 and 3, transpiles ES6 to legacy JavaScript and runs unit tests and coverage on every commit." />
+    <meta name="twitter:image:src" content="https://www.svenkreiss.com/images/databench_examples.png" />
+    <meta name="twitter:domain" content="svenkreiss.com" />
+
+    <meta property="og:title" content="Databench v0.4" />
+    <meta property="og:type" content="article" />
+    <meta property="og:description" content="New release of Databench that switches the backend from Flask to Tornado, fully supports Python 2 and 3, transpiles ES6 to legacy JavaScript and runs unit tests and coverage on every commit." />
+    <meta property="og:image" content="https://www.svenkreiss.com/images/databench_examples.png" />
+    <meta property="og:site_name" content="svenkreiss.com" />
+    <meta property="og:url" content="https://www.svenkreiss.com/blog/databench-v04/" />
+
+        <link rel="alternate"  href="https://www.svenkreiss.com/feeds/all.atom.xml" type="application/atom+xml" title="Sven Kreiss Full Atom Feed"/>
+
+        <title>Databench v0.4 - Sven Kreiss</title>
+
+
+    <!-- KaTeX -->
+    <link rel="stylesheet" href="https://www.svenkreiss.com/extras/katex/katex.min.css" />
+    <script src="https://www.svenkreiss.com/extras/katex/katex.min.js"></script>
+    <script src="https://www.svenkreiss.com/extras/katex/contrib/auto-render.min.js"></script>
+
+    <link rel="stylesheet" href="https://www.svenkreiss.com/extras/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://www.svenkreiss.com/theme/css/pure.css?v=0.1.0" />
+    <link rel="stylesheet" href="https://www.svenkreiss.com/theme/css/pygments.css" />
+
+    <!-- for pelican_dynamic plugin -->
+    <!-- end pelican_dynamic -->
+
+</head>
+
+<body>
+<div class="pure-g-r" id="layout">
+    <div class="sidebar sidebar-article pure-u">
+        <header class="header-article">
+                    <a href="https://www.svenkreiss.com/blog/author/sven-kreiss/" title="See posts by Sven Kreiss">
+                        <img class="avatar" alt="Sven Kreiss" src="https://www.gravatar.com/avatar/562a52f3ffcb6c2a3556f91ddc540776?s=140">
+                    </a>
+                <h2 class="article-info">Sven Kreiss</h2>
+
+
+
+                <p class="article-date">September 22, 2016</p>
+
+                <a class="header-article-home" href="/">&larr;Home</a>
+        </header>
+    </div>
+    <div class="pure-u">
+        <div class="content">
+            <section class="post">
+                <header class="post-header">
+                    <h1>Databench v0.4</h1>
+                </header>
+            </section>
+
+            <p><img class="image-process-crisp" src="/images/databench_examples.png" alt="screenshot of index page for examples" /></p>
+<p>Databench v0.4 is <a href="https://github.com/svenkreiss/databench/releases/tag/v0.4.0">released</a>.
+It is a major change from the v0.3 branch. All <a href="http://databench.trivial.io/">documentation</a>,
+<a href="https://github.com/svenkreiss/databench_examples">examples</a> and
+<a href="http://databench-examples.trivial.io/">demos</a> are updated.
+Install the new version with</p>
+<div class="highlight"><pre><span></span><code>pip install --upgrade databench
+</code></pre></div>
+
+<p>Here are the highlights:</p>
+<ul>
+<li>Migrated from <strong>Flask to Tornado</strong> and with that a switch from Jinja2 templates to Tornado templates.</li>
+<li>With that new backend, <strong>Python 2.7, 3.4 and 3.5</strong> are supported.</li>
+<li>The previous version had many dependencies and a major goal of the refactor was to reduce the number of dependencies. This version only depends on <strong>tornado, pyyaml and pyzmq</strong>. Markdown and docutils to support <em>md</em> and <em>rst</em> readme files are optional.</li>
+<li>A <strong>Datastore</strong> was added. This concept encourages a consistent pattern for state that works with multiple threads and languages (see the new part of the documentation on <a href="http://databench.trivial.io/en/latest/quickstart.html#data-flow">data flow</a>).</li>
+<li>Front-end code in <strong>ES6</strong> that is transpiled to legacy JavaScript. Also for analysis code, there is built in support for <a href="http://databench.trivial.io/en/latest/frontend.html#node-modules">node_modules</a>.</li>
+<li><strong>Unit tests run automatically</strong> on every commit. Also the <strong>documentation is built and updated</strong> on every commit. The test coverage of the code is also updated continuously and is currently at 95%. Unit tests always run for Python 2.7, 3.4 and 3.5.</li>
+</ul>
+<p>If you want to jump right in, start with the
+<a href="http://databench.trivial.io/">documentation</a> and have a look at some
+<a href="https://github.com/svenkreiss/databench_examples">examples</a>.</p>
+
+            <p class="post-footer">
+                // filed
+under                    <a class="post-category" href="https://www.svenkreiss.com/blog/tag/javascript/">JavaScript</a>
+                    <a class="post-category" href="https://www.svenkreiss.com/blog/tag/python/">Python</a>
+                    <a class="post-category" href="https://www.svenkreiss.com/blog/tag/data-visualization/">data visualization</a>
+                    <a class="post-category" href="https://www.svenkreiss.com/blog/tag/data-analysis/">data analysis</a>
+                in <a class="post-category" href="https://www.svenkreiss.com/blog/category/tech/">Tech</a>&nbsp;&nbsp;&nbsp;
+
+                <span style="display:inline-block;">
+                // share on <a href="https://twitter.com/share?text=%22Databench%20v0.4%3A%20New%20release%20of%20Databench%20that%20switches%20the%20backend%20from%20Flask%20to%20Tornado%2C%20fully%20supports%20Python%202%20and%203%2C%20transpiles%20ES6%20to%20legacy%20JavaScript%20and%20runs%20unit%20tests%20and%20coverage%20on...%22&amp;hashtags=JavaScript%2CPython%2Cdatavisualization%2Cdataanalysis" target="_blank">
+                    <i class="fa fa-twitter fa-lg"></i> Twitter
+                </a>
+                </span>
+            </p>
+            <div class="hr"></div>
+
+            <h2>Related Posts</h2>
+            <ul class="related-posts">
+                <li>
+                    <a class="title" href="https://www.svenkreiss.com/blog/databench-initial/">Databench</a>
+                    <span class="date">from June 03, 2014</span>
+                    <span class="summary">Databench is a data analysis tool using Flask, Socket.IO and d3.js with optional parallelization with Redis Queue and visualization with mpld3.</span>
+                </li>
+                <li>
+                    <a class="title" href="https://www.svenkreiss.com/blog/dvds-js-v0.1.0/">dvds-js version 0.1.0</a>
+                    <span class="date">from April 25, 2014</span>
+                    <span class="summary">Distributed Versioned Data Structures in JavaScript. Like git in js.</span>
+                </li>
+                <li>
+                    <a class="title" href="https://www.svenkreiss.com/blog/artisanal-s2/">Artisanal S2 Cells</a>
+                    <span class="date">from November 28, 2018</span>
+                    <span class="summary">S2 cells are a powerful tool to index and compute over geospatial data. This short post shows how to create S2 cell ids by hand.</span>
+                </li>
+            </ul>
+
+            <a href="#" class="go-top">Go Top</a>
+<footer class="footer">
+    <p>&copy; Sven Kreiss  2014 &ndash; 2022. Published with <a href="https://github.com/getpelican/pelican">Pelican</a>.<br />This work is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</p>
+</footer>        </div>
+    </div>
+</div>
+    <script>
+        renderMathInElement(document.body);
+    </script>
+
+    <!-- for pelican_dynamic plugin -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-4070485-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-4070485-2', { 'anonymize_ip': true });
+</script>
+
+
+</body>
+</html>

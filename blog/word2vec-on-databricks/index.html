@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Running word2vec on Databricks. A full example of using gensim and distributed maps with Spark to run this Python analysis on Databricks." />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@svenkreiss" />
+    <meta name="twitter:creator" content="@svenkreiss" />
+    <meta name="twitter:title" content="word2vec on Databricks" />
+    <meta name="twitter:description" content="Running word2vec on Databricks. A full example of using gensim and distributed maps with Spark to run this Python analysis on Databricks." />
+    <meta name="twitter:image:src" content="https://www.svenkreiss.com/images/word2vec_angle.png" />
+    <meta name="twitter:domain" content="svenkreiss.com" />
+
+    <meta property="og:title" content="word2vec on Databricks" />
+    <meta property="og:type" content="article" />
+    <meta property="og:description" content="Running word2vec on Databricks. A full example of using gensim and distributed maps with Spark to run this Python analysis on Databricks." />
+    <meta property="og:image" content="https://www.svenkreiss.com/images/word2vec_angle.png" />
+    <meta property="og:site_name" content="svenkreiss.com" />
+    <meta property="og:url" content="https://www.svenkreiss.com/blog/word2vec-on-databricks/" />
+
+        <link rel="alternate"  href="https://www.svenkreiss.com/feeds/all.atom.xml" type="application/atom+xml" title="Sven Kreiss Full Atom Feed"/>
+
+        <title>word2vec on Databricks - Sven Kreiss</title>
+
+
+    <!-- KaTeX -->
+    <link rel="stylesheet" href="https://www.svenkreiss.com/extras/katex/katex.min.css" />
+    <script src="https://www.svenkreiss.com/extras/katex/katex.min.js"></script>
+    <script src="https://www.svenkreiss.com/extras/katex/contrib/auto-render.min.js"></script>
+
+    <link rel="stylesheet" href="https://www.svenkreiss.com/extras/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://www.svenkreiss.com/theme/css/pure.css?v=0.1.0" />
+    <link rel="stylesheet" href="https://www.svenkreiss.com/theme/css/pygments.css" />
+
+    <!-- for pelican_dynamic plugin -->
+    <!-- end pelican_dynamic -->
+
+</head>
+
+<body>
+<div class="pure-g-r" id="layout">
+    <div class="sidebar sidebar-article pure-u">
+        <header class="header-article">
+                    <a href="https://www.svenkreiss.com/blog/author/sven-kreiss/" title="See posts by Sven Kreiss">
+                        <img class="avatar" alt="Sven Kreiss" src="https://www.gravatar.com/avatar/562a52f3ffcb6c2a3556f91ddc540776?s=140">
+                    </a>
+                <h2 class="article-info">Sven Kreiss</h2>
+
+
+
+                <p class="article-date">December 22, 2015</p>
+
+                <a class="header-article-home" href="/">&larr;Home</a>
+        </header>
+    </div>
+    <div class="pure-u">
+        <div class="content">
+            <section class="post">
+                <header class="post-header">
+                    <h1>word2vec on Databricks</h1>
+                </header>
+            </section>
+
+            <p>Word2vec is an interesting approach to convert a word into a feature vector
+(<a href="https://code.google.com/p/word2vec/">original C code</a> by Mikolov et al).
+One of the observations in the original paper was that words with similar
+meaning have a smaller cosine distance than dissimilar words. Here is a
+histogram of the pairwise cosine distances of about 500 media topics
+(derived from <a href="http://cv.iptc.org/newscodes/mediatopic/">IPTC news codes</a>):</p>
+<p><img class="image-proces-crisp" src="/images/word2vec_angle.png" alt="distribution of Cosine distances of word vectors" /></p>
+<p>Cosine distance is defined as <code>1 - cos(vector1, vector2)</code>. Most of the vector
+pairs only have slightly smaller angles than 90° which makes sense as more
+topics are unrelated to each other than related. The closest 5% of vector
+pairs are still separated by angles up to 73°. The smallest angular separation
+is 18° between breaststroke and backstroke and the second smallest
+is 27° between <em>triple_jump</em> and <em>pole_vault</em>.</p>
+<p>To visualize these topics below, the 300-dimensional word vectors are embedded
+in two dimensions using t-SNE. Edges between the topics with the smallest 5% in
+cosine distance in the original space are drawn in orange.</p>
+<p><img class="image-proces-crisp" src="/images/word2vec_tsne.png" alt="tsne of word vectors" /></p>
+<p>Similar topics are indeed close together. However, one could argue that imports
+is the opposite of exports and therefore should not be close together; but they
+are (at the bottom). Similarly, <em>employment</em> is close to <em>unemployment</em>. This is
+not how a person would think about “similarity” in this context, but it makes
+sense given the skip-gram training of the word vectors: a neural network tries
+to predict a word (here a topic) given a window of surrounding words. These
+topics would indeed appear in news articles with similar words surrounding
+them. It is important to keep this subtlety in mind when building tools on
+top of word2vec.</p>
+<h2>Using word2vec on Databricks</h2>
+<p>Spark and MLlib come with a built-in implementation of word2vec. However, we
+also want to apply word2vec in stand-alone Python and therefore chose the
+<code>gensim</code> implementation.</p>
+<p>We use Databricks to process a large number of documents (not for training
+word2vec, but to apply word2vec). We create a “Mapper Tool” that can convert
+text to word vectors that is distributed in a Python <code>egg</code>. This tool reads
+in previously created word vectors from a compressed binary file that is larger
+than 1GB which takes about a minute.</p>
+<p>There are two ingredients that we need: a large binary input file available at
+all worker nodes and a way to cache the word vectors in memory across map
+operations.</p>
+<div class="highlight"><pre><span></span><code><span class="n">dbutils</span><span class="o">.</span><span class="n">fs</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="s1">&#39;s3n://your_bucket/some_folder&#39;</span><span class="p">,</span> <span class="s1">&#39;/mnt/some_folder&#39;</span><span class="p">)</span>
+</code></pre></div>
+
+<p>The default scheme is <code>dbfs:/</code>, not <code>file:/</code>, which means that this S3 folder
+is now available in <code>dbfs</code>. <code>dbutils</code> can copy data from <code>dbfs</code> to the local
+file system, but only on the driver. On worker instances, <code>dbutils</code> is not
+available. However, <code>dbfs</code> is mounted using FUSE at <code>file:/dbfs</code>
+(<a href="https://forums.databricks.com/answers/2966/view.html">Databricks Forum post</a>)
+and we can use the local file path <code>/dbfs/mnt/some_folder/word2vec_file.bin.gz</code>
+on the driver and the workers.</p>
+<h2>Mapper Tool</h2>
+<p>The tool is a wrapper around the word2vec implementation in the Python package
+<a href="https://radimrehurek.com/gensim/models/word2vec.html">gensim</a>,
+<code>gensim.models.Word2Vec</code>. We want an in-memory cache that is persistent across
+map operations. Python class variables are not serialized when serializing an
+instance of a class and therefore we can use it as a process-wide cache.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">gensim.models.word2vec</span> <span class="kn">import</span> <span class="n">Word2Vec</span>
+
+<span class="k">class</span> <span class="nc">Tool</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="n">cache</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filename</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">fn</span> <span class="o">=</span> <span class="n">filename</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">word2vec</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">fn</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">Tool</span><span class="o">.</span><span class="n">cache</span><span class="p">:</span>
+            <span class="n">Tool</span><span class="o">.</span><span class="n">cache</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">fn</span><span class="p">]</span> <span class="o">=</span> \
+                <span class="n">Word2Vec</span><span class="o">.</span><span class="n">load_word2vec_format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">fn</span><span class="p">,</span> <span class="n">binary</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">Tool</span><span class="o">.</span><span class="n">cache</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">fn</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="nf">map</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">word</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">word</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">word2vec</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">None</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">word2vec</span><span class="p">[</span><span class="n">word</span><span class="p">]</span>
+</code></pre></div>
+
+<p>You can use this tool on the driver or in a map function that gets shipped to
+the workers. The call to <code>load_word2vec_format()</code> is expensive, but in this
+design only executed once in each process.</p>
+<p>Example application:</p>
+<div class="highlight"><pre><span></span><code><span class="n">filename</span> <span class="o">=</span> <span class="s1">&#39;/dbfs/mnt/some_folder/word2vec_file.bin.gz&#39;</span>
+<span class="n">sentence</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Some&#39;</span><span class="p">,</span> <span class="s1">&#39;sentence&#39;</span><span class="p">,</span> <span class="s1">&#39;as&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;test&#39;</span><span class="p">]</span>
+<span class="n">sc</span><span class="o">.</span><span class="n">parallelize</span><span class="p">(</span><span class="n">sentence</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">Tool</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span><span class="o">.</span><span class="n">map</span><span class="p">)</span><span class="o">.</span><span class="n">collect</span><span class="p">()</span>
+</code></pre></div>
+
+<p>There are of course other ways to accomplish this, but I wanted to share the
+method that works well for us.</p>
+<h2>Summary</h2>
+<p>This post gave an introduction to word2vec and showed how to distribute a large
+input file to worker nodes on Databricks. It also showed how to create a Mapper
+Tool that can cache input data across map jobs in memory.</p>
+<p>During this work, I submitted two pull requests to <code>gensim</code>
+<a href="https://github.com/piskvorky/gensim/pull/545">#545</a> and
+<a href="https://github.com/piskvorky/gensim/pull/555">#555</a> which are merged into the
+master branch. With the next release, <code>load_word2vec_format()</code> will be faster.</p>
+
+            <p class="post-footer">
+                // filed
+under                    <a class="post-category" href="https://www.svenkreiss.com/blog/tag/machine-learning/">machine learning</a>
+                    <a class="post-category" href="https://www.svenkreiss.com/blog/tag/data-science/">data science</a>
+                in <a class="post-category" href="https://www.svenkreiss.com/blog/category/tech/">Tech</a>&nbsp;&nbsp;&nbsp;
+
+                <span style="display:inline-block;">
+                // share on <a href="https://twitter.com/share?text=%22word2vec%20on%20Databricks%3A%20Running%20word2vec%20on%20Databricks.%20A%20full%20example%20of%20using%20gensim%20and%20distributed%20maps%20with%20Spark%20to%20run%20this%20Python%20analysis%20on%20Databricks.%22&amp;hashtags=machinelearning%2Cdatascience" target="_blank">
+                    <i class="fa fa-twitter fa-lg"></i> Twitter
+                </a>
+                </span>
+            </p>
+            <div class="hr"></div>
+
+            <h2>Related Posts</h2>
+            <ul class="related-posts">
+                <li>
+                    <a class="title" href="https://www.svenkreiss.com/blog/lab-python/">Python at a University Lab</a>
+                    <span class="date">from November 23, 2018</span>
+                    <span class="summary">University research labs have a different structure than corporate research labs and their compute setups. In this post, I list useful Python resources for starting in a university machine learning lab.</span>
+                </li>
+            </ul>
+
+            <a href="#" class="go-top">Go Top</a>
+<footer class="footer">
+    <p>&copy; Sven Kreiss  2014 &ndash; 2022. Published with <a href="https://github.com/getpelican/pelican">Pelican</a>.<br />This work is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</p>
+</footer>        </div>
+    </div>
+</div>
+    <script>
+        renderMathInElement(document.body);
+    </script>
+
+    <!-- for pelican_dynamic plugin -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-4070485-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-4070485-2', { 'anonymize_ip': true });
+</script>
+
+
+</body>
+</html>

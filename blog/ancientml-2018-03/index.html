@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="AncientML is a series of paper reading notes. This first edition covers the first mention of AI and the Mathematical Theory of Communication." />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@svenkreiss" />
+    <meta name="twitter:creator" content="@svenkreiss" />
+    <meta name="twitter:title" content="AncientML 1" />
+    <meta name="twitter:description" content="AncientML is a series of paper reading notes. This first edition covers the first mention of AI and the Mathematical Theory of Communication." />
+    <meta name="twitter:image:src" content="https://www.svenkreiss.com/images/ancientml-logo.png" />
+    <meta name="twitter:domain" content="svenkreiss.com" />
+
+    <meta property="og:title" content="AncientML 1" />
+    <meta property="og:type" content="article" />
+    <meta property="og:description" content="AncientML is a series of paper reading notes. This first edition covers the first mention of AI and the Mathematical Theory of Communication." />
+    <meta property="og:image" content="https://www.svenkreiss.com/images/ancientml-logo.png" />
+    <meta property="og:site_name" content="svenkreiss.com" />
+    <meta property="og:url" content="https://www.svenkreiss.com/blog/ancientml-2018-03/" />
+
+        <link rel="alternate"  href="https://www.svenkreiss.com/feeds/all.atom.xml" type="application/atom+xml" title="Sven Kreiss Full Atom Feed"/>
+
+        <title>AncientML 1 - Sven Kreiss</title>
+
+
+    <!-- KaTeX -->
+    <link rel="stylesheet" href="https://www.svenkreiss.com/extras/katex/katex.min.css" />
+    <script src="https://www.svenkreiss.com/extras/katex/katex.min.js"></script>
+    <script src="https://www.svenkreiss.com/extras/katex/contrib/auto-render.min.js"></script>
+
+    <link rel="stylesheet" href="https://www.svenkreiss.com/extras/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://www.svenkreiss.com/theme/css/pure.css?v=0.1.0" />
+    <link rel="stylesheet" href="https://www.svenkreiss.com/theme/css/pygments.css" />
+
+    <!-- for pelican_dynamic plugin -->
+    <!-- end pelican_dynamic -->
+
+</head>
+
+<body>
+<div class="pure-g-r" id="layout">
+    <div class="sidebar sidebar-article pure-u">
+        <header class="header-article">
+                    <a href="https://www.svenkreiss.com/blog/author/sven-kreiss/" title="See posts by Sven Kreiss">
+                        <img class="avatar" alt="Sven Kreiss" src="https://www.gravatar.com/avatar/562a52f3ffcb6c2a3556f91ddc540776?s=140">
+                    </a>
+                <h2 class="article-info">Sven Kreiss</h2>
+
+
+
+                <p class="article-date">March 05, 2018</p>
+
+                <a class="header-article-home" href="/">&larr;Home</a>
+        </header>
+    </div>
+    <div class="pure-u">
+        <div class="content">
+            <section class="post">
+                <header class="post-header">
+                    <h1>AncientML 1</h1>
+                </header>
+            </section>
+
+            <p><img class="img-thumbnail float-right" src="/images/ancientml-logo.png" width="300" alt="AncientML Logo" /></p>
+<p>AncientML is a series of paper reading notes. The purpose is to review
+outstanding contributions to machine learning that are valuable to the
+formation as an academic field.</p>
+<div style="clear:both"></div>
+
+<h2>A Proposal for the Dartmouth Summer Research Project on Artificial Intelligence, August 31, 1955 <a href='#mccarthy2006proposal' id='ref-mccarthy2006proposal-1'>(McCarthy et al., 2006)</a>, <a href="https://www.aaai.org/ojs/index.php/aimagazine/article/download/1904/1802">PDF</a></h2>
+<ul>
+<li>The paper/event that gets credited with the foundation of the field of Artificial Intelligence research.</li>
+<li>The paper is three pages long and the authors include Claude Shannon.</li>
+<li>scale of the proposed project: 2 months, 10 men</li>
+<li>focused on language, abstraction and concepts</li>
+<li>identifies seven areas to improve: Automatic Computers, How Can a Computer be
+  Programmed to Use a Language, Neuron Nets, Theory of the Size of a Calculation,
+  Self-Improvement, Abstractions, Randomness and Creativity</li>
+<li>"the major obstacle is not lack of machine capacity, but our inability to write programs"</li>
+<li>There is Wikipedia article on the <a href="https://en.wikipedia.org/wiki/Dartmouth_workshop">Dartmouth workshop</a>.</li>
+<li>102 pages of Ray Solomonoff's
+  <a href="http://raysolomonoff.com/dartmouth/notebook/notebook.html">hand written notes</a>
+  including some doodles on page 3.</li>
+</ul>
+<h2>The Mathematical Theory of Communication <a href='#shannon1951mathematical' id='ref-shannon1951mathematical-1'>(Shannon et al., 1951)</a>, <a href="http://pubman.mpdl.mpg.de/pubman/item/escidoc:2383164/component/escidoc:2383163/Shannon_Weaver_1949_Mathematical.pdf">PDF</a></h2>
+<ul>
+<li>Central paper for many fields. 90 pages (skip the part by Weaver).</li>
+<li><em>The Idea Factory</em> <a href='#ideafactory2012gertner' id='ref-ideafactory2012gertner-1'>(Gertner, 2012)</a> is a book about Bell Labs around that time.</li>
+<li><a href='#khinchin1957mathematical' id='ref-khinchin1957mathematical-1'>Khinchin (1957)</a> is a book that discusses this paper.</li>
+<li>p.49: <em>information</em> is not attached to a particular message but to the amount of
+  freedom of choice</li>
+<li>p.49: "decomposition of choice" is a beautiful requirement for <span class="math">\(H\)</span>, and leads with
+  the other two requirements to a unique form for <span class="math">\(H\)</span></li>
+<li>p.50: simple example to visualize the connection between probability of a message and information is shown in the figure below</li>
+<li>p.53: origin for terms of the form <span class="math">\(p_i\log{}p_i\)</span></li>
+<li>p.56: relative entropy, maximum possible compression, redundancy</li>
+<li>p.70: capacity of a noisy channel; includes a <code>max()</code> over all possible information sources</li>
+</ul><hr>
+<h2>Bibliography</h2>
+<p id='ideafactory2012gertner'>Jon Gertner.
+<em><span class="bibtex-protected">The Idea Factory: Bell Labs and the great age of American innovation</span></em>.
+Penguin Press, New York, 2012.
+ISBN 978-0143122791. <a class="cite-backref" href="#ref-ideafactory2012gertner-1" title="Jump back to reference 1">↩</a></p>
+<p id='khinchin1957mathematical'>A&nbsp;Khinchin.
+<em>Mathematical foundations of information theory</em>.
+Dover Publications, New York, 1957.
+ISBN 978-0486604343. <a class="cite-backref" href="#ref-khinchin1957mathematical-1" title="Jump back to reference 1">↩</a></p>
+<p id='mccarthy2006proposal'>John McCarthy, Marvin&nbsp;L Minsky, Nathaniel Rochester, and Claude&nbsp;E Shannon.
+<span class="bibtex-protected">A Proposal for the Dartmouth Summer Research Project on Artificial Intelligence, August 31, 1955</span>.
+<em>AI magazine</em>, 27(4):12, 2006. <a class="cite-backref" href="#ref-mccarthy2006proposal-1" title="Jump back to reference 1">↩</a></p>
+<p id='shannon1951mathematical'>Claude&nbsp;E Shannon, Warren Weaver, and Arthur&nbsp;W Burks.
+<span class="bibtex-protected">The Mathematical Theory of Communication</span>.
+<em>The University of Illinois Press</em>, 1951. <a class="cite-backref" href="#ref-shannon1951mathematical-1" title="Jump back to reference 1">↩</a></p>
+
+
+            <p class="post-footer">
+                // filed
+under                    <a class="post-category" href="https://www.svenkreiss.com/blog/tag/ancientml/">ancientml</a>
+                in <a class="post-category" href="https://www.svenkreiss.com/blog/category/ml/">ML</a>&nbsp;&nbsp;&nbsp;
+
+                <span style="display:inline-block;">
+                // share on <a href="https://twitter.com/share?text=%22AncientML%201%3A%20AncientML%20is%20a%20series%20of%20paper%20reading%20notes.%20This%20first%20edition%20covers%20the%20first%20mention%20of%20AI%20and%20the%20Mathematical%20Theory%20of%20Communication.%22&amp;hashtags=ancientml" target="_blank">
+                    <i class="fa fa-twitter fa-lg"></i> Twitter
+                </a>
+                </span>
+            </p>
+            <div class="hr"></div>
+
+
+            <a href="#" class="go-top">Go Top</a>
+<footer class="footer">
+    <p>&copy; Sven Kreiss  2014 &ndash; 2022. Published with <a href="https://github.com/getpelican/pelican">Pelican</a>.<br />This work is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</p>
+</footer>        </div>
+    </div>
+</div>
+    <script>
+        renderMathInElement(document.body);
+    </script>
+
+    <!-- for pelican_dynamic plugin -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-4070485-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-4070485-2', { 'anonymize_ip': true });
+</script>
+
+
+</body>
+</html>

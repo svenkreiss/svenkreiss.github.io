@@ -1,0 +1,983 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Sven Kreiss</title><link href="https://www.svenkreiss.com/" rel="alternate"></link><link href="https://www.svenkreiss.com/feeds/all.atom.xml" rel="self"></link><id>https://www.svenkreiss.com/</id><updated>2020-04-03T00:00:00+02:00</updated><subtitle></subtitle><entry><title>Achievements in Two Years at EPFL</title><link href="https://www.svenkreiss.com/blog/epfl-two-years/" rel="alternate"></link><published>2020-04-03T00:00:00+02:00</published><updated>2020-04-03T00:00:00+02:00</updated><author><name>Sven Kreiss</name></author><id>tag:www.svenkreiss.com,2020-04-03:/blog/epfl-two-years/</id><summary type="html">&lt;p&gt;Summary of achievements in my first two years back in academia at EPFL.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img class="image-process-crisp" src="/images/twoyearsepfl_crowd_pifpaf.png" alt="PifPaf crowd" /&gt;&lt;/p&gt;
+&lt;p&gt;Two years ago, I returned from New York City to Geneva. I had left my
+industry job and returned to academia as a postdoc in Computer Vision at
+EPFL. It has been an exciting two years for me in Alexandre Alahi's lab
+for &lt;a href="https://www.epfl.ch/labs/vita/"&gt;Visual Intelligence for Transportation&lt;/a&gt;.
+When entering academia from industry, I had no research
+or publication momentum. As a starting point,
+I tried to make connections to my previous work in physics,
+particularly in statistical and physical modeling.
+This led me to focus on &lt;em&gt;Composite Fields&lt;/em&gt; for human pose estimation.&lt;/p&gt;
+&lt;h2&gt;Past&lt;/h2&gt;
+&lt;p&gt;In an extremely short time, we have created three
+exciting projects with interesting scientific contributions and state-of-the-art
+results on challenging tasks like Human Pose Estimation. These papers were
+presented at ICRA, CVPR and ICCV which are the top-tier conferences
+in robotics and computer vision.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Crowd-Robot Interaction&lt;/strong&gt;: Crowd-aware Robot Navigation with Attention-based Deep Reinforcement Learning.&lt;br /&gt;
+  Presented at ICRA2019 in Montreal. Lead by Changan Chan and Yuejiang Liu.&lt;br /&gt;
+  &lt;span style="white-space: nowrap"&gt;&lt;a href="https://doi.org/10.1109/ICRA.2019.8794134"&gt;&lt;i class="fa fa-file"&gt;&lt;/i&gt; paper&lt;/a&gt;&lt;/span&gt;&amp;nbsp;&amp;nbsp;
+  &lt;span style="white-space: nowrap"&gt;&lt;a href="https://github.com/vita-epfl/crowdnav"&gt;&lt;i class="fa fa-github"&gt;&lt;/i&gt; code&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;PifPaf&lt;/strong&gt;: Composite Fields for Human Pose Estimation.&lt;br /&gt;
+  Presented at CVPR2019 in Los Angeles.&lt;br /&gt;
+  &lt;span style="white-space: nowrap"&gt;&lt;a href="http://openaccess.thecvf.com/content_CVPR_2019/html/Kreiss_PifPaf_Composite_Fields_for_Human_Pose_Estimation_CVPR_2019_paper.html"&gt;&lt;i class="fa fa-file"&gt;&lt;/i&gt; paper&lt;/a&gt;&lt;/span&gt;&amp;nbsp;&amp;nbsp;
+  &lt;span style="white-space: nowrap"&gt;&lt;a href="https://github.com/vita-epfl/openpifpaf"&gt;&lt;i class="fa fa-github"&gt;&lt;/i&gt; code&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;MonoLoco&lt;/strong&gt;: Monocular 3D Pedestrian Localization and Uncertainty Estimation.&lt;br /&gt;
+  Presented at ICCV2019 in Seoul. Lead by Lorenzo Bertoni.&lt;br /&gt;
+  &lt;span style="white-space: nowrap"&gt;&lt;a href="http://openaccess.thecvf.com/content_ICCV_2019/html/Bertoni_MonoLoco_Monocular_3D_Pedestrian_Localization_and_Uncertainty_Estimation_ICCV_2019_paper.html"&gt;&lt;i class="fa fa-file"&gt;&lt;/i&gt; paper&lt;/a&gt;&lt;/span&gt;&amp;nbsp;&amp;nbsp;
+  &lt;span style="white-space: nowrap"&gt;&lt;a href="https://github.com/vita-epfl/monoloco"&gt;&lt;i class="fa fa-github"&gt;&lt;/i&gt; code&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I also presented an overview of our
+work at the Autonomous Driving workshop at ICML2019 in Los Angeles, at KAIST
+in South Korea as well as at the European and Swiss transportation
+conferences hEART (Budapest) and STRC (Ascona).&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/vita-epfl/openpifpaf"&gt;PifPaf&lt;/a&gt; has also created interest in
+industry. Setting up a commercialization
+pipeline with EPFL's Technology Transfer Office was another exciting first.&lt;/p&gt;
+&lt;p&gt;At EPFL, it is also possible to gain professor-style teaching experience
+as a postdoc through co-teaching. Alex and I are currently co-teaching for the second time
+&lt;em&gt;Deep Learning for Autonomous Vehicles&lt;/em&gt; to master students.
+The course project ends with a race of human-robot pairs. The student is in front
+and the robot has to track and follow as fast as possible.
+At was &lt;a href="https://www.epfl.ch/labs/vita/teaching/"&gt;quite an event last year&lt;/a&gt;
+(&lt;a href="https://www.youtube.com/watch?v=3AnXPqoIfvU"&gt;video&lt;/a&gt;).
+Last semester, we
+gave an introductory course in machine learning tailored for engineering students
+in the bachelor program.&lt;/p&gt;
+&lt;h2&gt;Current&lt;/h2&gt;
+&lt;p&gt;I have three papers under review that extend my
+previous work in human pose estimation and joint work on pedestrian localization and metric learning. All of these are very exciting and I am looking forward to share more soon.&lt;/p&gt;
+&lt;p&gt;Another new process for me was applying for grants. I successfully obtained
+a &lt;em&gt;Spark Grant&lt;/em&gt; from the Swiss National Science Foundation for the
+development of &lt;em&gt;Deep Social Force&lt;/em&gt; that pays for the project for one year -- my
+first time being a PI on a grant.
+I also drafted our lab's contribution to the
+&lt;a href="https://www.epfl.ch/research/services/fund-research/funding-opportunities/research-funding/interdisciplinary-seed-fund/isf-granted-projects/"&gt;EPFL Interdisciplinary Seed Fund&lt;/a&gt;
+project to use
+&lt;em&gt;Artificial Intelligence for understanding and overcoming motor deficits&lt;/em&gt;
+in collaboration with two labs at the hospital in Lausanne
+that work on Parkinson and Spinal Cord Injury.&lt;/p&gt;
+&lt;p&gt;I am also looking forward to ICML this year. It is the first time I am the
+co-organizer of a workshop, the workshop on &lt;em&gt;AI for Autonomous Driving&lt;/em&gt;, which
+had 400 attendees last year. Luckily, I am surrounded by an experienced team
+and I am looking forward to learn. Holding this workshop entirely online will
+be a first for everyone though.&lt;/p&gt;
+&lt;p&gt;After two years back in academia, I am still not bored. Not at all.
+&lt;strong&gt;Thanks VITA team!&lt;/strong&gt; Onwards.&lt;/p&gt;</content><category term="ML"></category><category term="review"></category><category term="science"></category></entry><entry><title>Artisanal S2 Cells</title><link href="https://www.svenkreiss.com/blog/artisanal-s2/" rel="alternate"></link><published>2018-11-28T00:00:00+01:00</published><updated>2018-11-28T00:00:00+01:00</updated><author><name>Sven Kreiss</name></author><id>tag:www.svenkreiss.com,2018-11-28:/blog/artisanal-s2/</id><summary type="html">&lt;p&gt;S2 cells are a powerful tool to index and compute over geospatial data. This short post shows how to create S2 cell ids by hand.&lt;/p&gt;</summary><content type="html">&lt;p&gt;S2 cells are a great representation for locations on earth and are the storage
+format for many popular web services, including Google Maps, Foursquare and Pokemon Go.
+I worked on the &lt;a href="https://s2sphere.readthedocs.io"&gt;s2sphere&lt;/a&gt; Python implementation when I was at Sidewalk Labs. I also wrote some
+background notes on the &lt;a href="https://www.sidewalklabs.com/blog/s2-cells-and-space-filling-curves-keys-to-building-better-digital-map-tools-for-cities/"&gt;Sidewalk blog&lt;/a&gt;.
+Recently, I was asked to explain
+how to verify manually that an S2 cell id is correct. By hand. From scratch.
+Here is my answer for the simplest ids.&lt;/p&gt;
+&lt;p&gt;Get a feel for the cells and faces of the cube by using the web tools
+at &lt;a href="https://s2.sidewalklabs.com"&gt;s2.sidewalklabs.com&lt;/a&gt;:&lt;/p&gt;
+&lt;p&gt;&lt;img style="width:58.5%" src="/images/s2cell_regioncoverer.png" alt="S2Cell region coverer with example cell tokens" /&gt;
+&lt;img style="width:39.7%" src="/images/s2cell_globe.png" alt="S2Cell globe" /&gt;&lt;/p&gt;
+&lt;p&gt;The above images show the location of face 0 on earth. Below is the unfolded
+curve how it spans and connects to the other faces of the cube:&lt;/p&gt;
+&lt;p&gt;&lt;img style="max-height: 15em; display:block; margin:1em auto 2em;" src="/images/s2cell_faces.png" alt="S2Cell cube faces" /&gt;&lt;/p&gt;
+&lt;p&gt;Tokens are hex format with right zeros stripped. To recover an integer, use
+&lt;a href="https://s2sphere.readthedocs.io/en/latest/api.html#s2sphere.CellId.from_token"&gt;&lt;code&gt;from_token()&lt;/code&gt;&lt;/a&gt;
+and print as binary. The example tokens converted to binary cell ids are:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;token &amp;quot;04&amp;quot;: 0000010000000000000000000000000000000000000000000000000000000000
+token &amp;quot;0c&amp;quot;: 0000110000000000000000000000000000000000000000000000000000000000
+token &amp;quot;14&amp;quot;: 0001010000000000000000000000000000000000000000000000000000000000
+token &amp;quot;1c&amp;quot;: 0001110000000000000000000000000000000000000000000000000000000000
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;The binary format from left to right: three bits for face (here face 0), two bits to encode the cell on that face, 1 bit terminating. In agreement with what is in the docstring for the
+&lt;a href="https://s2sphere.readthedocs.io/en/latest/api.html#s2sphere.CellId"&gt;CellId&lt;/a&gt; class :)&lt;/p&gt;
+&lt;p&gt;Just to compare, face 1, level 1 cell ids are:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="mf"&gt;0010010000000000000000000000000000000000000000000000000000000000&lt;/span&gt;
+&lt;span class="mf"&gt;0010110000000000000000000000000000000000000000000000000000000000&lt;/span&gt;
+&lt;span class="mf"&gt;0011010000000000000000000000000000000000000000000000000000000000&lt;/span&gt;
+&lt;span class="mf"&gt;0011110000000000000000000000000000000000000000000000000000000000&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Et voilà. Those are eight hand-crafted S2 cell ids.&lt;/p&gt;</content><category term="Tech"></category><category term="Python"></category><category term="geo"></category><category term="data"></category></entry><entry><title>Python at a University Lab</title><link href="https://www.svenkreiss.com/blog/lab-python/" rel="alternate"></link><published>2018-11-23T00:00:00+01:00</published><updated>2018-11-23T00:00:00+01:00</updated><author><name>Sven Kreiss</name></author><id>tag:www.svenkreiss.com,2018-11-23:/blog/lab-python/</id><summary type="html">&lt;p&gt;University research labs have a different structure than corporate research labs and their compute setups. In this post, I list useful Python resources for starting in a university machine learning lab.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img class="img-thumbnail float-right" width=200 src="/images/python-powered-university.png" alt="Python powered University" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;I am a post-doc at &lt;a href="https://vita.epfl.ch/"&gt;VITA lab at EPFL university&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Good software engineering practices are important to me. They are foundational
+for open and reproducible science. You -- a current or future
+member of a Machine Learning lab -- are not necessarily expected to be a computer scientist
+or software engineer, but the tools must be familiar.
+Expert-level familiar. You will use these tools most of the day.
+You should not be clumsy with or afraid of these tools.
+Below is an ambitious list, so don't worry if you are not familiar with most of it yet.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Python Core:&lt;/strong&gt;
+The best way to get started and a great resource for advanced users is
+the &lt;a href="https://docs.python.org/3/tutorial/index.html"&gt;tutorial on the official Python webpage&lt;/a&gt;.
+Here are my notes more specific to ML.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;always use Python3 now, not Python2&lt;/li&gt;
+&lt;li&gt;read Python code of great projects outside of ML (almost no ML projects are written well, see closing remarks):
+  start with &lt;a href="https://github.com/requests/requests"&gt;&lt;code&gt;requests&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Python core and standard libraries (always available, so use them):&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions"&gt;list comprehensions&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://docs.python.org/3/tutorial/classes.html"&gt;classes&lt;/a&gt;:
+  when your function becomes too long it might want to be a class&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://docs.python.org/3/tutorial/datastructures.html#sets"&gt;sets&lt;/a&gt;:
+  avoid testing whether an element is in a list, test whether it is in a set&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://docs.python.org/3/library/argparse.html"&gt;argparse&lt;/a&gt;, use a standard library to parse command line arguments&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://docs.python.org/3/library/logging.html#module-logging"&gt;logging&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://docs.python.org/3/library/collections.html#collections.defaultdict"&gt;&lt;code&gt;defaultdict&lt;/code&gt;&lt;/a&gt;
+  for sparse accumulators&lt;/li&gt;
+&lt;li&gt;generators and &lt;code&gt;yield&lt;/code&gt;, see &lt;a href="https://docs.python.org/3/howto/functional.html"&gt;functional programming howto&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;all &lt;a href="https://docs.python.org/3/library/itertools.html"&gt;&lt;code&gt;itertools&lt;/code&gt;&lt;/a&gt;
+  (e.g.&amp;nbsp;&lt;a href="https://docs.python.org/3/library/itertools.html#itertools.chain.from_iterable"&gt;&lt;code&gt;itertools.chain.from_iterable&lt;/code&gt;&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://docs.python.org/3/library/functools.html#functools.lru_cache"&gt;&lt;code&gt;functools.lru_cache&lt;/code&gt;&lt;/a&gt; is a powerful tool&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://docs.python.org/3/library/functions.html#property"&gt;&lt;code&gt;property&lt;/code&gt; decorator&lt;/a&gt; is great for adding caches&lt;/li&gt;
+&lt;li&gt;more advanced but useful: context managers, decorators&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;understand stack traces (the basics: the line above is where the line below originated), &lt;a href="https://en.wikipedia.org/wiki/Stack_trace"&gt;Wikipedia&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;scientific foundational packages:
+  &lt;a href="http://www.numpy.org/"&gt;&lt;code&gt;numpy&lt;/code&gt;&lt;/a&gt;,
+  &lt;a href="https://scipy.org/getting-started.html"&gt;&lt;code&gt;scipy&lt;/code&gt;&lt;/a&gt;,
+  &lt;a href="https://scikit-learn.org/stable/"&gt;&lt;code&gt;scikit-learn&lt;/code&gt;&lt;/a&gt;
+  and depending on your focus &lt;a href="https://cython.org/"&gt;&lt;code&gt;cython&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Packaging:&lt;/strong&gt;
+As soon as you need to re-use code in a second file, you will want to import
+one of your own files. You should use relative imports and to use those
+properly you need to package your code. Packaging in Python used to be a mess,
+but much progress has been made over recent years.
+When you  search for help related
+to packaging, filter for results within the last year.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;pip&lt;/code&gt;, I have never used &lt;code&gt;conda&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;relative imports: see &lt;a href="https://docs.python.org/3/tutorial/modules.html"&gt;tutorial section on Modules&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;setup.py&lt;/code&gt;: see &lt;a href="https://setuptools.readthedocs.io/en/latest/setuptools.html#basic-use"&gt;&lt;code&gt;setuptools&lt;/code&gt; basic use&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://docs.python.org/3/tutorial/venv.html"&gt;&lt;code&gt;venv&lt;/code&gt;&lt;/a&gt;: I never do anything outside a virtual environment&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/jupyter/notebook"&gt;Jupyter notebooks&lt;/a&gt;:
+  Great for demos and log books. &lt;em&gt;Never&lt;/em&gt; to code.&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://mybinder.org/"&gt;mybinder.org&lt;/a&gt; to make your Jupyter demos interactive&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Style / Unit Tests / Continuous Testing:&lt;/strong&gt;
+Standard practices for software engineers are useful for ML projects, too. They help.
+Beyond testing code, unit tests in combination with continuous integration give
+a robust and reproducible starting point for anyone picking up your project
+(including yourself in one year).&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://www.python.org/dev/peps/pep-0008/"&gt;PEP8&lt;/a&gt; is the &lt;em&gt;Style Guide for Python&lt;/em&gt; and contains explanations. Don't skip &lt;a href="https://www.python.org/dev/peps/pep-0008/#a-foolish-consistency-is-the-hobgoblin-of-little-minds"&gt;&lt;em&gt;A Foolish Consistency is the Hobgoblin of Little Minds&lt;/em&gt;&lt;/a&gt;. Still, I follow almost all of PEP8 to the letter. Additional:&lt;ul&gt;
+&lt;li&gt;no abbreviations for variables, classes, functions, etc.&lt;/li&gt;
+&lt;li&gt;do not iterate over indices in Python: don't do &lt;code&gt;for i in range(len(mylist))&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.pylint.org/"&gt;&lt;code&gt;pylint&lt;/code&gt;&lt;/a&gt; generally provides good advice beyond checking for PEP8&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://docs.pytest.org/en/latest/"&gt;&lt;code&gt;pytest&lt;/code&gt;&lt;/a&gt; to run all your tests&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://circleci.com/"&gt;CircleCI&lt;/a&gt; and &lt;a href="https://travis-ci.org/"&gt;TravisCI&lt;/a&gt; can automatically run your tests on every commit to git&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Red Flags:&lt;/strong&gt;
+When browsing open source code, this is when I get worried.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;no eval metrics/scripts for that implementation&lt;/li&gt;
+&lt;li&gt;have to change the &lt;code&gt;PATH&lt;/code&gt; or &lt;code&gt;PYTHONPATH&lt;/code&gt; variables&lt;/li&gt;
+&lt;li&gt;have to copy or symlink folders with code&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Closing:&lt;/strong&gt;
+Infrastructures at large companies are different from a university lab and
+your laptop: containers, distributed storage, build systems, custom DNS,
+mono repositories. A small piece in the middle of the stack is open source and
+has been duct-taped to make it work without the rest of the infrastructure.
+Don't follow blindly what seems like a standard practice of the best software
+engineers in the world. It might be an artifact of porting it to the
+open source world.&lt;/p&gt;
+&lt;p&gt;Feedback is welcome on Twitter @svenkreiss.&lt;/p&gt;</content><category term="Science"></category><category term="Python"></category><category term="Machine Learning"></category></entry><entry><title>AncientML 1</title><link href="https://www.svenkreiss.com/blog/ancientml-2018-03/" rel="alternate"></link><published>2018-03-05T00:00:00+01:00</published><updated>2018-03-05T00:00:00+01:00</updated><author><name>Sven Kreiss</name></author><id>tag:www.svenkreiss.com,2018-03-05:/blog/ancientml-2018-03/</id><summary type="html">&lt;p&gt;AncientML is a series of paper reading notes. This first edition covers the first mention of AI and the Mathematical Theory of Communication.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img class="img-thumbnail float-right" src="/images/ancientml-logo.png" width="300" alt="AncientML Logo" /&gt;&lt;/p&gt;
+&lt;p&gt;AncientML is a series of paper reading notes. The purpose is to review
+outstanding contributions to machine learning that are valuable to the
+formation as an academic field.&lt;/p&gt;
+&lt;div style="clear:both"&gt;&lt;/div&gt;
+
+&lt;h2&gt;A Proposal for the Dartmouth Summer Research Project on Artificial Intelligence, August 31, 1955 &lt;a href='#mccarthy2006proposal' id='ref-mccarthy2006proposal-1'&gt;(McCarthy et al., 2006)&lt;/a&gt;, &lt;a href="https://www.aaai.org/ojs/index.php/aimagazine/article/download/1904/1802"&gt;PDF&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;The paper/event that gets credited with the foundation of the field of Artificial Intelligence research.&lt;/li&gt;
+&lt;li&gt;The paper is three pages long and the authors include Claude Shannon.&lt;/li&gt;
+&lt;li&gt;scale of the proposed project: 2 months, 10 men&lt;/li&gt;
+&lt;li&gt;focused on language, abstraction and concepts&lt;/li&gt;
+&lt;li&gt;identifies seven areas to improve: Automatic Computers, How Can a Computer be
+  Programmed to Use a Language, Neuron Nets, Theory of the Size of a Calculation,
+  Self-Improvement, Abstractions, Randomness and Creativity&lt;/li&gt;
+&lt;li&gt;"the major obstacle is not lack of machine capacity, but our inability to write programs"&lt;/li&gt;
+&lt;li&gt;There is Wikipedia article on the &lt;a href="https://en.wikipedia.org/wiki/Dartmouth_workshop"&gt;Dartmouth workshop&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;102 pages of Ray Solomonoff's
+  &lt;a href="http://raysolomonoff.com/dartmouth/notebook/notebook.html"&gt;hand written notes&lt;/a&gt;
+  including some doodles on page 3.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;The Mathematical Theory of Communication &lt;a href='#shannon1951mathematical' id='ref-shannon1951mathematical-1'&gt;(Shannon et al., 1951)&lt;/a&gt;, &lt;a href="http://pubman.mpdl.mpg.de/pubman/item/escidoc:2383164/component/escidoc:2383163/Shannon_Weaver_1949_Mathematical.pdf"&gt;PDF&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Central paper for many fields. 90 pages (skip the part by Weaver).&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;The Idea Factory&lt;/em&gt; &lt;a href='#ideafactory2012gertner' id='ref-ideafactory2012gertner-1'&gt;(Gertner, 2012)&lt;/a&gt; is a book about Bell Labs around that time.&lt;/li&gt;
+&lt;li&gt;&lt;a href='#khinchin1957mathematical' id='ref-khinchin1957mathematical-1'&gt;Khinchin (1957)&lt;/a&gt; is a book that discusses this paper.&lt;/li&gt;
+&lt;li&gt;p.49: &lt;em&gt;information&lt;/em&gt; is not attached to a particular message but to the amount of
+  freedom of choice&lt;/li&gt;
+&lt;li&gt;p.49: "decomposition of choice" is a beautiful requirement for &lt;span class="math"&gt;\(H\)&lt;/span&gt;, and leads with
+  the other two requirements to a unique form for &lt;span class="math"&gt;\(H\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;p.50: simple example to visualize the connection between probability of a message and information is shown in the figure below&lt;/li&gt;
+&lt;li&gt;p.53: origin for terms of the form &lt;span class="math"&gt;\(p_i\log{}p_i\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;p.56: relative entropy, maximum possible compression, redundancy&lt;/li&gt;
+&lt;li&gt;p.70: capacity of a noisy channel; includes a &lt;code&gt;max()&lt;/code&gt; over all possible information sources&lt;/li&gt;
+&lt;/ul&gt;&lt;hr&gt;
+&lt;h2&gt;Bibliography&lt;/h2&gt;
+&lt;p id='ideafactory2012gertner'&gt;Jon Gertner.
+&lt;em&gt;&lt;span class="bibtex-protected"&gt;The Idea Factory: Bell Labs and the great age of American innovation&lt;/span&gt;&lt;/em&gt;.
+Penguin Press, New York, 2012.
+ISBN 978-0143122791. &lt;a class="cite-backref" href="#ref-ideafactory2012gertner-1" title="Jump back to reference 1"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;p id='khinchin1957mathematical'&gt;A&amp;nbsp;Khinchin.
+&lt;em&gt;Mathematical foundations of information theory&lt;/em&gt;.
+Dover Publications, New York, 1957.
+ISBN 978-0486604343. &lt;a class="cite-backref" href="#ref-khinchin1957mathematical-1" title="Jump back to reference 1"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;p id='mccarthy2006proposal'&gt;John McCarthy, Marvin&amp;nbsp;L Minsky, Nathaniel Rochester, and Claude&amp;nbsp;E Shannon.
+&lt;span class="bibtex-protected"&gt;A Proposal for the Dartmouth Summer Research Project on Artificial Intelligence, August 31, 1955&lt;/span&gt;.
+&lt;em&gt;AI magazine&lt;/em&gt;, 27(4):12, 2006. &lt;a class="cite-backref" href="#ref-mccarthy2006proposal-1" title="Jump back to reference 1"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;p id='shannon1951mathematical'&gt;Claude&amp;nbsp;E Shannon, Warren Weaver, and Arthur&amp;nbsp;W Burks.
+&lt;span class="bibtex-protected"&gt;The Mathematical Theory of Communication&lt;/span&gt;.
+&lt;em&gt;The University of Illinois Press&lt;/em&gt;, 1951. &lt;a class="cite-backref" href="#ref-shannon1951mathematical-1" title="Jump back to reference 1"&gt;↩&lt;/a&gt;&lt;/p&gt;
+</content><category term="ML"></category><category term="ancientml"></category></entry><entry><title>pelican-jsmath Plugin</title><link href="https://www.svenkreiss.com/blog/pelican-jsmath/" rel="alternate"></link><published>2018-02-18T00:00:00+01:00</published><updated>2018-02-18T00:00:00+01:00</updated><author><name>Sven Kreiss</name></author><id>tag:www.svenkreiss.com,2018-02-18:/blog/pelican-jsmath/</id><summary type="html">&lt;p&gt;An &lt;span class="math"&gt;\(\alpha\omega\epsilon s \sigma m \epsilon\)&lt;/span&gt; Pelican plugin to render math in JavaScript libraries like KaTeX. This plugin makes sure that equations are preserved in the Markdown and Restructured Text parsers and get reproduced properly in HTML for a JavaScript renderer to process.&lt;/p&gt;</summary><content type="html">&lt;p&gt;The new plugin is &lt;span class="math"&gt;\(\alpha\omega\epsilon s \sigma m \epsilon\)&lt;/span&gt;, particularly
+in combination with KaTeX which is used here. It has good support for big
+equations: &lt;/p&gt;
+&lt;div class="math"&gt;$$E=mc^2$$&lt;/div&gt;
+&lt;p&gt;
+A vector &lt;span class="math"&gt;\(\vec{a}\)&lt;/span&gt; looks beautiful. Writing
+order of magnitudes with &lt;span class="math"&gt;\(\mathcal{O}(n)\)&lt;/span&gt; is pretty. There was a related
+&lt;a href="https://github.com/getpelican/pelican-plugins/issues/625"&gt;Pelican issue&lt;/a&gt;
+for support for KaTeX.&lt;/p&gt;
+&lt;p&gt;The plugin is packaged and can be installed with &lt;code&gt;pip install pelican-jsmath&lt;/code&gt;
+(with a dash) and then added to Pelican in &lt;code&gt;pelicanconf.py&lt;/code&gt; by adding
+&lt;code&gt;'pelican_jsmath'&lt;/code&gt; (with an underscore) to your &lt;code&gt;PLUGINS&lt;/code&gt; list. See the
+&lt;a href="https://github.com/svenkreiss/pelican-jsmath"&gt;Readme&lt;/a&gt; for more details.&lt;/p&gt;
+&lt;h2&gt;Packaging Pelican Plugins&lt;/h2&gt;
+&lt;p&gt;It is great that Pelican supports plugins installed via &lt;code&gt;pip&lt;/code&gt; and outside the
+plugins directory. It gives the plugin author and user more control over the
+plugin version. This is why I wanted to document the steps I took to make
+&lt;code&gt;pelican-jsmath&lt;/code&gt; a Python package.&lt;/p&gt;
+&lt;p&gt;Simplest &lt;code&gt;setup.py&lt;/code&gt; file:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;setuptools&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;setup&lt;/span&gt;
+
+
+&lt;span class="n"&gt;setup&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
+    &lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;pelican-jsmath&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="n"&gt;version&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;0.1.0&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="n"&gt;description&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Pelican Plugin that passes math to JavaScript.&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="n"&gt;url&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;http://github.com/svenkreiss/pelican-jsmath&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="n"&gt;author&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Sven Kreiss&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="n"&gt;author_email&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;me@svenkreiss.com&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="n"&gt;license&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;AGPL-3.0&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="n"&gt;packages&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;pelican_jsmath&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
+&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;If you are converting a plugin from the pelican-plugins repository, move your files
+into a folder, here &lt;code&gt;pelican_jsmath&lt;/code&gt;, and add a &lt;code&gt;setup.py&lt;/code&gt; file. That's it.
+You can submit it to pypi if you want, but you can also tell people to install
+directly from Github using
+&lt;code&gt;pip install https://github.com/svenkreiss/pelican-jsmath/zipball/master&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;With packaged plugins, you can manage your dependencies in your
+&lt;code&gt;requirements.txt&lt;/code&gt; as usual.&lt;/p&gt;
+&lt;h2&gt;Testing Packaged Plugins&lt;/h2&gt;
+&lt;p&gt;This Pelican plugin includes a plugin for the Python Markdown parser that
+modifies the HTML output. It is good to test that this plugin produces valid HTML.
+The repository includes an example Pelican site which is regenerated on every
+commit and validated with
+&lt;a href="https://github.com/svenkreiss/html5validator"&gt;html5validator&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;Sample&lt;/h2&gt;
+&lt;p&gt;&lt;img class="image-process-crisp top" alt="pelican-jsmath sample" src="/images/pelican_jsmath_sample.png" /&gt;&lt;/p&gt;</content><category term="Tech"></category><category term="blog"></category><category term="Pelican"></category><category term="math"></category><category term="Python"></category></entry><entry><title>Pelican 2018</title><link href="https://www.svenkreiss.com/blog/pelican-2018/" rel="alternate"></link><published>2018-02-10T00:00:00+01:00</published><updated>2018-02-10T00:00:00+01:00</updated><author><name>Sven Kreiss</name></author><id>tag:www.svenkreiss.com,2018-02-10:/blog/pelican-2018/</id><summary type="html">&lt;p&gt;Updates to Pelican and this blog. This is a summary of theme changes, a list of my favorite plugins, and a summary of plugins that I updated to improve this website. It also contains a short discussion of the pelican-plugins repository and its potential consequences for the lacking popularity of individual plugins.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img class="image-process-crisp top" alt="screenshot of this blog" src="/images/pelican_screenshot_Feb2018.png" /&gt;&lt;/p&gt;
+&lt;p&gt;Inspired by Fred Wilson's post about &lt;a href="http://avc.com/2018/01/owning-yourself/"&gt;Owning Yourself&lt;/a&gt;,
+I revived my Pelican blog.
+All my website's
+&lt;a href="https://github.com/svenkreiss/svenkreiss.github.io/tree/pelican"&gt;configuration and source files&lt;/a&gt;
+are public as well as
+&lt;a href="https://github.com/svenkreiss/pure"&gt;my modifications to the pure theme&lt;/a&gt;.
+Reasons for Pelican compared to hosted solutions:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;content under version control in git&lt;/li&gt;
+&lt;li&gt;my usual text editor for content creation&lt;/li&gt;
+&lt;li&gt;fully owning content and its exact presentation&lt;/li&gt;
+&lt;li&gt;complete customizability, therefore I want Python, therefore Pelican&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;A cost is that I have to contribute some changes myself:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/svenkreiss/pure"&gt;customized Pure theme&lt;/a&gt;: print mode, less author mentions, responsive resizing for mobile, using the pygments &lt;code&gt;friendly&lt;/code&gt; style for code highlighting&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;pelican_jsmath&lt;/code&gt;: using KaTeX: nothing existed to combine it with Pelican and so I created
+  &lt;a href="https://github.com/svenkreiss/pelican-jsmath"&gt;pelican-jsmath&lt;/a&gt;.
+  The new plugin is &lt;span class="math"&gt;\(\alpha\omega\epsilon s \sigma m \epsilon\)&lt;/span&gt; and described in a separate
+  &lt;a href="https://www.svenkreiss.com/blog/pelican-jsmath/"&gt;blog post&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;pelican-cite&lt;/code&gt;: create a nicely formatted Bibliography from a bibtex file. I created &lt;a href="https://github.com/cmacmackin/pelican-cite/pull/5"&gt;PR#5&lt;/a&gt; so that it also works on draft pages.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;image_process&lt;/code&gt;: Responsive images (smaller images on smaller devices) are
+  especially important for the &lt;a href="/projects.html"&gt;projects&lt;/a&gt; page and on article index page.
+  The plugin works on all generated files just before they are written, so you can use it everywhere in your theme as well.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;pelican-advance-embed-tweet&lt;/code&gt;: submitted &lt;a href="https://github.com/fundor333/pelican-advance-embed-tweet/pull/2"&gt;PR#2&lt;/a&gt; to remove align attribute from &lt;code&gt;&amp;lt;bockquote&amp;gt;&lt;/code&gt; which is not HTML5, and you can instead set &lt;code&gt;TWITTER_ALIGN = 'center'&lt;/code&gt; in your &lt;code&gt;pelicanconf&lt;/code&gt; to center the embedded tweet.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;gravatar&lt;/code&gt;: request higher resolution Gravatar images by adding &lt;code&gt;?s=140&lt;/code&gt; to the image url in the theme&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;related_posts&lt;/code&gt;: newly added to this blog&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;representative_image&lt;/code&gt;: automatically extract an image from an article and use it in article list with &lt;code&gt;image_process&lt;/code&gt; to thumbnail&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;pelican_dynamic&lt;/code&gt;: adds options to add per article custom &lt;code&gt;css&lt;/code&gt; and &lt;code&gt;js&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Open and in-progress issues:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;hack of the day: make your default status &lt;code&gt;draft&lt;/code&gt; (generally a good idea), but then set the default status in &lt;code&gt;publishconf.py&lt;/code&gt; to &lt;code&gt;hidden&lt;/code&gt;. When trying to publish, &lt;code&gt;hidden&lt;/code&gt; will create an error and the file will be skipped. So the article wont exist on the web at all until its status is set to &lt;code&gt;draft&lt;/code&gt;. Problem: have to split &lt;code&gt;OUTPUTDIR&lt;/code&gt; in the Makefile so that two different directories are used for &lt;code&gt;make devserver&lt;/code&gt; and &lt;code&gt;make publish&lt;/code&gt; (filed &lt;a href="https://github.com/getpelican/pelican/issues/2284"&gt;issue#2284&lt;/a&gt; against Pelican; see &lt;a href="https://github.com/svenkreiss/svenkreiss.github.io/blob/pelican/Makefile"&gt;Makefile&lt;/a&gt;).&lt;/li&gt;
+&lt;li&gt;Have to wrap Tweet embeds in &lt;code&gt;&amp;lt;div&amp;gt;&lt;/code&gt; to avoid Markdown's &lt;code&gt;&amp;lt;p&amp;gt;&lt;/code&gt; tag because the embedded tweet includes a &lt;code&gt;&amp;lt;blockquote&amp;gt;&lt;/code&gt; which cannot appear inside a &lt;code&gt;&amp;lt;p&amp;gt;&lt;/code&gt; tag.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Always validate html with &lt;a href="https://github.com/svenkreiss/html5validator"&gt;html5validator&lt;/a&gt;
+and check links with the &lt;a href="https://validator.w3.org/checklink"&gt;W3C Link Checker&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;Pelican Plugins&lt;/h2&gt;
+&lt;p&gt;Most Pelican Plugins are distributed through the central
+&lt;a href="https://github.com/getpelican/pelican-plugins"&gt;pelican-plugins&lt;/a&gt; repository.
+The contributed plugins have fairly little recognition: &lt;code&gt;render_math&lt;/code&gt; has 65 stars and
+&lt;code&gt;image_process&lt;/code&gt; has 10 stars. Issues against individual plugins are filed
+in the central repository and not against the individual plugins. Updates to
+plugins have to wait for inclusion in the central repository before they become
+used by others.&lt;/p&gt;
+&lt;!-- &lt;div&gt;@svenkreiss/status/960716731059785730&lt;/div&gt; --&gt;
+
+&lt;p&gt;Python provides its standard mechanism with &lt;code&gt;pip&lt;/code&gt;, &lt;code&gt;setuptools&lt;/code&gt;, &lt;code&gt;requirements.txt&lt;/code&gt;, etc.
+to manage dependencies. Plugins can be written to support &lt;code&gt;pip&lt;/code&gt; and Pelican
+does support importable plugins. This also allows unit tests and continuous
+integration to ensure the quality of the plugin.
+This is the method I chose for &lt;a href="https://github.com/svenkreiss/pelican-jsmath"&gt;pelican-jsmath&lt;/a&gt;.&lt;/p&gt;</content><category term="Tech"></category><category term="blog"></category><category term="Pelican"></category></entry><entry><title>Stream Processing in pysparkling</title><link href="https://www.svenkreiss.com/blog/streamprocessing-in-pysparkling/" rel="alternate"></link><published>2017-03-11T00:00:00+01:00</published><updated>2017-03-11T00:00:00+01:00</updated><author><name>Sven Kreiss</name></author><id>tag:www.svenkreiss.com,2017-03-11:/blog/streamprocessing-in-pysparkling/</id><summary type="html">&lt;p&gt;pysparkling now supports stream processing with discrete streams, called DStream. This post shows a simple example that uses this new API.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;code&gt;pysparkling&lt;/code&gt; is a native Python implementation of PySpark. Stream processing
+is considered to be one of the most important features of Spark. PySpark
+provides a Python interface to Spark’s
+&lt;a href="http://spark.apache.org/docs/latest/api/python/pyspark.streaming.html"&gt;StreamingContext&lt;/a&gt;
+and supports consuming from updating HDFS folders and TCP sockets and provides
+interfaces to Kafka, Kinesis, Flume and MQTT. Initial support for stream
+processing from folders and TCP sockets is in &lt;code&gt;pysparkling 0.4.0&lt;/code&gt; which you can
+now install with:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;pip install --upgrade pysparkling
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2&gt;Counting Example&lt;/h2&gt;
+&lt;p&gt;In the normal batch processing way, you can count elements with:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;pysparkling&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;Context&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;Context&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;parallelize&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;count&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="mi"&gt;3&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;This is similar for stream processing. Incoming data is batched every
+0.1 seconds (the batch interval — the second parameter to &lt;code&gt;StreamContext&lt;/code&gt;) and
+elements are counted in 0.2 second windows, i.e. two batch intervals, which
+returns the count of the first batch, the count of the first and second batch
+and the count of the second and third batch:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;pysparkling&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;sc&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pysparkling&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Context&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;ssc&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pysparkling&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;streaming&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;StreamingContext&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;sc&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mf"&gt;0.1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;     &lt;span class="n"&gt;ssc&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;     &lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;queueStream&lt;/span&gt;&lt;span class="p"&gt;([[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;]])&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;     &lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;countByWindow&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mf"&gt;0.2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;     &lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;foreachRDD&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;lambda&lt;/span&gt; &lt;span class="n"&gt;rdd&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;rdd&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;collect&lt;/span&gt;&lt;span class="p"&gt;()))&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;ssc&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;start&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;ssc&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;awaitTermination&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mf"&gt;0.35&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;7&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;6&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Other new features apart from the &lt;code&gt;pysparkling.streaming&lt;/code&gt; module are an
+improved &lt;code&gt;pysparkling.fileio&lt;/code&gt; module, methods for reading binary files
+(&lt;a href="http://pysparkling.trivial.io/en/latest/api_context.html#pysparkling.Context.binaryFiles"&gt;binaryFiles()&lt;/a&gt; and
+&lt;a href="http://pysparkling.trivial.io/en/latest/api_context.html#pysparkling.Context.binaryRecords"&gt;binaryRecords()&lt;/a&gt;)
+and more inline examples in the documentation.&lt;/p&gt;
+&lt;p&gt;Head over to the &lt;a href="http://pysparkling.trivial.io/en/latest/api_rdd.html"&gt;RDD (batch datasets)&lt;/a&gt; and
+&lt;a href="http://pysparkling.trivial.io/en/latest/api_streaming.html#dstream"&gt;DStream (discrete stream)&lt;/a&gt;
+documentations to learn more!&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://pysparkling.trivial.io"&gt;&lt;img alt="API documentation at pysparkling.trivial.io" src="/images/pysparkling_streaming_doc.png"&gt;&lt;/a&gt;&lt;/p&gt;</content><category term="Tech"></category><category term="data"></category><category term="Python"></category><category term="distributed"></category></entry><entry><title>Decouple</title><link href="https://www.svenkreiss.com/blog/decouple/" rel="alternate"></link><published>2016-12-31T00:00:00+01:00</published><updated>2016-12-31T00:00:00+01:00</updated><author><name>Sven Kreiss</name></author><id>tag:www.svenkreiss.com,2016-12-31:/blog/decouple/</id><summary type="html">&lt;p&gt;Decoupling theoretical uncertainties from measurements of the Higgs boson.&lt;/p&gt;</summary><content type="html">&lt;p&gt;The paper &lt;em&gt;Decoupling theoretical uncertainties from measurements of the Higgs boson&lt;/em&gt; &lt;a href='#decouple' id='ref-decouple-1'&gt;(Cranmer et al., 2015)&lt;/a&gt; by Kyle Cranmer, David Lopez-Val, Tilman Plehn and me is now published in &lt;a href="http://journals.aps.org/prd/abstract/10.1103/PhysRevD.91.054032"&gt;Phys Rev D91&lt;/a&gt; and also available at &lt;a href="https://arxiv.org/abs/1401.0080"&gt;arXiv:1401.0080&lt;/a&gt;.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;We develop a technique to present Higgs coupling measurements, which decouple the poorly defined theoretical uncertainties associated to inclusive and exclusive cross section predictions. The technique simplifies the combination of multiple measurements and can be used in a more general setting. We illustrate the approach with toy LHC Higgs coupling measurements and a collection of new physics models.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;We share all the software that was involved. That includes that we published the model files and a Mathematica notebook on &lt;a href="http://figshare.com/articles/Supplementary_Material_for_A_Novel_Approach_to_Higgs_Coupling_Measurements_/888607"&gt;figshare&lt;/a&gt;. We put all the code on &lt;a href="http://github.com/svenkreiss/decouple"&gt;github&lt;/a&gt; which can be used for new models or to reproduce all plots in the paper simply by typing &lt;code&gt;make&lt;/code&gt;. We even have a little &lt;a href="http://github.com/svenkreiss/decoupledDemo"&gt;demo project&lt;/a&gt; that pulls three pre-made decoupled models from a webpage and recouples them and produces two plots of combined benchmark coupling models.&lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/decouple.png" alt="Decouple part of figure 4" /&gt;&lt;/p&gt;&lt;hr&gt;
+&lt;h2&gt;Bibliography&lt;/h2&gt;
+&lt;p id='decouple'&gt;Kyle Cranmer, Sven Kreiss, David Lopez-Val, and Tilman Plehn.
+&lt;span class="bibtex-protected"&gt;Decoupling Theoretical Uncertainties from Measurements of the Higgs Boson&lt;/span&gt;.
+&lt;em&gt;Phys. Rev.&lt;/em&gt;, D91(5):054032, 2015.
+&lt;a href="https://arxiv.org/abs/1401.0080"&gt;arXiv:1401.0080&lt;/a&gt;, &lt;a href="https://doi.org/10.1103/PhysRevD.91.054032"&gt;doi:10.1103/PhysRevD.91.054032&lt;/a&gt;. &lt;a class="cite-backref" href="#ref-decouple-1" title="Jump back to reference 1"&gt;↩&lt;/a&gt;&lt;/p&gt;
+</content><category term="Science"></category><category term="physics"></category><category term="science"></category></entry><entry><title>Databench v0.4</title><link href="https://www.svenkreiss.com/blog/databench-v04/" rel="alternate"></link><published>2016-09-22T00:00:00+02:00</published><updated>2016-09-22T00:00:00+02:00</updated><author><name>Sven Kreiss</name></author><id>tag:www.svenkreiss.com,2016-09-22:/blog/databench-v04/</id><summary type="html">&lt;p&gt;New release of Databench that switches the backend from Flask to Tornado, fully supports Python 2 and 3, transpiles ES6 to legacy JavaScript and runs unit tests and coverage on every commit.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img class="image-process-crisp" src="/images/databench_examples.png" alt="screenshot of index page for examples" /&gt;&lt;/p&gt;
+&lt;p&gt;Databench v0.4 is &lt;a href="https://github.com/svenkreiss/databench/releases/tag/v0.4.0"&gt;released&lt;/a&gt;.
+It is a major change from the v0.3 branch. All &lt;a href="http://databench.trivial.io/"&gt;documentation&lt;/a&gt;,
+&lt;a href="https://github.com/svenkreiss/databench_examples"&gt;examples&lt;/a&gt; and
+&lt;a href="http://databench-examples.trivial.io/"&gt;demos&lt;/a&gt; are updated.
+Install the new version with&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;pip install --upgrade databench
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Here are the highlights:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Migrated from &lt;strong&gt;Flask to Tornado&lt;/strong&gt; and with that a switch from Jinja2 templates to Tornado templates.&lt;/li&gt;
+&lt;li&gt;With that new backend, &lt;strong&gt;Python 2.7, 3.4 and 3.5&lt;/strong&gt; are supported.&lt;/li&gt;
+&lt;li&gt;The previous version had many dependencies and a major goal of the refactor was to reduce the number of dependencies. This version only depends on &lt;strong&gt;tornado, pyyaml and pyzmq&lt;/strong&gt;. Markdown and docutils to support &lt;em&gt;md&lt;/em&gt; and &lt;em&gt;rst&lt;/em&gt; readme files are optional.&lt;/li&gt;
+&lt;li&gt;A &lt;strong&gt;Datastore&lt;/strong&gt; was added. This concept encourages a consistent pattern for state that works with multiple threads and languages (see the new part of the documentation on &lt;a href="http://databench.trivial.io/en/latest/quickstart.html#data-flow"&gt;data flow&lt;/a&gt;).&lt;/li&gt;
+&lt;li&gt;Front-end code in &lt;strong&gt;ES6&lt;/strong&gt; that is transpiled to legacy JavaScript. Also for analysis code, there is built in support for &lt;a href="http://databench.trivial.io/en/latest/frontend.html#node-modules"&gt;node_modules&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Unit tests run automatically&lt;/strong&gt; on every commit. Also the &lt;strong&gt;documentation is built and updated&lt;/strong&gt; on every commit. The test coverage of the code is also updated continuously and is currently at 95%. Unit tests always run for Python 2.7, 3.4 and 3.5.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If you want to jump right in, start with the
+&lt;a href="http://databench.trivial.io/"&gt;documentation&lt;/a&gt; and have a look at some
+&lt;a href="https://github.com/svenkreiss/databench_examples"&gt;examples&lt;/a&gt;.&lt;/p&gt;</content><category term="Tech"></category><category term="JavaScript"></category><category term="Python"></category><category term="data visualization"></category><category term="data analysis"></category></entry><entry><title>word2vec on Databricks</title><link href="https://www.svenkreiss.com/blog/word2vec-on-databricks/" rel="alternate"></link><published>2015-12-22T00:00:00+01:00</published><updated>2015-12-22T00:00:00+01:00</updated><author><name>Sven Kreiss</name></author><id>tag:www.svenkreiss.com,2015-12-22:/blog/word2vec-on-databricks/</id><summary type="html">&lt;p&gt;Running word2vec on Databricks. A full example of using gensim and distributed maps with Spark to run this Python analysis on Databricks.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Word2vec is an interesting approach to convert a word into a feature vector
+(&lt;a href="https://code.google.com/p/word2vec/"&gt;original C code&lt;/a&gt; by Mikolov et al).
+One of the observations in the original paper was that words with similar
+meaning have a smaller cosine distance than dissimilar words. Here is a
+histogram of the pairwise cosine distances of about 500 media topics
+(derived from &lt;a href="http://cv.iptc.org/newscodes/mediatopic/"&gt;IPTC news codes&lt;/a&gt;):&lt;/p&gt;
+&lt;p&gt;&lt;img class="image-proces-crisp" src="/images/word2vec_angle.png" alt="distribution of Cosine distances of word vectors" /&gt;&lt;/p&gt;
+&lt;p&gt;Cosine distance is defined as &lt;code&gt;1 - cos(vector1, vector2)&lt;/code&gt;. Most of the vector
+pairs only have slightly smaller angles than 90° which makes sense as more
+topics are unrelated to each other than related. The closest 5% of vector
+pairs are still separated by angles up to 73°. The smallest angular separation
+is 18° between breaststroke and backstroke and the second smallest
+is 27° between &lt;em&gt;triple_jump&lt;/em&gt; and &lt;em&gt;pole_vault&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;To visualize these topics below, the 300-dimensional word vectors are embedded
+in two dimensions using t-SNE. Edges between the topics with the smallest 5% in
+cosine distance in the original space are drawn in orange.&lt;/p&gt;
+&lt;p&gt;&lt;img class="image-proces-crisp" src="/images/word2vec_tsne.png" alt="tsne of word vectors" /&gt;&lt;/p&gt;
+&lt;p&gt;Similar topics are indeed close together. However, one could argue that imports
+is the opposite of exports and therefore should not be close together; but they
+are (at the bottom). Similarly, &lt;em&gt;employment&lt;/em&gt; is close to &lt;em&gt;unemployment&lt;/em&gt;. This is
+not how a person would think about “similarity” in this context, but it makes
+sense given the skip-gram training of the word vectors: a neural network tries
+to predict a word (here a topic) given a window of surrounding words. These
+topics would indeed appear in news articles with similar words surrounding
+them. It is important to keep this subtlety in mind when building tools on
+top of word2vec.&lt;/p&gt;
+&lt;h2&gt;Using word2vec on Databricks&lt;/h2&gt;
+&lt;p&gt;Spark and MLlib come with a built-in implementation of word2vec. However, we
+also want to apply word2vec in stand-alone Python and therefore chose the
+&lt;code&gt;gensim&lt;/code&gt; implementation.&lt;/p&gt;
+&lt;p&gt;We use Databricks to process a large number of documents (not for training
+word2vec, but to apply word2vec). We create a “Mapper Tool” that can convert
+text to word vectors that is distributed in a Python &lt;code&gt;egg&lt;/code&gt;. This tool reads
+in previously created word vectors from a compressed binary file that is larger
+than 1GB which takes about a minute.&lt;/p&gt;
+&lt;p&gt;There are two ingredients that we need: a large binary input file available at
+all worker nodes and a way to cache the word vectors in memory across map
+operations.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;dbutils&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fs&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;mount&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;s3n://your_bucket/some_folder&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;/mnt/some_folder&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;The default scheme is &lt;code&gt;dbfs:/&lt;/code&gt;, not &lt;code&gt;file:/&lt;/code&gt;, which means that this S3 folder
+is now available in &lt;code&gt;dbfs&lt;/code&gt;. &lt;code&gt;dbutils&lt;/code&gt; can copy data from &lt;code&gt;dbfs&lt;/code&gt; to the local
+file system, but only on the driver. On worker instances, &lt;code&gt;dbutils&lt;/code&gt; is not
+available. However, &lt;code&gt;dbfs&lt;/code&gt; is mounted using FUSE at &lt;code&gt;file:/dbfs&lt;/code&gt;
+(&lt;a href="https://forums.databricks.com/answers/2966/view.html"&gt;Databricks Forum post&lt;/a&gt;)
+and we can use the local file path &lt;code&gt;/dbfs/mnt/some_folder/word2vec_file.bin.gz&lt;/code&gt;
+on the driver and the workers.&lt;/p&gt;
+&lt;h2&gt;Mapper Tool&lt;/h2&gt;
+&lt;p&gt;The tool is a wrapper around the word2vec implementation in the Python package
+&lt;a href="https://radimrehurek.com/gensim/models/word2vec.html"&gt;gensim&lt;/a&gt;,
+&lt;code&gt;gensim.models.Word2Vec&lt;/code&gt;. We want an in-memory cache that is persistent across
+map operations. Python class variables are not serialized when serializing an
+instance of a class and therefore we can use it as a process-wide cache.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;gensim.models.word2vec&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;Word2Vec&lt;/span&gt;
+
+&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Tool&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;object&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="n"&gt;cache&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{}&lt;/span&gt;
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="fm"&gt;__init__&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;filename&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fn&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;filename&lt;/span&gt;
+
+    &lt;span class="nd"&gt;@property&lt;/span&gt;
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;word2vec&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fn&lt;/span&gt; &lt;span class="ow"&gt;not&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;Tool&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;cache&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="n"&gt;Tool&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;cache&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fn&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; \
+                &lt;span class="n"&gt;Word2Vec&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;load_word2vec_format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fn&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;binary&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kc"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;Tool&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;cache&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fn&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;map&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;word&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;word&lt;/span&gt; &lt;span class="ow"&gt;not&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;word2vec&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="kc"&gt;None&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;word2vec&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;word&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;You can use this tool on the driver or in a map function that gets shipped to
+the workers. The call to &lt;code&gt;load_word2vec_format()&lt;/code&gt; is expensive, but in this
+design only executed once in each process.&lt;/p&gt;
+&lt;p&gt;Example application:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;filename&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;/dbfs/mnt/some_folder/word2vec_file.bin.gz&amp;#39;&lt;/span&gt;
+&lt;span class="n"&gt;sentence&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Some&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;sentence&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;as&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;a&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;test&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="n"&gt;sc&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;parallelize&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;sentence&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;map&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Tool&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;filename&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;map&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;collect&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;There are of course other ways to accomplish this, but I wanted to share the
+method that works well for us.&lt;/p&gt;
+&lt;h2&gt;Summary&lt;/h2&gt;
+&lt;p&gt;This post gave an introduction to word2vec and showed how to distribute a large
+input file to worker nodes on Databricks. It also showed how to create a Mapper
+Tool that can cache input data across map jobs in memory.&lt;/p&gt;
+&lt;p&gt;During this work, I submitted two pull requests to &lt;code&gt;gensim&lt;/code&gt;
+&lt;a href="https://github.com/piskvorky/gensim/pull/545"&gt;#545&lt;/a&gt; and
+&lt;a href="https://github.com/piskvorky/gensim/pull/555"&gt;#555&lt;/a&gt; which are merged into the
+master branch. With the next release, &lt;code&gt;load_word2vec_format()&lt;/code&gt; will be faster.&lt;/p&gt;</content><category term="Tech"></category><category term="machine learning"></category><category term="data science"></category></entry><entry><title>Parallel Processing with pysparkling</title><link href="https://www.svenkreiss.com/blog/parallel-processing-with-pysparkling/" rel="alternate"></link><published>2015-12-04T00:00:00+01:00</published><updated>2015-12-04T00:00:00+01:00</updated><author><name>Sven Kreiss</name></author><id>tag:www.svenkreiss.com,2015-12-04:/blog/parallel-processing-with-pysparkling/</id><summary type="html">&lt;p&gt;Benchmarks for the latest parallel features in pysparkling. It shows good scaling for processing with multiple CPU cores. The example contains only a simple computation which shows that hyperthreading is not very effective in this case.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;code&gt;pysparkling&lt;/code&gt; is a pure Python implementation of Apache Spark's RDD interface.
+It means you can do &lt;code&gt;pip install pysparkling&lt;/code&gt; and start running Spark code in
+Python. Its main use is in low latency applications where Spark operations
+are applied to small datasets. However, &lt;code&gt;pysparkling&lt;/code&gt; also supports the
+parallelization of &lt;code&gt;map&lt;/code&gt; operations through &lt;code&gt;multiprocessing&lt;/code&gt;, &lt;code&gt;ipcluster&lt;/code&gt; and
+&lt;code&gt;futures.concurrent&lt;/code&gt;. This feature is still in development, but this post
+explores what is already possible. Bottlenecks that were found while
+writing this post are now included in version 0.3.10.&lt;/p&gt;
+&lt;h2&gt;Benchmark&lt;/h2&gt;
+&lt;p&gt;I wanted to measure a CPU-bound benchmark to see the overhead of object
+serialization in comparison to actual computations. The benchmark function
+is a Monte Carlo simulation to calculate the number &lt;span class="math"&gt;\(\pi\)&lt;/span&gt;. It generates
+two uniformly distributed random numbers x and y each between 0 and 1 and
+checks whether &lt;span class="math"&gt;\(x^2 + y^2 &amp;lt; 1\)&lt;/span&gt;. The fraction of tries that satisfy this
+condition approximates &lt;span class="math"&gt;\(\pi\)&lt;/span&gt;/4.&lt;/p&gt;
+&lt;p&gt;To understand the process better, I instrumented the job execution with timers.
+The cumulative time spent in parts like data deserialization on the worker
+nodes and a few more are aggregated in the &lt;code&gt;Context._stats&lt;/code&gt; variable.&lt;/p&gt;
+&lt;p&gt;A few problems became apparent:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The function that is applied in a map operation is the same for all
+  partitions of the dataset. In the previous implementation, this function
+  was serialized separately for every chunk of the data.&lt;/li&gt;
+&lt;li&gt;Through a nested dependency, all partitions of the data were sent to all
+  the workers. Now only the partition that a given worker processes is sent to it.&lt;/li&gt;
+&lt;li&gt;Another slowdown was that core pysparkling functions were not pickle-able.
+  That is not a problem for &lt;code&gt;cloudpickle&lt;/code&gt;, but serializing and deserializing
+  non-pickle-able functions takes longer. The &lt;code&gt;map()&lt;/code&gt; and &lt;code&gt;wholeTextFiles()&lt;/code&gt;
+  methods have pickle-able helpers now.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Results&lt;/h2&gt;
+&lt;p&gt;The test was run on a 4-core Intel i5 processor and this is the result:&lt;/p&gt;
+&lt;p&gt;&lt;img class="image-process-crisp" src="/images/pysparkling_4cores.png" alt="Speedup with parallel processing on a 4-core Intel i5." /&gt;&lt;/p&gt;
+&lt;p&gt;Achieving a 3x improvement with four cores is good in real world benchmarks.
+The new &lt;code&gt;Context._stats&lt;/code&gt; variable gives more insight into where time is
+actually spent. The numbers below are normalized with respect to the time
+spent in the execution of the map function. The results for this CPU bound
+benchmark with four processes are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;map exec: 100.0%&lt;/li&gt;
+&lt;li&gt;driver deserialize data: 0.0%&lt;/li&gt;
+&lt;li&gt;map cache init: 0.2%&lt;/li&gt;
+&lt;li&gt;map deserialize data: 0.0%&lt;/li&gt;
+&lt;li&gt;map deserialize function: 2.1%&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Most of the time is spent in the actual map where it should be. The time it
+takes to deserialize the map function is 2.1% of the time it takes to execute
+it. The benchmark itself is run as a unit test in
+&lt;a href="https://github.com/svenkreiss/pysparkling/blob/master/tests/test_multiprocessing.py#L136"&gt;tests/test_multiprocessing.py&lt;/a&gt;
+and the plots can be recreated with &lt;code&gt;ipython tests/multiprocessing_performance_plot.py&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;The test was also run on a 4-core Intel i7 processor with Hyperthreading. You
+can see that the performance is slightly better than with the i5, but that the
+doubled threads do not double the performance.&lt;/p&gt;
+&lt;p&gt;&lt;img class="image-process-crisp" src="/images/pysparkling_4cores_hyperthreading.png" alt="Speedup with parallel processing on a 4-core Intel i7." /&gt;&lt;/p&gt;
+&lt;p&gt;As a first pass at multiprocessing with pysparkling, this is a good result.
+Please check out the project on &lt;a href="https://github.com/svenkreiss/pysparkling"&gt;Github&lt;/a&gt;,
+install it with &lt;code&gt;pip install pysparkling&lt;/code&gt; and send feedback.&lt;/p&gt;</content><category term="Tech"></category><category term="data"></category><category term="pysparkling"></category><category term="Python"></category></entry><entry><title>pysparkling Talks</title><link href="https://www.svenkreiss.com/blog/pysparkling-talks/" rel="alternate"></link><published>2015-08-16T00:00:00+02:00</published><updated>2015-08-16T00:00:00+02:00</updated><author><name>Sven Kreiss</name></author><id>tag:www.svenkreiss.com,2015-08-16:/blog/pysparkling-talks/</id><summary type="html">&lt;p&gt;A collection of talks and links on pysparkling at PyGothan and Hack-and-Tell.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img class="image-process-crisp" src="/images/pysparkling_slide.png" alt="A slide on the basics of pysparkling from the PyGotham talk." /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;PyGotham (25min):
+  &lt;a href="http://www.svenkreiss.com/files/pysparkling_at_pygotham_2015.pdf"&gt;slides&lt;/a&gt;,
+  &lt;a href="https://www.youtube.com/watch?v=KWxu5xuRtwo"&gt;video&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Hack-and-Tell (5min):
+  &lt;a href="http://www.svenkreiss.com/files/pysparkling_hack_and_tell.pdf"&gt;slides&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Links&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Documentation:
+  &lt;a href="http://pysparkling.trivial.io/"&gt;pysparkling.trivial.io&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Github:
+  &lt;a href="https://github.com/svenkreiss/pysparkling"&gt;svenkreiss/pysparkling&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><category term="Tech"></category><category term="pysparkling"></category></entry><entry><title>pysparkling</title><link href="https://www.svenkreiss.com/blog/pysparkling-initial/" rel="alternate"></link><published>2015-05-29T00:00:00+02:00</published><updated>2015-05-29T00:00:00+02:00</updated><author><name>Sven Kreiss</name></author><id>tag:www.svenkreiss.com,2015-05-29:/blog/pysparkling-initial/</id><summary type="html">&lt;p&gt;A pure Python implementation of Apache Spark's RDD interfaces. pysparkling does not depend on Java and has a small execution overhead. It can be a fast test runner for Spark applications.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;code&gt;pysparkling&lt;/code&gt; is a native Python implementation of the interface provided by
+Spark’s RDDs. In Spark, RDDs are Resilient Distributed Datasets. An RDD
+instance provides convenient access to the partitions of data that are
+distributed on a cluster. New RDDs are created by applying transformations
+like &lt;code&gt;map()&lt;/code&gt; and &lt;code&gt;reduce()&lt;/code&gt; to existing RDDs.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;pysparkling&lt;/code&gt; provides the same functionality, but without the dependency on
+the Java Virtual Machine, Spark and Hadoop. The original motivation came from
+implementing a processing pipeline that is common for machine learning: process
+a large number of documents in parallel for training a classification algorithm
+(using Apache Spark) and using that trained classification algorithm in an
+API endpoint where it is applied to a single document at a time. That single
+document has to be preprocessed however with the same transformations that were
+also applied during training. This is the task for pysparkling.&lt;/p&gt;
+&lt;p&gt;Removing the dependency on the JVM, Spark and Hadoop comes at a cost:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Hadoop file io is gone, but its core functionality is reimplemented in
+  &lt;code&gt;pysparkling.fileio&lt;/code&gt;. This by itself is very handy as you can read the
+  contents of files on &lt;code&gt;s3://&lt;/code&gt;, &lt;code&gt;http://&lt;/code&gt; and &lt;code&gt;file://&lt;/code&gt; and optionally with
+  gzip and bz2 compression just by specifying a file name. The name can
+  include multiple comma separated files and the wildcards &lt;code&gt;?&lt;/code&gt; and &lt;code&gt;*&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Managed resource allocation on clusters is gone (no YARN). Parallel
+  execution with &lt;code&gt;multiprocessing&lt;/code&gt; is supported though.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;It also comes with some advanced features:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Parallelization with any object that has a map() method. That includes
+  &lt;code&gt;multiprocessing.Pool&lt;/code&gt; and &lt;code&gt;concurrent.futures.ProcessPoolExecutor&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;It does provide lazy and distributed execution. For example, when creating
+  an RDD from 50,000 text files with
+  &lt;code&gt;myrdd = Context().textFile('s3://mybucket/alldata/*.gz')&lt;/code&gt; and only accessing
+  one record with &lt;code&gt;myrdd.takeSample(1)&lt;/code&gt;, &lt;code&gt;pysparkling&lt;/code&gt; will only download a
+  single file from S3 and not all 50,000.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Quickstart&lt;/h2&gt;
+&lt;p&gt;Install pysparkling with &lt;code&gt;pip install pysparkling&lt;/code&gt;. As a first example,
+count the number of occurrences of every word in &lt;code&gt;README.rst&lt;/code&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;pysparkling&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;Context&lt;/span&gt;
+&lt;span class="n"&gt;counts&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
+    &lt;span class="n"&gt;Context&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;textFile&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;README.rst&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;flatMap&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;lambda&lt;/span&gt; &lt;span class="n"&gt;line&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;line&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;split&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39; &amp;#39;&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+    &lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;map&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;lambda&lt;/span&gt; &lt;span class="n"&gt;word&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;word&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+    &lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;reduceByKey&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;lambda&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;counts&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;collect&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;More examples including how to explore the Common Crawl dataset and the dataset
+of the Human Biome Project are in this
+&lt;a href="https://github.com/svenkreiss/pysparkling/blob/master/docs/demo.ipynb"&gt;IPython Notebook&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;Further Reading&lt;/h2&gt;
+&lt;p&gt;Get an overview of the API and more details from
+&lt;a href="http://pysparkling.trivial.io"&gt;pysparkling's documentation&lt;/a&gt;.
+If you like this project, &lt;a href="https://github.com/svenkreiss/pysparkling"&gt;star it on Github&lt;/a&gt;,
+tweet about it and follow me, @svenkreiss, on Twitter.&lt;/p&gt;</content><category term="Tech"></category><category term="data"></category><category term="distributed"></category><category term="Python"></category></entry><entry><title>Wildcardians on Twitter</title><link href="https://www.svenkreiss.com/blog/wildcardians-on-twitter/" rel="alternate"></link><published>2015-04-27T00:00:00+02:00</published><updated>2015-04-27T00:00:00+02:00</updated><author><name>Sven Kreiss</name></author><id>tag:www.svenkreiss.com,2015-04-27:/blog/wildcardians-on-twitter/</id><summary type="html">&lt;p&gt;A short project to visualize the social Twitter graph of people at Wildcard. The backend is particularly efficient in the number of API calls. The visualization is interactive in d3.js.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Last Wednesday was Hack Day at Wildcard. This is a small extension of what we had done there:&lt;/p&gt;
+&lt;p&gt;&lt;img class="image-process-crisp" src="/images/wildcardians_on_twitter.png" alt="social graph of people at Wildcard" /&gt;&lt;/p&gt;
+&lt;p&gt;This graph was built from one API call to Twitter per person at Wildcard.
+So only 23 API calls. People at Wildcard are represented by blue dots and their
+Twitter handle next to it. The size is related to the number of followers.
+Orange dots are tweets. Black dots are other Twitter handles that were mentioned.&lt;/p&gt;
+&lt;p&gt;The real visualization is interactive. You can hover over every tweet and read
+its content and hover over every mentioned twitter handle to reveal it.
+That way, I discovered a few interesting Twitter accounts that are mentioned
+in the tweets.&lt;/p&gt;
+&lt;p&gt;The backend is a Python script. The front-end is a Databench analysis with a
+d3.js visualization.&lt;/p&gt;</content><category term="Tech"></category><category term="Twitter"></category><category term="social network analysis"></category><category term="d3.js"></category><category term="Python"></category><category term="Databench"></category></entry><entry><title>Collaborative Statistical Modeling</title><link href="https://www.svenkreiss.com/blog/collaborative-statistical-modeling/" rel="alternate"></link><published>2015-04-11T00:00:00+02:00</published><updated>2015-04-11T00:00:00+02:00</updated><author><name>Sven Kreiss</name></author><id>tag:www.svenkreiss.com,2015-04-11:/blog/collaborative-statistical-modeling/</id><summary type="html">&lt;p&gt;A poster about the collaborative statistical modeling work that Kyle Cranmer and I did and that was used to discover the Higgs boson. We presented this at the opening of the Center for Data Science at NYU.&lt;/p&gt;</summary><content type="html">&lt;p&gt;This poster was created by &lt;a href="http://theoryandpractice.org/"&gt;Kyle Cranmer&lt;/a&gt; and me.
+It is about the tools we built and were part of the discovery of the Higgs
+boson. It’s from a while ago, but it needs more exposure as the work behind it
+is applicable outside of physics, but largely unknown.&lt;/p&gt;
+&lt;p&gt;&lt;img class="image-process-crisp" src="/images/nyu_cds_open_poster.png" alt="Poster on collaborative statistical modeling at the opening of the NYU Data Science center" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="/files/nyu_cds_open_poster.pdf"&gt;PDF&lt;/a&gt; of the poster.&lt;/p&gt;
+&lt;p&gt;The Higgs group of the ATLAS experiment (one of the two large experiments at
+CERN) has a few hundred members working in seven subgroups. The final
+statistical test to claim the discovery is done with a combined statistical
+model with input models from all subgroups, and in addition models from detector
+performance groups and theoretical models from outside the Higgs group. It is
+based on statistical methods and technical innovation that deserves more
+attention. Outside of particle physics, this is a topic that is gaining
+interest, but people are unaware of the experience and technology in
+particle physics.&lt;/p&gt;
+&lt;p&gt;The important part is the separation of model and method. The way collaborative
+statistical modeling works at ATLAS is that it is really just the way how
+models are built, investigated and debugged. The methods (inference,
+generation, confidence intervals, credibility intervals, posterior
+probabilities, hypothesis tests, ...) are done by tools that take a model as
+input. Any method — no matter whether Frequentist or Bayesian — can be applied
+to any model.&lt;/p&gt;
+&lt;p&gt;Links:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://cds.nyu.edu/projects/collaborative-statistical-modeling/"&gt;Web page&lt;/a&gt;
+  about our poster at the opening of the NYU Center for Data Science.&lt;/li&gt;
+&lt;li&gt;&lt;a href="/files/nyu_cds_open_poster.pdf"&gt;PDF&lt;/a&gt; of the poster.&lt;/li&gt;
+&lt;/ul&gt;</content><category term="Science"></category><category term="statistics"></category><category term="science"></category></entry><entry><title>PhD Thesis</title><link href="https://www.svenkreiss.com/blog/phd-thesis/" rel="alternate"></link><published>2014-08-17T00:00:00+02:00</published><updated>2014-08-17T00:00:00+02:00</updated><author><name>Sven Kreiss</name></author><id>tag:www.svenkreiss.com,2014-08-17:/blog/phd-thesis/</id><summary type="html">&lt;p&gt;Finished my PhD thesis: Higgs Boson Discovery and First Property Measurements using the ATLAS Detector. It summarizes my work over a few years on Higgs Physics with ATLAS and on collaborative statistical modeling.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;em&gt;Higgs Boson Discovery and First Property Measurements using the ATLAS Detector&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Last May, I finished my PhD in Particle Physics. I had a great time studying physics and doing research at some of the best places: the University of Edinburgh, Scotland, for my bachelor's and master's degrees and New York University for my PhD including a year at CERN in Geneva, Switzerland. I also had great advisors: &lt;a href="http://www.thphys.uni-heidelberg.de/~plehn/"&gt;Tilman Plehn&lt;/a&gt;, &lt;a href="http://www.physics.carleton.ca/people/faculty-members/thomas-gregoire"&gt;Thomas Gregoire&lt;/a&gt; and &lt;a href="http://theoryandpractice.org/"&gt;Kyle Cranmer&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img class="img-thumbnail float-right" src="/images/phd_higgs_overview.png" width="300" title="famous Higgs overview plot" alt="famous Higgs overview plot"&gt;
+For my PhD, I was working on the discovery of the Higgs boson. CERN was an amazing place during that time, with the best particle physicists from all over the world working together. I made substantial contributions to the discovery in the &lt;a href="http://atlas.ch/"&gt;ATLAS collaboration&lt;/a&gt;. I was the first person to combine two search channels and to see the 5σ discovery threshold being breached (&lt;a href="/blog/chasing-the-higgs-nyt/"&gt;blog post on the New York Times article&lt;/a&gt;). I created the plot on the right that was published in the &lt;a href="http://www.sciencedirect.com/science/article/pii/S037026931200857X"&gt;ATLAS discovery paper&lt;/a&gt;, &lt;a href="http://science.sciencemag.org/content/sci/338/6114/1576.full.pdf"&gt;Science&lt;/a&gt; and many other places. I also worked on measuring the Higgs boson mass and the coupling strengths to other particles. A large part of my time was dedicated to statistical modeling and the development of analysis tools, some of which are now part of &lt;a href="https://root.cern.ch"&gt;CERN's ROOT data analysis tool&lt;/a&gt; and its statistics extension &lt;a href="https://twiki.cern.ch/twiki/bin/view/RooStats/WebHome"&gt;RooStats&lt;/a&gt;.&lt;/p&gt;
+&lt;h3&gt;Download Thesis: &lt;a href="/files/phd_thesis.pdf"&gt;&lt;i class="fa fa-book fa-lg"&gt;&lt;/i&gt; PDF&lt;/a&gt;&lt;/h3&gt;</content><category term="Science"></category><category term="physics"></category><category term="science"></category></entry><entry><title>Databench</title><link href="https://www.svenkreiss.com/blog/databench-initial/" rel="alternate"></link><published>2014-06-03T00:00:00+02:00</published><updated>2014-06-03T00:00:00+02:00</updated><author><name>Sven Kreiss</name></author><id>tag:www.svenkreiss.com,2014-06-03:/blog/databench-initial/</id><summary type="html">&lt;p&gt;Databench is a data analysis tool using Flask, Socket.IO and d3.js with optional parallelization with Redis Queue and visualization with mpld3.&lt;/p&gt;</summary><content type="html">&lt;blockquote&gt;
+&lt;p&gt;Databench is a data analysis tool using &lt;a href="http://flask.pocoo.org/"&gt;Flask&lt;/a&gt;, &lt;a href="https://socket.io/"&gt;Socket.IO&lt;/a&gt; and &lt;a href="https://d3js.org/"&gt;d3.js&lt;/a&gt; with optional parallelization with &lt;a href="http://python-rq.org/"&gt;Redis Queue&lt;/a&gt; and visualization with &lt;a href="http://mpld3.github.io/"&gt;mpld3&lt;/a&gt;. Check out the &lt;a href="http://databench-examples.trivial.io"&gt;live demos&lt;/a&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;a href="http://databench-examples.trivial.io"&gt;&lt;img class="image-process-crisp top" alt="matplotlib d3 demo" src="/images/mpld3pi_demo_noframe.png" /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Seriously, check out the &lt;a href="http://databench-examples.trivial.io"&gt;live demos&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;All source codes are available on GitHub:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/svenkreiss/databench"&gt;github.com/svenkreiss/databench&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/svenkreiss/databench_examples"&gt;github.com/svenkreiss/databench_examples&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/svenkreiss/databench_examples_viewer"&gt;github.com/svenkreiss/databench_examples_viewer&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Motivation&lt;/h2&gt;
+&lt;p&gt;I like Python for data analysis. However, the frontends for visualization are poor. &lt;code&gt;d3.js&lt;/code&gt; is a great library for JavaScript and the web-browser is a powerful user interface. &lt;code&gt;Databench&lt;/code&gt; makes Python communicate with the web frontend with minimal effort.&lt;/p&gt;
+&lt;p&gt;The frontend can be interactive (real-time communication goes both ways between &lt;code&gt;Python&lt;/code&gt; and &lt;code&gt;JavaScript&lt;/code&gt;/&lt;code&gt;d3.js&lt;/code&gt;) and can contain explanatory text and documentation.&lt;/p&gt;
+&lt;p&gt;To run Databench, you need to install it with &lt;code&gt;pip&lt;/code&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;pip install git+https://github.com/svenkreiss/databench.git
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;(preferably inside a &lt;code&gt;virtualenv&lt;/code&gt;). Then you create an &lt;code&gt;analyses&lt;/code&gt; folder, run &lt;code&gt;databench&lt;/code&gt; on the command line&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;(&lt;/span&gt;venv&lt;span class="o"&gt;)&lt;/span&gt;analysisfolder$ databench
+Registering analysis simplepi as blueprint &lt;span class="k"&gt;in&lt;/span&gt; flask.
+Registering analysis slowpi as blueprint &lt;span class="k"&gt;in&lt;/span&gt; flask.
+Registering analysis mpld3pi as blueprint &lt;span class="k"&gt;in&lt;/span&gt; flask.
+Registering analysis mpld3PointLabel as blueprint &lt;span class="k"&gt;in&lt;/span&gt; flask.
+Registering analysis mpld3Drag as blueprint &lt;span class="k"&gt;in&lt;/span&gt; flask.
+Connecting socket.io to simplepi.
+Connecting socket.io to slowpi.
+Connecting socket.io to mpld3pi.
+Connecting socket.io to mpld3PointLabel.
+Connecting socket.io to mpld3Drag.
+--- databench ---
+ * Running on http://0.0.0.0:5000/
+ * Restarting with reloader
+Registering analysis simplepi as blueprint &lt;span class="k"&gt;in&lt;/span&gt; flask.
+Registering analysis slowpi as blueprint &lt;span class="k"&gt;in&lt;/span&gt; flask.
+Registering analysis mpld3pi as blueprint &lt;span class="k"&gt;in&lt;/span&gt; flask.
+Registering analysis mpld3PointLabel as blueprint &lt;span class="k"&gt;in&lt;/span&gt; flask.
+Registering analysis mpld3Drag as blueprint &lt;span class="k"&gt;in&lt;/span&gt; flask.
+Connecting socket.io to simplepi.
+Connecting socket.io to slowpi.
+Connecting socket.io to mpld3pi.
+Connecting socket.io to mpld3PointLabel.
+Connecting socket.io to mpld3Drag.
+--- databench ---
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;and point your web-browser to &lt;code&gt;http://localhost:5000/&lt;/code&gt;.&lt;/p&gt;
+&lt;h2&gt;Example Analysis: &lt;code&gt;simplepi&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;Create a project-folder with this structure:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;analyses&lt;/span&gt;
+    &lt;span class="l l-Scalar l-Scalar-Plain"&gt;- templates&lt;/span&gt;
+        &lt;span class="l l-Scalar l-Scalar-Plain"&gt;- simplepi.html&lt;/span&gt;
+    &lt;span class="l l-Scalar l-Scalar-Plain"&gt;- __init__.py&lt;/span&gt;
+    &lt;span class="l l-Scalar l-Scalar-Plain"&gt;- simplepi.py&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;On the command line, all that is necessary is to run &lt;code&gt;databench&lt;/code&gt; and the url (usually &lt;code&gt;http://localhost:5000&lt;/code&gt;) will be shown that you can open in a web browser.&lt;/p&gt;
+&lt;p&gt;This is the backend in &lt;code&gt;simplepi.py&lt;/code&gt; &lt;em&gt;(updated June 10, 2014)&lt;/em&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="sd"&gt;&amp;quot;&amp;quot;&amp;quot;Calculating \\(\\pi\\) the simple way.&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;math&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;time&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;sleep&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;random&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;random&lt;/span&gt;
+
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;databench&lt;/span&gt;
+
+
+&lt;span class="n"&gt;simplepi&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;databench&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Analysis&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;simplepi&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="vm"&gt;__name__&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;simplepi&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;description&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="vm"&gt;__doc__&lt;/span&gt;
+&lt;span class="n"&gt;simplepi&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;thumbnail&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;simplepi.png&amp;#39;&lt;/span&gt;
+
+&lt;span class="nd"&gt;@simplepi&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;signals&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;on&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;connect&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;onconnect&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+    &lt;span class="sd"&gt;&amp;quot;&amp;quot;&amp;quot;Run as soon as a browser connects to this.&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+
+    &lt;span class="n"&gt;inside&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
+    &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;10000&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="n"&gt;sleep&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mf"&gt;0.001&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="n"&gt;r1&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;random&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+        &lt;span class="n"&gt;r2&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;random&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;r1&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;r1&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;r2&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;r2&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="mf"&gt;1.0&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="n"&gt;inside&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="mi"&gt;100&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="n"&gt;draws&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;
+            &lt;span class="n"&gt;simplepi&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;signals&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;emit&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;log&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;draws&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;draws&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;inside&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;inside&lt;/span&gt;&lt;span class="p"&gt;})&lt;/span&gt;
+
+            &lt;span class="n"&gt;p&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;float&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;inside&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;draws&lt;/span&gt;
+            &lt;span class="n"&gt;uncertainty&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mf"&gt;4.0&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;math&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sqrt&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;draws&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;p&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mf"&gt;1.0&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;p&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="n"&gt;draws&lt;/span&gt;
+            &lt;span class="n"&gt;simplepi&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;signals&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;emit&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;status&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+                &lt;span class="s1"&gt;&amp;#39;pi-estimate&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mf"&gt;4.0&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;inside&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;draws&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                &lt;span class="s1"&gt;&amp;#39;pi-uncertainty&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;uncertainty&lt;/span&gt;
+            &lt;span class="p"&gt;})&lt;/span&gt;
+
+    &lt;span class="n"&gt;simplepi&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;signals&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;emit&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;log&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;action&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;done&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;})&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;The analysis waits for the &lt;code&gt;connect&lt;/code&gt; signal and then starts an analysis. It provides the frontend with live updates through &lt;code&gt;signals.emit()&lt;/code&gt; where some of the &lt;code&gt;emit()&lt;/code&gt; messages are for the &lt;code&gt;log&lt;/code&gt; window and some are &lt;code&gt;status&lt;/code&gt; updates.&lt;/p&gt;
+&lt;p&gt;The frontend now has to listen to the signals that are emitted by the backend and act on them. The frontend &lt;code&gt;simplepi.html&lt;/code&gt; is a &lt;code&gt;jinja2&lt;/code&gt; template with math rendered with &lt;a href="https://www.mathjax.org/"&gt;MathJax&lt;/a&gt; using &lt;code&gt;\( ... \)&lt;/code&gt; for inline math and &lt;code&gt;$$ ... $$&lt;/code&gt; for display math &lt;em&gt;(updated June 10, 2014)&lt;/em&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;{% extends &amp;quot;base.html&amp;quot; %}
+
+
+{% block title %}simplepi{% endblock %}
+
+
+{% block content %}
+&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;h1&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+    simplepi
+    &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;small&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;i&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;π = &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;span&lt;/span&gt; &lt;span class="na"&gt;id&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;pi&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;0.0 ± 1.0&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;span&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;i&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;small&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;h1&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+
+&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;p&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;This little demo uses two random numbers \(r_1\) and \(r_2\) and
+then does a comparison $$r_1^2 + r_2^2 &lt;span class="ni"&gt;&amp;amp;le;&lt;/span&gt; 1.0$$ to figure out whether
+the generated point is inside the first quadrant of the unit circle.&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;p&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+
+&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;pre&lt;/span&gt; &lt;span class="na"&gt;id&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;log&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;pre&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+{% endblock %}
+
+
+{% block footerscripts %}
+&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;databench&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;Databench&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;simplepi&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+    &lt;span class="nx"&gt;databench&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;genericElements&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;log&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;$&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;#log&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;));&lt;/span&gt;
+
+    &lt;span class="nx"&gt;databench&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;signals&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;on&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;status&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;msg&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="nx"&gt;$&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;#pi&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nx"&gt;text&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
+            &lt;span class="nx"&gt;msg&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;pi-estimate&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;].&lt;/span&gt;&lt;span class="nx"&gt;toFixed&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mf"&gt;3&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39; ± &amp;#39;&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;
+            &lt;span class="nx"&gt;msg&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;pi-uncertainty&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;].&lt;/span&gt;&lt;span class="nx"&gt;toFixed&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mf"&gt;3&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="p"&gt;);&lt;/span&gt;
+    &lt;span class="p"&gt;});&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+{% endblock %}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;You may want to extend the Databench &lt;code&gt;base&lt;/code&gt; template giving you the header and footer and some standard libraries, but you can also write your own. The &lt;code&gt;block content&lt;/code&gt; is the HTML part of the frontend with fields for the results and an explanation about the algorithm. The &lt;code&gt;block footerscripts&lt;/code&gt; provides the frontend logic. It wires the &lt;code&gt;log&lt;/code&gt; signals to the &lt;code&gt;#log&lt;/code&gt; field with &lt;code&gt;databench.genericElements.log($('#log'))&lt;/code&gt;. It also starts listening for &lt;code&gt;status&lt;/code&gt; signals. When a &lt;code&gt;status&lt;/code&gt; signal is received, it executes the callback function where &lt;code&gt;msg&lt;/code&gt; contains a JSON representation of the dictionary that the backend sent when emitting &lt;code&gt;status&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;And last, to make Databench aware of this analysis, add it to the &lt;code&gt;__init__.py&lt;/code&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;simplepi&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;This is all that is necessary to create an analysis in Databench. Now you can run &lt;code&gt;databench&lt;/code&gt; in the project-folder and visit &lt;code&gt;http://localhost:5000&lt;/code&gt; to run and see the output of the analysis.&lt;/p&gt;
+&lt;h2&gt;Plotting with &lt;code&gt;matplotlib&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;If you like Python, but are not too familiar with &lt;code&gt;d3.js&lt;/code&gt;, you can use &lt;a href="http://mpld3.github.io/"&gt;mpld3&lt;/a&gt; to embed your python plots on the web. The &lt;code&gt;mpld3&lt;/code&gt; website has a nice gallery of examples that should all work in Databench. Two of them -- one with a standard plugin and one with a custom plugin -- are &lt;code&gt;mpld3PointLabel&lt;/code&gt; and &lt;code&gt;mpld3Drag&lt;/code&gt; which are both included in the &lt;a href="http://databench-examples.trivial.io"&gt;live demos&lt;/a&gt; and the &lt;a href="https://github.com/svenkreiss/databench_examples"&gt;databench_examples&lt;/a&gt; repository.&lt;/p&gt;
+&lt;h2&gt;Parallelization&lt;/h2&gt;
+&lt;p&gt;Examples with parallel processing cannot be included in the &lt;a href="http://databench-examples.trivial.io"&gt;live demos&lt;/a&gt; but are included in the &lt;a href="https://github.com/svenkreiss/databench_examples"&gt;databench_examples&lt;/a&gt; repository.&lt;/p&gt;
+&lt;p&gt;The &lt;code&gt;slowpi&lt;/code&gt; example contains a demo-implementation of using &lt;a href=""&gt;Redis Queue&lt;/a&gt; for parallelization. The parallelization is fully implemented on the analysis-side without Databench knowing about it. Other parallelization techniques like &lt;a href="http://www.celeryproject.org/"&gt;Celery&lt;/a&gt; and &lt;a href="http://www.rabbitmq.com/"&gt;RabbitMQ&lt;/a&gt; are probably working but are not tested yet.&lt;/p&gt;</content><category term="Tech"></category><category term="Flask"></category><category term="Socket.IO"></category><category term="JavaScript"></category><category term="d3.js"></category><category term="Python"></category><category term="matplotlib"></category><category term="mpld3"></category></entry><entry><title>dvds-js version 0.1.0</title><link href="https://www.svenkreiss.com/blog/dvds-js-v0.1.0/" rel="alternate"></link><published>2014-04-25T00:00:00+02:00</published><updated>2014-04-25T00:00:00+02:00</updated><author><name>Sven Kreiss</name></author><id>tag:www.svenkreiss.com,2014-04-25:/blog/dvds-js-v0.1.0/</id><summary type="html">&lt;p&gt;Distributed Versioned Data Structures in JavaScript. Like git in js.&lt;/p&gt;</summary><content type="html">&lt;h2&gt;This article and dvds-js are outdated :(&lt;/h2&gt;
+&lt;script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.11/d3.min.js" charset="utf-8"&gt;&lt;/script&gt;
+&lt;script src="http://requirejs.org/docs/release/2.1.2/minified/require.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+require.config({
+    paths: {
+        'crypto-js.SHA3': 'http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/sha3',
+        'dvds': 'http://svenkreiss.github.io/dvds-js/lib/dvds-0.1.0/dvds.min',
+        'dvds.visualize': 'http://svenkreiss.github.io/dvds-js/lib/dvds-0.1.0/dvds.min',
+    },
+    shim: {
+        'crypto-js.SHA3': {
+            exports: 'CryptoJS'
+        }
+    }
+});
+&lt;/script&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Distributed Versioned Data Structures in JavaScript. Like git in js.
+Checkout the code on &lt;a href="http://github.com/svenkreiss/dvds-js"&gt;github.com/svenkreiss/dvds-js&lt;/a&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;The aim of &lt;code&gt;dvds-js&lt;/code&gt; is to have a container (or repository) for data structures in JavaScript that you can &lt;code&gt;fork()&lt;/code&gt;, serialize and send over the wire, &lt;code&gt;commit()&lt;/code&gt; to and then stream back and &lt;code&gt;merge()&lt;/code&gt; with full conflict resolution. Here, &lt;em&gt;data structures&lt;/em&gt; means anything that can be serialized with JSON.&lt;/p&gt;
+&lt;p&gt;This post is about the first development release, version 0.1.0.&lt;/p&gt;
+&lt;h2&gt;Example&lt;/h2&gt;
+&lt;p&gt;A repository &lt;code&gt;a&lt;/code&gt; is created holding an array with the two names &lt;code&gt;Paul&lt;/code&gt; and &lt;code&gt;Adam&lt;/code&gt;. Then this repository is forked and the fork is called &lt;code&gt;b&lt;/code&gt;. Both &lt;code&gt;a&lt;/code&gt; and &lt;code&gt;b&lt;/code&gt; are then modified. To demonstrate streaming capabilities, repository &lt;code&gt;b&lt;/code&gt; is stringified before and after the manipulation. At the end &lt;code&gt;b&lt;/code&gt; is merged into &lt;code&gt;a&lt;/code&gt; and the result is shown below.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nx"&gt;require&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;dvds&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;dvds.visualize&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;a&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="ow"&gt;new&lt;/span&gt; &lt;span class="nx"&gt;dvds&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;Repository&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Paul&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Adam&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]);&lt;/span&gt;
+    &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;b&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;a&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;fork&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+    &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;bString&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;JSON&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;stringify&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;b&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+
+    &lt;span class="c1"&gt;// send bString to a different machine and make it a repository again&lt;/span&gt;
+    &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;bStreamed&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;dvds&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;Repository&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;parseJSON&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="nb"&gt;JSON&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;parse&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;bString&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;);&lt;/span&gt;
+    &lt;span class="nx"&gt;bStreamed&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;data&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mf"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Karl&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="nx"&gt;bStreamed&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;data&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mf"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Peter&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="c1"&gt;// convert to a string again to send back&lt;/span&gt;
+    &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;bStreamedString&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;JSON&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;stringify&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;bStreamed&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+
+    &lt;span class="c1"&gt;// meanwhile on a&lt;/span&gt;
+    &lt;span class="nx"&gt;a&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;data&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mf"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Paula&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+    &lt;span class="c1"&gt;// receive the modified b repository&lt;/span&gt;
+    &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;bReceived&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;dvds&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;Repository&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;parseJSON&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="nb"&gt;JSON&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;parse&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;bStreamedString&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;);&lt;/span&gt;
+    &lt;span class="nx"&gt;a&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;merge&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;bReceived&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+
+    &lt;span class="c1"&gt;// update html output&lt;/span&gt;
+    &lt;span class="nx"&gt;$&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;#test1Out&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nx"&gt;text&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;JSON&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;stringify&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;a&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;data&lt;/span&gt;&lt;span class="p"&gt;));&lt;/span&gt;
+
+    &lt;span class="c1"&gt;// visualize&lt;/span&gt;
+    &lt;span class="nx"&gt;dvds&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;visualize&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;CommitGraph&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;d3&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;select&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;#test1Graph&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;))(&lt;/span&gt;&lt;span class="nx"&gt;a&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+    &lt;span class="nx"&gt;dvds&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;visualize&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;CommitGraph&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;d3&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;select&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;#test2Graph&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;))(&lt;/span&gt;&lt;span class="nx"&gt;bReceived&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="p"&gt;});&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Live output&lt;/strong&gt;: &lt;span id="test1Out"&gt;?&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Edit on &lt;a href="http://jsfiddle.net/3Ruat/11/"&gt;http://jsfiddle.net/3Ruat/11/&lt;/a&gt;.&lt;/p&gt;
+&lt;h3&gt;Graph of Commits&lt;/h3&gt;
+&lt;p&gt;Repositories are created with commit 0 shown on the left and then develop towards the right with the last commit on the far right. The second graph shows a merge of &lt;code&gt;a&lt;/code&gt; and &lt;code&gt;b&lt;/code&gt; as the last commit. This is a live visualization of the two repositories in the example.&lt;/p&gt;
+&lt;p&gt;Repository &lt;code&gt;b&lt;/code&gt;:&lt;/p&gt;
+&lt;p&gt;&lt;svg height="150" width="600" id="test2Graph"&gt;&lt;/svg&gt;&lt;/p&gt;
+&lt;p&gt;Repository &lt;code&gt;a&lt;/code&gt; merged with &lt;code&gt;b&lt;/code&gt;:&lt;/p&gt;
+&lt;p&gt;&lt;svg height="150" width="600" id="test1Graph"&gt;&lt;/svg&gt;&lt;/p&gt;
+&lt;h2&gt;Features&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;special merge algorithms for nested arrays and objects (e.g. arrays inside of objects inside of arrays inside of an object)&lt;/li&gt;
+&lt;li&gt;commit hash is built over the commit's data, but also over the entire parent-tree which means that the commit id can validate the entire parent-tree&lt;/li&gt;
+&lt;li&gt;a repository exposes the &lt;code&gt;data&lt;/code&gt; member that behaves like a normal js variable (e.g. can be used in &lt;code&gt;angular.js&lt;/code&gt; directly)&lt;/li&gt;
+&lt;li&gt;visualization (currently only &lt;code&gt;CommitGraph&lt;/code&gt;) is factored into its own submodule &lt;code&gt;visualize&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;unit tests run with &lt;code&gt;Jasmine&lt;/code&gt; and &lt;code&gt;Karma&lt;/code&gt;, &lt;code&gt;jscs&lt;/code&gt; is used to check code style, &lt;code&gt;uglify&lt;/code&gt; is used to build min version and automation is done with &lt;code&gt;grunt&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Setup&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;dvds-js&lt;/code&gt; is an &lt;a href="http://requirejs.org/docs/whyamd.html#amd"&gt;AMD library&lt;/a&gt;. You can load it using &lt;code&gt;require-js&lt;/code&gt; in the browser as in the example above. The setup looks something like this:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nx"&gt;script&lt;/span&gt; &lt;span class="nx"&gt;src&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;http://s3.amazonaws.com/flaskApp_static/static/d3/d3.v3.min.js&amp;quot;&lt;/span&gt; &lt;span class="nx"&gt;charset&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;utf-8&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&amp;lt;&lt;/span&gt;&lt;span class="err"&gt;/script&amp;gt;&lt;/span&gt;
+&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nx"&gt;script&lt;/span&gt; &lt;span class="nx"&gt;src&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;http://requirejs.org/docs/release/2.1.2/minified/require.js&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&amp;lt;&lt;/span&gt;&lt;span class="err"&gt;/script&amp;gt;&lt;/span&gt;
+&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nx"&gt;script&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="nx"&gt;require&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;config&lt;/span&gt;&lt;span class="p"&gt;({&lt;/span&gt;
+    &lt;span class="nx"&gt;paths&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="s1"&gt;&amp;#39;crypto-js.SHA3&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/sha3&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+        &lt;span class="s1"&gt;&amp;#39;dvds&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;http://svenkreiss.github.io/dvds-js/lib/dvds-0.1.0/dvds.min&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+        &lt;span class="s1"&gt;&amp;#39;dvds.visualize&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;http://svenkreiss.github.io/dvds-js/lib/dvds-0.1.0/dvds.min&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="p"&gt;},&lt;/span&gt;
+    &lt;span class="nx"&gt;shim&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="s1"&gt;&amp;#39;crypto-js.SHA3&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+            &lt;span class="nx"&gt;exports&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;CryptoJS&amp;#39;&lt;/span&gt;
+        &lt;span class="p"&gt;}&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="p"&gt;});&lt;/span&gt;
+&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="err"&gt;/script&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;This includes &lt;code&gt;d3.js&lt;/code&gt; for visualizations and &lt;code&gt;CryptoJS&lt;/code&gt; is needed for calculating unique identifiers for commits.
+In &lt;code&gt;node.js&lt;/code&gt;, this setup is not necessary and you would simply use &lt;code&gt;require()&lt;/code&gt;.&lt;/p&gt;
+&lt;h2&gt;Appendix: Static image of commit graphs&lt;/h2&gt;
+&lt;p&gt;&lt;img src="/images/dvds-js-v010-commitgraphs.png" width="500" title="Commit graphs of dvds-js example." alt="Commit graphs of dvds-js example."&gt;&lt;/p&gt;
+&lt;script&gt;
+require(['dvds', 'dvds.visualize'], function() {
+
+    var a = new dvds.Repository(['Paul', 'Adam']);
+    var b = a.fork();
+    var bString = JSON.stringify(b);
+
+    // send bString to a different machine and make it a repository again
+    var bStreamed = dvds.Repository.parseJSON(JSON.parse(bString));
+    bStreamed.data[0] = 'Karl';
+    bStreamed.data[1] = 'Peter';
+    // convert to a string again to send back
+    var bStreamedString = JSON.stringify(bStreamed);
+
+    // meanwhile on a
+    a.data[0] = 'Paula';
+
+    // receive the modified b repository
+    var bReceived = dvds.Repository.parseJSON(JSON.parse(bStreamedString));
+    a.merge(bReceived);
+
+    // update html output
+    $("#test1Out").text(JSON.stringify(a.data));
+
+    // visualize
+    dvds.visualize.CommitGraph(d3.select('#test1Graph'))(a);
+    dvds.visualize.CommitGraph(d3.select('#test2Graph'))(bReceived);
+});
+&lt;/script&gt;</content><category term="Tech"></category><category term="dvds-js"></category><category term="JavaScript"></category><category term="d3.js"></category><category term="distributed"></category><category term="version control"></category></entry><entry><title>Vimeo liquid tag for Pelican</title><link href="https://www.svenkreiss.com/blog/pelican-vimeo/" rel="alternate"></link><published>2014-03-07T04:41:00+01:00</published><updated>2014-03-07T04:41:00+01:00</updated><author><name>Sven Kreiss</name></author><id>tag:www.svenkreiss.com,2014-03-07:/blog/pelican-vimeo/</id><summary type="html">&lt;p&gt;Extend liquid tags plugin for Pelican to include a Vimeo tag.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Testing my implementation of the &lt;code&gt;vimeo&lt;/code&gt; tag for &lt;code&gt;liquid_tags&lt;/code&gt;. This is based on the &lt;code&gt;youtube&lt;/code&gt; tag which in turn is based on the &lt;a href="https://gist.github.com/jamieowen/2063748"&gt;jekyll / octopress youtube tag&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The syntax is the same as for the &lt;code&gt;youtube&lt;/code&gt; tag:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;
+{% vimeo id [width height] %}
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;em&gt;Update&lt;/em&gt;: The code is now merged into the main pelican-plugins repository on github:
+&lt;a href="https://github.com/getpelican/pelican-plugins"&gt;https://github.com/getpelican/pelican-plugins&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Tests with different sizes&lt;/h2&gt;
+&lt;p&gt;&lt;span class="videobox"&gt;
+                &lt;iframe
+                    src="//player.vimeo.com/video/21789576?title=0&amp;amp;byline=0&amp;amp;portrait=0"
+                    width="320" height="180" frameborder="0"
+                    webkitAllowFullScreen mozallowfullscreen allowFullScreen&gt;
+                &lt;/iframe&gt;
+            &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class="videobox"&gt;
+                &lt;iframe
+                    src="//player.vimeo.com/video/21789576?title=0&amp;amp;byline=0&amp;amp;portrait=0"
+                    width="480" height="270" frameborder="0"
+                    webkitAllowFullScreen mozallowfullscreen allowFullScreen&gt;
+                &lt;/iframe&gt;
+            &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class="videobox"&gt;
+                &lt;iframe
+                    src="//player.vimeo.com/video/21789576?title=0&amp;amp;byline=0&amp;amp;portrait=0"
+                    width="640" height="360" frameborder="0"
+                    webkitAllowFullScreen mozallowfullscreen allowFullScreen&gt;
+                &lt;/iframe&gt;
+            &lt;/span&gt;&lt;/p&gt;</content><category term="Tech"></category><category term="web"></category><category term="Python"></category><category term="Pelican"></category></entry><entry><title>morphDemo</title><link href="https://www.svenkreiss.com/blog/morph-demo/" rel="alternate"></link><published>2014-03-06T10:10:00+01:00</published><updated>2014-03-06T10:10:00+01:00</updated><author><name>Sven Kreiss</name></author><id>tag:www.svenkreiss.com,2014-03-06:/blog/morph-demo/</id><summary type="html">&lt;p&gt;Demo of a new horizontal morphing algorithm.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img class="img-thumbnail float-right" src="/images/kdtreemorph_preview.png" width="350" title="preview of kd-tree morphing" alt="preview of kd-tree morphing"&gt;
+&lt;a href="/files/morphDemo.html"&gt;This&lt;/a&gt; is an interactive demo for a new morphing algorithm with special properties that are motivated from Physics. It uses KD trees and kernel density estimates that are calculated in real time in this demo. All visualization is done using &lt;code&gt;d3.js&lt;/code&gt; and custom code for KD trees and kernel densities in JavaScript.&lt;/p&gt;
+&lt;p&gt;Link: &lt;a href="/files/morphDemo.html"&gt;morphDemo.html&lt;/a&gt;&lt;/p&gt;</content><category term="Science"></category><category term="physics"></category><category term="d3.js"></category><category term="statistics"></category><category term="science"></category></entry><entry><title>Chasing the Higgs - New York Times</title><link href="https://www.svenkreiss.com/blog/chasing-the-higgs-nyt/" rel="alternate"></link><published>2014-03-01T02:00:00+01:00</published><updated>2014-03-01T02:00:00+01:00</updated><author><name>Sven Kreiss</name></author><id>tag:www.svenkreiss.com,2014-03-01:/blog/chasing-the-higgs-nyt/</id><summary type="html">&lt;p&gt;My part of the Higgs discovery story in the New York Times.&lt;/p&gt;</summary><content type="html">&lt;p&gt;My part of the Higgs discovery story in the New York Times.&lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/nyt_science_front_page.jpeg" width="200" title="Science Times section front page" alt="Science Times section front page"&gt;
+&lt;img src="/images/nyt_science_my_part.jpeg" width="350" title="Chasing the Higgs, my part" alt="Chasing the Higgs, my part"&gt;&lt;/p&gt;
+&lt;p&gt;That "joyful expletive" was "Holly shit" (not correcting the typo) sent from his phone.&lt;br /&gt;
+Read the full story on the &lt;a href="http://www.nytimes.com/2013/03/05/science/chasing-the-higgs-boson-how-2-teams-of-rivals-at-CERN-searched-for-physics-most-elusive-particle.html?view=Opening_the_Box"&gt;New York Times website&lt;/a&gt; from March 5, 2013.&lt;/p&gt;</content><category term="Media"></category><category term="being awesome"></category></entry><entry><title>A Nobel Prize Party: Cheese, Bubbles, and a Boson - The New Yorker</title><link href="https://www.svenkreiss.com/blog/nobel-prize-party-new-yorker/" rel="alternate"></link><published>2013-10-10T08:00:00+02:00</published><updated>2013-10-10T08:00:00+02:00</updated><author><name>Sven Kreiss</name></author><id>tag:www.svenkreiss.com,2013-10-10:/blog/nobel-prize-party-new-yorker/</id><summary type="html">&lt;p&gt;I got mentioned in the New Yorker article: A Nobel Prize Party: Cheese, Bubbles, and a Boson.&lt;/p&gt;</summary><content type="html">&lt;p&gt;A funny and only approximately accurate article about how we celebrated the Nobel Prize for Peter Higgs and François Englert at NYU in the New Yorker:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="New Yorker article about the party at the NYU Physics Department" src="/images/new_yorker_nobel_prize_party.png"&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Sven Kreiss, Cranmer’s graduate student, was the first to see the statistical evidence needed to claim the discovery in, June, 2012. He told me in a strong German accent that they don’t host a lot of parties in the physics lounge. “We are very serious here,” he said.&lt;/p&gt;
+&lt;p&gt;Kreiss has a little goatee and was wearing a black T-shirt with an unzipped grey sweatshirt. He remained stoic as he recalled the moment, at CERN, the research center in Geneva, when he saw their research cross the finish line, confirming the particle’s existence. Kreiss was working on ATLAS (A Toroidal L.H.C. Apparatus), one of seven experiments being conducted at the Large Hadron Collider, and was on one of two detector teams going after the Higgs boson. “It’s a graph,” Kreiss said of what he saw at the time. “It has some lines. The line, it goes down like this”—he swooped his hand down—“and if the line goes down far enough, then you say you’ve discovered a new particle.” He shrugged.&lt;/p&gt;
+&lt;p&gt;...&lt;/p&gt;
+&lt;p&gt;Kreiss didn’t immediately think that the finding was Nobel-worthy. “It was combined with a lot of exhaustion,” he said. “You’re tired, you think about this, you go out and come back in. Actually, I had a good night’s sleep for the first time in a while. And then, in the morning, I came back and e-mailed this to my professor. It was his birthday, so I said, ‘Happy birthday.’ ” That was June 25, 2012. Cranmer can remember how excited he was to receive the note. “I wrote back, ‘Holy shit,’ ” he said. “But I misspelled ‘holy.’ Too many ‘L’s.”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;The full story is here: &lt;a href="http://www.newyorker.com/tech/elements/a-nobel-prize-party-cheese-bubbles-and-a-boson"&gt;http://www.newyorker.com/tech/elements/a-nobel-prize-party-cheese-bubbles-and-a-boson&lt;/a&gt;&lt;/p&gt;</content><category term="Media"></category><category term="being awesome"></category></entry><entry><title>My robot Number4 in the Leipziger Volkszeitung</title><link href="https://www.svenkreiss.com/blog/number4-lvz/" rel="alternate"></link><published>2004-01-01T00:00:00+01:00</published><updated>2004-01-01T00:00:00+01:00</updated><author><name>Sven Kreiss</name></author><id>tag:www.svenkreiss.com,2004-01-01:/blog/number4-lvz/</id><summary type="html">&lt;p&gt;Student from Brandis (me) teaches robot how to walk.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Newspaper article about the competition Jugend Forscht. In 2004 this project got me the first place in the regional and state competition. The photo was taken at the national competition in Saarbruecken.&lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/number4/lvz.jpg" title="number4 in LVZ" alt="number4 in LVZ"&gt;&lt;/p&gt;</content><category term="Media"></category><category term="being awesome"></category><category term="number4"></category></entry></feed>

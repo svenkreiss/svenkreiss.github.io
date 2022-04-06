@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Concept for peer-to-peer computing." />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@svenkreiss" />
+    <meta name="twitter:creator" content="@svenkreiss" />
+    <meta name="twitter:title" content="The Data Center and the Bazaar" />
+    <meta name="twitter:description" content="Concept for peer-to-peer computing." />
+    <meta name="twitter:image:src" content="https://www.svenkreiss.com/images/winter_mountains_1600.jpeg" />
+    <meta name="twitter:domain" content="svenkreiss.com" />
+
+    <meta property="og:title" content="The Data Center and the Bazaar" />
+    <meta property="og:type" content="article" />
+    <meta property="og:description" content="Concept for peer-to-peer computing." />
+    <meta property="og:image" content="https://www.svenkreiss.com/images/winter_mountains_1600.jpeg" />
+    <meta property="og:site_name" content="svenkreiss.com" />
+    <meta property="og:url" content="https://www.svenkreiss.com/drafts/data-center-bazaar.html" />
+
+        <link rel="alternate"  href="https://www.svenkreiss.com/feeds/all.atom.xml" type="application/atom+xml" title="Sven Kreiss Full Atom Feed"/>
+
+        <title>The Data Center and the Bazaar - Sven Kreiss</title>
+
+
+    <!-- KaTeX -->
+    <link rel="stylesheet" href="https://www.svenkreiss.com/extras/katex/katex.min.css" />
+    <script src="https://www.svenkreiss.com/extras/katex/katex.min.js"></script>
+    <script src="https://www.svenkreiss.com/extras/katex/contrib/auto-render.min.js"></script>
+
+    <link rel="stylesheet" href="https://www.svenkreiss.com/extras/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://www.svenkreiss.com/theme/css/pure.css?v=0.1.0" />
+    <link rel="stylesheet" href="https://www.svenkreiss.com/theme/css/pygments.css" />
+
+    <!-- for pelican_dynamic plugin -->
+    <!-- end pelican_dynamic -->
+
+</head>
+
+<body>
+<div class="pure-g-r" id="layout">
+    <div class="sidebar sidebar-article pure-u">
+        <header class="header-article">
+                    <a href="https://www.svenkreiss.com/blog/author/sven-kreiss/" title="See posts by Sven Kreiss">
+                        <img class="avatar" alt="Sven Kreiss" src="https://www.gravatar.com/avatar/562a52f3ffcb6c2a3556f91ddc540776?s=140">
+                    </a>
+                <h2 class="article-info">Sven Kreiss</h2>
+
+
+                    <h5>Draft</h5>
+
+                <p class="article-date">August 14, 2014</p>
+
+                <a class="header-article-home" href="/">&larr;Home</a>
+        </header>
+    </div>
+    <div class="pure-u">
+        <div class="content">
+            <section class="post">
+                <header class="post-header">
+                    <h1>The Data Center and the Bazaar</h1>
+                </header>
+            </section>
+
+            <p><img class="img-thumbnail float-right" src="/images/bazaar.png" width="150" title="dockbroker icon" alt="dockbroker icon">
+This is a concept for peer-to-peer computing. The goal is to use a heterogeneous set of computers to run analyses on data. The computers might be the local machine, a remote desktop, an AWS EC2 instance, an <a href="http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create_deploy_docker.html">AWS Elastic Beanstalk app</a>, a node on the <a href="https://developers.google.com/compute/docs/containers">Google Compute Engine</a> or some other real or virtual machine. All these machines have access to data in the form of <code>s3://*</code>, <code>hdfs://*</code>, <code>file://*</code>, <code>ssh://*</code>, <code>http://*</code> or some other means which might be slow or fast and cheap or expensive.</p>
+<h2>Flow</h2>
+<p>Assigning priorities to jobs or setting up priority queues on clusters is tedious and usually not very effective. Simple <code>PBS queue</code> systems don't even have priorities, but all users just submit all their jobs to the same queue. Jobs are submitted to a central manager and get executed on the next available compute node. The data then has to be copied to that node.</p>
+<p>The idea behind this post is more similar to a bazaar where there is no central manager. Every <em>client</em> knows at least one <em>broker</em> which is a manager of a single compute node. Brokers know each other and can refer clients. To submit a job, the client asks a subset of the brokers that it knows for an <em>offer</em> based on a description of the job. The offer is made in US$ and comes with an expected completion time. The broker makes that offer based on the prices that are given by the cloud provider or (partially) free for local machines. The client picks the cheapest offer taking the estimated completion time into account.</p>
+<p>Clients can build reputation in brokers when they deliver on time and still prefer more expensive brokers. Brokers can also build reputation of clients when their estimated run times and required resources match the job description the offer was based on. If that is not the case and a client repeatedly underestimates job processing times, the broker could add extra fees.</p>
+<p>At this point, the offers are only used to find the best place to run the job. No money is actually transfered and that is just fine. However, one could go one step further and have digital coins (something like Bitcoin) just for this set of machines. People in an organization can be given a monthly amount of coins and then pay for their compute jobs. This would make users more conscious of the resources they are using and would limit a combined "cpu+memory+data" quota. At the same time, it would act as a security measure as people without this coin would not be able to use the resources. (For the cryptocurrency experts: one could use <a href="http://en.wikipedia.org/wiki/Smart_contract">smart contracts</a> and maybe <a href="https://docs.google.com/document/d/1AnkP_cVZTCMLIzw4DvsW6M8Q2JC0lIzrTLuoWu2z1BE">colored coins</a>.)</p>
+<h2>Technical Suggestion: <code>dockbroker</code></h2>
+<p>To make things a bit more concrete, here is an example interface. It uses <a href="https://www.docker.com/">Docker</a> which is advertised with <em>"Build, Ship and Run Any App, Anywhere"</em> and <em>"An open platform for distributed applications for developers and sysadmins"</em>. It is a little bit like a virtual machine, but uses the same kernel as the host and therefore it is fast. You can run a JVM inside it, but you can also run plain C.</p>
+<h3>Job</h3>
+<p>A job is defined by a <code>Dockerfile</code> and a <code>manifest</code> either in a local directory or inside a remote repository (for example on GitHub). The broker will use the Dockerfile to see which slices of the Docker image it has cached (and reduce the price). The manifest is used to quantify the price of resources.</p>
+<p>Example of a simple <code>manifest</code> file:</p>
+<div class="highlight"><pre><span></span><code><span class="err">{</span><span class="w"></span>
+<span class="w">    </span><span class="ss">&quot;Name&quot;</span><span class="err">:</span><span class="w"> </span><span class="ss">&quot;Test job 1&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="ss">&quot;Submitter&quot;</span><span class="err">:</span><span class="w"> </span><span class="ss">&quot;Sven Kreiss &lt;me@svenkreiss.com&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="ss">&quot;MaxDuration&quot;</span><span class="err">:</span><span class="w"> </span><span class="ss">&quot;24h&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="ss">&quot;EstDuration&quot;</span><span class="err">:</span><span class="w"> </span><span class="ss">&quot;12h&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="err">}</span><span class="w"></span>
+</code></pre></div>
+
+<p>This job has access to unspecified <code>InputResources</code> and <code>OutputResources</code> (see advanced example below) but brokers who have easy access to those resources wont be able to make better offers than any other broker. Large files should always be specified because neglecting to specify expensive resources could lead to bad reputation.</p>
+<p>Example of an advanced <code>manifest</code> file:</p>
+<div class="highlight"><pre><span></span><code><span class="err">{</span><span class="w"></span>
+<span class="w">    </span><span class="ss">&quot;Name&quot;</span><span class="err">:</span><span class="w"> </span><span class="ss">&quot;Test job 2&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="ss">&quot;Submitter&quot;</span><span class="err">:</span><span class="w"> </span><span class="ss">&quot;Sven Kreiss &lt;me@svenkreiss.com&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="ss">&quot;MaxDuration&quot;</span><span class="err">:</span><span class="w"> </span><span class="ss">&quot;24h&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="ss">&quot;EstDuration&quot;</span><span class="err">:</span><span class="w"> </span><span class="ss">&quot;12h&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="ss">&quot;RAM&quot;</span><span class="err">:</span><span class="w"> </span><span class="ss">&quot;4GB&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="ss">&quot;GPU&quot;</span><span class="err">:</span><span class="w"> </span><span class="ss">&quot;nvidia&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="ss">&quot;JobArray&quot;</span><span class="err">:</span><span class="w"> </span><span class="mi">64</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="ss">&quot;RequireParallelExecution&quot;</span><span class="err">:</span><span class="w"> </span><span class="k">true</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="ss">&quot;InputResources&quot;</span><span class="err">:</span><span class="w"> </span><span class="o">[</span><span class="n"></span>
+<span class="n">        {</span>
+<span class="n">            &quot;CacheLifeTime&quot;: &quot;1h&quot;,</span>
+<span class="n">            &quot;Size&quot;: &quot;1MB&quot;,</span>
+<span class="n">            &quot;Md5&quot;: &quot;12345678901234567890&quot;,</span>
+<span class="n">            &quot;Locations&quot;: [</span>
+<span class="n">                &quot;file://home/svenkreiss/data/some_data.csv&quot;,</span>
+<span class="n">                &quot;s3://testbucket/some_data.csv&quot;,</span>
+<span class="n">            </span><span class="o">]</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="err">}</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="err">{</span><span class="w"></span>
+<span class="w">            </span><span class="ss">&quot;JobArray&quot;</span><span class="err">:</span><span class="w"> </span><span class="ss">&quot;0-31&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="ss">&quot;CacheLifeTime&quot;</span><span class="err">:</span><span class="w"> </span><span class="ss">&quot;forever&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="ss">&quot;Size&quot;</span><span class="err">:</span><span class="w"> </span><span class="ss">&quot;500MB&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="ss">&quot;Md5&quot;</span><span class="err">:</span><span class="w"> </span><span class="ss">&quot;12345678901234567891&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="ss">&quot;Locations&quot;</span><span class="err">:</span><span class="w"> </span><span class="o">[</span><span class="n"></span>
+<span class="n">                &quot;hdfs://some_path/some_file_0.tar.gz&quot;</span>
+<span class="n">            </span><span class="o">]</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="err">}</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="err">{</span><span class="w"></span>
+<span class="w">            </span><span class="ss">&quot;JobArray&quot;</span><span class="err">:</span><span class="w"> </span><span class="ss">&quot;32-63&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="ss">&quot;CacheLifeTime&quot;</span><span class="err">:</span><span class="w"> </span><span class="ss">&quot;forever&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="ss">&quot;Size&quot;</span><span class="err">:</span><span class="w"> </span><span class="ss">&quot;500MB&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="ss">&quot;Md5&quot;</span><span class="err">:</span><span class="w"> </span><span class="ss">&quot;12345678901234567892&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="ss">&quot;Locations&quot;</span><span class="err">:</span><span class="w"> </span><span class="o">[</span><span class="n"></span>
+<span class="n">                &quot;hdfs://some_path/some_file_1.tar.gz&quot;</span>
+<span class="n">            </span><span class="o">]</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="err">}</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="err">]</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="ss">&quot;OutputResources&quot;</span><span class="err">:</span><span class="w"> </span><span class="o">[</span><span class="n"></span>
+<span class="n">        {&quot;Size&quot;: &quot;1MB&quot;, &quot;Location&quot;: &quot;file://home/svenkreiss/job/test_job_1.csv&quot;},</span>
+<span class="n">        {&quot;Size&quot;: &quot;1KB&quot;, &quot;Location&quot;: &quot;file://home/svenkreiss/job/test_job_1.log&quot;},</span>
+<span class="n">    </span><span class="o">]</span><span class="p">,</span><span class="w"></span>
+<span class="err">}</span><span class="w"></span>
+</code></pre></div>
+
+<p>Parallel jobs that are communicating are created by setting <code>"RequireParallelExecution": true</code> which will tell the broker to take only as many jobs as can be run in parallel. Other jobs have to be left to other brokers. The estimated time for completion will have to take into account that all jobs have to run in parallel.</p>
+<h3>Nodes running <code>dockbroker</code></h3>
+<p>Every compute node runs a <code>dockbroker</code>. <code>dockbroker</code>s advertise their existence to other <code>dockbroker</code>s. Clients can ask "Who else do you know?" to discover other brokers to get alternative offers. Brokers create offers and handle the scheduling of jobs.
+Nodes that have data locally available or already cached part of the Docker image (a <code>slice</code>) are cheaper and therefore preferred. When data has to be downloaded to and uploaded from the node, the price for the bandwidth as well as the extra time are taken into account in the offer. Bandwidth price and download times depend on the location of the source (e.g. it is cheaper to download data from <a href="http://aws.amazon.com/s3/">AWS S3</a> when the job is run on <a href="http://aws.amazon.com/ec2/">AWS EC2</a>; see <a href="http://aws.amazon.com/s3/pricing/">AWS S3 pricing</a>). This gives the system <em>data locality</em>. The estimated time to completion includes the estimated run times for jobs already in the queue.</p>
+<h3>Clients pick Brokers</h3>
+<p>Generally, clients pick the cheapest broker. However, the estimated time for completion might be valuable. For a compute node, the value of time is linear as the price of keeping the machine running on a cloud provider is a fixed cost by the hour. The "pain" of waiting for a job to complete could increase quadratic or exponentially which will define a sweet spot for when it is appropriate to pay more for a faster compute node.</p>
+<h2>Use Cases</h2>
+<p><code>dockbroker</code> just sets up environments. The actual parallelized execution, collection of results, data management, etc. has to be handled separately. You could imagine running an <a href="http://ipython.org/ipython-doc/dev/parallel/parallel_intro.html">ipcluster</a> with it (popular in the <code>IPython</code> community) or running an <a href="https://spark.apache.org/">Apache Spark</a> cluster. Sometimes you just need different software versions in your cluster (like different versions of <a href="http://www.r-project.org/">R</a> or <a href="http://root.cern.ch">ROOT</a>) or different resources (e.g. a GPU) and <code>dockbroker</code> can find the best place for the job and create the virtual environment.</p>
+<h2>Why?</h2>
+<p>Because I need it. However, it is not like I am creating distributed computing environments every day. I am more a user of HPC, but it sounds like an interesting project to implement in <a href="http://golang.org/">Go</a> (Docker is written in <a href="http://golang.org/">Go</a>). Contributions to <a href="https://github.com/svenkreiss/dockbroker">dockbroker on github</a> are very welcome.</p>
+
+            <p class="post-footer">
+                // filed
+under                    <a class="post-category" href="https://www.svenkreiss.com/blog/tag/docker/">Docker</a>
+                    <a class="post-category" href="https://www.svenkreiss.com/blog/tag/go/">Go</a>
+                    <a class="post-category" href="https://www.svenkreiss.com/blog/tag/hpc/">HPC</a>
+                    <a class="post-category" href="https://www.svenkreiss.com/blog/tag/peer-to-peer/">peer-to-peer</a>
+                    <a class="post-category" href="https://www.svenkreiss.com/blog/tag/distributed/">distributed</a>
+                in <a class="post-category" href="https://www.svenkreiss.com/blog/category/tech/">Tech</a>&nbsp;&nbsp;&nbsp;
+
+                <span style="display:inline-block;">
+                // share on <a href="https://twitter.com/share?text=%22The%20Data%20Center%20and%20the%20Bazaar%3A%20Concept%20for%20peer-to-peer%20computing.%22&amp;hashtags=Docker%2CGo%2CHPC%2Cpeer-to-peer%2Cdistributed" target="_blank">
+                    <i class="fa fa-twitter fa-lg"></i> Twitter
+                </a>
+                </span>
+            </p>
+            <div class="hr"></div>
+
+            <h2>Related Posts</h2>
+            <ul class="related-posts">
+                <li>
+                    <a class="title" href="https://www.svenkreiss.com/blog/streamprocessing-in-pysparkling/">Stream Processing in pysparkling</a>
+                    <span class="date">from March 11, 2017</span>
+                    <span class="summary">pysparkling now supports stream processing with discrete streams, called DStream. This post shows a simple example that uses this new API.</span>
+                </li>
+                <li>
+                    <a class="title" href="https://www.svenkreiss.com/blog/pysparkling-initial/">pysparkling</a>
+                    <span class="date">from May 29, 2015</span>
+                    <span class="summary">A pure Python implementation of Apache Spark's RDD interfaces. pysparkling does not depend on Java and has a small execution overhead. It can be a fast test runner for Spark applications.</span>
+                </li>
+                <li>
+                    <a class="title" href="https://www.svenkreiss.com/blog/dvds-js-v0.1.0/">dvds-js version 0.1.0</a>
+                    <span class="date">from April 25, 2014</span>
+                    <span class="summary">Distributed Versioned Data Structures in JavaScript. Like git in js.</span>
+                </li>
+            </ul>
+
+            <a href="#" class="go-top">Go Top</a>
+<footer class="footer">
+    <p>&copy; Sven Kreiss  2014 &ndash; 2022. Published with <a href="https://github.com/getpelican/pelican">Pelican</a>.<br />This work is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</p>
+</footer>        </div>
+    </div>
+</div>
+    <script>
+        renderMathInElement(document.body);
+    </script>
+
+    <!-- for pelican_dynamic plugin -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-4070485-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-4070485-2', { 'anonymize_ip': true });
+</script>
+
+
+</body>
+</html>

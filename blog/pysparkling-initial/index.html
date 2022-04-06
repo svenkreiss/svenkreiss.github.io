@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A pure Python implementation of Apache Spark's RDD interfaces. pysparkling does not depend on Java and has a small execution overhead. It can be a fast test runner for Spark applications." />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@svenkreiss" />
+    <meta name="twitter:creator" content="@svenkreiss" />
+    <meta name="twitter:title" content="pysparkling" />
+    <meta name="twitter:description" content="A pure Python implementation of Apache Spark's RDD interfaces. pysparkling does not depend on Java and has a small execution overhead. It can be a fast test runner for Spark applications." />
+    <meta name="twitter:image:src" content="https://www.svenkreiss.com/images/winter_mountains_1600.jpeg" />
+    <meta name="twitter:domain" content="svenkreiss.com" />
+
+    <meta property="og:title" content="pysparkling" />
+    <meta property="og:type" content="article" />
+    <meta property="og:description" content="A pure Python implementation of Apache Spark's RDD interfaces. pysparkling does not depend on Java and has a small execution overhead. It can be a fast test runner for Spark applications." />
+    <meta property="og:image" content="https://www.svenkreiss.com/images/winter_mountains_1600.jpeg" />
+    <meta property="og:site_name" content="svenkreiss.com" />
+    <meta property="og:url" content="https://www.svenkreiss.com/blog/pysparkling-initial/" />
+
+        <link rel="alternate"  href="https://www.svenkreiss.com/feeds/all.atom.xml" type="application/atom+xml" title="Sven Kreiss Full Atom Feed"/>
+
+        <title>pysparkling - Sven Kreiss</title>
+
+
+    <!-- KaTeX -->
+    <link rel="stylesheet" href="https://www.svenkreiss.com/extras/katex/katex.min.css" />
+    <script src="https://www.svenkreiss.com/extras/katex/katex.min.js"></script>
+    <script src="https://www.svenkreiss.com/extras/katex/contrib/auto-render.min.js"></script>
+
+    <link rel="stylesheet" href="https://www.svenkreiss.com/extras/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://www.svenkreiss.com/theme/css/pure.css?v=0.1.0" />
+    <link rel="stylesheet" href="https://www.svenkreiss.com/theme/css/pygments.css" />
+
+    <!-- for pelican_dynamic plugin -->
+    <!-- end pelican_dynamic -->
+
+</head>
+
+<body>
+<div class="pure-g-r" id="layout">
+    <div class="sidebar sidebar-article pure-u">
+        <header class="header-article">
+                    <a href="https://www.svenkreiss.com/blog/author/sven-kreiss/" title="See posts by Sven Kreiss">
+                        <img class="avatar" alt="Sven Kreiss" src="https://www.gravatar.com/avatar/562a52f3ffcb6c2a3556f91ddc540776?s=140">
+                    </a>
+                <h2 class="article-info">Sven Kreiss</h2>
+
+
+
+                <p class="article-date">May 29, 2015</p>
+
+                <a class="header-article-home" href="/">&larr;Home</a>
+        </header>
+    </div>
+    <div class="pure-u">
+        <div class="content">
+            <section class="post">
+                <header class="post-header">
+                    <h1>pysparkling</h1>
+                </header>
+            </section>
+
+            <p><code>pysparkling</code> is a native Python implementation of the interface provided by
+Spark’s RDDs. In Spark, RDDs are Resilient Distributed Datasets. An RDD
+instance provides convenient access to the partitions of data that are
+distributed on a cluster. New RDDs are created by applying transformations
+like <code>map()</code> and <code>reduce()</code> to existing RDDs.</p>
+<p><code>pysparkling</code> provides the same functionality, but without the dependency on
+the Java Virtual Machine, Spark and Hadoop. The original motivation came from
+implementing a processing pipeline that is common for machine learning: process
+a large number of documents in parallel for training a classification algorithm
+(using Apache Spark) and using that trained classification algorithm in an
+API endpoint where it is applied to a single document at a time. That single
+document has to be preprocessed however with the same transformations that were
+also applied during training. This is the task for pysparkling.</p>
+<p>Removing the dependency on the JVM, Spark and Hadoop comes at a cost:</p>
+<ul>
+<li>Hadoop file io is gone, but its core functionality is reimplemented in
+  <code>pysparkling.fileio</code>. This by itself is very handy as you can read the
+  contents of files on <code>s3://</code>, <code>http://</code> and <code>file://</code> and optionally with
+  gzip and bz2 compression just by specifying a file name. The name can
+  include multiple comma separated files and the wildcards <code>?</code> and <code>*</code>.</li>
+<li>Managed resource allocation on clusters is gone (no YARN). Parallel
+  execution with <code>multiprocessing</code> is supported though.</li>
+</ul>
+<p>It also comes with some advanced features:</p>
+<ul>
+<li>Parallelization with any object that has a map() method. That includes
+  <code>multiprocessing.Pool</code> and <code>concurrent.futures.ProcessPoolExecutor</code>.</li>
+<li>It does provide lazy and distributed execution. For example, when creating
+  an RDD from 50,000 text files with
+  <code>myrdd = Context().textFile('s3://mybucket/alldata/*.gz')</code> and only accessing
+  one record with <code>myrdd.takeSample(1)</code>, <code>pysparkling</code> will only download a
+  single file from S3 and not all 50,000.</li>
+</ul>
+<h2>Quickstart</h2>
+<p>Install pysparkling with <code>pip install pysparkling</code>. As a first example,
+count the number of occurrences of every word in <code>README.rst</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">pysparkling</span> <span class="kn">import</span> <span class="n">Context</span>
+<span class="n">counts</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">Context</span><span class="p">()</span><span class="o">.</span><span class="n">textFile</span><span class="p">(</span><span class="s1">&#39;README.rst&#39;</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">flatMap</span><span class="p">(</span><span class="k">lambda</span> <span class="n">line</span><span class="p">:</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">))</span>
+    <span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">word</span><span class="p">:</span> <span class="p">(</span><span class="n">word</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+    <span class="o">.</span><span class="n">reduceByKey</span><span class="p">(</span><span class="k">lambda</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">)</span>
+<span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">counts</span><span class="o">.</span><span class="n">collect</span><span class="p">())</span>
+</code></pre></div>
+
+<p>More examples including how to explore the Common Crawl dataset and the dataset
+of the Human Biome Project are in this
+<a href="https://github.com/svenkreiss/pysparkling/blob/master/docs/demo.ipynb">IPython Notebook</a>.</p>
+<h2>Further Reading</h2>
+<p>Get an overview of the API and more details from
+<a href="http://pysparkling.trivial.io">pysparkling's documentation</a>.
+If you like this project, <a href="https://github.com/svenkreiss/pysparkling">star it on Github</a>,
+tweet about it and follow me, @svenkreiss, on Twitter.</p>
+
+            <p class="post-footer">
+                // filed
+under                    <a class="post-category" href="https://www.svenkreiss.com/blog/tag/data/">data</a>
+                    <a class="post-category" href="https://www.svenkreiss.com/blog/tag/distributed/">distributed</a>
+                    <a class="post-category" href="https://www.svenkreiss.com/blog/tag/python/">Python</a>
+                in <a class="post-category" href="https://www.svenkreiss.com/blog/category/tech/">Tech</a>&nbsp;&nbsp;&nbsp;
+
+                <span style="display:inline-block;">
+                // share on <a href="https://twitter.com/share?text=%22pysparkling%3A%20A%20pure%20Python%20implementation%20of%20Apache%20Spark%27s%20RDD%20interfaces.%20pysparkling%20does%20not%20depend%20on%20Java%20and%20has%20a%20small%20execution%20overhead.%20It%20can%20be%20a%20fast%20test%20runner%20for%20Spark%20applications.%22&amp;hashtags=data%2Cdistributed%2CPython" target="_blank">
+                    <i class="fa fa-twitter fa-lg"></i> Twitter
+                </a>
+                </span>
+            </p>
+            <div class="hr"></div>
+
+            <h2>Related Posts</h2>
+            <ul class="related-posts">
+                <li>
+                    <a class="title" href="https://www.svenkreiss.com/blog/streamprocessing-in-pysparkling/">Stream Processing in pysparkling</a>
+                    <span class="date">from March 11, 2017</span>
+                    <span class="summary">pysparkling now supports stream processing with discrete streams, called DStream. This post shows a simple example that uses this new API.</span>
+                </li>
+                <li>
+                    <a class="title" href="https://www.svenkreiss.com/blog/artisanal-s2/">Artisanal S2 Cells</a>
+                    <span class="date">from November 28, 2018</span>
+                    <span class="summary">S2 cells are a powerful tool to index and compute over geospatial data. This short post shows how to create S2 cell ids by hand.</span>
+                </li>
+                <li>
+                    <a class="title" href="https://www.svenkreiss.com/blog/parallel-processing-with-pysparkling/">Parallel Processing with pysparkling</a>
+                    <span class="date">from December 04, 2015</span>
+                    <span class="summary">Benchmarks for the latest parallel features in pysparkling. It shows good scaling for processing with multiple CPU cores. The example contains only a simple computation which shows that hyperthreading is not very effective in this case.</span>
+                </li>
+            </ul>
+
+            <a href="#" class="go-top">Go Top</a>
+<footer class="footer">
+    <p>&copy; Sven Kreiss  2014 &ndash; 2022. Published with <a href="https://github.com/getpelican/pelican">Pelican</a>.<br />This work is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</p>
+</footer>        </div>
+    </div>
+</div>
+    <script>
+        renderMathInElement(document.body);
+    </script>
+
+    <!-- for pelican_dynamic plugin -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-4070485-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-4070485-2', { 'anonymize_ip': true });
+</script>
+
+
+</body>
+</html>

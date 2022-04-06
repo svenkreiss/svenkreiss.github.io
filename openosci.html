@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Open source and open hardware electronics project to build a low-cost digital oscilloscope with an 8-bit microcontroller and a mobile phone screen. Capabilities 4 input channels no fixed frequencies; the ADC can be run with different clock cycles and then the time for one x-division is displayed in the display …" />
+
+
+        <link rel="alternate"  href="https://www.svenkreiss.com/feeds/all.atom.xml" type="application/atom+xml" title="Sven Kreiss Full Atom Feed"/>
+
+        <title>OpenOsci - Sven Kreiss</title>
+
+
+    <!-- KaTeX -->
+    <link rel="stylesheet" href="https://www.svenkreiss.com/extras/katex/katex.min.css" />
+    <script src="https://www.svenkreiss.com/extras/katex/katex.min.js"></script>
+    <script src="https://www.svenkreiss.com/extras/katex/contrib/auto-render.min.js"></script>
+
+    <link rel="stylesheet" href="https://www.svenkreiss.com/extras/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://www.svenkreiss.com/theme/css/pure.css?v=0.1.0" />
+
+    <!-- for pelican_dynamic plugin -->
+    <!-- end pelican_dynamic -->
+
+</head>
+
+<body>
+<div class="pure-g-r" id="layout">
+<div class="sidebar pure-u">
+    <div class="cover-img" style="background-image: url('/images/winter_mountains_1600.jpeg');">
+        <div class="cover-body">
+            <header class="header">
+                    <h1 class="brand-main"><a href="/">Sven Kreiss</a></h1>
+                    <p class="tagline">Computer vision engineer with physics background.</p>
+                    <p class="links"><a href="/">About</a></p>
+                    <p class="links"><a href="/projects.html">Projects</a></p>
+                    <p class="links"><a href="/blog/">Blog</a></p>
+                    <p class="social">
+                        <a href="https://scholar.google.ch/citations?hl=en&user=SnjnSVEAAAAJ&view_op=list_works&sortby=pubdate">
+                            <i class="fa fa-graduation-cap fa-2x"></i>
+                        </a>
+                        <a href="https://github.com/svenkreiss/">
+                            <i class="fa fa-github fa-2x"></i>
+                        </a>
+                        <a href="https://twitter.com/svenkreiss">
+                            <i class="fa fa-twitter fa-2x"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/svenkreiss/">
+                            <i class="fa fa-linkedin fa-2x"></i>
+                        </a>
+                    </p>
+            </header>
+        </div>
+    </div>
+</div>    <div class="pure-u-1">
+        <div class="content">
+            <h1 class="content-subhead">OpenOsci</h1>
+            <blockquote>
+<p>Open source and open hardware electronics project to build a low-cost digital oscilloscope with an 8-bit microcontroller and a mobile phone screen.</p>
+</blockquote>
+<p><span class="videobox">
+                <iframe
+                    src="//player.vimeo.com/video/21789038?title=0&amp;byline=0&amp;portrait=0"
+                    width="600" height="400" frameborder="0"
+                    webkitAllowFullScreen mozallowfullscreen allowFullScreen>
+                </iframe>
+            </span></p>
+<h2>Capabilities</h2>
+<ul>
+<li>4 input channels</li>
+<li>no fixed frequencies; the ADC can be run with different clock cycles and then the time for one x-division is displayed in the display; the "td" value (in the images below, 47 microseconds and 9 milliseconds)</li>
+<li>the display also shows a frequency estimate of the signal. The algorithm looks at the time between to successive crossings of the x-axis and calculates a frequency from that. For sine waves, this is reasonably accurate. In the right picture below I measure background noise with a frequency of 49 Hz; the left picture shows a 43 kHz oscillation.</li>
+</ul>
+<h2>Fotos</h2>
+<p><img src="/images/openosci/2channels_function_generator.jpg" width="500" title="OpenOsci in action" alt="OpenOsci in action"></p>
+<p><img src="/images/openosci/channel_42kHz.jpg" width="300" title="one channel" alt="one channel">
+<img src="/images/openosci/4channels_50Hz.jpg" width="300" title="four channels" alt="four channels"></p>
+<h2>Hardware</h2>
+<p><img src="/images/openosci/sketchy_060306_schematic.png" width="500" title="Prototype schematic" alt="Prototype schematic">
+<img src="/images/openosci/sketchy_060306_board.png" width="380" title="Prototype board" alt="Prototype board"></p>
+<p>Please be aware that I built only one version. There are many flaws in that one version, but all photos/videos shown here are made with this version.</p>
+<ul>
+<li>Schematic: <a href="/files/openosci/sketchy_060306_produced.sch">openosci_060306_produced.sch</a></li>
+<li>Board: <a href="/files/openosci/sketchy_060306_produced.brd">openosci_060306_produced.brd</a></li>
+</ul>
+<p>While playing around with this prototype, I was already making improvements to layout and board which I never built or tested.</p>
+<ul>
+<li>Schematic: <a href="/files/openosci/sketchy_060426.sch">openosci_060426.sch</a></li>
+<li>Board: <a href="/files/openosci/sketchy_060426.brd">openosci_060426.brd</a></li>
+</ul>
+<h2>Software</h2>
+<ul>
+<li>Download: <a href="/files/openosci/source_code.zip">source_code.zip</a></li>
+<li>code reference manual: <a href="/files/openosci/reference_manual.pdf">pdf</a>, <a href="/files/openosci/reference_manual_html/">html</a></li>
+</ul>
+<h2>Links</h2>
+<ul>
+<li><em>apetech.de (broken)</em>: Graphical Display routines for the Nokia 6100.</li>
+<li><em>superkranz.de (broken)</em>: Port of the above routines to Siemens S65 screens.</li>
+<li><a href="https://www.mikrocontroller.net">mikrocontroller.net</a>: thread about the screen</li>
+</ul>
+<h2>Disclaimer</h2>
+<p>This is an old project of mine. It was done in 2006 and some parts might be out of date. I cannot guaranty proper functionality or fitness for any particular use.</p>
+<footer class="footer">
+    <p>&copy; Sven Kreiss  2014 &ndash; 2022. Published with <a href="https://github.com/getpelican/pelican">Pelican</a>.<br />This work is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</p>
+</footer>        </div>
+    </div>
+</div>
+    <script>
+        renderMathInElement(document.body);
+    </script>
+
+    <!-- for pelican_dynamic plugin -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-4070485-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-4070485-2', { 'anonymize_ip': true });
+</script>
+
+
+</body>
+</html>
