@@ -8,7 +8,7 @@ Summary: Sven Kreiss is a Computer Vision Researcher in Switzerland.
 Status: published
 
 
-{% img img-thumbnail float-right /images/me2020_head.jpeg 200 me %}
+{% img img-thumbnail float-right /images/me2022_square_small.jpeg 200 me %}
 
 I am a computer vision engineer at Meta (formerly Facebook) Reality Labs with a background in
 particle physics.
