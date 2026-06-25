@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Sven Kreiss - Science</title><link href="https://www.svenkreiss.com/" rel="alternate"></link><link href="https://www.svenkreiss.com/feeds/science.atom.xml" rel="self"></link><id>https://www.svenkreiss.com/</id><updated>2018-11-23T00:00:00+01:00</updated><subtitle></subtitle><entry><title>Python at a University Lab</title><link href="https://www.svenkreiss.com/blog/lab-python/" rel="alternate"></link><published>2018-11-23T00:00:00+01:00</published><updated>2018-11-23T00:00:00+01:00</updated><author><name>Sven Kreiss</name></author><id>tag:www.svenkreiss.com,2018-11-23:/blog/lab-python/</id><summary type="html">&lt;p&gt;University research labs have a different structure than corporate research labs and their compute setups. In this post, I list useful Python resources for starting in a university machine learning lab.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img class="img-thumbnail float-right" width=200 src="/images/python-powered-university.png" alt="Python powered University" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;I am a post-doc at &lt;a href="https://vita.epfl.ch/"&gt;VITA lab at EPFL university&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Good software engineering practices are important to me. They are foundational
+for open and reproducible science. You -- a current or future
+member of a Machine Learning lab -- are not necessarily expected to be a computer scientist
+or software engineer, but the tools must be familiar.
+Expert-level familiar. You will use these tools most of the day.
+You should not be clumsy with or afraid of these tools.
+Below is an ambitious list, so don't worry if you are not familiar with most of it yet.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Python Core:&lt;/strong&gt;
+The best way to get started and a great resource for advanced users is
+the &lt;a href="https://docs.python.org/3/tutorial/index.html"&gt;tutorial on the official Python webpage&lt;/a&gt;.
+Here are my notes more specific to ML.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;always use Python3 now, not Python2&lt;/li&gt;
+&lt;li&gt;read Python code of great projects outside of ML (almost no ML projects are written well, see closing remarks):
+  start with &lt;a href="https://github.com/requests/requests"&gt;&lt;code&gt;requests&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Python core and standard libraries (always available, so use them):&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions"&gt;list comprehensions&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://docs.python.org/3/tutorial/classes.html"&gt;classes&lt;/a&gt;:
+  when your function becomes too long it might want to be a class&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://docs.python.org/3/tutorial/datastructures.html#sets"&gt;sets&lt;/a&gt;:
+  avoid testing whether an element is in a list, test whether it is in a set&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://docs.python.org/3/library/argparse.html"&gt;argparse&lt;/a&gt;, use a standard library to parse command line arguments&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://docs.python.org/3/library/logging.html#module-logging"&gt;logging&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://docs.python.org/3/library/collections.html#collections.defaultdict"&gt;&lt;code&gt;defaultdict&lt;/code&gt;&lt;/a&gt;
+  for sparse accumulators&lt;/li&gt;
+&lt;li&gt;generators and &lt;code&gt;yield&lt;/code&gt;, see &lt;a href="https://docs.python.org/3/howto/functional.html"&gt;functional programming howto&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;all &lt;a href="https://docs.python.org/3/library/itertools.html"&gt;&lt;code&gt;itertools&lt;/code&gt;&lt;/a&gt;
+  (e.g.&amp;nbsp;&lt;a href="https://docs.python.org/3/library/itertools.html#itertools.chain.from_iterable"&gt;&lt;code&gt;itertools.chain.from_iterable&lt;/code&gt;&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://docs.python.org/3/library/functools.html#functools.lru_cache"&gt;&lt;code&gt;functools.lru_cache&lt;/code&gt;&lt;/a&gt; is a powerful tool&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://docs.python.org/3/library/functions.html#property"&gt;&lt;code&gt;property&lt;/code&gt; decorator&lt;/a&gt; is great for adding caches&lt;/li&gt;
+&lt;li&gt;more advanced but useful: context managers, decorators&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;understand stack traces (the basics: the line above is where the line below originated), &lt;a href="https://en.wikipedia.org/wiki/Stack_trace"&gt;Wikipedia&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;scientific foundational packages:
+  &lt;a href="http://www.numpy.org/"&gt;&lt;code&gt;numpy&lt;/code&gt;&lt;/a&gt;,
+  &lt;a href="https://scipy.org/getting-started.html"&gt;&lt;code&gt;scipy&lt;/code&gt;&lt;/a&gt;,
+  &lt;a href="https://scikit-learn.org/stable/"&gt;&lt;code&gt;scikit-learn&lt;/code&gt;&lt;/a&gt;
+  and depending on your focus &lt;a href="https://cython.org/"&gt;&lt;code&gt;cython&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Packaging:&lt;/strong&gt;
+As soon as you need to re-use code in a second file, you will want to import
+one of your own files. You should use relative imports and to use those
+properly you need to package your code. Packaging in Python used to be a mess,
+but much progress has been made over recent years.
+When you  search for help related
+to packaging, filter for results within the last year.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;pip&lt;/code&gt;, I have never used &lt;code&gt;conda&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;relative imports: see &lt;a href="https://docs.python.org/3/tutorial/modules.html"&gt;tutorial section on Modules&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;setup.py&lt;/code&gt;: see &lt;a href="https://setuptools.readthedocs.io/en/latest/setuptools.html#basic-use"&gt;&lt;code&gt;setuptools&lt;/code&gt; basic use&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://docs.python.org/3/tutorial/venv.html"&gt;&lt;code&gt;venv&lt;/code&gt;&lt;/a&gt;: I never do anything outside a virtual environment&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/jupyter/notebook"&gt;Jupyter notebooks&lt;/a&gt;:
+  Great for demos and log books. &lt;em&gt;Never&lt;/em&gt; to code.&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://mybinder.org/"&gt;mybinder.org&lt;/a&gt; to make your Jupyter demos interactive&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Style / Unit Tests / Continuous Testing:&lt;/strong&gt;
+Standard practices for software engineers are useful for ML projects, too. They help.
+Beyond testing code, unit tests in combination with continuous integration give
+a robust and reproducible starting point for anyone picking up your project
+(including yourself in one year).&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://www.python.org/dev/peps/pep-0008/"&gt;PEP8&lt;/a&gt; is the &lt;em&gt;Style Guide for Python&lt;/em&gt; and contains explanations. Don't skip &lt;a href="https://www.python.org/dev/peps/pep-0008/#a-foolish-consistency-is-the-hobgoblin-of-little-minds"&gt;&lt;em&gt;A Foolish Consistency is the Hobgoblin of Little Minds&lt;/em&gt;&lt;/a&gt;. Still, I follow almost all of PEP8 to the letter. Additional:&lt;ul&gt;
+&lt;li&gt;no abbreviations for variables, classes, functions, etc.&lt;/li&gt;
+&lt;li&gt;do not iterate over indices in Python: don't do &lt;code&gt;for i in range(len(mylist))&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.pylint.org/"&gt;&lt;code&gt;pylint&lt;/code&gt;&lt;/a&gt; generally provides good advice beyond checking for PEP8&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://docs.pytest.org/en/latest/"&gt;&lt;code&gt;pytest&lt;/code&gt;&lt;/a&gt; to run all your tests&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://circleci.com/"&gt;CircleCI&lt;/a&gt; and &lt;a href="https://travis-ci.org/"&gt;TravisCI&lt;/a&gt; can automatically run your tests on every commit to git&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Red Flags:&lt;/strong&gt;
+When browsing open source code, this is when I get worried.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;no eval metrics/scripts for that implementation&lt;/li&gt;
+&lt;li&gt;have to change the &lt;code&gt;PATH&lt;/code&gt; or &lt;code&gt;PYTHONPATH&lt;/code&gt; variables&lt;/li&gt;
+&lt;li&gt;have to copy or symlink folders with code&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Closing:&lt;/strong&gt;
+Infrastructures at large companies are different from a university lab and
+your laptop: containers, distributed storage, build systems, custom DNS,
+mono repositories. A small piece in the middle of the stack is open source and
+has been duct-taped to make it work without the rest of the infrastructure.
+Don't follow blindly what seems like a standard practice of the best software
+engineers in the world. It might be an artifact of porting it to the
+open source world.&lt;/p&gt;
+&lt;p&gt;Feedback is welcome on Twitter @svenkreiss.&lt;/p&gt;</content><category term="Science"></category><category term="Python"></category><category term="Machine Learning"></category></entry><entry><title>Decouple</title><link href="https://www.svenkreiss.com/blog/decouple/" rel="alternate"></link><published>2016-12-31T00:00:00+01:00</published><updated>2016-12-31T00:00:00+01:00</updated><author><name>Sven Kreiss</name></author><id>tag:www.svenkreiss.com,2016-12-31:/blog/decouple/</id><summary type="html">&lt;p&gt;Decoupling theoretical uncertainties from measurements of the Higgs boson.&lt;/p&gt;</summary><content type="html">&lt;p&gt;The paper &lt;em&gt;Decoupling theoretical uncertainties from measurements of the Higgs boson&lt;/em&gt; &lt;a href='#decouple' id='ref-decouple-1'&gt;(Cranmer et al., 2015)&lt;/a&gt; by Kyle Cranmer, David Lopez-Val, Tilman Plehn and me is now published in &lt;a href="http://journals.aps.org/prd/abstract/10.1103/PhysRevD.91.054032"&gt;Phys Rev D91&lt;/a&gt; and also available at &lt;a href="https://arxiv.org/abs/1401.0080"&gt;arXiv:1401.0080&lt;/a&gt;.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;We develop a technique to present Higgs coupling measurements, which decouple the poorly defined theoretical uncertainties associated to inclusive and exclusive cross section predictions. The technique simplifies the combination of multiple measurements and can be used in a more general setting. We illustrate the approach with toy LHC Higgs coupling measurements and a collection of new physics models.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;We share all the software that was involved. That includes that we published the model files and a Mathematica notebook on &lt;a href="http://figshare.com/articles/Supplementary_Material_for_A_Novel_Approach_to_Higgs_Coupling_Measurements_/888607"&gt;figshare&lt;/a&gt;. We put all the code on &lt;a href="http://github.com/svenkreiss/decouple"&gt;github&lt;/a&gt; which can be used for new models or to reproduce all plots in the paper simply by typing &lt;code&gt;make&lt;/code&gt;. We even have a little &lt;a href="http://github.com/svenkreiss/decoupledDemo"&gt;demo project&lt;/a&gt; that pulls three pre-made decoupled models from a webpage and recouples them and produces two plots of combined benchmark coupling models.&lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/decouple.png" alt="Decouple part of figure 4" /&gt;&lt;/p&gt;&lt;hr&gt;
+&lt;h2&gt;Bibliography&lt;/h2&gt;
+&lt;p id='decouple'&gt;Kyle Cranmer, Sven Kreiss, David Lopez-Val, and Tilman Plehn.
+&lt;span class="bibtex-protected"&gt;Decoupling Theoretical Uncertainties from Measurements of the Higgs Boson&lt;/span&gt;.
+&lt;em&gt;Phys. Rev.&lt;/em&gt;, D91(5):054032, 2015.
+&lt;a href="https://arxiv.org/abs/1401.0080"&gt;arXiv:1401.0080&lt;/a&gt;, &lt;a href="https://doi.org/10.1103/PhysRevD.91.054032"&gt;doi:10.1103/PhysRevD.91.054032&lt;/a&gt;. &lt;a class="cite-backref" href="#ref-decouple-1" title="Jump back to reference 1"&gt;↩&lt;/a&gt;&lt;/p&gt;
+</content><category term="Science"></category><category term="physics"></category><category term="science"></category></entry><entry><title>Collaborative Statistical Modeling</title><link href="https://www.svenkreiss.com/blog/collaborative-statistical-modeling/" rel="alternate"></link><published>2015-04-11T00:00:00+02:00</published><updated>2015-04-11T00:00:00+02:00</updated><author><name>Sven Kreiss</name></author><id>tag:www.svenkreiss.com,2015-04-11:/blog/collaborative-statistical-modeling/</id><summary type="html">&lt;p&gt;A poster about the collaborative statistical modeling work that Kyle Cranmer and I did and that was used to discover the Higgs boson. We presented this at the opening of the Center for Data Science at NYU.&lt;/p&gt;</summary><content type="html">&lt;p&gt;This poster was created by &lt;a href="http://theoryandpractice.org/"&gt;Kyle Cranmer&lt;/a&gt; and me.
+It is about the tools we built and were part of the discovery of the Higgs
+boson. It’s from a while ago, but it needs more exposure as the work behind it
+is applicable outside of physics, but largely unknown.&lt;/p&gt;
+&lt;p&gt;&lt;img class="image-process-crisp" src="/images/nyu_cds_open_poster.png" alt="Poster on collaborative statistical modeling at the opening of the NYU Data Science center" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="/files/nyu_cds_open_poster.pdf"&gt;PDF&lt;/a&gt; of the poster.&lt;/p&gt;
+&lt;p&gt;The Higgs group of the ATLAS experiment (one of the two large experiments at
+CERN) has a few hundred members working in seven subgroups. The final
+statistical test to claim the discovery is done with a combined statistical
+model with input models from all subgroups, and in addition models from detector
+performance groups and theoretical models from outside the Higgs group. It is
+based on statistical methods and technical innovation that deserves more
+attention. Outside of particle physics, this is a topic that is gaining
+interest, but people are unaware of the experience and technology in
+particle physics.&lt;/p&gt;
+&lt;p&gt;The important part is the separation of model and method. The way collaborative
+statistical modeling works at ATLAS is that it is really just the way how
+models are built, investigated and debugged. The methods (inference,
+generation, confidence intervals, credibility intervals, posterior
+probabilities, hypothesis tests, ...) are done by tools that take a model as
+input. Any method — no matter whether Frequentist or Bayesian — can be applied
+to any model.&lt;/p&gt;
+&lt;p&gt;Links:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://cds.nyu.edu/projects/collaborative-statistical-modeling/"&gt;Web page&lt;/a&gt;
+  about our poster at the opening of the NYU Center for Data Science.&lt;/li&gt;
+&lt;li&gt;&lt;a href="/files/nyu_cds_open_poster.pdf"&gt;PDF&lt;/a&gt; of the poster.&lt;/li&gt;
+&lt;/ul&gt;</content><category term="Science"></category><category term="statistics"></category><category term="science"></category></entry><entry><title>PhD Thesis</title><link href="https://www.svenkreiss.com/blog/phd-thesis/" rel="alternate"></link><published>2014-08-17T00:00:00+02:00</published><updated>2014-08-17T00:00:00+02:00</updated><author><name>Sven Kreiss</name></author><id>tag:www.svenkreiss.com,2014-08-17:/blog/phd-thesis/</id><summary type="html">&lt;p&gt;Finished my PhD thesis: Higgs Boson Discovery and First Property Measurements using the ATLAS Detector. It summarizes my work over a few years on Higgs Physics with ATLAS and on collaborative statistical modeling.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;em&gt;Higgs Boson Discovery and First Property Measurements using the ATLAS Detector&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Last May, I finished my PhD in Particle Physics. I had a great time studying physics and doing research at some of the best places: the University of Edinburgh, Scotland, for my bachelor's and master's degrees and New York University for my PhD including a year at CERN in Geneva, Switzerland. I also had great advisors: &lt;a href="http://www.thphys.uni-heidelberg.de/~plehn/"&gt;Tilman Plehn&lt;/a&gt;, &lt;a href="http://www.physics.carleton.ca/people/faculty-members/thomas-gregoire"&gt;Thomas Gregoire&lt;/a&gt; and &lt;a href="http://theoryandpractice.org/"&gt;Kyle Cranmer&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img class="img-thumbnail float-right" src="/images/phd_higgs_overview.png" width="300" title="famous Higgs overview plot" alt="famous Higgs overview plot"&gt;
+For my PhD, I was working on the discovery of the Higgs boson. CERN was an amazing place during that time, with the best particle physicists from all over the world working together. I made substantial contributions to the discovery in the &lt;a href="http://atlas.ch/"&gt;ATLAS collaboration&lt;/a&gt;. I was the first person to combine two search channels and to see the 5σ discovery threshold being breached (&lt;a href="/blog/chasing-the-higgs-nyt/"&gt;blog post on the New York Times article&lt;/a&gt;). I created the plot on the right that was published in the &lt;a href="http://www.sciencedirect.com/science/article/pii/S037026931200857X"&gt;ATLAS discovery paper&lt;/a&gt;, &lt;a href="http://science.sciencemag.org/content/sci/338/6114/1576.full.pdf"&gt;Science&lt;/a&gt; and many other places. I also worked on measuring the Higgs boson mass and the coupling strengths to other particles. A large part of my time was dedicated to statistical modeling and the development of analysis tools, some of which are now part of &lt;a href="https://root.cern.ch"&gt;CERN's ROOT data analysis tool&lt;/a&gt; and its statistics extension &lt;a href="https://twiki.cern.ch/twiki/bin/view/RooStats/WebHome"&gt;RooStats&lt;/a&gt;.&lt;/p&gt;
+&lt;h3&gt;Download Thesis: &lt;a href="/files/phd_thesis.pdf"&gt;&lt;i class="fa fa-book fa-lg"&gt;&lt;/i&gt; PDF&lt;/a&gt;&lt;/h3&gt;</content><category term="Science"></category><category term="physics"></category><category term="science"></category></entry><entry><title>morphDemo</title><link href="https://www.svenkreiss.com/blog/morph-demo/" rel="alternate"></link><published>2014-03-06T10:10:00+01:00</published><updated>2014-03-06T10:10:00+01:00</updated><author><name>Sven Kreiss</name></author><id>tag:www.svenkreiss.com,2014-03-06:/blog/morph-demo/</id><summary type="html">&lt;p&gt;Demo of a new horizontal morphing algorithm.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img class="img-thumbnail float-right" src="/images/kdtreemorph_preview.png" width="350" title="preview of kd-tree morphing" alt="preview of kd-tree morphing"&gt;
+&lt;a href="/files/morphDemo.html"&gt;This&lt;/a&gt; is an interactive demo for a new morphing algorithm with special properties that are motivated from Physics. It uses KD trees and kernel density estimates that are calculated in real time in this demo. All visualization is done using &lt;code&gt;d3.js&lt;/code&gt; and custom code for KD trees and kernel densities in JavaScript.&lt;/p&gt;
+&lt;p&gt;Link: &lt;a href="/files/morphDemo.html"&gt;morphDemo.html&lt;/a&gt;&lt;/p&gt;</content><category term="Science"></category><category term="physics"></category><category term="d3.js"></category><category term="statistics"></category><category term="science"></category></entry></feed>

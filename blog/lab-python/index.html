@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="University research labs have a different structure than corporate research labs and their compute setups. In this post, I list useful Python resources for starting in a university machine learning lab." />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@svenkreiss" />
+    <meta name="twitter:creator" content="@svenkreiss" />
+    <meta name="twitter:title" content="Python at a University Lab" />
+    <meta name="twitter:description" content="University research labs have a different structure than corporate research labs and their compute setups. In this post, I list useful Python resources for starting in a university machine learning lab." />
+    <meta name="twitter:image:src" content="https://www.svenkreiss.com/images/python-powered-university.png" />
+    <meta name="twitter:domain" content="svenkreiss.com" />
+
+    <meta property="og:title" content="Python at a University Lab" />
+    <meta property="og:type" content="article" />
+    <meta property="og:description" content="University research labs have a different structure than corporate research labs and their compute setups. In this post, I list useful Python resources for starting in a university machine learning lab." />
+    <meta property="og:image" content="https://www.svenkreiss.com/images/python-powered-university.png" />
+    <meta property="og:site_name" content="svenkreiss.com" />
+    <meta property="og:url" content="https://www.svenkreiss.com/blog/lab-python/" />
+
+        <link rel="alternate"  href="https://www.svenkreiss.com/feeds/all.atom.xml" type="application/atom+xml" title="Sven Kreiss Full Atom Feed"/>
+
+        <title>Python at a University Lab - Sven Kreiss</title>
+
+
+    <!-- KaTeX -->
+    <link rel="stylesheet" href="https://www.svenkreiss.com/extras/katex/katex.min.css" />
+    <script src="https://www.svenkreiss.com/extras/katex/katex.min.js"></script>
+    <script src="https://www.svenkreiss.com/extras/katex/contrib/auto-render.min.js"></script>
+
+    <link rel="stylesheet" href="https://www.svenkreiss.com/extras/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://www.svenkreiss.com/theme/css/pure.css?v=0.1.0" />
+    <link rel="stylesheet" href="https://www.svenkreiss.com/theme/css/pygments.css" />
+
+    <!-- for pelican_dynamic plugin -->
+    <!-- end pelican_dynamic -->
+
+</head>
+
+<body>
+<div class="pure-g-r" id="layout">
+    <div class="sidebar sidebar-article pure-u">
+        <header class="header-article">
+                    <a href="https://www.svenkreiss.com/blog/author/sven-kreiss/" title="See posts by Sven Kreiss">
+                        <img class="avatar" alt="Sven Kreiss" src="https://www.gravatar.com/avatar/562a52f3ffcb6c2a3556f91ddc540776?s=140">
+                    </a>
+                <h2 class="article-info">Sven Kreiss</h2>
+
+
+
+                <p class="article-date">November 23, 2018</p>
+
+                <a class="header-article-home" href="/">&larr;Home</a>
+        </header>
+    </div>
+    <div class="pure-u">
+        <div class="content">
+            <section class="post">
+                <header class="post-header">
+                    <h1>Python at a University Lab</h1>
+                </header>
+            </section>
+
+            <p><img class="img-thumbnail float-right" width=200 src="/images/python-powered-university.png" alt="Python powered University" /></p>
+<p><em>I am a post-doc at <a href="https://vita.epfl.ch/">VITA lab at EPFL university</a>.</em></p>
+<p>Good software engineering practices are important to me. They are foundational
+for open and reproducible science. You -- a current or future
+member of a Machine Learning lab -- are not necessarily expected to be a computer scientist
+or software engineer, but the tools must be familiar.
+Expert-level familiar. You will use these tools most of the day.
+You should not be clumsy with or afraid of these tools.
+Below is an ambitious list, so don't worry if you are not familiar with most of it yet.</p>
+<p><strong>Python Core:</strong>
+The best way to get started and a great resource for advanced users is
+the <a href="https://docs.python.org/3/tutorial/index.html">tutorial on the official Python webpage</a>.
+Here are my notes more specific to ML.</p>
+<ul>
+<li>always use Python3 now, not Python2</li>
+<li>read Python code of great projects outside of ML (almost no ML projects are written well, see closing remarks):
+  start with <a href="https://github.com/requests/requests"><code>requests</code></a></li>
+<li>Python core and standard libraries (always available, so use them):<ul>
+<li><a href="https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions">list comprehensions</a></li>
+<li><a href="https://docs.python.org/3/tutorial/classes.html">classes</a>:
+  when your function becomes too long it might want to be a class</li>
+<li><a href="https://docs.python.org/3/tutorial/datastructures.html#sets">sets</a>:
+  avoid testing whether an element is in a list, test whether it is in a set</li>
+<li><a href="https://docs.python.org/3/library/argparse.html">argparse</a>, use a standard library to parse command line arguments</li>
+<li><a href="https://docs.python.org/3/library/logging.html#module-logging">logging</a></li>
+<li><a href="https://docs.python.org/3/library/collections.html#collections.defaultdict"><code>defaultdict</code></a>
+  for sparse accumulators</li>
+<li>generators and <code>yield</code>, see <a href="https://docs.python.org/3/howto/functional.html">functional programming howto</a></li>
+<li>all <a href="https://docs.python.org/3/library/itertools.html"><code>itertools</code></a>
+  (e.g.&nbsp;<a href="https://docs.python.org/3/library/itertools.html#itertools.chain.from_iterable"><code>itertools.chain.from_iterable</code></a>)</li>
+<li><a href="https://docs.python.org/3/library/functools.html#functools.lru_cache"><code>functools.lru_cache</code></a> is a powerful tool</li>
+<li><a href="https://docs.python.org/3/library/functions.html#property"><code>property</code> decorator</a> is great for adding caches</li>
+<li>more advanced but useful: context managers, decorators</li>
+</ul>
+</li>
+<li>understand stack traces (the basics: the line above is where the line below originated), <a href="https://en.wikipedia.org/wiki/Stack_trace">Wikipedia</a></li>
+<li>scientific foundational packages:
+  <a href="http://www.numpy.org/"><code>numpy</code></a>,
+  <a href="https://scipy.org/getting-started.html"><code>scipy</code></a>,
+  <a href="https://scikit-learn.org/stable/"><code>scikit-learn</code></a>
+  and depending on your focus <a href="https://cython.org/"><code>cython</code></a></li>
+</ul>
+<p><strong>Packaging:</strong>
+As soon as you need to re-use code in a second file, you will want to import
+one of your own files. You should use relative imports and to use those
+properly you need to package your code. Packaging in Python used to be a mess,
+but much progress has been made over recent years.
+When you  search for help related
+to packaging, filter for results within the last year.</p>
+<ul>
+<li><code>pip</code>, I have never used <code>conda</code></li>
+<li>relative imports: see <a href="https://docs.python.org/3/tutorial/modules.html">tutorial section on Modules</a></li>
+<li><code>setup.py</code>: see <a href="https://setuptools.readthedocs.io/en/latest/setuptools.html#basic-use"><code>setuptools</code> basic use</a></li>
+<li><a href="https://docs.python.org/3/tutorial/venv.html"><code>venv</code></a>: I never do anything outside a virtual environment</li>
+<li><a href="https://github.com/jupyter/notebook">Jupyter notebooks</a>:
+  Great for demos and log books. <em>Never</em> to code.</li>
+<li><a href="https://mybinder.org/">mybinder.org</a> to make your Jupyter demos interactive</li>
+</ul>
+<p><strong>Style / Unit Tests / Continuous Testing:</strong>
+Standard practices for software engineers are useful for ML projects, too. They help.
+Beyond testing code, unit tests in combination with continuous integration give
+a robust and reproducible starting point for anyone picking up your project
+(including yourself in one year).</p>
+<ul>
+<li><a href="https://www.python.org/dev/peps/pep-0008/">PEP8</a> is the <em>Style Guide for Python</em> and contains explanations. Don't skip <a href="https://www.python.org/dev/peps/pep-0008/#a-foolish-consistency-is-the-hobgoblin-of-little-minds"><em>A Foolish Consistency is the Hobgoblin of Little Minds</em></a>. Still, I follow almost all of PEP8 to the letter. Additional:<ul>
+<li>no abbreviations for variables, classes, functions, etc.</li>
+<li>do not iterate over indices in Python: don't do <code>for i in range(len(mylist))</code></li>
+</ul>
+</li>
+<li><a href="https://www.pylint.org/"><code>pylint</code></a> generally provides good advice beyond checking for PEP8</li>
+<li><a href="https://docs.pytest.org/en/latest/"><code>pytest</code></a> to run all your tests</li>
+<li><a href="https://circleci.com/">CircleCI</a> and <a href="https://travis-ci.org/">TravisCI</a> can automatically run your tests on every commit to git</li>
+</ul>
+<p><strong>Red Flags:</strong>
+When browsing open source code, this is when I get worried.</p>
+<ul>
+<li>no eval metrics/scripts for that implementation</li>
+<li>have to change the <code>PATH</code> or <code>PYTHONPATH</code> variables</li>
+<li>have to copy or symlink folders with code</li>
+</ul>
+<p><strong>Closing:</strong>
+Infrastructures at large companies are different from a university lab and
+your laptop: containers, distributed storage, build systems, custom DNS,
+mono repositories. A small piece in the middle of the stack is open source and
+has been duct-taped to make it work without the rest of the infrastructure.
+Don't follow blindly what seems like a standard practice of the best software
+engineers in the world. It might be an artifact of porting it to the
+open source world.</p>
+<p>Feedback is welcome on Twitter @svenkreiss.</p>
+
+            <p class="post-footer">
+                // filed
+under                    <a class="post-category" href="https://www.svenkreiss.com/blog/tag/python/">Python</a>
+                    <a class="post-category" href="https://www.svenkreiss.com/blog/tag/machine-learning/">Machine Learning</a>
+                in <a class="post-category" href="https://www.svenkreiss.com/blog/category/science/">Science</a>&nbsp;&nbsp;&nbsp;
+
+                <span style="display:inline-block;">
+                // share on <a href="https://twitter.com/share?text=%22Python%20at%20a%20University%20Lab%3A%20University%20research%20labs%20have%20a%20different%20structure%20than%20corporate%20research%20labs%20and%20their%20compute%20setups.%20In%20this%20post%2C%20I%20list%20useful%20Python%20resources%20for%20starting%20in...%22&amp;hashtags=Python%2CMachineLearning" target="_blank">
+                    <i class="fa fa-twitter fa-lg"></i> Twitter
+                </a>
+                </span>
+            </p>
+            <div class="hr"></div>
+
+            <h2>Related Posts</h2>
+            <ul class="related-posts">
+                <li>
+                    <a class="title" href="https://www.svenkreiss.com/blog/artisanal-s2/">Artisanal S2 Cells</a>
+                    <span class="date">from November 28, 2018</span>
+                    <span class="summary">S2 cells are a powerful tool to index and compute over geospatial data. This short post shows how to create S2 cell ids by hand.</span>
+                </li>
+                <li>
+                    <a class="title" href="https://www.svenkreiss.com/blog/pelican-jsmath/">pelican-jsmath Plugin</a>
+                    <span class="date">from February 18, 2018</span>
+                    <span class="summary">An \(\alpha\omega\epsilon s \sigma m \epsilon\) Pelican plugin to render math in JavaScript libraries like KaTeX. This plugin makes sure that equations are preserved in the Markdown and Restructured Text parsers and get reproduced properly in HTML for a JavaScript renderer to process.</span>
+                </li>
+                <li>
+                    <a class="title" href="https://www.svenkreiss.com/blog/streamprocessing-in-pysparkling/">Stream Processing in pysparkling</a>
+                    <span class="date">from March 11, 2017</span>
+                    <span class="summary">pysparkling now supports stream processing with discrete streams, called DStream. This post shows a simple example that uses this new API.</span>
+                </li>
+            </ul>
+
+            <a href="#" class="go-top">Go Top</a>
+<footer class="footer">
+    <p>&copy; Sven Kreiss  2014 &ndash; 2022. Published with <a href="https://github.com/getpelican/pelican">Pelican</a>.<br />This work is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</p>
+</footer>        </div>
+    </div>
+</div>
+    <script>
+        renderMathInElement(document.body);
+    </script>
+
+    <!-- for pelican_dynamic plugin -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-4070485-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-4070485-2', { 'anonymize_ip': true });
+</script>
+
+
+</body>
+</html>

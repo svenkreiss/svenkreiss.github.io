@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Auf dieser Seite möchte ich nicht speziell über einen Prototypen, sondern über das Projekt an sich sprechen. Was ist schon geschafft? Was fehlt? Was kann verändert werden? Projektstatus - Stand: 01. Januar 2006 Fertig: lauffähige Prototypen: Nummer3, Nummer4 und Nummer4punkt1 klassisches dynamisches Gehen realisiert Standardalgorithmus des dynamischen Gehens verbessert Nummer4punkt1 trägt …" />
+
+
+        <link rel="alternate"  href="https://www.svenkreiss.com/feeds/all.atom.xml" type="application/atom+xml" title="Sven Kreiss Full Atom Feed"/>
+
+        <title>number123 - Sven Kreiss</title>
+
+
+    <!-- KaTeX -->
+    <link rel="stylesheet" href="https://www.svenkreiss.com/extras/katex/katex.min.css" />
+    <script src="https://www.svenkreiss.com/extras/katex/katex.min.js"></script>
+    <script src="https://www.svenkreiss.com/extras/katex/contrib/auto-render.min.js"></script>
+
+    <link rel="stylesheet" href="https://www.svenkreiss.com/extras/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://www.svenkreiss.com/theme/css/pure.css?v=0.1.0" />
+
+    <!-- for pelican_dynamic plugin -->
+    <!-- end pelican_dynamic -->
+
+</head>
+
+<body>
+<div class="pure-g-r" id="layout">
+<div class="sidebar pure-u">
+    <div class="cover-img" style="background-image: url('/images/winter_mountains_1600.jpeg');">
+        <div class="cover-body">
+            <header class="header">
+                    <h1 class="brand-main"><a href="/">Sven Kreiss</a></h1>
+                    <p class="tagline">Computer vision engineer with physics background.</p>
+                    <p class="links"><a href="/">About</a></p>
+                    <p class="links"><a href="/projects.html">Projects</a></p>
+                    <p class="links"><a href="/blog/">Blog</a></p>
+                    <p class="social">
+                        <a href="https://scholar.google.ch/citations?hl=en&user=SnjnSVEAAAAJ&view_op=list_works&sortby=pubdate">
+                            <i class="fa fa-graduation-cap fa-2x"></i>
+                        </a>
+                        <a href="https://github.com/svenkreiss/">
+                            <i class="fa fa-github fa-2x"></i>
+                        </a>
+                        <a href="https://twitter.com/svenkreiss">
+                            <i class="fa fa-twitter fa-2x"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/svenkreiss/">
+                            <i class="fa fa-linkedin fa-2x"></i>
+                        </a>
+                    </p>
+            </header>
+        </div>
+    </div>
+</div>    <div class="pure-u-1">
+        <div class="content">
+            <h1 class="content-subhead">number123</h1>
+            <p>Auf dieser Seite möchte ich nicht speziell über einen Prototypen, sondern über das Projekt an sich sprechen. Was ist schon geschafft? Was fehlt? Was kann verändert werden?</p>
+<h2>Projektstatus - Stand: 01. Januar 2006</h2>
+<ul>
+<li>
+<p>Fertig:
+<strong> lauffähige Prototypen: Nummer3, Nummer4 und Nummer4punkt1
+</strong> klassisches dynamisches Gehen realisiert
+<strong> Standardalgorithmus des dynamischen Gehens verbessert
+</strong> Nummer4punkt1 trägt zwei Akkupacks und zwei Platinen mit Elektronik (wichtige Algorithmen sind bereits auf die Controller ausgelagert)
+<strong> Nummer4punkt1 hat an jedem Fuß vier Kraftsensoren
+</strong> Umstellung der Programmiersprachen: Mikrocontroller mit C, Computer mit C++
+** Verteilung der Rechenprozesse auf mehrere Controller</p>
+</li>
+<li>
+<p>In Arbeit:
+<strong> Messung der Ströme an jedem Servomotor
+</strong> Experimente zur wissenschaftlichen Auswertung des Energieverbrauchs mit unterschiedlichen Bewegungsalgorithmen</p>
+</li>
+<li>
+<p>To Do:
+<strong> Zwei weitere Freiheitsgrade den Hüftgelenken hinzufügen
+</strong> Längen von Ober- und Unterschenkel vergrößern
+<strong> Abstandsmessverfahren optimieren
+</strong> Lagesensorik entwerfen</p>
+</li>
+</ul>
+<h2>Ideen, die mir im Kopf rumschwirren...</h2>
+<h3>Lagesensorik</h3>
+<p>In Planung ist eine Lagesensorik. Sie steht derzeit noch etwas hinten an, aber sie soll kommen. Sie soll die simpel klingende Aufgabe übernehmen, zu bestimmen wo "unten" ist. Def.: Unten ist da wo alles hin fällt.</p>
+<p>Basis dieser Sensorik sollen ein oder mehrere Beschleunigungssensoren von Analog Devices sein. Diese müssen natürlich mit anderen Sensoren gekoppelt sein. Hier bieten sich Gyroskope an.</p>
+<p>Hat jemand Erfahrungen? Bitte E-Mail schreiben: sk@svenkreiss.com
+Für hilfen wäre ich wirklich dankbar.</p>
+<h3>Geräuschpeilung</h3>
+<p>Mit der "Geräuschpeilung" möchte ich die Richtung des lautesten Geräusches in der Umgebung ermitteln. Wenn er eine schwenkbare Kamera besitzt, dann könnte er immer in diese Richtung "sehen". Das könnte eine nette Spielerei werden.</p>
+<h3>Fernsteuerung</h3>
+<p>Wenn einmal die Elektronik für ein autonomes Gehen fertig ist und funktioniert, dann stelle ich es mir nicht besonders schwer vor, den Roboter mit einer Funkfernsteuerung aus dem Modellbau zu bedienen. Es müsste nur ein Controller die erzeugten PWM-Signale ausmessen und z.B. mit der Schrittweite der Laufbewegung koppeln.</p>
+<h3>Kamera</h3>
+<p>Wenn er autonom gehen kann und fernsteuerbar ist, dann wäre eine Erweiterung mit einer Kamera sicherlich interessant. Durch diese kann man den Roboter dann auch ohne direkten Sichtkontakt fernsteuern. Eine Einblendung z.B. mit Informationen aus welcher Richtung im Moment das lauteste Geräsch kommt wäre eine weitere Idee.</p>
+<h2>History</h2>
+<h3>Nummer1</h3>
+<p>Der erste Prototyp bestand aus zwei sehr schweren Füßen. Wie bei allen Gelenken wurde auch zu den Füßen die Kraft von den Servos per Seilzug übertragen. Diesen Prototyp baute ich in der siebenten und achten Klasse. Aus Mangel an Erfahrung habe ich keine Teile selber "geformt". Der Roboter bestand nur aus zugesägten und gebohrten Aluminiumprofilen, Hartpapierplatten, M3-Schrauben, etc.
+Durch das Spiel der Seilzüge, durch die Gelenke aus M3-Schrauben und Alu-Profilen, durch eine viel zu schwere Konstruktion und durch einen fehlenden Oberkörper konnte dieser Roboter nicht einmal ansatzweise gehen. Jedoch waren schon bei Nummer1 in jedem Fuß vier Mikroschalter. Bei Kontakt mit dem Boden konnten die Füße schon nach dem Boden ausgerichtet werden.</p>
+<h3>Nummer2</h3>
+<p>Für Nummer2 habe ich dann schon selber verzinkte Stahlplatten entworfen, zugesägt, gebohrt und geknickt. Damit habe ich mir für jeden Servo einen Stahlrahmen für jeden einzelnen Servo gebaut. Die Stahlrahmen konnte man dann modular aneinander schrauben.
+Analoge Servos besitzen ein sehr großes Spiel. Durch die gleichen Module ist der Roboter sehr hoch geworden, so dass die Auswirkung des Spiels sehr groß war.</p>
+<h3>Nummer3</h3>
+<p>In der elften Klasse sollte jeder ein Jahresarbeit schreiben. Meine Arbeit schrieb ich über Nummer3. Nummer3 hatte viele Ähnlichkeiten zu Nummer2. Die Metallrahmen waren hier jedoch nicht mehr aus Stahl sondern aus Aluminium. Besonders hervorzuheben ist der Oberschenkel. Zwei um 45° gedrehte Servomotoren wurden an der langen Seite miteinander verbunden. Dadurch konnte die Länge des Oberschenkels von über 8 cm auf 3.25 cm verringert werden. Die Jahresarbeit habe ich dann in der zwölften Klasse zur Besonderen Lernleistung ausgebaut.</p>
+<p>Auch bei JugendForscht habe ich eine gekürzte Fassung meine Besonderen Lernleistung eingereicht. Nach dem ersten Platz beim Landeswettbewerb begann ich mit der Planung von Nummer4. Zum Bundeswettbewerb bin ich dann schon mit Nummer3 und Nummer4 angetreten.</p>
+<h2>Bilder</h2>
+<p><img src="/images/number4/number123/Nummer3_1.jpg" width="350" title="number3" alt="number3">
+<img src="/images/number4/number123/Nummer3_2.jpg" width="350" title="number3" alt="number3">
+<img src="/images/number4/number123/Nummer3_3.jpg" width="350" title="number3" alt="number3">
+<img src="/images/number4/number123/Nummer3_4.jpg" width="350" title="number3" alt="number3">
+<img src="/images/number4/number123/Nummer3_5.jpg" width="350" title="number3" alt="number3">
+<img src="/images/number4/number123/Nummer3_6.jpg" width="350" title="number3" alt="number3">
+<img src="/images/number4/number123/Nummer3_7.jpg" width="350" title="number3" alt="number3">
+<img src="/images/number4/number123/Nummer3_Bildschirmphoto1.jpg" width="350" title="number3" alt="number3">
+<img src="/images/number4/number123/Nummer3_Bildschirmphoto2.jpg" width="350" title="number3" alt="number3">
+<img src="/images/number4/number123/Nummer3_Bildschirmphoto4.jpg" width="350" title="number3" alt="number3">
+<img src="/images/number4/number123/Nummer3_Bildschirmphoto5.jpg" width="350" title="number3" alt="number3">
+<img src="/images/number4/number123/Nummer3_Bildschirmphoto8.jpg" width="350" title="number3" alt="number3"></p>
+<footer class="footer">
+    <p>&copy; Sven Kreiss  2014 &ndash; 2022. Published with <a href="https://github.com/getpelican/pelican">Pelican</a>.<br />This work is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</p>
+</footer>        </div>
+    </div>
+</div>
+    <script>
+        renderMathInElement(document.body);
+    </script>
+
+    <!-- for pelican_dynamic plugin -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-4070485-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-4070485-2', { 'anonymize_ip': true });
+</script>
+
+
+</body>
+</html>

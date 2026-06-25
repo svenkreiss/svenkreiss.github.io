@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Databench is a data analysis tool using Flask, Socket.IO and d3.js with optional parallelization with Redis Queue and visualization with mpld3." />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@svenkreiss" />
+    <meta name="twitter:creator" content="@svenkreiss" />
+    <meta name="twitter:title" content="Databench" />
+    <meta name="twitter:description" content="Databench is a data analysis tool using Flask, Socket.IO and d3.js with optional parallelization with Redis Queue and visualization with mpld3." />
+    <meta name="twitter:image:src" content="https://www.svenkreiss.com/images/mpld3pi_demo_noframe.png" />
+    <meta name="twitter:domain" content="svenkreiss.com" />
+
+    <meta property="og:title" content="Databench" />
+    <meta property="og:type" content="article" />
+    <meta property="og:description" content="Databench is a data analysis tool using Flask, Socket.IO and d3.js with optional parallelization with Redis Queue and visualization with mpld3." />
+    <meta property="og:image" content="https://www.svenkreiss.com/images/mpld3pi_demo_noframe.png" />
+    <meta property="og:site_name" content="svenkreiss.com" />
+    <meta property="og:url" content="https://www.svenkreiss.com/blog/databench-initial/" />
+
+        <link rel="alternate"  href="https://www.svenkreiss.com/feeds/all.atom.xml" type="application/atom+xml" title="Sven Kreiss Full Atom Feed"/>
+
+        <title>Databench - Sven Kreiss</title>
+
+
+    <!-- KaTeX -->
+    <link rel="stylesheet" href="https://www.svenkreiss.com/extras/katex/katex.min.css" />
+    <script src="https://www.svenkreiss.com/extras/katex/katex.min.js"></script>
+    <script src="https://www.svenkreiss.com/extras/katex/contrib/auto-render.min.js"></script>
+
+    <link rel="stylesheet" href="https://www.svenkreiss.com/extras/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://www.svenkreiss.com/theme/css/pure.css?v=0.1.0" />
+    <link rel="stylesheet" href="https://www.svenkreiss.com/theme/css/pygments.css" />
+
+    <!-- for pelican_dynamic plugin -->
+    <!-- end pelican_dynamic -->
+
+</head>
+
+<body>
+<div class="pure-g-r" id="layout">
+    <div class="sidebar sidebar-article pure-u">
+        <header class="header-article">
+                    <a href="https://www.svenkreiss.com/blog/author/sven-kreiss/" title="See posts by Sven Kreiss">
+                        <img class="avatar" alt="Sven Kreiss" src="https://www.gravatar.com/avatar/562a52f3ffcb6c2a3556f91ddc540776?s=140">
+                    </a>
+                <h2 class="article-info">Sven Kreiss</h2>
+
+
+
+                <p class="article-date">June 03, 2014</p>
+
+                <a class="header-article-home" href="/">&larr;Home</a>
+        </header>
+    </div>
+    <div class="pure-u">
+        <div class="content">
+            <section class="post">
+                <header class="post-header">
+                    <h1>Databench</h1>
+                </header>
+            </section>
+
+            <blockquote>
+<p>Databench is a data analysis tool using <a href="http://flask.pocoo.org/">Flask</a>, <a href="https://socket.io/">Socket.IO</a> and <a href="https://d3js.org/">d3.js</a> with optional parallelization with <a href="http://python-rq.org/">Redis Queue</a> and visualization with <a href="http://mpld3.github.io/">mpld3</a>. Check out the <a href="http://databench-examples.trivial.io">live demos</a>.</p>
+</blockquote>
+<p><a href="http://databench-examples.trivial.io"><img class="image-process-crisp top" alt="matplotlib d3 demo" src="/images/mpld3pi_demo_noframe.png" /></a></p>
+<p>Seriously, check out the <a href="http://databench-examples.trivial.io">live demos</a>.</p>
+<p>All source codes are available on GitHub:</p>
+<ul>
+<li><a href="https://github.com/svenkreiss/databench">github.com/svenkreiss/databench</a></li>
+<li><a href="https://github.com/svenkreiss/databench_examples">github.com/svenkreiss/databench_examples</a></li>
+<li><a href="https://github.com/svenkreiss/databench_examples_viewer">github.com/svenkreiss/databench_examples_viewer</a></li>
+</ul>
+<h2>Motivation</h2>
+<p>I like Python for data analysis. However, the frontends for visualization are poor. <code>d3.js</code> is a great library for JavaScript and the web-browser is a powerful user interface. <code>Databench</code> makes Python communicate with the web frontend with minimal effort.</p>
+<p>The frontend can be interactive (real-time communication goes both ways between <code>Python</code> and <code>JavaScript</code>/<code>d3.js</code>) and can contain explanatory text and documentation.</p>
+<p>To run Databench, you need to install it with <code>pip</code>:</p>
+<div class="highlight"><pre><span></span><code>pip install git+https://github.com/svenkreiss/databench.git
+</code></pre></div>
+
+<p>(preferably inside a <code>virtualenv</code>). Then you create an <code>analyses</code> folder, run <code>databench</code> on the command line</p>
+<div class="highlight"><pre><span></span><code><span class="o">(</span>venv<span class="o">)</span>analysisfolder$ databench
+Registering analysis simplepi as blueprint <span class="k">in</span> flask.
+Registering analysis slowpi as blueprint <span class="k">in</span> flask.
+Registering analysis mpld3pi as blueprint <span class="k">in</span> flask.
+Registering analysis mpld3PointLabel as blueprint <span class="k">in</span> flask.
+Registering analysis mpld3Drag as blueprint <span class="k">in</span> flask.
+Connecting socket.io to simplepi.
+Connecting socket.io to slowpi.
+Connecting socket.io to mpld3pi.
+Connecting socket.io to mpld3PointLabel.
+Connecting socket.io to mpld3Drag.
+--- databench ---
+ * Running on http://0.0.0.0:5000/
+ * Restarting with reloader
+Registering analysis simplepi as blueprint <span class="k">in</span> flask.
+Registering analysis slowpi as blueprint <span class="k">in</span> flask.
+Registering analysis mpld3pi as blueprint <span class="k">in</span> flask.
+Registering analysis mpld3PointLabel as blueprint <span class="k">in</span> flask.
+Registering analysis mpld3Drag as blueprint <span class="k">in</span> flask.
+Connecting socket.io to simplepi.
+Connecting socket.io to slowpi.
+Connecting socket.io to mpld3pi.
+Connecting socket.io to mpld3PointLabel.
+Connecting socket.io to mpld3Drag.
+--- databench ---
+</code></pre></div>
+
+<p>and point your web-browser to <code>http://localhost:5000/</code>.</p>
+<h2>Example Analysis: <code>simplepi</code></h2>
+<p>Create a project-folder with this structure:</p>
+<div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">analyses</span>
+    <span class="l l-Scalar l-Scalar-Plain">- templates</span>
+        <span class="l l-Scalar l-Scalar-Plain">- simplepi.html</span>
+    <span class="l l-Scalar l-Scalar-Plain">- __init__.py</span>
+    <span class="l l-Scalar l-Scalar-Plain">- simplepi.py</span>
+</code></pre></div>
+
+<p>On the command line, all that is necessary is to run <code>databench</code> and the url (usually <code>http://localhost:5000</code>) will be shown that you can open in a web browser.</p>
+<p>This is the backend in <code>simplepi.py</code> <em>(updated June 10, 2014)</em>:</p>
+<div class="highlight"><pre><span></span><code><span class="sd">&quot;&quot;&quot;Calculating \\(\\pi\\) the simple way.&quot;&quot;&quot;</span>
+
+<span class="kn">import</span> <span class="nn">math</span>
+<span class="kn">from</span> <span class="nn">time</span> <span class="kn">import</span> <span class="n">sleep</span>
+<span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">random</span>
+
+<span class="kn">import</span> <span class="nn">databench</span>
+
+
+<span class="n">simplepi</span> <span class="o">=</span> <span class="n">databench</span><span class="o">.</span><span class="n">Analysis</span><span class="p">(</span><span class="s1">&#39;simplepi&#39;</span><span class="p">,</span> <span class="vm">__name__</span><span class="p">)</span>
+<span class="n">simplepi</span><span class="o">.</span><span class="n">description</span> <span class="o">=</span> <span class="vm">__doc__</span>
+<span class="n">simplepi</span><span class="o">.</span><span class="n">thumbnail</span> <span class="o">=</span> <span class="s1">&#39;simplepi.png&#39;</span>
+
+<span class="nd">@simplepi</span><span class="o">.</span><span class="n">signals</span><span class="o">.</span><span class="n">on</span><span class="p">(</span><span class="s1">&#39;connect&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">onconnect</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;Run as soon as a browser connects to this.&quot;&quot;&quot;</span>
+
+    <span class="n">inside</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10000</span><span class="p">):</span>
+        <span class="n">sleep</span><span class="p">(</span><span class="mf">0.001</span><span class="p">)</span>
+        <span class="n">r1</span> <span class="o">=</span> <span class="n">random</span><span class="p">()</span>
+        <span class="n">r2</span> <span class="o">=</span> <span class="n">random</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">r1</span><span class="o">*</span><span class="n">r1</span> <span class="o">+</span> <span class="n">r2</span><span class="o">*</span><span class="n">r2</span> <span class="o">&lt;</span> <span class="mf">1.0</span><span class="p">:</span>
+            <span class="n">inside</span> <span class="o">+=</span> <span class="mi">1</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">%</span><span class="mi">100</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">draws</span> <span class="o">=</span> <span class="n">i</span><span class="o">+</span><span class="mi">1</span>
+            <span class="n">simplepi</span><span class="o">.</span><span class="n">signals</span><span class="o">.</span><span class="n">emit</span><span class="p">(</span><span class="s1">&#39;log&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;draws&#39;</span><span class="p">:</span><span class="n">draws</span><span class="p">,</span> <span class="s1">&#39;inside&#39;</span><span class="p">:</span><span class="n">inside</span><span class="p">})</span>
+
+            <span class="n">p</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">inside</span><span class="p">)</span><span class="o">/</span><span class="n">draws</span>
+            <span class="n">uncertainty</span> <span class="o">=</span> <span class="mf">4.0</span><span class="o">*</span><span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">draws</span><span class="o">*</span><span class="n">p</span><span class="o">*</span><span class="p">(</span><span class="mf">1.0</span> <span class="o">-</span> <span class="n">p</span><span class="p">))</span> <span class="o">/</span> <span class="n">draws</span>
+            <span class="n">simplepi</span><span class="o">.</span><span class="n">signals</span><span class="o">.</span><span class="n">emit</span><span class="p">(</span><span class="s1">&#39;status&#39;</span><span class="p">,</span> <span class="p">{</span>
+                <span class="s1">&#39;pi-estimate&#39;</span><span class="p">:</span> <span class="mf">4.0</span><span class="o">*</span><span class="n">inside</span><span class="o">/</span><span class="n">draws</span><span class="p">,</span>
+                <span class="s1">&#39;pi-uncertainty&#39;</span><span class="p">:</span> <span class="n">uncertainty</span>
+            <span class="p">})</span>
+
+    <span class="n">simplepi</span><span class="o">.</span><span class="n">signals</span><span class="o">.</span><span class="n">emit</span><span class="p">(</span><span class="s1">&#39;log&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;action&#39;</span><span class="p">:</span> <span class="s1">&#39;done&#39;</span><span class="p">})</span>
+</code></pre></div>
+
+<p>The analysis waits for the <code>connect</code> signal and then starts an analysis. It provides the frontend with live updates through <code>signals.emit()</code> where some of the <code>emit()</code> messages are for the <code>log</code> window and some are <code>status</code> updates.</p>
+<p>The frontend now has to listen to the signals that are emitted by the backend and act on them. The frontend <code>simplepi.html</code> is a <code>jinja2</code> template with math rendered with <a href="https://www.mathjax.org/">MathJax</a> using <code>\( ... \)</code> for inline math and <code>$$ ... $$</code> for display math <em>(updated June 10, 2014)</em>:</p>
+<div class="highlight"><pre><span></span><code>{% extends &quot;base.html&quot; %}
+
+
+{% block title %}simplepi{% endblock %}
+
+
+{% block content %}
+<span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>
+    simplepi
+    <span class="p">&lt;</span><span class="nt">small</span><span class="p">&gt;&lt;</span><span class="nt">i</span><span class="p">&gt;</span>π = <span class="p">&lt;</span><span class="nt">span</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;pi&quot;</span><span class="p">&gt;</span>0.0 ± 1.0<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">i</span><span class="p">&gt;&lt;/</span><span class="nt">small</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>This little demo uses two random numbers \(r_1\) and \(r_2\) and
+then does a comparison $$r_1^2 + r_2^2 <span class="ni">&amp;le;</span> 1.0$$ to figure out whether
+the generated point is inside the first quadrant of the unit circle.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">pre</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;log&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">pre</span><span class="p">&gt;</span>
+{% endblock %}
+
+
+{% block footerscripts %}
+<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="kd">var</span> <span class="nx">databench</span> <span class="o">=</span> <span class="nx">Databench</span><span class="p">(</span><span class="s1">&#39;simplepi&#39;</span><span class="p">);</span>
+    <span class="nx">databench</span><span class="p">.</span><span class="nx">genericElements</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#log&#39;</span><span class="p">));</span>
+
+    <span class="nx">databench</span><span class="p">.</span><span class="nx">signals</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;status&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">msg</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#pi&#39;</span><span class="p">).</span><span class="nx">text</span><span class="p">(</span>
+            <span class="nx">msg</span><span class="p">[</span><span class="s1">&#39;pi-estimate&#39;</span><span class="p">].</span><span class="nx">toFixed</span><span class="p">(</span><span class="mf">3</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; ± &#39;</span><span class="o">+</span>
+            <span class="nx">msg</span><span class="p">[</span><span class="s1">&#39;pi-uncertainty&#39;</span><span class="p">].</span><span class="nx">toFixed</span><span class="p">(</span><span class="mf">3</span><span class="p">)</span>
+        <span class="p">);</span>
+    <span class="p">});</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+{% endblock %}
+</code></pre></div>
+
+<p>You may want to extend the Databench <code>base</code> template giving you the header and footer and some standard libraries, but you can also write your own. The <code>block content</code> is the HTML part of the frontend with fields for the results and an explanation about the algorithm. The <code>block footerscripts</code> provides the frontend logic. It wires the <code>log</code> signals to the <code>#log</code> field with <code>databench.genericElements.log($('#log'))</code>. It also starts listening for <code>status</code> signals. When a <code>status</code> signal is received, it executes the callback function where <code>msg</code> contains a JSON representation of the dictionary that the backend sent when emitting <code>status</code>.</p>
+<p>And last, to make Databench aware of this analysis, add it to the <code>__init__.py</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">simplepi</span>
+</code></pre></div>
+
+<p>This is all that is necessary to create an analysis in Databench. Now you can run <code>databench</code> in the project-folder and visit <code>http://localhost:5000</code> to run and see the output of the analysis.</p>
+<h2>Plotting with <code>matplotlib</code></h2>
+<p>If you like Python, but are not too familiar with <code>d3.js</code>, you can use <a href="http://mpld3.github.io/">mpld3</a> to embed your python plots on the web. The <code>mpld3</code> website has a nice gallery of examples that should all work in Databench. Two of them -- one with a standard plugin and one with a custom plugin -- are <code>mpld3PointLabel</code> and <code>mpld3Drag</code> which are both included in the <a href="http://databench-examples.trivial.io">live demos</a> and the <a href="https://github.com/svenkreiss/databench_examples">databench_examples</a> repository.</p>
+<h2>Parallelization</h2>
+<p>Examples with parallel processing cannot be included in the <a href="http://databench-examples.trivial.io">live demos</a> but are included in the <a href="https://github.com/svenkreiss/databench_examples">databench_examples</a> repository.</p>
+<p>The <code>slowpi</code> example contains a demo-implementation of using <a href="">Redis Queue</a> for parallelization. The parallelization is fully implemented on the analysis-side without Databench knowing about it. Other parallelization techniques like <a href="http://www.celeryproject.org/">Celery</a> and <a href="http://www.rabbitmq.com/">RabbitMQ</a> are probably working but are not tested yet.</p>
+
+            <p class="post-footer">
+                // filed
+under                    <a class="post-category" href="https://www.svenkreiss.com/blog/tag/flask/">Flask</a>
+                    <a class="post-category" href="https://www.svenkreiss.com/blog/tag/socketio/">Socket.IO</a>
+                    <a class="post-category" href="https://www.svenkreiss.com/blog/tag/javascript/">JavaScript</a>
+                    <a class="post-category" href="https://www.svenkreiss.com/blog/tag/d3js/">d3.js</a>
+                    <a class="post-category" href="https://www.svenkreiss.com/blog/tag/python/">Python</a>
+                    <a class="post-category" href="https://www.svenkreiss.com/blog/tag/matplotlib/">matplotlib</a>
+                    <a class="post-category" href="https://www.svenkreiss.com/blog/tag/mpld3/">mpld3</a>
+                in <a class="post-category" href="https://www.svenkreiss.com/blog/category/tech/">Tech</a>&nbsp;&nbsp;&nbsp;
+
+                <span style="display:inline-block;">
+                // share on <a href="https://twitter.com/share?text=%22Databench%3A%20Databench%20is%20a%20data%20analysis%20tool%20using%20Flask%2C%20Socket.IO%20and%20d3.js%20with%20optional%20parallelization%20with%20Redis%20Queue%20and%20visualization%20with%20mpld3.%22&amp;hashtags=Flask%2CSocket.IO%2CJavaScript%2Cd3.js%2CPython%2Cmatplotlib%2Cmpld3" target="_blank">
+                    <i class="fa fa-twitter fa-lg"></i> Twitter
+                </a>
+                </span>
+            </p>
+            <div class="hr"></div>
+
+            <h2>Related Posts</h2>
+            <ul class="related-posts">
+                <li>
+                    <a class="title" href="https://www.svenkreiss.com/blog/databench-v04/">Databench v0.4</a>
+                    <span class="date">from September 22, 2016</span>
+                    <span class="summary">New release of Databench that switches the backend from Flask to Tornado, fully supports Python 2 and 3, transpiles ES6 to legacy JavaScript and runs unit tests and coverage on every commit.</span>
+                </li>
+                <li>
+                    <a class="title" href="https://www.svenkreiss.com/blog/dvds-js-v0.1.0/">dvds-js version 0.1.0</a>
+                    <span class="date">from April 25, 2014</span>
+                    <span class="summary">Distributed Versioned Data Structures in JavaScript. Like git in js.</span>
+                </li>
+                <li>
+                    <a class="title" href="https://www.svenkreiss.com/blog/wildcardians-on-twitter/">Wildcardians on Twitter</a>
+                    <span class="date">from April 27, 2015</span>
+                    <span class="summary">A short project to visualize the social Twitter graph of people at Wildcard. The backend is particularly efficient in the number of API calls. The visualization is interactive in d3.js.</span>
+                </li>
+            </ul>
+
+            <a href="#" class="go-top">Go Top</a>
+<footer class="footer">
+    <p>&copy; Sven Kreiss  2014 &ndash; 2022. Published with <a href="https://github.com/getpelican/pelican">Pelican</a>.<br />This work is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</p>
+</footer>        </div>
+    </div>
+</div>
+    <script>
+        renderMathInElement(document.body);
+    </script>
+
+    <!-- for pelican_dynamic plugin -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-4070485-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-4070485-2', { 'anonymize_ip': true });
+</script>
+
+
+</body>
+</html>

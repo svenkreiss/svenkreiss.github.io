@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="An \(\alpha\omega\epsilon s \sigma m \epsilon\) Pelican plugin to render math in JavaScript libraries like KaTeX. This plugin makes sure that equations are preserved in the Markdown and Restructured Text parsers and get reproduced properly in HTML for a JavaScript renderer to process." />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@svenkreiss" />
+    <meta name="twitter:creator" content="@svenkreiss" />
+    <meta name="twitter:title" content="pelican-jsmath Plugin" />
+    <meta name="twitter:description" content="An \(\alpha\omega\epsilon s \sigma m \epsilon\) Pelican plugin to render math in JavaScript libraries like KaTeX. This plugin makes sure that equations are preserved in the Markdown and Restructured Text parsers and get reproduced properly in HTML for a JavaScript renderer to process." />
+    <meta name="twitter:image:src" content="https://www.svenkreiss.com/images/pelican_jsmath_sample.png" />
+    <meta name="twitter:domain" content="svenkreiss.com" />
+
+    <meta property="og:title" content="pelican-jsmath Plugin" />
+    <meta property="og:type" content="article" />
+    <meta property="og:description" content="An \(\alpha\omega\epsilon s \sigma m \epsilon\) Pelican plugin to render math in JavaScript libraries like KaTeX. This plugin makes sure that equations are preserved in the Markdown and Restructured Text parsers and get reproduced properly in HTML for a JavaScript renderer to process." />
+    <meta property="og:image" content="https://www.svenkreiss.com/images/pelican_jsmath_sample.png" />
+    <meta property="og:site_name" content="svenkreiss.com" />
+    <meta property="og:url" content="https://www.svenkreiss.com/blog/pelican-jsmath/" />
+
+        <link rel="alternate"  href="https://www.svenkreiss.com/feeds/all.atom.xml" type="application/atom+xml" title="Sven Kreiss Full Atom Feed"/>
+
+        <title>pelican-jsmath Plugin - Sven Kreiss</title>
+
+
+    <!-- KaTeX -->
+    <link rel="stylesheet" href="https://www.svenkreiss.com/extras/katex/katex.min.css" />
+    <script src="https://www.svenkreiss.com/extras/katex/katex.min.js"></script>
+    <script src="https://www.svenkreiss.com/extras/katex/contrib/auto-render.min.js"></script>
+
+    <link rel="stylesheet" href="https://www.svenkreiss.com/extras/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://www.svenkreiss.com/theme/css/pure.css?v=0.1.0" />
+    <link rel="stylesheet" href="https://www.svenkreiss.com/theme/css/pygments.css" />
+
+    <!-- for pelican_dynamic plugin -->
+    <!-- end pelican_dynamic -->
+
+</head>
+
+<body>
+<div class="pure-g-r" id="layout">
+    <div class="sidebar sidebar-article pure-u">
+        <header class="header-article">
+                    <a href="https://www.svenkreiss.com/blog/author/sven-kreiss/" title="See posts by Sven Kreiss">
+                        <img class="avatar" alt="Sven Kreiss" src="https://www.gravatar.com/avatar/562a52f3ffcb6c2a3556f91ddc540776?s=140">
+                    </a>
+                <h2 class="article-info">Sven Kreiss</h2>
+
+
+
+                <p class="article-date">February 18, 2018</p>
+
+                <a class="header-article-home" href="/">&larr;Home</a>
+        </header>
+    </div>
+    <div class="pure-u">
+        <div class="content">
+            <section class="post">
+                <header class="post-header">
+                    <h1>pelican-jsmath Plugin</h1>
+                </header>
+            </section>
+
+            <p>The new plugin is <span class="math">\(\alpha\omega\epsilon s \sigma m \epsilon\)</span>, particularly
+in combination with KaTeX which is used here. It has good support for big
+equations: </p>
+<div class="math">$$E=mc^2$$</div>
+<p>
+A vector <span class="math">\(\vec{a}\)</span> looks beautiful. Writing
+order of magnitudes with <span class="math">\(\mathcal{O}(n)\)</span> is pretty. There was a related
+<a href="https://github.com/getpelican/pelican-plugins/issues/625">Pelican issue</a>
+for support for KaTeX.</p>
+<p>The plugin is packaged and can be installed with <code>pip install pelican-jsmath</code>
+(with a dash) and then added to Pelican in <code>pelicanconf.py</code> by adding
+<code>'pelican_jsmath'</code> (with an underscore) to your <code>PLUGINS</code> list. See the
+<a href="https://github.com/svenkreiss/pelican-jsmath">Readme</a> for more details.</p>
+<h2>Packaging Pelican Plugins</h2>
+<p>It is great that Pelican supports plugins installed via <code>pip</code> and outside the
+plugins directory. It gives the plugin author and user more control over the
+plugin version. This is why I wanted to document the steps I took to make
+<code>pelican-jsmath</code> a Python package.</p>
+<p>Simplest <code>setup.py</code> file:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">setuptools</span> <span class="kn">import</span> <span class="n">setup</span>
+
+
+<span class="n">setup</span><span class="p">(</span>
+    <span class="n">name</span><span class="o">=</span><span class="s1">&#39;pelican-jsmath&#39;</span><span class="p">,</span>
+    <span class="n">version</span><span class="o">=</span><span class="s1">&#39;0.1.0&#39;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s1">&#39;Pelican Plugin that passes math to JavaScript.&#39;</span><span class="p">,</span>
+    <span class="n">url</span><span class="o">=</span><span class="s1">&#39;http://github.com/svenkreiss/pelican-jsmath&#39;</span><span class="p">,</span>
+    <span class="n">author</span><span class="o">=</span><span class="s1">&#39;Sven Kreiss&#39;</span><span class="p">,</span>
+    <span class="n">author_email</span><span class="o">=</span><span class="s1">&#39;me@svenkreiss.com&#39;</span><span class="p">,</span>
+    <span class="n">license</span><span class="o">=</span><span class="s1">&#39;AGPL-3.0&#39;</span><span class="p">,</span>
+    <span class="n">packages</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;pelican_jsmath&#39;</span><span class="p">],</span>
+<span class="p">)</span>
+</code></pre></div>
+
+<p>If you are converting a plugin from the pelican-plugins repository, move your files
+into a folder, here <code>pelican_jsmath</code>, and add a <code>setup.py</code> file. That's it.
+You can submit it to pypi if you want, but you can also tell people to install
+directly from Github using
+<code>pip install https://github.com/svenkreiss/pelican-jsmath/zipball/master</code>.</p>
+<p>With packaged plugins, you can manage your dependencies in your
+<code>requirements.txt</code> as usual.</p>
+<h2>Testing Packaged Plugins</h2>
+<p>This Pelican plugin includes a plugin for the Python Markdown parser that
+modifies the HTML output. It is good to test that this plugin produces valid HTML.
+The repository includes an example Pelican site which is regenerated on every
+commit and validated with
+<a href="https://github.com/svenkreiss/html5validator">html5validator</a>.</p>
+<h2>Sample</h2>
+<p><img class="image-process-crisp top" alt="pelican-jsmath sample" src="/images/pelican_jsmath_sample.png" /></p>
+
+            <p class="post-footer">
+                // filed
+under                    <a class="post-category" href="https://www.svenkreiss.com/blog/tag/blog/">blog</a>
+                    <a class="post-category" href="https://www.svenkreiss.com/blog/tag/pelican/">Pelican</a>
+                    <a class="post-category" href="https://www.svenkreiss.com/blog/tag/math/">math</a>
+                    <a class="post-category" href="https://www.svenkreiss.com/blog/tag/python/">Python</a>
+                in <a class="post-category" href="https://www.svenkreiss.com/blog/category/tech/">Tech</a>&nbsp;&nbsp;&nbsp;
+
+                <span style="display:inline-block;">
+                // share on <a href="https://twitter.com/share?text=%22pelican-jsmath%20Plugin%3A%20An%20%5C%28%5Calpha%5Comega%5Cepsilon%20s%20%5Csigma%20m%20%5Cepsilon%5C%29%20Pelican%20plugin%20to%20render%20math%20in%20JavaScript%20libraries%20like%20KaTeX.%20This%20plugin%20makes%20sure%20that%20equations%20are%20preserved%20in%20the...%22&amp;hashtags=blog%2CPelican%2Cmath%2CPython" target="_blank">
+                    <i class="fa fa-twitter fa-lg"></i> Twitter
+                </a>
+                </span>
+            </p>
+            <div class="hr"></div>
+
+            <h2>Related Posts</h2>
+            <ul class="related-posts">
+                <li>
+                    <a class="title" href="https://www.svenkreiss.com/blog/pelican-2018/">Pelican 2018</a>
+                    <span class="date">from February 10, 2018</span>
+                    <span class="summary">Updates to Pelican and this blog. This is a summary of theme changes, a list of my favorite plugins, and a summary of plugins that I updated to improve this website. It also contains a short discussion of the pelican-plugins repository and its potential consequences for the lacking popularity of individual plugins.</span>
+                </li>
+                <li>
+                    <a class="title" href="https://www.svenkreiss.com/blog/pelican-vimeo/">Vimeo liquid tag for Pelican</a>
+                    <span class="date">from March 07, 2014</span>
+                    <span class="summary">Extend liquid tags plugin for Pelican to include a Vimeo tag.</span>
+                </li>
+                <li>
+                    <a class="title" href="https://www.svenkreiss.com/blog/artisanal-s2/">Artisanal S2 Cells</a>
+                    <span class="date">from November 28, 2018</span>
+                    <span class="summary">S2 cells are a powerful tool to index and compute over geospatial data. This short post shows how to create S2 cell ids by hand.</span>
+                </li>
+            </ul>
+
+            <a href="#" class="go-top">Go Top</a>
+<footer class="footer">
+    <p>&copy; Sven Kreiss  2014 &ndash; 2022. Published with <a href="https://github.com/getpelican/pelican">Pelican</a>.<br />This work is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</p>
+</footer>        </div>
+    </div>
+</div>
+    <script>
+        renderMathInElement(document.body);
+    </script>
+
+    <!-- for pelican_dynamic plugin -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-4070485-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-4070485-2', { 'anonymize_ip': true });
+</script>
+
+
+</body>
+</html>

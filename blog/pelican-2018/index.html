@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Updates to Pelican and this blog. This is a summary of theme changes, a list of my favorite plugins, and a summary of plugins that I updated to improve this website. It also contains a short discussion of the pelican-plugins repository and its potential consequences for the lacking popularity of individual plugins." />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@svenkreiss" />
+    <meta name="twitter:creator" content="@svenkreiss" />
+    <meta name="twitter:title" content="Pelican 2018" />
+    <meta name="twitter:description" content="Updates to Pelican and this blog. This is a summary of theme changes, a list of my favorite plugins, and a summary of plugins that I updated to improve this website. It also contains a short discussion of the pelican-plugins repository and its potential consequences for the lacking popularity of individual plugins." />
+    <meta name="twitter:image:src" content="https://www.svenkreiss.com/images/pelican_screenshot_Feb2018.png" />
+    <meta name="twitter:domain" content="svenkreiss.com" />
+
+    <meta property="og:title" content="Pelican 2018" />
+    <meta property="og:type" content="article" />
+    <meta property="og:description" content="Updates to Pelican and this blog. This is a summary of theme changes, a list of my favorite plugins, and a summary of plugins that I updated to improve this website. It also contains a short discussion of the pelican-plugins repository and its potential consequences for the lacking popularity of individual plugins." />
+    <meta property="og:image" content="https://www.svenkreiss.com/images/pelican_screenshot_Feb2018.png" />
+    <meta property="og:site_name" content="svenkreiss.com" />
+    <meta property="og:url" content="https://www.svenkreiss.com/blog/pelican-2018/" />
+
+        <link rel="alternate"  href="https://www.svenkreiss.com/feeds/all.atom.xml" type="application/atom+xml" title="Sven Kreiss Full Atom Feed"/>
+
+        <title>Pelican 2018 - Sven Kreiss</title>
+
+
+    <!-- KaTeX -->
+    <link rel="stylesheet" href="https://www.svenkreiss.com/extras/katex/katex.min.css" />
+    <script src="https://www.svenkreiss.com/extras/katex/katex.min.js"></script>
+    <script src="https://www.svenkreiss.com/extras/katex/contrib/auto-render.min.js"></script>
+
+    <link rel="stylesheet" href="https://www.svenkreiss.com/extras/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://www.svenkreiss.com/theme/css/pure.css?v=0.1.0" />
+    <link rel="stylesheet" href="https://www.svenkreiss.com/theme/css/pygments.css" />
+
+    <!-- for pelican_dynamic plugin -->
+    <!-- end pelican_dynamic -->
+
+</head>
+
+<body>
+<div class="pure-g-r" id="layout">
+    <div class="sidebar sidebar-article pure-u">
+        <header class="header-article">
+                    <a href="https://www.svenkreiss.com/blog/author/sven-kreiss/" title="See posts by Sven Kreiss">
+                        <img class="avatar" alt="Sven Kreiss" src="https://www.gravatar.com/avatar/562a52f3ffcb6c2a3556f91ddc540776?s=140">
+                    </a>
+                <h2 class="article-info">Sven Kreiss</h2>
+
+
+
+                <p class="article-date">February 10, 2018</p>
+
+                <a class="header-article-home" href="/">&larr;Home</a>
+        </header>
+    </div>
+    <div class="pure-u">
+        <div class="content">
+            <section class="post">
+                <header class="post-header">
+                    <h1>Pelican 2018</h1>
+                </header>
+            </section>
+
+            <p><img class="image-process-crisp top" alt="screenshot of this blog" src="/images/pelican_screenshot_Feb2018.png" /></p>
+<p>Inspired by Fred Wilson's post about <a href="http://avc.com/2018/01/owning-yourself/">Owning Yourself</a>,
+I revived my Pelican blog.
+All my website's
+<a href="https://github.com/svenkreiss/svenkreiss.github.io/tree/pelican">configuration and source files</a>
+are public as well as
+<a href="https://github.com/svenkreiss/pure">my modifications to the pure theme</a>.
+Reasons for Pelican compared to hosted solutions:</p>
+<ul>
+<li>content under version control in git</li>
+<li>my usual text editor for content creation</li>
+<li>fully owning content and its exact presentation</li>
+<li>complete customizability, therefore I want Python, therefore Pelican</li>
+</ul>
+<p>A cost is that I have to contribute some changes myself:</p>
+<ul>
+<li><a href="https://github.com/svenkreiss/pure">customized Pure theme</a>: print mode, less author mentions, responsive resizing for mobile, using the pygments <code>friendly</code> style for code highlighting</li>
+<li><code>pelican_jsmath</code>: using KaTeX: nothing existed to combine it with Pelican and so I created
+  <a href="https://github.com/svenkreiss/pelican-jsmath">pelican-jsmath</a>.
+  The new plugin is <span class="math">\(\alpha\omega\epsilon s \sigma m \epsilon\)</span> and described in a separate
+  <a href="https://www.svenkreiss.com/blog/pelican-jsmath/">blog post</a>.</li>
+<li><code>pelican-cite</code>: create a nicely formatted Bibliography from a bibtex file. I created <a href="https://github.com/cmacmackin/pelican-cite/pull/5">PR#5</a> so that it also works on draft pages.</li>
+<li><code>image_process</code>: Responsive images (smaller images on smaller devices) are
+  especially important for the <a href="/projects.html">projects</a> page and on article index page.
+  The plugin works on all generated files just before they are written, so you can use it everywhere in your theme as well.</li>
+<li><code>pelican-advance-embed-tweet</code>: submitted <a href="https://github.com/fundor333/pelican-advance-embed-tweet/pull/2">PR#2</a> to remove align attribute from <code>&lt;bockquote&gt;</code> which is not HTML5, and you can instead set <code>TWITTER_ALIGN = 'center'</code> in your <code>pelicanconf</code> to center the embedded tweet.</li>
+<li><code>gravatar</code>: request higher resolution Gravatar images by adding <code>?s=140</code> to the image url in the theme</li>
+<li><code>related_posts</code>: newly added to this blog</li>
+<li><code>representative_image</code>: automatically extract an image from an article and use it in article list with <code>image_process</code> to thumbnail</li>
+<li><code>pelican_dynamic</code>: adds options to add per article custom <code>css</code> and <code>js</code></li>
+</ul>
+<p>Open and in-progress issues:</p>
+<ul>
+<li>hack of the day: make your default status <code>draft</code> (generally a good idea), but then set the default status in <code>publishconf.py</code> to <code>hidden</code>. When trying to publish, <code>hidden</code> will create an error and the file will be skipped. So the article wont exist on the web at all until its status is set to <code>draft</code>. Problem: have to split <code>OUTPUTDIR</code> in the Makefile so that two different directories are used for <code>make devserver</code> and <code>make publish</code> (filed <a href="https://github.com/getpelican/pelican/issues/2284">issue#2284</a> against Pelican; see <a href="https://github.com/svenkreiss/svenkreiss.github.io/blob/pelican/Makefile">Makefile</a>).</li>
+<li>Have to wrap Tweet embeds in <code>&lt;div&gt;</code> to avoid Markdown's <code>&lt;p&gt;</code> tag because the embedded tweet includes a <code>&lt;blockquote&gt;</code> which cannot appear inside a <code>&lt;p&gt;</code> tag.</li>
+</ul>
+<p>Always validate html with <a href="https://github.com/svenkreiss/html5validator">html5validator</a>
+and check links with the <a href="https://validator.w3.org/checklink">W3C Link Checker</a>.</p>
+<h2>Pelican Plugins</h2>
+<p>Most Pelican Plugins are distributed through the central
+<a href="https://github.com/getpelican/pelican-plugins">pelican-plugins</a> repository.
+The contributed plugins have fairly little recognition: <code>render_math</code> has 65 stars and
+<code>image_process</code> has 10 stars. Issues against individual plugins are filed
+in the central repository and not against the individual plugins. Updates to
+plugins have to wait for inclusion in the central repository before they become
+used by others.</p>
+<!-- <div>@svenkreiss/status/960716731059785730</div> -->
+
+<p>Python provides its standard mechanism with <code>pip</code>, <code>setuptools</code>, <code>requirements.txt</code>, etc.
+to manage dependencies. Plugins can be written to support <code>pip</code> and Pelican
+does support importable plugins. This also allows unit tests and continuous
+integration to ensure the quality of the plugin.
+This is the method I chose for <a href="https://github.com/svenkreiss/pelican-jsmath">pelican-jsmath</a>.</p>
+
+            <p class="post-footer">
+                // filed
+under                    <a class="post-category" href="https://www.svenkreiss.com/blog/tag/blog/">blog</a>
+                    <a class="post-category" href="https://www.svenkreiss.com/blog/tag/pelican/">Pelican</a>
+                in <a class="post-category" href="https://www.svenkreiss.com/blog/category/tech/">Tech</a>&nbsp;&nbsp;&nbsp;
+
+                <span style="display:inline-block;">
+                // share on <a href="https://twitter.com/share?text=%22Pelican%202018%3A%20Updates%20to%20Pelican%20and%20this%20blog.%20This%20is%20a%20summary%20of%20theme%20changes%2C%20a%20list%20of%20my%20favorite%20plugins%2C%20and%20a%20summary%20of%20plugins%20that%20I%20updated%20to%20improve%20this%20website.%20It%20also%20contains...%22&amp;hashtags=blog%2CPelican" target="_blank">
+                    <i class="fa fa-twitter fa-lg"></i> Twitter
+                </a>
+                </span>
+            </p>
+            <div class="hr"></div>
+
+            <h2>Related Posts</h2>
+            <ul class="related-posts">
+                <li>
+                    <a class="title" href="https://www.svenkreiss.com/blog/pelican-jsmath/">pelican-jsmath Plugin</a>
+                    <span class="date">from February 18, 2018</span>
+                    <span class="summary">An \(\alpha\omega\epsilon s \sigma m \epsilon\) Pelican plugin to render math in JavaScript libraries like KaTeX. This plugin makes sure that equations are preserved in the Markdown and Restructured Text parsers and get reproduced properly in HTML for a JavaScript renderer to process.</span>
+                </li>
+                <li>
+                    <a class="title" href="https://www.svenkreiss.com/blog/pelican-vimeo/">Vimeo liquid tag for Pelican</a>
+                    <span class="date">from March 07, 2014</span>
+                    <span class="summary">Extend liquid tags plugin for Pelican to include a Vimeo tag.</span>
+                </li>
+            </ul>
+
+            <a href="#" class="go-top">Go Top</a>
+<footer class="footer">
+    <p>&copy; Sven Kreiss  2014 &ndash; 2022. Published with <a href="https://github.com/getpelican/pelican">Pelican</a>.<br />This work is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</p>
+</footer>        </div>
+    </div>
+</div>
+    <script>
+        renderMathInElement(document.body);
+    </script>
+
+    <!-- for pelican_dynamic plugin -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-4070485-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-4070485-2', { 'anonymize_ip': true });
+</script>
+
+
+</body>
+</html>

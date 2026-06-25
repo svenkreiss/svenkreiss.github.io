@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="S2 cells are a powerful tool to index and compute over geospatial data. This short post shows how to create S2 cell ids by hand." />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@svenkreiss" />
+    <meta name="twitter:creator" content="@svenkreiss" />
+    <meta name="twitter:title" content="Artisanal S2 Cells" />
+    <meta name="twitter:description" content="S2 cells are a powerful tool to index and compute over geospatial data. This short post shows how to create S2 cell ids by hand." />
+    <meta name="twitter:image:src" content="https://www.svenkreiss.com/images/s2cell_regioncoverer.png" />
+    <meta name="twitter:domain" content="svenkreiss.com" />
+
+    <meta property="og:title" content="Artisanal S2 Cells" />
+    <meta property="og:type" content="article" />
+    <meta property="og:description" content="S2 cells are a powerful tool to index and compute over geospatial data. This short post shows how to create S2 cell ids by hand." />
+    <meta property="og:image" content="https://www.svenkreiss.com/images/s2cell_regioncoverer.png" />
+    <meta property="og:site_name" content="svenkreiss.com" />
+    <meta property="og:url" content="https://www.svenkreiss.com/blog/artisanal-s2/" />
+
+        <link rel="alternate"  href="https://www.svenkreiss.com/feeds/all.atom.xml" type="application/atom+xml" title="Sven Kreiss Full Atom Feed"/>
+
+        <title>Artisanal S2 Cells - Sven Kreiss</title>
+
+
+    <!-- KaTeX -->
+    <link rel="stylesheet" href="https://www.svenkreiss.com/extras/katex/katex.min.css" />
+    <script src="https://www.svenkreiss.com/extras/katex/katex.min.js"></script>
+    <script src="https://www.svenkreiss.com/extras/katex/contrib/auto-render.min.js"></script>
+
+    <link rel="stylesheet" href="https://www.svenkreiss.com/extras/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://www.svenkreiss.com/theme/css/pure.css?v=0.1.0" />
+    <link rel="stylesheet" href="https://www.svenkreiss.com/theme/css/pygments.css" />
+
+    <!-- for pelican_dynamic plugin -->
+    <!-- end pelican_dynamic -->
+
+</head>
+
+<body>
+<div class="pure-g-r" id="layout">
+    <div class="sidebar sidebar-article pure-u">
+        <header class="header-article">
+                    <a href="https://www.svenkreiss.com/blog/author/sven-kreiss/" title="See posts by Sven Kreiss">
+                        <img class="avatar" alt="Sven Kreiss" src="https://www.gravatar.com/avatar/562a52f3ffcb6c2a3556f91ddc540776?s=140">
+                    </a>
+                <h2 class="article-info">Sven Kreiss</h2>
+
+
+
+                <p class="article-date">November 28, 2018</p>
+
+                <a class="header-article-home" href="/">&larr;Home</a>
+        </header>
+    </div>
+    <div class="pure-u">
+        <div class="content">
+            <section class="post">
+                <header class="post-header">
+                    <h1>Artisanal S2 Cells</h1>
+                </header>
+            </section>
+
+            <p>S2 cells are a great representation for locations on earth and are the storage
+format for many popular web services, including Google Maps, Foursquare and Pokemon Go.
+I worked on the <a href="https://s2sphere.readthedocs.io">s2sphere</a> Python implementation when I was at Sidewalk Labs. I also wrote some
+background notes on the <a href="https://www.sidewalklabs.com/blog/s2-cells-and-space-filling-curves-keys-to-building-better-digital-map-tools-for-cities/">Sidewalk blog</a>.
+Recently, I was asked to explain
+how to verify manually that an S2 cell id is correct. By hand. From scratch.
+Here is my answer for the simplest ids.</p>
+<p>Get a feel for the cells and faces of the cube by using the web tools
+at <a href="https://s2.sidewalklabs.com">s2.sidewalklabs.com</a>:</p>
+<p><img style="width:58.5%" src="/images/s2cell_regioncoverer.png" alt="S2Cell region coverer with example cell tokens" />
+<img style="width:39.7%" src="/images/s2cell_globe.png" alt="S2Cell globe" /></p>
+<p>The above images show the location of face 0 on earth. Below is the unfolded
+curve how it spans and connects to the other faces of the cube:</p>
+<p><img style="max-height: 15em; display:block; margin:1em auto 2em;" src="/images/s2cell_faces.png" alt="S2Cell cube faces" /></p>
+<p>Tokens are hex format with right zeros stripped. To recover an integer, use
+<a href="https://s2sphere.readthedocs.io/en/latest/api.html#s2sphere.CellId.from_token"><code>from_token()</code></a>
+and print as binary. The example tokens converted to binary cell ids are:</p>
+<div class="highlight"><pre><span></span><code>token &quot;04&quot;: 0000010000000000000000000000000000000000000000000000000000000000
+token &quot;0c&quot;: 0000110000000000000000000000000000000000000000000000000000000000
+token &quot;14&quot;: 0001010000000000000000000000000000000000000000000000000000000000
+token &quot;1c&quot;: 0001110000000000000000000000000000000000000000000000000000000000
+</code></pre></div>
+
+<p>The binary format from left to right: three bits for face (here face 0), two bits to encode the cell on that face, 1 bit terminating. In agreement with what is in the docstring for the
+<a href="https://s2sphere.readthedocs.io/en/latest/api.html#s2sphere.CellId">CellId</a> class :)</p>
+<p>Just to compare, face 1, level 1 cell ids are:</p>
+<div class="highlight"><pre><span></span><code><span class="mf">0010010000000000000000000000000000000000000000000000000000000000</span>
+<span class="mf">0010110000000000000000000000000000000000000000000000000000000000</span>
+<span class="mf">0011010000000000000000000000000000000000000000000000000000000000</span>
+<span class="mf">0011110000000000000000000000000000000000000000000000000000000000</span>
+</code></pre></div>
+
+<p>Et voilà. Those are eight hand-crafted S2 cell ids.</p>
+
+            <p class="post-footer">
+                // filed
+under                    <a class="post-category" href="https://www.svenkreiss.com/blog/tag/python/">Python</a>
+                    <a class="post-category" href="https://www.svenkreiss.com/blog/tag/geo/">geo</a>
+                    <a class="post-category" href="https://www.svenkreiss.com/blog/tag/data/">data</a>
+                in <a class="post-category" href="https://www.svenkreiss.com/blog/category/tech/">Tech</a>&nbsp;&nbsp;&nbsp;
+
+                <span style="display:inline-block;">
+                // share on <a href="https://twitter.com/share?text=%22Artisanal%20S2%20Cells%3A%20S2%20cells%20are%20a%20powerful%20tool%20to%20index%20and%20compute%20over%20geospatial%20data.%20This%20short%20post%20shows%20how%20to%20create%20S2%20cell%20ids%20by%20hand.%22&amp;hashtags=Python%2Cgeo%2Cdata" target="_blank">
+                    <i class="fa fa-twitter fa-lg"></i> Twitter
+                </a>
+                </span>
+            </p>
+            <div class="hr"></div>
+
+            <h2>Related Posts</h2>
+            <ul class="related-posts">
+                <li>
+                    <a class="title" href="https://www.svenkreiss.com/blog/streamprocessing-in-pysparkling/">Stream Processing in pysparkling</a>
+                    <span class="date">from March 11, 2017</span>
+                    <span class="summary">pysparkling now supports stream processing with discrete streams, called DStream. This post shows a simple example that uses this new API.</span>
+                </li>
+                <li>
+                    <a class="title" href="https://www.svenkreiss.com/blog/parallel-processing-with-pysparkling/">Parallel Processing with pysparkling</a>
+                    <span class="date">from December 04, 2015</span>
+                    <span class="summary">Benchmarks for the latest parallel features in pysparkling. It shows good scaling for processing with multiple CPU cores. The example contains only a simple computation which shows that hyperthreading is not very effective in this case.</span>
+                </li>
+                <li>
+                    <a class="title" href="https://www.svenkreiss.com/blog/pysparkling-initial/">pysparkling</a>
+                    <span class="date">from May 29, 2015</span>
+                    <span class="summary">A pure Python implementation of Apache Spark's RDD interfaces. pysparkling does not depend on Java and has a small execution overhead. It can be a fast test runner for Spark applications.</span>
+                </li>
+            </ul>
+
+            <a href="#" class="go-top">Go Top</a>
+<footer class="footer">
+    <p>&copy; Sven Kreiss  2014 &ndash; 2022. Published with <a href="https://github.com/getpelican/pelican">Pelican</a>.<br />This work is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</p>
+</footer>        </div>
+    </div>
+</div>
+    <script>
+        renderMathInElement(document.body);
+    </script>
+
+    <!-- for pelican_dynamic plugin -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-4070485-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-4070485-2', { 'anonymize_ip': true });
+</script>
+
+
+</body>
+</html>
